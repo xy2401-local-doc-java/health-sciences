@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Configuring Argus Interchange</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2017-10-02T18:48:13Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Argus Interchange Japan User's Guide" />
+<meta name="dcterms.identifier" content="E89439-01" />
+<meta name="dcterms.isVersionOf" content="AEOBB" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="about.htm" title="Previous" type="text/html" />
+<link rel="Next" href="e2bcheck.htm" title="Next" type="text/html" />
+<link rel="alternate" href="AEOBB.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="AEOBB.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="AEOBB.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">5/10</span> <!-- End Header -->
+<div id="AEOBB112" class="chapter"><a id="sthref7"></a>
+<h1 class="chapter"><span class="secnum">2</span> Configuring Argus Interchange</h1>
+<p>This section is intended for Argus Interchange Administrators. The flowchart shows the steps to follow when configuring, reviewing, and administering Argus Interchange.</p>
+<img width="516" height="249" src="img/configuring.gif" alt="Surrounding text describes configuring.gif." /><br />
+<div id="AEOBB113" class="sect1"><a id="sthref8"></a>
+<h2 class="sect1"><span class="secnum">2.1</span> Argus Interchange Mapping Utility</h2>
+<p>Argus Interchange mapping utility enables you to configure the Argus Interchange Service. This chapter provides the following information:</p>
+<ul>
+<li>
+<p><a href="#CEGFHJGB">Configuring the Argus Interchange Service</a></p>
+</li>
+<li>
+<p><a href="#CEGGFEAD">Adding a Database for Argus Interchange Service</a></p>
+</li>
+</ul>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Most features of the Interchange have been moved to the web-based console.</div>
+<a id="CEGFHJGB"></a>
+<div id="AEOBB114" class="sect2">
+<h3 class="sect2"><span class="secnum">2.1.1</span> Configuring the Argus Interchange Service</h3>
+<p>You can configure the Argus Interchange Service by updating the initialization (INI) file from the Argus Interchange Mapping interface.</p>
+<ol>
+<li>
+<p>In the Windows 2012/2012R2 server, navigate to <span class="bold">Apps</span> and click the ESM Mapping tool. This opens the Service INI Set up dialog box.</p>
+</li>
+<li>
+<p>Use the items in the Service INI File Setup dialog to configure the Argus Interchange Service INI file.</p>
+</li>
+<li>
+<p>Enter the data for each field as required.</p>
+<img width="746" height="613" src="img/cnfginter.jpg" alt="Surrounding text describes cnfginter.jpg." /><br /></li>
+</ol>
+<div id="AEOBB115" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref9"></a>
+<h4 class="sect3"><span class="secnum">2.1.1.1</span> Service INI File Setup Dialog Box</h4>
+<p>The following tables lists and describes the fields in the Service INI File Setup dialog box.</p>
+<div class="inftblinformal">
+<table class="cellalignment50" summary="The following tables lists and describes the fields in the Service INI File Setup dialog box." dir="ltr">
+<thead>
+<tr class="cellalignment40">
+<th class="cellalignment51" id="r1c1-t3">Item</th>
+<th class="cellalignment51" id="r1c2-t3">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r2c1-t3" headers="r1c1-t3">IT E-mail</td>
+<td class="cellalignment46" headers="r2c1-t3 r1c2-t3">Enter the e-mail address that Argus Interchange Service should use to send e-mails, if the transmit time out occurs for Physical Media or EDI Gateway.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r3c1-t3" headers="r1c1-t3">Business E-mail</td>
+<td class="cellalignment46" headers="r3c1-t3 r1c2-t3">Enter the e-mail address that Argus Interchange Service should use to send e-mails, if the Receive ACK time-out value is reached.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r4c1-t3" headers="r1c1-t3">User E-mail</td>
+<td class="cellalignment46" headers="r4c1-t3 r1c2-t3">Enter the e-mail address that Argus Interchange Service should use to send e-mails, when the user does not process the E2B Report within the time-out value. The Argus Interchange Service uses SMTP as its mail system.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r5c1-t3" headers="r1c1-t3">Sender E-mail</td>
+<td class="cellalignment46" headers="r5c1-t3 r1c2-t3">Enter the e-mail address that Argus Interchange Service should display, as the 'From' address in the e-mails that it sends.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r6c1-t3" headers="r1c1-t3">EDI Gateway</td>
+<td class="cellalignment46" headers="r6c1-t3 r1c2-t3">Select the name for the EDI Gateway - from either Axway Cyclone or Oracle B2B.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r7c1-t3" headers="r1c1-t3">EDI Database Name</td>
+<td class="cellalignment46" headers="r7c1-t3 r1c2-t3">Enter the database name for the EDI software.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r8c1-t3" headers="r1c1-t3">EDI User ID</td>
+<td class="cellalignment46" headers="r8c1-t3 r1c2-t3">Enter the user name for EDI database.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r9c1-t3" headers="r1c1-t3">EDI Password</td>
+<td class="cellalignment46" headers="r9c1-t3 r1c2-t3">Enter the password for the user name associated with the EDI database.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r10c1-t3" headers="r1c1-t3">DTD Path</td>
+<td class="cellalignment46" headers="r10c1-t3 r1c2-t3">Enter the path for the DTD file.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r11c1-t3" headers="r1c1-t3">Log File Path</td>
+<td class="cellalignment46" headers="r11c1-t3 r1c2-t3">Enter the path where the Argus Interchange Service will write the log files.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r12c1-t3" headers="r1c1-t3">Multiple Database Section</td>
+<td class="cellalignment46" headers="r12c1-t3 r1c2-t3">Displays all the configured databases for ESM Service.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r13c1-t3" headers="r1c1-t3">Delete Button</td>
+<td class="cellalignment46" headers="r13c1-t3 r1c2-t3">Click Delete to remove the entire Database Configuration from ESM Service INI File.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" --></div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CEGGFEAD"></a>
+<div id="AEOBB116" class="sect2">
+<h3 class="sect2"><span class="secnum">2.1.2</span> Adding a Database for Argus Interchange Service</h3>
+<p>You can configure the Argus Interchange Service to support multiple database.</p>
+<p>To configure a database:</p>
+<ol>
+<li>
+<p>In the Setup INI File dialog box, double click Add New Process to open the Service DB Setup dialog.</p>
+<img width="608" height="477" src="img/dbinter.jpg" alt="Surrounding text describes dbinter.jpg." /><br /></li>
+<li>
+<p>Use the items in the Service DB Setup dialog to configure the ESM Service INI file.</p>
+</li>
+<li>
+<p>Enter the data in the fields as required.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+ESM Service.ini can be configured for MAX_FILES_IMPORT_PER_RUN at database level under the Database section. This should be set to a number. This determines how many files are read from incoming folder so as to allocate to Receive Process(es). This includes both ICSR reports and Acknowledgments. If it is not defined, an internal limit of 1000 is assumed.</div>
+</li>
+</ol>
+<div id="AEOBB117" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref10"></a>
+<h4 class="sect3"><span class="secnum">2.1.2.1</span> Service DB Setup Fields</h4>
+<p>The following table lists and describes the fields in the Service DB Setup dialog box.</p>
+<div class="inftblinformal">
+<table class="cellalignment50" summary="The following table lists and describes the fields in the Service DB Setup dialog box." dir="ltr">
+<thead>
+<tr class="cellalignment40">
+<th class="cellalignment51" id="r1c1-t5">Item</th>
+<th class="cellalignment51" id="r1c2-t5">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r2c1-t5" headers="r1c1-t5">Database Name</td>
+<td class="cellalignment46" headers="r2c1-t5 r1c2-t5">Enter the name of the Adverse Event database.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r3c1-t5" headers="r1c1-t5">Unique Database ID</td>
+<td class="cellalignment46" headers="r3c1-t5 r1c2-t5">Identifies each database uniquely. In the case of multiple databases, the value of this field should be unique.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r4c1-t5" headers="r1c1-t5">User ID</td>
+<td class="cellalignment46" headers="r4c1-t5 r1c2-t5">Enter the user name for the Service.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r5c1-t5" headers="r1c1-t5">Password</td>
+<td class="cellalignment46" headers="r5c1-t5 r1c2-t5">Enter the password associated with the User Name entered in the USER ID field.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r6c1-t5" headers="r1c1-t5">Process</td>
+<td class="cellalignment46" headers="r6c1-t5 r1c2-t5">Enter the full path of the ESMProc.exe file. The system uses this path to locate the ESMProc.exe file.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r7c1-t5" headers="r1c1-t5">Receive Process</td>
+<td class="cellalignment46" headers="r7c1-t5 r1c2-t5">Enter the full path of the E2BReceive.exe file. The system uses this to locate the E2BReceive.exe file.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r8c1-t5" headers="r1c1-t5">Archive Folder</td>
+<td class="cellalignment46" headers="r8c1-t5 r1c2-t5">Enter the full path where the system places the file processed by Argus Interchange.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r9c1-t5" headers="r1c1-t5">Receive Processes Count</td>
+<td class="cellalignment46" headers="r9c1-t5 r1c2-t5">Enables you to specify multiple E2B receive processes
+<p>You can specify from 1 to 5 E2B receive processes</p>
+<p>The default is 1.</p>
+</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r10c1-t5" headers="r1c1-t5">Process Elapse Time</td>
+<td class="cellalignment46" headers="r10c1-t5 r1c2-t5">Enter the time interval for the Argus Interchange Process to run.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r11c1-t5" headers="r1c1-t5">Enter EDI Transmit Time out Value</td>
+<td class="cellalignment46" headers="r11c1-t5 r1c2-t5">The amount of time, in minutes, that must pass before the system sends an e-mail message when an E2B Report has not been transmitted within a specified time period.
+<p>Note: The minimum value for the time-out is 10 minutes.</p>
+</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r12c1-t5" headers="r1c1-t5">Enter Physical Media Transmit Time out Value</td>
+<td class="cellalignment46" headers="r12c1-t5 r1c2-t5">Enter amount of time, in minutes, that must pass before the system can send an e-mail message when an E2B Report has not been sent manually by a specified person within a specified time period.
+<p>Note: The minimum value for the time-out is 10 minutes.</p>
+</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r13c1-t5" headers="r1c1-t5">Enter Receive ACK Time Out Value</td>
+<td class="cellalignment46" headers="r13c1-t5 r1c2-t5">Enter the amount of time, in minutes, that must pass before the system can send an e-mail message when an ACK message has not been received within a specified time period.
+<p>Note: The minimum value for the time-out is 10 minutes.</p>
+</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r14c1-t5" headers="r1c1-t5">Enter Processing Time Out Value</td>
+<td class="cellalignment46" headers="r14c1-t5 r1c2-t5">Enter the amount of time, in minutes, that must pass before the system can send an e-mail message when an Incoming Report has not been processed within a specified time period.
+<p>Note: The minimum value for the time-out is 10 minutes.</p>
+</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r15c1-t5" headers="r1c1-t5">Enter XML Transmit Time Out Value</td>
+<td class="cellalignment46" headers="r15c1-t5 r1c2-t5">Enter the amount of time, in minutes, that must pass before the system can send an e-mail message when an XML file is not picked up by the Gateway.
+<p>Note: The minimum value for the time-out is 10 minutes.</p>
+</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r16c1-t5" headers="r1c1-t5">Enter Binary Transmit Time Out Value</td>
+<td class="cellalignment46" headers="r16c1-t5 r1c2-t5">Enter the amount of time, in minutes, that must pass before the system can send an e-mail message when a binary file is not picked up by the Gateway.
+<p>Note: The minimum value for the time-out is 10 minutes.</p>
+</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r17c1-t5" headers="r1c1-t5">Enter MDN Time Out Value</td>
+<td class="cellalignment46" headers="r17c1-t5 r1c2-t5">Enter the amount of time, in hours, that must pass before the system stops polling the MDN information from the EDI server after receiving the Business ACK for a transmitted report.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" --></div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<div id="AEOBB118" class="sect1"><!-- infolevel="all" infotype="General" --><a id="sthref11"></a>
+<h2 class="sect1"><span class="secnum">2.2</span> E2B</h2>
+<a id="BABFABBJ"></a>
+<div id="AEOBB119" class="sect2"><a id="Toc225301880"></a>
+<h3 class="sect2"><span class="secnum">2.2.1</span> E2B Extensions</h3>
+<p>You can use the existing reporting destination configuration to choose an extended E2B profile. The system uses the agency and company identifier to identify the profile to use and sends the information in the following XML elements:</p>
+<p><code dir="ltr">&lt;messagesenderidentifier&gt;Company X&lt;/messagesenderidentifier&gt;</code></p>
+<p><code dir="ltr">&lt;messagereceiveridentifier&gt;Agency Y&lt;/messagereceiveridentifier&gt;</code></p>
+<p>The Interchange mapping utility also supports the defined extended E2B elements as follows:</p>
+<ul>
+<li>
+<p>A switch in the Interchange mapping tool identifies a profile as either a standard profile or an extended E2B profile but only for the Receive tab. The additional fields are formatted as follows:</p>
+<p>&lt;XXX&gt;_EXTENSION []</p>
+<p>where:</p>
+<p>XXX is the tag name followed by _EXTENSION to indicate that this is an extended E2B tag element</p>
+<p>When using this switch:</p>
+<ul>
+<li>
+<p>Do not enter any blank spaces or underscore characters ( _ ) in the XXX naming convention.</p>
+</li>
+<li>
+<p>In the extended E2B tags, the element number in the brackets ( [ ] ) is always empty. For example, Patient Ethnicity, Event Hospitalized Start Date / Stop Date.</p>
+</li>
+<li>
+<p>This switch is enabled only for profiles copied from the Factory profiles (default unchecked). This flag is disabled for all factory profiles.</p>
+</li>
+<li>
+<p>During configuration, GPS updates the DTD profile with this information before it adds any additional E2B elements.</p>
+</li>
+<li>
+<p>The system maps extended E2B fields are mapped to existing Argus fields or to user-defined fields, as appropriate. For example, the system maps the following extended E2B fields to the following Argus tables.</p>
+<div class="inftblinformal">
+<table class="cellalignment50" summary="The system maps the following extended E2B fields to the following Argus tables." dir="ltr">
+<thead>
+<tr class="cellalignment40">
+<th class="cellalignment51" id="r1c1-t6">E2B + Field</th>
+<th class="cellalignment51" id="r1c2-t6">Argus Case Form UI Field Name</th>
+<th class="cellalignment51" id="r1c3-t6">Argus Field Label Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r2c1-t6" headers="r1c1-t6">patientethnicity_extension</td>
+<td class="cellalignment46" headers="r2c1-t6 r1c2-t6">PATIENT | Patient Ethnicity</td>
+<td class="cellalignment46" headers="r2c1-t6 r1c3-t6">Patient Ethnicity</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r3c1-t6" headers="r1c1-t6">reactionintensity_extension</td>
+<td class="cellalignment46" headers="r3c1-t6 r1c2-t6">EVENTS | Event Intensity</td>
+<td class="cellalignment46" headers="r3c1-t6 r1c3-t6">Event Intensity</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r4c1-t6" headers="r1c1-t6">reactionhospstartdateformat_extension</td>
+<td class="cellalignment46" headers="r4c1-t6 r1c2-t6">Argus Date entry format YYYYMMDD or YYYYMM or YYYY</td>
+<td class="cellalignment46" headers="r4c1-t6 r1c3-t6">Hospitalized Start Date Format</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r5c1-t6" headers="r1c1-t6">reactionhospstartdate_extension</td>
+<td class="cellalignment46" headers="r5c1-t6 r1c2-t6">EVENTS | Hospitalized Start Date</td>
+<td class="cellalignment46" headers="r5c1-t6 r1c3-t6">Hospitalized Start Date</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r6c1-t6" headers="r1c1-t6">reactionhospstopdateformat_extension</td>
+<td class="cellalignment46" headers="r6c1-t6 r1c2-t6">Argus Date entry format YYYYMMDD or YYYYMM or YYYY</td>
+<td class="cellalignment46" headers="r6c1-t6 r1c3-t6">Hospitalized Stop Date Format</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r7c1-t6" headers="r1c1-t6">reactionhospstopdate_extension</td>
+<td class="cellalignment46" headers="r7c1-t6 r1c2-t6">EVENTS | Hospitalized Stop Date</td>
+<td class="cellalignment46" headers="r7c1-t6 r1c3-t6">Hospitalized Stop Date</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" --></li>
+<li>
+<p>The system sends an acknowledgement if the message import is successful and a rejection if the message import is not successful.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>You can view the extended elements for the following:</p>
+<ul>
+<li>
+<p>E2B Viewer</p>
+<ul>
+<li>
+<p>No updates to the CIOMS / MedWatch Reports</p>
+</li>
+<li>
+<p>The Decoded View / SGML View displays the additional elements added as a part of the Extended E2B</p>
+<img width="1080" height="768" src="img/e2bexts.gif" alt="Surrounding text describes e2bexts.gif." /><br /></li>
+</ul>
+</li>
+<li>
+<p>E2B Difference Report</p>
+<ul>
+<li>
+<p>When imported, the system displays the additional fields in the current difference report viewer.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>E2B Selective Intake for Initial and Follow up E2B Reports</p>
+<ul>
+<li>
+<p>You can selectively import the additional fields the system adds to the Extended E2B in the Argus case.</p>
+</li>
+<li>
+<p>The PDF reports display the additional fields added to the Extended E2B.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>The E2B Warnings/Errors display the warnings/errors if warnings or errors defined for the fields added to the Extended E2B.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="BABBHFAE"></a>
+<div id="AEOBB120" class="sect2"><a id="Toc225301879"></a>
+<h3 class="sect2"><span class="secnum">2.2.2</span> E2B Codes Translation</h3>
+<p>E2B Codes Translation enables you to configure rules to translate the E2B codes and values in the incoming E2B reports, which come from different trading partners to preferred values in the AE system during case creation.</p>
+<p>In the Interchange Mapping Utility, click Administrator -&gt; E2B Translation Codes to open the E2B Code Translation screen.</p>
+<img width="750" height="632" src="img/e2bcodes.gif" alt="Surrounding text describes e2bcodes.gif." /><br />
+<div id="AEOBB121" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref12"></a>
+<h4 class="sect3"><span class="secnum">2.2.2.1</span> E2B Codes Translation Fields</h4>
+<p>The following table lists and describes the fields on the E2B Codes Translation screen.</p>
+<div class="inftblinformal">
+<table class="cellalignment50" summary="The following table lists and describes the fields on the E2B Codes Translation screen." dir="ltr">
+<thead>
+<tr class="cellalignment40">
+<th class="cellalignment51" id="r1c1-t7">Item</th>
+<th class="cellalignment51" id="r1c2-t7">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r2c1-t7" headers="r1c1-t7">Agency Name</td>
+<td class="cellalignment46" headers="r2c1-t7 r1c2-t7">Enables the user to select an agency name from the drop-down list box.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r3c1-t7" headers="r1c1-t7">#</td>
+<td class="cellalignment46" headers="r3c1-t7 r1c2-t7">Displays the serial number.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r4c1-t7" headers="r1c1-t7">DTD Element Name</td>
+<td class="cellalignment46" headers="r4c1-t7 r1c2-t7">Displays the DTD element name.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r5c1-t7" headers="r1c1-t7">Input Value</td>
+<td class="cellalignment46" headers="r5c1-t7 r1c2-t7">Displays the type of input value</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r6c1-t7" headers="r1c1-t7">Output Value</td>
+<td class="cellalignment46" headers="r6c1-t7 r1c2-t7">Displays the type of output value.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r7c1-t7" headers="r1c1-t7">Edit</td>
+<td class="cellalignment46" headers="r7c1-t7 r1c2-t7">Enables you to edit the information</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" --></div>
+<!-- class="sect3" -->
+<div id="AEOBB122" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref13"></a>
+<h4 class="sect3"><span class="secnum">2.2.2.2</span> Configuring E2B Codes Translation</h4>
+<p>Use the following procedure to configure E2B Codes Translation.</p>
+<ol>
+<li>
+<p>Select the Agency Name from the drop-down list box to displays the DTD Elements and their descriptions.</p>
+</li>
+<li>
+<p>Click Edit to edit the DTD Element Name, Input Value, Output Value, and DTD Element Description.</p>
+<img width="812" height="662" src="img/confige2bcodes.gif" alt="Surrounding text describes confige2bcodes.gif." /><br /></li>
+<li>
+<p>Click Save to save your changes.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<div id="AEOBB123" class="sect1"><a id="Toc225301881"></a>
+<h2 class="sect1"><span class="secnum">2.3</span> Web Console</h2>
+<p>The Web Console enables you to configure the Regulatory Authorities to which E2B Reports need to be submitted. In accordance with ICH Guidelines, you can configure additional Code List items with new E2B codes.</p>
+<p>This section includes discussions of the following:</p>
+<ul>
+<li>
+<p>Configuring Regulatory Authorities</p>
+</li>
+<li>
+<p>Configuring SMTP</p>
+</li>
+<li>
+<p>Configuring Code List Items</p>
+</li>
+</ul>
+<div id="AEOBB124" class="sect2"><a id="Toc225301882"></a>
+<h3 class="sect2"><span class="secnum">2.3.1</span> Configuring Regulatory Authorities</h3>
+<p>Transmitting E2B reports to an Agency/Trading Partner, requires you to create a regulatory authority entry in the Code List. After creating the regulatory authority, you can transmit regulatory reports to it.</p>
+<p>To configure a regulatory authority:</p>
+<ol>
+<li>
+<p>On the Argus Console, Click Code Lists -&gt; Argus.</p>
+</li>
+<li>
+<p>When the system opens the Code List Maintenance screen, select Reporting Destination from the list.</p>
+<img width="1059" height="513" src="img/repdest.gif" alt="Surrounding text describes repdest.gif." /><br />
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If a report has already been generated for a Regulatory Authority, the system disables the Delete button in the Code List dialog box for the particular Regulatory Authority. However, it is still possible to modify these reports there.</div>
+<p>Refer to the Argus Safety Guide for information on using the first three tabs of the Reporting Destination.</p>
+</li>
+<li>
+<p>Click the EDI tab, select the appropriate data for each item, and enter the data in the fields as required.</p>
+<img width="1063" height="516" src="img/repdest-edi.gif" alt="Surrounding text describes repdest-edi.gif." /><br /></li>
+</ol>
+<div id="AEOBB125" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref14"></a>
+<h4 class="sect3"><span class="secnum">2.3.1.1</span> EDI Tab Fields</h4>
+<p>The following table lists and describes the fields on the EDI tab.</p>
+<p>For Argus J users, an additional field called "Message Profile 2" shows up for the configuration of the PMDA - J profile. This field is required for PMDA agency to specify PMDA J profile.</p>
+<div class="inftblinformal">
+<table class="cellalignment50" summary="The following table lists and describes the fields on the EDI tab." dir="ltr">
+<thead>
+<tr class="cellalignment40">
+<th class="cellalignment51" id="r1c1-t9">Field</th>
+<th class="cellalignment51" id="r1c2-t9">Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r2c1-t9" headers="r1c1-t9">SGML/XML</td>
+<td class="cellalignment46" headers="r2c1-t9 r1c2-t9">Enables you to select whether to send the report in SGML or XML format.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r3c1-t9" headers="r1c1-t9">Mark as Auto Submit</td>
+<td class="cellalignment46" headers="r3c1-t9 r1c2-t9">Enables you to mark the report for auto submission.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r4c1-t9" headers="r1c1-t9">Imported Cases are assigned to</td>
+<td class="cellalignment46" headers="r4c1-t9 r1c2-t9">Enables you to select the country where imported cases need to be assigned.
+<p>Note: This list contains the configured Argus sites. The default value is the site of the importing user.</p>
+</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r5c1-t9" headers="r1c1-t9">Initial Workflow State</td>
+<td class="cellalignment46" headers="r5c1-t9 r1c2-t9">Enables you to configure the initial workflow state for the case.
+<p>Note: This list contains Argus workflow states. The default value is blank. If you select blank as the workflow state, the system treats the case as a new case being booked-in.</p>
+</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r6c1-t9" headers="r1c1-t9">Agency Identifier</td>
+<td class="cellalignment46" headers="r6c1-t9 r1c2-t9">Enables you to enter the routing ID configured in Cyclone for the sender community.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r7c1-t9" headers="r1c1-t9">Identification Code</td>
+<td class="cellalignment46" headers="r7c1-t9 r1c2-t9">Enables you to enter the agency Duns code, a unique code that identifies a trading partner.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r8c1-t9" headers="r1c1-t9">Code Qualifier</td>
+<td class="cellalignment46" headers="r8c1-t9 r1c2-t9">Enables you to enter the code qualifier. The system uses the code qualifier to interpret the identification code.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r9c1-t9" headers="r1c1-t9">XML Source Classification</td>
+<td class="cellalignment46" headers="r9c1-t9 r1c2-t9">Defines the E2B source file classification during the E2B import. The system populates this drop-down from the Attachment Classification code list.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r10c1-t9" headers="r1c1-t9">Selection Source Classification</td>
+<td class="cellalignment46" headers="r10c1-t9 r1c2-t9">Defines the classification of the PDF for initial intake or the difference report during E2B import. The system populates this drop-down from the Attachment Classification code list.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r11c1-t9" headers="r1c1-t9">Message Profile</td>
+<td class="cellalignment46" headers="r11c1-t9 r1c2-t9">Enables you to select a message profile.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r12c1-t9" headers="r1c1-t9">Message Profile 2</td>
+<td class="cellalignment46" headers="r12c1-t9 r1c2-t9">Enables you to select a message profile for J elements. This profile is enabled for J users.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r13c1-t9" headers="r1c1-t9">ACK Profile</td>
+<td class="cellalignment46" headers="r13c1-t9 r1c2-t9">Enables you to select the acknowledgement profile.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r14c1-t9" headers="r1c1-t9">Primary Receive Agency</td>
+<td class="cellalignment46" headers="r14c1-t9 r1c2-t9">Indicates that this is the primary agency receiving E2B reports.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r15c1-t9" headers="r1c1-t9">Auto Accept ICSR's</td>
+<td class="cellalignment46" headers="r15c1-t9 r1c2-t9">Enables or disables the auto-accept E2Bs for the agency.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r16c1-t9" headers="r1c1-t9">Transmit E2B Attachments</td>
+<td class="cellalignment46" headers="r16c1-t9 r1c2-t9">Enables or disables transmission of E2B attachments for the agency.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r17c1-t9" headers="r1c1-t9">Use Japanese Aware Date for Reporting</td>
+<td class="cellalignment46" headers="r17c1-t9 r1c2-t9">Check this checkbox to use Japanese Aware Date for reporting.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r18c1-t9" headers="r1c1-t9">Allow multiple reports for Marketed Drugs</td>
+<td class="cellalignment46" headers="r18c1-t9 r1c2-t9">Check this checkbox to allow multiple reports for Marketed Drugs.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r19c1-t9" headers="r1c1-t9">Allow multiple reports for Investigational Drugs</td>
+<td class="cellalignment46" headers="r19c1-t9 r1c2-t9">Check this checkbox to allow multiple reports for Investigational Drugs.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r20c1-t9" headers="r1c1-t9">Identification Code</td>
+<td class="cellalignment46" headers="r20c1-t9 r1c2-t9">Enables you to enter the company Duns code, a unique code that identifies a trading partner.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r21c1-t9" headers="r1c1-t9">Company Identifier</td>
+<td class="cellalignment46" headers="r21c1-t9 r1c2-t9">Enables you to enter the company identifier.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r22c1-t9" headers="r1c1-t9">Code Qualifier</td>
+<td class="cellalignment46" headers="r22c1-t9 r1c2-t9">Enables you to enter the code qualifier. The code qualifier is used to interpret the identification code.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r23c1-t9" headers="r1c1-t9">File Name</td>
+<td class="cellalignment46" headers="r23c1-t9 r1c2-t9">Enables you to enter the file name</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r24c1-t9" headers="r1c1-t9">SGML Declaration File</td>
+<td class="cellalignment46" headers="r24c1-t9 r1c2-t9">Enables you to enter the SGML Declaration File.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r25c1-t9" headers="r1c1-t9">Maximum # of reports to include in the msg</td>
+<td class="cellalignment46" headers="r25c1-t9 r1c2-t9">Enables you to enter the maximum number of reports that will be transmitted in one message.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r26c1-t9" headers="r1c1-t9">Method</td>
+<td class="cellalignment46" headers="r26c1-t9 r1c2-t9">Enables you to select a method. This field contains E2B-EDI Gateway, E2B Physical Media, and E2B-XML Transmission values.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r27c1-t9" headers="r1c1-t9">EDI Header Required</td>
+<td class="cellalignment46" headers="r27c1-t9 r1c2-t9">Enables you to generate the required EDI Header.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r28c1-t9" headers="r1c1-t9">XML Version</td>
+<td class="cellalignment46" headers="r28c1-t9 r1c2-t9">Enables you to enter the XML Version.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r29c1-t9" headers="r1c1-t9">URL of Message DTD</td>
+<td class="cellalignment46" headers="r29c1-t9 r1c2-t9">Enables you to enter the path where the message DTD resides on the Internet or to enter the full path, if it is located on the disk.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r30c1-t9" headers="r1c1-t9">Encoding</td>
+<td class="cellalignment46" headers="r30c1-t9 r1c2-t9">Enables you to select the character set encoding used in XML</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r31c1-t9" headers="r1c1-t9">Use Japanese Aware Date for Reporting</td>
+<td class="cellalignment46" headers="r31c1-t9 r1c2-t9">Enables you to ensure that reporting is based on the Japanese Aware Date. If this checkbox is not checked, reporting is based on the English Aware Date.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r32c1-t9" headers="r1c1-t9">Allow multiple reports for Marketed Drugs</td>
+<td class="cellalignment46" headers="r32c1-t9 r1c2-t9">Checking this checkbox allows the system to schedule multiple reports for marketed drugs.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r33c1-t9" headers="r1c1-t9">Allow multiple reports for Investigational Drugs</td>
+<td class="cellalignment46" headers="r33c1-t9 r1c2-t9">Checking this checkbox allows the system to schedule multiple reports for investigational drugs.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r34c1-t9" headers="r1c1-t9">URL of ACK DTD</td>
+<td class="cellalignment46" headers="r34c1-t9 r1c2-t9">Enables you to enter the path where the ACK DTD resides on the Internet or enter the full path, if it is located on the disk.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" -->
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+In the File Name field, be sure to enter the appropriate naming convention followed by "####" before the transmission extension.</div>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<div id="AEOBB126" class="sect2"><a id="Toc245968588"></a>
+<h3 class="sect2"><span class="secnum">2.3.2</span> Configuring SMTP</h3>
+<p>Argus Interchange Mapping Utility can be configured to send emails to notify the appropriate people on the occurrence of some incidents or errors while processing E2B reports. These emails are sent using Argus Safety Service. You can use Argus Console if you need to configure these emails to be sent using SMTP.</p>
+<p>To enable Argus Safety Service to use the SMTP protocol to send e-mail to the e-mail server, use the SMTP Configuration Utility in the following way.</p>
+<p>To configure SMTP:</p>
+<ol>
+<li>
+<p>Open Argus Console.</p>
+</li>
+<li>
+<p>When the system opens the Code List Maintenance screen, click System Configuration -&gt; SMTP Configuration.</p>
+<img width="456" height="294" src="img/smtp.gif" alt="Surrounding text describes smtp.gif." /><br /></li>
+<li>
+<p>When the system opens the SMTP Configuration dialog box, enter the appropriate data in each field.</p>
+</li>
+</ol>
+<div id="AEOBB127" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref15"></a>
+<h4 class="sect3"><span class="secnum">2.3.2.1</span> SMTP Configuration Dialog Box Fields</h4>
+<p>The following tables lists and describes the fields in the SMTP Configuration dialog box.</p>
+<div class="inftblinformal">
+<table class="cellalignment50" summary="The following tables lists and describes the fields in the SMTP Configuration dialog box." dir="ltr">
+<tbody>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r1c1-t11">Item</td>
+<td class="cellalignment46">Description</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r2c1-t11">Server IP or Name</td>
+<td class="cellalignment46" headers="r2c1-t11">The SMTP server IP address or name.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r3c1-t11">Port</td>
+<td class="cellalignment46" headers="r3c1-t11">The port number. The default port number is 25.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r4c1-t11">Authentication</td>
+<td class="cellalignment46" headers="r4c1-t11">The authentication type to use.
+<p>Basic Authentication -- The user must enter a user name and password in the Username and Password fields.</p>
+<p>No Authentication -- The Username and Password fields are disabled.</p>
+<p>NTLM Authentication, the authentication of the OS user logged into the system is automatically passed. Additionally, the Username and Password fields are disabled in this authentication.</p>
+</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r5c1-t11">SMTP Username</td>
+<td class="cellalignment46" headers="r5c1-t11">The SMTP username.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r6c1-t11">SMTP Password</td>
+<td class="cellalignment46" headers="r6c1-t11">The SMTP password.</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r7c1-t11">Enable SMTP?</td>
+<td class="cellalignment46" headers="r7c1-t11">Select this check box to ensure that AG Service uses SMTP to send e-mail.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" --></div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<div id="AEOBB128" class="sect2"><a id="Toc225301884"></a>
+<h3 class="sect2"><span class="secnum">2.3.3</span> Configuring Code List Items</h3>
+<p>Argus Safety is currently shipped with E2B Codes for the applicable factory data items. If you enter new items, E2B codes must be derived from ICH guidelines and entered as described here.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+From Argus Console, click Code Lists -&gt; Argus to open the Code List Maintenance screen.</div>
+<div id="AEOBB129" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref16"></a>
+<h4 class="sect3"><span class="secnum">2.3.3.1</span> Configuring an Action Taken</h4>
+<p>Use the following procedure to configure action taken:</p>
+<ol>
+<li>
+<p>From the Argus Console, select Code Lists -&gt; Argus -&gt; Action Taken.</p>
+</li>
+<li>
+<p>When the system opens the Code List Maintenance screen, click Action Taken in the Code List in the left pane.</p>
+</li>
+<li>
+<p>The system puts the corresponding data for the selected item in the right pane.</p>
+<img width="1055" height="509" src="img/actiontaken.gif" alt="Surrounding text describes actiontaken.gif." /><br /></li>
+<li>
+<p>Click Add New and enter the E2B code for the new action in the Add New Action Taken section.</p>
+</li>
+<li>
+<p>Click Save.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<div id="AEOBB130" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref17"></a>
+<h4 class="sect3"><span class="secnum">2.3.3.2</span> Configuring Age Groups</h4>
+<p>Use the following procedure to configure age groups:</p>
+<ol>
+<li>
+<p>From the Argus Console, select Code Lists -&gt; Argus -&gt; Age Groups.</p>
+</li>
+<li>
+<p>When the system opens the Code List Maintenance screen, locate and click Age Groups in the Code List in the left pane.</p>
+</li>
+<li>
+<p>The system places the corresponding data for the selected item in the right pane.</p>
+<img width="1055" height="512" src="img/agegroups.gif" alt="Surrounding text describes agegroups.gif." /><br /></li>
+<li>
+<p>Click Add New and enter the E2B Code for the new age group in the Add New Age Groups section.</p>
+</li>
+<li>
+<p>Click Save.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<div id="AEOBB131" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref18"></a>
+<h4 class="sect3"><span class="secnum">2.3.3.3</span> Configuring Age Units</h4>
+<p>Use the following procedure to configure age units.</p>
+<ol>
+<li>
+<p>From the Argus Console, select Code Lists -&gt; Argus -&gt; Age Units.</p>
+</li>
+<li>
+<p>When the system opens the Code List Maintenance screen, click Age Units in the Code List in the left pane.</p>
+</li>
+<li>
+<p>The system places the data for the selected item in the right pane.</p>
+<img width="1021" height="496" src="img/ageunits.gif" alt="Surrounding text describes ageunits.gif." /><br /></li>
+<li>
+<p>Click Add New and enter the E2B Code for the new age unit in the Add New Age Units section.</p>
+</li>
+<li>
+<p>Click Save.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<div id="AEOBB132" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref19"></a>
+<h4 class="sect3"><span class="secnum">2.3.3.4</span> Configuring Attachment Classifications</h4>
+<p>Use the following procedure to configure attachment classifications:</p>
+<ol>
+<li>
+<p>From the Argus Console, select Code Lists -&gt; Argus -&gt; Attachment Classification.</p>
+</li>
+<li>
+<p>When the system opens the Code List Maintenance screen, click Attachment Classification in the Code List in the left pane.</p>
+</li>
+<li>
+<p>The system places the data for the selected item in the right pane.</p>
+<img width="1060" height="512" src="img/attchclssf.gif" alt="Surrounding text describes attchclssf.gif." /><br /></li>
+<li>
+<p>Click Add New and click the E2B Additional Doc check box in the Add New Attachment Classification section.</p>
+</li>
+<li>
+<p>Click Save.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<div id="AEOBB133" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref20"></a>
+<h4 class="sect3"><span class="secnum">2.3.3.5</span> Configuring Dosage Units</h4>
+<p>Use the following procedure to configure dosage units:</p>
+<ol>
+<li>
+<p>From Argus Console, Code Lists -&gt; Argus -&gt; Dosage Units.</p>
+</li>
+<li>
+<p>When the system opens the Code List Maintenance screen, click Dosage Units in the Code List in the left pane.</p>
+</li>
+<li>
+<p>The system places the data for the selected item in the right pane.</p>
+<img width="1059" height="512" src="img/dsgunits.gif" alt="Surrounding text describes dsgunits.gif." /><br /></li>
+<li>
+<p>Select an existing Dosage Unit and enter the new E2B code in the Modify Dosage Units section.</p>
+</li>
+<li>
+<p>Click Save.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<div id="AEOBB134" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref21"></a>
+<h4 class="sect3"><span class="secnum">2.3.3.6</span> Configuring an Event Outcome</h4>
+<p>Use the following procedure to configure an Event Outcome:</p>
+<ol>
+<li>
+<p>From the Argus Console, select Code Lists -&gt; Argus -&gt; Event Outcome.</p>
+</li>
+<li>
+<p>When the system opens the Code List Maintenance screen, click Event Outcome in the Code List in the left pane.</p>
+<img width="1057" height="512" src="img/eventoutcm.gif" alt="Surrounding text describes eventoutcm.gif." /><br /></li>
+<li>
+<p>The system places the data for the selected item in the right pane.</p>
+</li>
+<li>
+<p>Enter the E2B Code for the new event outcome in the Add New Event Outcome section.</p>
+</li>
+<li>
+<p>Click Save.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<div id="AEOBB135" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref22"></a>
+<h4 class="sect3"><span class="secnum">2.3.3.7</span> Configuring Gender</h4>
+<p>Use the following procedure to configure Gender.</p>
+<ol>
+<li>
+<p>From Argus Console, select Code Lists -&gt; Argus -&gt; Gender.</p>
+</li>
+<li>
+<p>When the system opens the Code List Maintenance screen, click Gender in the Code List in the left pane.</p>
+<img width="1059" height="511" src="img/gender.gif" alt="Surrounding text describes gender.gif." /><br /></li>
+<li>
+<p>The system places the data for the selected item in the right pane.</p>
+</li>
+<li>
+<p>Enter the E2B Code for the gender in the Add New Gender section.</p>
+</li>
+<li>
+<p>Click Save.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<div id="AEOBB136" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref23"></a>
+<h4 class="sect3"><span class="secnum">2.3.3.8</span> Configuring Report Type</h4>
+<p>Use the following procedure to configure Report Type:</p>
+<ol>
+<li>
+<p>From the Argus Console, select Code Lists -&gt; Argus -&gt; Report Type.</p>
+</li>
+<li>
+<p>When the system opens the Code List Maintenance screen, click Report Type in the Code List in the left pane.</p>
+<img width="1058" height="509" src="img/reptype.gif" alt="Surrounding text describes reptype.gif." /><br /></li>
+<li>
+<p>The system places the data for the selected item in the right pane.</p>
+</li>
+<li>
+<p>Enter the E2B code for the new report type in the Add New Report Type section.</p>
+</li>
+<li>
+<p>Click Save.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<div id="AEOBB137" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref24"></a>
+<h4 class="sect3"><span class="secnum">2.3.3.9</span> Configuring Reporter Type</h4>
+<p>Use the following procedure to configure Reporter Type:</p>
+<ol>
+<li>
+<p>From the Argus Console, select Code Lists -&gt; Argus -&gt; Reporter Type.</p>
+</li>
+<li>
+<p>When the system opens the Code List Maintenance screen, click Reporter Type in the Code List in the left pane.</p>
+</li>
+<li>
+<p>The system places the data for the selected item in the right pane.</p>
+<img width="1058" height="511" src="img/reportertype.gif" alt="Surrounding text describes reportertype.gif." /><br /></li>
+<li>
+<p>Enter the E2B Code for the new reporter type in the Add New Reporter Type section.</p>
+</li>
+<li>
+<p>Click Save.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<div id="AEOBB138" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref25"></a>
+<h4 class="sect3"><span class="secnum">2.3.3.10</span> Configuring Routes of Administration</h4>
+<p>Use the following procedure to configure Routes of Administration:</p>
+<ol>
+<li>
+<p>From the Argus Console, select Code Lists -&gt; Argus -&gt; Routes of Administration.</p>
+</li>
+<li>
+<p>When the system opens the Code List Maintenance screen, click Routes of Administration in the Code List in the left pane.</p>
+<img width="1059" height="509" src="img/routesofadmin.gif" alt="Surrounding text describes routesofadmin.gif." /><br /></li>
+<li>
+<p>The system places the data for the selected item in the right pane.</p>
+</li>
+<li>
+<p>Enter the E2B Code for the new route of administration in the Add New Routes of Administration section.</p>
+</li>
+<li>
+<p>Click Save.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<div id="AEOBB139" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref26"></a>
+<h4 class="sect3"><span class="secnum">2.3.3.11</span> Configuring a Message Type</h4>
+<p>Use the following procedure to configure a Message Type:</p>
+<ol>
+<li>
+<p>From the Argus Console, select Code Lists -&gt; Argus -&gt; Message Type.</p>
+</li>
+<li>
+<p>When the system opens the Code List Maintenance screen, click Message Type in the Code List in the left pane.</p>
+<img width="1059" height="510" src="img/msgtype.gif" alt="Surrounding text describes msgtype.gif." /><br /></li>
+<li>
+<p>The system places the data for the selected item in the right pane.</p>
+</li>
+<li>
+<p>Enter the new message type and other relevant data in the Modify Message Type section.</p>
+</li>
+<li>
+<p>Click Save.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<div id="AEOBB140" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref27"></a>
+<h4 class="sect3"><span class="secnum">2.3.3.12</span> E2B Length Check</h4>
+<p>When you select E2B Length Check, the system generates a report that prints the code list item length check and M2 validation warnings. This menu item has been added under Argus Console -&gt; Tools -&gt; E2B Length Check.</p>
+<img width="799" height="616" src="img/e2blength.gif" alt="Surrounding text describes e2blength.gif." /><br />
+<p>The following table lists the Code List items the length check is run on.</p>
+<div class="inftblinformal">
+<table class="cellalignment50" summary="The following table lists the Code List items the length check is run on." dir="ltr">
+<thead>
+<tr class="cellalignment40">
+<th class="cellalignment51" id="r1c1-t13">Data Element</th>
+<th class="cellalignment51" id="r1c2-t13">LM Field</th>
+<th class="cellalignment51" id="r1c3-t13">Argus Field Length</th>
+<th class="cellalignment51" id="r1c4-t13">DTD Allowed Length</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r2c1-t13" headers="r1c1-t13">A.2.1.1d</td>
+<td class="cellalignment46" headers="r2c1-t13 r1c2-t13">LM / Clinical Studies / Study Information / Study Description.
+<p>The application needs to consider the EUDRA-CT length (35) while displaying the message.</p>
+</td>
+<td class="cellalignment46" headers="r2c1-t13 r1c3-t13">2000</td>
+<td class="cellalignment46" headers="r2c1-t13 r1c4-t13">100</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r3c1-t13" headers="r1c1-t13">A.3.1.3b</td>
+<td class="cellalignment46" headers="r3c1-t13 r1c2-t13">LM / Regulatory Authorities / Local Company Contact / Title</td>
+<td class="cellalignment46" headers="r3c1-t13 r1c3-t13">40</td>
+<td class="cellalignment46" headers="r3c1-t13 r1c4-t13">10</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r4c1-t13" headers="r1c1-t13">A.3.1.4a</td>
+<td class="cellalignment46" headers="r4c1-t13 r1c2-t13">LM / Regulatory Authorities / Local Company Contact / Address</td>
+<td class="cellalignment46" headers="r4c1-t13 r1c3-t13">120</td>
+<td class="cellalignment46" headers="r4c1-t13 r1c4-t13">100</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r5c1-t13" headers="r1c1-t13">A.3.1.4f</td>
+<td class="cellalignment46" headers="r5c1-t13 r1c2-t13">LM / Regulatory Authorities / Local Company Contact / Phone</td>
+<td class="cellalignment46" headers="r5c1-t13 r1c3-t13">20</td>
+<td class="cellalignment46" headers="r5c1-t13 r1c4-t13">10</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r6c1-t13" headers="r1c1-t13">A.3.1.4g</td>
+<td class="cellalignment46" headers="r6c1-t13 r1c2-t13">LM / Regulatory Authorities / Local Company Contact / Phone / Ext.</td>
+<td class="cellalignment46" headers="r6c1-t13 r1c3-t13">10</td>
+<td class="cellalignment46" headers="r6c1-t13 r1c4-t13">5</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r7c1-t13" headers="r1c1-t13">A.3.1.4i</td>
+<td class="cellalignment46" headers="r7c1-t13 r1c2-t13">LM / Regulatory Authorities / Local Company Contact / Fax</td>
+<td class="cellalignment46" headers="r7c1-t13 r1c3-t13">50</td>
+<td class="cellalignment46" headers="r7c1-t13 r1c4-t13">10</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r8c1-t13" headers="r1c1-t13">A.3.1.4j</td>
+<td class="cellalignment46" headers="r8c1-t13 r1c2-t13">LM / Regulatory Authorities / Local Company Contact / Fax / Ext.</td>
+<td class="cellalignment46" headers="r8c1-t13 r1c3-t13">10</td>
+<td class="cellalignment46" headers="r8c1-t13 r1c4-t13">5</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r9c1-t13" headers="r1c1-t13">A.3.2.2c</td>
+<td class="cellalignment46" headers="r9c1-t13 r1c2-t13">LM / Regulatory Authorities / Agency Information / Contact Information / Title</td>
+<td class="cellalignment46" headers="r9c1-t13 r1c3-t13">40</td>
+<td class="cellalignment46" headers="r9c1-t13 r1c4-t13">10</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r10c1-t13" headers="r1c1-t13">A.3.2.2f</td>
+<td class="cellalignment46" headers="r10c1-t13 r1c2-t13">LM / Regulatory Authorities / Agency Information / Contact Information / Last Name</td>
+<td class="cellalignment46" headers="r10c1-t13 r1c3-t13">40</td>
+<td class="cellalignment46" headers="r10c1-t13 r1c4-t13">35</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r11c1-t13" headers="r1c1-t13">A.3.2.3a</td>
+<td class="cellalignment46" headers="r11c1-t13 r1c2-t13">LM / Regulatory Authorities / Agency Information / Contact Information / Address</td>
+<td class="cellalignment46" headers="r11c1-t13 r1c3-t13">120</td>
+<td class="cellalignment46" headers="r11c1-t13 r1c4-t13">100</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r12c1-t13" headers="r1c1-t13">A.3.2.3f</td>
+<td class="cellalignment46" headers="r12c1-t13 r1c2-t13">LM / Regulatory Authorities / Agency Information / Contact Information / Phone</td>
+<td class="cellalignment46" headers="r12c1-t13 r1c3-t13">20</td>
+<td class="cellalignment46" headers="r12c1-t13 r1c4-t13">10</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r13c1-t13" headers="r1c1-t13">A.3.2.3g</td>
+<td class="cellalignment46" headers="r13c1-t13 r1c2-t13">LM / Regulatory Authorities / Agency Information / Contact Information / Phone / Ext.</td>
+<td class="cellalignment46" headers="r13c1-t13 r1c3-t13">10</td>
+<td class="cellalignment46" headers="r13c1-t13 r1c4-t13">5</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r14c1-t13" headers="r1c1-t13">A.3.2.3i</td>
+<td class="cellalignment46" headers="r14c1-t13 r1c2-t13">LM / Regulatory Authorities / Agency Information / Contact Information / Fax</td>
+<td class="cellalignment46" headers="r14c1-t13 r1c3-t13">50</td>
+<td class="cellalignment46" headers="r14c1-t13 r1c4-t13">10</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r15c1-t13" headers="r1c1-t13">A.3.2.3j</td>
+<td class="cellalignment46" headers="r15c1-t13 r1c2-t13">LM / Regulatory Authorities / Agency Information / Contact Information / Fax / Ext.</td>
+<td class="cellalignment46" headers="r15c1-t13 r1c3-t13">10</td>
+<td class="cellalignment46" headers="r15c1-t13 r1c4-t13">5</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r16c1-t13" headers="r1c1-t13">A.2.1.2c</td>
+<td class="cellalignment46" headers="r16c1-t13 r1c2-t13">LM / Reporter Information / Address</td>
+<td class="cellalignment46" headers="r16c1-t13 r1c3-t13">120</td>
+<td class="cellalignment46" headers="r16c1-t13 r1c4-t13">100</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r17c1-t13" headers="r1c1-t13">B.4.k.2.2</td>
+<td class="cellalignment46" headers="r17c1-t13 r1c2-t13">LM / Products / Key Ingredient</td>
+<td class="cellalignment46" headers="r17c1-t13 r1c3-t13">120</td>
+<td class="cellalignment46" headers="r17c1-t13 r1c4-t13">100</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r18c1-t13" headers="r1c1-t13">B.4.k.4.1</td>
+<td class="cellalignment46" headers="r18c1-t13 r1c2-t13">LM / Licenses / License Information / Number</td>
+<td class="cellalignment46" headers="r18c1-t13 r1c3-t13">40</td>
+<td class="cellalignment46" headers="r18c1-t13 r1c4-t13">35</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" --></div>
+<!-- class="sect3" -->
+<div id="AEOBB141" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref28"></a>
+<h4 class="sect3"><span class="secnum">2.3.3.13</span> E2B Code Validation</h4>
+<p>The following table lists the E2B Code Validation items.</p>
+<div class="inftblinformal">
+<table class="cellalignment50" summary="The following table lists the Code List items the length check is run on." dir="ltr">
+<thead>
+<tr class="cellalignment40">
+<th class="cellalignment51" id="r1c1-t14">Tag Name</th>
+<th class="cellalignment51" id="r1c2-t14">DTD Element</th>
+<th class="cellalignment51" id="r1c3-t14">Case Form Field</th>
+<th class="cellalignment51" id="r1c4-t14">LM Field</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r2c1-t14" headers="r1c1-t14">primarysourcecountry</td>
+<td class="cellalignment46" headers="r2c1-t14 r1c2-t14">A.1.1</td>
+<td class="cellalignment46" headers="r2c1-t14 r1c3-t14">Case Form / General / Reporter Information / Country</td>
+<td class="cellalignment46" headers="r2c1-t14 r1c4-t14">LM / Countries / Code (A2)</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r3c1-t14" headers="r1c1-t14">occurcountry</td>
+<td class="cellalignment46" headers="r3c1-t14 r1c2-t14">A.1.2</td>
+<td class="cellalignment46" headers="r3c1-t14 r1c3-t14">Case Form / General / General Information / Country</td>
+<td class="cellalignment46" headers="r3c1-t14 r1c4-t14">LM / Countries / Code (A2)</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r4c1-t14" headers="r1c1-t14">reporttype</td>
+<td class="cellalignment46" headers="r4c1-t14 r1c2-t14">A.1.4</td>
+<td class="cellalignment46" headers="r4c1-t14 r1c3-t14">Case Form / General Information / Report Type</td>
+<td class="cellalignment46" headers="r4c1-t14 r1c4-t14">LM / Report Type / E2B Code</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r5c1-t14" headers="r1c1-t14">reportercountry</td>
+<td class="cellalignment46" headers="r5c1-t14 r1c2-t14">A.2.1.3</td>
+<td class="cellalignment46" headers="r5c1-t14 r1c3-t14">Case Form / General / Reporter Information / Country</td>
+<td class="cellalignment46" headers="r5c1-t14 r1c4-t14">LM / Countries / Code (A2)</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r6c1-t14" headers="r1c1-t14">qualification</td>
+<td class="cellalignment46" headers="r6c1-t14 r1c2-t14">A.2.1.4</td>
+<td class="cellalignment46" headers="r6c1-t14 r1c3-t14">Case Form / General / Reporter Information / Reporter Type</td>
+<td class="cellalignment46" headers="r6c1-t14 r1c4-t14">LM / Reporter Type / E2B Code</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r7c1-t14" headers="r1c1-t14">observestudytype</td>
+<td class="cellalignment46" headers="r7c1-t14 r1c2-t14">A.2.3.3</td>
+<td class="cellalignment46" headers="r7c1-t14 r1c3-t14">Case Form / General / Study Information / Observe Study Type</td>
+<td class="cellalignment46" headers="r7c1-t14 r1c4-t14">LM / Case Classification / E2B Code</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r8c1-t14" headers="r1c1-t14">sendertype</td>
+<td class="cellalignment46" headers="r8c1-t14 r1c2-t14">A.3.1.1</td>
+<td class="cellalignment46" headers="r8c1-t14 r1c3-t14">LM / Regulatory Authorities / Local Company Contact / Sender Type</td>
+<td class="cellalignment46" headers="r8c1-t14 r1c4-t14">LM / Regulatory Authorities / Local Company Contact / Sender Type</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r9c1-t14" headers="r1c1-t14">sendercountrycode</td>
+<td class="cellalignment46" headers="r9c1-t14 r1c2-t14">A.3.1.4e</td>
+<td class="cellalignment46" headers="r9c1-t14 r1c3-t14">LM / Regulatory Authorities / Local Company Contact / Country</td>
+<td class="cellalignment46" headers="r9c1-t14 r1c4-t14">LM / Countries / Code (A2)</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r10c1-t14" headers="r1c1-t14">receivertype</td>
+<td class="cellalignment46" headers="r10c1-t14 r1c2-t14">A.3.2.1</td>
+<td class="cellalignment46" headers="r10c1-t14 r1c3-t14">LM / Regulatory Authorities / Agency Information / Agency Type</td>
+<td class="cellalignment46" headers="r10c1-t14 r1c4-t14">LM / Regulatory Authorities / Agency Information / Agency Type</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r11c1-t14" headers="r1c1-t14">receivercountrycode</td>
+<td class="cellalignment46" headers="r11c1-t14 r1c2-t14">A.3.2.3e</td>
+<td class="cellalignment46" headers="r11c1-t14 r1c3-t14">LM / Regulatory Authorities / Agency Information / Contact Information / Country</td>
+<td class="cellalignment46" headers="r11c1-t14 r1c4-t14">LM / Countries / Code (A2)</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r12c1-t14" headers="r1c1-t14">patientonsetageunit</td>
+<td class="cellalignment46" headers="r12c1-t14 r1c2-t14">B.1.2.2b</td>
+<td class="cellalignment46" headers="r12c1-t14 r1c3-t14">Case Form / Patient / Patient Information / Age Units</td>
+<td class="cellalignment46" headers="r12c1-t14 r1c4-t14">LM / Age Units / E2B Code</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r13c1-t14" headers="r1c1-t14">patientagegroup</td>
+<td class="cellalignment46" headers="r13c1-t14 r1c2-t14">B.1.2.3</td>
+<td class="cellalignment46" headers="r13c1-t14 r1c3-t14">Case Form / Patient / Patient Information / Age Group</td>
+<td class="cellalignment46" headers="r13c1-t14 r1c4-t14">LM / Age Group / E2B Code</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r14c1-t14" headers="r1c1-t14">patientsex</td>
+<td class="cellalignment46" headers="r14c1-t14 r1c2-t14">B.1.5</td>
+<td class="cellalignment46" headers="r14c1-t14 r1c3-t14">Case Form / Patient / Patient Information / Gender</td>
+<td class="cellalignment46" headers="r14c1-t14 r1c4-t14">LM / Gender / E2B Code</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r15c1-t14" headers="r1c1-t14">parentageunit</td>
+<td class="cellalignment46" headers="r15c1-t14 r1c2-t14">B.1.10.2.2b</td>
+<td class="cellalignment46" headers="r15c1-t14 r1c3-t14">Case Form / Patient / Parent / Age Unit</td>
+<td class="cellalignment46" headers="r15c1-t14 r1c4-t14">LM / Age Units / E2B Code</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r16c1-t14" headers="r1c1-t14">parentsex</td>
+<td class="cellalignment46" headers="r16c1-t14 r1c2-t14">B.1.10.6</td>
+<td class="cellalignment46" headers="r16c1-t14 r1c3-t14">Case Form / Patient / Parent / Gender</td>
+<td class="cellalignment46" headers="r16c1-t14 r1c4-t14">LM / Gender / E2B Code</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r17c1-t14" headers="r1c1-t14">reactionoutcome</td>
+<td class="cellalignment46" headers="r17c1-t14 r1c2-t14">B.2.i.8</td>
+<td class="cellalignment46" headers="r17c1-t14 r1c3-t14">Case Form / Events / Event Information / Outcome of Event</td>
+<td class="cellalignment46" headers="r17c1-t14 r1c4-t14">LM / Event Outcome / E2B Code</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r18c1-t14" headers="r1c1-t14">testunit</td>
+<td class="cellalignment46" headers="r18c1-t14 r1c2-t14">B.3.1e</td>
+<td class="cellalignment46" headers="r18c1-t14 r1c3-t14">Case Form / Patient / Lab Data / Lab Data / Units</td>
+<td class="cellalignment46" headers="r18c1-t14 r1c4-t14">LM / Dossage Units / E2B Code</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r19c1-t14" headers="r1c1-t14">obtaindrugcountry</td>
+<td class="cellalignment46" headers="r19c1-t14 r1c2-t14">B.4.k.2.3</td>
+<td class="cellalignment46" headers="r19c1-t14 r1c3-t14">Case Form / Products / Product Information / Obtain Drug Country</td>
+<td class="cellalignment46" headers="r19c1-t14 r1c4-t14">LM / Countries / Code (A2)</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r20c1-t14" headers="r1c1-t14">drugauthorizationcountry</td>
+<td class="cellalignment46" headers="r20c1-t14 r1c2-t14">B.4.k.4.2</td>
+<td class="cellalignment46" headers="r20c1-t14 r1c3-t14">LM / Licenses / License Information / Country</td>
+<td class="cellalignment46" headers="r20c1-t14 r1c4-t14">LM / Countries / Code (A2)</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r21c1-t14" headers="r1c1-t14">drugstructuredosageunit</td>
+<td class="cellalignment46" headers="r21c1-t14 r1c2-t14">B.4.k.5.2</td>
+<td class="cellalignment46" headers="r21c1-t14 r1c3-t14">Case Form / Products / Dosage Regimens / Dose Units</td>
+<td class="cellalignment46" headers="r21c1-t14 r1c4-t14">LM / Dosage Unit / E2B Code</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r22c1-t14" headers="r1c1-t14">drugcumulativedosageunit</td>
+<td class="cellalignment46" headers="r22c1-t14 r1c2-t14">B.4.k.5.7</td>
+<td class="cellalignment46" headers="r22c1-t14 r1c3-t14">Case Form / Products / Total Dose to Primary Event</td>
+<td class="cellalignment46" headers="r22c1-t14 r1c4-t14">LM / Dosage Unit / E2B Code</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r23c1-t14" headers="r1c1-t14">drugadministrationroute</td>
+<td class="cellalignment46" headers="r23c1-t14 r1c2-t14">B.4.k.8</td>
+<td class="cellalignment46" headers="r23c1-t14 r1c3-t14">Case Form / Products / Dosage Regimens / Patient Route of Administration</td>
+<td class="cellalignment46" headers="r23c1-t14 r1c4-t14">LM / Routes of Administration / E2B Code</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r24c1-t14" headers="r1c1-t14">drugparadministration</td>
+<td class="cellalignment46" headers="r24c1-t14 r1c2-t14">B.4.k.9</td>
+<td class="cellalignment46" headers="r24c1-t14 r1c3-t14">Case Form / Products / Dosage Regimens / Parent Route of Administration</td>
+<td class="cellalignment46" headers="r24c1-t14 r1c4-t14">LM / Routes of Administration / E2B Code</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r25c1-t14" headers="r1c1-t14">drugintervaldosagedefinition</td>
+<td class="cellalignment46" headers="r25c1-t14 r1c2-t14">B.4.k.5.5</td>
+<td class="cellalignment46" headers="r25c1-t14 r1c3-t14">LM / Dosage Frequency / Unit</td>
+<td class="cellalignment46" headers="r25c1-t14 r1c4-t14">LM / Dosage Frequency / Unit</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r26c1-t14" headers="r1c1-t14">actiondrug</td>
+<td class="cellalignment46" headers="r26c1-t14 r1c2-t14">B.4.k.16</td>
+<td class="cellalignment46" headers="r26c1-t14 r1c3-t14">Case Form / Products / Product Details / Action Taken</td>
+<td class="cellalignment46" headers="r26c1-t14 r1c4-t14">LM / Action Taken / E2B Code</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r27c1-t14" headers="r1c1-t14">mhlwadmicsrcasenumclass</td>
+<td class="cellalignment46" headers="r27c1-t14 r1c2-t14">J.4a</td>
+<td class="cellalignment46" headers="r27c1-t14 r1c3-t14">Case Form / Analysis / PMDA / General / Report Category</td>
+<td class="cellalignment46" headers="r27c1-t14 r1c4-t14">LM / Reporting Category / E2B Code</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r28c1-t14" headers="r1c1-t14">mhlwadmicsrnewdrugclass</td>
+<td class="cellalignment46" headers="r28c1-t14 r1c2-t14">J.8</td>
+<td class="cellalignment46" headers="r28c1-t14 r1c3-t14">Case Form / Analysis / PMDA / Comments / Category of the new drug</td>
+<td class="cellalignment46" headers="r28c1-t14 r1c4-t14">LM / License Category / E2B Code</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r29c1-t14" headers="r1c1-t14">mhlwphaseofstudies</td>
+<td class="cellalignment46" headers="r29c1-t14 r1c2-t14">J.12.i.2</td>
+<td class="cellalignment46" headers="r29c1-t14 r1c3-t14">Business Configuration / Studies / Study Development Phase</td>
+<td class="cellalignment46" headers="r29c1-t14 r1c4-t14">LM / Study Development Phase / E2B Code</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" --></div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment39">
+<tr>
+<td class="cellalignment46">
+<table class="cellalignment49">
+<tr>
+<td class="cellalignment43"><a href="about.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment43"><a href="e2bcheck.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment48">
+<table class="cellalignment42">
+<tr>
+<td class="cellalignment43"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment43"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment43"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment43"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

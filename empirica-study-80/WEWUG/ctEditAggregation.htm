@@ -1,0 +1,560 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 2017" />
+<title>Specifying Content Details</title>
+<link rel="StyleSheet" href="Empirica.css" type="text/css" />
+ <link rel="StyleSheet" href="Empirica.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Reports\nSpecifying Content Details");
+addAvenueInfo("Creating Report Definitions","utlColumnStats.htm","ctPreviewCompositeTable.htm");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\">");
+AddMasterBreadcrumbs("About_WebVDME.htm", "", "&gt;", "Overview", "home.htm");
+document.write("<a href=\"About_Reports.htm\">Reports<\/a> &gt; Specifying Content Details<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('About_WebVDME.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Specifying Content Details</h1>
+<p>Content details specify the aggregation method for the values of an <a href="Report_Structure.htm">analysis variable</a>, that is, the aggregation method for its values. For example, you may want to show an actual value, a count of records that have a value, a percentage of records that have the value, and so on. You can specify multiple aggregation methods for an analysis variable.</p>
+<p>When you add an analysis variable to a report, <span style="font-weight: bold;">Value</span> appears by default as the aggregation method:</p>
+<p><img width="223" height="63" src="agg1.gif" alt="" style="border: none;" border="0" /></p>
+<p><span style="font-weight: bold;">Value</span> stands for <span style="font-weight: bold;">First value</span>. When you change the aggregation method, an abbreviation for the aggregation method that you select appears in the table cell. For example, if you select Count as the aggregation method, N displays in the table cell:</p>
+<p><img width="225" height="68" src="agg2.gif" alt="" style="border: none;" border="0" /></p>
+<p>You can choose one or multiple aggregation method for a variable.</p>
+<p>The aggregation methods that you can select for an analysis variable include counts and unique counts. If you choose both of these aggregation methods for a variable that is unique in the selected table, the count and unique count will be the same. If the variable is not unique in the selected table, the count and unique count may differ. For example, demographics data typically includes only one record for each subject ID, so the count and unique count would be the same. Adverse events data often includes multiple records for each subject ID, so the count and unique count would differ.</p>
+<p class="Subhead">To specify content details for an analysis variable:</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">1.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Highlight the aggregation method (not the column heading) for the analysis variable. For example, highlight <span style="font-weight: bold;">Value</span> in the above example.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">2.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Click <span class="Button">Select</span> next to <span style="font-weight: bold;">Content Details</span>. The Content Details window appears.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">3.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Optionally select one or more aggregation methods and click <span class="Button">OK</span>. Available aggregation methods depend on the data type of a variable.</p>
+
+<h2><span style="font-weight: bold;">Aggregation methods for text or date variables</span></h2>
+<p>For an analysis variable with a data type of text or date, select one or more of the following check boxes. The abbreviation appears in the report column heading and on the Edit Definition page.</p>
+<br />
+<table summary="" summary="" class="Empirica" style="height: 635px; left: 0px; top: 659px;" cellspacing="0px">
+<col width="267" />
+<col width="134" />
+<col width="961" />
+<tr class="t1st">
+<td>
+<p class="TableHeader">Check box</p>
+</td>
+<td>
+<p class="TableHeader">Abbreviation</p>
+</td>
+<td>
+<p class="TableHeader">Definition</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Count</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">N</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">The number of non-NULL values.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Count (Unique)</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">N (U)</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">The number of unique non-NULL values.</p>
+<p class="TableBody">For source database tables in which each record has a unique value, the Count and Count (Unique) values are the same. For example, a demographics table typically includes one record for each subject ID, so the Count and Count (Unique) of the subject ID are the same.<br />
+<br />
+For source database tables in which multiple records may have the same value, the Count and Count (Unique) may differ. For example, an adverse events table may have multiple records for each subject ID, so the Count and Count (Unique) of the subject ID may differ.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Row %</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Row %</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Count of non-unique values for the row and column/Count of non-unique values for the row for all columns. (There must be a column for All.)</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Column %</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Col %</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Count of non-unique values for the column and row/Count of non-unique values for the column for all rows. (There must be a row for All.)</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Overall %</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">%</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Count of non-unique values for the column and row/Count of non-unique values for all columns and all rows. (There must be a column for All and a row for All.)</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Row % (Unique)</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Row % (U)</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Count of unique values for the row and column/Count of unique values for the row for all columns. (There must be a column for All.)</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Column % (Unique)</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Col % (U)</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Count of unique values for the column and row/Count of unique values for the column for all rows. (There must be a row for All.)</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Overall % (Unique)</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">% (U)</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Count of unique values for the column and row/Count of unique values for all columns and all rows. (There must be a column for All and a row for All.)</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody">All values</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">ALL</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">All values, including null values, separated by commas. Null values are shown as blanks, so you may see a list of values like "DrugA, , DrugC".</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;">
+<p class="TableBody">All values and counts</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">ALL (N)</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">All values including null values, separated by commas; after each value is the count of the value. Null values are represented in the list by the string "null".</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody">All values (excluding NULLs)</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">All</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">All values except null values, separated by commas.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;">
+<p class="TableBody">All values and counts (Excluding NULLs)</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">All (N)</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">All values except null values, separated by commas; after each value is the count of the value.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody">First value</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Value</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">First non-NULL value from the database (for the subject list being used). If you do not specify an aggregation method, this method is used by default.</p>
+</td>
+</tr>
+</table>
+<h2><span style="font-weight: bold;">Aggregation methods for numeric variables</span></h2>
+<p>For an analysis variable with a data type of number, check one or more of the following check boxes. The abbreviation appears in the report column heading and on the Edit Definition page.</p>
+<br />
+<table summary="" summary="" class="Empirica" cellspacing="0px">
+<col width="188" />
+<col width="130" />
+<col width="700" />
+<tr class="t1st">
+<td>
+<p class="TableHeader">Option</p>
+</td>
+<td>
+<p class="TableHeader">Abbreviation</p>
+</td>
+<td>
+<p class="TableHeader">Definition</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Count</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">N</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">The number of non-NULL values.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Count (Unique)</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">N (U)</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">The number of unique non-NULL values. &nbsp;</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Row %</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Row %</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Count of non-unique values for the row and column/Count of non-unique values for the row for all columns. (There must be a column for All.)</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Column %</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Col %</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Count of non-unique values for the column and row/Count of non-unique values for the column for all rows. (There must be a row for All.)</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Overall %</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">%</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Count of non-unique values for the column and row/Count of non-unique values for all columns and all rows. (There must be a column for All and a row for All.)</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Row % (Unique)</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Row % (U)</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Count of unique values for the row and column/Count of unique values for the row for all columns. (There must be a column for All.)</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Column % (Unique)</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Col % (U)</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Count of unique values for the column and row/Count of unique values for the column for all rows. (There must be a row for All.)</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Overall % (Unique)</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">% (U)</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Count of unique values for the column and row/Count of unique values for all columns and all rows. (There must be a column for All and a row for All.)</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody">All values</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">ALL</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">All values including null values, separated by commas. Null values are shown as blanks, so you may see a list of values like <span style="font-weight: bold;">60, , 105</span>.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;">
+<p class="TableBody">All values and counts</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">ALL (N)</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">All values including null values, separated by commas; after each value is the count of the value. Null values are represented in the list by the string <span style="font-weight: bold;">null</span>.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody">All values, excluding NULLS</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">All</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">All values except null values, separated by commas.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;">
+<p class="TableBody">All values and counts, Excluding NULLS</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">All (N)</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">All values except null values, separated by commas; after each value is the count of the value.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Sum</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Sum</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">The sum of the values.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Mean</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Mean</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">The mean of the values.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Median</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Median</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">The median of the values.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Standard Deviation</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">SD</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">The standard deviation of the values.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody">1st Quartile</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Q1</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">The first quartile of the values.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;">
+<p class="TableBody">3rd Quartile</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Q3</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">The third quartile of the values.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Min</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Min</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">The minimum value.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Max</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Max</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">The maximum value.</p>
+</td>
+</tr>
+</table>
+<p>For example, suppose that a report includes counts like this:</p>
+<p><img width="280" height="125" src="table1.jpg" alt="" style="border: none;" border="0" /></p>
+<p>If you replaced the counts in the report with row, column, and overall percentages, the report display would change to this:</p>
+<p><img width="974" height="161" src="table2.jpg" alt="" style="border: none;" border="0" /></p>
+ <div style="width: 100%; position: relative;" id="footer">
+	<p style="margin-top: 20pt; color: #808080;">Copyright &copy; 2002, 2017, 
+	 Oracle and/or its affiliates. All rights reserved.</p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>
+<footer>
+</footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+
+</body>
+</html>
+<footer>
+</footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+<script>$(document).foundation();</script>
+</body>
+</html>

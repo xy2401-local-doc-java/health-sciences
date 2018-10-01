@@ -1,0 +1,1781 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Omission Management</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2018-02-27T10:10:49Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Thesaurus Management System User's Guide" />
+<meta name="dcterms.identifier" content="E61918-02" />
+<meta name="dcterms.isVersionOf" content="TMSUG" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;1999, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Index" href="index.htm" title="Index" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="part2.htm" title="Previous" type="text/html" />
+<link rel="Next" href="vtamaint.htm" title="Next" type="text/html" />
+<link rel="alternate" href="TMSUG.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="TMSUG.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="TMSUG.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">15/25</span> <!-- End Header -->
+<div id="TMSUG11718" class="chapter"><a id="BABFBDEH"></a>
+<h1 class="chapter"><span class="secnum">10</span> Omission Management</h1>
+<p>The windows under the Omission Management menu enable you to approve and unapprove VTAs, set up Autoclassification, and classify terms manually. Oracle Thesaurus Management System (TMS) restricts access to the Approve VTAs window to users with the <a id="sthref466"></a>tms_approve_priv role, and restricts access to all other Omission Management windows to users with the <a id="sthref467"></a>tms_classify_priv role. Omission Management includes:</p>
+<ul>
+<li>
+<p><a href="#BCFHAEFE">Classification Concepts</a></p>
+</li>
+<li>
+<p><a href="#i1002971">Classifying Terms Manually</a></p>
+</li>
+<li>
+<p><a href="#BEICDGFH">Classifying Indication Omissions</a></p>
+</li>
+<li>
+<p><a href="#i1001950">Approving and Unapproving VTAs</a></p>
+</li>
+<li>
+<p><a href="#BEIDGAEH">Approving Action Assignments</a></p>
+</li>
+<li>
+<p><a href="#BEIGEFBG">Term Statuses</a></p>
+</li>
+<li>
+<p><a href="#BJFHJDIF">Using the Status/Notes Pop-up Window</a></p>
+</li>
+<li>
+<p><a href="#BEIHAIIE">Using the VT History Window</a></p>
+</li>
+<li>
+<p><a href="#BJFJHAFH">Creating and Using Activity Lists</a></p>
+</li>
+<li>
+<p><a href="#BEIDCJIC">Omission Management Reports</a></p>
+</li>
+</ul>
+<a id="BCFHAEFE"></a>
+<div id="TMSUG11719" class="sect1">
+<h2 class="sect1">Classification Concepts</h2>
+<p>The process of assigning a source term&mdash;a term collected during a clinical trial as a response to a CRF question&mdash;to a dictionary term is called <span class="italic">classifying</span> the term. After loading a group of source terms, you run the Autoclassification process, which classifies as many terms as possible automatically:</p>
+<ul>
+<li>
+<p>If a dictionary term exists that is exactly the same as the source term and is unique in the coding level, the process classifies the source term to the dictionary term, creating a <span class="italic">Verbatim Term Assignment</span> (<span class="bold">VTA</span>).</p>
+</li>
+<li>
+<p>If a dictionary term exists that is exactly the same as the source term and is NOT unique in the coding level but has auxiliary information, the process can classify the source term with the same auxiliary information to the dictionary term, creating a <span class="italic">Verbatim Term Individual</span> (<span class="bold">VTI</span>); see <a href="defdict.htm#CHDCHECF">"Nonunique Coding Level Dictionaries"</a> for more information.</p>
+</li>
+<li>
+<p>If an existing VTA&mdash;either automatically or manually created&mdash;matches the source term, the process classifies the source term to the VTA.</p>
+</li>
+<li>
+<p>If an existing VTI&mdash;either automatically or manually created&mdash; matches the source term and its auxiliary information, the process classifies the source term to the VTI.</p>
+</li>
+</ul>
+<p>If Autoclassification cannot classify a term, it creates an <span class="italic">omission</span>. A user must classify each omission, manually creating a VTA or VTI. Autoclassification then classifies each subsequent occurrence of the same source term to the manually created VTA or VTI.</p>
+<p>A user can classify an omission to an existing VTA, but not to an existing VTI. When a user classifies a term to an existing VTA, behind the scenes TMS maps the verbatim term directly to the dictionary term specified by the VTA.</p>
+<p>See <a href="admin.htm#BABHJBGD">"Autoclassification"</a> for more information.</p>
+<p><a id="BEICEIFE"></a><a id="TMSUG11720"></a><span class="subhead3">Misspelled VTAs and VTIs&nbsp;</span>It is possible to designate a VTA or VTI as misspelled, and a dictionary term can have any number of misspelled VTAs and VTIs; for example, the dictionary term acetyl salicylic acid might have misspelled VTAs asperin and aspurin as well as (not misspelled) aspirin. When you classify a term, you must select either Misspelled or Accepted (not misspelled).</p>
+<p><a id="TMSUG11721"></a><span class="subhead3">Approved and Unapproved VTAs&nbsp;</span>In each dictionary/domain you specify whether you want VTAs to be created as Approved or Unapproved. Unapproved VTAs require explicit manual approval for each occurrence.</p>
+<ul>
+<li>
+<p>If VTAs are created as Approved, no further action is required. Autoclassification maps all occurrences of the term to the Approved VTA. However, it is possible to declassify or reclassify a verbatim term.</p>
+</li>
+<li>
+<p>If VTAs are created as Unapproved, all occurrences of the term are mapped to the Unapproved VTA until a user explicitly approves the VTA. All subsequent occurrences are mapped to the Approved VTA.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+VTIs&mdash;Verbatim Term Individuals, classifications to a nonunique dictionary term&mdash;are always created as Approved.</div>
+</li>
+</ul>
+<p><a id="TMSUG11722"></a><span class="subhead3">Global and Domain VTAs&nbsp;</span>A <a href="glossary.htm#CBACAIAB"><span class="xrefglossterm">Domain VTA</span></a> is available for use in classification only in the TMS domain in which it was created. A <a href="glossary.htm#CBACCJBD"><span class="xrefglossterm">Global VTA</span></a> is available across all TMS domains. Domain VTAs take precedence over Global VTAs: if a domain version of a VTA exists in the current TMS domain, you will see only it, even if a global version also exists.</p>
+<p>You can <span class="italic">promote</span> a Domain VTA to be a Global VTA or <span class="italic">demote</span> a Global VTA to a Domain VTA in the Promote/Demote VTAs window.</p>
+<p><a id="TMSUG11723"></a><span class="subhead3">Classification and Verbatim Term Levels&nbsp;</span>You can classify omissions to terms in either the classification level of the dictionary, which are dictionary terms, or to terms in the Verbatim Term level, which are previously classified terms (VTAs). If you select a VTA, behind the scenes TMS instead classifies the verbatim term directly to the dictionary term to which the VTA you selected is classified.</p>
+<p><a id="BEIBJJIC"></a><a id="TMSUG11724"></a><span class="subhead3">Candidate Terms and Search Objects&nbsp;</span>Your company may set up Search Objects, or algorithms, to supplement the basic Autoclassification process to find possible valid dictionary matches in an automated way. These are presented as <span class="italic">candidate</span> terms.</p>
+<p>Search Objects are executed in order and run only until candidate terms are found, and the Search Object that found them is displayed in the <span class="bold">Search</span> field. You can run Search Objects during manual classification. Unless there have been changes to the database since Autoclassification, you will not find any candidate terms by using a search object whose execution order is lower than the one entered in the <span class="bold">Search</span> field. However, you may find additional matches by using a search object with a higher execution order. You can see the order of execution in the Define Search Objects window under the Definition menu.</p>
+<p><a id="TMSUG11725"></a><span class="subhead3">Actions&nbsp;</span>Sometimes you cannot manually classify a term because the term itself is flawed. For example, a term might include two symptoms that cannot be mapped to a single dictionary term, such as <span class="italic">headache and nausea</span>. Or a term may be garbled because a data entry operator's fingers were on the wrong keyboard keys; for example <span class="italic">sd[otom</span> instead of <span class="italic">aspirin</span>. In this case, you can assign a predefined Action to the term and send it back to the external source data system. Actions contain a message; for example, <span class="italic">Please split the term</span> or <span class="italic">Please clarify</span>. See <a href="defmisc.htm#i1001382">"Defining and Using Actions"</a>.</p>
+<p><a id="BEIHAJAI"></a><a id="TMSUG11726"></a><span class="subhead3">Internal Actions for Unapproved Actions&nbsp;</span>To minimize the time spent on communication with the external system, you can require that Action assignments be approved before being sent back to the source system. In this case, you allocate an <span class="italic">Internal Action</span> as a task to a TMS user to approve an external Action before sending it to the source data system. See <a href="defmisc.htm#i1001382">"Defining and Using Actions"</a>.</p>
+<p><a id="TMSUG11727"></a><span class="subhead3">Discrepancy Message&nbsp;</span>You can send a message to the external system regarding a single source term in the Classify VT Omissions window. A discrepancy message is not predefined; you enter text specifically for a particular source term. See <a href="#BEIDFIIJ">"Applying a Discrepancy Message"</a>.</p>
+<p><a id="TMSUG11728"></a><span class="subhead3">Activities&nbsp;</span>Your organization can assign tasks, including classifying omissions and approving unapproved VTAs and actions, to you and other users. You can create lists of the tasks assigned to you and use them to organize your daily work; see <a href="#BJFJHAFH">"Creating and Using Activity Lists"</a>.</p>
+<p><a id="TMSUG11729"></a><span class="subhead3">Term Statuses&nbsp;</span>TMS automatically assigns statuses to terms&mdash;omissions and unapproved VTAs&mdash;as they go from one stage to the next and become approved VTAs or VTIs. These statuses reflect whether or not they are allocated to a user and whether or not an Action is associated with them. Most statuses have substatuses. See <a href="#BEIGEFBG">"Term Statuses"</a> for more information.</p>
+</div>
+<!-- class="sect1" -->
+<a id="i1002971"></a>
+<div id="TMSUG11730" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Classifying Terms Manually<a id="sthref468"></a></h2>
+<p>You resolve omissions&mdash;terms that TMS could not classify automatically&mdash;by manually classifying<a id="sthref469"></a> the term. The type of classification you can create, and the system's behavior after your classification, depend on how the dictionary is set up by your organization.</p>
+<p><a id="TMSUG11731"></a><span class="subhead3">VTA&nbsp;</span>If the dictionary allows only unique dictionary terms in the classification level, you classify an omission by creating a Verbatim Term Assignment (<a href="glossary.htm#CBAJCIEA"><span class="xrefglossterm">VTA</span></a>). TMS automatically classifies all future occurrences of the same term to the same VTA. VTAs can be created as global or domain-specific, approved or not approved, misspelled or accepted.</p>
+<p><a id="TMSUG11732"></a><span class="subhead3">VTI<a id="sthref470"></a> with Auxiliary Information&nbsp;</span>If the dictionary allows nonunique classification-level terms and includes auxiliary information for dictionary terms, like WHO-Drug Format C, you classify an omission by creating a Verbatim Term Individual (<a href="glossary.htm#CBACHDAF"><span class="xrefglossterm">VTI</span></a>). TMS automatically classifies all future occurrences of the same term with the same auxiliary information to the same VTI. VTIs are always approved and domain-specific. They can be misspelled or accepted.</p>
+<p><a id="TMSUG11733"></a><span class="subhead3">VTI<a id="sthref471"></a> without Auxiliary Information&nbsp;</span>If the dictionary allows nonunique classification-level terms but has no auxiliary information&mdash;which is possible for MedDRA if nonunique dictionary terms are related to different higher-level dictionary terms&mdash;you classify an omission by creating a Verbatim Term Individual (<a href="glossary.htm#CBACHDAF"><span class="xrefglossterm">VTI</span></a>) in the All Verbatim Term Omissions tab. The classification applies only to the occurrence you code.</p>
+<p><a id="TMSUG11734"></a><span class="subhead3">Actions&nbsp;</span>If you cannot classify a term because the term itself is flawed, you can request that it be corrected by using an <a href="glossary.htm#CBAHIAGH"><span class="xrefglossterm">action</span></a>.</p>
+<ol>
+<li>
+<p>From the Omission Management menu, open Classify VT Omissions.</p>
+</li>
+<li>
+<p><a href="#BEIGBHJI">Query for Unclassified Verbatim Terms</a></p>
+</li>
+<li>
+<p>Do one:</p>
+</li>
+</ol>
+<ul>
+<li>
+<p><a href="#BEIGJGDD">Look for a Good Match</a> and <a href="#BEIJJEHF">Classify a Term</a></p>
+</li>
+<li>
+<p><a href="#BEIGJJGC">Apply an Action to a Term</a> if the verbatim term is faulty</p>
+</li>
+</ul>
+<p>In either case you can add an Informative Note to the term; see <a href="#BEIGDABG">"Creating an Informative Note for the Classification"</a>.</p>
+<div id="TMSUG11735" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref472"></a>
+<h3 class="sect2"><a id="BEIGBHJI"></a>Query for Unclassified Verbatim Terms</h3>
+<p>Query for verbatim terms that TMS was not able to autoclassify or that a TMS user has declassified. These are called <span class="italic">omissions</span>.</p>
+<ul>
+<li>
+<p>The <span class="bold">Distinct Verbatim Term Omissions</span> tab lists each distinct verbatim term omission that meets your query criteria. If the same term has been entered for ten patients, the term is displayed once.</p>
+</li>
+<li>
+<p>The <span class="bold">All Verbatim Term Omissions</span> tab lists every source term&mdash;verbatim term occurrence&mdash;that meet your criteria. If the same term has been entered for ten patients, all ten occurrences are displayed. Additional information about each occurrence is also displayed. Query in the Distinct tab, select the term, and view all occurrences in the All tab.</p>
+</li>
+</ul>
+<p><a id="TMSUG11736"></a><span class="subhead3">Action and Note Indicators&nbsp;</span>In both Verbatim Term Omissions tabs an "A" icon appears beside verbatim term omissions that have an associated Action.</p>
+<p>An "N" icon indicates that there is a note associated with the term.</p>
+<div id="TMSUG11737" class="figure">
+<p class="titleinfigure"><a id="BEIFEIHJ"></a>Figure 10-1 Action Indicators in the Distinct Verbatim Terms Tab</p>
+<img width="255" height="121" src="img/mtcl1.gif" alt="Description of Figure 10-1 follows" /><br />
+<a id="sthref473" href="img_text/mtcl1.htm">Description of ''Figure 10-1 Action Indicators in the Distinct Verbatim Terms Tab''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p>To query for unclassified verbatim terms:</p>
+<ol>
+<li>
+<p>From the <span class="bold">Omission Management</span> menu, select <span class="bold">Classify VT Omissions</span>. The Classify VT Omissions window opens.</p>
+</li>
+<li>
+<p>(Optional) Select the Omission Filter settings you want to use for this session. See <a href="#BEIDEFEF">"Setting Filters"</a> and <a href="#BEIEEGEH">"DT Filter for Auxiliary Information"</a> for more information. To filter again, click the <span class="bold">Filter</span> or <span class="bold">DT Filter</span> button.</p>
+<p>TMS displays the query results in the <span class="bold">Distinct Verbatim Term Omissions</span> tab.</p>
+</li>
+<li>
+<p>In the <span class="bold">Distinct Verbatim Term Omissions</span> tab, select a verbatim term.</p>
+<ul>
+<li>
+<p>If the dictionary has nonunique terms in the classification level and auxiliary information, like WHO-Drug Format C, open the <span class="bold">All Verbatim Term Omissions</span> tab. When you select a term, its auxiliary information is displayed at the bottom of the tab.</p>
+</li>
+<li>
+<p>If the dictionary has nonunique terms in the classification level and no auxiliary information, you have two choices:</p>
+<ul>
+<li>
+<p>Select a term in the <span class="bold">Distinct Verbatim Term Omissions</span> tab. The classification you make applies to all existing occurrences of this term.</p>
+</li>
+<li>
+<p>Select a term in the <span class="bold">Distinct Verbatim Term Omissions</span> tab and click the <span class="bold">All Verbatim Term Omissions</span> tab to see all occurrences of the term. Select an occurrence. The classification you make applies only to this occurrence.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>If the term is flawed in such a way that it cannot be classified, apply an action to it. See <a href="#BABFGBCJ">"Apply an Action to a Term"</a>.</p>
+</li>
+<li>
+<p>Otherwise, proceed to <a href="#BEIGJGDD">Look for a Good Match</a>.</p>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BEIGJGDD"></a>
+<div id="TMSUG11738" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><a id="BEIDDFBE"></a>Look for a Good Match</h3>
+<p>Search for a dictionary term or VTA to which to classify the verbatim term. TMS displays classification level dictionary terms and VTAs in the bottom block. Use one or more of the following methods to find a good match, and then highlight it.</p>
+<ol>
+<li>
+<p>Highlight the term you want to classify in the <span class="bold">Distinct</span> or <span class="bold">All Verbatim Term Omissions</span> tab above.</p>
+</li>
+<li>
+<p>If the term's <span class="bold">Search</span> field has a value in the upper block, double-click the term. In the Classifications tab, TMS displays the candidate terms found during Autoclassification by the Search Object algorithm listed in the <span class="bold">Search</span> field. One of these is likely to be a good match for the verbatim term.</p>
+<p>If so, click <span class="bold">Classify VT</span>. If not, continue to search as follows.</p>
+</li>
+<li>
+<p>Select one or more of the following in the <span class="bold">Classifications</span> block to narrow your query results:</p>
+<ul>
+<li>
+<p><span class="bold">Query</span></p>
+<ul>
+<li>
+<p>Select <span class="bold">Standard</span> to conduct a standard Oracle query, using the wildcard <code dir="ltr">%</code> for multiple characters and _ for single characters.</p>
+</li>
+<li>
+<p>Select <span class="bold">Context</span> to conduct a query using Oracle <span class="italic">inter</span>Media Text retrieval capabilities. See <a href="overview.htm#CHDDBFHF">"Querying in Windows"</a> for more information.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="bold">Search Type</span>. Choose one of the user-defined search objects, or algorithms, if any, or <span class="bold">Open Query</span>. See <a href="#BEIBJJIC">"Candidate Terms and Search Objects"</a>.</p>
+</li>
+<li>
+<p><span class="bold">Dictionary Term</span> and <span class="bold">Level</span>. If a VTA is selected in the <span class="bold">Classifications</span> block, TMS displays one of the following in the <span class="bold">Dictionary Term</span> and <span class="bold">Level</span> fields:</p>
+<ul>
+<li>
+<p>If you have not defined a Dictionary Term Display Procedure, the <span class="bold">Dictionary Term</span> field shows the term to which the selected VTA is mapped.</p>
+</li>
+<li>
+<p>If you specified a procedure in the <span class="bold">Dictionary Term Display Procedure</span> field in the Define Dictionaries window, the <span class="bold">Dictionary Term</span> field shows the term yielded by this procedure, and the <span class="bold">Level</span> field displays that term's level. See <a href="admin.htm#i1002967">"Writing a Procedure to Change the Dictionary Display"</a>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>At the bottom of the Classifications tab, select either <span class="bold">Current</span> or <span class="bold">All</span> data. If you select <span class="bold">All</span>, you see dictionary terms and VTAs that have been deleted as well as current ones.</p>
+</li>
+<li>
+<p><span class="bold">DT (Dictionary Terms)</span>. At the bottom of the Classifications tab, select either:</p>
+<ul>
+<li>
+<p><span class="bold">No</span> to see only VTAs.</p>
+</li>
+<li>
+<p><span class="bold">All</span> to see all dictionary terms that match the other criteria.</p>
+</li>
+<li>
+<p><span class="bold">Approved</span> to see only approved dictionary terms that match the other criteria.</p>
+</li>
+<li>
+<p><span class="bold">Not Approved</span> to see only unapproved dictionary terms that match the other criteria.</p>
+</li>
+</ul>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Depending on the Non Appr DT setting for the current dictionary/domain combination, you may or may not be able to classify a verbatim term to a nonapproved dictionary term. See <a href="defdict.htm#CHDCFCCI">"Assigning a Dictionary to a Domain"</a> for more information.</div>
+</li>
+<li>
+<p><span class="bold">VTA</span>. At the bottom of the Classifications tab, select either:</p>
+<ul>
+<li>
+<p><span class="bold">No</span> to see only dictionary terms.</p>
+</li>
+<li>
+<p><span class="bold">All</span> to see all VTAs that match the other criteria.</p>
+</li>
+<li>
+<p><span class="bold">Approved</span> to see only approved VTAs that match the other criteria.</p>
+</li>
+<li>
+<p><span class="bold">Not Approved</span> to see only unapproved VTAs that match the other criteria.</p>
+</li>
+</ul>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+VTIs are not displayed in the Classifications tab.</div>
+</li>
+<li>
+<p>Click the <span class="bold">DT Filter</span> button to filter on VT auxiliary information, if any. See <a href="#BEIEEGEH">"DT Filter for Auxiliary Information"</a>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Execute the query by pressing <span class="bold">F8</span> or selecting <span class="bold">Execute</span> from the <span class="bold">Query</span> menu. Results appear in this block.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+in addition, you can use these buttons:
+<ul>
+<li>
+<p>Highlight a term and click <span class="bold">Above</span> to see all of a term's relations in levels above. See <a href="#i1002267">"The Above Button"</a>.</p>
+</li>
+<li>
+<p>Highlight a term and click <span class="bold">Below</span> to see all of a term's relations in levels below. See <a href="#BEIBBCBJ">The Below Button</a>.</p>
+</li>
+<li>
+<p>Select <span class="bold">Extended Search</span> to open the Extended Search window. See <a href="#i1002243">"Using the Extended Search Button"</a>.</p>
+</li>
+<li>
+<p>Reset the filter. See <a href="#BEIDEFEF">"Setting Filters"</a>.</p>
+</li>
+<li>
+<p>Filter on auxiliary information. See <a href="#BEIEEGEH">"DT Filter for Auxiliary Information"</a>.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BEIJJEHF"></a>
+<div id="TMSUG11739" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Classify a Term</h3>
+<p>To classify a term:</p>
+<ol>
+<li>
+<p>In the upper block, select the verbatim term to classify. In the Classifications tab, select the dictionary term or VTA to which you want to classify it.</p>
+</li>
+<li>
+<p>The <span class="bold">Global?</span> box is selected or deselected by default according to settings elsewhere in TMS. You can override the default for a particular VTA:</p>
+<ul>
+<li>
+<p>Select the <span class="bold">Global?</span> box to make the VTA available in all domains where a Domain VTA for the same term does not exist.</p>
+</li>
+<li>
+<p>Deselect the <span class="bold">Global?</span> box to make the VTA available only in the current domain.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>If the verbatim term is spelled correctly, select <span class="bold">Accepted</span> from the <span class="bold">VTA/VTI Subtype</span> list. If not, select <span class="bold">Misspelled</span>. Future occurrences that are misspelled the same way will be classified the same way. Specifying whether the verbatim term is spelled correctly when you classify provides more accurate records.</p>
+</li>
+<li>
+<p>Enter a <span class="bold">Comment</span> indicating why you chose this term for the classification.</p>
+</li>
+<li>
+<p>Click <span class="bold">Classify VT</span> or <span class="bold">Create VTI</span> (available only when using the All... tab above). TMS enters the repository term to which you have linked the verbatim term in the <span class="bold">Dictionary Term</span> field in the upper block.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If you make a mistake during manual classification or a dictionary term is added that is a better match for a classified verbatim term, you can reclassify the term (see <a href="vtamaint.htm#i1002007">"Reclassifying and Declassifying Verbatim Terms"</a>).</div>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BABFGBCJ"></a>
+<div id="TMSUG11740" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><a id="BEIGJJGC"></a>Apply an Action to a Term<a id="sthref474"></a><a id="sthref475"></a></h3>
+<p>If you cannot classify a term, it may be appropriate to assign an Action to it instead. Use actions in the following situations:</p>
+<ul>
+<li>
+<p>If the verbatim term is flawed, assign an Action to the term requesting that the term be fixed. TMS sends the Action text back to the external source system. In Oracle Clinical, the next Batch Validation creates a discrepancy for the question response with the Action text as the comment and the TMS user (you) as the creator of the comment. See <a href="defmisc.htm#CHDCGDHH">"Answerable Actions"</a> for more information.</p>
+<p>Approval of Answerable Action assignments may be required for particular dictionary domain; see <a href="#BEIDGAEH">"Approving Action Assignments"</a>.</p>
+</li>
+<li>
+<p>You may need to send a message to the external system that does not require a response, or you may not have the resources to support a dialog. See <a href="defmisc.htm#CHDGGJHE">"Unaswerable Actions"</a>.</p>
+</li>
+<li>
+<p>If you need to speak to your supervisor or do research before you can classify a term, you can assign an Action to the term that says you are working on it. When other coders see the Action text, they will know not to duplicate your efforts. See <a href="defmisc.htm#CHDEACAF">"Internal Actions"</a>.</p>
+</li>
+</ul>
+<p>You must select an Action that has already been defined (see <a href="defmisc.htm#i1001382">"Defining and Using Actions"</a>). Actions apply to all occurrences of the same verbatim term omission (VTO) in the same dictionary/domain combination.</p>
+<p>To send a message to the external system about a single occurrence of a verbatim term, you can use a discrepancy message. See <a href="#BEIDFIIJ">"Applying a Discrepancy Message"</a> for instructions.</p>
+<a id="BEIBIJAG"></a>
+<div id="TMSUG11741" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Applying an Action<a id="sthref476"></a></h4>
+<p>To apply an Action to a verbatim term:</p>
+<ol>
+<li>
+<p>In the top block of the Classify VT Omissions window, query for the verbatim term to which you want to apply an Action. Select the term.</p>
+</li>
+<li>
+<p>In the bottom block, click the <span class="bold">Distinct VTO Actions</span> tab to open it.</p>
+</li>
+<li>
+<p>From the <span class="bold">Action</span> drop-down list, select the Action you want to apply to the omission. TMS displays the Action type and the default Action text in the corresponding fields to the right; see <a href="defmisc.htm#CHDJFEJG">"Action Types"</a>. You can modify the Action text if necessary.</p>
+<p>TMS displays only actions that are valid options for the current user. TMS displays only Internal Actions and Unanswerable Actions to users without the Approve or Reclassify privilege or the overriding profile setting. Users with the Approve privilege, or Reclassify privilege, or overriding profile setting can see all active actions in the drop-down.</p>
+</li>
+<li>
+<p>Click <span class="bold">Apply Action</span>. TMS assigns the Action to the term and lists the Action in the lower part of the tab. The action applies to all occurrences of the verbatim term.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If you are working in a dictionary with nonunique terms in the classification level, the system does not apply the action to occurrences of the verbatim term that have been classified to a VTI. For example, if Tylenol with Country equal to France has been classified but Tylenol with Country equal to any other value has not been classified, the action is not applied to Tylenol with Country equal to France but is to all other occurrences of Tylenol.</div>
+</li>
+<li>
+<p>Save.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<a id="BEIDFIIJ"></a>
+<div id="TMSUG11742" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Applying a Discrepancy Message<a id="sthref477"></a></h4>
+<p>To send a message about a single verbatim term occurrence to the external system, use a Discrepancy Message. This may be helpful if an external system user responds to an Answerable Action for a particular verbatim term occurrence.</p>
+<ol>
+<li>
+<p>In the <span class="bold">All Verbatim Term Omissions</span> tab, query for the verbatim term to which you want to apply a Discrepancy (or select the verbatim term in the <span class="bold">Distinct Verbatim Terms</span> tab, and then click the <span class="bold">All Verbatim Term Omissions</span> tab and select the correct occurrence).</p>
+</li>
+<li>
+<p>In the appropriate verbatim term's row, click in the <span class="bold">Omission Status</span> field and press F9. The <span class="bold">Omission Status</span> dialog box opens, with a list of valid omission statuses.</p>
+</li>
+<li>
+<p>Select the appropriate omission status. It must be a status that the external system will recognize.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>. The <span class="bold">Omission Status</span> dialog box closes, and TMS populates the <span class="bold">Omission Status</span> field with your choice.</p>
+</li>
+<li>
+<p>Enter a comment about this omission in the <span class="bold">Action Text</span> field.</p>
+</li>
+<li>
+<p>Save. The next time you run the batch job for data exchange with the external system&mdash;Batch Validation in the case of Oracle Clinical&mdash;TMS sends this text to the external system.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<div id="TMSUG11743" class="sect2"><a id="sthref478"></a>
+<h3 class="sect2"><a id="BEIGDABG"></a>Creating an Informative Note for the Classification</h3>
+<p>You can apply a note to the verbatim term or see the term's current status and note history by clicking the <span class="bold">Status/Notes</span> button or selecting <span class="bold">Status/Notes</span> from the <span class="bold">Options</span> menu. See <a href="#BJFHJDIF">"Using the Status/Notes Pop-up Window"</a> for more information.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BEIEEGEH"></a>
+<div id="TMSUG11744" class="sect2">
+<h3 class="sect2">DT Filter for Au<a id="sthref479"></a>xiliary Information</h3>
+<p>Click the <span class="bold">DT Filter</span> button to search for dictionary terms using specific values in auxiliary information associated with dictionary terms; for example, in WHO-Drug C, Pharmaceutical Form, Strength, Strength, or Country.</p>
+<p>Enter one or more values and click <span class="bold">OK</span>, or click <span class="bold">VTO Autofill</span> and the system displays the auxiliary values for the omission currently selected in the All Verbatim Term Omissions tab.</p>
+<p>For example, to search for a dictionary term for the drug Carbamazepine marketed in Spain:</p>
+<ol>
+<li>
+<p>Click <span class="bold">DT Filter</span>.</p>
+</li>
+<li>
+<p>Enter <code dir="ltr">Spain</code> in the Country field.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>. The system displays the value "Spain" in the DT Filter line at the bottom of the tab.</p>
+</li>
+<li>
+<p>Press F7 to enter query mode.</p>
+</li>
+<li>
+<p>Enter <code dir="ltr">Carbamazepine</code> in the Term field in the Classifications tab.</p>
+</li>
+<li>
+<p>Press F8 to execute the query. The system returns any existing dictionary terms for Carbamazepine that include Spain as the Country value.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="i1002243"></a>
+<div id="TMSUG11745" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Using the <a id="sthref480"></a>Extended Search Button</h3>
+<p>Use this window to search all domains and levels for a match to a verbatim term.</p>
+<ol>
+<li>
+<p>From the <span class="bold">Dictionary</span> list, choose the dictionary you want to search. TMS displays the current dictionary by default.</p>
+</li>
+<li>
+<p>From the <span class="bold">Search Type</span> list, choose a user-defined search algorithm or an open query.</p>
+<p>If you choose a <span class="bold">Search Type</span> other than <span class="bold">Open Query</span>, TMS populates the <span class="bold">Verbatim Term</span> field with the current term from the Classify VT Omissions window and uses it as a Filter in the query. You can modify it, but you cannot effectively delete it. The search algorithm must have a verbatim term parameter and it will use the last one entered.</p>
+<p>If you choose a <span class="bold">Search Type</span> of <span class="bold">Open Query</span>, TMS does not use a value entered in the <span class="bold">Verbatim Term</span> field.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="i1002267"></a>
+<div id="TMSUG11746" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">The Above Button<a id="sthref481"></a></h3>
+<p>Highlight a term in the <span class="bold">Classifications</span> block and select <span class="bold">Above</span> to see all the term's relations in higher dictionary levels. These are displayed in the tree structure with the lowest-level term at the top left and the highest-level term at the bottom right. Click any related term in the tree structure to see more information in the <span class="bold">Contents</span> tab. Click the <span class="bold">Relations</span> tab to see information about the relation between the highlighted term and the next lower term.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BEIBBCBJ"></a>
+<div id="TMSUG11747" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">The Below Button<a id="sthref482"></a></h3>
+<p>Highlight a term in the <span class="bold">Classifications</span> block and select <span class="bold">Below</span> to see all the term's relations in lower dictionary levels. These are displayed in the tree structure with the highest-level term at the top left and the lowest-level term at the bottom right. Click any related term in the tree structure to see more information in the <span class="bold">Contents</span> tab. Click the <span class="bold">Relations</span> tab to see information about the relation between the highlighted term and the next lower term.</p>
+<p>In WHO-Drug C, the levels below contain the auxiliary information for the dictionary term.</p>
+</div>
+<!-- class="sect2" -->
+<div id="TMSUG11748" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref483"></a>
+<h3 class="sect2">The Indication Button</h3>
+<p>If you click the Indication button from Manage VT Omissions, the Classify Indication Omissions window opens, displaying indication omissions for the current term, if any.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BEICDGFH"></a>
+<div id="TMSUG11749" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Classifying <a id="sthref484"></a>Indication Omissions</h2>
+<p>An indication omission can occur in a dictionary like WHO-Drug Format C where a single dictionary term may be mapped to multiple terms in the next higher derivable level, and the correct derivation depends on the indication for which the drug is being taken by a patient.</p>
+<p>The <span class="bold">Distinct Indication Omissions</span> tab displays each verbatim term with its indication, the level up to which terms can be successfully derived, the term that is derived in that level, and the next higher level from which a term should be derived. This tab displays each verbatim term/indication combination once.</p>
+<ol>
+<li>
+<p>Query for a verbatim term, dictionary term, and/or indication in the <span class="bold">Distinct Indication Omissions</span> tab and select it. You can see all occurrences of the same verbatim term/indication combination in the <span class="bold">All Indication Omissions</span> tab.</p>
+<p>The <span class="bold">Higher Level Terms</span> tab automatically displays higher-level terms that are related to the dictionary term selected in the Distinct Indication Omissions tab.</p>
+</li>
+<li>
+<p>Select the higher-level term to which you want to classify the lower-level dictionary term for its verbatim term/indication combination.</p>
+</li>
+<li>
+<p>Click <span class="bold">Classify</span>. The system will derive the high-level term for all existing occurrences of the same verbatim term with the same indication the next time data is exchanged with the source data system, and all future occurrences after they appear in TMS.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="i1001950"></a>
+<div id="TMSUG11750" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Approving and Unapproving VTAs</h2>
+<p>If a verbatim term assignment (VTA) is approved, the classification is immediately available for derivation and Autoclassification. Once a VTA is approved, no new occurrences of the same verbatim term show up as omissions.</p>
+<p>If a VTA is not approved, the user must manually classify each new occurrence of the verbatim term, but TMS proposes the unapproved VTA's dictionary term as the only Candidate Term. The user must either accept the Candidate Term or reclassify the verbatim term (see <a href="vtamaint.htm#i1001979">"Global and Domain VTAs"</a>). Working with Nonapproved VTAs gives you an opportunity to review classifications that TMS would otherwise create automatically, may give you a better feel for the data and help you catch mistakes.</p>
+<p>You can approve Nonapproved VTAs when you are satisfied that the classification is correct and no longer want to approve each occurrence of the verbatim term (see <a href="admin.htm#BABHJBGD">"Autoclassification"</a>). You can also undo a VTA's approval to change the assignment of new occurrences of a verbatim term.</p>
+<p>The reference codelist TMS_CONFIGURATION contains a setting that determines whether Nonapproved VTAs are or are not be used for derivation to the external system. If Nonapproved VTAs are derived, the external system sees no difference between derivations based on approved and Nonapproved VTAs.</p>
+<p>For details on creating VTAs, promoting them to global status or demoting them to domain-specific status, see <a href="vtamaint.htm#BABEBGBH">Chapter 11, "VTA and VTI Maintenance."</a></p>
+<p>This section includes:</p>
+<ul>
+<li>
+<p><a href="#BEIBAIDG">Understanding the Approve VTAs Window</a></p>
+</li>
+<li>
+<p><a href="#BEIBJHCB">Changing the Subtype and Adding Comments</a></p>
+</li>
+<li>
+<p><a href="#BEIDEIGD">Approving a Nonapproved VTA</a></p>
+</li>
+<li>
+<p><a href="#BEICCFCB">Declassifying a VTA</a></p>
+</li>
+<li>
+<p><a href="#i1001976">Browsing the Audit Trail</a></p>
+</li>
+</ul>
+<a id="BEIBAIDG"></a>
+<div id="TMSUG11751" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Understanding the Approve VTAs Window</h3>
+<p>You start to change the approval status of a VTA by querying for it in the upper part of the Approve VTAs window. There are two blocks in this part of the window:</p>
+<ul>
+<li>
+<p>The <span class="bold">Distinct Verbatim Term Assignments</span> block shows the unique verbatim terms from this database that have been to terms in the selected dictionary. This block also displays information about the dictionary term to which this verbatim term is currently mapped.</p>
+</li>
+<li>
+<p>By contrast, the <span class="bold">All Verbatim Term Assignments</span> block shows verbatim term information for each instance of each verbatim term introduced to TMS by the selected database, and provides information from the external system about these verbatim terms.</p>
+</li>
+</ul>
+<p>For each VTA they describe, the <span class="bold">Distinct</span> and <span class="bold">All Verbatim Term Assignments</span> blocks display the following information about a VTA.</p>
+<p><a id="TMSUG11752"></a><span class="subhead3">Appr?&nbsp;</span>If selected, the VTA is approved for use in Autoclassification and manual classification. If not selected, TMS proposes the VTA as a Candidate Term but manual approval is required for each occurrence.</p>
+<p><a id="TMSUG11753"></a><span class="subhead3">Glb?&nbsp;</span>(Global?) If selected, the VTA is available in all domains.</p>
+<p><a id="TMSUG11754"></a><span class="subhead3">Subtype&nbsp;</span>The VTA is either <span class="bold">Misspelled</span> or <span class="bold">Accepted</span> (correctly spelled).</p>
+<p><a id="TMSUG11755"></a><span class="subhead3">Origin&nbsp;</span>How this term was introduced to this TMS dictionary.</p>
+<p><a id="TMSUG11756"></a><span class="subhead3">Dictionary Term&nbsp;</span>(Distinct block only) By default, this field shows the dictionary term to which the verbatim term is assigned, if any.</p>
+<p>The remaining blocks on the <span class="bold">Distinct Verbatim Term Assignments</span> block provide read-only information about the term displayed in the <span class="bold">Dictionary Term</span> field. For details on any of these fields, see <a href="dictmnt.htm#i1006994">"Current Level and Term"</a>.</p>
+<p><a id="TMSUG11757"></a><span class="subhead3">Value 1 - 8 Fields&nbsp;</span>(All VTA blocks only) When an external system is fully integrated with TMS, the Approve VTAs window displays column information for verbatim terms originating in that external system. You define these columns in the Define External Systems window as the <span class="bold">Value 1</span> through <span class="bold">Value 8</span> fields for that external system. In addition, when you define detail information for a column, TMS displays the text in the field corresponding to the column in blue. The user can then use the drill-down function to see detail information. See <a href="integ.htm#CHDFBBED">"Defining External System Information in TMS"</a>.</p>
+<p><a id="TMSUG11758"></a><span class="subhead3">Filter&nbsp;</span>Click the Filter button to change the filter settings to refine query results from this window. You can save filter settings as an activity list for future use. See <a href="#BJFCJGBB">"Setting Filters and Creating Activity Lists"</a> for more information.</p>
+<p><a id="TMSUG11759"></a><span class="subhead3">Above Current VTA&nbsp;</span>The system displays dictionary terms related to the current term in the levels above the current term. The tree is displayed upside-down: the VTA is displayed at the top, with the related terms in the next higher level displayed just below it, and the related terms in higher levels below those terms.</p>
+<p><a id="TMSUG11760"></a><span class="subhead3">Declassify&nbsp;</span>To declassify a VTA rather than approve it, select the nonapproved VTA and click <span class="bold">Declassify</span>; see <a href="#BEICCFCB">"Declassifying a VTA"</a> for more information.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You must have either TMS_CLASSIFY_PRIV or TMS_RECLASSIFY_PRIV to be able to declassify a VTA. Users with TMS_RECLASSIFY_PRIV can declassify any VTA at any time.
+<p>Users with TMS_CLASSIFY_PRIV, can declassify only terms they have personally classified, and only within a limited (configurable) time period. This functionality allows users who classify a term to an Unapproved VTA and then decide they have made a mistake, to query for the term in this window and undo the mistake by declassifying the term.</p>
+</div>
+<p><a id="TMSUG11761"></a><span class="subhead3">Declassify and Action&nbsp;</span>To declassify a VTA and add an Action to the term at the same time, click <span class="bold">Declassify and Action</span>. See <a href="#BABFGBCJ">"Apply an Action to a Term"</a> for more information.</p>
+<p><a id="TMSUG11762"></a><span class="subhead3">Comment&nbsp;</span>(Distinct block only) Further user-defined information about the VTA. See <a href="#BEIBJHCB">"Changing the Subtype and Adding Comments"</a>.</p>
+<p><a id="TMSUG11763"></a><span class="subhead3">Status/Notes&nbsp;</span>(Click the <span class="bold">Status/Notes</span> button to see the history of all statuses the term has had in TMS and all notes ever assigned to the term. You can also add a new note to the term. See <a href="#BJFHJDIF">"Using the Status/Notes Pop-up Window"</a> for more information.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BEIBJHCB"></a>
+<div id="TMSUG11764" class="sect2">
+<h3 class="sect2">Changing the Subtype<a id="sthref485"></a> and Adding Comments<a id="sthref486"></a><a id="sthref487"></a></h3>
+<p>You can change a VTA's subtype or add a comment about it at any time, even if you are not changing that VTA's approval status. The <span class="bold">Verbatim Term Assignments</span> block displays the most recent comment about a VTA in that VTA's <span class="bold">Comment</span> field, on the right side.</p>
+<p>You can change a VTA's subtype from <span class="bold">Misspelled</span> to <span class="bold">Accepted</span> or vice versa from the <span class="bold">Verbatim Term Assignments</span> block. In the VTA's row, change the value in the <span class="bold">Subtype</span> field, then save. An LOV is provided.</p>
+<p>To enter a comment for a VTA, type the desired text in the <span class="bold">Comment</span> field for that VTA's row, and save. TMS retains your comment in the field, and updates the Audit Trail with your change.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BEIDEIGD"></a>
+<div id="TMSUG11765" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Approving a Nonapproved VTA<a id="sthref488"></a></h3>
+<p>To change a Nonapproved VTA to Approved status:</p>
+<ol>
+<li>
+<p>From the <span class="bold">Omission Management</span> menu, select <span class="bold">Approve VTAs</span> to reach the Approve VTAs window.</p>
+<p>If this is your first visit to one of the windows Approve VTAs, Classify VT Omissions, or Reclassify Verbatim Terms, the Filter window opens. Choose your Filter criteria by following the instructions in <a href="#BJFCJGBB">"Setting Filters and Creating Activity Lists"</a>, and click <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>Query for the VTA in either of the upper tab windows. If you use the Distinct Verbatim Term Assignments window, select the <span class="bold">Not Approved</span> option before entering your query criteria.</p>
+<p>The window returns all of the VTAs that match your query and Filter settings.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Appr?</span> box for the VTA you want to approve.</p>
+</li>
+<li>
+<p>(Optional) Enter additional information about this change in VTA approval status. The Approve VTAs window provides two methods for adding context to these types of changes:</p>
+<ul>
+<li>
+<p>In the <span class="bold">Verbatim Term Assignments</span> block, scroll to the right and enter a comment about this change to the VTA's approval status in the <span class="bold">Comment</span> field in that VTA's row. These comments can be helpful when you audit changes to a VTA in the <span class="bold">Audit Trail</span> tab window.</p>
+</li>
+<li>
+<p>Define one or more Informative Notes for this transaction. See <a href="#BJFHJDIF">"Using the Status/Notes Pop-up Window"</a> for more information.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Save.</p>
+</li>
+</ol>
+<p>Changing an Approved VTA to <a id="sthref489"></a>nonapproved status works the same way; query for the appropriate term and deselect the <span class="bold">Appr?</span> box to set it to nonapproved.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BEICCFCB"></a>
+<div id="TMSUG11766" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Declassifying a VTA</h3>
+<p>If you do not want to approve a nonapproved VTA, you can declassify it in the Approve VTAs window. The term becomes an omission and can be classified to a different dictionary term in the Classify VT Omissions window.</p>
+<p>You can add an Action to a term as you declassify it. If the term itself is flawed and you need more information from the source system where the term was collected, you can assign an answerable external Action to the term and send its text to the external system; see <a href="#BABFGBCJ">"Apply an Action to a Term"</a> for information about actions.</p>
+<p>To declassify a term without assigning an Action to the term, click <span class="bold">Declassify</span> or select <span class="bold">Declassify</span> from the <span class="bold">Options</span> menu.</p>
+<p>To declassify a term and assign an Action to it, do the following:</p>
+<ol>
+<li>
+<p>Select the VTA you want to declassify.</p>
+</li>
+<li>
+<p>Click <span class="bold">Declassify and Action</span> or select <span class="bold">Declassify and Action</span> from the <span class="bold">Options</span> menu. The <span class="bold">Action</span> pop-up window opens with information about the VTA displayed across the top.</p>
+</li>
+<li>
+<p>In the <span class="bold">Action</span> field, select the name of the Action you want to apply from the list of values.</p>
+<p>The system displays the Action type and text of the Action you selected.</p>
+</li>
+<li>
+<p>In the <span class="bold">Action Text</span> field you can change the default Action text if you wish.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>. TMS declassifies the term and applies the Action to the term.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="i1001976"></a>
+<div id="TMSUG11767" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><a id="sthref490"></a>Browsing the Audit Trail<a id="sthref491"></a></h3>
+<p>The bottom block in the Approve VTAs window also contains a tab window that displays an Audit Trail for the VTA selected in the <span class="bold">Verbatim Term Assignments</span> block. Records in the Audit Trail are presented from most current to oldest, and enable you to track who made each change to the VTA and when the changes occurred, or just browse the comments about the VTA.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BEIDGAEH"></a>
+<div id="TMSUG11768" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Approving Action Assignments</h2>
+<p>This section includes:</p>
+<ul>
+<li>
+<p><a href="#BEICJEEB">Understanding the Approve Action Assignments Window</a></p>
+</li>
+<li>
+<p><a href="#BEIDEIGD">Approving a Nonapproved VTA</a></p>
+</li>
+<li>
+<p><a href="#BEIHHIJG">Modifying the Action Assignment</a></p>
+</li>
+</ul>
+<p>For each dictionary/domain combination you can configure TMS to send omissions with actions applied directly to the external system or to pass through an approval stage. The approval stage allows an intermediate individual to decide if it is really necessary to take the extra time for the term to travel through the additional processing cycle. See <a href="defdict.htm#i1009237">"Creating Domains and Assigning Dictionaries to Domains"</a> for more information.</p>
+<p>Users must have TMS_APPROVE_PRIV to approve Internal Action assignments. Users with TMS_CLASSIFY_PRIV can query in the Approve Action Assignments window, but cannot perform any operations there.</p>
+<a id="BEICJEEB"></a>
+<div id="TMSUG11771" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Understanding the Approve Action Assignments Window</h3>
+<p>The Approve Action Assignments window has two tabs above and two tabs below:</p>
+<ul>
+<li>
+<p><a href="#BEIIAJJE">Distinct and All Action Assignments</a></p>
+</li>
+<li>
+<p><a href="#BEIFABJC">Distinct and All Action Assignment Audit Trail</a></p>
+</li>
+</ul>
+<a id="BEIIAJJE"></a>
+<div id="TMSUG11772" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Distinct and All Action Assignments</h4>
+<p>In the tabs in the upper part of the Approve Action Assignments window, TMS displays only the current Action assignments. To see a history of the term's Action assignments, use the tabs in the lower part of the window.</p>
+<p>There are two tabs in the upper part of the window:</p>
+<ul>
+<li>
+<p>The <span class="bold">Distinct Action Assignments</span> tab shows Action assignments associated with unique verbatim terms.</p>
+<p>You can approve actions only in the Distinct Action Assignment window. TMS then applies the Action assignment to all occurrences of the same term.</p>
+</li>
+<li>
+<p>By contrast, the <span class="bold">All Action Assignments</span> tab shows all occurrences of the verbatim term that is selected in the <span class="bold">Distinct Action Assignments</span> tab, and provides external system info for each source term.</p>
+</li>
+</ul>
+<p>To see data, enter a query in the <span class="bold">Distinct Action Assignments</span> tab. Select a radio button to restrict the query as follows:</p>
+<ul>
+<li>
+<p><span class="bold">All</span> allows queries to retrieve both internal and Answerable Action assignments.</p>
+</li>
+<li>
+<p><span class="bold">Approved</span> allows queries to retrieve only Answerable Action assignments that have been approved.</p>
+</li>
+<li>
+<p><span class="bold">Not approved</span> allows queries to retrieve only Internal Action assignments, including those with and without base Answerable Actions. However, only those with base Answerable Actions can be approved.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Internal Actions defined with a base Answerable Action are used as an approval mechanism. When you query for nonapproved actions, you retrieve only Internal Actions (some of which may not have base Answerable Actions and therefore not require or support approval). When you approve one of these Internal Action assignments, TMS immediately assigns the base Answerable Action to the term in place of the Internal Action. Therefore, when you query for approved Action assignments, you retrieve only Answerable Actions.</div>
+</li>
+</ul>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+TMS does not display unAnswerable Action assignments in this window.</div>
+<p>Query results are also filtered by the settings in the Filter window. To check and change your filter settings, click the <span class="bold">Filter</span> button. See <a href="#BJFCJGBB">"Setting Filters and Creating Activity Lists"</a> for more information.</p>
+<p>For each term, TMS displays the following information. Some information is displayed only on the Distinct tab or only on the All tab (as noted):</p>
+<p><a id="TMSUG11773"></a><span class="subhead3">N&nbsp;</span>(<span class="bold">Distinct</span> tab only.) If an N appears to the left of the Appr? field, the term has at least one note associated with it. Go to <span class="bold">Status/Notes</span> to see the term's notes.</p>
+<p><a id="TMSUG11774"></a><span class="subhead3">Appr?&nbsp;</span>If selected, the Action is approved to proceed to the external system.</p>
+<p><a id="TMSUG11775"></a><span class="subhead3">Verbatim Term&nbsp;</span>In the <span class="bold">Distinct Action Assignments</span> tab, this is the distinct verbatim term. In the <span class="bold">All Action Assignments</span> tab, this is a particular occurrence of the verbatim term.</p>
+<p><a id="TMSUG11776"></a><span class="subhead3">Omission Status&nbsp;</span>(<span class="bold">All</span> tab only.) The TMS status associated with the omission occurrence.</p>
+<p><a id="TMSUG11777"></a><span class="subhead3">Action Text&nbsp;</span>The text of the Action currently applied to the term.</p>
+<p><a id="TMSUG11778"></a><span class="subhead3">Action Owner&nbsp;</span>(<span class="bold">All</span> tab only.) The user name of the person who assigned the Action to the term.</p>
+<p><a id="TMSUG11779"></a><span class="subhead3">Action&nbsp;</span>The name of the Action currently applied to the term.</p>
+<p><a id="TMSUG11780"></a><span class="subhead3">Action Type&nbsp;</span>The type of the Action currently applied to the term. See <a href="defmisc.htm#CHDJFEJG">"Action Types"</a>.</p>
+<p><a id="TMSUG11781"></a><span class="subhead3">Status&nbsp;</span>(<span class="bold">Distinct</span> tab only.) The current status of the term to which the Action is assigned.</p>
+<p><a id="TMSUG11782"></a><span class="subhead3">Action App Owner&nbsp;</span>(<span class="bold">All</span> tab only.) The external system that currently owns the omission.</p>
+<p><a id="TMSUG11783"></a><span class="subhead3">Update?&nbsp;</span>(<span class="bold">All</span> tab only.) If checked, this omission record has been updated, and the next data exchange job with the external source data system (such as Oracle Clinical Batch Validation) will process the record.</p>
+<p><a id="TMSUG11784"></a><span class="subhead3">Instance Name&nbsp;</span>(<span class="bold">All</span> tab only.) The name of the database where the term was collected in the external system.</p>
+<p><a id="TMSUG11785"></a><span class="subhead3">Source Term ID&nbsp;</span>(<span class="bold">All</span> tab only.) Source_term_id, occurence_id, def_instance_id (database), def_integration_key (external system) together form the unique identifier of a source term in TMS.</p>
+<p><a id="TMSUG11786"></a><span class="subhead3">Occurrence ID&nbsp;</span>(<span class="bold">All</span> tab only.) The source_term_id, occurrence_id, def_instance_id (database), def_integration_key (external system) together form the unique identifier of a source term in TMS.</p>
+<p><a id="TMSUG11787"></a><span class="subhead3">Entry Ts&nbsp;</span>(<span class="bold">All</span> tab only.) The time and date when the source term entered TMS.</p>
+<p><a id="TMSUG11788"></a><span class="subhead3">Source Term Alt Key&nbsp;</span>(<span class="bold">All</span> tab only.) Alternative source record identifier; can be used from the external system to provide a different access patch into TMS.</p>
+<p><a id="TMSUG11789"></a><span class="subhead3">External System&nbsp;</span>(<span class="bold">All</span> tab only.) The external source data system where the term was collected.</p>
+<p><a id="TMSUG11790"></a><span class="subhead3">Value 1 - 8 Fields&nbsp;</span>(<span class="bold">All</span> tab only.) These fields display information from the external system associated with each particular occurrence of the verbatim term. For Oracle Clinical these values include Project, Study, Patient, Visit, and more. For other systems your company can specify which external system to display.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BEIFABJC"></a>
+<div id="TMSUG11791" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Distinct and All Action Assignment Audit Trail <a id="sthref492"></a> <a id="sthref493"></a></h4>
+<p>There are two tabs at the bottom of the window:</p>
+<ul>
+<li>
+<p><span class="bold">Distinct Action Assignment Audit Trail</span>. This tab displays information about the actions that have been applied to the term in the past. (The current Action is displayed in the upper portion of the window. These tabs display only the previous actions, if any.)</p>
+</li>
+<li>
+<p><span class="bold">All Action Assignment Audit Trail</span>. This tab displays the actions applied to the particular occurrence of a verbatim term selected in the <span class="bold">All Action Assignments</span> window. It also displays reply comments entered in the external system, if any. If an Action was deleted without being replaced with another Action, a blank row appears.</p>
+</li>
+</ul>
+<p>These tabs display the following information:</p>
+<p><a id="TMSUG11792"></a><span class="subhead3">Omission Status&nbsp;</span>(<span class="bold">All</span> tab only.) The omission status of the verbatim term occurrence at the time the Action on that row was applied.</p>
+<p><a id="TMSUG11793"></a><span class="subhead3">Action Text&nbsp;</span>The text of the Action.</p>
+<p><a id="TMSUG11794"></a><span class="subhead3">Action Owner&nbsp;</span>(<span class="bold">All</span> tab only.) The user name of the person who performed the operation represented by that row of Action audit trail. For records owned by TMS record, it is the TMS user who assigns the Action. For records owned by an external system, it is the external system user who enters a reply.</p>
+<p><a id="TMSUG11795"></a><span class="subhead3">Action&nbsp;</span>The name of the Action.</p>
+<p><a id="TMSUG11796"></a><span class="subhead3">Action Type&nbsp;</span>The Action type: Answerable, Unanswerable, or Internal. See <a href="defmisc.htm#CHDJFEJG">"Action Types"</a> for more information.</p>
+<p><a id="TMSUG11797"></a><span class="subhead3">Action App Owner&nbsp;</span>(<span class="bold">All</span> tab only.) The application currently responsible for the Action; either TMS or the external system.</p>
+<p><a id="TMSUG11798"></a><span class="subhead3">Entry TS&nbsp;</span>The date and time the Action was assigned.</p>
+<p><a id="TMSUG11799"></a><span class="subhead3">Created By&nbsp;</span>(<span class="bold">Distinct</span> tab only.) The user name of the person who assigned the Action.</p>
+</div>
+<!-- class="sect3" -->
+<div id="TMSUG11800" class="sect3"><a id="sthref494"></a>
+<h4 class="sect3">Buttons</h4>
+<p>The window includes the following buttons along the bottom:</p>
+<p><a id="TMSUG11801"></a><span class="subhead3">Filter&nbsp;</span>Click the Filter button to change the filter settings to refine query results from this window. You can save filter settings as an activity list for future use. See <a href="#BJFCJGBB">"Setting Filters and Creating Activity Lists"</a> for more information.</p>
+<p><a id="TMSUG11802"></a><span class="subhead3">Reject Assignment&nbsp;</span>If you do not agree with an Action assignment and do not want to substitute a different one, select the term and click <span class="bold">Reject Assignment</span> or select <span class="bold">Reject Assignment</span> from the <span class="bold">Options</span> menu. TMS immediately removes the Action assignment and saves. There is no Undo.</p>
+<p><a id="TMSUG11803"></a><span class="subhead3">Modify Assignment&nbsp;</span>To change the Action text before you approve the assignment, or to assign an entirely different Action, click <span class="bold">Modify Assignment</span> or select <span class="bold">Modify Assignment</span> from the <span class="bold">Options</span> menu. See <a href="#BEIHHIJG">"Modifying the Action Assignment"</a> for more information.</p>
+<p><a id="TMSUG11804"></a><span class="subhead3">Status/Notes&nbsp;</span>(Click the <span class="bold">Status/Notes</span> button to see the history of all statuses the term has had in TMS and all notes ever assigned to the term. You can also add a new note to the term. See <a href="#BJFHJDIF">"Using the Status/Notes Pop-up Window"</a> for more information.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<div id="TMSUG11805" class="sect2"><a id="sthref495"></a>
+<h3 class="sect2">Approving a Nonapproved Internal Action Assignment<a id="sthref496"></a></h3>
+<p>To change a nonapproved Action assignment to Approved status:</p>
+<ol>
+<li>
+<p>From the <span class="bold">Omission Management</span> menu, select <span class="bold">Approve Action Assignments</span> to reach the Approve Action Assignments window.</p>
+<p>If the Filter window opens, enter Filter criteria; see <a href="#BEIDEFEF">"Setting Filters"</a>.</p>
+</li>
+<li>
+<p>Query for the Action assignment in either of the upper tabs. If you use the Distinct Verbatim Term Action Assignments window, select the <span class="bold">Not Approved</span> option before entering your query criteria.</p>
+<p>The window returns all of the verbatim terms with Action assignments that match your query and filter settings.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Appr?</span> box for the Action assignment you want to approve.</p>
+</li>
+<li>
+<p>Save.</p>
+</li>
+</ol>
+<p><a id="TMSUG11806"></a><span class="subhead3">Unapproving an Approved Action Assignment&nbsp;</span>Changing an approved Action assignment to <a id="sthref497"></a>nonapproved status works the same way; query for the appropriate term and deselect the <span class="bold">Appr?</span> box to set it to nonapproved. TMS then applies the Internal Action associated with the Answerable Action to occurrences of the term currently owned by TMS, and future occurrences of the term. Any occurrences of the term that are currently owned by the external system are not affected by the unapproval.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BEIHHIJG"></a>
+<div id="TMSUG11807" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Modifying the Action Assignment <a id="sthref498"></a></h3>
+<p>You can change an Action's text for a particular term before you approve the Action assignment or even approve the assignment of a completely different Action, including an Action of a different type.</p>
+<p><a id="TMSUG11808"></a><span class="subhead3">Modify Action Text&nbsp;</span>To modify only the Action text, do the following:</p>
+<ol>
+<li>
+<p>Select the term whose Action's text you want to change.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Modify Assignment</span> button or select <span class="bold">Modify Assignment</span> from the <span class="bold">Options</span> menu.</p>
+</li>
+<li>
+<p>Enter the new text in the <span class="bold">Action Text</span> field.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+</ol>
+<p><a id="TMSUG11809"></a><span class="subhead3">Assign a Different Action&nbsp;</span>Only one Action can be assigned to a particular term at a time. If you assign a different Action to a term, you effectively remove the previous Action assignment.</p>
+<p>To assign a different Action to the term, do the following:</p>
+<ol>
+<li>
+<p>Select the term whose Action's text you want to change.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Modify Assignment</span> button or select <span class="bold">Modify Assignment</span> from the <span class="bold">Options</span> menu.</p>
+</li>
+<li>
+<p>In the <span class="bold">Action</span> field, select a different Action from the drop-down list. The list displays all active Answerable Actions available. TMS enters the <span class="bold">Action Type</span> and <span class="bold">Text</span> for the Action you selected.</p>
+</li>
+<li>
+<p>Modify the text in the <span class="bold">Text</span> field if necessary.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BEIGEFBG"></a>
+<div id="TMSUG11810" class="sect1">
+<h2 class="sect1">Term Statuses</h2>
+<p>TMS uses the following statuses:</p>
+<p><a id="TMSUG11811"></a><span class="subhead3">VTO&nbsp;</span><span class="bold">Verbatim Term Omission</span>. Terms that cannot be by the Autoclassification process are called <span class="bold">omissions</span>. Substatus: <span class="bold">CRE (Created)</span>.</p>
+<ul>
+<li>
+<p><span class="bold">CRE (Created)</span>. A verbatim term is not through Autoclassification and enters the pool of omissions (no prior status).</p>
+</li>
+<li>
+<p><span class="bold">RCRE (Recreated)</span>. A VTA is declassified, returning to the omissions pool (from status VTA_D).</p>
+</li>
+<li>
+<p><span class="bold">UNALLOC (Unallocated)</span>. An omission is deallocated, returning to the unallocated omissions pool (from status VTO_ALLOC).</p>
+</li>
+</ul>
+<p><a id="TMSUG11812"></a><span class="subhead3">VTO_ALLOC&nbsp;</span><span class="bold">Allocated Verbatim Term Omission</span>. When an omission is allocated to a user as a task (for classification), TMS gives it a status of VTO_ALLOC. Substatuses:</p>
+<ul>
+<li>
+<p><span class="bold">CRE (Created)</span>. The omission was allocated to a coder directly without passing through the VTO state (no prior status).</p>
+</li>
+<li>
+<p><span class="bold">ALLOC (Allocated)</span>. The omission was allocated to a coder through pool allocation (from status VTO or, if this is a re-allocation, from status VTO_ALLOC) or through manual allocation.</p>
+</li>
+<li>
+<p><span class="bold">RCRE (Recreated)</span>. Either an omission's Action assignment has been deleted or a VTA has been de; the term re-enters TMS as an omission and is allocated.</p>
+</li>
+</ul>
+<p><a id="TMSUG11813"></a><span class="subhead3">VTA_UA&nbsp;</span><span class="bold">Unapproved Verbatim Term Assignment</span>. The system gives this status when a user manually creates an unapproved VTA for a term and when Autoclassification finds a direct match between a term and an unapproved VTA. Substatuses:</p>
+<ul>
+<li>
+<p><span class="bold">CRE (Created)</span>. The classification was performed by a coder or approver on a term (from status VTO, VTO_ALLOC, ACT_INT, ACT_ALLOC, ACT_EXT, or no prior status).</p>
+</li>
+<li>
+<p><span class="bold">RCRE (Recreated)</span>. The verbatim was previously in status VTA_UA, then was not, and now is again; for example, when a verbatim term is declassified and then again to an unapproved VTA.</p>
+</li>
+<li>
+<p><span class="bold">REC (Re)</span>. The verbatim term has been reclassified but is still an unapproved VTA.</p>
+</li>
+<li>
+<p><span class="bold">UNALLOC (Deallocated)</span>. An allocated VTA is turned back to the unallocated pool (from status VTA_ALLOC).</p>
+</li>
+</ul>
+<p><a id="TMSUG11814"></a><span class="subhead3">VTA_ALLOC&nbsp;</span><span class="bold">Allocated Unapproved VTA</span>. The system gives this status when an unapproved VTA is allocated to a user for approval.</p>
+<ul>
+<li>
+<p><span class="bold">ALLOC (Allocated)</span>. An unapproved VTA is allocated to an approver (through pool or manual allocation) for review (from status VTA_UA).</p>
+</li>
+<li>
+<p><span class="bold">CRE (Created)</span>. An omission is to an unapproved VTA and directly allocated to an approver. The verbatim term may or may not be associated with an Action (from status VTO_ALLOC, ACT_INT, ACT_ALLOC, or ACT_EXT).</p>
+</li>
+</ul>
+<p><a id="TMSUG11815"></a><span class="subhead3">VTA_A&nbsp;</span><span class="bold">Approved Verbatim Term Assignment</span>. The system gives this status to terms automatically to Approved VTAs, and to unapproved VTAs after they are approved, and to terms that are in a dictionary/domain combination where approval of VTAs is not required. Substatuses:</p>
+<ul>
+<li>
+<p><span class="bold">CRE (Created)</span> (from status VTO, VTA_ALLOC, VTO_ALLOC, ACT_INT, ACT_ALLOC, r ACT_EXT, or no prior status).</p>
+</li>
+<li>
+<p><span class="bold">RCRE (Recreated)</span>. The verbatim was previously in status VTA_A, then was not, and now is again; for example, when a verbatim term is declassified and then again.</p>
+</li>
+<li>
+<p><span class="bold">REC (Re)</span>. The verbatim term has been reclassified.</p>
+</li>
+</ul>
+<p><a id="TMSUG11816"></a><span class="subhead3">VTA_D&nbsp;</span><span class="bold">Declassified Verbatim Term Assignment</span>. The system gives this status to VTAs that are declassified. Substatuses:</p>
+<ul>
+<li>
+<p><span class="bold">DEC (Declassified)</span> The verbatim term is declassified (from status VTA_UA, VTA_ALLOC, or VTA_A).</p>
+</li>
+<li>
+<p><span class="bold">DEL (Deleted)</span>. The verbatim term associated with a VTA is changed, so the VTA is deleted (from status VTA_UA, VTA_ALLOC, or VTA_A).</p>
+</li>
+</ul>
+<p><a id="TMSUG11817"></a><span class="subhead3">VTA_GLB&nbsp;</span><span class="bold">VT Globally Resolved</span>. The system gives this status to verbatim terms when a domain VTA is promoted to a global VTA. Substatuses:</p>
+<ul>
+<li>
+<p><span class="bold">CRE (Created)</span>. The system gives this substatus to the to the domain VT that is now globally resolved.</p>
+</li>
+<li>
+<p><span class="bold">DEC (Declassified)</span>. The system gives this substatus to the old domain VTA (from any VTA_ status). The Declassified substatus refers to the fact that the domain-specific VTA is declassified and supplanted by the global VTA.</p>
+</li>
+<li>
+<p><span class="bold">RCRE (Recreated)</span>. The verbatim was previously in status VTA_GL, then was not, and now is again; for example, when a verbatim term is declassified from a global VTA and then again to a global VTA.</p>
+</li>
+</ul>
+<p><a id="TMSUG11818"></a><span class="subhead3"><a id="sthref499"></a>VTI&nbsp;</span><span class="bold">VTI (Verbatim Term Individual)</span>. The system gives this status to verbatim term omission is classified as a Verbatim Term Individual in a dictionary with nonunique terms in its classification level. Substatuses:</p>
+<ul>
+<li>
+<p><span class="bold">CRE (Created)</span>. The system gives this substatus to the to VTI when it is initially created.</p>
+</li>
+<li>
+<p><span class="bold">RCRE (Recreated)</span>. The VTI was previously declassified and is now reclassified.</p>
+</li>
+</ul>
+<p><a id="TMSUG11819"></a><span class="subhead3">VTI_D&nbsp;</span><span class="bold">VTI Declassified</span>. The system gives this status to a VTIs when it is declassified. Substatuses:</p>
+<ul>
+<li>
+<p><span class="bold">DEL (Deleted)</span>. The system gives this substatus to the to the VTI when it is deleted.</p>
+</li>
+<li>
+<p><span class="bold">DEC (Declassified)</span>. The system gives this substatus to a VTI when it is declassified.</p>
+</li>
+</ul>
+<p><a id="TMSUG11820"></a><span class="subhead3">ACT_INT&nbsp;</span><span class="bold">Internal Action</span>. TMS gives this status to omissions with Internal Actions assigned. The Action requires approval before TMS sends the term with the Action back to the source system. Substatuses:</p>
+<ul>
+<li>
+<p><span class="bold">CRE (Created)</span>. A user has assigned an Internal Action to the term (from status VTO, VTO_ALLOC, or no prior status).</p>
+</li>
+<li>
+<p><span class="bold">RCRE (Recreated)</span>. The verbatim was previously in status ACT_INT, then was not, and now is again; for example, when a verbatim term has an Internal Action assigned, then no longer assigned (due to its being approved and the base external Action being assigned, or due to the term's being ) and then an Internal Action is again assigned to the term.</p>
+</li>
+<li>
+<p><span class="bold">UNALLOC (Deallocated</span>). The term has an Internal Action assigned and was formerly allocated to a user, but the user allocation has been rejected (from status ACT_ALLOC).</p>
+</li>
+</ul>
+<p><a id="TMSUG11821"></a><span class="subhead3">ACT_ALLOC&nbsp;</span><span class="bold">Allocated Internal Action Assignment</span>. TMS gives this status to omissions with Internal Actions that are allocated as a task (for Action approval) to a user.</p>
+<ul>
+<li>
+<p><span class="bold">ALLOC (Allocated)</span>. The term has an Internal Action assigned and is allocated as a task to a user for approval from the unallocated pool (from status ACT_INT) or is re-allocated from one approver to another (from status ACT_ALLOC).</p>
+</li>
+<li>
+<p><span class="bold">CRE (Created)</span>. A coder creates an Internal Action assignment and TMS allocates it directly to an approver (from status VTO, VTO_ALLOC, or no prior status).</p>
+</li>
+</ul>
+<p><a id="TMSUG11822"></a><span class="subhead3">ACT_EXT&nbsp;</span><span class="bold">External Action Assignment</span>. TMS gives this status to omissions with external Actions that are ready to be sent, or have been sent, to the external source data system. Substatuses:</p>
+<ul>
+<li>
+<p><span class="bold">CRE (Created)</span> (from status VTA_ALLOC, VTO_ALLOC, or no prior status).</p>
+</li>
+<li>
+<p><span class="bold">RCRE (Recreated)</span>. The verbatim was previously in status ACT_EXT, then was not, and now is again.</p>
+</li>
+</ul>
+<p><a id="TMSUG11823"></a><span class="subhead3">ACT_D&nbsp;</span><span class="bold">Deleted Action Assignment</span>. TMS gives this status to omissions whose assigned internal or external Action is deleted. This is a rare case, only existing when an Action assignment is deleted and no underlying source data exists, such as when you have created an Action assignment directly in the Maintain Action Assignments form.</p>
+<p>Substatus: <span class="bold">DEL (Deleted)</span> An Action assignment is deleted (from status ACT_INT, ACT_ALLOC, or ACT_EXT).</p>
+</div>
+<!-- class="sect1" -->
+<a id="BJFHJDIF"></a>
+<div id="TMSUG11824" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Using the Status/Notes Pop-up Window</h2>
+<p>You can see the status history of any term from all windows where you can change a term's status by clicking the Status/Notes button at the bottom of the window. You can also add a note at any time, including when you change the status; for example, to explain why you changed the status.</p>
+<p>In the Browse VT History (under the Repository menu) you can view the Status/Notes window but you cannot add notes.</p>
+<p>To view a term's status history from any of these windows, do the following:</p>
+<ol>
+<li>
+<p>Go to one of the following windows:</p>
+<ul>
+<li>
+<p>Approve Action Assignments (under Omission Management)</p>
+</li>
+<li>
+<p>Approve VTAs (under Omission Management)</p>
+</li>
+<li>
+<p>Classify VT Omissions (under Omission Management)</p>
+</li>
+<li>
+<p>VT History (under Omission Management)</p>
+</li>
+<li>
+<p>Reclassify Verbatim Terms (under VTA Maintenance)</p>
+</li>
+<li>
+<p>Promote/Demote VTAs (under VTA Maintenance)</p>
+</li>
+<li>
+<p>Maintain Action Assignments (under VTA Maintenance)</p>
+</li>
+<li>
+<p>Task Allocation by Term (under Task Allocation)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Query for the term you want.</p>
+</li>
+<li>
+<p>Select the term.</p>
+</li>
+<li>
+<p>Click <span class="bold">Status/Notes</span> at the bottom of the window.</p>
+<p>The <span class="bold">Status/Notes</span> window opens. The term, with its domain and dictionary, are displayed at the top of the window. The window is divided into two sections: <a href="#BEIBHJFA">Status History</a> and <a href="#BEIBDADI">Note History</a>.</p>
+</li>
+</ol>
+<p>You can add notes to the term; see <a href="#BEIEIGJE">"Adding a Note to a Term"</a> for more information.</p>
+<a id="BEIBHJFA"></a>
+<div id="TMSUG11826" class="sect2">
+<h3 class="sect2">Status History</h3>
+<p>The term's status history is displayed with the most recent status at the top and the first status at the bottom. For each status, the system displays the following information:</p>
+<ul>
+<li>
+<p><span class="bold">Status</span>. The status and substatus names, displayed as <span class="italic">status/substatus</span>; for additional information see <a href="#BEIGEFBG">"Term Statuses"</a>.</p>
+</li>
+<li>
+<p><span class="bold">Created By</span>. The user who manually changed the status or ran the process (such as Batch Validation) that changed the status.</p>
+</li>
+<li>
+<p><span class="bold">Created</span>. The timestamp of the status creation or change of status, including the date and time.</p>
+</li>
+</ul>
+<p><a id="TMSUG11827"></a><span class="subhead3">Actions&nbsp;</span>TMS also displays the following information for Action assignments:</p>
+<ul>
+<li>
+<p><span class="bold">Action</span>. The name of the Action.</p>
+</li>
+<li>
+<p><span class="bold">Action Type</span>. The Action type; either Internal, Answerable, or Unanswerable.</p>
+</li>
+<li>
+<p><span class="bold">Act Ref Type</span>. If the Action is an Internal Action, and if it is based on an external Action, the external Action's type appears; either Answerable or Unanswerable.</p>
+</li>
+<li>
+<p><span class="bold">Act Text</span>. The actual text of the Action.</p>
+</li>
+</ul>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Within the time period of each Action status in a term's status history, the system displays only the last Action applied to the term, if any. You can see the complete Action history of a term in the TMS Lite Browser; see <a href="dictbrws.htm#BACGJCEG">"Viewing a Term's Action History"</a>.</div>
+</div>
+<!-- class="sect2" -->
+<a id="BEIBDADI"></a>
+<div id="TMSUG11828" class="sect2">
+<h3 class="sect2">Note History</h3>
+<p>On the right side of the window the system displays notes that have been applied to the term. All the notes are related to the term's status history (for example, notes applied to a term in the Repository Maintenance form, which are of type Content or Relation, are not displayed here; see <a href="defmisc.htm#i1004701">"Defining Informative Note Attributes"</a>).</p>
+<p>However, the notes do not necessarily have any relation to the status displayed next to them. Notes and statuses are both displayed in chronological order, but because you can create a note without changing the status, and can change the status without creating a note, status changes and notes that correspond logically may not be displayed next to each other.</p>
+<p>TMS displays the following information for notes.</p>
+<ul>
+<li>
+<p><span class="bold">Label</span>. The label for the Informative Note Attribute on which the Informative Note is based.</p>
+</li>
+<li>
+<p><span class="bold">Note</span>. The note text entered by a user.</p>
+</li>
+<li>
+<p><span class="bold">Created By</span>. The system displays the user name of the person who added the label and/or note. If you add a label or note, the system enters your user name when you save your work.</p>
+</li>
+<li>
+<p><span class="bold">Creation Time</span>. The system displays the date and time when the label and/or note was added. If you add a label or note, the system enters the timestamp when you save your work.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="BEIEIGJE"></a>
+<div id="TMSUG11829" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Adding a Note to a Term</h3>
+<p>To add a note to a term, do the following:</p>
+<ol>
+<li>
+<p>Query for the term and open the Status/Notes window from the appropriate window; see <a href="#BJFHJDIF">"Using the Status/Notes Pop-up Window"</a>.</p>
+</li>
+<li>
+<p>Click in the first empty Label field. If necessary, select Insert from the Record menu.</p>
+</li>
+<li>
+<p>Click the ellipsis <span class="bold">(&hellip;)</span> to display the Informative Notes Attributes list of values.</p>
+</li>
+<li>
+<p>Select the Informative Note Attribute on which you want to base your note.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+TMS displays only attributes of type Workflow and data type Memo, and only those with "Applies To" defined as Term History; see <a href="defmisc.htm#i1004701">"Defining Informative Note Attributes"</a>.</div>
+</li>
+<li>
+<p>Enter text in the Note field.</p>
+</li>
+<li>
+<p>Save.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BEIHAIIE"></a>
+<div id="TMSUG11830" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Using the VT History Window</h2>
+<p>In the VT History window you can see the status history of any term, whether it is currently an omission, a verbatim term with an Action, a VTA, or a VTI. This is the only window in TMS where you can see the status history of terms with any current status and create notes for any term.</p>
+<p>To view the current status and substatus of any term as well as to view the complete status history of any term and add a label or note associated with a status change, do the following:</p>
+<ol>
+<li>
+<p>In the Omission Management menu, select VT History. The VT History window opens.</p>
+</li>
+<li>
+<p>Query for the term whose history you want to see, or query for a particular status to see all terms at that status. See <a href="overview.htm#CHDDBFHF">"Querying in Windows"</a>. The system displays the following information:</p>
+<ul>
+<li>
+<p><span class="bold">Term</span>. The term name.</p>
+</li>
+<li>
+<p><span class="bold">Domain Name</span>. The domain in which the term applies, or Global if it applies in all domains. If the term is valid in more than one domain, whether it is not is not also global, it is listed multiple times, once for each domain/dictionary combination.</p>
+</li>
+<li>
+<p><span class="bold">Dictionary Name</span>. The dictionary to which the term is mapped. If a term is mapped to multiple dictionaries, it is listed multiple times, once for each domain/dictionary combination.</p>
+</li>
+<li>
+<p><span class="bold">Status</span>/<span class="bold">Substatus</span>. The term's current status and substatus in the domain/dictionary combination on the same row; see <a href="#BEIGEFBG">"Term Statuses"</a>.</p>
+</li>
+<li>
+<p><span class="bold">Assigned</span>. If a task associated with the term&mdash;classifying the VTO, approving an Action assignment or unapproved VTA&mdash;is currently assigned to a user, the person's user name appears in this column.</p>
+</li>
+<li>
+<p><span class="bold">N</span>. If the letter <span class="bold">N</span> is displayed next to a term name, there is at least one note associated with the term.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>To view the complete history of a term, including all notes ever associated with the term, select the term and click <span class="bold">Status/Notes</span> at the bottom of the window. See <a href="#BJFHJDIF">"Using the Status/Notes Pop-up Window"</a>.</p>
+<p>You can also add notes from there; see <a href="#BEIEIGJE">"Adding a Note to a Term"</a>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="BJFJHAFH"></a>
+<div id="TMSUG11831" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Creating and Using Activity Lists</h2>
+<p>This section includes:</p>
+<ul>
+<li>
+<p><a href="#BJFGGFBC">Using Activity Lists</a></p>
+</li>
+<li>
+<p><a href="#BJFCJGBB">Setting Filters and Creating Activity Lists</a></p>
+</li>
+<li>
+<p><a href="#BJFICIJJ">Maintaining Activity Lists</a></p>
+</li>
+</ul>
+<a id="BJFGGFBC"></a>
+<div id="TMSUG11832" class="sect2">
+<h3 class="sect2">Using Activity Lists</h3>
+<p>You can use the Activity List window in the Omission Management menu as your starting point for work every day. You can set up your activity list to organize the tasks allocated to you (if your company is using task allocation) and keep track of the tasks you have not yet done. Each activity lists a single type of task&mdash;omissions to be classified, unapproved VTAs or Action assignments to be approved&mdash;in a particular domain/dictionary combination or in all domains and/or all dictionaries.</p>
+<p>You can click the activity name to see and work on the individual tasks allocated to you in the appropriate window: Classify Omissions, Approve VTAs, or Approve Action Assignments. When you close the window you return to the Activity List window and you can proceed to a different activity.</p>
+<p>To create an activity, enter criteria in the filter pop-up window in the Classify Omissions, Approve VTAs, or Approve Action Assignments and save the filter as an activity (see <a href="#BJFCJGBB">"Setting Filters and Creating Activity Lists"</a>).</p>
+<p>The Activity List window always displays a summary of the current results of the filter, including the task type, dictionary, domain, term status, and current total.</p>
+<p>You can also create activity lists of other users' tasks, though you will only be able to see terms to which you have standard Data Access Group security access.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BJFCJGBB"></a>
+<div id="TMSUG11833" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Setting Filters and Creating Activity Lists</h3>
+<p>In the <span class="bold">Classify VT Omissions</span>, <span class="bold">Approve Action Assignments</span>, and <span class="bold">Approve VTAs</span> windows you can limit the results returned by queries in the window by setting <span class="bold">Filter</span> criteria. You can save the filter criteria settings as an activity list and access it through the <span class="bold">Activity List</span> window. See:</p>
+<ul>
+<li>
+<p><a href="#BEIDEFEF">Setting Filters</a></p>
+</li>
+<li>
+<p><a href="#BEIGFBGH">Saving Filter Settings as an Activity</a></p>
+</li>
+</ul>
+<a id="BEIDEFEF"></a>
+<div id="TMSUG11834" class="sect3">
+<h4 class="sect3"><a id="sthref500"></a><a id="sthref501"></a>Setting Filters</h4>
+<p>The values you set here limit the results retrieved by queries in the window. For example, if you specify a dictionary, TMS displays only terms in that dictionary.</p>
+<p>Your default filter criteria settings are determined by your TMS user profile. Any changes you make to the filter settings continue in effect throughout your current session, even if you change windows, until you change the setting again. If your user profile does not set defaults, and you have not selected any during your TMS session, the Filter window opens automatically when you launch any of these windows.</p>
+<p>To set filter criteria, do the following:</p>
+<ol>
+<li>
+<p>Choose <span class="bold">Options</span>, then <span class="bold">Filter</span>, or click the <span class="bold">Filter</span> button. The Filter pop-up window opens.</p>
+</li>
+<li>
+<p>Select a dictionary and domain to work in:</p>
+<ul>
+<li>
+<p><span class="bold">Domain</span>. Select a value from the drop-down list.</p>
+</li>
+<li>
+<p><span class="bold">Dictionary</span>. Select a value from the drop-down list.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>To narrow the search, select values for one or more of the following fields:</p>
+<ul>
+<li>
+<p><span class="bold">Assigned</span>. To see your own assignments, enter your user name or [LOGIN_USER] (the default value). You can enter other people's user names or leave the field blank to see assignments to all users, but the results will be limited to the terms to which you have security access through a Data Access Group.</p>
+</li>
+<li>
+<p><span class="bold">TMS DB</span>. Select the database. There may be only one option.</p>
+</li>
+<li>
+<p><span class="bold">Status</span>. Select a status.</p>
+<ul>
+<li>
+<p>For omissions, the valid statuses are: VTO and Allocated VTO.</p>
+</li>
+<li>
+<p>For VTAs, the valid statuses are: Unapproved VTA and Allocated VTA.</p>
+</li>
+<li>
+<p>For actions, the valid statuses are: Internal Action and Allocated Action.</p>
+</li>
+</ul>
+<p>Only certain statuses make sense in the context of a particular window. If you select a status that does not apply in context, the system ignores the status value altogether and returns results based on the other criteria.</p>
+</li>
+<li>
+<p><span class="bold">Substatus</span>. You can select a substatus only if you first select a status.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The system does not limit the selection of substatuses to the substatuses appropriate to the status you selected. If you select a substatus that is invalid for the status, the query does not retrieve any records. For a list of statuses and their substatuses, see <a href="#BEIGEFBG">"Term Statuses"</a>.</div>
+</li>
+</ul>
+</li>
+<li>
+<p>To specify external system criteria for the filter, click the <span class="bold">External System</span> tab and enter values for one or more of the fields:</p>
+<ul>
+<li>
+<p><span class="bold">External System</span>. Select an external source data system from the list of values, or select All Systems.</p>
+<p>When you select an external system, TMS refreshes the screen to display the information stored for each source term in TMS; for example, for Oracle Clinical TMS displays Study, Patient, Document Number, and five other values.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If you have created a VTA proactively using the Repository Maintenance or Repository Authoring window, but a corresponding source term has never entered TMS from an external system, TMS displays the VTA only if you select All Systems.</div>
+</li>
+<li>
+<p><span class="bold">Source Database</span>. If the external system feeds data from multiple databases into TMS, you can specify a single one if you wish.</p>
+</li>
+<li>
+<p><span class="bold">External System-Specific Information</span>. TMS displays up to eight (8) additional fields custom-defined for the external system you specified.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If you selected All Systems in the External System field, Values 1&hellip;8 contain all values for all systems. For example, if you are using TMS with both Oracle Clinical and AERS, and Value 3 is defined as Patient for Oracle Clinical and Case for AERS, the list of values in the Value 3 column includes both OC Patients and AERS Cases.</div>
+</li>
+</ul>
+</li>
+<li>
+<p>When you call the Filter window from Classify VT Omissions or Approve Action Assignments (but not Approve VTAs) there is a third filter tab called <span class="bold">Actions</span>. You can enter values as follows:</p>
+<ul>
+<li>
+<p><span class="bold">Action Workflow</span>. You can choose to retrieve only one of the following:</p>
+<ul>
+<li>
+<p><span class="bold">Rerouted Actions only</span>. Terms with actions assigned that have returned to TMS from an external system.</p>
+</li>
+<li>
+<p><span class="bold">Actions not owned by TMS</span>. Terms with actions assigned currently owned by the external source data system; no Action can be taken within TMS on the terms.</p>
+</li>
+<li>
+<p><span class="bold">No Open Actions</span>. Terms without an Action currently assigned.</p>
+</li>
+<li>
+<p><span class="bold">Any Open Actions</span>. Terms with an Action currently assigned.</p>
+</li>
+<li>
+<p><span class="bold">Nonapprovable Actions</span>. Terms with an Action assigned that does not require approval.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="bold">Action App. Owner</span>. The name of the application that currently owns the Action; either TMS or an external system.</p>
+</li>
+<li>
+<p><span class="bold">Action Owner</span>. The user name of the person to whom the Action is allocated, if any.</p>
+</li>
+<li>
+<p><span class="bold">Omission Status</span>. The omission status of the term, if it is an omission.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>To save these filter settings as an activity for future use, click <span class="bold">Save As Activity</span>; see <a href="#BEIGFBGH">"Saving Filter Settings as an Activity"</a>.</p>
+</li>
+<li>
+<p>If you did not save the settings as an activity, do one of the following:</p>
+<ul>
+<li>
+<p>Click <span class="bold">OK</span> to implement these Filter settings for your current TMS session and close the Filter window.</p>
+</li>
+<li>
+<p>Click <span class="bold">Cancel</span> to revert settings to their values when you opened the Filter window. The Filter window closes.</p>
+</li>
+<li>
+<p>Click <span class="bold">Clear</span> to revert the settings to their values when you opened the Filter window. The Filter window remains open.</p>
+</li>
+<li>
+<p>Click <span class="bold">Restore</span> to revert Filter window values to the default settings for your TMS user profile. After clicking Restore, clicking Cancel cannot bring back the settings you had when you opened the filter window. The Filter window remains open.</p>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<a id="BEIGFBGH"></a>
+<div id="TMSUG11835" class="sect3">
+<h4 class="sect3"><a id="sthref502"></a>Saving Filter Settings as an Activity</h4>
+<p>You can save filter settings as an activity list to organize your work in TMS. See <a href="#BJFJHAFH">"Creating and Using Activity Lists"</a> for information.</p>
+<p>To save filter settings as an activity list accessible from the Activity Lists window, do the following:</p>
+<ol>
+<li>
+<p>From the Filter window, click <span class="bold">Save As Activity</span>. The Save Activity pop-up window opens.</p>
+</li>
+<li>
+<p>Enter values as follows:</p>
+<ul>
+<li>
+<p><span class="bold">Activity Text</span>. This text is displayed in the Activity Lists window and serves to identify the filter. You can enter text much longer than the field; up to 300 characters. Note that the Activity Lists window can display 29 characters in this field without scrolling.</p>
+<div class="infobox-note">
+<p class="notep1">Tip:</p>
+Since you can filter only on one task type at a time (omissions, VTAs, or Action assignments), use the same beginning for your activity text for each task type where the other filter criteria are the same.
+<p>For example, if you are querying for your own tasks, begin with the same code for the same domain/dictionary combination for each task type. If you are querying for another user's tasks, begin the activity text with that person's user name.</p>
+</div>
+</li>
+<li>
+<p><span class="bold">All Users?</span> If checked, this activity list is displayed in the Activity Lists window of all users, though each user can see only the terms to which he or she has security access. You can check this field only if you have the OPA_ADMIN security role.</p>
+</li>
+<li>
+<p><span class="bold">All Dictionaries?</span> If checked, the filter retrieves terms from all dictionaries. If unchecked, the filter retrieves terms from the dictionary you specified in the Filter window.</p>
+</li>
+<li>
+<p><span class="bold">All Domains?</span> If checked, the filter retrieves terms from all domains. If unchecked, the filter retrieves terms from the domain you specified in the Filter window</p>
+</li>
+<li>
+<p><span class="bold">Group by Status?</span> If checked, the system displays terms grouped by status in the Activity List window, so that each line in the activity list shows a particular status and the quantity is the number that meet the criteria and are of that particular status.</p>
+</li>
+<li>
+<p><span class="bold">Group by Substatus?</span> Check <span class="bold">Group by Substatus</span> only if you have also checked <span class="bold">Group by Status</span>. If checked, the system displays terms grouped by substatus in the Activity List window, so that each line in the activity list shows a particular status/substatus combination and the quantity is the number that meet the criteria and are of that particular substatus.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If you pick a particular status/substatus in the filter, the Activity List window groups terms by status/substatus even if you do not officially group by status/substatus when saving the activity.</div>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>. TMS closes the Save Activity pop-up window and saves the filter query as an activity.</p>
+</li>
+<li>
+<p>Do one of the following:</p>
+<ul>
+<li>
+<p>Change the settings and create a new activity.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span> to implement these Filter settings for your current TMS session and close the Filter window.</p>
+</li>
+<li>
+<p>Click <span class="bold">Clear</span> to revert the settings to their values when you opened the Filter window. The Filter window remains open.</p>
+</li>
+<li>
+<p>Click <span class="bold">Cancel</span> to revert settings to their values when you opened the Filter. The Filter window closes.</p>
+</li>
+<li>
+<p>Click <span class="bold">Restore</span> to revert Filter window values to the default settings for your TMS user profile. The Filter window remains open.</p>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BJFICIJJ"></a>
+<div id="TMSUG11836" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Maintaining Activity Lists</h3>
+<p>Use the Maintain Activities window to clean out outdated filters that are taking up space in your Activity List. You can also rename activities here.</p>
+<p>If you have the OPA_ADMIN database role you can see all activities, regardless of who created them. Otherwise you see only the activities that you created.</p>
+<p>To delete an activity:</p>
+<ol>
+<li>
+<p>In the Omission Management menu, go to the Maintain Activities window.</p>
+</li>
+<li>
+<p>Query for the activity you want to delete. See <a href="overview.htm#CHDDBFHF">"Querying in Windows"</a>. You can query on the type, whether or not the list is available to all users, and/or the activity text.</p>
+</li>
+<li>
+<p>Select the activity you want to delete by clicking its name.</p>
+</li>
+<li>
+<p>In the Record menu, select Delete.</p>
+</li>
+<li>
+<p>Save.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BEIDCJIC"></a>
+<div id="TMSUG11837" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Omission Management Reports</h2>
+<p>TMS includes the following reports under the Omission Management menu:</p>
+<ul>
+<li>
+<p><a href="#BEIDIGAI">VTA/VTI Creation Report</a></p>
+</li>
+<li>
+<p><a href="#BEIEEHEF">Classification Statistics Report</a></p>
+</li>
+<li>
+<p><a href="#i1002706">VT Domain Differences Report</a></p>
+</li>
+<li>
+<p><a href="#BEIDJEGE">VT Auxiliary Classifications Report</a></p>
+</li>
+<li>
+<p><a href="#BEIDFBID">Unclassifiable Indication Omissions Report</a></p>
+</li>
+<li>
+<p><a href="#BEIIFEGA">Indications Assignments Report</a></p>
+</li>
+</ul>
+<a id="BEIDIGAI"></a>
+<div id="TMSUG11838" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">VTA/VTI Creation Report<a id="sthref503"></a><a id="sthref504"></a></h3>
+<p>You can view the verbatim term assignments (VTAs) and verbatim term individuals (VTIs) created for a particular dictionary within a specific time period and the author of the VTA.</p>
+<p>The VTA/VTI Creation Report displays the following:</p>
+<ul>
+<li>
+<p>The affected Dictionary</p>
+</li>
+<li>
+<p>The affected Domain</p>
+</li>
+<li>
+<p>The Verbatim Term for which the assignment is made</p>
+</li>
+<li>
+<p>The Classification Type: VTA or VTI</p>
+</li>
+<li>
+<p>The Dictionary Term to which the VT is assigned, and its ID</p>
+</li>
+<li>
+<p>The date and time of the VTA or VTI creation</p>
+</li>
+<li>
+<p>The author of the VTA or VTI</p>
+</li>
+</ul>
+<p>To generate a <span class="bold">VTA/VTI Creation Report</span>:</p>
+<ol>
+<li>
+<p>Select <span class="bold">Omission Management</span> in the navigator window</p>
+</li>
+<li>
+<p>Select <span class="bold">VTA/VTI Creation Report</span>.</p>
+</li>
+<li>
+<p>Fill in the general report specifications. See <a href="reports_jobs.htm#CHDGFADG">"Setting Parameters."</a></p>
+</li>
+<li>
+<p>Enter a value for <span class="bold">Job Specific</span> parameters:</p>
+<ul>
+<li>
+<p><span class="bold">Active dictionaries</span>: Choose the dictionary on which to run the report</p>
+</li>
+<li>
+<p><span class="bold">Start Date:</span> Type in the Start Date of the time period for which to run the report. Use the MM-DD-YYYY format where MM is the first three letters of the month.</p>
+</li>
+<li>
+<p><span class="bold">End Date:</span> Type in the End Date of the time period for which to run the report. Use the MM-DD-YYYY format where MM is the first three letters of the month.</p>
+</li>
+<li>
+<p><span class="bold">Template</span>: Select the report template. If your company has created a custom template, it appears in the list of values. The Oracle Template is the default template.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Submit the job. See <a href="reports_jobs.htm#CHDHEIGD">"Running a Job."</a></p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BEIEEHEF"></a>
+<div id="TMSUG11839" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Classification Statistics Report<a id="sthref505"></a><a id="sthref506"></a></h3>
+<p>This report summarizes the state of classification in the TMS repository. It displays the number of outstanding omissions, misspelled terms, VTIs, approved and unapproved VTAs and the total number of terms.</p>
+<p>The Classification Statistics Report has two sections, which display the following:</p>
+<ul>
+<li>
+<p><span class="bold">Omissions</span> Displays the Domain on which the report is run, the number of Unique Verbatim Term Omissions (VTOs) and the total Omissions.</p>
+</li>
+<li>
+<p><span class="bold">VTAs</span> Displays the Domain, the approval status of Accepted and Misspelled VTAs against various Search Objects as well as the Totals.</p>
+</li>
+<li>
+<p><span class="bold">VTIs</span> Displays the Domain and the number of Accepted and Misspelled VTIs that were created by direct or manual match or loaded.</p>
+</li>
+</ul>
+<p>To generate a <span class="bold">Classification Statistics Report:</span></p>
+<ol>
+<li>
+<p>Select <span class="bold">Omission Management</span> in the navigator window</p>
+</li>
+<li>
+<p>Select <span class="bold">Classification Statistics Report</span>.</p>
+</li>
+<li>
+<p>Fill in the general report specifications. See <a href="reports_jobs.htm#CHDGFADG">"Setting Parameters."</a></p>
+</li>
+<li>
+<p>Enter a value for <span class="bold">Job Specific</span> parameters:</p>
+<ul>
+<li>
+<p><span class="bold">Active dictionaries</span>: Choose the dictionary on which to run the report</p>
+</li>
+<li>
+<p><span class="bold">Domain:</span> Choose the appropriate domain.</p>
+</li>
+<li>
+<p><span class="bold">Template</span>: Select the report template. If your company has created a custom template, it appears in the list of values. The Oracle Template is the default template.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Submit the job. See <a href="reports_jobs.htm#CHDHEIGD">"Running a Job."</a></p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="i1002706"></a>
+<div id="TMSUG11840" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">VT Domain Differences Report <a id="sthref507"></a><a id="sthref508"></a></h3>
+<p>The VTA/VTI Domain Differences Report compares the VTAs and VTIs in two domain/dictionary combinations, returning those that are mapped to different terms in these domains.</p>
+<p>To run the VT Domain Differences Report:</p>
+<ol>
+<li>
+<p>From the <span class="bold">Omission Management</span> menu, select <span class="bold">VT Domain Differences</span>.</p>
+</li>
+<li>
+<p>Fill in the general report specifications. See <a href="reports_jobs.htm#CHDGFADG">"Setting Parameters."</a></p>
+</li>
+<li>
+<p>Fill in the job-specific specifications, all of which are required:</p>
+<ul>
+<li>
+<p><span class="bold">First Domain/Dictionary</span>: Select the first domain/dictionary combination from the list of values.</p>
+</li>
+<li>
+<p><span class="bold">Second Domain/Dictionary</span>: Select the second domain/dictionary combination from the list of values.</p>
+</li>
+<li>
+<p><span class="bold">Template</span>: Select the report template to use.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Submit the job. See <a href="reports_jobs.htm#CHDHEIGD">"Running a Job."</a></p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BEIDJEGE"></a>
+<div id="TMSUG11841" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">VT Auxiliary <a id="sthref509"></a>Classifications Report</h3>
+<p>The VT Auxiliary Classifications report lists all VTI classifications in a particular domain/dictionary combination that have auxiliary information. For each VTI the system displays:</p>
+<ul>
+<li>
+<p>The auxiliary levels and values</p>
+</li>
+<li>
+<p>The VTI ID</p>
+</li>
+<li>
+<p>The dictionary term and its ID, code, and alt code</p>
+</li>
+<li>
+<p>The instance and the user or system that created the VTI</p>
+</li>
+</ul>
+<p>To run the report:</p>
+<ol>
+<li>
+<p>From the <span class="bold">Omission Management</span> menu, select <span class="bold">VT Auxiliary Classifications</span>.</p>
+</li>
+<li>
+<p>For the general parameters, see <a href="reports_jobs.htm#CHDGFADG">"Setting Parameters."</a></p>
+</li>
+<li>
+<p>Enter job-specific parameters:</p>
+<ul>
+<li>
+<p><span class="bold">Active Dictionary</span></p>
+</li>
+<li>
+<p><span class="bold">Domain</span></p>
+</li>
+<li>
+<p><span class="bold">Template</span></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Submit the job. See <a href="reports_jobs.htm#CHDHEIGD">"Running a Job."</a></p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BEIDFBID"></a>
+<div id="TMSUG11842" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Unclassifiable Indication Omissions <a id="sthref510"></a>Report</h3>
+<p>The Unclassifiable Indication Omissions report shows, for a particular dictionary/domain combination, indication omissions that are not classifiable because the related source terms were not supplied with indications. Indication Omissions that are not linked to any source term are not included in the report.</p>
+<p>For each source term the report displays:</p>
+<ul>
+<li>
+<p>The source term ID, the external system where it originated, and any external system values associated with it</p>
+</li>
+<li>
+<p>The instance</p>
+</li>
+<li>
+<p>The verbatim term and term type (VTA or VTI)</p>
+</li>
+<li>
+<p>The lower dictionary term and its ID and code</p>
+</li>
+</ul>
+<p>To run the report:</p>
+<ol>
+<li>
+<p>From the <span class="bold">Omission Management</span> menu, select <span class="bold">Unclassifiable Indication Omissions</span>.</p>
+</li>
+<li>
+<p>For the general parameters, see <a href="reports_jobs.htm#CHDGFADG">"Setting Parameters."</a></p>
+</li>
+<li>
+<p>Enter job-specific parameters:</p>
+<ul>
+<li>
+<p><span class="bold">Active Dictionary</span></p>
+</li>
+<li>
+<p><span class="bold">Domain</span></p>
+</li>
+<li>
+<p><span class="bold">Template</span></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Submit the job. See <a href="reports_jobs.htm#CHDHEIGD">"Running a Job."</a></p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BEIIFEGA"></a>
+<div id="TMSUG11843" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Indications Assignments <a id="sthref511"></a>Report</h3>
+<p>The Indications Assignments report shows the current indication assignments for the local instance as a whole or for a particular dictionary and/or domain. For each assignment the report displays:</p>
+<ul>
+<li>
+<p>The verbatim term, term type (VTA or VTI), and its ID</p>
+</li>
+<li>
+<p>VTA approval status</p>
+</li>
+<li>
+<p>Indication</p>
+</li>
+<li>
+<p>The lower dictionary term and its ID and code</p>
+</li>
+<li>
+<p>The higher dictionary term and its ID</p>
+</li>
+<li>
+<p>The user or system that created the assignment</p>
+</li>
+<li>
+<p>The Valid From date</p>
+</li>
+</ul>
+<p>To run the report:</p>
+<ol>
+<li>
+<p>From the <span class="bold">Omission Management</span> menu, select <span class="bold">Indications Assignments</span>.</p>
+</li>
+<li>
+<p>For the general parameters, see <a href="reports_jobs.htm#CHDGFADG">"Setting Parameters."</a></p>
+</li>
+<li>
+<p>Enter job-specific parameters:</p>
+<ul>
+<li>
+<p><span class="bold">Active Dictionary</span> (optional)</p>
+</li>
+<li>
+<p><span class="bold">Domain</span> (optional)</p>
+</li>
+<li>
+<p><span class="bold">Template</span></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Submit the job. See <a href="reports_jobs.htm#CHDHEIGD">"Running a Job."</a></p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment25">
+<tr>
+<td class="cellalignment34">
+<table class="cellalignment30">
+<tr>
+<td class="cellalignment29"><a href="part2.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment29"><a href="vtamaint.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;1999, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment36">
+<table class="cellalignment28">
+<tr>
+<td class="cellalignment29"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment29"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment29"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment29"><a href="index.htm"><img width="24" height="24" src="../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td class="cellalignment29"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Reference Information</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="description" content="This guide provides information on using the Application Programming Interface for Oracle Life Sciences Data Hub and Oracle Health Sciences Data Management Workbench." />
+<meta name="dcterms.created" content="2018-05-25T8:15:4Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Health Sciences Life Sciences Warehouse API Guide" />
+<meta name="dcterms.identifier" content="E87987-01" />
+<meta name="dcterms.isVersionOf" content="LSHAP" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2013, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Prev" href="using_api.htm" title="Previous" type="text/html" />
+<link rel="Next" href="part2_api.htm" title="Next" type="text/html" />
+<link rel="alternate" href="LSHAP.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="LSHAP.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="LSHAP.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">6/42</span> <!-- End Header -->
+<div id="LSHAP1617" class="chapter"><a id="BGBHHCBJ"></a>
+<h1 class="chapter"><span class="secnum">2</span> Reference Information</h1>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#CHDHFDGB">CDR Naming Version Object Type</a></p>
+</li>
+<li>
+<p><a href="#CHDHBCDB">CDR Base Object Type</a></p>
+</li>
+<li>
+<p><a href="#BGBGHGBJ">CDR Object-Specific Database Object Types</a></p>
+</li>
+<li>
+<p><a href="#CDEBEJDD">Retrieving Reference Codelist Names and Values</a></p>
+</li>
+<li>
+<p><a href="#CHDDCCJF">Retrieving the Instance Domain ID</a></p>
+</li>
+<li>
+<p><a href="#A1274755">Retrieving the ID of a User-Defined Domain</a></p>
+</li>
+<li>
+<p><a href="#A1274974">CDR_DF_NAMING_V View</a></p>
+</li>
+<li>
+<p><a href="#CDEHDBAI">Standard Parameters</a></p>
+</li>
+</ul>
+<a id="CHDHFDGB"></a>
+<div id="LSHAP1588" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">CDR Naming Version Object Type</h2>
+<p>Object information is stored in two tables in the Oracle LSH database: cdr_namings, which contains one row for each defined Oracle LSH object, and cdr_naming_versions, which contains one row for each version of each defined Oracle LSH object. Information from these two tables is stored in two composite database object types: cdr_naming_version_obj_type and cdr_base_obj_type.</p>
+<p>For both the composite object types, the attributes company_id, obj_id, obj_ver, namespace_obj_id, and namespace_obj_ver form a composite primary key. You can refer to any existing object using this primary key.</p>
+<p>Parameters of type cdr_naming_version_obj_type are required in APIs for creating and modifying an object. To get an object's naming version attribute values see <a href="setup_utility_api.htm#BGBHFCJC">"Get a Naming Version Object"</a>.</p>
+<p>The attributes of cdr_naming_version_obj_type are:</p>
+<ul>
+<li>
+<p><span class="bold">company_id</span>. To get your company ID, use CDR_PUB_DEF_FACTORY_UTILS.GetCompanyId.</p>
+</li>
+<li>
+<p><span class="bold">obj_id</span> is the unique ID of the object. Oracle LSH generates this ID when you create a new object. Enter NULL if you are creating a new object.</p>
+</li>
+<li>
+<p><span class="bold">obj_ver</span> is the object's version number. Enter NULL if you are creating a new object.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The attributes company_id, obj_id, obj_ver, namespace_obj_id, and namespace_obj_ver together constitute an object's primary key.</div>
+</li>
+<li>
+<p><span class="bold">namespace_obj_id</span>. The unique ID of the object's parent object; for example, a Table instance is always contained in a Work Area, so its namespace_obj_id is the object ID of its Work Area.</p>
+</li>
+<li>
+<p><span class="bold">namespace_obj_ver</span>. The version number of the object's parent object.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You can create a child object only in the latest version of its parent object. If you pass a namespace version number that is not the latest when creating a child object, the system ignores the value you pass and creates the child in the latest version of the parent.</div>
+</li>
+<li>
+<p><span class="bold">namespace_start_obj_ver</span>. This attribute contains the version number of the parent object at the time the version represented by <span class="bold">obj_ver</span> of the object represented by <span class="bold">obj_id</span> was created.</p>
+</li>
+<li>
+<p><span class="bold">namespace_end_obj_ver</span>. This attribute contains the version number of the parent object at the time when the version represented by <span class="bold">obj_ver</span> of the object represented by <span class="bold">obj_id</span> was superseded by a higher version. If the object is still the most current version, then this attribute contains the value 999999. If you are creating a new object, enter 999999.</p>
+</li>
+<li>
+<p><span class="bold">object_type_rc</span> This attribute defines what type of object you are creating or modifying. This value is mandatory for creating objects, but not for modifying objects. See <a href="#CDEBEJDD">"Retrieving Reference Codelist Names and Values"</a> for information on retrieving valid values.</p>
+</li>
+<li>
+<p><span class="bold">name</span>. This is the name of the object.</p>
+</li>
+<li>
+<p><span class="bold">owning_location_rc</span>. This attribute is entered in the system at LSH installation time and is stored as a profile in the system. The system automatically sets this value to the profile value for all objects. Enter NULL.</p>
+</li>
+<li>
+<p><span class="bold">checked_out_flag_rc</span>. This value indicates whether the object is currently checked out or not. The possible values are $YESNO$YES and $YESNO$NO. If you are creating a new object, enter NULL.</p>
+</li>
+<li>
+<p><span class="bold">checked_out_id</span> is the user ID of the person who checked out the object, if it is currently checked out. If you are creating a new object, enter NULL.</p>
+</li>
+<li>
+<p><span class="bold">object_subtype_id</span>. This attribute specifies the ID of the object's subtype. Use CDR_PUB_DF_NAMING_UTIL.GetObjectSubtypeID to retrieve an object's subtype ID. If you are creating a new object, enter NULL.</p>
+</li>
+<li>
+<p><span class="bold">description</span>. This is an optional attribute but it is highly recommended that you provide a description for future reference. You can modify the description using appropriate API for the object.</p>
+</li>
+<li>
+<p><span class="bold">ref_company_id</span>. If the object is an instance object, this attribute contains the company ID of the source definition.</p>
+</li>
+<li>
+<p><span class="bold">ref_obj_id</span>. If the object is an instance object, this attribute contains the object ID of the source definition.</p>
+</li>
+<li>
+<p><span class="bold">ref_obj_ver</span> . If the object is an instance object, this attribute contains the object version number of the source definition.</p>
+</li>
+<li>
+<p><span class="bold">copied_from_company_id</span>. If the object is a copy of another object, this attribute contains the company ID of the original object. If you are creating a new object, enter NULL.</p>
+</li>
+<li>
+<p><span class="bold">copied_from_obj_id</span>. If the object is a copy of another object, this attribute contains the object ID of the original object. If you are creating a new object, enter NULL.</p>
+</li>
+<li>
+<p><span class="bold">copied_from_obj_ver</span>. If the object is a copy of another object, this attribute contains the object version number of the original object. If you are creating a new object, enter NULL.</p>
+</li>
+<li>
+<p><span class="bold">object_version_number</span>. This attribute is for Oracle LSH internal use only. Never enter a value for this attribute. If you are creating a new object, enter NULL.</p>
+</li>
+<li>
+<p><span class="bold">status_rc</span>. This attribute contains the current status of the object. See <a href="#CDEBEJDD">"Retrieving Reference Codelist Names and Values"</a> for information on retrieving valid values. If you are creating a new object, enter NULL.</p>
+</li>
+<li>
+<p><span class="bold">validation_status_rc</span>. This attribute contains the current validation status of the object. See <a href="#CDEBEJDD">"Retrieving Reference Codelist Names and Values"</a> for information on retrieving valid values. If you are creating a new object, enter NULL.</p>
+</li>
+<li>
+<p><span class="bold">version_label</span>. This attribute stores the version label of the object, if any. If you are creating a new object, enter NULL.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect1" -->
+<a id="CHDHBCDB"></a>
+<div id="LSHAP1589" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">CDR Base Object Type</h2>
+<p>For some operations on objects, only the identification contained in a CDR base object type (cdr_base_obj_type) is required. Some APIs allow you to operate on multiple objects at the same time by using a parameter based on a collection of CDR base object types called cdr_base_obj_coll.</p>
+<p>A CDR Base Object Type contains a subset of the information contained in a CDR naming Version Object Type (see <a href="#CHDHFDGB">"CDR Naming Version Object Type"</a>).</p>
+</div>
+<!-- class="sect1" -->
+<a id="BGBGHGBJ"></a>
+<div id="LSHAP1590" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">CDR Object-Specific Database Object Types</h2>
+<p>Each Oracle LSH object type has its own unique attributes beyond what is included in the CDR Naming Version Object Type and CDR Base Object Type. These unique attributes are included in a view for each object type. The view includes information on both definitions and instances of a particular object type. In the case of Tables, it includes Table Descriptors as well as Table definitions and instances.</p>
+<p>APIs that are used to create or modify Oracle LSH defined objects contain parameters based on these supplementary database object types. You can set values for the object-specific attributes using these parameters.</p>
+<p>For example, the supplementary database object type for Oracle LSH Programs is called cdr_program_obj_type. In the Create Program API, the parameter pi_cdrprgobjtype is of this type. Its attributes are:</p>
+<ul>
+<li>
+<p><span class="bold">company_id</span>. To get your company ID, use CDR_PUB_DEF_FACTORY_UTILS.GetCompanyId.</p>
+</li>
+<li>
+<p><span class="bold">obj_id</span>. The unique ID of the Program.</p>
+</li>
+<li>
+<p><span class="bold">obj_ver</span>. The Program's version number.</p>
+</li>
+<li>
+<p><span class="bold">tech_type_id</span>. Different executable object types have different technology types, which can be queried using the view cdr_tech_types_v. Use the column program_type_rc to see which tech type is valid for a particular object type. In the case of Programs, only the tech types whose value in the program_type_rc column is <code dir="ltr">$PROGRAMTYPES$PROGRAM</code> and which are present in the lookup type cdr_tech_types are allowed. They are: <code dir="ltr">$TECHTYPES$SAS, $TECHTYPES$SASCATALOGS, $TECHTYPES$SASFORMATS, $TECHTYPES$PLSQL, $TECHTYPES$REPORTS</code>.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Tech types that are not included in the lookup type cdr_tech_types are used internally only and should not be used with public APIs.</div>
+</li>
+<li>
+<p><span class="bold">manual_validation_flag_rc</span>. This flag determines whether a Program's outputs receive their validation status from their Execution Setup or must be validated manually. The valid values are: <code dir="ltr">$YESNO$YES</code> and <code dir="ltr">$YESNO$NO</code>.</p>
+</li>
+</ul>
+<p>See the chapter on "Defining Programs" in the <span class="italic">Oracle Life Sciences Data Hub Application Developer's Guide</span> for information about these attributes. Each object type has its own chapter in this manual where its attributes are described.</p>
+</div>
+<!-- class="sect1" -->
+<a id="CDEBEJDD"></a>
+<div id="LSHAP1592" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Retrieving Reference Codelist Names and Values</h2>
+<p>Some database object type attributes (those ending in the string <code dir="ltr">_rc</code>) have a fixed set of allowed values stored in a lookup (reference codelist). These attributes correspond to fields in the user interface with a drop-down or pop-up list of values. To supply or change one of these values you must enter the exact string stored in the reference codelist, with the codelist name surrounded by dollar signs and followed by a codelist value.</p>
+<p>For example, the API to create any object includes a parameter of type cdr_naming_version_obj_type, one of whose attributes is object_type_rc. You must enter the correct string for the type of object you want to create.</p>
+<p>Reference codelists are stored in a table you access through the view cdr_lookups. The following columns contain the following information:</p>
+<ul>
+<li>
+<p><span class="bold">lookup_type</span>: reference codelist names</p>
+</li>
+<li>
+<p><span class="bold">lookup_code</span>: reference codelist values</p>
+</li>
+<li>
+<p><span class="bold">meaning</span>: the text that is displayed in the user interface</p>
+</li>
+<li>
+<p><span class="bold">description</span>: additional information (sometimes)</p>
+</li>
+</ul>
+<p>If you have LSH Setup Admin privileges you can look up reference codelists in the Applications user interface; see "Querying and Viewing Lookups" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub System Administrator's Guide</span></span>.</p>
+<p>You can browse the view in a tool like SQL Developer to find these values. However, it is not always easy to guess the name of the reference codelist. In that case, you can go into the Oracle LSH user interface to where they are displayed and note one of the allowed values, then query.</p>
+<p>For example, object types are displayed in the Add drop-down list in the Work Area Properties screen. You can see that one object type is Business Area, so you can use the following query:</p>
+<p><code dir="ltr">select lookup_type, lookup_code, meaning from cdr_lookups where meaning like '%Business Area%';</code></p>
+<p>Now you know that the lookup_type for object types is CDR_OBJECT_TYPES and you can use the following query to get all the other values:</p>
+<p><code dir="ltr">select distinct lookup_code, meaning from cdr_lookups where lookup_type = 'CDR_OBJECT_TYPES';</code></p>
+</div>
+<!-- class="sect1" -->
+<a id="CHDDCCJF"></a>
+<div id="LSHAP1593" class="sect1">
+<h2 class="sect1">Retrieving the Instance Domain ID</h2>
+<p>While working with classification-related APIs, you may need the domain ID for the Oracle LSH environment you are working in. This is the ID for your Oracle LSH instance, which is created during installation. It has nothing to do with user-defined Domains that contain Application Areas.</p>
+<p>Its value is normally <code dir="ltr">1</code>.</p>
+</div>
+<!-- class="sect1" -->
+<a id="A1274755"></a>
+<div id="LSHAP107" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Retrieving the ID of a User-Defined Domain</h2>
+<p>Query the CDR_DF_NAMING view for the domain ID and other attributes.</p>
+<pre dir="ltr">
+select * from cdr_df_naming_v where object_type_rc like '%$objtypes$libdomain%';
+</pre></div>
+<!-- class="sect1" -->
+<a id="A1274974"></a>
+<div id="LSHAP108" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">CDR_DF_NAMING_V View</h2>
+<p>Query the CDR_DF_NAMING_v view for object types.</p>
+<pre dir="ltr">
+select distinct OBJECT_TYPE_RC, from cdr_df_naming_v;
+</pre>
+<p>Then query for the object type you need, for example:</p>
+<pre dir="ltr">
+select * from cdr_df_naming_v where object_type_rc like '%$objtypes$<span class="italic">object_type</span>%';
+</pre></div>
+<!-- class="sect1" -->
+<a id="CDEHDBAI"></a>
+<div id="LSHAP1618" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Standard Parameters</h2>
+<p>Some or all of the following standard Oracle Applications parameters are included in each function and procedure:</p>
+<p><a id="LSHAP1619"></a><a id="sthref7"></a><span class="subhead3">P_API_VERSION&nbsp;</span>(Mandatory) Enter <code dir="ltr">1</code>.</p>
+<p><a id="LSHAP1620"></a><a id="sthref8"></a><span class="subhead3">P_INIT_MSG_LIST&nbsp;</span>(Optional) Accept the default value (FND_API.G_FALSE) to ensure that this individual API does not initialize the message list when the procedure is entered. Pass FND_API.G_TRUE to override the default behavior.</p>
+<p><a id="LSHAP1621"></a><a id="sthref9"></a><span class="subhead3">P_COMMIT&nbsp;</span>(Optional) Accept the default value (FND_API.G_FALSE) to ensure that this individual API does not commit upon completion. Pass FND_API.G_TRUE to override the default behavior.</p>
+<p><a id="LSHAP1622"></a><a id="sthref10"></a><span class="subhead3">P_VALIDATION_LEVEL&nbsp;</span>(Optional) Accept the default value to perform full validation. No other values are currently supported.</p>
+<p><a id="LSHAP1623"></a><a id="sthref11"></a><span class="subhead3">X_RETURN_STATUS&nbsp;</span>This output parameter returns the end status of the API: (S) Success, (E) Error or (U) Unexpected Error.</p>
+<p><a id="LSHAP1624"></a><a id="sthref12"></a><span class="subhead3">X_MSG_COUNT&nbsp;</span>This output parameter returns the count of error messages if the return status is other than Success.</p>
+<p><a id="LSHAP1625"></a><a id="sthref13"></a><span class="subhead3">X_MSG_DATA&nbsp;</span>This output parameter returns the text of the error message, if the message count is 1. If there are more than one messages, use cdr_pub_msg_pub.get to retrieve the messages.</p>
+</div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment15">
+<tr>
+<td class="cellalignment22">
+<table class="cellalignment20">
+<tr>
+<td class="cellalignment19"><a href="using_api.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment19"><a href="part2_api.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2013, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment24">
+<table class="cellalignment18">
+<tr>
+<td class="cellalignment19"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment19"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment19"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment19"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

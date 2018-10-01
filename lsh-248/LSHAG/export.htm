@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Exporting and Importing Objects</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2018-05-25T8:2:33Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Life Sciences Data Hub System Administrator's Guide" />
+<meta name="dcterms.identifier" content="E95829-01" />
+<meta name="dcterms.isVersionOf" content="LSHAG" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2006, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="monsys.htm" title="Previous" type="text/html" />
+<link rel="Next" href="svcs.htm" title="Next" type="text/html" />
+<link rel="alternate" href="LSHAG.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="LSHAG.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="LSHAG.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">20/24</span> <!-- End Header -->
+<div id="LSHAG459" class="chapter"><a id="sthref35"></a>
+<h1 class="chapter"><span class="secnum">17</span> Exporting and Importing Objects</h1>
+<p>This chapter contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#CIHDDIGI">About Exporting and Importing Objects</a></p>
+</li>
+<li>
+<p><a href="#BABFGACG">Objects Included and Excluded</a></p>
+</li>
+<li>
+<p><a href="#CHDIAIFF">Source Independence</a></p>
+</li>
+<li>
+<p><a href="#CIHICHIB">Exporting Objects</a></p>
+</li>
+<li>
+<p><a href="#CIHJFIFD">Importing Objects</a></p>
+</li>
+<li>
+<p><a href="#CHDJCIAG">Installing Objects</a></p>
+</li>
+<li>
+<p><a href="#CHDCGEDD">Preserving Customizations</a></p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+This utility imports and exports metadata. To export data out of Oracle LSH, use Oracle LSH Data Marts. See "Defining Data Marts" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Application Developer's Guide</span></span>.</div>
+</li>
+</ul>
+<a id="CIHDDIGI"></a>
+<div id="LSHAG460" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">About Exporting and Importing Objects</h2>
+<p>The Oracle LSH export and import utility (also called the release utility) allows you to export all or part of a single Domain to a file and then read from the file to import the included objects to an Oracle LSH instance&mdash;either the same one or a different one&mdash;for example, to:</p>
+<ul>
+<li>
+<p>Set up a new Oracle LSH instance within your organization.</p>
+</li>
+<li>
+<p>Make an Oracle LSH application that you developed available to others.</p>
+</li>
+<li>
+<p>Provide upgrades to previously imported objects.</p>
+</li>
+</ul>
+<p>The export and import utility includes three scripts:</p>
+<ul>
+<li>
+<p><span class="bold">cdrruexport.sql</span> exports objects to a file.</p>
+</li>
+<li>
+<p><span class="bold">cdrruimport.sql</span> imports objects from a file.</p>
+</li>
+<li>
+<p><span class="bold">cdrruwainstall.sql</span> installs imported objects.</p>
+</li>
+</ul>
+<p>The scripts are stored in the following location by default:</p>
+<p><code dir="ltr">$CDR_TOP/patch/115/sql/</code><code dir="ltr"><span class="codeinlineitalic">script_name</span></code><code dir="ltr">.sql</code></p>
+<p>You must run these scripts from the command line on the computer where the Oracle LSH database server is installed. There is no user interface to run these scripts.</p>
+<p><a id="CHDIIFAA"></a><a id="LSHAG1837"></a><span class="subhead3">Required Setup&nbsp;</span>Each script requires access to a local directory on the database server machine from within SQL*Plus. All of the scripts write log files to this directory. The export script writes the export file to the directory and the import script reads from the file in the directory.</p>
+<p>But since a SQL script cannot directly refer to a directory created using the operating system (OS), you must create a local database directory from SQL*Plus and map it to the local OS directory. Instructions are included in the sections on running the scripts.</p>
+<p>You need to move the file from the export environment to the import environment through an upload and download, FTP, or any method that you use to transfer files.</p>
+<p><a id="LSHAG1838"></a><span class="subhead3">Required Oracle LSH User Roles&nbsp;</span>Although you run the scripts as the user <code dir="ltr">apps</code>, each script has input parameters requiring the username and password of an Oracle LSH user account with certain privileges; see <a href="#CIHGAHEI">"Roles and Privileges Required for Exporting"</a> and <a href="#BABEDJGG">"Roles and Privileges Required for Importing Domains"</a>.</p>
+</div>
+<!-- class="sect1" -->
+<a id="BABFGACG"></a>
+<div id="LSHAG461" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Objects Included and Excluded</h2>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#BABHDGAA">Objects Included</a></p>
+</li>
+<li>
+<p><a href="#BABCEEAF">Objects Excluded</a></p>
+</li>
+</ul>
+<a id="BABHDGAA"></a>
+<div id="LSHAG462" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Objects Included</h3>
+<p>The following object types can be included:</p>
+<ul>
+<li>
+<p><span class="bold">All organizational (container) objects</span>: Domains, Application Areas, and Work Areas. If you export a whole Domain, all nested Domains and other organizational objects contained in it are included. If you export objects at a lower level of the object hierarchy, the utility automatically includes all parent objects up to the top-level Domain.</p>
+</li>
+<li>
+<p><span class="bold">All object definitions of the following types</span> contained in the included Domains and Application Areas: Tables, Load Sets, Programs, Variables, Parameters, Parameter Sets, and Business Areas.</p>
+</li>
+<li>
+<p><span class="bold">All the object instances of the same types</span> contained in the Work Areas: Table instances, Load Set instances, Program instances, Parameter Set instances, and Business Area instances.</p>
+</li>
+<li>
+<p><span class="bold">Underlying object definitions for the included object instances</span> that are contained within the Domain specified for export. That is, if you specify an object instance for export but not its underlying object definition, the system automatically includes the definition if it is included in the same Domain.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If the underlying object definition of an included object instance is located in a Domain outside the one you specify, the object instance cannot be imported correctly and the export log file contains a warning.</div>
+</li>
+<li>
+<p><span class="bold">Secondary objects contained in primary object definitions</span>:</p>
+<ul>
+<li>
+<p><span class="bold">Table definition</span>: Columns and Table Constraints</p>
+</li>
+<li>
+<p><span class="bold">Load Set definition</span>: Table Descriptors, Planned Outputs, and Parameter Set instances</p>
+</li>
+<li>
+<p><span class="bold">Program definition</span>: Table Descriptors, Parameter Set instances, Source Code definitions and instances, and Planned Outputs</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+A single line of source code text that has more than 32765 characters does not get exported correctly.</div>
+</li>
+<li>
+<p><span class="bold">Business Area definition</span>: Table Descriptors, Joins, and Hierarchies</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="bold">Secondary objects contained in the following primary object instance types</span>:</p>
+<ul>
+<li>
+<p><span class="bold">Table instance</span>: Table Constraints</p>
+</li>
+<li>
+<p><span class="bold">Load Set instance</span>: Mappings</p>
+</li>
+<li>
+<p><span class="bold">Program instance</span>: Mappings</p>
+</li>
+<li>
+<p><span class="bold">Business Area instance</span>: Mappings</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>In addition to the above objects, the following Oracle LSH object components are also exported:</p>
+<ul>
+<li>
+<p>Version labels</p>
+</li>
+<li>
+<p>All runnable active Execution Setups for all instances being exported, including backchain Execution Setups</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+All versions of versioned objects are included, except for Work Areas, for which only the most recent version is included. Domains and Application Areas are not versioned.</div>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="BABCEEAF"></a>
+<div id="LSHAG463" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Objects Excluded</h3>
+<p>The following objects are not exported:</p>
+<ul>
+<li>
+<p><span class="bold">All validation supporting information</span> including all supporting outputs and supporting documents.</p>
+</li>
+<li>
+<p><span class="bold">The classification hierarchy</span> assigned to any object. On import, the default of the target Oracle LSH instance's classification is used for that object type.</p>
+</li>
+<li>
+<p><span class="bold">The subtype of any object</span>. On import the default subtype of the target Oracle LSH instance is used for each object type.</p>
+</li>
+<li>
+<p><span class="bold">Checkin and checkout comments</span>.</p>
+</li>
+<li>
+<p><span class="bold">Execution and Work Area installation data</span> (jobs, outputs, data).</p>
+</li>
+<li>
+<p><span class="bold">All other object types</span>: Adapter Domains, Adapter Areas, Workflows, Report Sets, Data Marts.</p>
+</li>
+<li>
+<p><span class="bold">Other Oracle LSH metadata</span>: Users, User Groups, Roles, Subtypes, Adapter Security, Database Accounts, Remote Locations and Connections, Service Locations, Hierarchies, Terms, and Subtypes.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CHDIAIFF"></a>
+<div id="LSHAG1839" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Source Independence</h2>
+<p>The utility is designed to detect that an object is the same object even if it was imported first from one location and then from another location, and even if it has a different container object.</p>
+<p><a id="LSHAG1840"></a><span class="subhead3">Recognizing the Same Object Imported from Different Sources&nbsp;</span>The utility preserves each object's original Company ID and Object ID in an import archive table on the target database. (The Company ID is the same for all objects in a database and, with the Object ID, forms the primary key of each object.) Imported objects also receive a new Company ID and Object ID on the target database.</p>
+<p>When you export objects, the export process checks if each included object was previously imported&mdash;that is, has a record in the import archive table&mdash;and if it was, exports the object with its original Company ID and Object ID.</p>
+<p>The import script checks the Company ID and Object ID of each object being imported against the Company ID and Object ID of records in the import archive table. If it finds a match it compares the version numbers and upgrades if a newer version is being imported.</p>
+<p>For example, if you:</p>
+<ul>
+<li>
+<p>export an Application Area from Location A to Location B</p>
+</li>
+<li>
+<p>and then export the same Application Area from Location A to Location C</p>
+</li>
+<li>
+<p>and then modify one of the Programs it contains on Location C</p>
+</li>
+<li>
+<p>and then import the Application Area from Location C to Location B</p>
+</li>
+</ul>
+<p>then the import process running on Location B recognizes that the Program is the same as the existing Program originally imported from Location A, compares the version numbers of the matching Programs, and upgrades the Program in Location B to the newer version.</p>
+<p><a id="LSHAG1841"></a><span class="subhead3">Updating Namespaces&nbsp;</span>The export includes the current parent of each included object, and the parent's current parent, and so on, up to the top-level Domain. The export script checks if each parent object was itself imported&mdash;that is, has a record in the import archive table. If the current parent object was imported, it is included in the export with its original Company ID and Object ID. If the current parent was not imported, it is included using its current Company ID and Object ID. This ensures that each object is exported with its current object ownership hierarchy, even if some objects were originally imported and others were not.</p>
+<p><a id="LSHAG1842"></a><span class="subhead3">Updating Mappings&nbsp;</span>If an object is imported from a different source location than a previous version of the same object, the import process duplicates the object's source and target mappings from the most recent source in the target location.</p>
+</div>
+<!-- class="sect1" -->
+<a id="CIHICHIB"></a>
+<div id="LSHAG465" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Exporting Objects</h2>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#CHDGGJJG">Full and Partial Export</a></p>
+</li>
+<li>
+<p><a href="#CIHGAHEI">Roles and Privileges Required for Exporting</a></p>
+</li>
+<li>
+<p><a href="#CIHIAGBH">Creating the Directory and Running the Export Script</a></p>
+</li>
+<li>
+<p><a href="#BABGHAAD">Export Log File Content</a></p>
+</li>
+</ul>
+<p>The export script:</p>
+<ol>
+<li>
+<p>Checks in all the objects being exported, with the checkin comment "Checked in by IEU."</p>
+</li>
+<li>
+<p>Creates a zipped file with the name of the Domain as filename (<code dir="ltr"><span class="codeinlineitalic">domain_name</span></code>.zip). This file contains the metadata for exportable objects contained in the Domain.</p>
+</li>
+<li>
+<p>Places the log file (domain_name.log) separately in the same directory; see <a href="#BABGHAAD">"Export Log File Content"</a>.</p>
+</li>
+</ol>
+<a id="CHDGGJJG"></a>
+<div id="LSHAG1843" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Full and Partial Export</h3>
+<p>When you run the export script, you must enter a parameter value to indicate whether you want to perform a full or partial export.</p>
+<ul>
+<li>
+<p><span class="bold">Full export</span>. The export script automatically includes the Domain you specify and almost all the objects it contains (see <a href="#BABHDGAA">"Objects Included"</a> and <a href="#BABCEEAF">"Objects Excluded"</a>).</p>
+</li>
+<li>
+<p><span class="bold">Partial export</span>. You must populate a database driver table with a list of the objects to be included. The script automatically includes objects contained in the objects you specify, including objects contained in those objects and objects required for those objects to exist, as described in <a href="#CHDFIIJJ">"Populating the Driver Table"</a> and within the limits described in <a href="#BABHDGAA">"Objects Included"</a> and <a href="#BABCEEAF">"Objects Excluded"</a>.</p>
+</li>
+</ul>
+<a id="CHDFIIJJ"></a>
+<div id="LSHAG1844" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Populating the Driver Table</h4>
+<p>The driver table must include a single column that contains the object ID of objects you want to include in the export. You do not need to list every object. <span class="bold">Within the limits described</span> in <a href="#BABHDGAA">"Objects Included"</a> and <a href="#BABCEEAF">"Objects Excluded"</a>, the utility automatically includes additional objects as follows:</p>
+<ul>
+<li>
+<p><span class="bold">Domains</span>. If you enter the object ID of a Domain in the driver table, the utility exports all definitions in the Domain, all Application Areas in the Domain, and all objects in the Application Areas, including object definitions, Work Areas, object instances in the Work Areas, and the object definitions and container objects required for them to exist; see "Object Definitions and Instances, and their Containers" in the <span class="italic">Oracle Life Sciences Data Hub Application Developer's Guide</span> for further information.</p>
+</li>
+<li>
+<p><span class="bold">Application Areas</span>. If you enter the object ID of an Application Area in the driver table, the utility exports the Application Area and all objects contained in in it, including object definitions, Work Areas ,and object instances in the Work Areas, and the object definitions and container objects required for them to exist.</p>
+</li>
+<li>
+<p><span class="bold">Work Areas</span>. If you enter the object ID of a Work Area in the driver table, the utility exports all object instances in the Work Area and the object definitions and container objects required for them to exist.</p>
+</li>
+<li>
+<p><span class="bold">Object instances</span>. If you enter the object ID of an object instance in the driver table, the utility exports all objects required for the instance object to exist, including both primary and secondary definitions that are instantiated by the instances, any source and target Table instances, and all container objects above them in the object hierarchy. See the <span class="italic">Oracle Life Sciences Data Hub Application Developer's Guide</span> Appendix on "Object Ownership" for further information.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Some objects may be listed explicitly in the driver table and also included in the export because of their relation to another object. The utility ignores such duplication and exports each object only once.</div>
+</li>
+</ul>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CIHGAHEI"></a>
+<div id="LSHAG466" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Roles and Privileges Required for Exporting</h3>
+<p>When you execute the script you must supply an Oracle LSH user account that has the following privileges:</p>
+<ul>
+<li>
+<p>Modify privileges on all objects types that have to be exported</p>
+</li>
+<li>
+<p>The LSH Checkin Admin application role, if there are objects in the Domain that are checked out by a user other than this Oracle LSH application user</p>
+</li>
+</ul>
+<p>These privileges are required because the export script has to check in all checked out objects before proceeding with the rest of the export process.</p>
+<p>If the application user does not have sufficient privileges, and the export script needs to check objects in, the export fails.</p>
+<p>See <a href="secsetup.htm#BCGFDCDF">Chapter 9, "Setting Up the Security System"</a> for more information on granting roles and privileges in Oracle LSH.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CIHIAGBH"></a>
+<div id="LSHAG467" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Creating the Directory and Running the Export Script</h3>
+<p>To run the export process, do the following from the database server where you have the Oracle LSH source database instance installed:</p>
+<ol>
+<li>
+<p>Connect to the database instance as the Oracle Applications schema owner; usually <code dir="ltr">apps</code>.</p>
+</li>
+<li>
+<p>Create an OS directory where you want the output of the export script to be generated; for example, in the Oracle LSH application user's home directory.</p>
+<p>The export process creates .log and. xml files that contain Oracle LSH object metadata information that may be sensitive to your organization. Oracle recommends granting full access to the OS directory only to the Oracle user and the user who runs the export process.</p>
+<p>For example:</p>
+<pre dir="ltr">
+mkdir  /user/xyz/exp_imp
+<span class="italic"># Below command removes all rights on the directory from others</span>
+chmod o-rwx /user/xyz/exp_imp
+<span class="italic"># Assuming the user running export owns the directory and Oracle user is part of a group called orcl</span>
+chgrp orcl /user/xyz/exp_imp
+<span class="italic"># Grant read,write,execute privileges on the directory to the group</span>
+chmod g+rwx /user/xyz/exp_imp
+<span class="italic"># Grant read,write,execute privileges on the directory owner</span>
+chmod u+rwx /user/xyz/exp_imp
+</pre>
+<div class="infobox-note">
+<p class="notep1">Notes:</p>
+<ul>
+<li>
+<p>Do not include any spaces in the OS directory name.</p>
+</li>
+<li>
+<p>The OS directory must be empty before running the export script.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Map the OS directory to a database directory using the following SQL command:</p>
+<pre dir="ltr">
+CREATE DIRECTORY <span class="codeinlineitalic">database_directory_name</span> as <span class="codeinlineitalic">path_of_the_OS_directory</span>
+</pre></li>
+<li>
+<p>From the OS directory, enter the following command with appropriate values. Each parameter is described in text below.</p>
+<pre dir="ltr">
+sqlplus apps@<span class="italic">LSH_source_database_server_name</span> @<span class="italic">path_of_cdrruexport.sql</span>  <span class="italic">LSH_application_user </span><span class="italic">Database_directory_name</span> <span class="italic">Export_type Export_table  Export_column Domain_name</span>
+</pre>
+<p>The parameters are:</p>
+<ul>
+<li>
+<p><span class="bold">LSH Application Username</span>. Enter a valid Oracle LSH application user's username. The script checks in all checked out objects in this user's name. The script prompts for the password.</p>
+</li>
+<li>
+<p><span class="bold">Database Directory Name</span>. Enter the name of the database directory you created in SQL*Plus that maps to the OS directory.</p>
+</li>
+<li>
+<p><span class="bold">Export Type</span>. Enter <span class="bold">F</span> to perform a Full export or <span class="bold">P</span> to perform a partial export; see <a href="#CHDGGJJG">"Full and Partial Export"</a>.</p>
+</li>
+<li>
+<p><span class="bold">Export Table</span>. If you are performing a partial export, supply the name of the database driver table that stores the object IDs of the objects you are exporting.</p>
+<p>If you are performing a full export, enter any value; for example, <code dir="ltr">x</code>.</p>
+</li>
+<li>
+<p><span class="bold">Export Column</span>. If you are performing a partial export, supply the name of the database driver table column that stores the object IDs of the objects you are exporting.</p>
+<p>If you are performing a full export, enter any value; for example, <code dir="ltr">x</code>.</p>
+</li>
+<li>
+<p><span class="bold">Domain Name</span>. Enter the name of the Oracle LSH Domain that you want to export. The Domain name is case sensitive.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If the Domain name contains spaces or any special characters, enclose the Domain name in the escape character (\) followed by double quotes (").
+<p>For example, if the Domain's name is <code dir="ltr">Domain 1</code>, enter it as:</p>
+<pre dir="ltr">
+\"Domain 1\"
+</pre></div>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If you include an object instance in the export whose underlying definition is not contained within this Domain, the export of the object instance does not succeed. The export log file contains a warning.</div>
+</li>
+</ul>
+</li>
+<li>
+<p>The export script creates a zipped file and a log file in the database directory. Both the files have the Domain's name as the filename. Check the <span class="italic">domain_name</span>.log file for details of the export operation. See <a href="#BABGHAAD">"Export Log File Content"</a>.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The zipped filename contains underscores in the place of any spaces in the Domain name. However, regardless of the zipped filename, the Domain created in the target Oracle LSH instance has the same name as the exported Domain in the source Oracle LSH instance.</div>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BABGHAAD"></a>
+<div id="LSHAG469" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Export Log File Content</h3>
+<p>The script does not run at all if you provide incorrect usernames (database and/or application user) or an incorrect database directory name. Rerun the script with correct parameter values in that case.</p>
+<p>The export process fails if the script is unable to check in some or all exportable objects. This is usually because the Oracle LSH application user whose username you provide while running the script does not have sufficient privileges or if some other user is modifying the Domain at the same time when you run the export script. The export log lists details of objects that it cannot check in.</p>
+<p>When the export process runs successfully the log file lists the following:</p>
+<ul>
+<li>
+<p>Names of all Remote Locations and Remote Connections used by all Load Sets being exported. This is useful in manually creating the same in the target Oracle LSH instance.</p>
+</li>
+<li>
+<p>Names of Source Code CLOBs and BLOBs that the export script converted into files</p>
+</li>
+<li>
+<p>The object name, object type, version number, and container details of:</p>
+<ul>
+<li>
+<p>All objects that the export script could successfully check in and include in the export</p>
+</li>
+<li>
+<p>All objects that could not be included in the export and the reason for that.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Object instances that refer to definitions outside the Domain being exported will not work in the target Oracle LSH instance.
+<p>You must examine the log file, copy object definitions for such instances into the Domain, update the object instances to point to the copied object definitions, and rerun the export script.</p>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CIHJFIFD"></a>
+<div id="LSHAG470" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Importing Objects</h2>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#CIHFEHED">Upgrading an Existing Domain</a></p>
+</li>
+<li>
+<p><a href="#BABEDJGG">Roles and Privileges Required for Importing Domains</a></p>
+</li>
+<li>
+<p><a href="#BABFGIBC">Creating the Directory and Running the Import Script</a></p>
+</li>
+<li>
+<p><a href="#BABEAEBD">Import Log File Content</a></p>
+</li>
+<li>
+<p><a href="#CHDCABFH">Applying Security to an Imported Domain</a></p>
+</li>
+</ul>
+<p>The import script checks to determine whether a Domain with the same name as the Domain being imported already exists. If it does, it checks whether the existing Domain was also created using the import script. If the existing Domain is not an imported Domain, the import script creates a new Domain. If the existing Domain is an imported Domain, it upgrades objects that have new versions, allowing you to deploy new versions of an Oracle LSH application on the target Oracle LSH instance.</p>
+<a id="CIHFEHED"></a>
+<div id="LSHAG475" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Upgrading an Existing Domain</h3>
+<p>The import script performs the following tasks:</p>
+<ul>
+<li>
+<p>If any objects are currently checked out in the Domain on the target Oracle LSH instance, the script checks them in with the comment "Checked in by IEU".</p>
+</li>
+<li>
+<p>Checks out all objects with the comment "Checked out by IEU" and updates the versions of the object definitions and instances if it finds new versions in the export file.</p>
+</li>
+<li>
+<p>Checks in object definitions after versioning and applies the comment "Checked in by IEU."</p>
+</li>
+<li>
+<p>Creates a log file in the database directory on the target Oracle LSH instance. The log file has the same name as the Domain: domain_name_import.log. See <a href="#BABEAEBD">"Import Log File Content"</a>.</p>
+</li>
+<li>
+<p>You must check the log and decide whether or not to <code dir="ltr">commit</code> changes to the database on account of the upgrade. You can <code dir="ltr">rollback</code> the changes if the import log shows problems during upgrading.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="BABEDJGG"></a>
+<div id="LSHAG471" class="sect2">
+<h3 class="sect2">Roles and Privileges Required for Importing Domains</h3>
+<p>When you execute the script you must supply an Oracle LSH user account that has the following privileges:</p>
+<ul>
+<li>
+<p><span class="bold">LSH Checkin Admin</span> application role. This role is essential for importing or upgrading a Domain.</p>
+</li>
+<li>
+<p><span class="bold">LSH Bootstrap Admin</span> application role. This role is required only for creating new Domains, not for Domain upgrades. This role allows an application user to create the Domain and objects under it.</p>
+</li>
+<li>
+<p>Sufficient privileges to be able to install Oracle LSH Work Areas.</p>
+</li>
+</ul>
+<p>This user does not require any other privileges to run the import because object security is temporarily granted to this user as part of the import process.</p>
+<p>See <a href="secsetup.htm#BCGFDCDF">Chapter 9, "Setting Up the Security System"</a> for more information.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABFGIBC"></a>
+<div id="LSHAG472" class="sect2">
+<h3 class="sect2">Creating the Directory and Running the Import Script</h3>
+<p>To import an Oracle LSH Domain, run the following commands from the database server where your target Oracle LSH instance is installed:</p>
+<ol>
+<li>
+<p>Connect to the database instance as the Oracle Applications schema owner; usually <code dir="ltr">apps</code>.</p>
+</li>
+<li>
+<p>At least the first time you run the script, create an OS directory where you want the import log to be generated. For example, create it in the LSH application user's home directory so that it is easy to find.</p>
+<p>The import process creates a .log file that contains Oracle LSH object metadata information that may be sensitive to your organization. Oracle recommends granting full access to the OS directory only to the Oracle user and the user who runs the import process.</p>
+<p>For example:</p>
+<pre dir="ltr">
+mkdir  /user/xyz/exp_imp
+<span class="italic"># Below command removes all rights on the directory from others</span>
+chmod o-rwx /user/xyz/exp_imp
+<span class="italic"># Assuming the user running import owns the directory and Oracle user is part of a group called orcl</span>
+chgrp orcl /user/xyz/exp_imp
+<span class="italic"># Grant read,write,execute privileges on the directory to the group</span>
+chmod g+rwx /user/xyz/exp_imp
+<span class="italic"># Grant read,write,execute privileges on the directory owner</span>
+chmod u+rwx /user/xyz/exp_imp
+</pre>
+<div class="infobox-note">
+<p class="notep1">Notes:</p>
+<ul>
+<li>
+<p>Do not include any spaces in the OS directory name.</p>
+</li>
+<li>
+<p>Before running the import script, be sure that you have only the current <span class="italic">domain_name</span>.zip file in the OS directory.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Map the OS directory to a database directory using the following SQL command:</p>
+<pre dir="ltr">
+create directory <span class="italic">database_dir_name</span> as <span class="italic">path_of_the_OS_directory</span>
+</pre></li>
+<li>
+<p>Go to the OS directory you created and copy the exported <span class="italic">Domain</span> file into it.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If you have not created the exported <span class="italic">Domain</span> file yourself, you can receive it from the person who has through a download or an email&mdash;any medium that you use to transfer files.</div>
+</li>
+<li>
+<p>Run the import script as follows:</p>
+<pre dir="ltr">
+sqlplus apps@<span class="italic">LSH_target_database_server_name</span> @<span class="italic">path_of_cdrruimport.sql</span>  <span class="italic">LSH_application_user</span> <span class="italic">Database_directory_name</span> <span class="italic">Zipped_Domain_Filename</span> COMMIT_ON_NO_ERROR/MANUAL_COMMIT
+</pre></li>
+<li>
+<p>The script requires the following command line parameters in this sequence:</p>
+<ul>
+<li>
+<p><span class="bold">LSH Application Username</span>. Enter a valid Oracle LSH application user's username. The import script creates all the imported Domain's objects and performs other required operations on them, such as checking the objects in or out, as this Oracle LSH application user. The script prompts you for a password for this user, when run.</p>
+</li>
+<li>
+<p><span class="bold">Database Directory Name</span>. Enter the name of the database directory you created in SQL*Plus that maps to an OS directory where you want the import script to generate the import log file; see <a href="#CHDIIFAA">"Required Setup"</a>.</p>
+</li>
+<li>
+<p><span class="bold">Zipped Domain Filename</span>. Enter the name of the zipped export file (<span class="italic">domain_name</span>.zip) that you copied from the source Oracle LSH instance.</p>
+</li>
+<li>
+<p><span class="bold">COMMIT_ON_NO_ERROR</span>/<span class="bold">MANUAL_COMMIT</span>: You must specify one of these options to the import script:</p>
+<ul>
+<li>
+<p><span class="bold">COMMIT_ON_NO_ERROR</span>. If you want Oracle LSH to commit the imported Domain's data to the database, enter this option. Oracle LSH commits the data if there are no errors while importing.</p>
+<p>If there are errors, Oracle LSH rolls back the data and you must rerun the import script after fixing the errors.</p>
+</li>
+<li>
+<p><span class="bold">MANUAL_COMMIT</span>. Enter this option if you want to commit or roll back the data manually after examining the import log.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>The import script creates a log file in the database directory with a name in this format: domain_name_import.log. See <a href="#BABEAEBD">"Import Log File Content"</a>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BABEAEBD"></a>
+<div id="LSHAG474" class="sect2">
+<h3 class="sect2">Import Log File Content</h3>
+<p>The import log file contains the following information:</p>
+<ul>
+<li>
+<p>Any errors that the system encounters while creating objects in the target Oracle LSH instance.</p>
+</li>
+<li>
+<p>The object name, object type, version number, and container details of:</p>
+<ul>
+<li>
+<p>All objects that the import script could successfully create or upgrade during the import</p>
+</li>
+<li>
+<p>All object instances that the import script did not upgrade because the instance objects referenced object definition not contained in the imported Domain. The Import Export Utility allows preservation of user customizations through this feature. See <a href="#CHDCGEDD">"Preserving Customizations"</a>.</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<p>Remote Locations and Connections that do not exist in the target instance but are referenced by one or more Load Sets in the imported Domain. Such Load Sets may not be installable until you create the Remote Locations and Remote Connections in the target instance.</p>
+</li>
+<li>
+<p>Objects that were installable in the source instance but are noninstallable in the target Oracle LSH instance.</p>
+</li>
+<li>
+<p>Table instances that were upgradable in the source instance but are nonupgradable in the target Oracle LSH instance.</p>
+</li>
+<li>
+<p>If you ran the install script, the import log lists details of all objects successfully installed and errors and warnings, if any. In addition, the following details are logged for an install:</p>
+<ul>
+<li>
+<p>Status of all Work Areas imported.</p>
+</li>
+<li>
+<p>Submission ID, job ID, and the Execution Setup location and version number for all backchain submissions created.</p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="CHDCABFH"></a>
+<div id="LSHAG478" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Applying Security to an Imported Domain</h3>
+<p>You must assign at least one user group to a new imported Domain (not required for an <span class="italic">upgraded</span> imported Domain) to be able to view and use the other objects imported in it. You must have the LSH Bootstrap Admin Role for this operation.</p>
+<p>From the Domain's properties screen, do the following:</p>
+<ol>
+<li>
+<p>From the <span class="bold">Actions</span> drop-down list, select <span class="bold">Apply Security</span> and click <span class="bold">Go</span>. The system opens the Manage Security screen.</p>
+</li>
+<li>
+<p>Click <span class="bold">Assign Group</span>. The system opens the Search User Group screen.</p>
+</li>
+<li>
+<p>If you know the name of the user group you want to assign to the Domain, enter it in the <span class="bold">Group Name</span> field. You can also enter part of a name and the system will return all groups that include the string you enter in their name. If you leave the field blank, the system returns all user groups.</p>
+</li>
+<li>
+<p>Click <span class="bold">Go</span>. The system displays all user groups that satisfy your query.</p>
+</li>
+<li>
+<p>Select any number of user groups: click their Select check box and click <span class="bold">Apply</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Return</span> to return to the Properties screen for the Domain.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CHDJCIAG"></a>
+<div id="LSHAG1845" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Installing Objects</h2>
+<p>You can run the install script to install objects in the imported Domain after you accept an import by committing changes to the target Oracle LSH database instance. If you ran the import script using COMMIT_ON_NO_ERROR and there were no errors, the import script committed the changes to the database. If you ran the import script set to MANUAL_COMMIT you must commit the changes manually after examining the log file.</p>
+<p>The install script accepts the same parameters as the import script. You can also run the install script after upgrading a Domain.</p>
+<p>You must have the privileges required to install Oracle LSH Work Areas.</p>
+<p>The install script performs the following tasks:</p>
+<ul>
+<li>
+<p>Installs all the installable Work Areas in the imported Domain. For upgraded Domains, only Work Areas that the import script upgraded or added while upgrading, are installed.</p>
+</li>
+<li>
+<p>In all successfully installed Work Areas that include imported objects with backchain Execution Setups, the install script submits these Execution Setups and the jobs run in backchain mode.</p>
+<p>For upgraded Domains, the install script does not submit backchain Execution Setups in the following cases:</p>
+<ul>
+<li>
+<p>If the object instance in the upgraded Domain is customized (that is, refers to an object definition outside the Domain)</p>
+</li>
+<li>
+<p>If the source object instance does not contain a backchain Execution Setup but the target object instance does</p>
+</li>
+<li>
+<p>If the source instance's backchain Execution Setup has not been modified since the last import but the target instance has a new backchain Execution Setup</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Writes details of the installation process to domain_name_import.log stored in the database directory.</p>
+</li>
+</ul>
+<p>See "Installation Requirements for Each Object Type" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Application Developer's Guide</span></span> for reasons for a Work Area installation to fail.</p>
+<div id="LSHAG1846" class="sect2"><a id="sthref36"></a>
+<h3 class="sect2">Running the Installation Script</h3>
+<p>To run the install script, do the following from the target Oracle LSH database instance:</p>
+<ol>
+<li>
+<p>Connect to the database instance as the Oracle Applications schema owner; usually <code dir="ltr">apps</code>.</p>
+</li>
+<li>
+<p>Change to the OS directory you created while running the import script.</p>
+</li>
+<li>
+<p>Make sure the zipped Domain file exists in the OS directory and that it is the latest exported Domain. For a Domain upgrade, the install script first checks whether or not the exported Domain file has the same or higher version numbers for objects. Installation does not continue if the exported Domain file is not the latest.</p>
+</li>
+<li>
+<p>Run the install script from the OS directory as follows:</p>
+<pre dir="ltr">
+sqlplus apps@<span class="codeinlineitalic">LSH_target_database_server_name</span> @<span class="italic">path_of_cdrruwainstall.sql</span> <span class="italic">LSH_Application_Username</span> <span class="italic">Database_Directory_Name</span> <span class="italic">Zipped_Domain_Filename</span>
+</pre>
+<p>Enter the same values for the parameters that you did while running the import script. See <a href="#BABFGIBC">"Creating the Directory and Running the Import Script"</a>.</p>
+</li>
+<li>
+<p>The script adds the install-related messages to the import log file.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CHDCGEDD"></a>
+<div id="LSHAG1847" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Preserving Customizations</h2>
+<p>If you have made changes to imported objects in the target instance that you want to preserve, use the Move operation to move the customized object definitions into a different Domain.</p>
+<p>The Move operation keeps references intact, so that instances of each moved definition continue to point to the same definition in its new location.</p>
+<p>The import utility performs a check so that it never overwrites an object instance that points to a definition outside the imported Domain, even if the object instance is included in the import.</p>
+<p>The utility does import definitions from the source that correspond to the definitions you have moved, but they have no effect because no object instances use them.</p>
+</div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment1">
+<tr>
+<td class="cellalignment8">
+<table class="cellalignment6">
+<tr>
+<td class="cellalignment5"><a href="monsys.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment5"><a href="svcs.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2006, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment10">
+<table class="cellalignment4">
+<tr>
+<td class="cellalignment5"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment5"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment5"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment5"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

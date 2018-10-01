@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Defining Data Marts</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2018-05-25T8:22:15Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Life Sciences Data Hub Application Developer's Guide" />
+<meta name="dcterms.identifier" content="E95831-01" />
+<meta name="dcterms.isVersionOf" content="LSHDG" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2006, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="load.htm" title="Previous" type="text/html" />
+<link rel="Next" href="rsets.htm" title="Next" type="text/html" />
+<link rel="alternate" href="LSHDG.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="LSHDG.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="LSHDG.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">11/20</span> <!-- End Header -->
+<div id="LSHDG915" class="chapter"><a id="CIAFFHIJ"></a>
+<h1 class="chapter"><span class="secnum">8</span> Defining Data Marts</h1>
+<p>This section contains information on the following topics:</p>
+<ul>
+<li>
+<p><a href="#CHDCIBHF">About Data Marts</a></p>
+</li>
+<li>
+<p><a href="#CIAJCHEE">Creating a Data Mart</a></p>
+</li>
+<li>
+<p><a href="#BABIHECG">Using the Data Mart Properties Screen</a></p>
+</li>
+<li>
+<p><a href="#BABFCGJD">Defining Table Descriptors</a></p>
+</li>
+<li>
+<p><a href="#BABFHJHE">Setting Data Mart Parameter Values</a></p>
+</li>
+<li>
+<p><a href="#BABJJHHJ">About Data Mart Planned Outputs</a></p>
+</li>
+<li>
+<p><a href="#CHDDGIAB">Defining Different Types of Data Marts</a></p>
+<ul>
+<li>
+<p><a href="#CHDEFGCJ">Defining Text Data Marts</a></p>
+</li>
+<li>
+<p><a href="#CHDCIIDD">Defining SAS Data Marts</a></p>
+</li>
+<li>
+<p><a href="#CHDHHDID">Defining Oracle Export Data Marts</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#CHDHEJII">Installing Data Mart Instances</a></p>
+</li>
+<li>
+<p><a href="#CIAJFFIG">Modifying Data Marts</a></p>
+</li>
+</ul>
+<div id="LSHDG916" class="figure">
+<p class="titleinfigure"><a id="BABBCGCI"></a>Figure 8-1 Process of Creating a Data Mart Definition and Instance</p>
+<img width="631" height="375" src="img/data_mart_process.gif" alt="Description of Figure 8-1 follows" /><br />
+<a id="sthref54" href="img_text/data_mart_process.htm">Description of ''Figure 8-1 Process of Creating a Data Mart Definition and Instance''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<a id="CHDCIBHF"></a>
+<div id="LSHDG917" class="sect1">
+<h2 class="sect1">About Data Marts</h2>
+<p>A Data Mart exports all the data in a set of Oracle Life Sciences Data Hub (Oracle LSH) Table instances to one or more files for the purpose of recreating Oracle LSH data in an external system in a verifiable and reproducible manner. A Data Mart is an Oracle LSH primary executable object whose data file output is also called a Data Mart.</p>
+<p>You can use Data Marts for many purposes, including:</p>
+<ul>
+<li>
+<p>submitting data to a regulatory agency</p>
+</li>
+<li>
+<p>exporting a set of Oracle database tables to another system for data mining</p>
+</li>
+<li>
+<p>sharing data with a partner organization</p>
+</li>
+<li>
+<p>long-term data storage in text (or other) format</p>
+</li>
+</ul>
+<p>To include data from a Table instance in a Data Mart output, you create a Table Descriptor and map it to the Table instance. You can include data from any number of Table instances in a single Data Mart. As with other executables you can run a Data Mart on current data or on a snapshot, depending on settings in its Execution Setup.</p>
+<p><a id="LSHDG918"></a><span class="subhead3">Data Mart Types&nbsp;</span>You can create Data Marts in the following formats:</p>
+<ul>
+<li>
+<p>Text Export</p>
+<ul>
+<li>
+<p>Text Fixed Format</p>
+</li>
+<li>
+<p>Text Delimited Format</p>
+</li>
+</ul>
+</li>
+<li>
+<p>SAS Export</p>
+<ul>
+<li>
+<p>SAS Data Sets</p>
+</li>
+<li>
+<p>SAS Transport (CPORT or XPORT)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Oracle Export</p>
+</li>
+</ul>
+<p><a id="LSHDG919"></a><span class="subhead3">Execution&nbsp;</span>You define Execution Setups for Data Marts the same way you do for other Oracle LSH executables. See <a href="deftasks.htm#BEIGAICB">"Creating, Modifying, and Submitting Execution Setups"</a> for further information.</p>
+<p><a id="LSHDG920"></a><span class="subhead3">Reports on Data Mart Definitions and Instances&nbsp;</span>From the <span class="bold">Actions</span> drop-down list, you can generate reports that provide information on a Data Mart definition or instance; see <a href="obj_reports.htm#CIHJIAJE">Chapter 14, "System Reports"</a> for information.</p>
+</div>
+<!-- class="sect1" -->
+<a id="CIAJCHEE"></a>
+<div id="LSHDG922" class="sect1">
+<h2 class="sect1">Creating a Data Mart</h2>
+<p>When you create a Data Mart in a Work Area, you are actually creating an instance of a Data Mart definition.</p>
+<p>To create a new Data Mart instance:</p>
+<ol>
+<li>
+<p>In a Work Area, select <span class="bold">Data Mart</span> from the <span class="bold">Add</span> drop-down list.</p>
+</li>
+<li>
+<p>Click <span class="bold">Go</span>.</p>
+<p>The system displays the Create Data Mart screen.</p>
+</li>
+<li>
+<p>Choose one of the following options:</p>
+<ul>
+<li>
+<p><span class="bold">Create a new Data Mart definition and instance</span>. Choose this option if no Data Mart definition exists that can meet your needs, either as it is or with some modification.</p>
+</li>
+<li>
+<p><span class="bold">Create an instance from an existing Data Mart definition</span>. Choose this option if a Data Mart definition already exists that meets your needs.</p>
+<p>If you can adapt an existing Data Mart definition to make it fit your needs, first copy it into the current Application Area, then choose this option and select the copied definition. See <a href="deftasks.htm#CHDEHHAG">"Finding an Appropriate Definition"</a> and <a href="deftasks.htm#CHDJIJBH">"Reusing Existing Definitions"</a> for further information.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Depending on your choice, follow one of the following sets of instructions:</p>
+<ul>
+<li>
+<p><a href="#CIACDHBA">Creating a New Data Mart Definition and Instance</a></p>
+</li>
+<li>
+<p><a href="deftasks.htm#CHDGAIDJ">Creating an Instance of an Existing Definition</a></p>
+</li>
+</ul>
+</li>
+</ol>
+<a id="CIACDHBA"></a>
+<div id="LSHDG923" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Creating a New Data Mart Definition and Instance</h3>
+<p>When you select <span class="bold">Create a new Data Mart definition and instance</span> in the Create Data Mart screen, additional fields appear.</p>
+<ol>
+<li>
+<p>Enter values in the following fields:</p>
+<ul>
+<li>
+<p><span class="bold">Name</span>. See <a href="deftasks.htm#CHDBIJAH">"Naming Objects"</a>.</p>
+</li>
+<li>
+<p><span class="bold">Description</span>. See <a href="deftasks.htm#CHDIHBBC">"Creating and Using Object Descriptions"</a>.</p>
+</li>
+<li>
+<p><span class="bold">Data Mart Type</span>. The options are Oracle Export, SAS Export, and Text Export. See <a href="#CHDDGIAB">"Defining Different Types of Data Marts"</a> for further information.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>In the <span class="bold">Classification</span> section, select the following for both the definition and the instance:</p>
+<ul>
+<li>
+<p><span class="bold">Subtype</span>. Select a subtype according to your company's policies.</p>
+</li>
+<li>
+<p><span class="bold">Classification Values</span>. See <a href="deftasks.htm#CHDJADAD">"Classifying Objects and Outputs"</a> for instructions.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Apply</span> to save your work and continue defining the Data Mart.</p>
+<p>The system opens the Properties screen for the new Data Mart instance.</p>
+</li>
+<li>
+<p>See the following instructions:</p>
+<ul>
+<li>
+<p><a href="#BABFCGJD">Defining Table Descriptors</a></p>
+</li>
+<li>
+<p><a href="#CHDEADFC">Setting Data Mart Attribute Values</a></p>
+</li>
+<li>
+<p><a href="#BABFHJHE">Setting Data Mart Parameter Values</a></p>
+</li>
+<li>
+<p><a href="#BABJJHHJ">About Data Mart Planned Outputs</a></p>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BABFHEHB"></a>
+<div id="LSHDG926" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Creating an Instance of an Existing Data Mart</h3>
+<p>If you create an instance of an existing Data Mart, its Table Descriptors and Attribute and Parameter settings are already defined. See <a href="deftasks.htm#CHDGAIDJ">"Creating an Instance of an Existing Definition"</a> for instructions.</p>
+<p>After you have created the Data Mart instance, you must map the Table Descriptors to Table instances; see <a href="deftasks.htm#CIHDCCDA">"Mapping Table Descriptors to Table Instances"</a> for instructions.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BABIHECG"></a>
+<div id="LSHDG928" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Using the Data Mart Properties Screen</h2>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#BABFEIJH">Instance Properties</a></p>
+</li>
+<li>
+<p><a href="#BABEEGAH">Definition Properties</a></p>
+</li>
+<li>
+<p><a href="#BABJJAEC">Data Mart Attributes</a></p>
+</li>
+<li>
+<p><a href="#BABJBBJH">Buttons</a></p>
+</li>
+<li>
+<p><a href="deftasks.htm#CIHDAIFF">Using the Actions Drop-Down List</a></p>
+</li>
+<li>
+<p>Subtabs:</p>
+<ul>
+<li>
+<p><a href="#BABFCGJD">Defining Table Descriptors</a></p>
+</li>
+<li>
+<p><a href="#BABFHJHE">Setting Data Mart Parameter Values</a></p>
+</li>
+<li>
+<p><a href="#BABJJHHJ">About Data Mart Planned Outputs</a></p>
+</li>
+<li>
+<p><a href="deftasks.htm#BEIIGDGF">Viewing Jobs</a></p>
+</li>
+</ul>
+</li>
+</ul>
+<p>See also <a href="#BABBCGCI">Figure 8-1, "Process of Creating a Data Mart Definition and Instance"</a>.</p>
+<p>See <a href="#CIAJFFIG">"Modifying Data Marts"</a> for information on modifying Data Marts.</p>
+<p>If you are working in a Work Area, you see the properties of both the Data Mart instance and the Data Mart definition it references. If you are working directly on the definition in an Application Area or Domain, you see only the properties of the definition.</p>
+<a id="BABFEIJH"></a>
+<div id="LSHDG929" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Instance Properties</h3>
+<p>You can see the following instance properties:</p>
+<p><a id="LSHDG930"></a><span class="subhead3">Name&nbsp;</span>You can click <span class="bold">Update</span> and modify the name. See <a href="deftasks.htm#CHDBIJAH">"Naming Objects"</a> for further information.</p>
+<p><a id="LSHDG931"></a><span class="subhead3">Description&nbsp;</span>You can click <span class="bold">Update</span> and modify the description. See <a href="deftasks.htm#CHDIHBBC">"Creating and Using Object Descriptions"</a> for further information.</p>
+<p><a id="BABCGAHE"></a><a id="LSHDG932"></a><span class="subhead3">Definition Source&nbsp;</span>This field specifies the Data Mart definition to which this Data Mart instance points. See <a href="#BABEFBBI">"Definition Source"</a>.</p>
+<p>You can upgrade to a new version of the same definition. See <a href="deftasks.htm#BEIFAIDB">"Upgrading to a Different Definition Version from an Instance"</a>.</p>
+<p><a id="LSHDG933"></a><span class="subhead3">Validation Status&nbsp;</span>This field displays the current validation status of the Data Mart instance. If you have the necessary privileges, you can change the validation status by selecting <span class="bold">Validation Supporting Information</span> from the <span class="bold">Actions</span> drop-down list. See <a href="deftasks.htm#BABGFFBG">"Validating Objects and Outputs"</a> for further information.</p>
+<p><a id="LSHDG934"></a><span class="subhead3">Status&nbsp;</span>This field displays the installable status of the Data Mart: Installable or Non Installable. See <a href="status.htm#BABHIEJG">Appendix A, "Installation Requirements for Each Object Type"</a>.</p>
+<p><a id="LSHDG935"></a><span class="subhead3">Version&nbsp;</span>This field displays the current version number of the Data Mart instance.</p>
+<p><a id="LSHDG936"></a><span class="subhead3">Version Label&nbsp;</span>This field displays the version label, if any, for the current Data Mart instance version.</p>
+<p>For further information on object versions, see <a href="deftasks.htm#BEIBHCFH">"Understanding Object Versions and Checkin/Checkout"</a>.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABEEGAH"></a>
+<div id="LSHDG937" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Definition Properties</h3>
+<p><a id="LSHDG938"></a><span class="subhead3">Checked Out Status&nbsp;</span>This field displays the status of the definition: either Checked Out or Checked In. You must check out the definition to modify Table Descriptors, Parameters, or Planned Outputs. However, you can change Table Descriptor mappings without checking out the definition. See <a href="deftasks.htm#BEIBHCFH">"Understanding Object Versions and Checkin/Checkout"</a> for further information.</p>
+<p><a id="LSHDG939"></a><span class="subhead3">Latest Version&nbsp;</span>If set to <span class="bold">Yes</span>, this Data Mart instance is pointing to the latest version of the Data Mart definition. If set to <span class="bold">No</span>, this Data Mart instance is pointing to an older version of the Data Mart definition.</p>
+<p><a id="LSHDG940"></a><span class="subhead3">Checked Out By&nbsp;</span>This field displays the name of the person who has the Data Mart definition checked out. See <a href="deftasks.htm#BEIBHCFH">"Understanding Object Versions and Checkin/Checkout"</a> for further information.</p>
+<p><a id="LSHDG941"></a><span class="subhead3">Version Label&nbsp;</span>This field displays the version label, if any, for this definition version.</p>
+<p><a id="LSHDG942"></a><span class="subhead3">Data Mart Type&nbsp;</span>This field displays this Data Mart definition's type: Text Export, SAS Export, or Oracle Export. See <a href="#CHDDGIAB">Defining Different Types of Data Marts</a>.</p>
+<p><a id="LSHDG943"></a><span class="subhead3">Validation Status&nbsp;</span>This field displays the current validation status of the Data Mart definition. If you are working directly in the definition in an Application Area or Domain and you have the necessary privileges, you can change the validation status by selecting <span class="bold">Validation Supporting Information</span> from the <span class="bold">Actions</span> drop-down list. If you are working in an instance of the Data Mart in a Work Area, and you want to change the validation status of the definition, you must go to the definition. See <a href="deftasks.htm#BABGFFBG">"Validating Objects and Outputs"</a> for further information.</p>
+<p><a id="LSHDG944"></a><span class="subhead3">Status&nbsp;</span>This field displays the installable status of the Data Mart: Installable or Non Installable. See <a href="status.htm#BABHIEJG">Appendix A, "Installation Requirements for Each Object Type"</a>.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABJJAEC"></a>
+<div id="LSHDG945" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Data Mart Attributes</h3>
+<p><a id="LSHDG946"></a><span class="subhead3">Export File Name&nbsp;</span>This attribute applies to all Data Mart types. It is the name of the file where the output of the Data Mart gets stored. This is the only attribute for SAS and Oracle Export types of Data Marts. See <a href="#CHDBEJDE">"SAS Data Mart Attribute"</a>, and <a href="#CHDHFFEA">"Oracle Export Data Mart Attribute"</a>. Also see <a href="#CHDIDAAD">"Text Data Mart Attributes"</a>.</p>
+<p><a id="LSHDG947"></a><span class="subhead3">Mode&nbsp;</span>This attribute applies only to Text Data Marts. It is the mode used to create the text export file: <span class="bold">Fixed</span> or <span class="bold">Delimited</span>. See <a href="#CHDJDJDB">"About Text Data Marts"</a> for an explanation of the two modes.</p>
+<p><a id="LSHDG948"></a><span class="subhead3">File Name Extension&nbsp;</span>This attribute applies only to Text Data Marts. A Text Data Mart output may be of <span class="bold">.txt</span> (Fixed mode) or <span class="bold">.csv</span> (Delimited mode) type. See <a href="#CHDIDAAD">"Text Data Mart Attributes"</a>.</p>
+<a id="CHDEADFC"></a>
+<div id="LSHDG949" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Setting Data Mart Attribute Values</h4>
+<p>You cannot add or remove attributes or Parameters. They are predefined for each type of Data Mart. You can change their values in the Data Mart definition, but not in the Execution Setup.</p>
+<p>To change attribute values:</p>
+<ol>
+<li>
+<p>Click the <span class="bold">Update</span> button in the Data Mart Attributes section of the screen.</p>
+</li>
+<li>
+<p>Modify attribute values as necessary. Most attributes have an allowed list of values. Use the Search icon to select one.</p>
+</li>
+<li>
+<p>Click <span class="bold">Apply</span>.</p>
+</li>
+</ol>
+<p>For information on the attributes and Parameters specific to each type of Data Mart, see:</p>
+<ul>
+<li>
+<p><a href="#CHDEFGCJ">Defining Text Data Marts</a></p>
+</li>
+<li>
+<p><a href="#CHDCIIDD">Defining SAS Data Marts</a></p>
+</li>
+<li>
+<p><a href="#CHDHHDID">Defining Oracle Export Data Marts</a></p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BABJBBJH"></a>
+<div id="LSHDG950" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Buttons</h3>
+<p>From a Data Mart instance in a Work Area, you can use the following buttons:</p>
+<p><a id="LSHDG1991"></a><span class="subhead3">Install&nbsp;</span>Click <span class="bold">Install</span> to install the Data Mart instance, including any mapped source Table instances in the same Work Area; see <a href="#CHDHEJII">"Installing Data Mart Instances"</a>. For a list of reasons a Data Mart instance may not be installable, see <a href="status.htm#BABHIEJG">Appendix A, "Installation Requirements for Each Object Type"</a>.</p>
+<p><a id="LSHDG951"></a><span class="subhead3">Submit&nbsp;</span>Click <span class="bold">Submit</span> to run the Data Mart instance. Before you can run the Data Mart, you must install it and create an Execution Setup for it (select <span class="bold">Execution Setups</span> from the <span class="bold">Actions</span> drop-down list).</p>
+<p><a id="LSHDG952"></a><span class="subhead3">Update&nbsp;</span>Click <span class="bold">Update</span> to modify the Data Mart instance properties. See <a href="#BABJECAG">"Modifying Data Mart Instance Properties"</a>. You can also edit Data Mart Attributes by clicking the <span class="bold">Update</span> button in the Data Mart Attributes section of the screen. See <a href="#CHDEADFC">"Setting Data Mart Attribute Values"</a>.</p>
+<p><a id="LSHDG953"></a><span class="subhead3">Check In/Out and Uncheck&nbsp;</span>Click these buttons to check out, check in, or uncheck the Data Mart definition. Different buttons are displayed in the Data Mart Definition Properties section depending on the Checked Out Status and whether or not you are the person who has the definition checked out. If someone else has checked out the definition, you cannot check it in or uncheck it. The username of the person who has checked it out is displayed. See <a href="deftasks.htm#BEIBHCFH">"Understanding Object Versions and Checkin/Checkout"</a>.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BABFCGJD"></a>
+<div id="LSHDG955" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Defining Table Descriptors</h2>
+<p>For all Data Mart types, you specify the data to include in the output file by adding one or more source Table Descriptors to the Data Mart and mapping each one to a Table instance whose data you want to export to the file. Depending on the type of Data Mart, the system may create one file per Table Descriptor or one file for the Data Mart as a whole; see <a href="#CHDDGIAB">"Defining Different Types of Data Marts"</a>.</p>
+<p>Data Marts can have only source Table Descriptors. They write to files, not tables.</p>
+<p>Oracle LSH automatically creates the Planned Outputs for a Data Mart based on the Data Mart type and on the source Table Descriptors you specify. If you do not want to include all the Columns in a source Table instance in the Data Mart output, delete the unnecessary Columns from the Table Descriptor mapped to that Table instance.</p>
+<p>For instructions, see <a href="deftasks.htm#BABDFGJE">"About Table Descriptors"</a> and <a href="deftasks.htm#CIHDCCDA">"Mapping Table Descriptors to Table Instances"</a>.</p>
+</div>
+<!-- class="sect1" -->
+<a id="BABFHJHE"></a>
+<div id="LSHDG956" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Setting Data Mart Parameter Values</h2>
+<p>You cannot add or remove Parameters. They are predefined for each type of Data Mart. You can change their value and other settings either in the Data Mart definition, in the Execution Setup definition, or allow the user to set their value in the Execution Setup at runtime.</p>
+<p>To change Parameter values and other settings in the Data Mart definition:</p>
+<ol>
+<li>
+<p>Check out the Data Mart definition if it is not already checked out.</p>
+</li>
+<li>
+<p>In the Parameters subtab, click the hyperlink in the <span class="bold">Name</span> column of the Parameter you want to modify.</p>
+</li>
+<li>
+<p>Click <span class="bold">Update</span>.</p>
+</li>
+<li>
+<p>Modify the following attribute values if necessary:</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Because these are predefined and required Parameters you should not modify any attributes other than the following or the Data Mart may not function properly.</div>
+<ul>
+<li>
+<p><span class="bold">Read Only</span>. To prevent users from changing the value of this Parameter at runtime, check Read Only. To allow users to change the value at runtime, leave unchecked.</p>
+</li>
+<li>
+<p><span class="bold">Prompt</span>. The prompt is the label displayed for the Parameter in the Execution Setup. You can change it if you want to.</p>
+</li>
+<li>
+<p><span class="bold">Default Value</span>. You can change the default value in the Parameters List of Values. If you also make the Parameter Read Only, the default value becomes the value used at runtime.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Apply</span>.</p>
+</li>
+</ol>
+<p>For information on the attributes and Parameters specific to each type of Data Mart, see:</p>
+<ul>
+<li>
+<p><a href="#CHDJAGCA">Text Data Mart Parameters</a></p>
+</li>
+<li>
+<p><a href="#CHDJDHCC">SAS Data Mart Parameters</a></p>
+</li>
+<li>
+<p><a href="#BABCIDCJ">Oracle Export Data Mart Parameters</a></p>
+</li>
+</ul>
+</div>
+<!-- class="sect1" -->
+<a id="BABJJHHJ"></a>
+<div id="LSHDG957" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">About Data Mart Planned Outputs</h2>
+<p>When you first create a Data Mart definition, the system creates one Planned Output for the .log file and one or more others, depending on the Data Mart type. The Filename attribute value determines the output file names. The system adds the extension appropriate for the Data Mart type.</p>
+<p>In addition, for SAS Dataset mode and Text Data Marts, when you add a Table Descriptor to the Data Mart, the system creates a Planned Output whose file name is the Table Descriptor name (in lowercase) plus the extension appropriate for the mode:.sas7bdat or, for Text Data Marts, .txt or .csv.</p>
+<p>You can modify the classification of a Planned Output, which affects the classification of the corresponding actual Data Mart output; see <a href="deftasks.htm#CHDCBGEI">"Classifying Outputs"</a>.</p>
+<p>At runtime the system creates only the outputs appropriate for the mode and other settings. See:</p>
+<ul>
+<li>
+<p><a href="#CHDEGDIG">Text Data Mart Planned Outputs</a></p>
+</li>
+<li>
+<p><a href="#CHDIFIGH">"SAS Data Mart Planned Outputs"</a></p>
+</li>
+<li>
+<p><a href="#CHDJJDFH">Oracle Export Data Mart Planned Outputs</a></p>
+</li>
+</ul>
+</div>
+<!-- class="sect1" -->
+<a id="CHDDGIAB"></a>
+<div id="LSHDG958" class="sect1">
+<h2 class="sect1">Defining Different Types of Data Marts</h2>
+<p>Oracle LSH automatically creates Attributes, Parameters, and Planned Outputs for Data Marts based on the Data Mart type.</p>
+<p>This section includes information on the Parameters and Planned Outputs for each Data Mart type:</p>
+<ul>
+<li>
+<p><a href="#CHDEFGCJ">Defining Text Data Marts</a></p>
+</li>
+<li>
+<p><a href="#CHDCIIDD">Defining SAS Data Marts</a></p>
+</li>
+<li>
+<p><a href="#CHDHHDID">Defining Oracle Export Data Marts</a></p>
+</li>
+</ul>
+<a id="CHDEFGCJ"></a>
+<div id="LSHDG959" class="sect2">
+<h3 class="sect2">Defining Text Data Marts</h3>
+<p>This section includes the following topics:</p>
+<ul>
+<li>
+<p><a href="#CHDJDJDB">About Text Data Marts</a></p>
+</li>
+<li>
+<p><a href="#CHDIDAAD">Text Data Mart Attributes</a></p>
+</li>
+<li>
+<p><a href="#CHDJAGCA">Text Data Mart Parameters</a></p>
+</li>
+<li>
+<p><a href="#CHDEGDIG">Text Data Mart Planned Outputs</a></p>
+</li>
+</ul>
+<a id="CHDJDJDB"></a>
+<div id="LSHDG960" class="sect3">
+<h4 class="sect3">About Text Data Marts</h4>
+<p>There are two modes of Text-type Data Marts: Fixed and Delimited. Both modes produce one file for each Table Descriptor, named <span class="italic">Data_Mart_name</span>.txt or .csv. You can combine all the files in a single .zip file; see <a href="#CHDFJAHD">"Zip Result Flag"</a>.</p>
+<p>Fixed-format Data Marts use more space than delimited-format Data Marts but result in faster performance.</p>
+<p><a id="LSHDG961"></a><span class="subhead3">Fixed Format Text Data Marts&nbsp;</span>For a fixed-format Data Mart, Oracle LSH automatically uses the length defined for each Column of the Table Descriptor to determine the number of characters to dedicate to each column value in the output file.</p>
+<ul>
+<li>
+<p>For Columns of data type Varchar2, the number of characters dedicated to a column in the output file equals the defined Column length.</p>
+</li>
+<li>
+<p>For Columns of data type Number, the system uses the Column length plus one character for the plus (+) or minus (-) sign and, if the Column's number is defined as having precision, an additional character for the decimal point (or other decimal marker).</p>
+</li>
+<li>
+<p>For Columns of data type Date, the system uses the date format string that is part of the Column definition or, if no format string is defined, uses 20 characters to accommodate the default format, DD-MON-YYYY/HH24:MI:SS.</p>
+</li>
+</ul>
+<p>When the system generates the file, it inserts the actual value for each row and then adds the number of spaces necessary (if any) to reach the number of characters dedicated to that Column. At the end of each record, the system inserts the carriage return appropriate for the operating system.</p>
+<p><a id="LSHDG962"></a><span class="subhead3">Delimited Format Text Data Marts&nbsp;</span>For a delimited-format Data Mart, Oracle LSH inserts a character as a delimiter after every column value for every record (except the last) as well as a carriage return at the end of each record. You must specify the character to be used as the delimiter. In addition, you can specify a different character to be used as an enclosing character around each character and date column value, and specify whether or not the system should actually use the enclosing character; see <a href="#CHDJAGCA">"Text Data Mart Parameters"</a> for further information.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CHDIDAAD"></a>
+<div id="LSHDG963" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Text Data Mart Attributes</h4>
+<p>Text Data Marts have the following predefined attributes. To change their values, click <span class="bold">Update</span> in the Attribute section of the screen.</p>
+<p><a id="LSHDG964"></a><span class="subhead3">Export File Name&nbsp;</span>Enter the name you want to give the zipped file that holds the individual text files. The default value is <code dir="ltr">text_dm.zip</code>. You must enter lowercase text. If you remove the .zip as part of the value, the system adds it.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The system produces this zipped file only if at runtime the value of the Zip Result Flag Parameter is either Zip or Both.</div>
+<p><a id="LSHDG965"></a><span class="subhead3">Mode&nbsp;</span>Click the Search icon and then select either <span class="bold">Fixed</span> or <span class="bold">Delimited</span>. See <a href="#CHDJDJDB">"About Text Data Marts"</a> for an explanation of the two modes. The default value is Delimited.</p>
+<p><a id="LSHDG966"></a><span class="subhead3">File Name Extension&nbsp;</span>Click the Search icon then select an extension for the file that will contain the actual data. Select <span class="bold">.txt</span> for fixed mode Data Marts and <span class="bold">.csv</span> for delimited mode.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CHDJAGCA"></a>
+<div id="LSHDG967" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Text Data Mart Parameters</h4>
+<p>Oracle LSH automatically creates Parameters for Text-type Data Marts. For information on how you can modify them, see <a href="#BABFHJHE">"Setting Data Mart Parameter Values"</a>.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Because these are predefined, required Parameters you should change only the default value, Read Only setting, or Prompt for each Parameter or the Data Mart may not function properly; see <a href="#BABFHJHE">"Setting Data Mart Parameter Values"</a>.</div>
+<p><a id="CHDFJAHD"></a><a id="LSHDG968"></a><span class="subhead3">Zip Result Flag&nbsp;</span>Select one of the following values as the default:</p>
+<ul>
+<li>
+<p><span class="bold">No</span>. If set to <span class="bold">No</span>, the system does not generate a zipped file. The Data Mart output consists of one text file for each Table Descriptor and the log file. The system disregards the defined Export Filename.</p>
+</li>
+<li>
+<p><span class="bold">Zip</span>. If set to <span class="bold">Zip</span>, the system generates a single zipped file that includes the text files generated for each Table Descriptor and the log file.</p>
+</li>
+<li>
+<p><span class="bold">Both</span>. If set to <span class="bold">Both</span>, the system generates a text file for each Table Descriptor, creates a zipped file that contains all the text files and the log file, and also leaves a copy of each text file and the log file outside the zipped file.</p>
+</li>
+</ul>
+<p>The default value is <span class="bold">Zip</span>.</p>
+<p><a id="LSHDG969"></a><span class="subhead3">FirstRow Desc&nbsp;</span>If you are creating a fixed-format Text Data Mart, you must enter a value for this Parameter, which determines the way the Data Mart handles the first row for each Table Descriptor.</p>
+<ul>
+<li>
+<p><span class="bold">Yes</span>. If set to <span class="bold">Yes</span>, the system inserts the Column names as the first row in the text file for each Table Descriptor. If the Column name is too long for its length, the system truncates it. If it is a different format (for example, a Column name in text for a data type Number Column), the system inserts a warning in the Data Mart log file.</p>
+</li>
+<li>
+<p><span class="bold">No</span>. If set to <span class="bold">No</span>, the system starts the file with the data of the first record, not the Column names.</p>
+</li>
+</ul>
+<p>The system ignores this value for delimited text Data Marts.</p>
+<p><a id="LSHDG970"></a><span class="subhead3">Operating System&nbsp;</span>Select your operating system: <span class="bold">UNIX</span> or <span class="bold">MS Windows</span>. The system inserts the appropriate carriage return for the operating system at the end of every record. If you are using Linux, select UNIX. The default value is UNIX.</p>
+<p class="subhead2"><a id="LSHDG971"></a>Delimited-Format Text Data Mart Parameters</p>
+<p>If you are creating a Delimited-format Text Data Mart, the following Parameters must each have a value. The system ignores these values for fixed-format text Data Marts. See <a href="#CHDBIHIJ">Example 8-1, "Delimited Text Export Data Mart with Separator Character Only"</a> and <a href="#CHDBCIJG">Example 8-2, "Delimited Text Export Data Mart with Separator and Enclosed Characters"</a> for further information.</p>
+<p><a id="LSHDG972"></a><span class="subhead3">Separator Character&nbsp;</span>The system appends the separator character (delimiter) to every column value of every row (except the last value, where there is a carriage return instead) in order to clarify where one value ends and the next one begins.</p>
+<p>The separator character should not appear as part of any column value of any record. The default value is a comma (,). You can enter any two characters. For example, to specify tab as the separator character, enter <code dir="ltr">\t</code>.</p>
+<p><a id="LSHDG973"></a><span class="subhead3">Enclosing Character&nbsp;</span>The system prepends and appends the enclosing character to every character and date column value of every record. The character should be one that does not appear as part of any column value of any record. The default value is a double quotation mark (").</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The delimiter character and the enclosing character must be different. If they are the same, the Data Mart execution will fail.</div>
+<p><a id="LSHDG974"></a><span class="subhead3">Use Enclosing Character?&nbsp;</span> Select <span class="bold">Yes</span> or <span class="bold">No</span>.</p>
+<ul>
+<li>
+<p><span class="bold">Yes</span>. If set to <span class="bold">Yes</span>, the system encloses every column value with the character you specify in the Enclosing Character Parameter.</p>
+</li>
+<li>
+<p><span class="bold">No</span>. If set to <span class="bold">No</span>, the system does not use the enclosing character.</p>
+</li>
+</ul>
+<div id="LSHDG975" class="example">
+<p class="titleinexample"><a id="CHDBIHIJ"></a>Example 8-1 Delimited Text Export Data Mart with Separator Character Only</p>
+<p>If your Table Descriptor has Columns Patient ID, Patient Initials, and Date of Birth, the separator character was a comma, and the date format was DDMMYYYY, the first two records might look like this:</p>
+<p><code dir="ltr">54602,EKP,04081949</code></p>
+<p><code dir="ltr">66781,BAH,22011955</code></p>
+</div>
+<!-- class="example" -->
+<div id="LSHDG976" class="example">
+<p class="titleinexample"><a id="CHDBCIJG"></a>Example 8-2 Delimited Text Export Data Mart with Separator and Enclosed Characters</p>
+<p>If a single quotation mark (') were the enclosing character, the same two records would look like this:</p>
+<p><code dir="ltr">'54602','EKP','04081949'</code></p>
+<p><code dir="ltr">'66781','BAH','22011955'</code></p>
+</div>
+<!-- class="example" --></div>
+<!-- class="sect3" -->
+<a id="CHDEGDIG"></a>
+<div id="LSHDG977" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Text Data Mart Planned Outputs</h4>
+<p>Oracle LSH creates one Planned Output for each Table Descriptor in the Data Mart definition. At runtime, the system generates one .txt or .csv file for each Planned Output. The file type is determined by the value of the File Name Extension attribute.</p>
+<p>Depending on the value of the <a href="#CHDFJAHD">Zip Result Flag</a> Parameter, the system may also create a Planned Output for a zipped file to contain all the files. The file name for this output is <span class="italic">filename_attribute_value</span>.zip.</p>
+<p>The system also creates a Planned Output for the log file, named <span class="italic">text_dm</span>.log.</p>
+<p>You can classify a Planned Output in order to classify the actual output when it is generated; see <a href="deftasks.htm#CHDCBGEI">"Classifying Outputs"</a> for further information.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CHDCIIDD"></a>
+<div id="LSHDG979" class="sect2">
+<h3 class="sect2">Defining SAS Data Marts</h3>
+<p>This section includes the following topics:</p>
+<ul>
+<li>
+<p><a href="#CHDIIBHD">About SAS Data Marts</a></p>
+</li>
+<li>
+<p><a href="#CHDBEJDE">SAS Data Mart Attribute</a></p>
+</li>
+<li>
+<p><a href="#CHDJDHCC">SAS Data Mart Parameters</a></p>
+</li>
+<li>
+<p><a href="#CHDIFIGH">SAS Data Mart Planned Outputs</a></p>
+</li>
+</ul>
+<a id="CHDIIBHD"></a>
+<div id="LSHDG980" class="sect3">
+<h4 class="sect3">About SAS Data Marts</h4>
+<p>Oracle LSH supports the following types, or modes, of SAS Data Marts, when you have purchased and installed SAS with Oracle LSH:</p>
+<p><a id="LSHDG981"></a><span class="subhead3">SAS CPORT&nbsp;</span>A SAS CPORT Data Mart consists of a single .cport file containing data from all the Table instances mapped to the Data Mart's Table Descriptors.</p>
+<p><a id="LSHDG982"></a><span class="subhead3">SAS XPORT&nbsp;</span>A SAS XPORT Data Mart also consists of a single .xpt file containing data from all the Table instances mapped to the Data Mart's Table Descriptors.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+For SAS XPORT format's compatibility with SAS v6, Oracle LSH truncates long Table Column names (variables in a SAS data set) to 8 characters. Also, because of a limitation in SAS v6, you must ensure that Table instances mapped to a SAS XPORT Data Mart do not contain character data longer than 200 characters, to prevent the Data Mart's execution from failing.</div>
+<p><a id="LSHDG983"></a><span class="subhead3">SAS Data Sets&nbsp;</span>A SAS Dataset Data Mart includes one .sas7bdat file for each Table Descriptor. If you set the <span class="bold">Zip Results</span> Parameter to <span class="bold">Zip</span>, all the .sas7bdat files and the .log file are included in a single .zip file.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CHDBEJDE"></a>
+<div id="LSHDG984" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">SAS Data Mart Attribute</h4>
+<p>SAS Data Marts have one attribute: <span class="bold">Filename</span>. Enter a descriptive name. The system gives this name to the Planned Output and to the actual Data Mart output file. Do not add a file extension.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+This attribute must have a value. The Data Mart is not installable without a file name.</div>
+</div>
+<!-- class="sect3" -->
+<a id="CHDJDHCC"></a>
+<div id="LSHDG985" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">SAS Data Mart Parameters</h4>
+<p>Oracle LSH automatically creates Parameters for SAS Data Marts. You can change the values of the following required Parameters only in the Data Mart definition:</p>
+<p><a id="LSHDG986"></a><span class="subhead3">Mode &nbsp;</span>Select the mode that corresponds to the type of output you need: CPORT, XPORT, or Dataset. The default value is CPORT.</p>
+<p><a id="CHDJHCJC"></a><a id="LSHDG987"></a><span class="subhead3">Zip Results&nbsp;</span>The Zip Results Parameter setting has an effect only for SAS Data Marts of the Dataset mode. CPORT and XPORT Data Marts cannot be zipped.</p>
+<p>For SAS Dataset Data Marts, select one of the following values:</p>
+<ul>
+<li>
+<p><span class="bold">No</span>. If set to <span class="bold">No</span>, the system does not generate a zipped file. The Data Mart output consists of one sas7bdat file for each Table Descriptor, plus the log file.</p>
+</li>
+<li>
+<p><span class="bold">Zip</span>. If set to <span class="bold">Zip</span>, the system generates a zipped file that includes the sas7bdat file generated for each Table Descriptor and the log file. The system also generates and uploads the individual SAS data sets for each Table Descriptor as separate outputs.</p>
+</li>
+</ul>
+<p>The default value is <span class="bold">Zip</span>.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CHDIFIGH"></a>
+<div id="LSHDG988" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">SAS Data Mart Planned Outputs</h4>
+<p>Oracle LSH includes a predefined Planned Output for the .log file and for each SAS Data Mart mode. At runtime the system creates only the outputs appropriate for the mode and, in the case of Dataset Data Marts, the Zip Results Parameter. The names and file names for these Planned Outputs are:</p>
+<ul>
+<li>
+<p><span class="bold">CPORT</span>: SAS DM.cport (name), <span class="italic">filename_attribute_value</span>.cport (file name)</p>
+</li>
+<li>
+<p><span class="bold">XPORT</span>: SAS DM.xpt (name), <span class="italic">filename_attribute_value</span>.xpt (file name)</p>
+</li>
+<li>
+<p><span class="bold">Zipped Dataset</span>. SAS DM.zip (name), <span class="italic">filename_attribute_value</span>.zip (file name)</p>
+</li>
+<li>
+<p><span class="bold">Dataset</span> (zipped or not): Both the name and filename are <span class="italic">table_descriptor_name</span>.sas7bdat.</p>
+</li>
+</ul>
+<p>All file names are in lowercase.</p>
+<p>You can classify a Planned Output in order to classify the actual output when it is generated; see <a href="deftasks.htm#CHDCBGEI">"Classifying Outputs"</a> for further information.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CHDHHDID"></a>
+<div id="LSHDG990" class="sect2">
+<h3 class="sect2">Defining Oracle Export Data Marts</h3>
+<p>This section includes the following topics:</p>
+<ul>
+<li>
+<p><a href="#CHDEBGJE">About Oracle Export Data Marts</a></p>
+</li>
+<li>
+<p><a href="#CHDHFFEA">Oracle Export Data Mart Attribute</a></p>
+</li>
+<li>
+<p><a href="#BABCIDCJ">Oracle Export Data Mart Parameters</a></p>
+</li>
+<li>
+<p><a href="#CHDJJDFH">Oracle Export Data Mart Planned Outputs</a></p>
+</li>
+</ul>
+<a id="CHDEBGJE"></a>
+<div id="LSHDG991" class="sect3">
+<h4 class="sect3">About Oracle Export Data Marts</h4>
+<p>Oracle LSH generates a command file for the Oracle Export utility to produce (in Table mode) a single Oracle Export file containing the data and metadata of all the Table instances mapped to the Table Descriptors of the Data Mart. The names of the export tables are the same as their corresponding Table Descriptors.</p>
+<p>You can send Oracle Export Data Marts only to another Oracle database. To import its data, the external Oracle database must use the Oracle Import utility.</p>
+<p>The Oracle Export file created by the Data Mart holds the tables in alphabetical order.</p>
+<p>See <span class="italic">Oracle&reg; Database Utilities 11g Release 2 (11.2)</span>, at <code dir="ltr"><a href="http://download.oracle.com/docs/cd/E11882_01/server.112/e16536.pdf">http://download.oracle.com/docs/cd/E11882_01/server.112/e16536.pdf</a><a href=""></a></code>.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CHDHFFEA"></a>
+<div id="LSHDG992" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Oracle Export Data Mart Attribute</h4>
+<p>There is only one attribute: the file name of the actual Data Mart output. The default name is: oracle_export_dm.dmp. You can change this to a more meaningful name by clicking <span class="bold">Update</span> and entering the name you prefer. If you remove the .dmp file extension, the system adds it.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BABCIDCJ"></a>
+<div id="LSHDG993" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Oracle Export Data Mart Parameters</h4>
+<p>The Oracle Export Utility requires the following parameters. More information is available in the Oracle Export Utility documentation.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Because these are predefined, required Parameters you should change only the default value, Read Only setting, or Prompt for each Parameter or the Data Mart may not function properly; see <a href="#BABFHJHE">"Setting Data Mart Parameter Values"</a>.</div>
+<p><a id="LSHDG994"></a><span class="subhead3">Compress&nbsp;</span>Should Oracle Export export data into a single extent? The default value is Y.</p>
+<p><a id="LSHDG995"></a><span class="subhead3">Statistics&nbsp;</span>Specifies the type of database optimizer statistics to generate when the exported data is imported. Options are ESTIMATE, COMPUTE, and NONE. The default value is ESTIMATE.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CHDJJDFH"></a>
+<div id="LSHDG996" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Oracle Export Data Mart Planned Outputs</h4>
+<p>For Oracle Export Data Marts, the system creates one Planned Output for the whole Data Mart to contain data from all Table instances mapped to the Data Mart instance's Table Descriptors. The Planned Output name is always Oracle Export DM Export File. The file name is <span class="italic">filename_attribute_value</span>.dmp.</p>
+<p>The system also creates a Planned Output for the log file. All Oracle Export log files have the same name: oracle_export.log.</p>
+<p>You can classify a Planned Output in order to classify the actual output when it is generated; see <a href="deftasks.htm#CHDCBGEI">"Classifying Outputs"</a> for further information.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CHDHEJII"></a>
+<div id="LSHDG1992" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Installing Data Mart Instances</h2>
+<p>You can install a Data Mart instance directly from its Properties screen, using the Install button, or in its Work Area (see <a href="wa_install.htm#CHDGCFAF">"Installing a Work Area and Its Objects"</a>).</p>
+<p>When you install a Data Mart instance using the <span class="bold">Install</span> button on its Properties screen:</p>
+<ul>
+<li>
+<p>The system checks in the Data Mart instance and definition and also the Table instances in the current Work Area to which the instance is mapped.</p>
+</li>
+<li>
+<p>The system attempts to install the Data Mart instance and the Table instances to which it is mapped. The system displays a success or error message. If the installation fails, the error message displays the name of any objects that were not installable.</p>
+</li>
+</ul>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If the Data Mart definition or any of the Table instances to which the Data Mart is mapped is not installable, the system cannot install the Data Mart instance. See <a href="status.htm#BABHIEJG">Appendix A, "Installation Requirements for Each Object Type"</a> for the reasons these objects may not be installable.</div>
+<p><a id="LSHDG1993"></a><span class="subhead3">Log File&nbsp;</span>To see the log file for the installation, you must go to the Work Area Installation screen, as follows:</p>
+<ol>
+<li>
+<p>Click the <span class="bold">Applications</span> tab. The main Application Development screen opens.</p>
+</li>
+<li>
+<p>Click the name of the Work Area you are working in. The Work Area screen opens.</p>
+</li>
+<li>
+<p>From the <span class="bold">Actions</span> drop-down list, select <span class="bold">Installation History</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Go</span>. The system displays the Installation History screen with the log files in chronological order.</p>
+</li>
+<li>
+<p>Click the <span class="bold">View Log</span> link for the most recent installation attempt or for the date and time that you ran the install process. The system displays the log file.</p>
+</li>
+</ol>
+<p>For information on installation and on reading the log file, see <a href="wa_install.htm#CHDGCFAF">"Installing a Work Area and Its Objects"</a>.</p>
+</div>
+<!-- class="sect1" -->
+<a id="CIAJFFIG"></a>
+<div id="LSHDG998" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Modifying Data Marts</h2>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#BABJECAG">Modifying Data Mart Instance Properties</a></p>
+</li>
+<li>
+<p><a href="#BABFFEAC">Modifying Data Mart Definition Properties</a></p>
+<ul>
+<li>
+<p><a href="#CIAGHDFF">Modifying Table Descriptors</a></p>
+</li>
+<li>
+<p><a href="#CIAGBHAA">Modifying Attributes and Parameters</a></p>
+</li>
+<li>
+<p><a href="#CIACDJFI">Modifying Planned Outputs</a></p>
+</li>
+</ul>
+</li>
+</ul>
+<p>If you have the necessary privileges, you can modify a Data Mart definition either through an instance of it in a Work Area or directly in the definition in its Domain or Application Area. In most cases it makes sense to work through an instance in a Work Area for the following reasons:</p>
+<ul>
+<li>
+<p>In order to use or test changes to the definition you must create and install an instance of it.</p>
+</li>
+<li>
+<p>If you work through an instance, the system automatically repoints the instance to the new version of the definition.</p>
+</li>
+</ul>
+<p>However, if you need to change properties of the definition as a whole, you must work directly in the definition in its Domain or Work Area.</p>
+<p>Whether you work in an instance or directly in the definition, when you check in the new version of the definition you have the opportunity to upgrade instances of the original definition to the new version; see <a href="deftasks.htm#BEIHAHEE">"Upgrading Object Instances to a New Definition Version"</a>.</p>
+<a id="BABJECAG"></a>
+<div id="LSHDG999" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Modifying Data Mart Instance Properties</h3>
+<p>On the Data Mart instance's Properties screen, click <span class="bold">Update</span> to enter changes. Oracle LSH creates a new version of the instance you are working on and applies your changes to it when you click <span class="bold">Apply</span>. Click <span class="bold">Cancel</span> to discard your changes and the new version.</p>
+<p>You can modify some properties through the <span class="bold">Actions</span> drop-down list; see <a href="deftasks.htm#CIHDAIFF">"Using the Actions Drop-Down List"</a> for further information.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You must install the new version for the changes to take effect.</div>
+<p><a id="LSHDG1000"></a><span class="subhead3">Name&nbsp;</span>See <a href="deftasks.htm#CHDBIJAH">"Naming Objects"</a> for further information.</p>
+<p><a id="LSHDG1001"></a><span class="subhead3">Description&nbsp;</span>See <a href="deftasks.htm#CHDIHBBC">"Creating and Using Object Descriptions"</a> for further information.</p>
+<p><a id="BABEFBBI"></a><a id="LSHDG1002"></a><span class="subhead3">Definition Source&nbsp;</span>This field applies to the instance only. It specifies the Data Mart definition to which this Data Mart instance points. It generally does not make sense to change the source definition for the following reasons:</p>
+<ul>
+<li>
+<p>Changing the definition may result in a new set of Table Descriptors, Parameters, and Planned Outputs.</p>
+</li>
+<li>
+<p>Any new Table Descriptors are not mapped.</p>
+</li>
+<li>
+<p>The Data Mart's status changes to <span class="bold">Non Installable</span>.</p>
+</li>
+</ul>
+<p>If you want to change to a new version of the same definition, use the <span class="bold">Upgrade Instance</span> option from the <span class="bold">Actions</span> drop-down list.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+It is possible to select a new source definition of a different Data Mart type. Exercise caution when selecting a different definition.</div>
+</div>
+<!-- class="sect2" -->
+<a id="BABFFEAC"></a>
+<div id="LSHDG1003" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Modifying Data Mart Definition Properties</h3>
+<p>You can go to a Data Mart definition's Properties screen in one of the following ways:</p>
+<ul>
+<li>
+<p><span class="bold">From the Data Mart's Properties screen</span>: Click the hyperlink of the Data Mart definition that appears in the Definition field. See <a href="#BABCGAHE">"Definition Source"</a>.</p>
+</li>
+<li>
+<p><span class="bold">From the Domain or Application Area where you created the definition</span>: Click Manage Definitions to view all the definitions in that Domain or Application Area. Click the definition name.</p>
+</li>
+</ul>
+<p>Once on the Data Mart definition screen, click <span class="bold">Update</span> to enter changes. Oracle LSH creates a new version of the definition. You can change the following properties:</p>
+<p><a id="LSHDG1004"></a><span class="subhead3">Name&nbsp;</span>See <a href="deftasks.htm#CHDBIJAH">"Naming Objects"</a> for further information.</p>
+<p><a id="LSHDG1005"></a><span class="subhead3">Description&nbsp;</span>See <a href="deftasks.htm#CHDIHBBC">"Creating and Using Object Descriptions"</a> for further information.</p>
+<p>You can modify some properties through the <span class="bold">Actions</span> drop-down list; see <a href="deftasks.htm#CIHDAIFF">"Using the Actions Drop-Down List"</a> for further information.</p>
+<a id="CIAGHDFF"></a>
+<div id="LSHDG1006" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Modifying Table Descriptors</h4>
+<p>In the Data Mart definition you can remove existing Table Descriptors and add different ones.You must check out the definition to add, remove, or update Table Descriptors, but not to map, unmap, or remap Table Descriptors.</p>
+<p>In the Data Mart instance, you can change the Table Descriptor mappings, which are part of the Data Mart instance, not the definition; see <a href="deftasks.htm#CIHDCCDA">"Mapping Table Descriptors to Table Instances"</a>. You do not need to check out the definition to modify the mappings.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CIAGBHAA"></a>
+<div id="LSHDG1007" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Modifying Attributes and Parameters</h4>
+<p>You cannot add or remove Attributes or Parameters because they are predefined for each Data Mart type. Attributes and Parameters belong to the Data Mart definition. You must check out the definition to update Parameters. In the Data Mart definition you can change Attribute values and, for Parameters, the default value and Read Only and Prompt settings. You should not change anything else or the Data Mart may not function properly.</p>
+<p>To change Parameter values at the instance level you can use the Execution Setup. To make your settings available to other instances of the same Data Mart, allow the Execution Setup to be used as a Template. Select <span class="bold">Execution Setups</span> from the <span class="bold">Actions</span> drop-down list in the Data Mart instance in the Work Area. See <a href="deftasks.htm#BEIGAICB">"Creating, Modifying, and Submitting Execution Setups"</a>.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CIACDJFI"></a>
+<div id="LSHDG1008" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Modifying Planned Outputs</h4>
+<p>Planned Outputs are predefined for each Data Mart type and belong to the Data Mart definition. You cannot modify Data Mart Planned Outputs except to change their classifications, which affect the classifications of the actual Data Mart output. See <a href="deftasks.htm#CHDCBGEI">"Classifying Outputs"</a> for further information.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment70">
+<tr>
+<td class="cellalignment77">
+<table class="cellalignment75">
+<tr>
+<td class="cellalignment74"><a href="load.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment74"><a href="rsets.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2006, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment79">
+<table class="cellalignment73">
+<tr>
+<td class="cellalignment74"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment74"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment74"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment74"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

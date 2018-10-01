@@ -1,0 +1,359 @@
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//
+//																xHtml Template 2016 StyleSheet
+//																		newwave(content)
+//
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+/* Search results */
+#searchResultsBlock {
+	margin:0;
+	
+	font-family:Helvetica, Arial, sans-serif;
+	
+	background-position: top;
+	background-repeat: repeat-x;
+	background-color:#ffffff;	
+}
+
+.searchResults {
+	font-size:8pt
+}
+
+.searchDetails {
+	margin: 15px 9px 22px 0;
+	width: 300px;
+	height: 29px;
+	
+	position: absolute;
+    right: 10px;
+    
+    display: inline-block;
+}
+
+a, a:visited {
+	text-decoration : none;
+	color: #1E90FF;
+}
+
+a:hover { 
+	color: #FB7D00; 
+}
+
+img[src*="122.gif"], img[src*="123.gif"] {width:58px; height:27px;}
+img[src*="124.gif"], img[src*="125.gif"]	{width:28px; height:27px;}
+
+p,ul,ol {
+	font-size:14px;
+	color: #000000;
+    line-height:16pt;
+}
+
+.bodytext {
+	font-size: 14px;
+	margin: 9px 0 0 0;
+}
+
+/* Exclude the navigation element from the bodytext top margin*/
+body table:first-child table:first-child tr td  p.bodytext{
+	margin:0 0 0 0;
+}
+
+/* This is for Part Pages */
+body table:first-child table:first-child tr td  p.relatedheading{
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+}
+
+.wingdingsymbols {
+	font-family: Wingdings;
+}
+
+strong {
+	font-weight: bold;
+}
+
+.specialbold {
+	font-weight: bold;
+}
+
+.tableheading, .tableheadingskipnumbering{
+	margin: 0 0 0 0;
+	
+	font-size: 14px;
+	text-align: left;
+}
+
+.tableheading, .tableheadingskipnumbering, .tableheading2, .tableheading2skipnumbering{
+	background-color: #ffffff;
+}
+
+td .tableheading, td .tableheadingskipnumbering, td .tableheading2, td .tableheading2skipnumbering{
+	font-weight:bold;
+	font-size: 14px;
+	margin-top: 20px;
+	margin-bottom: 6px;
+}
+
+.tablebodytext, .tablebodytextskipnumbering{
+	margin: 8pt 18pt 8pt 0;
+	
+	font-size: 14px;
+}
+
+.note, .listnote, .listnote2, .listnote3, .note-continuenumbering {
+	background-color: #ebfae4;
+    margin: 6px 6px 6px 0;
+    padding: 4pt;
+	color: #303030;
+}
+
+.listbullet, .listbullet2, .listbullet3, .listnumber, .listnumber1, .listnumber2, .listnumber3 {
+	margin-top:8pt;
+	margin-left: -10px;
+	list-style-position: outside;
+}
+
+.listbullet {
+	list-style: square url("starIconBlue.png");
+}
+
+.listbullet2 {
+	list-style: square url("circleIconBlue.png");
+}
+
+.listbullet3 {
+	list-style: square url("squareIconBlue.png");
+}
+
+.listnumber, .listnumber1, .listnumber2, .listnumber3 {
+	list-style: initial;
+	list-style-type:  decimal;
+}
+
+ol {
+	color: #2D97F3;
+}
+
+li {
+	color: #000000;
+}
+
+ol.listalpha, ol.listalpha2{
+	margin-top:3pt;
+	margin-left:-11pt;
+	color: #2D97F3;
+	list-style-position: outside;
+	list-style-type: lower-alpha;
+}
+
+ol.listalpha2{
+	margin-bottom:2pt;
+}
+
+.listcontinue, .listcontinue2, .listcontinue3, .tablelistcontinue, .tablelistcontinue2, .tablelistcontinue3 {
+	margin-top: 3pt;
+	margin-bottom: 3pt;
+}
+
+.tablelistbullet, .tablelistbullet2, .tablelistbullet3, .tablelistnumber {
+	margin-top:8pt;
+    margin-bottom:8pt;
+	margin-left: -10px;
+	
+	list-style-position: outside;
+}
+
+.tablelistbullet {
+	list-style: square url("starIconBlue.png");
+}
+
+.tablelistbullet2 {
+	list-style: square url("circleIconBlue.png");
+}
+
+.tablelistbullet3 {
+	list-style: square url("squareIconBlue.png");
+}
+
+h1, h2, h3, h4, h5, h6, h7 {
+	font-size:28px;
+	font-weight: 500;
+	color:#000000;
+	margin: 12pt 0 6pt 0;
+}
+
+.onlinebooktitle {
+	font-size:26px;
+	font-weight: 100;
+	color:#000000;
+	
+	padding: 30px 40px 6pt 40px;
+	margin: 0;
+	background-color: #009bd8;
+	color: white;
+}
+
+.onlinebooktitle--tagine {
+	font-size: 20px;
+	padding: 10px 40px 0 40px;
+	margin: 0;
+	background-color: #009bd8;
+	color: white;
+}
+
+.onlinebookversion {
+	font-size: 18px;
+	padding: 5px 40px 0 40px;
+	margin: 0;
+	background-color: #009bd8;
+	color: white;
+}
+
+p.onlinebookversion img {
+	display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+}
+
+p.heading5 {
+	font-weight: bold;
+}
+
+.subheading {
+	font-size:18px;
+	font-weight:normal;
+	color:#f5841f;
+	margin-bottom:5px;
+}
+
+/* code samples */
+
+.code, .commandtext {
+	margin: 0 0 0 10px;
+	
+	font-family: "Courier New", Courier, monospace;
+	white-space: pre;
+}
+
+.bodytext + .commandtext {
+	padding:6px 0 0 0;
+}
+
+
+.commandtext1indent, .commandtext2indent, .commandtext3indent, .commandtext4indent, .commandtext5indent, .commandtext6indent, .commandtext7indent {
+	font-family: "Courier New", Courier, monospace;
+	white-space: pre;
+}
+
+.commandtext1indent {
+	margin:0 0 0 20px;
+}
+
+.commandtext2indent {
+	margin:0 0 0 30px;
+}
+
+.commandtext3indent {
+	margin:0 0 0 40px;
+}
+
+.commandtext4indent {
+	margin:0 0 0 50px;
+}
+
+.commandtext5indent {
+	margin:0 0 0 60px;
+}
+
+.commandtext6indent {
+	margin:0 0 0 70px;
+}
+
+.commandtext7indent {
+	margin:0 0 0 80px;
+}
+
+/* mini-toc elements */
+
+.tableintopic {
+	width:100%
+}
+
+.relatedtopics.aboveheading {
+	margin: -10px 0 30px -9.396%;
+    padding:0;
+}
+
+.relatedtopics.aboveheading tr td p.bodytext {
+	margin:0;
+}
+
+.relatedheading {
+        font-weight: bold;
+        font-size: 14px;
+        background-color: #ffffff;
+        word-spacing: normal;
+        letter-spacing: normal;
+        vertical-align: baseline;
+        margin-top: 0px;
+        margin-bottom: 2px;
+        margin-left: 0pt;
+        margin-right: 0pt;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 4px;
+        padding-right: 4px;
+        border-color: #FFFFFF;
+        border-right-style: solid;
+        border-right-width: 1px;
+        border-right-color: #FFFFFF;
+        text-align: left;
+        text-indent: 0cm;
+        width: auto;
+        height: auto;
+}
+
+.relateditem {
+        color: #000000;
+        background-color: #ffffff;
+        vertical-align: baseline;
+        margin-top: 0pt;
+        margin-bottom: 0pt;
+        margin-left: 0pt;
+        margin-right: 0pt;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 4px;
+        padding-right: 4px;
+        border-color: #FFFFFF;
+        border-right-style: solid;
+        border-right-width: 1px;
+        border-right-color: #FFFFFF;
+        text-align: left;
+        text-indent: 0cm;
+        font-size: 14px;
+}
+		  
+/* Expanding block  */
+
+a.expandingblocktemplate:first-child, a.prattblock:first-child{
+	font-weight:bold;
+	margin:6px 0 6px 0; 
+	display: block;
+}
+
+.copy {
+	margin-top:40px;
+	margin-left: 0px;
+    bottom: 0px;
+	
+    font-size: 12px;
+	font-weight: 100;
+}
+
+.tablesummary {
+	display: none;
+}

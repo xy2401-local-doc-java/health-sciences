@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- saved from url=(0023)https://docs.oracle.com -->
+        <title>REST API for Oracle Healthcare Translational Research</title>
+        <link rel="stylesheet" href="/sp_common/rest-template/ohc-rest-template/css/rest.css">
+        <script>
+            document.write('<style type="text/css">');
+            document.write('body > .noscript, body > .noscript ~ * { opacity: 0; }');
+            document.write('</style>');
+        </script>
+        <script data-main="/sp_common/rest-template/ohc-rest-template/js/rest-config" src="/sp_common/rest-template/requirejs/require.js"></script>
+        <script>
+            if(window.require === undefined) {
+                document.write('<script data-main="sp_common/rest-template/ohc-rest-template/js/rest-config" src="sp_common/rest-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/rest-template/ohc-rest-template/css/rest.css" rel="stylesheet">');
+            }
+        </script>
+        <meta name="description" content="The Oracle Healthcare Translational Research (OHTR) REST API provides optimized access to the clinical and genomic data stored within OHTR.">
+        <meta property="og:site_name" content="Oracle Help Center">
+        <meta property="og:title" content="REST API for Oracle Healthcare Translational Research">
+        <meta property="og:description" content="The Oracle Healthcare Translational Research (OHTR) REST API provides optimized access to the clinical and genomic data stored within OHTR.">
+        <meta name="generator" content="Oracle REST API Publisher">
+        <link rel="shortcut icon" href="/sp_common/rest-template/ohc-common/img/favicon.ico">
+        <meta name="application-name" content="REST API for Oracle Healthcare Translational Research">
+        <link type="application/swagger+json" title="Swagger 2.0" href="swagger.json" rel="alternate">
+        <link rel="prev" href="Use%20cURL.html" title="Previous" type="text/html">
+        <link rel="next" href="Error%20Messages.html" title="Next" type="text/html">
+    <script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+    <body>
+        <div class="noscript alert alert-danger text-center" role="alert">
+            <a class="pull-left" href="Use%20cURL.html"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+            <a class="pull-right" href="Error%20Messages.html">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+            <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        </div>
+        <article>
+            <header>
+                <ol class="breadcrumb">
+                    <li><a href="index.html">REST API for Oracle Healthcare Translational Research</a></li>
+                    <li class="active">Get Started</li>
+                </ol>
+		<p class="draftsubtitle"></p>
+            </header>
+            <div class="dita-content"><h2 class="title topictitle1">Administration</h2> 
+<div class="body conbody">
+ <p class="shortdesc">This section provides information on configuring the system.</p> 
+ <div class="section">
+  <h3 class="title sectiontitle">Configuring the System</h3>
+  <p class="p">During OHTR installation, default values are configured in the system for pagination and date format. The REST API services use these default values. The property and values configured are:</p> 
+  <div class="tablenoborder">
+   <table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all"> 
+    <thead class="thead" align="left"> 
+     <tr class="row"> 
+      <th class="firstcol" valign="top" width="35.13513513513514%" id="d1874e34">Key</th> 
+      <th class="entry" valign="top" width="32.432432432432435%" id="d1874e37">Default Value</th> 
+      <th class="entry" valign="top" width="32.432432432432435%" id="d1874e40">Description</th> 
+     </tr> 
+    </thead> 
+    <tbody class="tbody"> 
+     <tr class="row"> 
+      <th class="firstcol" valign="top" width="35.13513513513514%" id="d1874e49" headers="d1874e34 ">api.pagination.limit</th> 
+      <td class="entry" valign="top" width="32.432432432432435%" headers="d1874e49 d1874e37 ">100</td> 
+      <td class="entry" valign="top" width="32.432432432432435%" headers="d1874e49 d1874e40 ">Default Pagination Limit</td> 
+     </tr> 
+     <tr class="row"> 
+      <th class="firstcol" valign="top" width="35.13513513513514%" id="d1874e61" headers="d1874e34 ">api.dateformat</th> 
+      <td class="entry" valign="top" width="32.432432432432435%" headers="d1874e61 d1874e37 ">MM/dd/yyyy</td> 
+      <td class="entry" valign="top" width="32.432432432432435%" headers="d1874e61 d1874e40 ">Default Date Format</td> 
+     </tr> 
+    </tbody> 
+   </table> 
+  </div> 
+  <p class="p">These default values can be updated or re-loaded using the <a class="xref" href="api-Administration.html" target="_blank">Administration REST APIs</a>.</p> 
+  <ul class="ul"> 
+   <li class="li"><p class="p">For details on setting up the OHTR system, see the <a class="xref" href="QuickStart.html">Quick Start</a> section.</p> </li> 
+   <li class="li"><p class="p">You can use tools such as Mozilla REST client, Postman, cURL and so on to consume the APIs.</p> </li> 
+   <li class="li"><p class="p">To access the OHTR REST Admin API URLs, the user should be assigned the trc-api-admin-user role.</p> </li> 
+  </ul> 
+  <p class="p">Use the APIs in the following section to configure the OHTR system.</p> 
+ </div> 
+ <div class="section">
+  <h3 class="title sectiontitle">Updating the Configuration</h3>
+  <p class="p">Use the <a class="xref" href="op-config-put.html">Update Configuration</a> API to update the date format and change pagination.</p> 
+  <p class="p"></p> 
+  <p class="p"><strong class="ph b">Request Type</strong></p> 
+  <p class="p">PUT</p> 
+  <p class="p"><strong class="ph b">Request URL</strong></p> 
+  <pre class="pre">http://&lt;hostname&gt;:&lt;port&gt;/HSDataService-web/api/3.2.0/config</pre> 
+  <p class="p"><strong class="ph b">Request Body — To Configure Pagination</strong></p> 
+  <pre class="pre">{
+	"key":"api.pagination.limit",
+	 "value" : "200"
+}
+</pre> 
+  <p class="p"><strong class="ph b">Request Body — To Configure Date Format</strong></p> 
+  <pre class="pre">{
+	"key":" api.dateformat",
+	"value" : "dd/MM/yyyy"
+}
+</pre> 
+  <p class="p">Make sure that you provide the date format in the Java date pattern. For details on this pattern, see <a class="xref" href="https://docs.oracle.com/javase/tutorial/i18n/format/simpleDateFormat.html#datepattern" target="_blank">Date Format Pattern Syntax</a>.</p> 
+  <div class="note note">
+   <span class="notetitle">Note:</span> The date format is case-sensitive.
+  </div> 
+  <p class="p"><strong class="ph b">Request Header</strong></p> 
+  <pre class="pre">Content-type : application/json
+X-Requested-By:TRC
+Accept:application/json
+Authorization: &lt;username&gt;/&lt;password&gt;</pre> 
+  <p class="p"><strong class="ph b">Response Header</strong></p> 
+  <pre class="pre">204 No Content</pre> 
+  <img class="image" src="images/fig1.png">
+ </div> 
+ <div class="section">
+  <h3 class="title sectiontitle">Reloading the Configuration</h3>
+  <p class="p">The administration configuration values are cached in the application. When the configuration values are changed, you must reload the cache before use. Invoke the <a class="xref" href="op-config-delete.html">Reload Configuration</a> API to reload the configuration values. In a clustered environment, this should be called on each node. You can also reload the configuration by redeploying the application.</p> 
+  <p class="p"><strong class="ph b">Request Type</strong></p> 
+  <p class="p">DELETE</p> 
+  <p class="p"><strong class="ph b">Request Header</strong></p> 
+  <pre class="pre">X-Requested-By:TRC
+Accept:application/json
+Authorization:&lt;username&gt;/&lt;password&gt;</pre> 
+  <p class="p"><strong class="ph b">Response Header</strong></p> 
+  <pre class="pre">204 No Content</pre> 
+  <img class="image" src="images/fig2.png">
+ </div> 
+</div></div>
+        </article>
+    </body>
+</html>

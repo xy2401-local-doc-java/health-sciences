@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>Oracle&reg; Health Sciences ClearTrial Cloud Service System Administrator User Guide</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2017-06-21T11:41:58Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Health Sciences ClearTrial Cloud Service System Administrator User Guide" />
+<meta name="dcterms.identifier" content="E86237-01" />
+<meta name="dcterms.isVersionOf" content="CTSAG" />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="Stylesheet" href="../dcommon/css/doccd.css" title="Default" type="text/css" />
+<script type="application/javascript"   src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"   src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="alternate" href="CTSAG.pdf" title="PDF version" type="application/pdf" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript"  src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript"  src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript"  src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript"  src="../dcommon/js/foundation.min.js"></script>
+<script type="application/javascript"  src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript"  src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript"  src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="application/javascript"  src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="application/javascript"  src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="application/javascript"  src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="application/javascript"  src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0"><p>Go to main content</p><table class="cellalignment12"><tr><td class="cellalignment13"><b>Oracle&reg; Health Sciences ClearTrial Cloud Service System Administrator User Guide<br />Release 5.6</b><br />E86237-01</td><td class="cellalignment14"><table class="cellalignment15"><tr><td class="cellalignment16"><img width="30" height="30" src="../dcommon/gifs/prodicon.gif" alt="Go to Documentation Home" /><br />Home</td><td class="cellalignment16"><img width="30" height="30" src="../dcommon/gifs/bookicon.gif" alt="Go to Book List" /><br />Book List</td><td class="cellalignment16"><img width="30" height="30" src="../dcommon/gifs/conticon.gif" alt="Go to Table of Contents" /><br />Contents</td><td class="cellalignment16"><img width="30" height="30" src="../dcommon/gifs/feedback.gif" alt="Go to Feedback page" /><br />Contact Us</td></tr></table></td></tr></table><hr /><table class="cellalignment12"><tr><td class="cellalignment13">&nbsp;</td><td class="cellalignment17">View PDF</td></tr></table></a><header><!--
+<p><a id="top" href="#BEGIN">Go to main content</a></p>
+<table class="cellalignment12">
+<tr>
+<td class="cellalignment13"><b>Oracle&reg; Health Sciences ClearTrial Cloud Service System Administrator User Guide<br />
+Release 5.6</b><br />
+E86237-01</td>
+<td class="cellalignment14">
+<table class="cellalignment15">
+<tr>
+<td class="cellalignment16"><a href="../index.htm"><img width="30" height="30" src="../dcommon/gifs/prodicon.gif" alt="Go to Documentation Home" /><br />
+Home</a></td>
+<td class="cellalignment16"><a href="../nav/portal_booklist.htm"><img width="30" height="30" src="../dcommon/gifs/bookicon.gif" alt="Go to Book List" /><br />
+Book List</a></td>
+<td class="cellalignment16"><a href="toc.htm"><img width="30" height="30" src="../dcommon/gifs/conticon.gif" alt="Go to Table of Contents" /><br />
+Contents</a></td>
+<td class="cellalignment16"><a href="../dcommon/html/feedback.htm"><img width="30" height="30" src="../dcommon/gifs/feedback.gif" alt="Go to Feedback page" /><br />
+Contact Us</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="cellalignment12">
+<tr>
+<td class="cellalignment13">&nbsp;</td>
+<td class="cellalignment17"><a href="CTSAG.pdf">View PDF</a></td>
+</tr>
+</table>
+<a id="BEGIN"></a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<!-- End Header -->
+<div class="letterstyle">
+<h1>Oracle&reg; Health Sciences ClearTrial Cloud Service</h1>
+<p class="booktitle">System Administrator User Guide</p>
+<p><span class="revnumber">Release 5.6</span></p>
+<p class="invpartnumber">E86237-01</p>
+<p class="date">June 2017</p>
+<p>The Oracle Health Sciences ClearTrial System Administrator User Guide is a reference for users who are performing administration tasks for their organization.</p>
+<p class="subhead2"><a id="sthref1"></a>Contents</p>
+<ul>
+<li>
+<p><a href="#BGBEEDJB">Administration basics and common tools</a></p>
+</li>
+<li>
+<p><a href="#BGBCHIHH">Managing your administrative profile</a></p>
+</li>
+<li>
+<p><a href="#BGBCEHFC">Managing users</a></p>
+</li>
+</ul>
+<a id="BGBEEDJB"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Administration basics and common tools</h2>
+<p>This section provides information on how to work with administration features in the Oracle Health Sciences ClearTrial Cloud Service application.</p>
+<p>System administrators maintain user accounts for their organization. In addition, they perform other administrative tasks, such as editing customer preferences, purging deleted items, and clearing user sessions when users are locked out.</p>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref2"></a>
+<h3 class="sect2">Editing customer preferences</h3>
+<p>System administrators manage customer preferences. Customer preferences are preconfigured settings that apply across the application and to all users, regardless of roles and statuses.</p>
+<p>The application logs and audits all customer creation, configuration, and administration activity.</p>
+<ol>
+<li>
+<p>From the <span class="bold">Admin</span> menu, select <span class="bold">Customer Preferences</span>.</p>
+</li>
+<li>
+<p>Edit the values as needed. For more information about a field, click the field name to display online help.</p>
+</li>
+<li>
+<p>Click <span class="bold">Save</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref3"></a>
+<h3 class="sect2">Requesting changes to non-custom parameters</h3>
+<p>System administrators can configure most ClearTrial parameters. However, to change the following parameters, contact ClearTrial Support.</p>
+<div class="tblformal">
+<p class="titleintable"><a id="sthref4"></a><a id="sthref5"></a>Table 1 Custom ClearTrial Parameters</p>
+<table class="cellalignment18" title="Custom ClearTrial Parameters" summary="Table 3-1 describes the primary user roles in ClearTrial." dir="ltr">
+<thead>
+<tr class="cellalignment13">
+<th class="cellalignment19" id="r1c1-t2">Primary role</th>
+<th class="cellalignment19" id="r1c2-t2">Description</th>
+<th class="cellalignment19" id="r1c3-t2">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment13">
+<td class="cellalignment20" id="r2c1-t2" headers="r1c1-t2">
+<p>Login Attempts Limit</p>
+</td>
+<td class="cellalignment20" headers="r2c1-t2 r1c2-t2">
+<p>Number of login attempts permitted before a user is locked out of the application.</p>
+</td>
+<td class="cellalignment20" headers="r2c1-t2 r1c3-t2">
+<p>5</p>
+</td>
+</tr>
+<tr class="cellalignment13">
+<td class="cellalignment20" id="r3c1-t2" headers="r1c1-t2">
+<p>Password Expiration Time</p>
+</td>
+<td class="cellalignment20" headers="r3c1-t2 r1c2-t2">
+<p>Time after which user passwords expire. Users who have not changed their passwords within the configured interval are forced to change their password immediately on their next login.</p>
+</td>
+<td class="cellalignment20" headers="r3c1-t2 r1c3-t2">
+<p>No default value</p>
+</td>
+</tr>
+<tr class="cellalignment13">
+<td class="cellalignment20" id="r4c1-t2" headers="r1c1-t2">
+<p>Minimum Password Length</p>
+</td>
+<td class="cellalignment20" headers="r4c1-t2 r1c2-t2">
+<p>Minimum number of characters required for user passwords. User passwords are required to have a minimum of 8 characters and have a maximum of 20 characters.</p>
+</td>
+<td class="cellalignment20" headers="r4c1-t2 r1c3-t2">
+<p>Password length cannot be less than 8 characters.</p>
+</td>
+</tr>
+<tr class="cellalignment13">
+<td class="cellalignment20" id="r5c1-t2" headers="r1c1-t2">
+<p>Session Expiration Time</p>
+</td>
+<td class="cellalignment20" headers="r5c1-t2 r1c2-t2">
+<p>Period of time after which a user browser session expires.</p>
+</td>
+<td class="cellalignment20" headers="r5c1-t2 r1c3-t2">
+<p>No default value</p>
+</td>
+</tr>
+<tr class="cellalignment13">
+<td class="cellalignment20" id="r6c1-t2" headers="r1c1-t2">
+<p>System Administrator Name</p>
+</td>
+<td class="cellalignment20" headers="r6c1-t2 r1c2-t2">
+<p>Name of the system administrator that users can contact for user account requests.</p>
+</td>
+<td class="cellalignment20" headers="r6c1-t2 r1c3-t2">
+<p>ClearTrial Support</p>
+</td>
+</tr>
+<tr class="cellalignment13">
+<td class="cellalignment20" id="r7c1-t2" headers="r1c1-t2">
+<p>System Administrator Phone</p>
+</td>
+<td class="cellalignment20" headers="r7c1-t2 r1c2-t2">
+<p>Phone number of the system administrator that users can call for user account requests.</p>
+</td>
+<td class="cellalignment20" headers="r7c1-t2 r1c3-t2">
+<p>+1 (877) 206-4846</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" --></div>
+<!-- class="sect2" -->
+<a id="BGBEGEEG"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Purging deleted items</h3>
+<p>Deleted data is not remove immediately. Rather, ClearTrial marks the data as deleted, stamps it with the date, and purges it on a scheduled basis or when requested. This allows you to restore data that has been deleted in error.</p>
+<p>Automatic purging, which takes place nightly or according to the number of days you specify, permanently removes items that were deleted more than a specified number of days prior to the current date.</p>
+<p>You can also manually purge deleted plans, studies, products, users, portfolios, exchange rate tables, RFPs, and bids prior to their scheduled removal.</p>
+<ol>
+<li>
+<p>From the <span class="bold">Maintain</span> menu, select <span class="bold">Purge Deleted Items</span>.</p>
+</li>
+<li>
+<p>Select the items you want to purge.</p>
+<ul>
+<li>
+<p>In the <span class="bold">deleted at least n days ago</span> field, enter the number of days prior to which deleted data is to be purged.</p>
+</li>
+<li>
+<p>To purge all deleted items of the selected type, enter 0 for the number of days.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Purge Deleted Items</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BGBCHIHH"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Managing your administrative profile</h2>
+<p>This section provides information on how to view your profile and permissions, edit your administrator profile, and change your administrator password.</p>
+<div class="sect2"><a id="sthref6"></a>
+<h3 class="sect2">Viewing your permissions</h3>
+<ol>
+<li>
+<p>Click your <span class="bold">user name</span> in the upper right corner of the screen.</p>
+</li>
+<li>
+<p>On the <span class="bold">Profile</span> page, click the link for each primary role and additional capabilities assigned to you.</p>
+<ul>
+<li>
+<p>By default, ClearTrial displays only permissions assigned to you.</p>
+</li>
+<li>
+<p>To see all permissions, click the <span class="bold">Show All Permissions</span> link. Xs indicate the permissions assigned to you.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Done</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref7"></a>
+<h3 class="sect2">Editing your profile</h3>
+<ol>
+<li>
+<p>Click your <span class="bold">user name</span> in the upper right corner of the screen.</p>
+</li>
+<li>
+<p>Click <span class="bold">Edit Profile</span>.</p>
+</li>
+<li>
+<p>Edit the information on the <span class="bold">Profile</span> tab. For more information about a field, click the field name to display online help.</p>
+<p>The Roles tab is locked when editing your own profile. You cannot change the roles assigned to you.</p>
+</li>
+<li>
+<p>Click <span class="bold">Save</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref8"></a>
+<h3 class="sect2">Changing your password</h3>
+<ol>
+<li>
+<p>Click your <span class="bold">user name</span> in the upper right corner of the screen.</p>
+</li>
+<li>
+<p>Click <span class="bold">Change Password</span>.</p>
+</li>
+<li>
+<p>In the <span class="bold">Current Password</span> field, enter your password.</p>
+</li>
+<li>
+<p>In the <span class="bold">New Password</span> field, enter your new password.</p>
+</li>
+<li>
+<p>In the <span class="bold">Verify New Password</span> field, retype your new password.</p>
+</li>
+<li>
+<p>Click <span class="bold">Save</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BGBCEHFC"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Managing users</h2>
+<p>This section provides information on how to create, edit, delete, and restore user profiles, assign and change user roles, and reset user passwords and accounts.</p>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref9"></a>
+<h3 class="sect2">Viewing existing users</h3>
+<p>To access ClearTrial, every user must have a user account. System administrators manage these user accounts for their organization.</p>
+<ol>
+<li>
+<p>From the <span class="bold">Admin</span> menu, click <span class="bold">Users</span>.</p>
+</li>
+<li>
+<p>Filter the <span class="bold">Users</span> list as necessary.</p>
+<p>Filtering allows you to specify which users to display. You can show all users, active users only, or users matching filters you have defined.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref10"></a>
+<h3 class="sect2">Creating user accounts</h3>
+<p>Only system administrators can create user accounts for their organizations.</p>
+<ol>
+<li>
+<p>From the <span class="bold">Admin</span> menu, select <span class="bold">Users</span>.</p>
+</li>
+<li>
+<p>On the <span class="bold">Users</span> screen, click <span class="bold">New</span>.</p>
+</li>
+<li>
+<p>On the <span class="bold">Profile</span> tab on the <span class="bold">Create User</span> screen, enter a login name, the first and last names of the user, and the email address.</p>
+</li>
+<li>
+<p>Specify the maximum edit mode by selecting it from the <span class="bold">Maximum Edit Mode</span> drop-down list. Select the preferred edit mode from the <span class="bold">Preferred Edit Mode</span> drop-down list.</p>
+<p>The edit modes control the precision of the plan by determining which assumptions the user can set. The maximum edit mode is the most advanced edit mode the user can access when creating or editing plans. The preferred edit mode is the mode the application automatically applies when the user creates or edits plans.</p>
+</li>
+<li>
+<p>In the <span class="bold">Password</span> and <span class="bold">Confirm Password</span> fields, enter and confirm a password for the user.</p>
+<ul>
+<li>
+<p>Passwords must be at least eight characters and contain at least one letter, one number, and one of the following special characters: !$*+-.=?@^_|~.</p>
+</li>
+<li>
+<p>Passwords must not contain the login name or any of the following words: password, oracle, guest, admin, administrator, or cleartrial.</p>
+</li>
+<li>
+<p>The user must provide this password to access ClearTrial and complete registration.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>From the <span class="bold">Preferred Home Page</span> drop-down list, select the screen the user will see after login.</p>
+</li>
+<li>
+<p>From the <span class="bold">Preferred Locale</span> drop-down list, select a language.</p>
+<p>Locale determines how dates and numbers are displayed and interpreted.</p>
+</li>
+<li>
+<p>Click <span class="bold">Save</span>.</p>
+<ul>
+<li>
+<p>You must save these settings to make the Roles tab active.</p>
+</li>
+<li>
+<p>ClearTrial sends an email containing the customer code, login name, and link to complete the registration to the user. Upon logging in, ClearTrial prompts the user to create a password.</p>
+</li>
+<li>
+<p>Upon logging in, users set a security question and answer that the application uses to identify users who attempt to reset their passwords.</p>
+</li>
+</ul>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If your organization does not allow user account information to be sent through email, communicate the customer code, login name, and temporary password to the user through an alternative secure form of communication.</div>
+</li>
+<li>
+<p>On the <span class="bold">Roles</span> tab:</p>
+<ol>
+<li>
+<p>Assign the user a primary role.</p>
+</li>
+<li>
+<p>Assign additional roles and capabilities.</p>
+</li>
+</ol>
+<p>For more information about user roles, see <a href="#BGBFEACI">User roles and capabilities</a>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Save</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref11"></a>
+<h3 class="sect2">User permissions</h3>
+<p>Permissions enable users to access certain features or perform specific actions in ClearTrial.</p>
+<p>Primary role permissions, granted by primary roles, are generic actions that users can perform. Additional permissions, granted by additional roles, are used for access or maintenance in certain parts of the application, such as the resources and reporting regions.</p>
+<p>For more information on user roles, see <a href="#BGBFEACI">User roles and capabilities</a>.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BGBFEACI"></a>
+<div class="sect2">
+<h3 class="sect2">User roles and capabilities</h3>
+<p>You can assign primary roles and additional roles and capabilities to users.</p>
+<ul>
+<li>
+<p>To access the application, users must be assigned a primary role.</p>
+</li>
+<li>
+<p>Additional roles and capabilities can be assigned to users to grant them permissions to access certain features or perform specific job responsibilities.</p>
+</li>
+</ul>
+<p>Depending on the primary role you set for the user, you can also assign different additional roles and capabilities.</p>
+<div class="tblformal">
+<p class="titleintable"><a id="sthref12"></a><a id="sthref13"></a>Table 2 Primary Roles</p>
+<table class="cellalignment18" title="Primary Roles" summary="Table 3-1 describes the primary user roles in ClearTrial." dir="ltr">
+<thead>
+<tr class="cellalignment13">
+<th class="cellalignment19" id="r1c1-t4">Primary role</th>
+<th class="cellalignment19" id="r1c2-t4">Description</th>
+<th class="cellalignment19" id="r1c3-t4">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment13">
+<td class="cellalignment20" id="r2c1-t4" headers="r1c1-t4">
+<p>Read-Only User</p>
+</td>
+<td class="cellalignment20" headers="r2c1-t4 r1c2-t4">
+<p>Can view most items in ClearTrial but cannot create, edit, or delete any of these items. This role does not give permission to modify notes or export data.</p>
+</td>
+<td class="cellalignment20" headers="r2c1-t4 r1c3-t4">
+<p>There are no notes.</p>
+</td>
+</tr>
+<tr class="cellalignment13">
+<td class="cellalignment20" id="r3c1-t4" headers="r1c1-t4">
+<p>User</p>
+</td>
+<td class="cellalignment20" headers="r3c1-t4 r1c2-t4">
+<p>Can view products and studies, and can create, edit, and view plans. Users can edit the plans they create but cannot edit plans created by other users.</p>
+</td>
+<td class="cellalignment20" headers="r3c1-t4 r1c3-t4">
+<p>There are no notes.</p>
+</td>
+</tr>
+<tr class="cellalignment13">
+<td class="cellalignment20" id="r4c1-t4" headers="r1c1-t4">
+<p>Power User</p>
+</td>
+<td class="cellalignment20" headers="r4c1-t4 r1c2-t4">
+<p>Has all of the permissions of the User primary role and can also create, edit, view, and delete templates and studies. Power users can edit plans created by other users.</p>
+</td>
+<td class="cellalignment20" headers="r4c1-t4 r1c3-t4">
+<p>There are no notes.</p>
+</td>
+</tr>
+<tr class="cellalignment13">
+<td class="cellalignment20" id="r5c1-t4" headers="r1c1-t4">
+<p>Clinical Administrator</p>
+</td>
+<td class="cellalignment20" headers="r5c1-t4 r1c2-t4">
+<p>Has all of the permissions of the Power User primary role and can also create and maintain products, service providers, and billing rates.</p>
+</td>
+<td class="cellalignment20" headers="r5c1-t4 r1c3-t4">
+<p>There are no notes.</p>
+</td>
+</tr>
+<tr class="cellalignment13">
+<td class="cellalignment20" id="r6c1-t4" headers="r1c1-t4">
+<p>System Administrator</p>
+</td>
+<td class="cellalignment20" headers="r6c1-t4 r1c2-t4">
+<p>Has all of the permissions of the Clinical Administrator primary role and can manage ClearTrial users.</p>
+</td>
+<td class="cellalignment20" headers="r6c1-t4 r1c3-t4">
+<p>Includes the RFP Administrator additional capabilities.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" -->
+<div class="tblformal">
+<p class="titleintable"><a id="sthref14"></a><a id="sthref15"></a>Table 3 Additional Roles and Capabilities</p>
+<table class="cellalignment18" title="Additional Roles and Capabilities" summary="Table 3-2 describes additional roles and capabilities in ClearTrial." dir="ltr">
+<thead>
+<tr class="cellalignment13">
+<th class="cellalignment19" id="r1c1-t5">Additional role</th>
+<th class="cellalignment19" id="r1c2-t5">Description</th>
+<th class="cellalignment19" id="r1c3-t5">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment13">
+<td class="cellalignment20" id="r2c1-t5" headers="r1c1-t5">
+<p>Exchange Rates Administrator</p>
+</td>
+<td class="cellalignment20" headers="r2c1-t5 r1c2-t5">
+<p>Grants permissions to users to create, edit, view, and delete shared exchange rate tables.</p>
+</td>
+<td class="cellalignment20" headers="r2c1-t5 r1c3-t5">
+<p>There are no notes.</p>
+</td>
+</tr>
+<tr class="cellalignment13">
+<td class="cellalignment20" id="r3c1-t5" headers="r1c1-t5">
+<p>Resources Administrator</p>
+</td>
+<td class="cellalignment20" headers="r3c1-t5 r1c2-t5">
+<p>Grants permissions to users to create, edit, view, and delete resources.</p>
+</td>
+<td class="cellalignment20" headers="r3c1-t5 r1c3-t5">
+<p>Resources capabilities are only available to Enterprise Licensed users.</p>
+</td>
+</tr>
+<tr class="cellalignment13">
+<td class="cellalignment20" id="r4c1-t5" headers="r1c1-t5">
+<p>Reporting Regions Administrator</p>
+</td>
+<td class="cellalignment20" headers="r4c1-t5 r1c2-t5">
+<p>Grants permissions to users to create, edit, and delete reporting region names and to map countries to reporting regions. Mapping enables you to view the budgets by location.</p>
+</td>
+<td class="cellalignment20" headers="r4c1-t5 r1c3-t5">
+<p>Only available to Enterprise Licensed users.</p>
+</td>
+</tr>
+<tr class="cellalignment13">
+<td class="cellalignment20" id="r5c1-t5" headers="r1c1-t5">
+<p>Department/GL Codes Administrator</p>
+</td>
+<td class="cellalignment20" headers="r5c1-t5 r1c2-t5">
+<p>Grants permissions to users to create, view, edit, and delete departments or to create, view, edit, or delete GL codes.</p>
+</td>
+<td class="cellalignment20" headers="r5c1-t5 r1c3-t5">
+<p>There are no notes.</p>
+</td>
+</tr>
+<tr class="cellalignment13">
+<td class="cellalignment20" id="r6c1-t5" headers="r1c1-t5">
+<p>RFP/Bid Administrator</p>
+</td>
+<td class="cellalignment20" headers="r6c1-t5 r1c2-t5">
+<p>Grants permissions to users to view, create, edit, and delete RFPs and bids.</p>
+</td>
+<td class="cellalignment20" headers="r6c1-t5 r1c3-t5">
+<p>System administrators have these permissions by default.</p>
+</td>
+</tr>
+<tr class="cellalignment13">
+<td class="cellalignment20" id="r7c1-t5" headers="r1c1-t5">
+<p>RFP Reader</p>
+</td>
+<td class="cellalignment20" headers="r7c1-t5 r1c2-t5">
+<p>Grants read-only access to RFPs and bids.</p>
+</td>
+<td class="cellalignment20" headers="r7c1-t5 r1c3-t5">
+<p>The System Administrator and RFP Administrator can grant these permissions to clinical administrators.</p>
+</td>
+</tr>
+<tr class="cellalignment13">
+<td class="cellalignment20" id="r8c1-t5" headers="r1c1-t5">
+<p>Custom Fields Designer</p>
+</td>
+<td class="cellalignment20" headers="r8c1-t5 r1c2-t5">
+<p>Grants permissions to users to create, view, edit, and delete custom fields and to publish custom field models for use in plans.</p>
+</td>
+<td class="cellalignment20" headers="r8c1-t5 r1c3-t5">
+<p>Only available to Enterprise licensed users.</p>
+<p>The System Administrator can grant these permissions to users that are assigned a primary role of Clinical Administrator or System Administrator.</p>
+</td>
+</tr>
+<tr class="cellalignment13">
+<td class="cellalignment20" id="r9c1-t5" headers="r1c1-t5">
+<p>Advanced Algorithm Editor</p>
+</td>
+<td class="cellalignment20" headers="r9c1-t5 r1c2-t5">
+<p>Grants permissions to create or edit cost or resource algorithms with multiple expressions.</p>
+</td>
+<td class="cellalignment20" headers="r9c1-t5 r1c3-t5">
+<p>Only available to Enterprise licensed users.</p>
+<p>The System Administrator can grant these permissions to users that are assigned a primary role of Power User, Clinical Administrator, or System Administrator.</p>
+</td>
+</tr>
+<tr class="cellalignment13">
+<td class="cellalignment20" id="r10c1-t5" headers="r1c1-t5">
+<p>Expert Algorithm Editor</p>
+</td>
+<td class="cellalignment20" headers="r10c1-t5 r1c2-t5">
+<p>Grants permissions to users to create or edit scripted algorithms for costs or task resources.</p>
+</td>
+<td class="cellalignment20" headers="r10c1-t5 r1c3-t5">
+<p>Only available to Enterprise licensed users.</p>
+<p>The System Administrator can grant these permissions to users that are assigned a primary role of Power User, Clinical Administrator, or System Administrator.</p>
+</td>
+</tr>
+<tr class="cellalignment13">
+<td class="cellalignment20" id="r11c1-t5" headers="r1c1-t5">
+<p>WBS Editor</p>
+</td>
+<td class="cellalignment20" headers="r11c1-t5 r1c2-t5">
+<p>Grants permissions to users to create, edit, and delete plan-specific major tasks, tasks, and resources in the Work Breakdown (WBS) in plans created by the user. This role allows the user to view and edit the Level of Effort algorithm for a plan-specific task and resource.</p>
+</td>
+<td class="cellalignment20" headers="r11c1-t5 r1c3-t5">
+<p>Only available to Enterprise Licensed users.</p>
+</td>
+</tr>
+<tr class="cellalignment13">
+<td class="cellalignment20" id="r12c1-t5" headers="r1c1-t5">
+<p>WBS Manager</p>
+</td>
+<td class="cellalignment20" headers="r12c1-t5 r1c2-t5">
+<p>Grants all of the WBS Editor permissions plus the abilities to edit and delete major tasks, tasks, and resources in the WBS of plans created by other users.</p>
+</td>
+<td class="cellalignment20" headers="r12c1-t5 r1c3-t5">
+<p>Only available to Enterprise Licensed users</p>
+</td>
+</tr>
+<tr class="cellalignment13">
+<td class="cellalignment20" id="r13c1-t5" headers="r1c1-t5">
+<p>Can edit notes</p>
+</td>
+<td class="cellalignment20" headers="r13c1-t5 r1c2-t5">
+<p>Grants permission to read-only users to edit notes associated with plans or other items for review purposes.</p>
+</td>
+<td class="cellalignment20" headers="r13c1-t5 r1c3-t5">
+<p>Can be granted to read-only users.</p>
+</td>
+</tr>
+<tr class="cellalignment13">
+<td class="cellalignment20" id="r14c1-t5" headers="r1c1-t5">
+<p>Can export report data</p>
+</td>
+<td class="cellalignment20" headers="r14c1-t5 r1c2-t5">
+<p>Grants permission to read-only users to export reports to PDF, Excel, or CSV.</p>
+</td>
+<td class="cellalignment20" headers="r14c1-t5 r1c3-t5">
+<p>Can be granted to read-only users.</p>
+</td>
+</tr>
+<tr class="cellalignment13">
+<td class="cellalignment20" id="r15c1-t5" headers="r1c1-t5">
+<p>Can access WS-API</p>
+</td>
+<td class="cellalignment20" headers="r15c1-t5 r1c2-t5">
+<p>Grants permission to users, who have licensed the Web Services API product, the capability to interact with the application programmatically.</p>
+<p>The primary role and other capabilities control the data users can view, edit, create, or delete with the API.</p>
+</td>
+<td class="cellalignment20" headers="r15c1-t5 r1c3-t5">
+<p>Only available to customers who have licensed the Web Services API product.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" --></div>
+<!-- class="sect2" -->
+<div class="sect2"><a id="sthref16"></a>
+<h3 class="sect2">Editing user accounts</h3>
+<ol>
+<li>
+<p>From the <span class="bold">Admin</span> menu, select <span class="bold">Users</span>.</p>
+</li>
+<li>
+<p>Select a <span class="bold">user</span> and click <span class="bold">Edit</span>.</p>
+</li>
+<li>
+<p>On the <span class="bold">Profile</span> tab, edit the user preferences fields as necessary. For more information about a field, click the field name to display online help.</p>
+</li>
+<li>
+<p>Click <span class="bold">Save</span>.</p>
+<p>You must save these settings to make the Roles tab active.</p>
+</li>
+<li>
+<p>On the <span class="bold">Roles</span> tab, change the primary role and select or de-select additional roles and capabilities. For more information about a field, click the field name to display online help.</p>
+</li>
+<li>
+<p>Click <span class="bold">Save</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<div class="sect2"><a id="sthref17"></a>
+<h3 class="sect2">Locking and unlocking user accounts</h3>
+<p>You can lock accounts to temporarily deactivate users. A user whose account is locked cannot log into ClearTrial. Locking an account is not the same as deleting it, as locked accounts cannot be purged.</p>
+<ol>
+<li>
+<p>From the <span class="bold">Admin</span> menu, select <span class="bold">Users</span>.</p>
+</li>
+<li>
+<p>Select the <span class="bold">user account</span>, and click <span class="bold">Edit</span>.</p>
+</li>
+<li>
+<p>On the <span class="bold">Profile</span> tab:</p>
+<ul>
+<li>
+<p>To lock the account, set the <span class="bold">Account Locked</span> field to <span class="bold">Yes</span>.</p>
+</li>
+<li>
+<p>To unlock the account, set the <span class="bold">Account</span> Locked field to <span class="bold">No</span>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Save</span>.</p>
+<p>If you lock an account when the user is logged in, the user remains logged in until the session expires or is terminated. ClearTrial denies subsequent log-in attempts.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref18"></a>
+<h3 class="sect2">Deleting user accounts</h3>
+<p>System administrators can delete user accounts. Deleting a user account marks the user profile invalid and prevents the user from logging in.</p>
+<p>User accounts are not immediately deleted and can be restored before purging. For information on purging deleted users, see <a href="#BGBEGEEG">Purging deleted items</a>.</p>
+<ol>
+<li>
+<p>From the <span class="bold">Admin</span> menu, select <span class="bold">Users</span>.</p>
+</li>
+<li>
+<p>Select one or more users and click <span class="bold">Delete.</span></p>
+<p>When you display all users, the deleted user is greyed out and a line appears through the information.</p>
+<p>Restore a deleted user account by selecting the user and clicking <span class="bold">Restore</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref19"></a>
+<h3 class="sect2">Resetting user passwords</h3>
+<p>Users can reset their password using the <span class="bold">Forgot Your Password?</span> link on the login screen. To reset their password, users need to provide their customer code, login name, and email address.</p>
+<p>System administrators can reset passwords for users who have forgotten their credentials.</p>
+<ol>
+<li>
+<p>From the <span class="bold">Admin</span> menu, select <span class="bold">Users</span>.</p>
+</li>
+<li>
+<p>Select a user and click <span class="bold">Edit Password</span>.</p>
+</li>
+<li>
+<p>In the <span class="bold">New Password</span> and <span class="bold">Verify New Password</span> fields, enter and confirm a new password for the user.</p>
+</li>
+<li>
+<p>Click <span class="bold">Save</span>.</p>
+<p>The user receives an email stating that the password has changed. The email does not contain the new password. You must provide the user with the new password through a secure form of communication. ClearTrial prompts the user to change the password upon successfully logging in.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref20"></a>
+<h3 class="sect2">Clearing a stranded session</h3>
+<p>A stranded session occurs when a user can no longer connect to a session. Stranded users must contact a system administrator for help.</p>
+<ol>
+<li>
+<p>From the <span class="bold">Admin</span> menu, select <span class="bold">Users</span>.</p>
+</li>
+<li>
+<p>Select a user and click <span class="bold">Clear Session</span>.</p>
+<p>ClearTrial removes the records associated with the session and the user can establish a new session by logging in.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref21"></a>
+<h3 class="sect2">Resetting user accounts</h3>
+<p>Resetting a user account:</p>
+<ul>
+<li>
+<p>Clears the security question and answer associated with the account.</p>
+</li>
+<li>
+<p>Unlocks the user account if it is locked.</p>
+</li>
+<li>
+<p>Forces the user to reset the password upon login.</p>
+</li>
+</ul>
+<ol>
+<li>
+<p>From the <span class="bold">Admin</span> menu, select <span class="bold">Users</span>.</p>
+</li>
+<li>
+<p>Select a user and click Reset Account.</p>
+<p>An account reset confirmation message appears.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+<p>ClearTrial clears the security question and answer and sends the user an email with a link to reset the password.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref22"></a>
+<h3 class="sect2">Viewing inactive users</h3>
+<p>Use the Inactive Users Report to view users that have not logged into ClearTrial for a certain period of time. You can print or export the report as PDF, Excel, or CSV.</p>
+<ol>
+<li>
+<p>From the <span class="bold">Report</span> menu, select <span class="bold">Inactive Users Report</span>.</p>
+</li>
+<li>
+<p>On the <span class="bold">Inactive Report Options</span> screen, in the <span class="bold">Days Since Last Login</span> field, enter the number of days since the last login.</p>
+</li>
+<li>
+<p>Click <span class="bold">Ok</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<div class="sect1"><a id="sthref23"></a>
+<h2 class="sect1">Documentation Accessibility</h2>
+<p>For information about Oracle's commitment to accessibility, visit the Oracle Accessibility Program website at <code dir="ltr"><a href="http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=docacc">http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=docacc</a></code>.</p>
+<p class="subhead2"><a id="sthref24"></a>Access to Oracle Support</p>
+<p>Oracle customers that have purchased support have access to electronic support through My Oracle Support. For information, visit <code dir="ltr"><a href="http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=info">http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=info</a></code> or visit <code dir="ltr"><a href="http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=trs">http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=trs</a></code> if you are hearing impaired.</p>
+</div>
+<!-- class="sect1" -->
+<a id="sthref25"></a>
+<hr />
+<p>ClearTrial Cloud Service System Administrator User Guide, Release 5.6</p>
+<p>E86237-01</p>
+<p>Copyright &copy; 2014, 2017,&nbsp;Oracle and/or its affiliates. All rights reserved.</p>
+<p>This software and related documentation are provided under a license agreement containing restrictions on use and disclosure and are protected by intellectual property laws. Except as expressly permitted in your license agreement or allowed by law, you may not use, copy, reproduce, translate, broadcast, modify, license, transmit, distribute, exhibit, perform, publish, or display any part, in any form, or by any means. Reverse engineering, disassembly, or decompilation of this software, unless required by law for interoperability, is prohibited.</p>
+<p>The information contained herein is subject to change without notice and is not warranted to be error-free. If you find any errors, please report them to us in writing.</p>
+<p>If this is software or related documentation that is delivered to the U.S. Government or anyone licensing it on behalf of the U.S. Government, then the following notice is applicable:</p>
+<p>U.S. GOVERNMENT END USERS: Oracle programs, including any operating system, integrated software, any programs installed on the hardware, and/or documentation, delivered to U.S. Government end users are "commercial computer software" pursuant to the applicable Federal Acquisition Regulation and agency-specific supplemental regulations. As such, use, duplication, disclosure, modification, and adaptation of the programs, including any operating system, integrated software, any programs installed on the hardware, and/or documentation, shall be subject to license terms and license restrictions applicable to the programs. No other rights are granted to the U.S. Government.</p>
+<p>This software or hardware is developed for general use in a variety of information management applications. It is not developed or intended for use in any inherently dangerous applications, including applications that may create a risk of personal injury. If you use this software or hardware in dangerous applications, then you shall be responsible to take all appropriate fail-safe, backup, redundancy, and other measures to ensure its safe use. Oracle Corporation and its affiliates disclaim any liability for any damages caused by use of this software or hardware in dangerous applications.</p>
+<p>Oracle and Java are registered trademarks of Oracle and/or its affiliates. Other names may be trademarks of their respective owners.</p>
+<p>Intel and Intel Xeon are trademarks or registered trademarks of Intel Corporation. All SPARC trademarks are used under license and are trademarks or registered trademarks of SPARC International, Inc. AMD, Opteron, the AMD logo, and the AMD Opteron logo are trademarks or registered trademarks of Advanced Micro Devices. UNIX is a registered trademark of The Open Group.</p>
+<p>This software or hardware and documentation may provide access to or information about content, products, and services from third parties. Oracle Corporation and its affiliates are not responsible for and expressly disclaim all warranties of any kind with respect to third-party content, products, and services unless otherwise set forth in an applicable agreement between you and Oracle. Oracle Corporation and its affiliates will not be responsible for any loss, costs, or damages incurred due to your access to or use of third-party content, products, or services, except as set forth in an applicable agreement between you and Oracle.</p>
+</div>
+<!-- class="letterstyle" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment12">
+<tr>
+<td class="cellalignment20">&nbsp;</td>
+<td class="cellalignment21">&nbsp;</td>
+<td class="cellalignment22">
+<table class="cellalignment15">
+<tr>
+<td class="cellalignment16"><a href="../index.htm"><img width="30" height="30" src="../dcommon/gifs/prodicon.gif" alt="Go to Documentation Home" /><br />
+Home</a></td>
+<td class="cellalignment16"><a href="../nav/portal_booklist.htm"><img width="30" height="30" src="../dcommon/gifs/bookicon.gif" alt="Go to Book List" /><br />
+Book List</a></td>
+<td class="cellalignment16"><a href="toc.htm"><img width="30" height="30" src="../dcommon/gifs/conticon.gif" alt="Go to Table of Contents" /><br />
+Contents</a></td>
+<td class="cellalignment16"><a href="../dcommon/html/feedback.htm"><img width="30" height="30" src="../dcommon/gifs/feedback.gif" alt="Go to Feedback page" /><br />
+Contact Us</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

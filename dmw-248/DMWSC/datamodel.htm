@@ -1,0 +1,2061 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Set up clinical data models</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2018-05-25T8:12:40Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Health Sciences Data Management Workbench Study Setup Guide" />
+<meta name="dcterms.identifier" content="E96067-01" />
+<meta name="dcterms.isVersionOf" content="DMWSC" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2017, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="sc_basics.htm" title="Previous" type="text/html" />
+<link rel="Next" href="libraries.htm" title="Next" type="text/html" />
+<link rel="alternate" href="DMWSC.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="DMWSC.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="DMWSC.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">5/12</span> <!-- End Header -->
+<div id="DMWSC193" class="chapter"><a id="CHDHFBEE"></a>
+<h1 class="chapter"><span class="secnum">2</span> Set up clinical data models</h1>
+<div id="DMWSC105" class="tblhruleformal">
+<p class="titleintable"><a id="sthref9"></a><a id="sthref10"></a>Table 2-1 High-level steps</p>
+<table class="cellalignment50" title="High-level steps" summary="Steps to create a clinical data model." dir="ltr">
+<thead>
+<tr class="cellalignment40">
+<th class="cellalignment51" id="r1c1-t2">Task</th>
+<th class="cellalignment51" id="r1c2-t2">More Information</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r2c1-t2" headers="r1c1-t2">
+<p>Create an input clinical data model for every lab.</p>
+</td>
+<td class="cellalignment46" headers="r2c1-t2 r1c2-t2">
+<p>See <a href="#BABGCFJH">Create a file input clinical data model</a>.</p>
+</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r3c1-t2" headers="r1c1-t2">
+<p>Create an input clinical data model for your clinical data system.</p>
+</td>
+<td class="cellalignment46" headers="r3c1-t2 r1c2-t2">
+<p>If you are using InForm, set up a connection to the InForm study development database and load metadata from there to create the clinical data model. See <a href="#BABCCGFG">Create a clinical data model for InForm data</a>.</p>
+<p>If you are using a different clinical data capture system, see <a href="#BABGCFJH">Create a file input clinical data model</a>.</p>
+</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r4c1-t2" headers="r1c1-t2">
+<p>Create target clinical data models and tables as needed.</p>
+</td>
+<td class="cellalignment46" headers="r4c1-t2 r1c2-t2">
+<p>Create models with tables in the format you need for review and analysis, and any intermediate models required. See <a href="#BABIGJGC">Create a target clinical data model for transformed data</a>.</p>
+<p>You can load metadata from a file using a required syntax, copy a model from another study, create tables manually, or create a study model from a library model, which allows you to update the study model when the library model is updated.</p>
+<p>To add individual tables, see <a href="#BABEGGDI">Add tables</a>.</p>
+</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r5c1-t2" headers="r1c1-t2">
+<p>For each table, define additional attributes and columns.</p>
+</td>
+<td class="cellalignment46" headers="r5c1-t2 r1c2-t2">
+<p><a href="#BABICFEC">Add constraints to tables</a>. A primary key is required.</p>
+<p><a href="#BABIBEAG">Set up data blinding in tables</a>.</p>
+<p>Add columns to support filtering. See <a href="sc_adv_topics.htm#CHDIGBGC">Use SDTM identifiers to support important functionality</a>.</p>
+<p><a href="#BABDAHBH">Set up Unit of Work data processing for tables</a> (optional).</p>
+<p><a href="#BABBGIHA">Configure table display in the Listings page</a> for columns on the Listings pages (optional).</p>
+<p><a href="#CDCHGDCD">Map columns to data to be derived from TMS</a> (in target models, if you are using TMS).</p>
+</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r6c1-t2" headers="r1c1-t2">
+<p>Add a Subject Visit table.</p>
+</td>
+<td class="cellalignment46" headers="r6c1-t2 r1c2-t2">
+<p><a href="#CHDFFBBH">Add Subject Visit and Subject tables</a>. Each study must have a Subject Visit table with SDTM identifiers in one model.</p>
+</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r7c1-t2" headers="r1c1-t2">
+<p>Install each model.</p>
+</td>
+<td class="cellalignment46" headers="r7c1-t2 r1c2-t2">
+<p><a href="#A134935344">Install a clinical data model</a>.</p>
+</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r8c1-t2" headers="r1c1-t2">
+<p>Upgrade each model to Quality Control (optional) and then Production.</p>
+</td>
+<td class="cellalignment46" headers="r8c1-t2 r1c2-t2">
+<p><a href="sc_adv_topics.htm#BABCICDE">Validation status and lifecycle stages</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformal" -->
+<p class="subhead1"><a id="CHDFCDAJ"></a><a id="DMWSC99929"></a>Other Tasks</p>
+<ul>
+<li>
+<p><a href="libraries.htm#BABGCIFJ">Create a codelist</a></p>
+</li>
+<li>
+<p><a href="libraries.htm#BABJACFH">Create a library clinical data model</a></p>
+</li>
+<li>
+<p><a href="#BABHHEGA">Unblind and reblind data</a></p>
+</li>
+<li>
+<p><a href="#A135061803">Extract data from a clinical data model</a></p>
+</li>
+<li>
+<p><a href="#BEIBHJCE">Modify a clinical data model</a></p>
+</li>
+</ul>
+<p><a href="#CHDHADEI">FAQs</a></p>
+<p class="subhead1"><a id="DMWSC99930"></a>What is a clinical data model?</p>
+<p>A clinical data model is a set of logically related tables. You need one <span class="bold">input</span> model for each data source. You create <span class="bold">target</span> models to review, analyze, or report data. You use <a href="glossary.htm#BABJDFJF">transformation</a>s to standardize and merge data from one or more source models into a target model.</p>
+<div id="DMWSC10246" class="figure">
+<p class="titleinfigure"><a id="BABCGJHD"></a>Figure 2-1 Example of clinical data model use in a study</p>
+<img width="583" height="217" src="img/study_data_models_simple_sm.gif" alt="Description of Figure 2-1 follows" /><br />
+<a id="sthref11" href="img_text/study_data_models_simple_sm.htm">Description of ''Figure 2-1 Example of clinical data model use in a study''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p class="subhead1"><a id="DMWSC99931"></a>More information on the tasks in this chapter</p>
+<ul>
+<li>
+<p><a href="sc_adv_topics.htm#CHDIGBGC">Use SDTM identifiers to support important functionality</a></p>
+</li>
+<li>
+<p><a href="sc_adv_topics.htm#BABIBJAB">Naming restrictions</a></p>
+</li>
+<li>
+<p><a href="sc_adv_topics.htm#A133910622">Checkout and checkin</a></p>
+</li>
+<li>
+<p><a href="sc_adv_topics.htm#BABCICDE">Validation status and lifecycle stages</a></p>
+</li>
+</ul>
+<p><a href="#CHDHADEI">FAQs</a></p>
+<a id="BABGCFJH"></a>
+<div id="DMWSC155" class="sect1">
+<h2 class="sect1">Create a file input clinical data model</h2>
+<p><img width="54" height="22" src="img/icon_video.gif" alt="Text Show me how! is a video link." /> <code dir="ltr"><a href="https://apexapps.oracle.com/pls/apex/f?p=44785:265:0::::P265_CONTENT_ID:21776">Show me how!</a><a href=""></a></code></p>
+<ol>
+<li>
+<p>On the <img width="26" height="25" src="img/home_icon.gif" alt="Icon is a house." /> <span class="bold">Home</span> page, select the study and the Development lifecycle stage.</p>
+</li>
+<li>
+<p>Click the <img width="29" height="25" src="img/study_config_icon.gif" alt="Icon shows a wrench and a screwdriver, crossed." /><span class="bold">Study Configuration</span> icon at the top of the page. Make sure the <span class="bold">Clinical Data Models</span> tab is selected.</p>
+</li>
+<li>
+<p>Click the <img width="16" height="17" src="img/icon_add.gif" alt="Icon is a plus sign." /><span class="bold">Add</span> icon for Clinical Data Models at the top of the left pane.</p>
+</li>
+<li>
+<p>Enter a name and description. See <a href="sc_adv_topics.htm#BABIBJAB">"Naming restrictions"</a>.</p>
+</li>
+<li>
+<p>For model type, select <span class="bold">Input</span>.</p>
+</li>
+<li>
+<p>For <span class="bold">Input Type</span>, select:</p>
+<ul>
+<li>
+<p><span class="bold">File</span> to load data files from labs.</p>
+</li>
+<li>
+<p><span class="bolditalic">Name_of_System</span> to load data files from a clinical data capture system other than InForm.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>For <span class="bold">Input Data File Type</span> select either:</p>
+<ul>
+<li>
+<p>Text</p>
+</li>
+<li>
+<p>SAS</p>
+</li>
+</ul>
+</li>
+<li>
+<p>For <span class="bold">Metadata Source</span> select:</p>
+<ul>
+<li>
+<p><span class="bold">None</span> to define tables and columns manually.</p>
+</li>
+<li>
+<p><span class="bold">Load from file</span>. The system can create tables from:</p>
+<ul>
+<li>
+<p>A .zip file that contains one metadata (.mdd) file per table. See <a href="sc_adv_topics.htm#CIHIAGEC">"Required syntax for metadata files"</a>.</p>
+</li>
+<li>
+<p>SAS Transport (CPort or XPort) files, a SAS dataset, or a .zip file that contains SAS datasets <span class="italic">or</span> text metadata (.mdd) files (not both).</p>
+<p>Tables created by uploading SAS datasets are created as nonblinded. If data should be blinded, you must define blinding attributes manually for tables in the input data model.</p>
+</li>
+</ul>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You can create a table from a metadata file and load data into it from a SAS file. Metadata files are the only automated way to create tables with blinding attributes set.</div>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Tables with a large number of columns may cause problems with data loading, transformations, and display in the Listings pages. The supported maximum ranges from 260 columns if all columns are individually blinded to 370 columns if the table is either not blinded, has only row blinding, or is completely blinded.
+<p>See My Oracle Support article 2298558.1 for the latest information.</p>
+</div>
+</li>
+<li>
+<p><span class="bold">Library Data Model</span> to create tables from a standard library model. If the library model is updated, you can update the study model.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+Library models must be checked in to appear in the list. You can only see models you have access to.</div>
+</li>
+<li>
+<p><span class="bold">Study Data Model</span> to copy tables from a model in another study. Select its project (or other grouping), then its study, and then the model.</p>
+<p>The Copy operation includes transformations that write to the model and validation checks that read from the model.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>To allow visualization tools access to the data contained in the clinical data model, select the <span class="bold">Business Area</span> checkbox.</p>
+<p>You can change the default schema name, BA_<span class="italic">model_name</span>. This is what users of the visualization tool will see. <span class="bold">Limitation</span>: Use a maximum of 19 characters for the schema name if you plan to create custom listings on the model. Do not use spaces or special characters other than underscore (_).</p>
+</li>
+<li>
+<p><span class="bold">Data Mart</span>: A data mart file contains all current data in a clinical data model for export to an external system. Select data mart type(s) to make available.</p>
+<p>Only the types that are available in your environment are displayed.</p>
+<ul>
+<li>
+<p>Oracle Export</p>
+</li>
+<li>
+<p>Text Export</p>
+</li>
+<li>
+<p>SAS Export</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+</ol>
+<p><span class="bold">Next</span>: <a href="#BABIIHHI">Configure File Watcher data loading</a>.</p>
+<a id="BABIIHHI"></a>
+<div id="DMWSC785" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Configure File Watcher data loading</h3>
+<p><a id="DMWSC106"></a><a id="sthref12"></a><span class="subhead3">Prerequisite&nbsp;</span>Your administrator must set up a File Watcher for this study.</p>
+<ol>
+<li>
+<p>Click the <img width="29" height="25" src="img/study_config_icon.gif" alt="Icon shows a wrench and a screwdriver, crossed." /><span class="bold">Study Configuration</span> icon at the top of the page. Make sure the <span class="bold">Clinical Data Models</span> tab is selected.</p>
+</li>
+<li>
+<p>Select <span class="bold">Development</span> from the Lifecycle drop-down at the top of the page.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+In the Development lifecycle context you can configure File Watcher for any lifecycle stage.</div>
+</li>
+<li>
+<p>Select the model and click <span class="bold">Check Out</span>.</p>
+</li>
+<li>
+<p>Go to the clinical data model's Watcher Configuration tab.</p>
+</li>
+<li>
+<p>In the <span class="bold">Data Source</span> field, select the name of the lab.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If this model is for data from an EDC system other than InForm, this field does not appear.</div>
+</li>
+<li>
+<p>If data will be loaded in SAS files, enter SAS parameter values:</p>
+<ul>
+<li>
+<p><span class="bold">Upload File Type</span>: Either CPORT, XPORT, or SAS Dataset.</p>
+<p>Datasets must be contained in a .zip file and each have the same name as one target table.</p>
+</li>
+<li>
+<p><span class="bold">Reported Errors</span>: The number of errors allowed per dataset before the load fails. No records are loaded if the load fails. See <a href="sc_adv_topics.htm#CIHGEAFJ">"Format checks on files being loaded"</a> for more information.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click the <span class="bold">Save</span> icon.</p>
+</li>
+</ol>
+<p><span class="bold">Next</span>: <a href="#BABBCEJE">Set text data load parameters</a> if you will load data in text files. Otherwise <a href="#BABFICHB">Specify a file name convention for each lifecycle stage</a></p>
+<a id="BABBCEJE"></a>
+<div id="DMWSC805" class="sect3">
+<h4 class="sect3">Set text data load parameters</h4>
+<p><a id="DMWSC107"></a><a id="sthref13"></a><span class="subhead3">Prerequisite&nbsp;</span>Select a data source and save. See <a href="#BABIIHHI">Configure File Watcher data loading</a>.</p>
+<ol>
+<li>
+<p>Click the <img width="29" height="25" src="img/study_config_icon.gif" alt="Icon shows a wrench and a screwdriver, crossed." /><span class="bold">Study Configuration</span> icon at the top of the page. Make sure the <span class="bold">Clinical Data Models</span> tab is selected.</p>
+</li>
+<li>
+<p>Select <span class="bold">Development</span> from the Lifecycle drop-down at the top of the page.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+In the Development lifecycle context you can configure File Watcher for any lifecycle stage.</div>
+</li>
+<li>
+<p>Select the model and click <span class="bold">Check Out</span>.</p>
+</li>
+<li>
+<p>In the <span class="bold">Watcher Configuration</span> tab, click the <img width="18" height="20" src="img/icon_data_load_param.gif" alt="Icon is a gray box with two white horizontal lines." /><span class="bold">Data Load Parameters</span> icon.</p>
+</li>
+<li>
+<p>Specify the format to be used in all data files:</p>
+<ul>
+<li>
+<p><span class="bold">Fixed</span>: The system uses the target table column length to determine the length of each data value. The file must contain the correct number of characters for each value in each record, in column order.</p>
+</li>
+<li>
+<p><span class="bold">Delimited</span>: The system uses a delimiter character you specify to determine when one column value ends and the next one begins.</p>
+<ul>
+<li>
+<p><span class="bold">DelimiterChar</span>: Enter the character to separate column values, for example, a comma (,) or a pipe (|).</p>
+</li>
+<li>
+<p><span class="bold">Enclosing Character</span>: If any data value may contain the delimiter character, another character must be added before and after each data value. Enter the character.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Fill in the following fields:</p>
+<ul>
+<li>
+<p><span class="bold">Skip Records</span>: To prevent loading records at the beginning of the file, enter the number of records you want the system to skip. The default value is zero (0).</p>
+</li>
+<li>
+<p><span class="bold">Reported Errors</span>: The number of errors allowed per file before the load fails. No records are loaded if the load fails. See <a href="sc_adv_topics.htm#CIHGEAFJ">"Format checks on files being loaded"</a> for more information.</p>
+</li>
+<li>
+<p><span class="bold">Rows Before Commit</span>: The number of rows you want the system to process before committing processed rows to the database.</p>
+</li>
+<li>
+<p><span class="bold">Date Format</span>: The exact date format used in the data file, if any. Do not enter a value here if the data file does not contain a date field.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tips:</p>
+<ul>
+<li>
+<p>The examples show <code dir="ltr">mm</code> for minutes, but it should be <code dir="ltr">mi</code>.</p>
+</li>
+<li>
+<p>Use <code dir="ltr">mm</code> for a month number (for example, 11) or <code dir="ltr">mon</code> for a three-letter month (for example, NOV). Use <code dir="ltr">yyyy</code> for a 4-digit year.</p>
+</li>
+<li>
+<p>If you use a 24-hour clock, enter <code dir="ltr">hh24</code> for the hour. If you use a 12-hour clock, use <code dir="ltr">hh</code> and enter <code dir="ltr">am</code> after a space following the time string.</p>
+</li>
+</ul>
+<p>For more examples, see: <code dir="ltr"><a href="https://docs.oracle.com/database/121/TDDDG/tdddg_globalization.htm#TDDDG255">https://docs.oracle.com/database/121/TDDDG/tdddg_globalization.htm#TDDDG255</a></code>.</p>
+</div>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+</ol>
+<p><span class="bold">Next</span>: <a href="#BABFICHB">Specify a file name convention for each lifecycle stage</a></p>
+</div>
+<!-- class="sect3" -->
+<a id="BABFICHB"></a>
+<div id="DMWSC215" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Specify a file name convention for each lifecycle stage</h4>
+<div class="infoboxnotealso">
+<p class="notep1">Important:</p>
+Make sure you have the privileges to load data in the specified lifecycle stage. If not, <span class="bold">data loads will fail</span>. When the data load runs, it uses the account that defined or most recently updated the File Specification.</div>
+<ol>
+<li>
+<p>Click the <img width="29" height="25" src="img/study_config_icon.gif" alt="Icon shows a wrench and a screwdriver, crossed." /><span class="bold">Study Configuration</span> icon at the top of any page and then click the <span class="bold">Clinical Data Models</span> tab.</p>
+</li>
+<li>
+<p>Select <span class="bold">Development</span> from the Lifecycle drop-down at the top of the page.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+In the Development lifecycle context you can configure File Watcher for any lifecycle stage.</div>
+</li>
+<li>
+<p>Select the model and click <span class="bold">Check Out</span>.</p>
+</li>
+<li>
+<p>In the <span class="bold">Watcher Configuration</span> tab, under File Specifications, click the <img width="16" height="17" src="img/icon_add.gif" alt="Icon is a plus sign." /><span class="bold">Add</span> icon.</p>
+</li>
+<li>
+<p>Enter a name and description for the <span class="bold">File Specification</span>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+Include the lifecycle stage in the name to make it visible in the Detected Files tab.</div>
+</li>
+<li>
+<p><span class="bold">File Name</span>: Enter a regular expression for the names of files to be loaded in each lifecycle stage.</p>
+<p>File name patterns use the POSIX standard Extended Regular Expression syntax. An asterisk (*) in POSIX syntax matches zero or more occurrences of the preceding character. A dot (.) means "any single character." You can use <code dir="ltr">.*</code> to mean "any character or no characters."</p>
+<p>For example, in a study with file input models for three labs, you could use the following file specifications that allow for a date and the lab name:</p>
+<ul>
+<li>
+<p>CentralLab_.*.zip</p>
+</li>
+<li>
+<p>SpecialLab_.*.cport</p>
+</li>
+<li>
+<p>LocalLab_.*.zip</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">Tips:</p>
+File names must be unique across all models in the study.
+<p>Be careful about case sensitivity. Include the lab or source name.</p>
+</div>
+<p>For more information, see <code dir="ltr"><a href="https://docs.oracle.com/cd/B28359_01/server.111/b28286/ap_posix001.htm">https://docs.oracle.com/cd/B28359_01/server.111/b28286/ap_posix001.htm</a></code>.</p>
+</li>
+<li>
+<p><span class="bold">Lifecycle</span>: Select Development, Quality Control, or Production.</p>
+</li>
+<li>
+<p>Select the <span class="bold">Submission Mode</span>:</p>
+<ul>
+<li>
+<p><span class="bold">Incremental</span>: The system loads all data in the file, inserting new records, updating records with changes, and refreshing the timestamps of records that are reloaded without change. It does not delete any records.</p>
+</li>
+<li>
+<p><span class="bold">Full</span>: The system inserts, updates, and refreshes reloaded records as in incremental processing and in addition, compares the unique keys of records in the file to existing records and <span class="bold">deletes any records that are not included in the file</span>.</p>
+</li>
+<li>
+<p><span class="bold">UOW Load</span>: Within each Unit of Work (subject or subject visit) that has any new or changed records, the system processes all records, inserting new records, updating records with changes, and refreshing the timestamps of records that are reloaded without change. The system does not process records for units of work that have no new or changed records. The system <span class="bold">deletes any existing records that are not reloaded within processed units of work</span>. It does not delete records that are not present in the source if no other records from the same unit of work are reloaded.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+Create two File Specifications, one for a frequent incremental or UOW load and another for a less frequent full load. Incremental loads are faster and can be run on a subset of data. Full loads are more time-consuming but they detect when to delete data. Be careful to always load the complete set of current data when you use full processing; see <a href="sc_adv_topics.htm#CIHHHIGA">"Data processing types and modes"</a>.
+<p>Use a different file name for incremental/UOW and full loads.</p>
+</div>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="bold">Execution Priority</span>: The priority for loading data with this File Specification relative to others: Low, Normal, or High.</p>
+</li>
+<li>
+<p>Select the <span class="bold">Dataload Type</span>:</p>
+<ul>
+<li>
+<p><span class="bold">Immediate</span>: The Watcher searches for files continuously.</p>
+</li>
+<li>
+<p><span class="bold">Scheduled</span>: The Watcher searches at the interval you specify.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="bold">Frequency</span>: If you selected Scheduled, select a frequency for the Watcher to look for a new data file in days, hours, or minutes.</p>
+</li>
+<li>
+<p><span class="bold">Start Date</span>: If you selected Scheduled, enter the date and time for file watching to begin.</p>
+</li>
+<li>
+<p><span class="bold">End Date</span>: Enter the date and time for file watching to end. You can enter a date far in the future and change it at any time.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+</ol>
+<p><span class="bold">Next</span>: <a href="#A134935344">Install a clinical data model</a> or, if the data source is a clinical data capture system other than InForm, <a href="#BABHFACE">Configure the web service location for a source data system</a>.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BABHFACE"></a>
+<div id="DMWSC406" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Configure the web service location for a source data system</h3>
+<p>If you are using a clinical data capture system other than InForm, you must define its web service location so that Oracle DMW can send discrepancies to it and so that data reviewers can open the other system to view the discrepancy or data there.</p>
+<ol>
+<li>
+<p>Click the <img width="29" height="25" src="img/study_config_icon.gif" alt="Icon shows a wrench and a screwdriver, crossed." /><span class="bold">Study Configuration</span> icon at the top of the page. Make sure the <span class="bold">Clinical Data Models</span> tab is selected.</p>
+</li>
+<li>
+<p>Select <span class="bold">Development</span> from the Lifecycle drop-down at the top of the page.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+In the Development lifecycle context you can configure File Watcher for any lifecycle stage.</div>
+</li>
+<li>
+<p>Select the model and click <span class="bold">Check Out</span>.</p>
+</li>
+<li>
+<p>Go to the <span class="bolditalic">System</span> <span class="bold">Configuration</span> tab.</p>
+</li>
+<li>
+<p>For each lifecycle stage, click the <img width="15" height="17" src="img/icon_modify.gif" alt="Icon shows a pencil." />Modify icon and enter:</p>
+<ol>
+<li>
+<p><span class="bolditalic">System</span> <span class="bold">Lifecycle</span>: Select the lifecycle stage in the external system that should exchange data and discrepancies with the selected DMW lifecycle stage.</p>
+</li>
+<li>
+<p><span class="bold">Output Location</span>: Select the name of the web service location for the external system, defined by your administrator.</p>
+</li>
+<li>
+<p><span class="bold">Base URL</span>: Enter the URL to use to view discrepancies and data in the external system from the DMW UI.</p>
+</li>
+<li>
+<p><span class="bold">URL Listing Prefix</span>: If required, enter a string to add to the beginning of the base URL to view data in the external system.</p>
+</li>
+<li>
+<p><span class="bold">URL Listing Suffix</span>: If required, enter a string to append to the end of the base URL to view data in the external system.</p>
+</li>
+<li>
+<p><span class="bold">URL Discrepancy Prefix</span>: If required, enter a string to add to the beginning of the base URL to view discrepancies in the external system.</p>
+</li>
+<li>
+<p><span class="bold">URL Discrepancy Suffix</span>: If required, enter a string to append to the end of the base URL to view discrepancies in the external system.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+</ol>
+<p><span class="italic">Back to</span> <a href="#CHDHFBEE"><span class="xreftitleitalic">Set up clinical data models</span></a></p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BABCCGFG"></a>
+<div id="DMWSC126" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Create a clinical data model for InForm data</h2>
+<p><img width="54" height="22" src="img/icon_video.gif" alt="Text Show me how! is a video link." /> <code dir="ltr"><a href="https://apexapps.oracle.com/pls/apex/f?p=44785:265:0::::P265_CONTENT_ID:21811">Show me how!</a><a href=""></a></code></p>
+<ol>
+<li>
+<p>On the <img width="26" height="25" src="img/home_icon.gif" alt="Icon is a house." /> <span class="bold">Home</span> page, select the study and the Development lifecycle stage.</p>
+</li>
+<li>
+<p>Click the <img width="29" height="25" src="img/study_config_icon.gif" alt="Icon shows a wrench and a screwdriver, crossed." /><span class="bold">Study Configuration</span> icon at the top of the page. Make sure the <span class="bold">Clinical Data Models</span> tab is selected.</p>
+</li>
+<li>
+<p>Click the <img width="16" height="17" src="img/icon_add.gif" alt="Icon is a plus sign." /><span class="bold">Add</span> icon for Clinical Data Models at the top of the left pane.</p>
+</li>
+<li>
+<p>Enter a name and description. See <a href="sc_adv_topics.htm#BABIBJAB">"Naming restrictions"</a>.</p>
+</li>
+<li>
+<p>For the model type, select <span class="bold">Input</span>.</p>
+</li>
+<li>
+<p>For <span class="bold">Input Type</span>, select <span class="bold">InForm</span>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+Don't create an InForm input clinical data model by copying it. There can be only one input InForm model in a study and its metadata must be imported from InForm. However, you can create a target model by copying an input InForm model and modifying it as necessary.</div>
+</li>
+<li>
+<p>To allow visualization tools access to the data contained in the clinical data model, select the <span class="bold">Business Area</span> checkbox.</p>
+<p>You can change the default schema name, BA_<span class="italic">model_name</span>. This is what users of the visualization tool will see. <span class="bold">Limitation</span>: Use a maximum of 19 characters for the schema name if you plan to create custom listings on the model. Do not use spaces or special characters other than underscore (_).</p>
+<p>For InForm models, business areas for InForm metadata and operational data models are also created, with "M" and "O" in their names, respectively. For example, <span class="bold">STUDY12345_M_QC</span> is the name of the metadata model's business area in the quality control lifecycle.</p>
+</li>
+<li>
+<p><span class="bold">Data Mart</span>: A data mart file contains all current data in a clinical data model for export to an external system. Select data mart type(s) to make available:</p>
+<p>Only the types that are available in your environment are displayed.</p>
+<ul>
+<li>
+<p>Oracle Export</p>
+</li>
+<li>
+<p>Text Export</p>
+</li>
+<li>
+<p>SAS Export</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Tables with more than 339 columns may cause problems with data loading, transformations, and display in the Listings pages. See My Oracle Support article 2298558.1 for the latest information.</div>
+</li>
+</ol>
+<p><span class="bold">Next</span>: See <a href="#BABEDDCE">Configure the InForm Connector</a>.</p>
+<a id="BABEDDCE"></a>
+<div id="DMWSC207" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Configure the InForm Connector</h3>
+<ol>
+<li>
+<p>Click the <img width="29" height="25" src="img/study_config_icon.gif" alt="Icon shows a wrench and a screwdriver, crossed." /><span class="bold">Study Configuration</span> icon at the top of the page. Make sure the <span class="bold">Clinical Data Models</span> tab is selected.</p>
+</li>
+<li>
+<p>Select <span class="bold">Development</span> from the Lifecycle drop-down at the top of the page.</p>
+</li>
+<li>
+<p>Open the InForm clinical data model that you have created (see <a href="#BABCCGFG">"Create a clinical data model for InForm data"</a>).</p>
+</li>
+<li>
+<p>If you haven't already checked out the InForm clinical data model, click <span class="bold">Check Out</span>.</p>
+</li>
+<li>
+<p>In the <span class="bold">InForm Configuration</span> tab, for each lifecycle stage, in the <span class="bold">Remote Location</span> field, specify the InForm reporting database from which to load data.</p>
+</li>
+<li>
+<p><span class="bold">Remote Study Account Name</span>: Enter the name of the database account that owns the study's InForm reporting database and RDE views for the appropriate DMW lifecycle stage.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You can change the InForm configuration for any lifecycle to use a different remote location and/or remote study account name. If you do, the system runs a metadata comparison between the InForm model in DMW and the InForm metadata at the new location. If there are differences, the metadata comparison report is displayed. If you accept the changes, data loading is suspended. Reload metadata before resuming data loading.
+<p>When you reload metadata, <span class="bold">you must redo any blinding and masking</span> you've done in DMW.</p>
+</div>
+</li>
+<li>
+<p><span class="bold">InForm LifeCycle</span>: Select the InForm lifecycle stage of the study account name.</p>
+</li>
+<li>
+<p><span class="bold">Webservice Location</span>: Specify the web service location.</p>
+</li>
+<li>
+<p><span class="bold">InForm URL</span>: Enter the URL for the study's InForm website.</p>
+<p>http://<span class="italic">your_InForm_server.your_company</span>.com/<span class="italic">your_trial</span>/pfts.dll</p>
+</li>
+<li>
+<p>Click the <img width="21" height="19" src="img/icon_test_connection.gif" alt="&quot;Icon is a right arrow.&quot;" /><span class="bold">Test URL</span> icon on the far right. If the InForm login page opens, the URL is correct. The new window may open behind the current one.</p>
+</li>
+<li>
+<p>Click the <img width="18" height="18" src="img/icon_save.gif" alt="Icon is a floppy disk." /> <span class="bold">Save</span> icon.</p>
+</li>
+</ol>
+<p><span class="bold">Next</span>: <a href="#BABIDIHD">Select internal InForm tables and views for data transformations</a>.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABIDIHD"></a>
+<div id="DMWSC136" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Select internal InForm tables and views for data transformations</h3>
+<ol>
+<li>
+<p>Click the <img width="29" height="25" src="img/study_config_icon.gif" alt="Icon shows a wrench and a screwdriver, crossed." /><span class="bold">Study Configuration</span> icon at the top of the page. Make sure the <span class="bold">Clinical Data Models</span> tab is selected.</p>
+</li>
+<li>
+<p>Select <span class="bold">Development</span> from the Lifecycle drop-down at the top of the page.</p>
+</li>
+<li>
+<p>Select the clinical data model and click <span class="bold">Check Out</span>.</p>
+</li>
+<li>
+<p>Click the <img width="19" height="20" src="img/icon_select_infm_tables.gif" alt="Icon shows a magnifying glass." /> <span class="bold">Select InForm Operational Data and Metadata Tables</span> icon.</p>
+<p>The system displays all InForm tables and views alphabetically. To sort by type, click the heading of the <span class="bold">Internal Data Model</span> column. Your administrator makes the default selections. Gray tables and views are required.</p>
+</li>
+<li>
+<p>Select and deselect until you have selected the tables and views you want for this study.</p>
+</li>
+<li>
+<p>Save.</p>
+</li>
+</ol>
+<p>After you load metadata and data and install, you can see the internal tables and views in the Default Listings page.</p>
+<p><span class="bold">Next</span>: <a href="#BABJJADJ">Load InForm metadata</a></p>
+</div>
+<!-- class="sect2" -->
+<a id="BABJJADJ"></a>
+<div id="DMWSC137" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Load InForm metadata</h3>
+<ol>
+<li>
+<p>Click the <img width="29" height="25" src="img/study_config_icon.gif" alt="Icon shows a wrench and a screwdriver, crossed." /><span class="bold">Study Configuration</span> icon at the top of the page. Make sure the <span class="bold">Clinical Data Models</span> tab is selected.</p>
+</li>
+<li>
+<p>Select <span class="bold">Development</span> from the Lifecycle drop-down at the top of the page.</p>
+</li>
+<li>
+<p>Select the InForm clinical data model and click <span class="bold">Check Out</span>.</p>
+</li>
+<li>
+<p>In the <span class="bold">InForm Configuration</span> tab, click the <img width="14" height="18" src="img/icon_suspend.gif" alt="Icon is two parallel vertical lines." /><span class="bold">Suspend Data Load</span> icon.</p>
+</li>
+<li>
+<p>Click the <img width="19" height="18" src="img/icon_inf_data_metadata.gif" alt="Icon is a folder and an Up arrow." /><span class="bold">Load InForm Metadata</span> icon. In the Development lifecycle, this process includes installing the model.</p>
+</li>
+<li>
+<p>Click the <img width="19" height="17" src="img/icon_refresh.gif" alt="Icon is a near circular arrow." /><span class="bold">Refresh</span> icon and check the Status column.</p>
+</li>
+<li>
+<p>Click the <img width="13" height="20" src="img/icon_resume.gif" alt="Icon is a forward arrow triangle." /><span class="bold">Resume Data Load</span> icon.</p>
+</li>
+</ol>
+<p>To load data, see:</p>
+<ul>
+<li>
+<p><a href="data_load.htm#BABCEGEI">"Load InForm data immediately in Development or Quality Control"</a></p>
+</li>
+<li>
+<p><a href="data_load.htm#BABIGBCG">"Schedule InForm data loads in Production"</a></p>
+</li>
+<li>
+<p><a href="data_load.htm#BABDEGDC">"Suspend and resume InForm data loading"</a></p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<div id="DMWSC153" class="sect2"><a id="sthref14"></a>
+<h3 class="sect2">Compare DMW and InForm Metadata</h3>
+<p>You can compare the metadata&mdash;table and column structure&mdash;in any DMW InForm model lifecycle stage to any InForm lifecycle database for the same study.</p>
+<ol>
+<li>
+<p>Click the <img width="29" height="25" src="img/study_config_icon.gif" alt="Icon shows a wrench and a screwdriver, crossed." /><span class="bold">Study Configuration</span> icon at the top of the page. Make sure the <span class="bold">Clinical Data Models</span> tab is selected.</p>
+</li>
+<li>
+<p>In the clinical data model <span class="bold">InForm Configuration</span> tab, click the <img width="18" height="18" src="img/icon_metadata_compar.gif" alt="Icon is a square with stripes." /><span class="bold">Compare DMW and InForm Metadata</span> icon.</p>
+</li>
+<li>
+<p>In the <span class="bold">Metadata Comparison</span> window, select the metadata to compare in DMW and InForm.</p>
+</li>
+<li>
+<p>Click <span class="bold">Compare</span>. The report appears on screen.</p>
+<p>To save the report, click the <img width="21" height="20" src="img/icon_disc_export.gif" alt="Icon shows a paper with an X and and arrow out." /><span class="bold">Export All to Excel</span> icon.</p>
+<p>If the system finds no differences, a message appears.</p>
+</li>
+</ol>
+<p>For more information, see <a href="sc_adv_topics.htm#CIHEIEIB">"InForm metadata change detection and synchronization"</a>.</p>
+<p><span class="italic">Back to</span> <a href="#CHDHFBEE"><span class="xreftitleitalic">Set up clinical data models</span></a></p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BABIGJGC"></a>
+<div id="DMWSC156" class="sect1">
+<h2 class="sect1">Create a target clinical data model for transformed data</h2>
+<p><img width="54" height="22" src="img/icon_video.gif" alt="Text Show me how! is a video link." /> <code dir="ltr"><a href="https://apexapps.oracle.com/pls/apex/f?p=44785:265:0::::P265_CONTENT_ID:21780">Show me how!</a><a href=""></a></code></p>
+<ol>
+<li>
+<p>On the <img width="26" height="25" src="img/home_icon.gif" alt="Icon is a house." /> <span class="bold">Home</span> page, select the study and the Development lifecycle stage.</p>
+</li>
+<li>
+<p>Click the <img width="29" height="25" src="img/study_config_icon.gif" alt="Icon shows a wrench and a screwdriver, crossed." /><span class="bold">Study Configuration</span> icon at the top of the page. Make sure the <span class="bold">Clinical Data Models</span> tab is selected.</p>
+</li>
+<li>
+<p>Click the <img width="16" height="17" src="img/icon_add.gif" alt="Icon is a plus sign." /><span class="bold">Add</span> icon for Clinical Data Models at the top of the left pane.</p>
+</li>
+<li>
+<p>Enter a name and description. See <a href="sc_adv_topics.htm#BABIBJAB">"Naming restrictions"</a>.</p>
+</li>
+<li>
+<p>For model type, select <span class="bold">Target</span>.</p>
+</li>
+<li>
+<p>For <span class="bold">Metadata Source</span> select:</p>
+<ul>
+<li>
+<p><span class="bold">None</span> to define tables and columns manually.</p>
+</li>
+<li>
+<p><span class="bold">Load from file</span>.The system can create tables from a .zip file that contains one (.mdd) file per table. See <a href="sc_adv_topics.htm#CIHIAGEC">Required syntax for metadata files</a>.</p>
+<p>SAS Transport (CPort or XPort) files, a SAS dataset, or a .zip file that contains SAS datasets <span class="italic">or</span> text metadata (.mdd) files (not both).</p>
+<p>Tables created by uploading SAS datasets are created as nonblinded. If data should be blinded, you must define blinding attributes manually for tables in the input data model.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You can create a table from a metadata file and load data into it from a SAS file. Metadata files are the only automated way to create tables with blinding attributes set.</div>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Tables with a large number of columns may cause problems with data loading, transformations, and display in the Listings pages. The supported maximum ranges from 260 columns if all columns are individually blinded to 370 columns if the table is either not blinded, has only row blinding, or is completely blinded.
+<p>See My Oracle Support article 2298558.1 for the latest information.</p>
+</div>
+</li>
+<li>
+<p><span class="bold">Library Data Model</span> to create a study model from a standard library model. If the library model is updated, you can update the study model.</p>
+</li>
+<li>
+<p><span class="bold">Study Data Model</span> to copy a model from another study. Select its project (or other grouping), then its study, and then the model.</p>
+<p>The Copy operation includes transformations that write to the model and validation checks that read from the model.</p>
+</li>
+</ul>
+<p>You can also <a href="#BABEGGDI">Add tables</a> manually.</p>
+</li>
+<li>
+<p>To allow visualization tools access to the data contained in the clinical data model, select the <span class="bold">Business Area</span> checkbox.</p>
+<p>You can change the default schema name, BA_<span class="italic">model_name</span>. This is what users of the visualization tool will see. <span class="bold">Limitation</span>: Use a maximum of 19 characters for the schema name if you plan to create custom listings on the model. Do not use spaces or special characters other than underscore (_).</p>
+</li>
+<li>
+<p><span class="bold">Data Mart</span>: A data mart file contains all current data in a clinical data model for export to an external system. Select data mart type(s) to make available:</p>
+<p>Only the types that are available in your environment are displayed.</p>
+<ul>
+<li>
+<p>Oracle Export</p>
+</li>
+<li>
+<p>Text Export</p>
+</li>
+<li>
+<p>SAS Export</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+</ol>
+<p><span class="italic">Back to</span> <a href="#CHDHFBEE"><span class="xreftitleitalic">Set up clinical data models</span></a></p>
+</div>
+<!-- class="sect1" -->
+<a id="BABEGGDI"></a>
+<div id="DMWSC201" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Add tables</h2>
+<ul>
+<li>
+<p><a href="#BABBCJHE">Copy tables</a></p>
+</li>
+<li>
+<p><a href="#BABBDADA">Create tables from a file</a></p>
+</li>
+<li>
+<p><a href="#BABIEAAG">Add or modify a table manually</a></p>
+</li>
+</ul>
+<a id="BABBCJHE"></a>
+<div id="DMWSC10046" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Copy tables</h3>
+<p>Copied tables include:</p>
+<ul>
+<li>
+<p>Columns, constraints, and blinding and data processing attribute values.</p>
+</li>
+<li>
+<p>Validation checks that read from the selected tables, if all the source tables are included in the Copy operation.</p>
+</li>
+<li>
+<p>Public custom listings that read from the selected tables, if all the source tables are included in the Copy operation.</p>
+</li>
+</ul>
+<ol>
+<li>
+<p>Click the <img width="29" height="25" src="img/study_config_icon.gif" alt="Icon shows a wrench and a screwdriver, crossed." /><span class="bold">Study Configuration</span> icon at the top of the page. Make sure the <span class="bold">Clinical Data Models</span> tab is selected.</p>
+</li>
+<li>
+<p>Select the model into which you want to copy tables and click <span class="bold">Check Out</span>.</p>
+</li>
+<li>
+<p>In the Tables tab, click the <img width="17" height="19" src="img/icon_copy.gif" alt="Icon shows two sheets of paper." /><span class="bold">Copy Tables</span> icon.</p>
+</li>
+<li>
+<p>Select the source: either <span class="bold">Study Data Model</span> or <span class="bold">Library Data Model</span>.</p>
+</li>
+<li>
+<p>To specify the tables to copy, start by selecting the study category, then the study (if you selected Study Data Model), then the model.</p>
+<ul>
+<li>
+<p>To help find any of these, type part or all of their name in the field above.</p>
+</li>
+<li>
+<p>Click <span class="bold">Clear Filters</span> to remove all typed text and revert to the full list.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click to select the table or tables to copy.</p>
+</li>
+<li>
+<p>Specify how to handle any copied tables with the same name as existing tables in the model:</p>
+<ul>
+<li>
+<p>To replace tables with the same name that already exist in the current model, select <span class="bold">Overwrite the same table names</span>.</p>
+</li>
+<li>
+<p>If you leave it deselected, the system leaves the existing tables as they are, copies the selected tables and adds <code dir="ltr">_1</code> (or an increment of 1) to the name of each copied table that has the same name as an existing table. Any validation checks and custom listings copied with the table are mapped to the copied table.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+</ol>
+<p><span class="italic">Back to</span> <a href="#CHDHFBEE"><span class="xreftitleitalic">Set up clinical data models</span></a></p>
+</div>
+<!-- class="sect2" -->
+<a id="BABBDADA"></a>
+<div id="DMWSC10415" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Create tables from a file</h3>
+<p>You can create tables from a ZIP file that contains one or more text metadata (.mdd) files, one for each table. For the required syntax, see <a href="sc_adv_topics.htm#CIHIAGEC">"Required syntax for metadata files"</a>.</p>
+<ul>
+<li>
+<p>SAS Transport (CPort or XPort) files.</p>
+</li>
+<li>
+<p>A ZIP file that contains one SAS dataset.</p>
+</li>
+<li>
+<p>A ZIP file that contains one or more text metadata (.mdd) files, one for each table. Metadata files are the only way to create tables with all blinding attributes set; see <a href="sc_adv_topics.htm#CIHIAGEC">"Required syntax for metadata files"</a>.</p>
+</li>
+</ul>
+<ol>
+<li>
+<p>Click the <img width="29" height="25" src="img/study_config_icon.gif" alt="Icon shows a wrench and a screwdriver, crossed." /><span class="bold">Study Configuration</span> icon at the top of the page. Make sure the <span class="bold">Clinical Data Models</span> tab is selected.</p>
+</li>
+<li>
+<p>Select the model and click <span class="bold">Check Out</span>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+If the <span class="bold">Check Out</span> option is not active, you cannot check out the model because it is already checked out or you do not have the required privileges. To see who checked it out, look at the <span class="bold">Checked Out By</span> value at the left of the gray values near the top of the page. You may need to click the <span class="bold">&gt;&gt;</span> icon.</div>
+</li>
+<li>
+<p>Click the <img width="15" height="17" src="img/icon_modify.gif" alt="Icon shows a pencil." /><span class="bold">Modify</span> icon in the <span class="bold">Data Model</span> pane.</p>
+</li>
+<li>
+<p>For <span class="bold">Metadata Source</span>, select <span class="bold">Load from File</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Choose File</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Open</span>.</p>
+<p>The system creates one table per .mdd file.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BABIEAAG"></a>
+<div id="DMWSC203" class="sect2">
+<h3 class="sect2">Add or modify a table manually</h3>
+<ol>
+<li>
+<p>Click the <img width="29" height="25" src="img/study_config_icon.gif" alt="Icon shows a wrench and a screwdriver, crossed." /><span class="bold">Study Configuration</span> icon at the top of the page. Make sure the <span class="bold">Clinical Data Model</span> tab is selected.</p>
+</li>
+<li>
+<p>Select the Development lifecycle.</p>
+</li>
+<li>
+<p>Select the model and click <span class="bold">Check Out</span>.</p>
+<p>If the <span class="bold">Check Out</span> option is not active, either the model is already checked out or you do not have the required privileges. To see who checked it out, see the <span class="bold">Checked Out By</span> value near the top right of the page. You may need to click the <span class="bold">&gt;&gt;</span> double arrow icon.</p>
+<p><span class="bold">Caution:</span> Do not make structural changes to tables in InForm models; see <a href="#BABCAEIC">"Modify an InForm input model"</a> for information on the changes that are and are not allowed.</p>
+</li>
+<li>
+<p>In the Tables tab, click the <img width="16" height="17" src="img/icon_add.gif" alt="Icon is a plus sign." /><span class="bold">Add Table</span> icon or select a table and click the <img width="15" height="17" src="img/icon_modify.gif" alt="Icon shows a pencil." /><span class="bold">Modify Table</span> icon.</p>
+</li>
+<li>
+<p>Enter values in the following fields:</p>
+<ul>
+<li>
+<p>Enter a <span class="bold">name</span> and <span class="bold">description</span> for the column; see <a href="sc_adv_topics.htm#BABIBJAB">"Naming restrictions"</a> for restrictions.</p>
+</li>
+<li>
+<p><span class="bold">Oracle Name</span>: The system enters the value you entered for the name, truncated at 30 characters. See <a href="sc_adv_topics.htm#BABFEGEE">"Automatic name truncation"</a>.</p>
+</li>
+<li>
+<p><span class="bold">SAS Name</span>: The system enters the value you entered for the name, truncated at 32 characters.</p>
+</li>
+<li>
+<p><span class="bold">SAS Label</span>: (Optional) The system enters the value you entered for the name. It can be up to 256 characters.</p>
+</li>
+<li>
+<p><span class="bold">Aliases</span>: Enter one or more aliases, or alternate names for the table. If you want more than one alias, enter a comma-separated list with no spaces&mdash;for example: <code dir="ltr">dm,demo,demog,demography</code>.</p>
+<p>The system uses these in automapping transformations.</p>
+</li>
+<li>
+<p><span class="bold">SDTM Identifier</span>: If this table corresponds to an SDTM standard Subject or Subject Visit table, select its identifier from the list. See <a href="#CHDFFBBH">"Add Subject Visit and Subject tables"</a> for information about requirements. Using SDTM identifiers makes automapping more accurate.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+The SDTM Identifier field is available only when modifying a table.</div>
+</li>
+<li>
+<p><span class="bold">UOW (Unit of Work) Processing Type</span>: See <a href="#BABDAHBH">"Set up Unit of Work data processing for tables"</a>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><a id="BABGBFIB"></a>Set blinding attributes; see <a href="#BABIBEAG">"Set up data blinding in tables"</a>.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>Finish table details:</p>
+<ul>
+<li>
+<p>All clinical data tables must have columns and a primary key. See <a href="#BEIJDEIB">"Add columns to a table manually"</a> and <a href="#BABICFEC">"Add constraints to tables"</a>.</p>
+</li>
+<li>
+<p>You must select a data processing type. See <a href="#BABDAHBH">"Set up Unit of Work data processing for tables"</a>.</p>
+</li>
+<li>
+<p>You can change the way the table columns are displayed in the Listings pages.</p>
+</li>
+<li>
+<p>To mask data, see <a href="#BABIBEAG">"Set up data blinding in tables"</a>.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p><span class="italic">Back to</span> <a href="#CHDHFBEE"><span class="xreftitleitalic">Set up clinical data models</span></a></p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BEIJDEIB"></a>
+<div id="DMWSC204" class="sect1">
+<h2 class="sect1">Add columns to a table manually</h2>
+<p>You can add columns to a table as part of creating the table itself when you upload a file; see <a href="#BABBDADA">"Create tables from a file"</a>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+Be sure to add columns with the following SDTM IDs to support filtering in the Listings and Discrepancies windows: SUBJID, USUBJID, VISIT and VISITNUM. See <a href="sc_adv_topics.htm#CHDIGBGC">"Use SDTM identifiers to support important functionality"</a>.</div>
+<ol>
+<li>
+<p>Click the <img width="29" height="25" src="img/study_config_icon.gif" alt="Icon shows a wrench and a screwdriver, crossed." /><span class="bold">Study Configuration</span> icon at the top of the page. Make sure the <span class="bold">Clinical Data Models</span> tab is selected.</p>
+</li>
+<li>
+<p>Select the model and click <span class="bold">Check Out</span>.</p>
+<p><span class="bold">Caution:</span> Do not make structural changes to tables in InForm models; see <a href="#BABCAEIC">"Modify an InForm input model"</a> for information on the changes that are and are not allowed.</p>
+</li>
+<li>
+<p>Select the table.</p>
+</li>
+<li>
+<p>In the Column tab, click the <img width="16" height="17" src="img/icon_add.gif" alt="Icon is a plus sign." /><span class="bold">Add</span> icon. The Create Clinical Data Model Column window opens. The system checks out the table if it is not already checked out.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+There is a limit on the number of columns a table can have and still be displayed in the DMW Listings pages. See the note in <a href="sc_adv_topics.htm#CIHIAGEC">"Required syntax for metadata files"</a> for more information.</div>
+</li>
+<li>
+<p>Fill in the following fields:</p>
+<ul>
+<li>
+<p>Enter a <span class="bold">Name</span> and <span class="bold">Description</span> for the column; see <a href="sc_adv_topics.htm#BABIBJAB">"Naming restrictions"</a> for restrictions.</p>
+</li>
+<li>
+<p><span class="bold">Oracle Data Type</span>: Select the appropriate data type: Varchar2, Number, or Date. All standard rules for Oracle data types apply.</p>
+<ul>
+<li>
+<p><span class="bold">DATE</span>: For each Date value, Oracle stores the following information: century, year, month, date, hour, minute, and second. Although date and time information can be represented in both character and number datatypes, the Date datatype has special associated properties.</p>
+</li>
+<li>
+<p><span class="bold">NUMBER</span>: Stores zero, positive, and negative fixed and floating-point numbers. A Number column can contain a number with or without a decimal marker and/or a sign (-).</p>
+</li>
+<li>
+<p><span class="bold">VARCHAR2</span>: Specifies a variable-length character string. For each row, the system stores each value in the column as a variable-length field unless a value exceeds the column's maximum length, in which case the system returns an error.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="bold">Length</span>: The requirements vary according to the data type:</p>
+<ul>
+<li>
+<p><span class="bold">DATE</span>: No length required.</p>
+</li>
+<li>
+<p><span class="bold">VARCHAR2</span>: (Required) The default value is 50. The value must be between 1 and 4000.</p>
+</li>
+<li>
+<p><span class="bold">NUMBER</span>: (Required) The default value is 10. The maximum value is 38.</p>
+</li>
+</ul>
+<p>If the data type is Number you can also enter a value for <span class="bold">Precision</span>, which is the total number of digits allowed to the right of the decimal point. For example, if Precision is set to 2 and a data value of 34.333 is entered in this column, the system stores the data value as 34.33. Oracle guarantees the portability of numbers with precision ranging from 1 to 38.</p>
+</li>
+<li>
+<p><span class="bold">Map to Filter</span>: If the column has the same function and data type as one of the SDTM column identifiers, it is good practice to select it from the list because the system uses this information in several ways; see <a href="sc_adv_topics.htm#CHDIGBGC">"Use SDTM identifiers to support important functionality"</a>.</p>
+</li>
+<li>
+<p><span class="bold">Oracle Name</span>: By default, the system populates this with the value you entered for the name, truncated at 30 characters.</p>
+</li>
+<li>
+<p><span class="bold">SAS Name</span>: By default, the system populates this with the value you entered for the name, truncated at 32 characters.</p>
+</li>
+<li>
+<p><span class="bold">SAS Label</span>: (Optional) By default, the system populates this with the value you entered for the name. It can be up to 256 characters.</p>
+</li>
+<li>
+<p><span class="bold">SAS Format</span>: By default, the system enters a dollar sign ($) followed by the value you entered in the Length field.</p>
+</li>
+<li>
+<p><span class="bold">Default Value</span>: (Optional). Enter a default data value.</p>
+</li>
+<li>
+<p><span class="bold">Aliases for Automapping</span>: Enter one or more aliases, or alternate names for the column. If you want more than one alias, enter a comma-separated list with no spaces; for example: <code dir="ltr">dm,demo,demog,demography</code></p>
+</li>
+<li>
+<p><span class="bold">Nullable</span>: If selected, having a value in this column is not required. If not selected, all rows must have a value in this column.</p>
+</li>
+<li>
+<p><span class="bold">Codelist</span> (Optional): If the column should be populated with a limited set of values that are defined in a codelist, select the appropriate therapeutic area (or other category) and then the codelist. You can apply a codelist only to columns with a data type of varchar2.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If the table may need to be pivoted from a horizontal (short fat) structure to a vertical (tall skinny) structure&mdash;or the reverse&mdash;during a transformation, the pivot column must be associated with a codelist; see <a href="transform.htm#BABDDJGB">"Pivot"</a>.</div>
+</li>
+</ul>
+</li>
+<li>
+<p>Enter blinding attributes; available only if the table has a blinding type of Column; see <a href="#BABHBFBB">"Specify masking attributes for a column"</a>.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+</ol>
+<p><span class="italic">Back to</span> <a href="#CHDHFBEE"><span class="xreftitleitalic">Set up clinical data models</span></a></p>
+</div>
+<!-- class="sect1" -->
+<a id="BABICFEC"></a>
+<div id="DMWSC206" class="sect1">
+<h2 class="sect1">Add constraints to tables</h2>
+<ol>
+<li>
+<p>Click the <img width="29" height="25" src="img/study_config_icon.gif" alt="Icon shows a wrench and a screwdriver, crossed." /><span class="bold">Study Configuration</span> icon at the top of the page. Make sure the <span class="bold">Clinical Data Models</span> tab is selected.</p>
+</li>
+<li>
+<p>Select the model and click <span class="bold">Check Out</span>.</p>
+<p>If the <span class="bold">Check Out</span> option is not active, you cannot check out the model because it is already checked out or you do not have the required privileges. To see who checked it out, look at the <span class="bold">Checked Out By</span> value at the left of the gray values near the top of the page. You may need to click the <span class="bold">&gt;&gt;</span> icon.</p>
+</li>
+<li>
+<p>Select the table.</p>
+</li>
+<li>
+<p>In the Constraints tab, click the <img width="16" height="17" src="img/icon_add.gif" alt="Icon is a plus sign." /><span class="bold">Add</span> icon.</p>
+</li>
+<li>
+<p>Enter values:</p>
+<ul>
+<li>
+<p><span class="bold">Constraint</span>: Enter a name for the constraint. It must be unique among constraints for the table and must not contain special characters or Oracle or SQL reserved words.</p>
+</li>
+<li>
+<p><span class="bold">Description</span>: (Optional)</p>
+</li>
+<li>
+<p><span class="bold">Constraint Type</span>: Select one:</p>
+<ul>
+<li>
+<p><span class="bold">Check</span>: The check constraint allows you to specify allowable values for a particular column. Enter one allowed value in the <span class="bold">Add Value</span> field and click the arrow icon to move the value into the right-hand column; repeat for each value.</p>
+<p>If any row contains a different value for the column, the system does not insert the record but generates an error to the program writing to the table instance. If the program does not handle the error, the job fails.</p>
+</li>
+<li>
+<p><span class="bold">Primary Key</span>: (Required) A primary key is a column or set of columns whose values identify a row in a table as unique. The system uses the primary key to trace data lineage; see <a href="sc_adv_topics.htm#A1097920">"How the system tracks data lineage"</a>.</p>
+<p>Primary key columns cannot have a null value in any row.</p>
+<p>The system creates an index based on the primary key, which it uses to enforce a unique constraint and to speed up queries on the table.</p>
+</li>
+<li>
+<p><span class="bold">Unique Key</span>: A unique key is similar to a primary key in that it can include one or more columns whose values identify a row as unique. The difference is that the system allows null values in the columns that are part of a unique key.</p>
+<p>Any number of rows can include null (empty) values. A null in a column (or even all nullable columns in a composite unique key) satisfies the unique key constraint. However, you cannot have identical non-null values in the columns of a partially null composite unique key constraint.</p>
+</li>
+<li>
+<p><span class="bold">Non-Unique Index</span>: A non-unique index keeps rows sorted on the specified column or columns to speed up queries.</p>
+</li>
+<li>
+<p><span class="bold">Bitmap Index</span>: A bitmap index stores rowids (row IDs) associated with a key value as a bitmap. Each bit in the bitmap corresponds to a possible rowid. If a particular bit is set, the row with the corresponding rowid contains the key value.</p>
+</li>
+</ul>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The Not Null constraint is handled as an attribute called Nullable for each column.</div>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="bold">Columns</span>: Specify the columns in the constraint by selecting them from the list on the left and using an <span class="bold">Arrow</span> icon to move them to the right.</p>
+</li>
+<li>
+<p>Select <span class="bold">Supports Duplicate</span> to support inserting records with the same primary key value within a single data load, which may be required in a few cases. Selecting this option ensures that all records are loaded and not deleted but requires careful checking of the data. See <a href="sc_adv_topics.htm#CIHJBGAD">"Supporting duplicate primary key values in a load"</a>.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+</ol>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+If you create tables by uploading text files you can define constraints at the same time; see <a href="sc_adv_topics.htm#CIHIAGEC">"Required syntax for metadata files"</a>. InForm tables' constraints are imported as part of a metadata load and cannot be modified in the input model.</div>
+<p><span class="italic">Back to</span> <a href="#CHDHFBEE"><span class="xreftitleitalic">Set up clinical data models</span></a></p>
+</div>
+<!-- class="sect1" -->
+<a id="BABDAHBH"></a>
+<div id="DMWSC1003" class="sect1">
+<h2 class="sect1">Set up Unit of Work data processing for tables</h2>
+<p>Using Unit of Work (UOW) processing can speed up data loading and transformation execution. See <a href="sc_adv_topics.htm#CIHHHIGA">"Data processing types and modes"</a> for more information.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+We recommend always defining tables as Subject Visit UOW if both Subject and Visit are part of the primary key and as Subject UOW if the Subject column is part of the primary key but Visit is not.</div>
+<ol>
+<li>
+<p>Click the <img width="29" height="25" src="img/study_config_icon.gif" alt="Icon shows a wrench and a screwdriver, crossed." /><span class="bold">Study Configuration</span> icon at the top of the page. Make sure the <span class="bold">Clinical Data Models</span> tab is selected.</p>
+</li>
+<li>
+<p>Select the model and click <span class="bold">Check Out</span>.</p>
+</li>
+<li>
+<p>Select the table.</p>
+</li>
+<li>
+<p>Define a primary key in the Columns pane, Constraints tab, if there is not already a primary key defined. See <a href="#BABICFEC">"Add constraints to tables"</a>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+To quickly see if there is a primary key defined, check the value of the <span class="bold">Process Type</span> (not UOW Process Type) attribute in the Tables pane. If there is no primary key, the value is <span class="bold">Staging with Audit</span>. When you define a primary key, the value changes to <span class="bold">Reload</span>.</div>
+</li>
+<li>
+<p>Click the <img width="15" height="17" src="img/icon_modify.gif" alt="Icon shows a pencil." /> <span class="bold">Modify Table</span> icon to modify the UOW Processing Type attribute.</p>
+</li>
+<li>
+<p>In the Modify Clinical Data Model Table pop-up, select one of the following values from the <span class="bold">UOW Processing Type</span> drop-down:</p>
+<ul>
+<li>
+<p><span class="bold">Non UOW</span>: Jobs writing to the table will use Reload processing.</p>
+</li>
+<li>
+<p><span class="bold">Subject</span>: Jobs writing to the table will use try to use UOW processing with Subject as the unit of work.</p>
+<p>The table must have a column designated with the USUBJID (Unique Subject ID) SDTM Identifier, and must have a primary key that includes that column.</p>
+</li>
+<li>
+<p><span class="bold">Subject Visit</span>: Jobs writing to the table will try to use UOW processing with Subject Visit as the unit of work.</p>
+<p>The table must have one column designated with the USUBJID (Unique Subject ID) SDTM Identifier and another with the VISITNUM (Visit Number) SDTM Identifier, and both columns must be included in the primary key.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+</ol>
+<p><span class="italic">Back to</span> <a href="#CHDHFBEE"><span class="xreftitleitalic">Set up clinical data models</span></a></p>
+</div>
+<!-- class="sect1" -->
+<a id="BABBGIHA"></a>
+<div id="DMWSC157" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Configure table display in the Listings page</h2>
+<p>You can change the way table columns are displayed in the Default Listings page.</p>
+<ol>
+<li>
+<p>Click the <img width="29" height="25" src="img/study_config_icon.gif" alt="Icon shows a wrench and a screwdriver, crossed." /><span class="bold">Study Configuration</span> icon at the top of the page. Make sure the <span class="bold">Clinical Data Models</span> tab is selected.</p>
+</li>
+<li>
+<p>Select the model and click <span class="bold">Check Out</span>.</p>
+</li>
+<li>
+<p>Select the table.</p>
+</li>
+<li>
+<p>Go to the <span class="bold">Display Characteristics</span> tab. Each column name is displayed. If the column has been marked Not in Use in the transformation that writes to the table, the Not in Use column displays a Y. These columns are not displayed in the Listings pages.</p>
+</li>
+<li>
+<p>Click the <img width="15" height="17" src="img/icon_modify.gif" alt="Icon shows a pencil." /><span class="bold">Modify</span> icon.</p>
+</li>
+<li>
+<p>For each displayed column, specify the following:</p>
+<ul>
+<li>
+<p><span class="bold">Displayed?</span>: Deselect if you do not want to display the column on the Listings pages.</p>
+</li>
+<li>
+<p><span class="bold">Display Header</span>: Enter the column header to display.</p>
+</li>
+<li>
+<p><span class="bold">Display Hover Text</span>: Enter hover text to display for the column.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>To change the column order, click the <img width="19" height="20" src="img/icon_reorder.gif" alt="Icon shows letters A and Z and an Up arrow." /> <span class="bold">Reorder</span> icon. Select a column and then use the arrows to change its order relative to other columns. Columns at the top are displayed on the left.</p>
+</li>
+</ol>
+<p><span class="italic">Back to</span> <a href="#CHDHFBEE"><span class="xreftitleitalic">Set up clinical data models</span></a></p>
+</div>
+<!-- class="sect1" -->
+<a id="BABIBEAG"></a>
+<div id="DMWSC1002" class="sect1">
+<h2 class="sect1">Set up data blinding in tables</h2>
+<ol>
+<li>
+<p>Click the <img width="29" height="25" src="img/study_config_icon.gif" alt="Icon shows a wrench and a screwdriver, crossed." /><span class="bold">Study Configuration</span> icon at the top of the page. Make sure the <span class="bold">Clinical Data Models</span> tab is selected.</p>
+</li>
+<li>
+<p>Select the model and click <span class="bold">Check Out</span>.</p>
+</li>
+<li>
+<p>Select the table.</p>
+</li>
+<li>
+<p>Set blinding attributes:</p>
+<ul>
+<li>
+<p><span class="bold">Blinded</span>: Select if the table may ever contain any sensitive data that should be hidden.</p>
+</li>
+<li>
+<p><span class="bold">Blinding Type</span> (available only if Blinded is selected): Select one:</p>
+<ul>
+<li>
+<p><span class="bold">Table</span>: Select to hide all data in the table, then click <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p><span class="bold">Column</span>: Select to mask all values in one or more columns, or in cells where data in the row meets conditions you specify, then click <span class="bold">OK</span>.</p>
+<p>Then select one column, click the <img width="15" height="17" src="img/icon_modify.gif" alt="Icon shows a pencil." /><span class="bold">Modify</span> icon and specify the masking value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+Enclose the value in single quotes.</div>
+<p>The default masking values are <code dir="ltr">xxxxx</code> for character data, <code dir="ltr">99999</code> for numeric data, and <code dir="ltr">15-AUG-3501</code> for dates.</p>
+<p>To blind data only in cells that meet certain conditions, specify the conditions; see <a href="#BABHBFBB">"Specify masking attributes for a column"</a>.</p>
+</li>
+<li>
+<p><span class="bold">Row</span>: Select to hide certain rows in their entirety.</p>
+<p><span class="bold">Blinding Criteria</span>: Click the <img width="19" height="20" src="img/icon_modify_criteria.gif" alt="Icon shows letters and pencil." /><span class="bold">Modify Blinding Criteria</span> icon to specify which rows should be hidden. See <a href="dmw_programs.htm#BABFACFB">"Use the Expression Builder"</a>.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p><span class="italic">Back to</span> <a href="#CHDHFBEE"><span class="xreftitleitalic">Set up clinical data models</span></a></p>
+<a id="BABHBFBB"></a>
+<div id="DMWSC1032" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Specify masking attributes for a column</h3>
+<p>If you selected a blinding type of Column for a table, at least one of the columns in the table must be masked.</p>
+<ol>
+<li>
+<p>Click the <img width="29" height="25" src="img/study_config_icon.gif" alt="Icon shows a wrench and a screwdriver, crossed." /><span class="bold">Study Configuration</span> icon at the top of the page. Make sure the <span class="bold">Clinical Data Models</span> tab is selected.</p>
+</li>
+<li>
+<p>Select the model and click <span class="bold">Check Out</span>.</p>
+</li>
+<li>
+<p>Select the table.</p>
+</li>
+<li>
+<p>Select the column and click the <img width="15" height="17" src="img/icon_modify.gif" alt="Icon shows a pencil." /><span class="bold">Modify</span> icon. In the Modify Clinical Data Model Column window, select the <span class="bold">Blinding Attributes</span> tab.</p>
+</li>
+<li>
+<p>Select a <span class="bold">Masking Level</span>:</p>
+<ul>
+<li>
+<p><span class="bold">Cell</span>: Masks the real data only in certain rows in this column.</p>
+</li>
+<li>
+<p><span class="bold">Column</span>: Masks the real data in this column in every row.</p>
+</li>
+<li>
+<p><span class="bold">None</span>: No rows are masked in this column.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="bold">Masking Value</span>: Do one of the following to specify what values to display instead of the real values:</p>
+<ul>
+<li>
+<p>Enter a constant value to be displayed in every row.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+Enclose the value in single quotes.</div>
+<p>The default masking values are: <code dir="ltr">xxxxx</code> for text, <code dir="ltr">99999</code> for numbers, and <code dir="ltr">15 aug 3501</code> for dates.</p>
+</li>
+<li>
+<p>Click the <img width="19" height="20" src="img/icon_modify_criteria.gif" alt="Icon shows letters and pencil." /><span class="bold">Modify Masking Value</span> icon to create an expression to generate multiple values for the system to display; see <a href="dmw_programs.htm#BABFACFB">"Use the Expression Builder"</a>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="bold">Masking Criteria</span> (for cell-level masking): Click the <img width="19" height="20" src="img/icon_modify_criteria.gif" alt="Icon shows letters and pencil." /><span class="bold">Modify Masking Criteria</span> icon to specify the criteria for blinding cells in the column; see <a href="dmw_programs.htm#BABFACFB">"Use the Expression Builder"</a>.</p>
+</li>
+</ol>
+<p><span class="italic">Back to</span> <a href="#CHDHFBEE"><span class="xreftitleitalic">Set up clinical data models</span></a></p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CHDFFBBH"></a>
+<div id="DMWSC218" class="sect1">
+<h2 class="sect1">Add Subject Visit and Subject tables</h2>
+<p>Include a Subject Visit table in at least one clinical data model in each study. Associate one and only one Subject Visit table per study with the SUBJECTVISIT table SDTM identifier. The system uses only the Subject Visit table to support filters.</p>
+<p>This is required to support filtering data and discrepancies by subject and visit and to support tracking subject visit completeness using flags. See <a href="sc_adv_topics.htm#BABHJJGC">"How subject and visit filters work"</a>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+DMW includes an SDTM-compatible Subject Visit table and Subject table that you can copy. Alternatively, you can add an SDTM identifier to an existing table; see <a href="#BABIEGHI">"Use an existing table as the Subject Visit or Subject table"</a>.</div>
+<div id="DMWSC911" class="sect2"><a id="sthref15"></a>
+<h3 class="sect2">Copy the default Subject Visit or Subject table</h3>
+<ol>
+<li>
+<p>Click the <img width="29" height="25" src="img/study_config_icon.gif" alt="Icon shows a wrench and a screwdriver, crossed." /><span class="bold">Study Configuration</span> icon at the top of the page. Make sure the <span class="bold">Clinical Data Models</span> tab is selected.</p>
+</li>
+<li>
+<p>Select the model and click <span class="bold">Check Out</span>.</p>
+<p>If the <span class="bold">Check Out</span> option is not active, you cannot check out the model because it is already checked out or you do not have the required privileges. To see who checked it out, look at the <span class="bold">Checked Out By</span> value at the left of the gray values near the top of the page. You may need to click the <span class="bold">&gt;&gt;</span> icon.</p>
+</li>
+<li>
+<p>In the <span class="bold">Actions</span> drop-down, select <span class="bold">Copy Subject/Visit Table</span>.</p>
+</li>
+<li>
+<p>Select one:</p>
+<ul>
+<li>
+<p><span class="bold">Copy from Library</span>: Allows you to copy a Subject, Subject Visit, or both tables created in a library clinical data model by your company.</p>
+<p>Then select the study type&mdash;therapeutic area or other category&mdash;that contains the library model whose tables you want to copy, and then select the library model.</p>
+</li>
+<li>
+<p><span class="bold">Default Structure</span>: Allows you to copy the Subject, Subject Visit, or both tables that are shipped with DMW. The table and columns are already associated with the appropriate SDTM identifiers; see <a href="sc_adv_topics.htm#CHDIGBGC">"Use SDTM identifiers to support important functionality"</a>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Select which tables to copy: <span class="bold">Subject</span>, <span class="bold">Subject Visit</span>, or <span class="bold">Both</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+</ol>
+<p><span class="italic">Back to</span> <a href="#CHDHFBEE"><span class="xreftitleitalic">Set up clinical data models</span></a></p>
+</div>
+<!-- class="sect2" -->
+<a id="BABIEGHI"></a>
+<div id="DMWSC99902" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Use an existing table as the Subject Visit or Subject table</h3>
+<p>Existing tables must comply with the <a href="#CHDBCBED">Subject Visit table requirements</a> or <a href="#CHDEGAFD">Subject table requirements</a> to be designated as the Subject Visit or Subject table.</p>
+<ol>
+<li>
+<p>Click the <img width="29" height="25" src="img/study_config_icon.gif" alt="Icon shows a wrench and a screwdriver, crossed." /><span class="bold">Study Configuration</span> icon at the top of the page. Make sure the <span class="bold">Clinical Data Models</span> tab is selected.</p>
+</li>
+<li>
+<p>Select the model and click <span class="bold">Check Out</span>.</p>
+</li>
+<li>
+<p>Select the table and click the <img width="15" height="17" src="img/icon_modify.gif" alt="Icon shows a pencil." /><span class="bold">Modify</span> icon.</p>
+</li>
+<li>
+<p>In the Modify Clinical Data Model Table window, select a value from the <span class="bold">SDTM Identifier</span> drop-down list:</p>
+<ul>
+<li>
+<p>SUBJECT</p>
+</li>
+<li>
+<p>SUBJECTVISIT</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+</ol>
+<a id="CHDBCBED"></a>
+<div id="DMWSC99934" class="sect3">
+<h4 class="sect3">Subject Visit table requirements</h4>
+<p>If you designate another table as the SDTM Subject table:</p>
+<ul>
+<li>
+<p>Its primary key must include the Unique Subject ID and Visit Number columns in that order, and no other columns.</p>
+</li>
+<li>
+<p>These columns must be linked to USUBJID and VISITNUM SDTM identifiers.</p>
+</li>
+<li>
+<p>The table must be linked to the SDTM SUBJECTVISIT identifier.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<a id="CHDEGAFD"></a>
+<div id="DMWSC99935" class="sect3">
+<h4 class="sect3">Subject table requirements</h4>
+<p>If you designate another table as the SDTM Subject table:</p>
+<ul>
+<li>
+<p>Its primary key must include the Subject ID and no other columns.</p>
+</li>
+<li>
+<p>The Subject ID column must be linked to the SUBJID SDTM identifiers.</p>
+</li>
+</ul>
+<p><span class="italic">Back to</span> <a href="#CHDHFBEE"><span class="xreftitleitalic">Set up clinical data models</span></a></p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CDCHGDCD"></a>
+<div id="DMWSC10061" class="sect1">
+<h2 class="sect1">Map columns to data to be derived from TMS</h2>
+<p><img width="54" height="22" src="img/icon_video.gif" alt="Text Show me how! is a video link." /> <code dir="ltr"><a href="https://apexapps.oracle.com/pls/apex/f?p=44785:265:0::::P265_CONTENT_ID:23169">Show me how!</a><a href=""></a></code></p>
+<p><span class="bold">Prerequisites</span>: The study must be assigned to a TMS dictionary domain and your administrator must have defined a TMS Set for the dictionary.</p>
+<ol>
+<li>
+<p>Click the <img width="29" height="25" src="img/study_config_icon.gif" alt="Icon shows a wrench and a screwdriver, crossed." /><span class="bold">Study Configuration</span> icon at the top of the page. Make sure the <span class="bold">Clinical Data Models</span> tab is selected.</p>
+</li>
+<li>
+<p>Select a target model and click <span class="bold">Check Out</span>.</p>
+</li>
+<li>
+<p>Select the target table that contains data you want to code in TMS.</p>
+</li>
+<li>
+<p>Click the <span class="bold">TMS</span> tab, then click the <img width="16" height="17" src="img/icon_add.gif" alt="Icon is a plus sign." /><span class="bold">Add</span> icon. The <span class="bold">Add TMS Column Association</span> window appears.</p>
+</li>
+<li>
+<p>Select the <span class="bold">TMS Set</span> to use. The system displays the TMS Set description, base dictionary, and primary column name, which is the name of the dictionary level defined as the coding level in your TMS installation.</p>
+</li>
+<li>
+<p>Select the <span class="bold">primary column</span>. The system displays all VARCHAR2 data type columns in the clinical data model table. Select the one whose value you want to have coded in TMS.</p>
+<p>The system displays the derived columns defined for the selected TMS Set.</p>
+</li>
+<li>
+<p>In the <span class="bold">Column Name</span> field, select the table column to map to each TMS Set derived column that you need in your study. You do not need to map all the TMS Set columns.</p>
+<p>If you have not yet added columns to the table to receive the derived data from TMS, click <span class="bold">OK</span>, then add the columns in the Columns tab. Then click the <span class="bold">Edit</span> icon in the TMS tab and map the new columns to the TMS Set derived columns.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+</ol>
+<p><span class="italic">Back to</span> <a href="#CHDHFBEE"><span class="xreftitleitalic">Set up clinical data models</span></a></p>
+</div>
+<!-- class="sect1" -->
+<a id="A135061803"></a>
+<div id="DMWSC10435" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Extract data from a clinical data model</h2>
+<p>If a model has been set up to support data extraction, you can extract all current data in the model into a file.</p>
+<ul>
+<li>
+<p>To set up data extraction, see <a href="#BABEGJEI">Generate a data mart program</a>.</p>
+</li>
+<li>
+<p>To run a data mart, see <a href="#BABBCDIC">Run the data extract job</a>.</p>
+</li>
+</ul>
+<div id="DMWSC99936" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref16"></a>
+<h3 class="sect2">View existing data marts and their run history</h3>
+<ol>
+<li>
+<p>Click the <img width="29" height="25" src="img/study_config_icon.gif" alt="Icon shows a wrench and a screwdriver, crossed." /><span class="bold">Study Configuration</span> icon at the top of the page. Make sure the <span class="bold">Clinical Data Models</span> tab is selected.</p>
+</li>
+<li>
+<p>Select the model.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Data Extraction</span> tab.</p>
+</li>
+<li>
+<p>Select a data mart. Its run history appears in the lower pane.</p>
+</li>
+<li>
+<p>In the <span class="bold">Run History</span> pane, click the link in the relevant column to:</p>
+<ul>
+<li>
+<p>View the output.</p>
+</li>
+<li>
+<p>Download the output.</p>
+</li>
+<li>
+<p>View the log file.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p><span class="italic">Back to</span> <a href="#CHDHFBEE"><span class="xreftitleitalic">Set up clinical data models</span></a></p>
+</div>
+<!-- class="sect2" -->
+<a id="BABEGJEI"></a>
+<div id="DMWSC99761" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Generate a data mart program</h3>
+<ol>
+<li>
+<p>Click the <img width="29" height="25" src="img/study_config_icon.gif" alt="Icon shows a wrench and a screwdriver, crossed." /><span class="bold">Study Configuration</span> icon at the top of the page. Make sure the <span class="bold">Clinical Data Models</span> tab is selected.</p>
+</li>
+<li>
+<p>Select the model and click <span class="bold">Check Out</span>.</p>
+</li>
+<li>
+<p>Click the <img width="15" height="17" src="img/icon_modify.gif" alt="Icon shows a pencil." /><span class="bold">Modify</span> icon.</p>
+</li>
+<li>
+<p>Select one or more data mart types to generate.</p>
+</li>
+<li>
+<p>Install the model.</p>
+</li>
+</ol>
+<p>After installation completes, go to the <span class="bold">Data Extraction</span> tab to run the data mart.</p>
+<p><span class="italic">Back to</span> <a href="#CHDHFBEE"><span class="xreftitleitalic">Set up clinical data models</span></a></p>
+</div>
+<!-- class="sect2" -->
+<a id="BABBCDIC"></a>
+<div id="DMWSC99762" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Run the data extract job</h3>
+<ol>
+<li>
+<p>Click the <img width="29" height="25" src="img/study_config_icon.gif" alt="Icon shows a wrench and a screwdriver, crossed." /><span class="bold">Study Configuration</span> icon at the top of the page. Make sure the <span class="bold">Clinical Data Models</span> tab is selected.</p>
+</li>
+<li>
+<p>Select a model.</p>
+</li>
+<li>
+<p>In the <span class="bold">Data Extraction</span> tab, select a data mart to run.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Execute</span> icon.</p>
+</li>
+<li>
+<p>Enter values:</p>
+<ul>
+<li>
+<p><span class="bold">For a text data mart:</span></p>
+<ul>
+<li>
+<p><span class="bold">Separator</span>: Select the character to use to separate column values in the output file.</p>
+</li>
+<li>
+<p><span class="bold">Enclosing Character</span>: Select the character to use to separate records in the output file. You can select None.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="bold">For an Oracle data mart:</span></p>
+<ul>
+<li>
+<p><span class="bold">Compress</span>: Specifies how Export and Import manage the initial extent for table data.</p>
+<p>If set to <span class="bold">Y</span>, data is flagged for consolidation into one initial extent upon import. If extent sizes are large (for example, because of the PCTINCREASE parameter), then the allocated space will be larger than the space required to hold the data. This is the default value.</p>
+<p>If set to <span class="bold">N</span>, the export utility uses the current storage parameters, including the values of initial extent size and next extent size. The values of the parameters may be the values specified in the CREATE TABLE or ALTER TABLE statements or the values modified by the database system. For example, the NEXT extent size value may be modified if the table grows and if the PCTINCREASE parameter is nonzero.</p>
+</li>
+<li>
+<p><span class="bold">Statistics</span>: Select the type of database optimizer statistics to generate when the exported data is imported. Options are Estimate, Compute, and None. The default value is None.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Select the appropriate <span class="bold">Blind Break</span> option.</p>
+<ul>
+<li>
+<p><span class="bold">Not Applicable</span>: None of the tables are blinded. All data will be included.</p>
+</li>
+<li>
+<p><span class="bold">Real (Blind Break)</span>: If selected, the real, blinded data will be included and the action will be audited. This option is available only if you have special privileges.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+In this release it is not possible to extract masking values. If any data is blinded in the model, you can only extract it if you perform an audited blind break, extracting the real, sensitive data.</div>
+</li>
+<li>
+<p><span class="bold">Real (Unblinded)</span>: If available, the real data has been unblinded. If selected, the real, unblinded data will be included. This option is available only if you have special privileges.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Select an execution type:</p>
+<ul>
+<li>
+<p><span class="bold">Immediate</span> to submit the job immediately.</p>
+</li>
+<li>
+<p><span class="bold">Deferred</span> to schedule a single execution. Click the Start Date icon and select a date and time.</p>
+</li>
+<li>
+<p><span class="bold">Scheduled</span> to create a regular execution schedule. Select a start and end date and time and a frequency number and unit (hours, days, weeks, or months).</p>
+<p>For example, with a frequency unit of months and a frequency of 1, the job will run once a month from the specified start date and time to the specified end date and time.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p><span class="italic">Back to</span> <a href="#CHDHFBEE"><span class="xreftitleitalic">Set up clinical data models</span></a></p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BEIBHJCE"></a>
+<div id="DMWSC229" class="sect1">
+<h2 class="sect1">Modify a clinical data model</h2>
+<p>See also <a href="#BABIEAAG">"Add or modify a table manually"</a></p>
+<a id="BABCJIHH"></a>
+<div id="DMWSC1082" class="sect2">
+<h3 class="sect2">Modify a non-InForm model</h3>
+<ol>
+<li>
+<p>Go to the model in the Study Configuration or Library page.</p>
+</li>
+<li>
+<p>Select the model and click <span class="bold">Check Out</span>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+To modify a target data model, do not check it out directly. Instead, check out the transformation that writes to it, which also checks out the model. Then return to the model and make your changes, which are then synchronized with the transformation.</div>
+</li>
+<li>
+<p>Click the <img width="15" height="17" src="img/icon_modify.gif" alt="Icon shows a pencil." /><span class="bold">Modify</span> icon in the Data Model pane on the left. In the Description field, describe the changes you are making.</p>
+</li>
+<li>
+<p>Make changes. If you have the required privileges, you can:</p>
+<ul>
+<li>
+<p><span class="bold">Add, modify, or delete tables</span> by clicking the appropriate icon and making the changes; see <a href="#BABEGGDI">"Add tables"</a>.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You can add tables or modify existing ones using a metadata file, but you cannot remove tables using a file.</div>
+</li>
+<li>
+<p><span class="bold">Add, modify, or delete columns</span> in a table by selecting the table in the upper pane, clicking the appropriate icon in the Columns tab, and making the changes; see <a href="#BEIJDEIB">"Add columns to a table manually"</a>.</p>
+</li>
+<li>
+<p><span class="bold">Add, modify, or delete constraints</span> in a table by selecting the table in the upper pane, clicking the appropriate icon in the Constraints tab, and making the changes; see <a href="#BABICFEC">"Add constraints to tables"</a>.</p>
+</li>
+<li>
+<p><span class="bold">Update to Current Library Version</span> If the study model was created from a library model and the library model has been updated, the <span class="bold">Upgrade to Latest Version</span> button appears. Click it to update your study model to the new library version.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Any changes that have been made to the study model will be lost.</div>
+</li>
+<li>
+<p><span class="bold">Update Validation Status</span> Select this option from the <span class="bold">Actions</span> drop-down list to change the validation status or to upload a supporting document for the validation status change; see <a href="sc_adv_topics.htm#BABCICDE">"Validation status and lifecycle stages"</a>. The system displays this button only if you have the privileges required.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="bold">Install</span> the model. The system uses the old version until the new one is installed. The model must have a status of Installable.</p>
+<p>A model is not installable if it does not have any tables or if any of its tables are not installable. A table is not installable if it has no columns.</p>
+</li>
+</ol>
+<p><span class="italic">Back to</span> <a href="#CHDHFBEE"><span class="xreftitleitalic">Set up clinical data models</span></a></p>
+</div>
+<!-- class="sect2" -->
+<a id="BABCAEIC"></a>
+<div id="DMWSC1083" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Modify an InForm input model</h3>
+<p>The InForm model must have exactly the same table structures as in InForm. You cannot make any structural changes.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+You can change attributes that apply only in DMW, but if metadata is reloaded from InForm either manually or automatically, your manual changes are lost. See <a href="#BABJJADJ">"Load InForm metadata"</a> for more information.</div>
+<ol>
+<li>
+<p>Click the <img width="29" height="25" src="img/study_config_icon.gif" alt="Icon shows a wrench and a screwdriver, crossed." /><span class="bold">Study Configuration</span> icon at the top of the page. Make sure the <span class="bold">Clinical Data Models</span> tab is selected.</p>
+</li>
+<li>
+<p>Select the model and the Development lifecycle.</p>
+</li>
+<li>
+<p>In the <span class="bold">InForm Configuration</span> tab, click the <span class="bold">Suspend Data Loading</span> icon for the Development lifecycle.</p>
+</li>
+<li>
+<p><span class="bold">Check out</span> the model.</p>
+</li>
+<li>
+<p>Make your changes. See:</p>
+<ul>
+<li>
+<p><a href="#BABICFEC">"Add constraints to tables"</a></p>
+</li>
+<li>
+<p><a href="#BABIBEAG">"Set up data blinding in tables"</a></p>
+</li>
+<li>
+<p><a href="#BABDAHBH">"Set up Unit of Work data processing for tables"</a></p>
+</li>
+<li>
+<p><a href="#BABIEAAG">"Add or modify a table manually"</a> for information on adding tables aliases and SDTM identifiers. But do not add or remove tables.</p>
+</li>
+<li>
+<p><a href="#BEIJDEIB">"Add columns to a table manually"</a> for information on adding column aliases, codelists, and SDTM identifiers. But do not add or remove columns.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="bold">Install</span> the model. The system uses the old version until the new one is installed. The model must have a status of Installable.</p>
+<p>A model is not installable if it does not have any tables or if any of its tables are not installable. A table is not installable if it has no columns.</p>
+</li>
+</ol>
+<p><span class="italic">Back to</span> <a href="#CHDHFBEE"><span class="xreftitleitalic">Set up clinical data models</span></a></p>
+</div>
+<!-- class="sect2" -->
+<a id="BABHCGDI"></a>
+<div id="DMWSC1087" class="sect2">
+<h3 class="sect2">Upgrade a clinical data model to the latest library version</h3>
+<p>If a clinical data model was created from a library model, and a new version of the library model exists, the <span class="bold">Upgrade from Library Model</span> icon appears. Click it to synchronize the study model with the library model.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Any changes you have made to the study model are lost if you upgrade.</div>
+</div>
+<!-- class="sect2" -->
+<a id="BABDFHFD"></a>
+<div id="DMWSC10089" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Roll back changes to the last production version</h3>
+<ol>
+<li>
+<p>Click the <img width="29" height="25" src="img/study_config_icon.gif" alt="Icon shows a wrench and a screwdriver, crossed." /><span class="bold">Study Configuration</span> icon at the top of the page. Make sure the <span class="bold">Clinical Data Models</span> tab is selected.</p>
+</li>
+<li>
+<p>Click the <img width="21" height="19" src="img/icon_roll_back_model.gif" alt="Icon shows a rounded left arrow." /> <span class="bold">Roll Back Clinical Data Models to Production Version</span> icon in the Data Model pane on the left of the Clinical Data Model page. A window appears.</p>
+</li>
+<li>
+<p>Select one or more clinical data models to roll back.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+InForm models cannot be rolled back.</div>
+</li>
+<li>
+<p>Click <span class="bold">Rollback</span>.</p>
+</li>
+<li>
+<p>Click the <img width="19" height="17" src="img/icon_refresh.gif" alt="Icon is a near circular arrow." /> <span class="bold">Refresh</span> icon periodically to see the Job ID, Log, and Job Status.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="A134935344"></a>
+<div id="DMWSC10259" class="sect1">
+<h2 class="sect1">Install a clinical data model</h2>
+<p>After creating or modifying a clinical data model, you must <span class="italic">install</span> it to make it usable. See <a href="sc_adv_topics.htm#BABHJHEF">"What happens during installation?"</a> and <a href="sc_adv_topics.htm#BABGGGHI">"Installation requirements"</a>.</p>
+<p>To install a clinical data model:</p>
+<ol>
+<li>
+<p>Click the <img width="29" height="25" src="img/study_config_icon.gif" alt="Icon shows a wrench and a screwdriver, crossed." /><span class="bold">Study Configuration</span> icon at the top of the page. Make sure the <span class="bold">Clinical Data Models</span> tab is selected.</p>
+</li>
+<li>
+<p>Select the lifecycle in which you want to install the model.</p>
+</li>
+<li>
+<p>If it is an input model, click the <img width="14" height="18" src="img/icon_suspend.gif" alt="Icon is two parallel vertical lines." /> Suspend Data Load icon.</p>
+</li>
+<li>
+<p>Select the model and click <span class="bold">Check Out</span>.</p>
+</li>
+<li>
+<p>Select one option from the Install drop-down:</p>
+<ul>
+<li>
+<p><span class="bold">Install</span> upgrades all tables and does not delete any data.</p>
+</li>
+<li>
+<p><span class="bold">Full Install</span> drops and replaces all tables, <span class="bold">deleting all data</span>. Full installation is not available in the Production lifecycle stage.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+These options are available only if the object is installable:
+<ul>
+<li>
+<p>The Version and the Installable Version must be the same.</p>
+</li>
+<li>
+<p>See <a href="sc_adv_topics.htm#BABGGGHI">"Installation requirements"</a>.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li>
+<p>To see the updated job status in the <span class="bold">Install Status</span> field, click the <img width="19" height="17" src="img/icon_refresh.gif" alt="Icon is a near circular arrow." /> <span class="bold">Refresh</span> icon. The final status doesn't appear until the job completes and you click <span class="bold">Refresh</span>.</p>
+</li>
+<li>
+<p>To see the log file, select <span class="bold">Get Install Log</span> from the <span class="bold">Actions</span> drop-down list.</p>
+</li>
+</ol>
+<p><span class="italic">Back to</span> <a href="#CHDHFBEE"><span class="xreftitleitalic">Set up clinical data models</span></a></p>
+</div>
+<!-- class="sect1" -->
+<a id="BABHHEGA"></a>
+<div id="DMWSC863" class="sect1">
+<h2 class="sect1">Unblind and reblind data</h2>
+<p>A person with the required privileges can unblind the data in a table so that users with Read Unblind privileges can see the sensitive data, normally at the end of a study. Unblinding undoes all types of blinding and masking: whole table, whole column, or row or cell values meeting specified criteria.</p>
+<p>A table can be reblinded after being unblinded. Both actions are audited and can be viewed.</p>
+<p>The Unblind and Reblind actions are audited.</p>
+<ol>
+<li>
+<p>Click the <img width="29" height="25" src="img/study_config_icon.gif" alt="Icon shows a wrench and a screwdriver, crossed." /><span class="bold">Study Configuration</span> icon at the top of the page. Make sure the <span class="bold">Clinical Data Models</span> tab is selected.</p>
+</li>
+<li>
+<p>Go to the Data Models page and select the data model, then the table to unblind.</p>
+</li>
+<li>
+<p>Select <span class="bold">Unblind</span> from the <span class="bold">Actions</span> drop-down list.</p>
+<p>If the table is currently unblinded, the <span class="bold">Reblind</span> option appears instead.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="CHDHADEI"></a>
+<div id="DMWSC99937" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">FAQs</h2>
+<ul>
+<li>
+<p><a href="#BABGIJJJ">What happens the first time I run the Load Metadata job?</a></p>
+</li>
+<li>
+<p><a href="#BABDBCFD">What happens if there's a protocol change?</a></p>
+</li>
+<li>
+<p><a href="#BABIDFFI">How do InForm and DMW exchange data?</a></p>
+</li>
+<li>
+<p><a href="#BABGGDEA">When I copy a table, sometimes validation checks and custom listings are included in the copy and sometimes not included. Why?</a></p>
+</li>
+<li>
+<p><a href="#BABJBIDE">Can I use Oracle Thesaurus Management System in all three lifecycle stages?</a></p>
+</li>
+<li>
+<p><a href="#BABEHFCJ">If I create a new version of a clinical data model in the Development lifecycle, can I revert to the previous Production version?</a></p>
+</li>
+<li>
+<p><a href="#BABGHFHF">Is it possible to get back data that has been deleted?</a></p>
+</li>
+<li>
+<p><a href="#BABCHDFA">Why am I getting error "ORA-00955: name is already used by an existing object"?</a></p>
+</li>
+</ul>
+<a id="BABGIJJJ"></a>
+<div id="DMWSC99939" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">What happens the first time I run the Load Metadata job?</h3>
+<p>The Load Metadata job creates one table for each view in the InForm reporting database that is registered in the RD_DATADICTIONARY table and installs the model. The tables have the same structure as the InForm views plus SKEY columns required in DMW.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABDBCFD"></a>
+<div id="DMWSC99940" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">What happens if there's a protocol change?</h3>
+<p>When metadata changes in InForm, DMW detects it:</p>
+<ul>
+<li>
+<p>During data loading.</p>
+</li>
+<li>
+<p>When you promote a model to a higher validation status.</p>
+</li>
+<li>
+<p>When you save changes to a remote location or study account.</p>
+</li>
+</ul>
+<p>The load, promotion, or save is not allowed and a message appears that you need to reload metadata.</p>
+<p>You can also run the Compare Metadata report by clicking its icon in the InForm configuration tab, and then import metadata.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABIDFFI"></a>
+<div id="DMWSC99941" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">How do InForm and DMW exchange data?</h3>
+<p>Data and metadata are imported from the study's InForm reporting database to DMW using a database connection.</p>
+<p>Discrepancies are sent almost immediately to InForm as queries, using a web service.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABGGDEA"></a>
+<div id="DMWSC108" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">When I copy a table, sometimes validation checks and custom listings are included in the copy and sometimes not included. Why?</h3>
+<p>When you copy a table, the system checks if you have included all source tables for the validation checks and custom listings in the copy operation. If you have, the validation checks and custom listings are also copied.</p>
+<p>If you have not included all the source tables:</p>
+<ul>
+<li>
+<p>If a validation check is in an ordered batch, you receive a warning.</p>
+</li>
+<li>
+<p>For validation checks that are in an unordered batch, and for any public custom listing, the system does not give a warning and does not copy the validation check or custom listing.</p>
+</li>
+</ul>
+<p>If you need the validation check or custom listing, you can copy it separately.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABJBIDE"></a>
+<div id="DMWSC99943" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Can I use Oracle Thesaurus Management System in all three lifecycle stages?</h3>
+<p>In Development and QC you can send data to TMS, derive data for terms that can be automatically coded, and create DMW discrepancies for terms that cannot be automatically coded. These discrepancies will close only if the data is updated in such a way that it can be coded automatically.</p>
+<p>Only Production has complete coding functionality. In addition to deriving data:</p>
+<ul>
+<li>
+<p>TMS creates <span class="italic">omissions</span> for terms that cannot be automatically coded. TMS users can code these terms manually.</p>
+</li>
+<li>
+<p>DMW creates discrepancies that correspond to the omissions and sends them to InForm. You can export discrepancies on lab data to Excel and send the spreadsheet to the lab.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="BABEHFCJ"></a>
+<div id="DMWSC99944" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">If I create a new version of a clinical data model in the Development lifecycle, can I revert to the previous Production version?</h3>
+<p>Yes. If, for example, a protocol amendment is canceled after you created a new version of the clinical data model in the Development lifecycle, you can undo all changes and revert to the version being used in the Production lifecycle.</p>
+<p>For InForm models, the rolled-back Development model is installed as part of the process. Non-InForm models are not installed during the rollback. The Production version is checked out and made the current Development version.</p>
+<p>If the older Production version has fewer columns or shorter ones, for example, the rollback is "destructive" and all data is deleted from the model in Development.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABGHFHF"></a>
+<div id="DMWSC99945" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Is it possible to get back data that has been deleted?</h3>
+<p>Deleted data is <span class="bold">no longer available in the system</span>. However, it remains in the database with an end timestamp equal to the date and time of the job when it was deleted.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABCHDFA"></a>
+<div id="DMWSC99946" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Why am I getting error "ORA-00955: name is already used by an existing object"?</h3>
+<p>If you perform an upgrade installation on a clinical data model after modifying a table's primary key (PK) or unique index, you may get the above error from Oracle Warehouse Builder (OWB).</p>
+<p>This is because when you create a primary key on a table, the system generates a unique index on the PK columns and maintains a connection between the PK and the uinque index. If you drop the primary key, the system drops the unique index. However, if you have manually created a unique index on the same columns, the system does not drop the index and the PK and index are no longer connected.</p>
+<p>If you subsequently modify a PK column or manually create a unique index, the system generates and runs reorg.sql with the following steps:</p>
+<ol>
+<li>
+<p>Drops the PK.</p>
+</li>
+<li>
+<p>Alters the column (or whatever change you have made).</p>
+</li>
+<li>
+<p>Recreates the unique index on the PK columns.</p>
+</li>
+<li>
+<p>Recreates the PK.</p>
+</li>
+</ol>
+<p>This works, but the connection between the primary key and unique index is lost. If you make another manual change, reorg.sql fails with the above error message because it does not drop the unique index in Step 1 due to the disconnect, but does try to create the unique index in Step 3, causing the error.</p>
+<p>If you do a Full installation, the system recreates the primary key, the unique index, and a connection between them. However, it also deletes all data in the model's Development lifecycle stage.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment39">
+<tr>
+<td class="cellalignment46">
+<table class="cellalignment49">
+<tr>
+<td class="cellalignment43"><a href="sc_basics.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment43"><a href="libraries.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2017, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment48">
+<table class="cellalignment42">
+<tr>
+<td class="cellalignment43"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment43"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment43"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment43"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

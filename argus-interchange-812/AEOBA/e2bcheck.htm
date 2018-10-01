@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Validating ICSR Reports</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2018-02-13T11:0:59Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Argus Interchange User's Guide" />
+<meta name="dcterms.identifier" content="E93463-01" />
+<meta name="dcterms.isVersionOf" content="AEOBA" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Prev" href="webbased.htm" title="Previous" type="text/html" />
+<link rel="Next" href="trans.htm" title="Next" type="text/html" />
+<link rel="alternate" href="AEOBA.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="AEOBA.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="AEOBA.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">7/10</span> <!-- End Header -->
+<div id="AEOBA145" class="chapter"><a id="sthref30"></a>
+<h1 class="chapter"><span class="secnum">4</span> Validating ICSR Reports</h1>
+<p>In order to successfully transmit any E2B Report, it must validated for its mandatory components before transmitting the report.</p>
+<div id="AEOBA146" class="sect1"><!-- infolevel="all" infotype="General" --><a id="sthref31"></a>
+<h2 class="sect1">Why perform an ICSR check?</h2>
+<p>During case data entry and prior to E2B file generation, the user may want to verify that sufficient data and the quality of data collected will generate a valid E2B file.</p>
+<p>To do so, a Data Validation check is required for E2B profiles and to provide a listing of data elements that do not satisfy the criteria required to generate an E2B report.</p>
+<p>On performing an ICSR check, the system performs a validation and lists the following types of validation errors for the data elements that are failing the validations in the ICSR Report data check errors and warnings:</p>
+<p><span class="italic">E2B (R2), eVAERS, and eMDR</span>:</p>
+<ol>
+<li>
+<p>Mandatory</p>
+</li>
+<li>
+<p>Mandatory Optional</p>
+</li>
+<li>
+<p>Together DTD Element Validation</p>
+</li>
+<li>
+<p>Other Validation</p>
+</li>
+<li>
+<p>Date Validation</p>
+</li>
+<li>
+<p>E2B Generation Validation (only E2B(R2) reports)</p>
+</li>
+<li>
+<p>Encoding Validation</p>
+</li>
+<li>
+<p>Length check Validation</p>
+</li>
+</ol>
+<p><span class="italic">E2B (R3)</span>:</p>
+<ol>
+<li>
+<p>Mandatory</p>
+</li>
+<li>
+<p>Conditional Mandatory</p>
+</li>
+<li>
+<p>Other Validations</p>
+</li>
+<li>
+<p>Together DTD Validation</p>
+</li>
+</ol>
+<p>You can run an ICSR check by clicking the ICSR icon from the Quick Launch menu shown below.</p>
+<img width="417" height="27" src="img/newtoolbar.jpg" alt="Surrounding text describes newtoolbar.jpg." /><br />
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The ICSR check icon is visible on the Quick Launch Toolbar ONLY if a case is open and active on the user session.</div>
+<p>ICSR check can be used to validate E2B (R2), eVAERS and eMDR reports, provided the ICSR check flag is marked in the Interchange Mapping Utility.</p>
+<p>ICSR check can be used to validate EMA E2B (R3) and PMDA E2B (R3) profiles provided the following conditions are met:</p>
+<ul>
+<li>
+<p>ICSR check flag is marked in the Interchange Mapping Utility</p>
+</li>
+<li>
+<p>Profile is configured with atleast one of the reporting destinations</p>
+</li>
+</ul>
+<p>The following illustration shows a sample ICSR check report that is generated in PDF format:</p>
+<img width="1084" height="632" src="img/newrep.jpg" alt="Surrounding text describes newrep.jpg." /><br />
+<p>As can be seen in the PDF, the sample report displays the case form fields where the validation error has occurred. Apart from the case form location where the error occurred, the report lists the type of error, data elements, DTD elements, the actual message/cause of the error, and the profiles which were tested for each validation type.</p>
+<p>The following are not covered by ICSR check:</p>
+<ul>
+<li>
+<p>Attachment size validations are not supported as part of the ICSR check for any of the E2B (R3), eMDR, and eVAERS Profiles.</p>
+</li>
+<li>
+<p>The ICSR check does not validate data elements pertaining to the Batch and Message headers of the ICSR.</p>
+</li>
+<li>
+<p>Validation are not be provided for elements that are mandatorily captured in Argus Safety.</p>
+</li>
+<li>
+<p>Validations related to follow-up and Nullification reports are not displayed in the ICSR check report.</p>
+</li>
+</ul>
+<p>To perform an ICSR check, the system requires some reference data based on which validations can be performed. The system uses the following (existing) logic:</p>
+<div class="inftblinformal">
+<table class="cellalignment17" summary="agency details" dir="ltr">
+<tbody>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r1c1-t3">Agency</td>
+<td class="cellalignment19">Considers the first available Agency that was configured with the Profile in Reporting Destination.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r2c1-t3">Product License</td>
+<td class="cellalignment19" headers="r2c1-t3">Considers the License used in the first available Product in the Case Form.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r3c1-t3">Reporting Category (for PMDA (R3))</td>
+<td class="cellalignment19" headers="r3c1-t3">Uses the Reporting Category data for the first available Product in the Case Form.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" --></div>
+<!-- class="sect1" -->
+<div id="AEOBA147" class="sect1"><!-- infolevel="all" infotype="General" --><a id="sthref32"></a>
+<h2 class="sect1">Report Generation Validations</h2>
+<p>The system performs the following validations at the time of report generations and displays validation error if there are failures:</p>
+<ol>
+<li>
+<p>Missing Mandatory Elements</p>
+</li>
+<li>
+<p>Missing Mandatory Optional Elements</p>
+</li>
+<li>
+<p>Length Validation for character data</p>
+</li>
+<li>
+<p>M2 Code validation</p>
+</li>
+<li>
+<p>Report File Size validation (for HL7 Reports only)</p>
+</li>
+<li>
+<p>File type of attachments that qualify to be included</p>
+</li>
+</ol>
+<p>The system displays an error message in the following scenarios:</p>
+<ol>
+<li>
+<p>While generating draft E2B or eVAERS or eMDR report using Draft tool button, if the default Reporting Destination is not specified for E2B or eVAERS or eMDR in Common Profile Switches.</p>
+</li>
+<li>
+<p>While generating draft/final E2B or eVAERS or eMDR report for the Reporting Destination which is not configured with valid Message Profile as E2B or eVAERS or eMDR respectively.</p>
+</li>
+<li>
+<p>While generating E2B(R3) or eVAERS or eMDR report, if the size of inline attachments or overall size of xml file exceeds the maximum file size limit specified in the Reporting Destination configuration.</p>
+</li>
+<li>
+<p>While validating the file type of the attachments that qualify to be included in the E2B(R3) report and displays a validation message to indicate the file type provided for the attachment does not confirm with the allowed file types for the report.</p>
+</li>
+</ol>
+<img width="1023" height="264" src="img/icsrvalidrep.gif" alt="Surrounding text describes icsrvalidrep.gif." /><br /></div>
+<!-- class="sect1" -->
+<div id="AEOBA148" class="sect1"><!-- infolevel="all" infotype="General" --><a id="sthref33"></a>
+<h2 class="sect1">Validation Rules</h2>
+<p>Validation Rules for all profiles can be viewed from <span class="bold">Argus Console</span> &gt; <span class="bold">System Configuration</span> &gt; <span class="bold">Interchange Mapping</span> &gt; <span class="bold">Manage Profile</span>.</p>
+<p>E2B Generation validation rules are executed on the generated ICSR report data.</p>
+<p>The validation rules that are applicable to individual element is governed by configuration in the Conformance Rules tab for that element for the respective profile.</p>
+<p>Validation Rule the elements is categorized amongst the following categories:</p>
+<ul>
+<li>
+<p><span class="bold">Basic Data Validation:</span> This category covers all the applicable validation based on the Length of the field.</p>
+<p><span class="bold">Length</span> - This validation check validates if the data type length of output is within with the configured Data length or not. If the data length is exceeding the configured length then validation error is listed in the validation report.</p>
+</li>
+<li>
+<p><span class="bold">Allowed Values Data Check:</span> The element for which the <span class="italic">Allowed Value Check Required</span> checkbox is checked is validated against the allowed values codes associated with them using <span class="italic">Allowed Values Configuration</span> Dialog for the respective profile.</p>
+</li>
+<li>
+<p><span class="bold">Mandatory Along with (Together):</span> Elements for which the <span class="italic">Mandatory along with</span> element is specified, validation rule validates for such elements in the generated ICSR the element itself and the configured Dependent element co-exist or none of them exists in the report.</p>
+</li>
+<li>
+<p><span class="bold">Validation Category Based:</span> The element is validated as per the value configured for that element in the <span class="italic">Validation Category</span> drop-down list in the Conformance rule tab.</p>
+<p>The elements for which there exists a SQL based validation for which <span class="italic">Primary Validation</span> checkbox is checked in the <span class="italic">Additional Validation Configuration</span> Dialog, the framework based validation is not executed for them; rather the configured SQL based validations is executed for them.</p>
+<p>These validations are categorized in two sub categories, one for the ICSR reports for EMA the profile, and the other ICSR Report for PMDA profile</p>
+<ul>
+<li>
+<p><span class="bold">EMA</span></p>
+</li>
+</ul>
+<p>The validation for the PMDA report is fired at each reporting category level:</p>
+<p><span class="bold">Mandatory:</span> The element which is configured as Mandatory should be present in the ICSR Report; if it is not present in the report output then application displays the validation failure in the validation report.</p>
+<p><span class="bold">Conditional Mandatory:</span> The element which is marked as Conditional Mandatory is present based on certain condition, hence it is expected that user will configure a Validation for it in the <span class="italic">Additional Validation Dialog</span>. There is no framework based validation for the elements configured with this validation type in Conformance rule tab.</p>
+<p><span class="bold">Optional:</span> The element which is marked as optional may or may not be present in the report, but still there could be a possibility that there might exist a validation under the <span class="italic">Additional Validation Dialog</span> and if any of the configured validation is failed it will be listed in the validation report.</p>
+<p><span class="bold">Other Fatal:</span> There is no framework based validation for the elements configured as other fatal validation type in Conformance rule tab.</p>
+<ul>
+<li>
+<p><span class="bold">PMDA E2B</span></p>
+<p><span class="bold">Mandatory:</span> The element which is configured as Mandatory should be present in the ICSR Report; if it is not present in the report output then application displays the validation failure in the validation report.</p>
+<p><span class="bold">Mandatory for Completion:</span> The element which is marked as Mandatory for completion should be present in the ICSR Report if J2.7.1 (MHLWADMICSRCOMPLETECLASS) = completed for that report; if it is not present then application displays the validation failure in the validation report.</p>
+<p><span class="bold">Conditional Mandatory and Conditional Mandatory for Completion:</span> The element which is marked as Conditional Mandatory or Conditional Mandatory for Completion is present in the report based on certain condition, hence it is expected that user will configure a Validation for it in the <span class="italic">Additional Validation Dialog</span>. There is no framework based validation for the elements configured with these validation types in Conformance rule tab.</p>
+<p><span class="bold">Do not Enter:</span> The element which is marked as Do not enter are not present in the report, and if they are present than application lists the validation failure in the validation report (Argus report generation logic removes the elements that are marked as Do not enter at the time on generation itself).</p>
+<p><span class="bold">Optional:</span> The element which is marked as optional may or may not be present in the report, but still there could be a possibility that there might exist a validation under the <span class="italic">Additional Validation Dialog</span> and if any of the configured validation fails, it is listed in the validation report.</p>
+<p><span class="bold">Other Fatal:</span> There is no framework based validation for the elements configured as other fatal validation type in Conformance rule tab.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="bold">Additional Validations:</span> The Additional SQL based validations associated with elements in the respective ICSR profile (element level for E2B other than PMDA and Reporting category level for PMDA E2B), the validation is fire based on the SQL logic specified under the Validation SQL.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment10">
+<tr>
+<td class="cellalignment19">
+<table class="cellalignment15">
+<tr>
+<td class="cellalignment14"><a href="webbased.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment14"><a href="trans.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment22">
+<table class="cellalignment13">
+<tr>
+<td class="cellalignment14"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment14"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment14"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment14"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

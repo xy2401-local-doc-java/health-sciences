@@ -1,0 +1,2403 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Administration</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2018-02-27T10:10:48Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Thesaurus Management System User's Guide" />
+<meta name="dcterms.identifier" content="E61918-02" />
+<meta name="dcterms.isVersionOf" content="TMSUG" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;1999, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Index" href="index.htm" title="Index" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="part1.htm" title="Previous" type="text/html" />
+<link rel="Next" href="ocinteg.htm" title="Next" type="text/html" />
+<link rel="alternate" href="TMSUG.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="TMSUG.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="TMSUG.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">7/25</span> <!-- End Header -->
+<div id="TMSUG11178" class="chapter"><a id="CDCGFIHI"></a>
+<h1 class="chapter"><span class="secnum">3</span> Administration</h1>
+<p>This section describes the following administrative tasks in Oracle Thesaurus Management System (TMS):</p>
+<ul>
+<li>
+<p><a href="#CDCEDCFI">Security</a></p>
+</li>
+<li>
+<p><a href="#CHDDJIBB">Defining Users</a></p>
+</li>
+<li>
+<p><a href="#CDCBAIJG">Using Data Access Groups (DAGs) for Security</a></p>
+</li>
+<li>
+<p><a href="#CHDFGIEC">Customizing Defaults in TMS Windows Using TMS Settings</a></p>
+</li>
+<li>
+<p><a href="#i1001755">Setting TMS Preferences with Reference Codelist Values</a></p>
+</li>
+<li>
+<p><a href="#BABHJBGD">Autoclassification</a></p>
+</li>
+<li>
+<p><a href="#CDCFIFJI">Synchronization</a></p>
+</li>
+<li>
+<p><a href="#i1002967">Writing a Procedure to Change the Dictionary Display</a></p>
+</li>
+<li>
+<p><a href="#CHDDDBFG">Controlling the Use of Materialized Views</a></p>
+</li>
+<li>
+<p><a href="#BAJGDCCA">Enabling Context Searches for Non-English Dictionaries</a></p>
+</li>
+<li>
+<p><a href="#i1001957">Refreshing the Context Server Index</a></p>
+</li>
+<li>
+<p><a href="#CDCCHDAD">Analyzing Tables</a></p>
+</li>
+<li>
+<p><a href="#BAJIFFDF">Running Scripts to Gather Schema Statistics for the 12c Optimizer</a></p>
+</li>
+<li>
+<p><a href="#CDCIIAAB">Adding and Configuring WebLogic Server Data Sources</a></p>
+</li>
+<li>
+<p><a href="#CDCGBBCI">TMS Lite Browser Administration</a></p>
+</li>
+<li>
+<p><a href="#CDCCDEBC">Troubleshooting</a></p>
+</li>
+</ul>
+<a id="CDCEDCFI"></a>
+<div id="TMSUG11179" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Security<a id="sthref73"></a><a id="sthref74"></a><a id="sthref75"></a></h2>
+<p>TMS enables data access to be controlled in multiple dimensions. First, database roles control what kind of activity each user is allowed to complete, such as classification, item definitions, item approval. Then, after a user has role assignments, your organization can choose to further specify the domains and/or dictionaries in which this user can perform these activities by assigning certain predefined Data Access Groups (DAGs) to that user. Database roles are created during installation; DAGs are defined in the UI.</p>
+<p>This section includes:</p>
+<ul>
+<li>
+<p><a href="#CDCGJHCG">Predefined Roles</a></p>
+</li>
+<li>
+<p><a href="#CDCHDDBG">Enrolling an Administrator</a></p>
+</li>
+</ul>
+<a id="CDCGJHCG"></a>
+<div id="TMSUG11180" class="sect2">
+<h3 class="sect2">Predefined Roles</h3>
+<p>This section illustrates the predefined roles, with the functions permitted and the menu option associated with each:</p>
+<br />
+<a href="#CDCIEHCB">opa_admin</a><br />
+<a href="#CDCIAFGF">rxclin_read</a><br />
+<a href="#CDCFJAEJ">tms_access</a><br />
+<a href="#CDCEAFFG">tms_allocate_priv</a><br />
+<a href="#CDCCDCDI">tms_approve_priv</a><br />
+<a href="#CDCJDGHG">tms_classify_priv</a><br />
+<a href="#CDCJDEDE">tms_define_priv</a><br />
+<a href="#CDCIADIC">tms_dictupg_priv</a><br />
+<a href="#CDCGEAED">tms_dsi_priv</a><br />
+<a href="#CDCFJDBC">tms_integrate_priv</a><br />
+<a href="#CDCIBJEF">tms_maintain_priv</a><br />
+<a href="#CDCHGEAI">tms_reclassify_priv</a><br />
+<a href="#CDCEAGBH">tms_research_priv</a><br />
+<p>A description of each predefined role is included below.</p>
+<p>In addition, you can see the grants that are predefined for each of these roles by logging into SQL*Plus as SYSTEM and entering the following:</p>
+<p><code dir="ltr">select *</code><code dir="ltr">from dba_tab_privs</code> <code dir="ltr">where grantee='TMS_</code><code dir="ltr"><span class="codeinlineitalic">ROLE</span></code>';</p>
+<p class="subhead2"><a id="CDCIEHCB"></a><a id="TMSUG11181"></a>opa_admin<a id="sthref76"></a></p>
+<p>This role grants access to the Security menu, which contains Define Users, Define Security Columns, and Maintain DAGS windows, as well as the DAG and Setting Inconsistencies report and the Create/Drop EXT_Value Indexes job. The three windows allow you to create new users, define their privileges, and migrate user information from an Oracle Clinical database. The DAG and Setting Inconsistencies report displays inconsistencies between users' data access via DAG and their profile settings. The Create/Drop EXT_Value Indexes job creates or drops indexes on external value columns for performance.</p>
+<p class="subhead2"><a id="CDCIAFGF"></a><a id="TMSUG11182"></a>rxclin_read<a id="sthref77"></a></p>
+<p>All users are granted this role by default, which gives them access to items under the <span class="bold">Repository</span> menu. Thus, all users can browse repository data, VT classification data, and Informative Note data; and all users can run the Date Comparison Report, Dictionary Comparison Report, Dictionary Export Report, and view the TMS Lite Browser.</p>
+<p class="subhead2"><a id="CDCFJAEJ"></a><a id="TMSUG11183"></a>tms_access<a id="sthref78"></a></p>
+<p>All users are granted this role automatically. This role enables you to view the <span class="bold">TMS</span> menu and the <span class="bold">Favorites</span> menu.</p>
+<p class="subhead2"><a id="CDCEAFFG"></a><a id="TMSUG11184"></a>tms_allocate_priv</p>
+<p>This role gives users access to the windows under the Task Allocation menu. In these windows, users can set up task allocation and allocate tasks&mdash;approving VTAs, approving Action assignments, and classifying omissions&mdash;to other users.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Users with this privilege can allocate/reallocate/deallocate any task in any domain/dictionary, regardless of their own DAG assignments. However, they can only allocate tasks to users whose DAG assignments and database roles give them access to the data required to perform the task.</div>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Users with TMS_CLASSIFY_PRIV and TMS_APPROVE_PRIV have access to the Task Allocation by Term window, where they can deallocate terms assigned to themselves, and, depending on the value of the reference codelist setting <a href="#CDCHHEIJ">DEALLOCONLY</a>, reallocate those tasks to other users.</div>
+<p class="subhead2"><a id="CDCCDCDI"></a><a id="TMSUG11185"></a>tms_approve_priv<a id="sthref79"></a></p>
+<p>This role gives users access to the Approve VTAs and Approve Action Assignments window under <span class="bold">Omission Management</span>. In this window, users can approve and unapprove VTAs, and create workflow Informative Notes for the VTA approval process.</p>
+<p class="subhead2"><a id="CDCJDGHG"></a><a id="TMSUG11186"></a>tms_classify_priv<a id="sthref80"></a></p>
+<p>This role gives users access to all the items under <span class="bold">Omission Management</span> and also the Task Allocation By Term window under <span class="bold">Task Allocation</span>. However, users who do not also have tms_approve_priv cannot approve VTAs or Action assignments. Users with tms_classify_priv can classify verbatim terms, apply actions to omissions, and run the VTA Creation Report and VT Domain Differences Report.</p>
+<p class="subhead2"><a id="CDCJDEDE"></a><a id="TMSUG11187"></a>tms_define_priv<a id="sthref81"></a></p>
+<p>This role give users access to all items under <span class="bold">Definition</span> and to the Reports tab in the TMS Lite Browser. Users with tms_define_priv can define dictionaries, domains, external systems, Global Actions, search objects, TMS settings, named relations, and Informative Note Attributes. Users can also run synchronization, refresh the context server index, analyze tables, force rederivation from DSI, and purge classified omissions.</p>
+<p class="subhead2"><a id="CDCIADIC"></a><a id="TMSUG11188"></a>tms_dictupg_priv</p>
+<p>This role gives users access to every item under <span class="bold">Dictionary Upgrade</span> where you can view and manipulate verbatim terms and their relations in the predictionary tables before Activation.</p>
+<p class="subhead2"><a id="CDCGEAED"></a><a id="TMSUG11189"></a>tms_dsi_priv<a id="sthref82"></a></p>
+<p>This role gives users access to the menu item <span class="bold">DSI Maintenance</span> including the Maintain DSI Files window and several jobs related to data exchange between TMS and disconnected systems.</p>
+<p class="subhead2"><a id="CDCFJDBC"></a><a id="TMSUG11190"></a>tms_integrate_priv<a id="sthref83"></a></p>
+<p>This role gives users access to special integration features in the API, but does not unlock any menus or windows in the application.</p>
+<p class="subhead2"><a id="CDCIBJEF"></a><a id="TMSUG11191"></a>tms_maintain_priv<a id="sthref84"></a></p>
+<p>This role gives users access to all items under the <span class="bold">Repository Maintenance</span> and <span class="bold">Translation Reports</span> menus. Repository Maintenance tasks include: creating and maintaining and deleting terms, relations, and Informative Notes; maintaining dictionary loading error logs; running the Preliminary Repository Report, and running Activation.There are three reports under the <span class="bold">Translation Reports</span> menu: Inconsistent Dictionary Codes, Duplicate Dictionary Codes, and Inconsistent Dictionary Relations.</p>
+<p class="subhead2"><a id="CDCHGEAI"></a><a id="TMSUG11192"></a>tms_reclassify_priv<a id="sthref85"></a></p>
+<p>This role give users access to all items under <span class="bold">VTA Maintenance</span>. Users with this role can promote or demote VTAs, maintain actions, reclassify and declassify verbatim terms, perform high-level reclassification, copy domains, maintain domain copying error logs, and run the Nonapproved VTs Report, Classification to a New Domain Report, and the VT Modifications Report.</p>
+<p class="subhead2"><a id="CDCEAGBH"></a><a id="TMSUG11193"></a>tms_research_priv<a id="sthref86"></a></p>
+<p>This role enables Oracle Clinical and Oracle AERS users that do not have any other TMS privileges to use the TMS Lite Browser for drilling down to external system data. You may want to grant this role to external system users who require access to source data searches in the TMS Lite Browser, but do not need access to any TMS windows.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CDCHDDBG"></a>
+<div id="TMSUG11194" class="sect2">
+<h3 class="sect2">Enrolling an Administrator</h3>
+<p>In a new installation, you must use a script to create one user with the OPA_ADMIN role. That administrator can then use the Define Users window to create user accounts for all the other users in this database; see <a href="#CHDDJIBB">"Defining Users"</a> for instructions.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If you are upgrading to TMS Release 5.2.1 from Release 4.5.2 you may need to use this script as well.</div>
+<p>To create a new account for a TMS administrator:</p>
+<ol>
+<li>
+<p>Connect to SQL*Plus as SYSTEM and run the following script:</p>
+<p><span class="italic">opa_home</span>\tms\install\tmsadduser.sql</p>
+</li>
+<li>
+<p>Enter the user's first name.</p>
+</li>
+<li>
+<p>Enter the user's last name.</p>
+</li>
+<li>
+<p>Enter a password for this user. Your input is hidden.</p>
+<p>The script creates a user account for the user you specified and gives the user the OPA_ADMIN database role.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You cannot use this script to create a nonadministrator user.</div>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CHDDJIBB"></a>
+<div id="TMSUG11195" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Defining Users<a id="sthref87"></a></h2>
+<p>This section includes:</p>
+<ul>
+<li>
+<p><a href="#CHDIAJJC">Defining a New User</a></p>
+</li>
+<li>
+<p><a href="#CHDEFGCA">Assigning and Revoking Roles</a></p>
+</li>
+<li>
+<p><a href="#CDCFFAAH">Changing a User's Password</a></p>
+</li>
+<li>
+<p><a href="#CDCEDDDH">Assigning Data Access Groups to a User</a></p>
+</li>
+<li>
+<p><a href="#CHDGABBJ">Migrating Account Information from Oracle Clinical</a></p>
+</li>
+</ul>
+<p>The OPA_ADMIN database role is required to access the Define Users window. See <a href="#CDCHDDBG">"Enrolling an Administrator"</a> for information on creating a user account with the OPA_ADMIN database role.</p>
+<a id="CHDIAJJC"></a>
+<div id="TMSUG11196" class="sect2">
+<h3 class="sect2">Defining a New User</h3>
+<p>When you create a new user in the database, you define the user's first and last name, user name in the database, and set a password. Additionally, you can add an email address and set superuser status.</p>
+<p>To define a new user, from the Define Users window under the <span class="bold">Security</span> menu:</p>
+<ol>
+<li>
+<p>Define the <span class="bold">Account Name</span>, which is the user name a user specifies upon login to the application. The account name is often prefixed with OPS$ but this prefix is not required.</p>
+</li>
+<li>
+<p>Enter the user's <span class="bold">First Name</span> and <span class="bold">Last Name</span>. The first name and last name appear in the menu bar when this user is connected to TMS.</p>
+</li>
+<li>
+<p>Set the <span class="bold">Super User?</span> field to either <span class="bold">Yes</span> or <span class="bold">No</span>. If this person is a superuser then no Data Access Group information is stored (see <a href="#CDCEDDDH">"Assigning Data Access Groups to a User"</a>). Superusers have access to all data. Only superusers can run the following jobs and reports:</p>
+<ul>
+<li>
+<p>all Disconnected System Integration (DSI) jobs, including importing and exporting data</p>
+</li>
+<li>
+<p>Autoprocess VTAs</p>
+</li>
+<li>
+<p>Predict VTA/VTI Report</p>
+</li>
+<li>
+<p>Site Impacts Report</p>
+</li>
+<li>
+<p>Omission Impacts Report</p>
+</li>
+<li>
+<p>Cross Dictionary Impacts</p>
+</li>
+<li>
+<p>X Areas with Outstanding Changes</p>
+</li>
+<li>
+<p>Classification Statistics Report</p>
+</li>
+<li>
+<p>Date Comparison</p>
+</li>
+<li>
+<p>Dictionary Comparison</p>
+</li>
+<li>
+<p>Dictionary Export</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Set the <span class="bold">Load User?</span> field to either <span class="bold">Yes</span> or <span class="bold">No</span>. If set to Yes, this person can load dictionaries into the predictionary tables. Most TMS users do not need this ability.</p>
+</li>
+<li>
+<p>(Optional) Enter a <span class="bold">Comment</span> about this user. Comment information can help administrators identify users, and thus maintain each user's privileges more effectively.</p>
+</li>
+<li>
+<p>(Optional) Enter an <span class="bold">Email Address</span> for the user. This field is added to support future functionality.</p>
+</li>
+<li>
+<p>Click <span class="bold">Create Schema</span>. The "Password to be Assigned to User <span class="italic">Account Name</span>" window opens.</p>
+<img width="437" height="191" src="img/users_password.gif" alt="Description of users_password.gif follows" /><br />
+<a id="sthref88" href="img_text/users_password.htm">Description of the illustration ''users_password.gif''</a><br />
+<br /></li>
+<li>
+<p>Enter and confirm the password for this user, and click <span class="bold">OK</span>.</p>
+</li>
+</ol>
+<p>If the password entries match, TMS adds this user to the OPA_ACCOUNTS table and TMS_ACCOUNTS table, and grants the TMS_ACCESS role to the account. Proceed to <a href="#CHDEFGCA">"Assigning and Revoking Roles"</a> to assign additional roles for this user.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CHDEFGCA"></a>
+<div id="TMSUG11197" class="sect2">
+<h3 class="sect2">Assigning and Revoking Roles</h3>
+<p>TMS uses menu-based security, so roles give a user access to particular TMS menus or windows. The TMS role TMS_MAINTAIN_PRIV, for example, allows a TMS user to use all of the windows and batch jobs under the <span class="bold">Repository Maintenance</span> menu.</p>
+<p>This section describes how to assign roles to, and revoke roles from, a TMS user.</p>
+<a id="CDCEJFIE"></a>
+<div id="TMSUG11198" class="sect3">
+<h4 class="sect3">Assigning Roles to a User</h4>
+<p>To assign roles to an account:</p>
+<ol>
+<li>
+<p>Select the user in the Define Users window, then click <span class="bold">Assign Roles</span>.</p>
+<p>The "Roles to be Assigned to User <span class="italic">Account Name</span>" window opens, displaying the TMS roles that this account does not currently have.</p>
+<img width="377" height="255" src="img/users_assign_roles.gif" alt="Description of users_assign_roles.gif follows" /><br />
+<a id="sthref89" href="img_text/users_assign_roles.htm">Description of the illustration ''users_assign_roles.gif''</a><br />
+<br /></li>
+<li>
+<p>Highlight the roles you want to grant to this account. You can Shift-click to select multiple consecutive rows, or Ctrl-click to select multiple non-consecutive rows.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>. TMS grants the role or roles you selected to this account.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<div id="TMSUG11199" class="sect3"><a id="sthref90"></a>
+<h4 class="sect3">Revoking Roles from a User</h4>
+<p>To revoke roles for an account:</p>
+<ol>
+<li>
+<p>Select the user in the Define Users window, then click <span class="bold">Revoke Roles</span>.</p>
+<p>The "Roles to be Revoked from User <span class="italic">Account Name</span>" window opens, displaying the roles currently granted to this account.</p>
+<img width="377" height="255" src="img/users_revoke_roles.gif" alt="Description of users_revoke_roles.gif follows" /><br />
+<a id="sthref91" href="img_text/users_revoke_roles.htm">Description of the illustration ''users_revoke_roles.gif''</a><br />
+<br /></li>
+<li>
+<p>Highlight the roles you want to revoke from this account. You can Shift-click to select multiple consecutive rows, or Ctrl-click to select multiple non-consecutive rows.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>. TMS revokes the role or roles you selected to this account.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CDCFFAAH"></a>
+<div id="TMSUG11200" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Changing a User's Password</h3>
+<p>You can change any user's password in a database where you have administrator privileges.</p>
+<p>To change a user's password:</p>
+<ol>
+<li>
+<p>Start a SQL*Plus session as SYSTEM.</p>
+</li>
+<li>
+<p>Issue the following alter user command:</p>
+<p><code dir="ltr">alter user</code> <code dir="ltr"><span class="codeinlineitalic">username</span></code><code dir="ltr"><br />
+identified by</code> <code dir="ltr"><span class="codeinlineitalic">new_password</span></code></p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CDCEDDDH"></a>
+<div id="TMSUG11201" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Assigning Data Access Groups to a User</h3>
+<p>Data Access Groups (DAGs) work in conjunction with roles to control a user's access to TMS data. You can use them to fine tune the data that a particular user or class of users can operate on. For example, the user with TMS_MAINTAIN_PRIV would still be able to access all of the windows and batch jobs under the <span class="bold">Repository Maintenance</span> menu, but if you also assign a DAG that only allows access to MedDRA, then he would see only items relevant to MedDRA.</p>
+<p>If a person is designated as a superuser in the Define Users window, he or she belongs to all DAGs and has access to all data.</p>
+<p>To assign a DAG:</p>
+<ol>
+<li>
+<p>Select the user in the Define Users window, then click <span class="bold">Assign DAGs</span>.</p>
+<p>The "Assign DAGs to user <span class="italic">Account Name</span>" window opens. If the user has been assigned any DAGs, they are listed.</p>
+<img width="566" height="268" src="img/user_assign_dags.gif" alt="Description of user_assign_dags.gif follows" /><br />
+<a id="sthref92" href="img_text/user_assign_dags.htm">Description of the illustration ''user_assign_dags.gif''</a><br />
+<br /></li>
+<li>
+<p>Place the cursor in an empty field under Dag Name. From the LOV, select the DAG to assign.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>. TMS assigns the DAG or DAGs you selected to this account.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CHDGABBJ"></a>
+<div id="TMSUG11202" class="sect2">
+<h3 class="sect2">Migrating Account Information from Oracle Clinical<a id="sthref93"></a></h3>
+<p>This section applies only to TMS installations that are integrated with Oracle Clinical.</p>
+<p>TMS stores general user account information in the OPA_ACCOUNTS table and TMS-specific user account information in the TMS_ACCOUNTS tables. See the <span class="italic"><span class="italic">Oracle Thesaurus Management System Technical Reference Manual</span></span> for details.</p>
+<p>If you have already set up user accounts in Oracle Clinical, you can migrate all account information from ORACLE_ACCOUNTS to OPA_ACCOUNTS, as follows:</p>
+<ol>
+<li>
+<p>In TMS, go to <span class="bold">Security</span>, then select <span class="bold">Define Users</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Get O*Clinical Account Data</span>.</p>
+<p>The system inserts all records from the ORACLE_ACCOUNTS table into the OPA_ACCOUNTS table. The default comment text for each record is "Maintained in Oracle Clinical."</p>
+</li>
+<li>
+<p>Set up TMS-specific security for each user:</p>
+<ul>
+<li>
+<p>Either set their Superuser flag to <span class="bold">Yes</span> in the Define Users window or assign a Data Access Group; see <a href="#CDCEDDDH">"Assigning Data Access Groups to a User"</a>.</p>
+</li>
+<li>
+<p>Assign roles as required; see <a href="#CDCEJFIE">"Assigning Roles to a User"</a>.</p>
+</li>
+<li>
+<p>Give dictionary loading privileges if required; see <a href="#CHDIAJJC">"Defining a New User"</a>.</p>
+</li>
+<li>
+<p>Set password; see <a href="#CHDIAJJC">"Defining a New User"</a>.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>You must continue to maintain these accounts in Oracle Clinical.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CDCBAIJG"></a>
+<div id="TMSUG11203" class="sect1">
+<h2 class="sect1">Using Data Access Groups<a id="sthref94"></a> (DAGs) for Security</h2>
+<p>This section includes:</p>
+<ul>
+<li>
+<p><a href="#CDCDDBAC">Defining Security Columns</a></p>
+</li>
+<li>
+<p><a href="#CDDGEGEF">Creating a DAG</a></p>
+</li>
+<li>
+<p><a href="#CDCFECFA">Setting DAG Rules</a></p>
+</li>
+<li>
+<p><a href="#CDCFEHCC">Assigning Users to DAGs</a></p>
+</li>
+<li>
+<p><a href="#CDCICDEA">DAG and Settings Inconsistencies Report</a></p>
+</li>
+<li>
+<p><a href="#CDCJHEDI">Creating and Dropping External System Value Indexes</a></p>
+</li>
+</ul>
+<p>In TMS, database roles dictate which windows in the user interface a user can access. For users assigned to one or more Data Access Groups, their DAG assignments dictate the data they see in TMS windows and in the TMS Lite Browser, and whether or not they can operate on TMS data in specific dictionaries and/or domains.</p>
+<p>When you define a DAG:</p>
+<ul>
+<li>
+<p>You can specify whether users in the group can make changes or only read data.</p>
+</li>
+<li>
+<p>You can specify whether users in the group can see data that originated in one or more specific external systems, and from a particular project or study, for example.</p>
+</li>
+<li>
+<p>You can specify whether users in the group can see data that originated in one or more specific databases.</p>
+</li>
+<li>
+<p>You can specify whether a user can see only his or her own task assignments and/or those of which specific other users.</p>
+</li>
+</ul>
+<p>You define DAGs in the Maintain DAGs window and then assign users to the group either in the User Assignments tab of the Maintain DAGs window or as you create user accounts. A single user can be assigned to multiple DAGs. The user then has access to the sum of data allowed by all his or her DAG assignments. Alternatively, a user can be designated as a Superuser. Superusers can see all data and cannot be assigned to any DAGs.</p>
+<p>The OPA_ADMIN database role is required to access the Maintain DAGs window.</p>
+<a id="CDCDDBAC"></a>
+<div id="TMSUG11204" class="sect2">
+<h3 class="sect2">Defining Security Columns</h3>
+<p>Before you define any DAGs, you must specify which TMS table columns&mdash;each of which stores a particular type of data&mdash;are available to include in DAGS; if a column is available to DAGs, a particular DAG can limit the data its users can see to one or more values stored in that column in TMS. If the column is not available to DAGs, data for all its values is always viewable to users with normal security access.</p>
+<p>The columns available for use in DAG security are:</p>
+<ul>
+<li>
+<p><span class="bold">DEF_ DICTIONARY_ID</span>. This column contains the IDs of dictionaries defined in TMS. If you make this column available for use in DAGs, you can allow users assigned to DAGs to see data associated with only one or a few dictionaries.</p>
+</li>
+<li>
+<p><span class="bold">DEF_DOMAIN_ID</span>. This column contains the IDs of domains defined in TMS. If you make this column available for use in DAGs, you can allow users assigned to DAGs to see data associated with only one or a few domains.</p>
+</li>
+<li>
+<p><span class="bold">DEF_INSTANCE_ID</span>. This column contains the IDs of your TMS databases. If you make this column available for use in DAGs, you can allow users assigned to DAGs to see data collected on only one or a few databases.</p>
+</li>
+<li>
+<p><span class="bold">DEF_INTEGRATION_KEY</span>. If you have integrated one or more external source data systems with TMS, this column holds the name of the system(s). If you make this column available for use in DAGs, you can allow users assigned to DAGs to see data associated with only one or a few external systems.</p>
+</li>
+<li>
+<p><span class="bold">EXT_VALUE_1</span>. This column holds external system data associated with a term and stored in the EXT_VALUE_1 column in the tables TMS_SOURCE_TERMS and TMS_VT_OMISSIONS. For external systems other than Oracle Clinical, you specify the data stored in this column; see <a href="integ.htm#CHDJHGJJ">"Setting Up External System Columns and Details"</a>. For Oracle Clinical, this column stores the name of the Project associated with a source term. If you make this column available for use in DAGs, you can allow users assigned to DAGs to see data associated with only one or a few Oracle Clinical projects, for example.</p>
+</li>
+<li>
+<p><span class="bold">EXT_VALUE_2</span>. This column holds external system data associated with a term and stored in the EXT_VALUE_2 column in the tables TMS_SOURCE_TERMS and TMS_VT_OMISSIONS. For external systems other than Oracle Clinical, you specify the data stored in this column; see <a href="integ.htm#CHDJHGJJ">"Setting Up External System Columns and Details"</a>. For Oracle Clinical, this column stores the name of the Study associated with a source term. If you make this column available for use in DAGs, you can allow users assigned to DAGs to see data associated with only one or a few Oracle Clinical studies, for example.</p>
+</li>
+<li>
+<p><span class="bold">ASSIGNED</span>. This column holds the user name of the person to whom a term is assigned as a task allocation because the term requires work: approving a VTA, approving an Action assignment, or classifying an omission. If you make this column available for use in DAGs, you can allow users assigned to DAGs to see terms assigned only to themselves (LOGIN_USER) or to specific other users.</p>
+</li>
+</ul>
+<p>To make columns available for use in DAGs, do the following:</p>
+<ol>
+<li>
+<p>In the <span class="bold">Security</span> menu, select <span class="bold">Define Security Columns</span>. The <span class="bold">Define Security Columns</span> window opens, displaying each column in a different row.</p>
+</li>
+<li>
+<p>For each column, select a value for the following fields:</p>
+<ul>
+<li>
+<p><span class="bold">Used?</span>. If set to <span class="bold">Yes</span>, you can define DAGs to control whether users can see the corresponding field in TMS windows. If set to <span class="bold">No</span>, DAGs cannot control whether users see the field. The field is visible or enterable to anyone with access to the window.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You can change the Used? setting from <span class="bold">No</span> to <span class="bold">Ye</span>s at any time. After a column is included in a DAG definition you can no longer change the setting from <span class="bold">Yes</span> to <span class="bold">No</span>.</div>
+</li>
+<li>
+<p><span class="bold">Create Index?</span>. You can set this flag to Yes only for the EXT_VALUE columns. If set to Yes, when you run the Create/Drop EXT_VALUE Indexes job (under the Security menu) TMS creates an index on the values in this column to speed performance when these values are used in the context of security. If set to No, TMS drops the index when you run the same job.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Save. TMS enters values in the <span class="bold">Creation Time</span> and <span class="bold">Created By</span> fields. If you modify the settings for any column, TMS enters values in the <span class="bold">Modification Time</span> and <span class="bold">Modified By</span> columns.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CDDGEGEF"></a>
+<div id="TMSUG11205" class="sect2">
+<h3 class="sect2">Creating a DAG</h3>
+<p>The process of defining a Data Access Group includes three parts: creating the DAG, specifying the DAG rules, and assigning users to the DAG. There are three tabs in the Maintain DAGs window, one for each task.</p>
+<p>To create a DAG:</p>
+<ol>
+<li>
+<p>In the <span class="bold">Security</span> menu, select <span class="bold">Maintain DAGs</span>. The <span class="bold">DAGs</span> tab is displayed.</p>
+</li>
+<li>
+<p>On the <span class="bold">DAGs</span> tab, enter a <span class="bold">Name</span> and a <span class="bold">Short Name</span> for the DAG.</p>
+</li>
+<li>
+<p>Select an option for the <span class="bold">Modify Flag?</span> option. If you want users assigned to this DAG to be able to modify data in the windows to which they have DAG access, select <span class="bold">Yes</span>. If not, select <span class="bold">No</span>.</p>
+</li>
+<li>
+<p>Enter a <span class="bold">Status</span> of <span class="bold">Provisional</span>. You can set it to Active any time after the definition is completed, including defining the DAG rules. You can add users to a DAG whose status is either Provisional or Active. Only active DAGs are used to enforce data security.</p>
+</li>
+<li>
+<p>Save. Click the <span class="bold">DAG Rules</span> tab and select settings as described below.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CDCFECFA"></a>
+<div id="TMSUG11206" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Setting DAG Rules</h3>
+<p>This section includes:</p>
+<ul>
+<li>
+<p><a href="#CDCBIIHH">About DAG Rules</a></p>
+</li>
+<li>
+<p><a href="#CDCJDFEG">Defining DAG Rules</a></p>
+</li>
+<li>
+<p><a href="#CDCJIDHB">Rules for External System Data</a></p>
+</li>
+<li>
+<p><a href="#CDCGAGJE">Rules for Task Allocation</a></p>
+</li>
+</ul>
+<a id="CDCBIIHH"></a>
+<div id="TMSUG11207" class="sect3">
+<h4 class="sect3">About DAG Rules</h4>
+<p>In the DAG Rules tab you specify the data that users assigned to the DAG can view. For one or more of the columns you selected in the Define Security Columns window, you can specify values to determine which data users in this group can see. For example, you can specify a particular dictionary or set of dictionaries. Users assigned to the DAG can then see data related to only those dictionaries (or other dictionaries to which they have access through another DAG).</p>
+<p>You can also specify the type of operations that a user can perform in a dictionary or domain by requiring a DAG role for a particular dictionary or domain, and then specifying the role assigned to users in the DAG; see <a href="#CDCBJBAC">Example 3-1, "DAG Example 1"</a>.</p>
+<p><a id="TMSUG11208"></a><span class="subhead3">DAG Roles&nbsp;</span>You can use DAG roles for the dictionary and domain columns to determine which operations users with normal security access to various TMS windows can perform there on which dictionary and/or domain data. The DAG roles are:</p>
+<ul>
+<li>
+<p><span class="bold">TMS_CLASSIFY</span> allows users assigned to the DAG to perform classification operations in the Classify VT Omissions window in a particular dictionary and/or domain, if they also have the database role TMS_CLASSIFY_PRIV.</p>
+</li>
+<li>
+<p><span class="bold">TMS_APPROVE</span> allows users assigned to the DAG to perform approval operations in the Approve VTAs window in a particular dictionary and/or domain, if they also have the database role TMS_APPROVE_PRIV.</p>
+</li>
+<li>
+<p><span class="bold">TMS_MAINTAIN</span> allows users to perform all operations in all windows in the Repository Maintenance and Translation Reports menus in a particular dictionary and/or domain, if they also have the database role TMS_MAINTAIN_PRIV.</p>
+</li>
+<li>
+<p><span class="bold">TMS_DUPG</span> allows users to perform all operations in all windows in the Dictionary Upgrade menu in a particular dictionary and/or domain, if they also have the database role TMS_DICTUPG_PRIV.</p>
+</li>
+<li>
+<p><span class="bold">TMS_RECLASSIFY</span> allows users assigned to the DAG to perform reclassification operations in the Reclassify Verbatim Terms window and in the High-Level Reclassifications window in a particular dictionary and/or domain, if they also have the database role TMS_RECLASSIFY_PRIV.</p>
+</li>
+</ul>
+<div id="TMSUG11209" class="example">
+<p class="titleinexample"><a id="CDCBJBAC"></a>Example 3-1 DAG Example 1</p>
+<p>Data Access Group 12345 has the following DAG rule defined for the dictionary column (DEF_DICTIONARY_ID), for which a DAG Role is required:</p>
+<ul>
+<li>
+<p>For the value MedDRA, the DAG roles specified are TMS_CLASSIFY and TMS_APPROVE.</p>
+</li>
+<li>
+<p>For the value WHO-Drug, only the DAG role TMS_CLASSIFY is specified.</p>
+</li>
+</ul>
+<p>If you assign a user who has all TMS database roles assigned to this DAG, the user can perform Classify and Approve activities on MedDRA. However, on WHO-Drug, the user can only perform Classify activities, and not, for example, Approve activities.</p>
+</div>
+<!-- class="example" -->
+<div id="TMSUG11210" class="example">
+<p class="titleinexample"><a id="sthref95"></a>Example 3-2 DAG Example 2</p>
+<p>User A belongs to only one DAG, and that DAG specifies MedDRA as the only dictionary he can access. Therefore, in any windows he can open, he can view only MedDRA data. User A has two database roles: TMS_CLASSIFY_PRIV and TMS_APPROVE.</p>
+<p>User A can do the following:</p>
+<ul>
+<li>
+<p>Open Classify VT Omissions window (because he has the database role TMS_CLASSIFY_PRIV) and open the Approve VTAs window (because he has the database role TMS_APPROVE_PRIV).</p>
+</li>
+<li>
+<p>See data from MedDRA in both windows (because MedDRA is specified as a value for the DEF_DICTIONARY_ID column in his DAG).</p>
+</li>
+<li>
+<p>Classify verbatim terms to MedDRA terms ((because his DAG has Roles Required for the column DEF_DICITONARY_ID, MedDRA defined as a value for that column, and the DAG role TMS_CLASSIFY is specified for that value).</p>
+</li>
+</ul>
+<p>However, he cannot approve VTAs in the Approve VTAs window because his DAG has Roles Required for DEF_DICTIONARY_ID, MedDRA defined as a value for that column, and TMS_APPROVE is not specified as a DAG role for MedDRA.</p>
+</div>
+<!-- class="example" --></div>
+<!-- class="sect3" -->
+<a id="CDCJDFEG"></a>
+<div id="TMSUG11211" class="sect3">
+<h4 class="sect3">Defining DAG Rules</h4>
+<p>After you have created a DAG, define rules for it:</p>
+<ol>
+<li>
+<p>In the <span class="bold">Maintain DAG</span>s window, <span class="bold">DAGs</span> tab, select the DAG for which you want to define rules.</p>
+</li>
+<li>
+<p>Click the <span class="bold">DAG Rules</span> tab. TMS displays the <span class="bold">DAG Rules</span> tab with the DAG name and short name displayed at the top of the tab.</p>
+</li>
+<li>
+<p>Click in the first empty row in the <span class="bold">Columns</span> section, <span class="bold">Name</span> field.</p>
+</li>
+<li>
+<p>Click the ellipsis (&hellip;) to invoke the list of values. TMS displays a list of the columns you defined as available to DAGs; see <a href="#CDCDDBAC">"Defining Security Columns"</a>.</p>
+</li>
+<li>
+<p>For each column you select, specify the following:</p>
+<ul>
+<li>
+<p><span class="bold">Role Req'd</span>?. TMS allows setting this flag to <span class="bold">Yes</span> only for the DEF_DICTIONARY_ID (dictionary) and DEF_DOMAIN_ID (domain) columns.</p>
+<p>If set to <span class="bold">No</span>, users assigned to this DAG can perform any transactions on the data they can see in the windows they can open.</p>
+<p>If set to <span class="bold">Yes</span>, users assigned to this DAG can perform only certain transactions (specified in the <span class="bold">Roles</span> section for each column value) on the data they can see (specified in the <span class="bold">Values</span> section) in the windows that they can open.</p>
+</li>
+<li>
+<p><span class="bold">Values</span>. In the <span class="bold">Values</span> section, specify every value that applies for the currently selected column in the <span class="bold">Columns</span> section. For most columns, no value appears in the <span class="bold">External System</span> field. Click in the <span class="bold">Column Value</span> field and select a value from the list of values. To specify more than one value, select one in the next row.</p>
+<p>The list of values for the <span class="bold">Assigned</span> column includes the predefined value <span class="bold">[LOGIN_USER]</span>. If you select this predefined value, the user currently logged in to TMS can see the tasks assigned to himself or herself.</p>
+<p>For information on the external system-related columns, see <a href="#CDCJIDHB">"Rules for External System Data"</a>.</p>
+</li>
+<li>
+<p><span class="bold">Roles</span>. If you set <span class="bold">Role Req'd?</span> to Yes, you must specify at least one role for each column value. For example, if you specified Role Required for the DEF_DICTIONARY_ID column, and specified MedDRA as one of the values for the column, the Roles you specify for MedDRA determine what operations users in this user group will be able to perform on MedDRA terms. If you specify TMS_CLASSIFY, users with access to the Classify VT Omissions window will be able to classify verbatim terms to MedDRA terms. If you do not specify TMS_CLASSIFY, users with access to the window will be able to see MedDRA terms but will not be able to perform any classification operations on them.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Save. Repeat for each column you want to include in the DAG.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<a id="CDCJIDHB"></a>
+<div id="TMSUG11212" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Rules for External System Data</h4>
+<p>To limit users' access to data from a particular external system, select the DEF_INTEGRATION_KEY as a column, then select the particular external system to which you want to allow access in the Column Value field.</p>
+<p>To allow access to a particular level of information within an external system, use the EXT_VALUE_1 and EXT_VALUE_2 columns.</p>
+<p>For Oracle Clinical, the EXT_VALUE_1 is predefined to hold project names and the EXT_VALUE_2 column is predefined to hold study names. For other external systems you define what data to store in these columns; see <a href="integ.htm#CHDJHGJJ">"Setting Up External System Columns and Details"</a>.</p>
+<p>For example, if you specify Oracle Clinical as an external system value and then specify Project A as the only EXT_VALUE_1 value and Study A as the only EXT_VALUE_2 value, users assigned to this DAG can only view source terms that originated in Oracle Clinical Project A, Study A. They cannot view source terms from Project A, Study B, or source terms that originated in another external source data system.</p>
+<p>To specify external system data to be accessible to users in this DAG, do the following:</p>
+<ol>
+<li>
+<p>In the <span class="bold">Columns</span> section, <span class="bold">Name</span> field, select <span class="bold">EXT_VALUE_1</span> or <span class="bold">EXT_VALUE_2</span> from the list of values.</p>
+</li>
+<li>
+<p>With <span class="bold">EXT_VALUE</span> column selected in the <span class="bold">Columns</span> section, click the <span class="bold">External System</span> field in the <span class="bold">Values</span> section.</p>
+</li>
+<li>
+<p>From the list of values, select the external system whose data you want users to be able to see.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Column Value</span> field and invoke the list of values. TMS displays the values stored in the EXT_VALUE_1 (or EXT_VALUE_2) column for the external system you selected. For example, if you selected Oracle Clinical as the external system, TMS displays Oracle Clinical project names.</p>
+</li>
+<li>
+<p>From the list of values, select a column value.</p>
+</li>
+</ol>
+<p>Users in this DAG will be able to see data associated with the external systems and column values you specify, and they will not be able to see data associated with external systems and column values you did not specify. Repeat this procedure to allow access to additional values for the same external system, and to allow access to data from additional external systems.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If you use the EXT_VALUE_1 or _2 columns to specify access to data from a particular external system, you must also specify the external system itself as a value in the DEF_INTEGRATION_KEY column.</div>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+For best performance, each time you add or delete a value from one of the EXT_VALUE columns, run the Create/Drop EXT_VALUE Indexes job.</div>
+</div>
+<!-- class="sect3" -->
+<a id="CDCGAGJE"></a>
+<div id="TMSUG11213" class="sect3">
+<h4 class="sect3">Rules for Task Allocation<a id="sthref96"></a></h4>
+<p>If your company is using the Task Allocation feature and you want to restrict users' ability to allocate tasks in certain dictionaries or domains, or restrict user's ability to see other users' assigned tasks, you can use DAGs to enforce those restrictions.</p>
+<p>TMS allows users with task allocation privileges to allocate tasks to any user who is available for tasks associated with a particular dictionary. However, if the allocator is assigned to one or more DAGs, he or she can allocate tasks to other users only for the dictionaries he or she (the allocator) has access to through a DAG. The task-receiving user must have access to the same dictionary through a DAG as well (or as a superuser).</p>
+<div id="TMSUG11214" class="example">
+<p class="titleinexample"><a id="sthref97"></a>Example 3-3 DAG Definitions and Task Allocation</p>
+<p>TMS user Ted has TMS_ALLOCATE_PRIV and is assigned to DAG 12345, which includes two dictionaries: MedDRA and WHO-Drug.</p>
+<p>TMS user Alice is assigned to DAG 67890, which includes two dictionaries: MedDRA and CoStart.</p>
+<p>Ted can assign Alice tasks related to MedDRA only; not WHO-Drug or CoStart.</p>
+</div>
+<!-- class="example" -->
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The values of the Assigned column restrict the data that the user sees in Classify VT Omissions, Approve VTAs, Approve Action Assignments windows. They do not affect what the user sees in the Task Allocation windows. As long as the user has task allocation privilege, he can see all tasks (assigned to anyone) in the Task Allocation windows.</div>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CDCFEHCC"></a>
+<div id="TMSUG11215" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Assigning Users to DAGs</h3>
+<p>You can assign users to a DAG either in the User Assignments tab of the Maintain DAGs window or in the Define Users window. In the Maintain DAGs window, you can add multiple users to a single DAG at the same time. In the Define Users window you can assign a single user to multiple DAGs at the same time. See <a href="#CHDDJIBB">"Defining Users"</a> for more information.</p>
+<p>To add users to a DAG in the Maintain DAGs window, do the following:</p>
+<ol>
+<li>
+<p>In the Security menu, select Maintain DAGs. The Maintain DAGs window opens.</p>
+</li>
+<li>
+<p>Click the User Assignment tab. The User Assignment tab opens.</p>
+</li>
+<li>
+<p>Click in the Account Name field in the first empty row. TMS displays &hellip; in the right corner of the field.</p>
+</li>
+<li>
+<p>Click the &hellip; to retrieve the list of values including all user accounts available for assignment to a DAG (superusers are not included).</p>
+</li>
+<li>
+<p>Select the user account you want to assign to the DAG. You can query in the Find field to narrow your search.</p>
+</li>
+<li>
+<p>Repeat the procedure to add another user account in the next row as many times as necessary. If necessary, select Insert from the Record field to additional rows, one at a time.</p>
+</li>
+<li>
+<p>Save. TMS assigns the users you specified to the DAG, which now controls their access to TMS data.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CDCICDEA"></a>
+<div id="TMSUG11216" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">DAG and Settings Inconsistencies Report<a id="sthref98"></a> <a id="sthref99"></a></h3>
+<p>This section includes:</p>
+<ul>
+<li>
+<p><a href="#BABJCFGD">About the DAG Settings and Inconsistencies Report</a></p>
+</li>
+<li>
+<p><a href="#BABBBFIF">Running the DAG and Setting Inconsistencies Report</a></p>
+</li>
+</ul>
+<a id="BABJCFGD"></a>
+<div id="TMSUG11217" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">About the DAG Settings and Inconsistencies Report</h4>
+<p>When you create a user account in TMS, you specify profile settings for the user. In addition, if the user is not a superuser you also assign the user to at least one Data Access Group (DAG).</p>
+<p>DAGs determine which data the user can view, and profile settings determine which data a user views by default. TMS does not check or enforce that these settings match; therefore it is possible to set a user's profile to default settings for data the user cannot actually see. Use this report to determine if any users are currently in this situation.</p>
+<p>It is also possible to create a user account and not assign the user to any DAGs. Users designated as superusers can see all data and cannot belong to a DAG. However, if you do not designate a user as a superuser and also do not assign him or her to a DAG, the user will not be able to do anything in TMS.</p>
+<p>The DAG and Setting Inconsistencies Report shows the following:</p>
+<ul>
+<li>
+<p>A list of all non-superusers who are not associated with an active DAG.</p>
+</li>
+<li>
+<p>A list of all non-superusers who do not have DAG access to the following default settings:</p>
+<ul>
+<li>
+<p>dictionary</p>
+</li>
+<li>
+<p>domain</p>
+</li>
+<li>
+<p>external system</p>
+</li>
+<li>
+<p>external value(s)</p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<a id="BABBBFIF"></a>
+<div id="TMSUG11218" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Running the DAG and Setting Inconsistencies Report</h4>
+<p>To generate a DAG and Setting Inconsistencies Report, do the following:</p>
+<ol>
+<li>
+<p>From the <span class="bold">Security</span> menu, select the <span class="bold">DAG and Setting Inconsistencies Report</span>.</p>
+</li>
+<li>
+<p>Enter a value for the General parameter <span class="bold">Output</span>. Select the format in which you wish to generate the report - HTML, PDF, RTF, XLS or XML. This is a mandatory field.</p>
+</li>
+<li>
+<p>Enter a value for the Job Specific parameter <span class="bold">Template</span>. Select the template you want to use for this report. If your company has created a custom template, it appears in the list of values. The Oracle Template is the default template.</p>
+</li>
+<li>
+<p>Submit the job. Select <span class="bold">Job</span>, then <span class="bold">Submit</span>, or click the Submit icon to generate the report in the selected output format.</p>
+<p>A new browser window opens with the generated report.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CDCJHEDI"></a>
+<div id="TMSUG11219" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Creating and Dropping External System Value Indexes<a id="sthref100"></a><a id="sthref101"></a> <a id="sthref102"></a></h3>
+<p>Use this job to create or drop indexes on the column EXT_VALUE_1 and/or EXT_VALUE_2 in the TMS tables TMS_VT_OMISSIONS and TMS_SOURCE_TERMS. You specify which column or columns to create an index for in the Define Security Columns window (see <a href="#CDCDDBAC">"Defining Security Columns"</a>) but you must run this job to actually create the index.</p>
+<p>For best performance, run this job whenever you add or remove values from the EXT_VALUE_1 or EXT_VALUE_2 columns in a DAG definition.</p>
+<p>To run the job, do the following:</p>
+<ol>
+<li>
+<p>Under Job-Specific parameters, click in the Actions field and select a value from the drop-down list: Create Indexes or Drop Indexes.</p>
+</li>
+<li>
+<p>Under Schedule, select a Report Server.</p>
+</li>
+<li>
+<p>To run the job at a later time, set the other scheduling parameters; see <a href="reports_jobs.htm#CHDEGGHA">"Scheduling Parameters"</a>.</p>
+</li>
+<li>
+<p>Submit the job.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CHDFGIEC"></a>
+<div id="TMSUG11220" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Customizing Defaults in TMS Windows Using TMS Settings</h2>
+<p>TMS Settings are default values that populate many fields in TMS, such as <span class="bold">Domain</span>, <span class="bold">Dictionary</span>, and the fields that appear in the Filter window. You can establish settings that are company-wide, or specify profiles from which sets of TMS users will inherit settings values.</p>
+<p>This section includes:</p>
+<ul>
+<li>
+<p><a href="#CHDBICIB">Profiles</a></p>
+</li>
+<li>
+<p><a href="#CHDGHGDG">User Profiles</a></p>
+</li>
+<li>
+<p><a href="#CHDDHBFD">Full List of TMS Settings</a></p>
+</li>
+<li>
+<p><a href="#CHDCJBDH">Defining the Settings for a Particular Profile</a></p>
+</li>
+<li>
+<p><a href="#CHDBDGFE">Defining and Maintaining Profiles</a></p>
+</li>
+<li>
+<p><a href="#CHDIDHAH">Assigning Profiles to Users</a></p>
+</li>
+</ul>
+<a id="CHDBICIB"></a>
+<div id="TMSUG11221" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Profiles<a id="sthref103"></a></h3>
+<p>A <span class="bold">profile</span> is a catalog of TMS settings values. You can define profiles that specify one or more of the TMS settings, then assign any profiles to users to control their default behavior in TMS. For example, you can create a profile that defines default values for the <span class="bold">Action Owner</span> and <span class="bold">External System</span>. If you assign this profile to a user (see <a href="#CHDGHGDG">"User Profiles"</a>), these settings could control that user's default settings for these two fields in TMS.</p>
+<p>Two default profiles provide baseline settings for TMS. The Oracle profile includes a standard set of keys and settings that provide default settings throughout the system. The Company Settings profile establishes default values that are specific to your company. Company settings override Oracle settings, and provide a baseline set of values for all users in your company.</p>
+<p>The additional, custom profiles you define enable you to set up more specific default values for groups of users. Custom profiles override both the Company Settings and Oracle profiles. You can set up as many custom profiles in TMS as you want, and assign multiple profiles to each user.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CHDGHGDG"></a>
+<div id="TMSUG11222" class="sect2">
+<h3 class="sect2">User Profiles</h3>
+<p>The <span class="bold">user profile</span> is the set of profiles that have been assigned to a user. For each profile that you assign to a user, you must define a Search Order Number. The Search Order Number shows TMS which profiles to consider first when a user profile contains multiple profile definitions.</p>
+<p>TMS sets a user's default values by checking through each profile in the user profile:</p>
+<ol>
+<li>
+<p>TMS finds the first user profile (the user profile with the lowest Search Order Number) and sets the value of each TMS field that the setting specifies.</p>
+</li>
+<li>
+<p>TMS then checks each subsequent user profile row in ascending order by Search Order Number. For each of these profiles, TMS sets defaults that have not been set by an earlier profile. If the first user profile created this user's default domain setting, the other profiles cannot override it.</p>
+</li>
+<li>
+<p>The system then checks the Company Settings profile for other TMS settings that have not been specified for this user by any of the user's custom profiles.</p>
+</li>
+<li>
+<p>Finally, TMS checks the Oracle profile for other unspecified TMS settings.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CHDDHBFD"></a>
+<div id="TMSUG11223" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Full List of TMS Settings</h3>
+<p>Each setting value controls the default behavior of one field in TMS. To determine your default domain, for example, TMS checks through your hierarchy of profiles for a value in the TMS_CURRENT_DOMAIN setting. The system then chooses that domain for you when you log in to TMS.</p>
+<p>Many TMS settings control the default value for fields that also appear in the TMS filter windows. The following windows have filters: Approve VTAs, Reclassify Verbatim Terms, Classify VT Omissions, and Maintain DSI Files.</p>
+<p>The Approve VTAs and Reclassify Verbatim Terms windows both use the Omissions Filter, with the same settings. The TMS_DSI settings control values in the Maintain DSI Files window. Enter values for TMS_DSI settings only if you are using the Disconnected System Integration feature, and only if you want a default value set in your filter for that window (see <a href="integ.htm#BGBBDEEC">"Using TMS with Disconnected Systems"</a>).</p>
+<p>For information on how to enter values for parent and child settings, see <a href="#CHDCGFCE">"Defining a Setting When No Parent-Child Setting Relationship Exists"</a> and <a href="#CHDBIACE">"Defining a Setting in Parent-Child Relationships"</a>.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You may need to log out and log in again for new settings to take effect.</div>
+<p>Settings are grouped according to the part of the application they control:</p>
+<ul>
+<li>
+<p><a href="#CHDGDFFG">OPA Settings</a></p>
+</li>
+<li>
+<p><a href="#CHDHIAAC">TMS Forms Settings</a></p>
+</li>
+<li>
+<p><a href="#CHDCGIAA">TMS HTML Settings</a></p>
+</li>
+</ul>
+<a id="CHDGDFFG"></a>
+<div id="TMSUG11224" class="sect3">
+<h4 class="sect3">OPA Settings</h4>
+<p>OPA settings control areas of the application that are common to all Oracle Health Sciences (formerly Oracle Pharmaceutical Applications) products.</p>
+<p><span class="bold">OPA_JAVA_DATE_FORMAT</span>: The default format for data values in Java activities in TMS. For example, <code dir="ltr">dd-MMM-yyyy</code></p>
+<p><span class="bold">OPA_JAVA_TIME_FORMAT</span>: The default format for time values in Java activities in TMS. For example, <code dir="ltr">kk:mm:ss</code></p>
+<p><span class="bold">OPA_SQL_DATE_FORMAT</span>: The default format for date values in SQL queries. For example, <code dir="ltr">DD-MON-YYYY</code></p>
+<p><span class="bold">OPA_SQL_TIME_FORMAT</span>: The default format for time values in SQL queries. For example, <code dir="ltr">HH24:MI:SS</code></p>
+<p><span class="bold">OPA_UIX_MAX_ROWS</span>: For UIX-based applications such as the TMS Lite Browser, this setting determines the maximum number of records that queries will retrieve.</p>
+<p><span class="bold">OPA_UI_COUNTRY</span>: Two-letter short name of the default country. An LOV is available.</p>
+<p><span class="bold">OPA_UI_LANG</span>: Two-letter short name of the default language. An LOV is available.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CHDHIAAC"></a>
+<div id="TMSUG11225" class="sect3">
+<h4 class="sect3">TMS Forms Settings</h4>
+<p>TMS Forms settings control the default settings for the Oracle Forms-based TMS user interface.</p>
+<p>The parent-level settings are:</p>
+<p><span class="bold">TMS_CURRENT_ACTION_OWNER</span>: This setting controls the default value for the <span class="bold">Action Owner</span> field.</p>
+<p><span class="bold">TMS_CURRENT_ACTION_SYS</span>: Controls the default value for the <span class="bold">External System</span> field.</p>
+<p><span class="bold">TMS_CURRENT_ACTION_WKFLW</span>: Controls the default value for the <span class="bold">Action Workflow</span> field.</p>
+<p><span class="bold">TMS_CURRENT_ASSIGNED</span>: Controls the default value for the <span class="bold">Assigned</span> field in the <span class="bold">General</span> tab of the Omission Filter.</p>
+<p><span class="bold">TMS_CURRENT_DOMAIN</span>: The domain that is selected for your profile by default. This setting is a parent key for TMS_CURRENT_DICTIONARY.</p>
+<p><span class="bold">TMS_CURRENT_EXT_SYSTEM</span>: The external system that is selected by default.</p>
+<p><span class="bold">TMS_CURRENT_SYNC_INSTANCE</span>: Controls the <span class="bold">TMS DB</span> field in the <span class="bold">General</span> tab of the Omission Filter and other Filter windows.</p>
+<p><span class="bold">TMS_DSI_CURRENT_EXT_SYS&hellip;</span>: From the list of values, select the name of the external source data system you most commonly use in Disconnected System Integration. This setting populates the <span class="bold">External System</span> field in the Maintain DSI Files Filter, and has a child and grandchild setting; see <a href="#CDCHGAJB">TMS_DSI_CURRENT_INSTANCE</a> and <a href="#CDCDBEAI">TMS_DSI_CURRENT_X_AREA</a>.</p>
+<p><span class="bold">TMS_DSI_ERROR_PROCESS_STATUS</span>: From the list of values, select N or Y (No or Yes). If N, the <span class="bold">Error</span> box for <span class="bold">Process Status</span> is deselected by default, and the system does not query for jobs that ended with a status of Error. If Y, the <span class="bold">Error</span> box for <span class="bold">Process Status</span> is selected by default, and the system queries for jobs that ended with a status of Error.</p>
+<p><span class="bold">TMS_DSI_FATAL_PROCESS_STATUS</span>: From the list of values, select N or Y (No or Yes). If N, the <span class="bold">Fatal</span> box for <span class="bold">Process Status</span> is deselected by default, and the system does not query for jobs that ended with a status of Fatal Error. If Y, the <span class="bold">Fatal</span> box for <span class="bold">Process Status</span> is selected by default, and the system queries for jobs that ended with a status of Fatal Error.</p>
+<p><span class="bold">TMS_DSI_LAST_EXPORT_END_TS</span>: If you will often search for files exported during a particular time period, enter the last day of that time period using the date format in your OPA_SQL_DATE_FORMAT setting. This setting populates the (<span class="bold">Last Export Between&hellip;</span>) <span class="bold">And&hellip;</span> field in the Maintain DSI Files Filter.</p>
+<p><span class="bold">TMS_DSI_LAST_EXPORT_START_TS</span>: If you will often search for files exported during a particular time period, enter the first day of that time period using the date format in your OPA_SQL_DATE_FORMAT setting. This setting populates the <span class="bold">Last Export Between&hellip;</span> field in the Maintain DSI Files Filter.</p>
+<p><span class="bold">TMS_DSI_MANUAL_STATUS</span>: From the list of values, select the import/export job manual status you most frequently want to query for, if any. The choices are: <span class="bold">New</span>, <span class="bold">Pending</span>, or <span class="bold">Fixed</span>. This setting populates the <span class="bold">Manual Status</span> field in the Maintain DSI Files Filter.</p>
+<p><span class="bold">TMS_DSI_PROCESS_END_TS</span>: If you will often search for files that ran during a particular time period, enter the last day of that time period using the date format in your OPA_SQL_DATE_FORMAT setting. This setting populates the (<span class="bold">Process Between&hellip;</span>) <span class="bold">And&hellip;</span> field in the Maintain DSI Files filter.</p>
+<p><span class="bold">TMS_DSI_PROCESS_START_TS</span>: If you will often search for files that ran during a particular time period, enter the first day of that time period using the date format in your OPA_SQL_DATE_FORMAT setting. This setting populates the <span class="bold">Process Between&hellip;</span> field in the Maintain DSI Files filter.</p>
+<p><span class="bold">TMS_DSI_PROCESS_TYPE</span>: From the list of values, select <span class="bold">Export</span> or <span class="bold">Import</span>. This setting populates the <span class="bold">Process Type</span> field in the Maintain DSI Files Filter.</p>
+<p><span class="bold">TMS_DSI_SUCCESS_PROCESS_STATUS</span>: From the list of values, select N or Y (No or Yes). If N, the <span class="bold">Success</span> box for <span class="bold">Process Status</span> is deselected by default, and the system does not query for jobs that ended with a status of Success. If Y, the <span class="bold">Success</span> box for <span class="bold">Process Status</span> is selected by default, and the system queries for jobs that ended with a status of Success.</p>
+<p><span class="bold">TMS_DSI_WARNING_PROCESS_STATUS</span>: From the list of values, select N or Y (No or Yes). If N, the <span class="bold">Warning</span> box for <span class="bold">Process Status</span> is deselected by default, and the system does not query for jobs that ended with a status of Warning. If Y, the <span class="bold">Warning</span> box for <span class="bold">Process Status</span> in selected by default, and the system queries for jobs that ended with a status of Warning.</p>
+<p><span class="bold">TMS_DSI_X_AREA_STATUS</span>: From the list of values, select <span class="bold">Active</span>, <span class="bold">Complete</span>, or <span class="bold">Inactive</span>. This setting populates the <span class="bold">X Area Status</span> field in the Maintain DSI Files Filter.</p>
+<p><a id="CDCCGDHC"></a><span class="bold">TMS_PROCESS_DICTIONARY</span> If some dictionary/domain combinations require approval for VTAs or actions, you can use this profile setting allow one or more particular users to apply Answerable Actions directly in this dictionary (for any domain), with no approval or Internal Action required, and/or to create Approved VTAs directly, with no approval required. See <a href="#CDCGBJCF">TMS_ACTION_APPROVAL_REQUIRED</a> and <a href="#CDCEDIEA">TMS_VTA_APPROVAL_REQUIRED</a>.</p>
+<p class="subhead2"><a id="TMSUG11226"></a>Child-level Settings</p>
+<p>Each of the following settings is dependent on one of the parent-level settings. See <a href="#CHDBIACE">"Defining a Setting in Parent-Child Relationships"</a>.</p>
+<p><a id="CDCGBJCF"></a><span class="bold">TMS_ACTION_APPROVAL_REQUIRED</span>: If set to N, users with this setting in their profile can assign Answerable actions directly, without assigning an Internal Action for approval, regardless of the Action approval setting for the dictionary/domain combination. This setting is a child key for TMS_PROCESS_DICTIONARY.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+A setting of Y is not supported. (You can save the setting Y, but it will not have any effect.)</div>
+<p><span class="bold">TMS_CURRENT_DICTIONARY</span>: Within the selected domain, the dictionary that is selected for your profile by default. This setting is a child key for TMS_CURRENT_DOMAIN.</p>
+<p><span class="bold">TMS_CURRENT_EXT_VALUE_1 &hellip; 8</span>: Within the selected external system, these eight settings determine the default values for each of the eight external system fields in the <span class="bold">External System</span> tab of the Omission Filter.</p>
+<p><span class="bold">TMS_CURRENT_INSTANCE</span>: Within the selected external system, the default source database in the <span class="bold">External System</span> tab of the Omission Filter.</p>
+<p><span class="bold">TMS_CURRENT_OMIS_STATUS</span>: Within the selected external system, the default omission status. This setting populates the <span class="bold">Omission Status</span> field in the <span class="bold">Actions</span> tab. No LOV is available for this field, so make sure the omission status you enter as the default matches the status required in the Filter window.</p>
+<p><a id="CDCHGAJB"></a><span class="bold">TMS_DSI_CURRENT_INSTANCE</span>: Within the selected DSI external system, the default Database ID; enter the most frequently used remote database or leave blank. The list of values displays the name as well as the ID of each registered remote database.</p>
+<p><a id="CDCDBEAI"></a><span class="bold">TMS_DSI_CURRENT_X_AREA</span>: This is a child key of the TMS_DSI_CURRENT_INSTANCE child key. For the database chosen as the default current instance, enter the ID of the most frequently used X Area on the remote database, if any. The list of values displays the name as well as the ID of each X Area on the selected remote database.</p>
+<p><a id="CDCEDIEA"></a><span class="bold">TMS_VTA_APPROVAL_REQUIRED</span>: If set to N, users with this setting in their profile can create Approved VTAs directly in this dictionary (for any domain), regardless of the VTA approval setting for the dictionary/domain combination. This setting is a child key for TMS_PROCESS_DICTIONARY.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+A setting of Y is not supported. (You can save the setting Y, but it will not have any effect.)</div>
+</div>
+<!-- class="sect3" -->
+<a id="CHDCGIAA"></a>
+<div id="TMSUG11227" class="sect3">
+<h4 class="sect3">TMS HTML Settings</h4>
+<p>TMS HTML settings control the default settings for HTML-based parts of the TMS application, such as the TMS Lite Browser.</p>
+<p>The parent-level settings are:</p>
+<p><span class="bold">TMS_HTML_DQ_EXT_SYS</span>: This setting controls the default value for the <span class="bold">External System</span> field in the TMS Lite Browser. This setting is a parent key for TMS_HTML_DQ_EXT_SYS_QRY.</p>
+<p><span class="bold">TMS_HTML_LANGUAGE</span>: This setting controls the default value for the <span class="bold">Action Owner</span> field. This setting is a parent key for TMS_HTML_DICTIONARY.</p>
+<p>The child level settings are:</p>
+<p><span class="bold">TMS_HTML_DQ_EXT_SYS_QRY</span>: Within the selected HTML external system, this setting controls which external system query is selected by default. These queries are also called groups, and appear in the <span class="bold">Group</span> field in the TMS Lite Browser. This setting is a child key for TMS_HTML_DQ_EXT_SYS.</p>
+<p><span class="bold">TMS_HTML_DICTIONARY</span>: Within the selected HTML language, the dictionary that is selected for your profile by default. This setting is a child key for TMS_HTML_LANGUAGE.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CHDCJBDH"></a>
+<div id="TMSUG11228" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Defining the Settings for a Particular Profile</h3>
+<p>The <span class="bold">Settings</span> tab enables you to define the default settings values for a profile. All settings are grouped hierarchically by their Top External Area (Top X Area), which describes what part of the application they control. The Top External Areas are OPA, TMS Forms, and TMS HTML.</p>
+<p>Some settings also have parent-child relationships, where the child setting depends on the selected value of the parent. For example, the TMS Forms setting TMS_CURRENT_DOMAIN is a parent key for the child key TMS_CURRENT_DICTIONARY. While you can use TMS_CURRENT_DOMAIN to define which domain is selected by default for your profile, you can specify for non-default domains which dictionary is selected by default when you switch to that domain.</p>
+<p>This section includes:</p>
+<ul>
+<li>
+<p><a href="#CHDCGFCE">Defining a Setting When No Parent-Child Setting Relationship Exists</a></p>
+</li>
+<li>
+<p><a href="#CHDBIACE">Defining a Setting in Parent-Child Relationships</a></p>
+</li>
+</ul>
+<a id="CHDCGFCE"></a>
+<div id="TMSUG11229" class="sect3">
+<h4 class="sect3">Defining a Setting When No Parent-Child Setting Relationship Exists</h4>
+<p>This section describes how to define which settings to use for a particular profile. A profile must exist in the database before you can define its settings; See <a href="#CHDBDGFE">"Defining and Maintaining Profiles"</a>.</p>
+<p>This section describes how to define values for settings that are not part of parent-child relationships. See <a href="#CHDBIACE">"Defining a Setting in Parent-Child Relationships"</a> for more information about that process.</p>
+<p>To define a setting for a profile:</p>
+<ol>
+<li>
+<p>From the <span class="bold">Definition</span> menu, select <span class="bold">Maintain Settings</span>. The Maintain Settings window opens.</p>
+</li>
+<li>
+<p>From the <span class="bold">Profile</span> list, choose the profile in which you want to define settings.</p>
+<img width="533" height="98" src="img/settings_top.gif" alt="Description of settings_top.gif follows" /><br />
+<a id="sthref104" href="img_text/settings_top.htm">Description of the illustration ''settings_top.gif''</a><br />
+<br /></li>
+<li>
+<p>Choose the Top External System Area from the <span class="bold">Top X Area</span> field. Top External System Areas group together the settings by application area: you can choose <span class="bold">OPA</span>, <span class="bold">TMS Forms</span>, and <span class="bold">TMS HTML</span>.</p>
+<p>Your choice of External System Area populates the values in the <span class="bold">Settings Key</span> field.</p>
+</li>
+<li>
+<p>Choose the setting that you want to define from the list.</p>
+<img width="528" height="66" src="img/settings_mid.gif" alt="Description of settings_mid.gif follows" /><br />
+<a id="sthref105" href="img_text/settings_mid.htm">Description of the illustration ''settings_mid.gif''</a><br />
+<br />
+<p>The detail fields under the <span class="bold">Extend Type</span> field provide more information about the value or default value, but only in cases where the value or default value is not descriptive by itself. The above example for <span class="bold">Current Domain</span> uses the domain ID as its value, so the detail fields display the <span class="bold">Domain Short Name</span>.</p>
+</li>
+<li>
+<p>Enter the value for the setting, or choose a value if an LOV exists. The Define Settings window displays default settings values for each setting key in the <span class="bold">Default Value</span> field.</p>
+<p><span class="bold">Extend Type</span> currently has no effect in TMS.</p>
+</li>
+<li>
+<p>Click <span class="bold">Set Default</span>. TMS saves this default value for this setting.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<a id="CHDBIACE"></a>
+<div id="TMSUG11230" class="sect3">
+<h4 class="sect3">Defining a Setting in Parent-Child Relationships</h4>
+<p>In cases where a setting has one or more child settings that are dependent on it, you can use the child setting to establish a default value for every parent setting choice. For example, the Domain setting has the Dictionary setting as a child. You can establish a default Dictionary setting for each domain value in the database. When you choose a domain in the application, TMS will default the dictionary to the one specified for your setting for the selected domain.</p>
+<p>To define a child setting:</p>
+<ol>
+<li>
+<p>Select the <span class="bold">Profile</span> and <span class="bold">External Area</span> that contain the parent and child key you want to define.</p>
+</li>
+<li>
+<p>From the <span class="bold">Setting Key</span> field, choose the child key's parent.</p>
+</li>
+<li>
+<p>Choose the parent key's value. You can specify the default child key setting for any parent key value, whether or not the value is the parent key's default.</p>
+</li>
+<li>
+<p>From the <span class="bold">Child Key</span> field, choose the child key for which you want to create defaults.</p>
+<p>TMS populates the <span class="bold">Setting Key</span> field with your selected child key, and displays the information about its parent key and parent key value.</p>
+</li>
+<li>
+<p>Enter the value for the child key for this parent setting. A list of values may be available when you click in the field.</p>
+</li>
+<li>
+<p>Click <span class="bold">Set Default</span>. TMS will use this default setting for the child key setting whenever you select this parent key value.</p>
+</li>
+</ol>
+<p>You can return to the parent settings level by clicking the <span class="bold">Top Level</span> button.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CHDBDGFE"></a>
+<div id="TMSUG11231" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Defining and Maintaining Profiles</h3>
+<p>Profiles are the basis for creating default settings. By default, TMS includes the default Oracle Profile and a default Company Profile. You can use the <span class="bold">Profiles</span> tab to add, modify, and delete profiles.</p>
+<img width="394" height="92" src="img/settings_profiles.gif" alt="Description of settings_profiles.gif follows" /><br />
+<a id="sthref106" href="img_text/settings_profiles.htm">Description of the illustration ''settings_profiles.gif''</a><br />
+<br />
+<p>To add a new profile, insert a row and enter a display name and a description. The display name appears in the <span class="bold">Settings</span> and <span class="bold">User Profiles</span> tabs.</p>
+<p>To delete a custom profile (that is, one other than the Oracle or Company Profiles), select its row and delete the record. TMS prompts you to confirm the deletion; click <span class="bold">Yes</span> to complete the profile deletion. You cannot delete the Oracle or Company Settings profiles.</p>
+<p>You can also change the profile's display name or description at any time.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CHDIDHAH"></a>
+<div id="TMSUG11232" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Assigning Profiles to Users</h3>
+<p>The <span class="bold">User Profiles</span> tab displays user/profile combinations, and enables you to assign profiles to (or remove profiles from) users, and to modify a user profile. Because you can assign multiple profiles to a user, the User Profile determines the relative precedence of these profiles.</p>
+<p>This tab is also convenient for assigning a profile to all members of a group.</p>
+<div id="TMSUG11233" class="sect3"><a id="sthref107"></a>
+<h4 class="sect3">Adding a Profile to a User's Set of Profiles</h4>
+<p>To add a profile to a user, and set its Search Order Number:</p>
+<ol>
+<li>
+<p>Insert a record.</p>
+</li>
+<li>
+<p>Choose the profile to which you want to add the user from the LOV.</p>
+</li>
+<li>
+<p>Enter the user's OPS$ user name. It must match exactly, and no LOV is available.</p>
+</li>
+<li>
+<p>Enter a Search Order Number. TMS checks lower numbers earlier when determining which profile's values to use. You can always adjust a user's overall search order by following the instructions in <a href="#CHDIHJJE">"Configuring a User's Profile Search Order"</a>.</p>
+</li>
+<li>
+<p>Save.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<a id="CHDIHJJE"></a>
+<div id="TMSUG11234" class="sect3">
+<h4 class="sect3">Configuring a User's Profile Search Order</h4>
+<p>Search Order determines the hierarchy of profiles for a particular user. TMS first consults the profile with the lowest Search Order value and implements the default values it specifies. The system then proceeds through the remaining profiles in ascending order by Search Order value, implementing any defaults that have not yet been set for this session.</p>
+<img width="439" height="114" src="img/settings_user_profiles.gif" alt="Description of settings_user_profiles.gif follows" /><br />
+<a id="sthref108" href="img_text/settings_user_profiles.htm">Description of the illustration ''settings_user_profiles.gif''</a><br />
+<br />
+<p>To configure a user's profile Search Order:</p>
+<ol>
+<li>
+<p>Query for the user. The window displays a row for each group to which that user belongs, with a Search Order specified for each.</p>
+</li>
+<li>
+<p>Rank the profiles by updating numbers for each row. The lower the Search Order Number, the earlier TMS will consult this profile for this user. Each Search Order Number must be unique for a user.</p>
+</li>
+<li>
+<p>Save.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="i1001755"></a>
+<div id="TMSUG11235" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><a id="sthref109"></a>Setting TMS Preferences with Reference Codelist Values</h2>
+<p>This section includes:</p>
+<ul>
+<li>
+<p><a href="#CDCHBJEE">Reference Codelists in Integrated and Nonintegrated Environments</a></p>
+</li>
+<li>
+<p><a href="#CDCFDJFA">Editing Reference Codelists</a></p>
+</li>
+<li>
+<p><a href="#CHDGIGBE">TMS_CONFIGURATION</a></p>
+</li>
+<li>
+<p><a href="#CHDFAAHD">Other Installation-wide Codelists</a></p>
+</li>
+<li>
+<p><a href="#BAJBDFGD">Local Codelists</a></p>
+</li>
+</ul>
+<p>Reference codelists provide a body of information for TMS forms and processes, which use the codelist values to create default settings, populate lists of values, and control some aspects of TMS data processing. The values and settings are defined in TMS databases, and can usually be overridden for a more specific situation somewhere else in the system. You cannot delete reference codelists or their values, but you can set one or more values or a reference codelist itself to Inactive so it will have no effect in TMS.</p>
+<p>For example, many TMS forms enable you to perform simple text queries as well as queries that use the Oracle Context Server. In these forms, you can choose which of these query options you want by selecting <span class="bold">SIMPLE</span> or <span class="bold">CONTEXT</span> in the <span class="bold">Query Type</span> field. These two values are provided in a TMS installation reference codelist, TMS_QUERY_TYPE.</p>
+<a id="CDCHBJEE"></a>
+<div id="TMSUG11236" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Reference Codelists in Integrated and Nonintegrated Environments<a id="sthref110"></a></h3>
+<p>To integrate TMS with Oracle Clinical, you must set three reference codelists in Oracle Clinical; see <a href="ocinteg.htm#i1002301">"Setting Integration Reference Codelist Values"</a>.</p>
+<p>If you are using the Disconnected System Integration feature of TMS, see <a href="integ.htm#BABFFIEC">"Setting DSI Preferences with Reference Codelist Settings"</a>.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CDCFDJFA"></a>
+<div id="TMSUG11237" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><a id="sthref111"></a>Editing Reference Codelists</h3>
+<p>To edit a reference codelist:</p>
+<ol>
+<li>
+<p>Navigate to the <span class="bold">Definition</span> menu and click either <span class="bold">Installation Reference Codelists</span> or <span class="bold">Local Reference Codelists</span>. The window opens in Query mode.</p>
+</li>
+<li>
+<p>In the <span class="bold">Name</span> field, query for the codelist that you want to edit.</p>
+</li>
+<li>
+<p>Define the codes in the lower part of the window using the Description field and documentation for each codelist.</p>
+<ol>
+<li>
+<p>The short value for the code is read-only.</p>
+</li>
+<li>
+<p>The long value for the code. You can edit this value.</p>
+</li>
+<li>
+<p><span class="bold">Active?</span> If selected, this codelist value will appear in lists that use this codelist for an LOV. If not selected, this value will not appear.</p>
+</li>
+<li>
+<p><span class="bold">Default?</span> This box has no effect in TMS.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Save.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CHDGIGBE"></a>
+<div id="TMSUG11238" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">TMS_CONFIGURATION<a id="sthref112"></a><a id="sthref113"></a></h3>
+<p>TMS_CONFIGURATION provides a list of values and behaviors that you can set for the application. The Short Value column provides a short name for the value or behavior. The Long Value column is enterable, and you can accept the value provided or modify it. If you select <span class="bold">Active?</span>, the value becomes valid in the system.</p>
+<p>There is no default value for TMS_CONFIGURATION, so selecting <span class="bold">Default?</span> does not change the behavior of this reference codelist.</p>
+<p>This section provides additional descriptions of TMS_CONFIGURATION values and the features they drive in TMS. See also <a href="#BAJCHBFJ">"Changing TMS_CONFIGURATION Settings After Data Has Been Processed"</a>.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+*The settings followed by asterisks (*) below help determine the way TMS processes source terms and omissions. See <a href="#BAJCHBFJ">"Changing TMS_CONFIGURATION Settings After Data Has Been Processed"</a>.</div>
+<p>The settings are:</p>
+<br />
+<a href="#CHDEEIFA">CREATEGLOBALVTA</a>*<br />
+<a href="#CHDIADBB">GLOVTAAPPRREQD</a>*<br />
+<a href="#BAJFGBBD">DOMVTAAPPRREQD</a>*<br />
+<a href="#CHDCJJJD">NONAPPRVTAUSED</a>*<br />
+<a href="#CHDICBII">ALLOWGLOVTAS</a>*<br />
+<a href="#CHDDAHAB">MAINTAINEXT</a><br />
+<a href="#CHDGABBB">SUPPRESNAMDRELS</a><br />
+<a href="#CHDJDGHE">WRKFLWINFALLVSN</a><br />
+<a href="#CHDGEADC">VTAAPPRFLAG</a><br />
+<a href="#CHDFBAEC">DTAPPRFLAG</a><br />
+<a href="#CHDBBEJC">CLCLEARCOMMENT</a><br />
+<a href="#CHDDHHCB">CLCLEARACTION</a><br />
+<a href="#CHDEFFAC">AUTOGLOVTAS</a>*<br />
+<a href="#CHDCECDJ">SYNCREFRESHMV</a><br />
+<a href="#CHDFDDHH">ADVDICTFEATURES</a><br />
+<a href="#CHDIAAHH">EMBEDDEDTMS</a><br />
+<a href="#CHDFHIAG">OCDISCINTCOMM</a><br />
+<a href="#CDCJIJHA">MTRECCLASSHOUR</a><br />
+<a href="#CDCBJJGJ">DOMACTAPPRREQD</a><br />
+<a href="#CDCHHEIJ">DEALLOCONLY</a><br />
+<a href="#CDCJGGJE">NONAPPRDICTCODE</a><a id="CHDEEIFA"></a>
+<div id="TMSUG11239" class="sect3">
+<h4 class="sect3">CREATEGLOBALVTA<a id="sthref114"></a> <a id="sthref115"></a></h4>
+<p>This setting controls the default behavior of the Global setting in the Maintain VT Omissions window, which is in turn used to classify a VTA as being available globally or specific to a particular domain.</p>
+<p>If Y, in the Maintain VT Omissions window TMS will create VTAs as Global by default. If N, in this window TMS will create VTAs as Domain-specific by default.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CHDIADBB"></a>
+<div id="TMSUG11240" class="sect3">
+<h4 class="sect3"><a id="sthref116"></a>GLOVTAAPPRREQD<a id="sthref117"></a></h4>
+<p>This setting dictates the default approval status of manually created Global VTAs. If Y, TMS creates global VTAs as Nonapproved by default. If N, TMS creates Global VTAs as Approved by default.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+When TMS creates a VTA automatically by synchronization, the system does not refer to this setting.</div>
+</div>
+<!-- class="sect3" -->
+<a id="BAJFGBBD"></a>
+<div id="TMSUG11241" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><a id="sthref118"></a>DOMVTAAPPRREQD<a id="sthref119"></a></h4>
+<p>This setting determines the default value of the Approval Required? flag in the Define Domain Dictionaries window. If Y, the default setting is checked; if N, the default setting is unchecked. Users can change the value for any particular domain. See <a href="defdict.htm#i1009237">"Creating Domains and Assigning Dictionaries to Domains"</a> for more information.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CHDCJJJD"></a>
+<div id="TMSUG11242" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><a id="sthref120"></a>NONAPPRVTAUSED<a id="sthref121"></a></h4>
+<p>If N, a term that matches a Nonapproved VTA will generate an omission in TMS with Search = 'Nonapproved VTA' and a discrepancy in Oracle Clinical.</p>
+<p>If Y, such a term will classify in TMS.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CHDICBII"></a>
+<div id="TMSUG11243" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><a id="sthref122"></a>ALLOWGLOVTAS<a id="sthref123"></a></h4>
+<p>If Y, TMS allows users to create global VTAs. If N, users cannot create global VTAs manually.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CHDDAHAB"></a>
+<div id="TMSUG11244" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><a id="sthref124"></a>MAINTAINEXT<a id="sthref125"></a></h4>
+<p>If Y, users can edit external terms from TMS windows under the <span class="bold">Repository Maintenance</span> menu. If N, external terms are read-only in these windows.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CHDGABBB"></a>
+<div id="TMSUG11245" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><a id="sthref126"></a>SUPPRESNAMDRELS<a id="sthref127"></a></h4>
+<p>If Y, TMS hides named relations in the Maintain Repository Data and Browse Repository Data windows. If N, these windows display named relations. You might want to suppress named relations if you only use strong dictionaries in your TMS environment.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CHDJDGHE"></a>
+<div id="TMSUG11246" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><a id="sthref128"></a>WRKFLWINFALLVSN<a id="sthref129"></a></h4>
+<p>This setting controls the default behavior of the <span class="bold">All Versions?</span> box in the <span class="bold">Maintain Informative Notes</span> window accessed from the Repository Authoring window under the Repository Maintenance menu. If Y, this box defaults to selected; if N, it defaults to deselected.</p>
+<p>WRKFLWINFALLVSN controls the default behavior only. You can still override the default and select <span class="bold">All Versions?</span> to make a workflow Informative Note apply to all versions, or clear it to make the note version-specific.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CHDGEADC"></a>
+<div id="TMSUG11247" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><a id="sthref130"></a>VTAAPPRFLAG<a id="sthref131"></a></h4>
+<p>This setting controls the default status of the <span class="bold">Appr?</span> (or <span class="bold">Approved?</span>) box for verbatim terms you create in either Maintain Repository Data or Repository Authoring. If Y, this box will be selected by default for each verbatim term you create while the window is open. If N, this box will be deselected while the window is open.</p>
+<p>VTAAPPRFLAG controls only the default status of the <span class="bold">Appr?</span> box. You can still override this default.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CHDFBAEC"></a>
+<div id="TMSUG11248" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><a id="sthref132"></a>DTAPPRFLAG<a id="sthref133"></a></h4>
+<p>This setting controls the default status of the <span class="bold">Appr?</span> (or <span class="bold">Approved?</span>) box for dictionary terms you create in either Maintain Repository Data or Repository Authoring. If Y, this box will be selected by default for each dictionary term you create while the window is open. If N, this box will be deselected while the window is open.</p>
+<p>DRAPPRFLAG controls only the default status of the <span class="bold">Appr?</span> box. You can still override the default.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CHDBBEJC"></a>
+<div id="TMSUG11249" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><a id="sthref134"></a>CLCLEARCOMMENT<a id="sthref135"></a></h4>
+<p><span class="italic">(Classify VT Omissions Window Clear Comment)</span> If Y, TMS clears the <span class="bold">Comment</span> field in the Classify VT Omissions window when you classify a verbatim term. If N, TMS retains the original comment, which you can edit before you commit your classification change to the database.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CHDDHHCB"></a>
+<div id="TMSUG11250" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><a id="sthref136"></a>CLCLEARACTION<a id="sthref137"></a></h4>
+<p><span class="italic">(Classify VT Omissions Window Clear Action)</span> If Y, TMS clears any Action associated with a verbatim term after you apply an Action to an omission. If N, TMS does not clear the Action.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CHDEFFAC"></a>
+<div id="TMSUG11251" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><a id="sthref138"></a>AUTOGLOVTAS<a id="sthref139"></a></h4>
+<p><span class="italic">(Autocoding Process Creates Global VTAs)</span> If AUTOGLOVTAS is Y, and <a href="#CHDICBII">ALLOWGLOVTAS</a> is Y, the autocoding process will create Global VTAs. If AUTOGLOVTAS is N (but <a href="#CHDICBII">ALLOWGLOVTAS</a> is still Y), autocoding creates Domain VTAs, but you can manually create Global VTAs.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CHDCECDJ"></a>
+<div id="TMSUG11252" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><a id="sthref140"></a>SYNCREFRESHMV<a id="sthref141"></a></h4>
+<p>If Y, TMS will refresh materialized views during Synchronization.</p>
+<p>The Filter windows in TMS use materialized views to keep external system data up-to-date. Refreshing the materialized views can be time-consuming, so if you do not rely on external system data in Filter windows, you might want to choose N for this setting. See <a href="#CHDDDBFG">"Controlling the Use of Materialized Views"</a>.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CHDFDDHH"></a>
+<div id="TMSUG11253" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><a id="sthref142"></a>ADVDICTFEATURES<a id="sthref143"></a></h4>
+<p>If Y, TMS will display advanced dictionary features, such as the <span class="bold">Object Classification?</span> box in the Define Dictionaries window. If you do not use the advanced dictionary features, you might want to choose N for this setting.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CHDIAAHH"></a>
+<div id="TMSUG11254" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><a id="sthref144"></a>EMBEDDEDTMS<a id="sthref145"></a></h4>
+<p>This setting is for internal use only.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CHDFHIAG"></a>
+<div id="TMSUG11255" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><a id="sthref146"></a><a id="sthref147"></a>OCDISCINTCOMM</h4>
+<p>This codelist setting enables you to control where the system saves the comments you create for terms. If Y, the system saves comments in the discrepancy_entries.internal_comment column. If N, the system saves comments in the discrepancy_entries.comment column. The default value is Y.</p>
+<p>The difference is significant to Oracle Clinical Discrepancy Management, because internal comments appear in some reports and Data Clarification Forms (DCFs), while regular comments do not. If you prefer to hide these non-internal comments from DCFs and other reports, set OCDISCINTCOMM to N.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CDCJIJHA"></a>
+<div id="TMSUG11256" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><a id="sthref148"></a>MTRECCLASSHOUR<a id="sthref149"></a></h4>
+<p>Enter the number of hours, if any, you want a user to have to fix a classification mistake he or she has made. When the long value is greater than zero, users can change classifications they have made in the Reclassify Verbatim Terms window, within the number of hours in the <span class="bold">Long Value</span> field, even if they do not have the normal reclassification privilege. The system displays only classifications created by the user logged into the system.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CDCBJJGJ"></a>
+<div id="TMSUG11257" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">DOMACTAPPRREQD <a id="sthref150"></a> <a id="sthref151"></a></h4>
+<p>This setting determines the default value of the Action Appr Reqd? flag in the Define Domain Dictionaries window. If Y, the default setting is checked; if N, the default setting is unchecked. Users can change the value for any particular domain. See <a href="defdict.htm#i1009237">"Creating Domains and Assigning Dictionaries to Domains"</a> for more information.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CDCHHEIJ"></a>
+<div id="TMSUG11258" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">DEALLOCONLY<a id="sthref152"></a><a id="sthref153"></a><a id="sthref154"></a></h4>
+<p>If the long value for short value DEALLOC is set to Y, any user can deallocate tasks from him or herself but cannot reallocate tasks to other users. If set to N, any user can reallocate tasks from him or herself to other users.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Users with the TMS_ALLOCATE_PRIV role can reallocate tasks regardless of this reference codelist setting.</div>
+</div>
+<!-- class="sect3" -->
+<a id="CDCJGGJE"></a>
+<div id="TMSUG11259" class="sect3">
+<h4 class="sect3">NONAPPRDICTCODE</h4>
+<p>This setting determines the default value of the <span class="bold">Non Appr DT</span> field in the Define Domain Dictionaries window. If the long value is NONE, the default value for the Non Appr DT field is NONE. If the long value is VTA, the default value of the field is VTA. See <a href="defdict.htm#i1009237">"Creating Domains and Assigning Dictionaries to Domains"</a> for more information.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BAJCHBFJ"></a>
+<div id="TMSUG11260" class="sect3">
+<h4 class="sect3">Changing TMS_CONFIGURATION Settings After <a id="sthref155"></a>Data Has Been Processed</h4>
+<p>Some of the settings for the TMS_CONFIGURATION reference codelist (<a href="#CHDEEIFA">CREATEGLOBALVTA</a>, <a href="#CHDIADBB">GLOVTAAPPRREQD</a>, <a href="#BAJFGBBD">DOMVTAAPPRREQD</a>, <a href="#CHDCJJJD">NONAPPRVTAUSED</a>, <a href="#CHDICBII">ALLOWGLOVTAS</a>, and <a href="#CHDEFFAC">AUTOGLOVTAS</a>) help determine the way TMS processes source terms and omissions in fully integrated external systems, and omissions in partially integrated external systems.</p>
+<p>If you change one of these settings after source terms and omissions have already been processed, the system does not automatically reprocess old data using the new setting. You must use the Force Rederivation job to mark study omissions (and source terms, in fully integrated external systems) for processing during the next Batch Validation or equivalent job.</p>
+<p>If you are using TMS with Oracle Clinical, you can call the Force Rederivation job by selecting Oracle Clinical's <span class="bold">Plan</span> menu, choosing <span class="bold">TMS Domains</span>, then selecting <span class="bold">Studies</span>, <span class="bold">Domain Elements</span>, and then <span class="bold">Force Rederivation</span>. Alternatively, you could call through the API, using the procedure ocl_tms_pack.SetLastTMSDerivTS (see the <span class="italic"><span class="italic">Oracle Thesaurus Management System Technical Reference Manual</span></span> for details). You must then run Oracle Clinical Batch Validation.</p>
+<p>If you are using a different external system, you must mark records for reprocessing and then run the equivalent of Batch Validation to actually reprocess them.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CHDFAAHD"></a>
+<div id="TMSUG11261" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Other Installation-wide Codelists</h3>
+<p>Descriptions of the TMS installation-wide codelists, other than the TMS_CONFIGURATION codelist, follow.</p>
+<a id="CDCJHCEE"></a>
+<div id="TMSUG11262" class="sect3">
+<h4 class="sect3"><a id="sthref156"></a>TMS_LANGUAGES<a id="sthref157"></a><a id="sthref158"></a></h4>
+<p>Values in this codelist populate the <span class="bold">Language</span> field in the Define Dictionaries window. English is the default dictionary language.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CDCHGGIA"></a>
+<div id="TMSUG11263" class="sect3">
+<h4 class="sect3">TMS_QUERY_TYPE <a id="sthref159"></a> <a id="sthref160"></a></h4>
+<p>TMS_QUERY_TYPE populates the LOV in the <span class="bold">Query</span> field for several forms in TMS. The default value, STANDARD, provides a standard Oracle query, while the CONTEXT value enables you to use the Oracle <span class="italic">inter</span>Media option.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CDCEJAJI"></a>
+<div id="TMSUG11264" class="sect3">
+<h4 class="sect3">TMS_SOURCE_MAT_VIEWS <a id="sthref161"></a> <a id="sthref162"></a></h4>
+<p>TMS_SOURCE_MAT_VIEWS controls whether materialized views or regular views are used to populates the LOVs for each external system value in the Filter window, which launches from Reclassify Verbatim Terms and Approve VTAs. Oracle recommends using materialized views for Values 1-3 when using TMS with Oracle Clinical. See <a href="#CHDDDBFG">"Controlling the Use of Materialized Views"</a>.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CDCCEAFB"></a>
+<div id="TMSUG11265" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><a id="sthref163"></a>TMS_TAL_POOL_CONFIGURATION</h4>
+<p>Set a value for VTOs (omissions), VTAs (here, unapproved VTAs only), and ACTs (here, unapproved Action assignments):</p>
+<ul>
+<li>
+<p><span class="bold">N (No Allocation)</span>. If set to N, Task Allocation is not available to omissions, unapproved VTAs, or unapproved Action assignments.</p>
+</li>
+<li>
+<p><span class="bold">D (Direct Allocation)</span>. If set to D, TMS performs Direct Allocation as soon as an omission, unapproved VTA, or unapproved Action assignment is created. See <a href="task.htm#BJFDEFCH">"Direct Allocation"</a>.</p>
+</li>
+<li>
+<p><span class="bold">P (Pool Allocation)</span>. If set to P, TMS effectively puts omissions, unapproved VTAs, or unapproved Action assignments in a pool. They can then be allocated either manually or by invoking a pooled algorithm. <a href="task.htm#BJFBBDCG">"Manual Pool Allocation"</a> and <a href="task.htm#BJFIHBCF">"Automatic Pool Allocation"</a>.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The Task Allocation menu item does not appear in the TMS Navigator panel unless the long value for at least one of the short values&mdash;VTO, VTA, or ACT&mdash;is set to either <span class="bold">D</span> or <span class="bold">P</span>. If all are set to <span class="bold">N</span>, <span class="bold">Task Allocation</span> does not appear in the Navigator.</div>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<a id="CDCDGBEB"></a>
+<div id="TMSUG11266" class="sect3">
+<h4 class="sect3">TMS_X_SEARCH <a id="sthref164"></a> <a id="sthref165"></a></h4>
+<p>TMS_X_SEARCH populates the LOV in the <span class="bold">Search Type</span> field of the Extended Search window. This reference codelist currently has just one value, Cross Search, which enables extended searches to search the entire TMS repository.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BAJBDFGD"></a>
+<div id="TMSUG11267" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Local Codelists</h3>
+<p>TMS includes the following local reference codelists.</p>
+<a id="BAJGIDIC"></a>
+<div id="TMSUG11268" class="sect3">
+<h4 class="sect3">REPORTS_CONFIG</h4>
+<p>The local reference codelist REPORTS_CONFIG is required for TMS reports. There is one parameter, JDBC_DATA_SRC. You must set its long value to:</p>
+<pre dir="ltr">
+jdbc/opa<span class="italic">database_name</span>DS
+</pre>
+<p>This same value must be in the WebLogic Server Administration Console. To check this:</p>
+<ol>
+<li>
+<p>Log in to the WebLogic Server Administration Console at:</p>
+<pre dir="ltr">
+http://<span class="italic">host:port</span>/console/login/LoginForm.jsp
+</pre></li>
+<li>
+<p>Navigate to <span class="bold">Services</span> under Domain Structure, then <span class="bold">Data Sources</span>.</p>
+</li>
+<li>
+<p>Confirm that a data source with JNDI Name: <code dir="ltr">jdbc/</code><code dir="ltr"><span class="codeinlineitalic">database_name</span></code><code dir="ltr">DS</code>. (During installation the TMS Installer creates and names the data source.)</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<div id="TMSUG11269" class="sect3"><a id="sthref166"></a>
+<h4 class="sect3">TMS_DSI</h4>
+<p>The local reference codelist TMS_DSI contains parameters whose settings determine important aspects of DSI behavior; see <a href="integ.htm#BABFFIEC">"Setting DSI Preferences with Reference Codelist Settings"</a>.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BABHJBGD"></a>
+<div id="TMSUG11270" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Autoclassification <a id="sthref167"></a></h2>
+<p>The <a id="sthref168"></a><a id="sthref169"></a>Autoclassification process tries to code, or classify, terms from an external source data system by looking for dictionary terms that exactly match each source term. It also looks for exact matches to previously manually classified source terms. These are called Verbatim Term Assignments (VTAs) or, in the case of dictionaries with nonunique coding levels such as WHO-Drug C, Verbatim Term Individuals (VTIs). In the case of VTIs, the auxiliary information associated with the omission must match that of the VTI and autocoding with auxiliary information must be enabled. See <a href="defdict.htm#CHDCHECF">"Nonunique Coding Level Dictionaries."</a></p>
+<p>If Autoclassification does not find a direct match or a previously created VTA or VTI for a term, it creates an <span class="italic">omission</span> that must be manually classified.</p>
+<div id="TMSUG11271" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref170"></a>
+<h3 class="sect2">Using Search Objects<a id="sthref171"></a></h3>
+<p>You can use search objects to supplement TMS's basic Autoclassification process, increasing the likelihood that TMS will find a match for a verbatim term, and specify the order in which you want TMS to execute them. Depending on the <span class="bold">Approval Type</span> setting in the Define Search Objects window, if TMS finds a match via a search object, it creates:</p>
+<ul>
+<li>
+<p>An Omission with a Candidate Term</p>
+</li>
+<li>
+<p>An Approved VTA</p>
+</li>
+<li>
+<p>A Nonapproved VTA</p>
+</li>
+</ul>
+<p>See <a href="defmisc.htm#i1001405">"Defining Search Objects"</a>.</p>
+<div id="TMSUG11272" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref172"></a>
+<h4 class="sect3">Domain Match</h4>
+<p>TMS provides one pre-packaged search object called Domain Match. If the Domain Match search object is enabled for the current dictionary/domain combination, TMS searches for a match in all other domains.</p>
+</div>
+<!-- class="sect3" -->
+<div id="TMSUG11273" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref173"></a>
+<h4 class="sect3">Custom Search Objects</h4>
+<p>You can also create custom search algorithms to supplement TMS's Autoclassification process. Create a PL/SQL function in the database and define the object in the Define Search Objects window. See <a href="defmisc.htm#i1001479">"Creating Custom Search Algorithms"</a>.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<div id="TMSUG11274" class="sect2"><a id="sthref174"></a>
+<h3 class="sect2">Creating Global VTAs during Autoclassification<a id="sthref175"></a></h3>
+<p>Before running Autoclassification, consider whether you want the VTAs that you create to be available only within the domain in which you create them (<a href="glossary.htm#CBACAIAB"><span class="xrefglossterm">Domain VTA</span></a>) or available to all domains (<a href="glossary.htm#CBACCJBD"><span class="xrefglossterm">Global VTA</span></a>). Two settings in the TMS reference codelist TMS_CONFIGURATION control the default status of VTAs created during Autoclassification: <a href="#CHDICBII">ALLOWGLOVTAS</a> and <a href="#CHDICBII">ALLOWGLOVTAS</a>. If both are set to Y, Autoclassification creates global VTAs. If either is set to N, Autoclassification creates domain VTAs.</p>
+<p>You can change the scope of the VTA after autoclassification. For information about promoting a VTA (making a Domain VTA available globally) or demoting a VTA (making a Global VTA specific to a domain), see <a href="vtamaint.htm#i1001964">"Promoting and Demoting VTAs"</a>.</p>
+</div>
+<!-- class="sect2" -->
+<div id="TMSUG11275" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref176"></a>
+<h3 class="sect2">Running Autoclassification<a id="sthref177"></a></h3>
+<p>When TMS is fully or partially integrated with an external system, the Autoclassification process is triggered by the batch job through which the two systems share information (for Oracle Clinical, this is Batch Validation). When there is no integration between TMS and an external system, you must run the tms_user_autocode package from the API.</p>
+<p>You can also do a trial run of Autoclassification without updating the Omissions table by running the TryClassifying function in the tms_user_autocode API package, and view the results by looking in the function output. This allows you to see what the results of Autoclassification would be, without actually updating any data.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CDCFIFJI"></a>
+<div id="TMSUG11276" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Synchronization<a id="sthref178"></a> <a id="sthref179"></a></h2>
+<p>This section includes:</p>
+<ul>
+<li>
+<p><a href="#i1001913">Scheduling Frequency</a></p>
+</li>
+<li>
+<p><a href="#CDCFEBDC">Data Processed During Synchronization</a></p>
+</li>
+<li>
+<p><a href="#CDCBJFJJ">Running Synchronization</a></p>
+</li>
+</ul>
+<p>The TMS Synchronization batch job runs on individual TMS instances. It checks for changes in the TMS repository that impact the Omissions and Source Terms tables and:</p>
+<ul>
+<li>
+<p>Updates records in those tables</p>
+</li>
+<li>
+<p>Marks the <span class="bold">Update</span> flag for the same records so that they are reprocessed during the next data exchange between TMS and the external system (Batch Validation in Oracle Clinical)</p>
+</li>
+</ul>
+<p>If you have TMS integrated fully or partially with an external source data system, you must run Synchronization. TMS Synchronization is included in Oracle Clinical Batch Validation when the two systems are integrated.</p>
+<p>If you are using TMS as a look-up system only, without integration to an external source data system (such as Oracle Clinical), you do not need to run Synchronization.</p>
+<a id="i1001913"></a>
+<div id="TMSUG11277" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Scheduling Frequency</h3>
+<p>Oracle recommends that you run Synchronization at least five times during the business day at each site. You should also run Synchronization before and after batch jobs that exchange information between TMS and an external system. When TMS is integrated with Oracle Clinical, this happens automatically during Batch Validation.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CDCFEBDC"></a>
+<div id="TMSUG11278" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Data Processed During Synchronization</h3>
+<p>The Omissions table contains source terms that Autoclassification could not classify. The Source Terms table includes all locally collected source terms and the classification (VTA ID or dict_content_id) for each one. When an omission is classified manually, the Synchronization job moves the source term from the Omissions table to the Source Terms table, associated with its classification. If a VTA is changed at any point, Synchronization changes the VTA ID in the Source Terms table.</p>
+<p>The following types of changes require synchronization with the Source Terms table:</p>
+<ul>
+<li>
+<p>Classifying source term omissions</p>
+</li>
+<li>
+<p>Declassifying and reclassifying verbatim terms</p>
+</li>
+<li>
+<p>Approving and unapproving VTAs</p>
+</li>
+<li>
+<p>Loading a new dictionary (to mark the dictionary for future processing)</p>
+</li>
+<li>
+<p>Loading a new dictionary version (to mark the dictionary version and its source terms and omissions for future processing)</p>
+</li>
+<li>
+<p>Changes to Informative Notes that are derived to the external system</p>
+</li>
+</ul>
+<p>In addition, if TMS is integrated with an external system, the following changes to source terms in the external system must be synchronized in TMS:</p>
+<ul>
+<li>
+<p>Definitional changes such as question definition changes or mapping a study or project to a different domain in Oracle Clinical</p>
+</li>
+<li>
+<p>Deletion of source terms in the source system (Oracle Clinical responses)</p>
+</li>
+</ul>
+<p>Synchronization runs on data imported using the TMS DSI feature; because the systems are not integrated, the importing instance owns the data.</p>
+</div>
+<!-- class="sect2" -->
+<div id="TMSUG11279" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref180"></a>
+<h3 class="sect2">Synchronization Processing Order</h3>
+<p>Synchronization always includes two phases, pre-synchronization and post-synchronization.</p>
+<p><a id="CDCECBBD"></a><a id="TMSUG11280"></a><span class="subhead3">Pre-synchronization&nbsp;</span>Pre-synchronization runs first. It updates records as outlined <a href="#CDCFEBDC">"Data Processed During Synchronization"</a> and sets the Update flag to Y so that records will be updated in the external system during the next data exchange (Batch Validation in Oracle Clinical).</p>
+<p><a id="CDCDCCDH"></a><a id="TMSUG11281"></a><span class="subhead3">Post-synchronization&nbsp;</span>Post-synchronization runs last. It refreshes materialized views if the TMS_CONFIGURATION reference codelist value SYNCREFRESHMV is set to Y (see <a href="#CHDCECDJ">"SYNCREFRESHMV"</a>).</p>
+<p><a id="TMSUG11282"></a><span class="subhead3">External System Integration&nbsp;</span>If TMS is integrated with an external source data system, additional processing occurs between these two phases during data exchange between the two systems. The data exchange job must:</p>
+<ul>
+<li>
+<p>Run full autocode on all source terms that have been changed since the last data exchange and on all records in the Source Terms and Omissions tables whose Update flag is checked</p>
+</li>
+<li>
+<p>Reset the Update flag on all processed records to N</p>
+</li>
+</ul>
+<p>Oracle Clinical Batch Validation is predefined to do both.</p>
+<p>The batch processing unit (a study in Oracle Clinical) is called an X Area in TMS. The following indexes use the X Area to give fast access to source terms and omissions that need to be processed:</p>
+<ul>
+<li>
+<p>TMS_SOURCE_TERMS_BI3</p>
+</li>
+<li>
+<p>TMS_VT_OMISSIONS_BI1</p>
+</li>
+</ul>
+<p>Both indexes include the following columns: NONUNIQUE X_AREA, NONUNIQUE DEF_INTEGRATION_KEY, NONUNIQUE UPDATE_FLAG.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Although Batch Validation runs on only a single study, or TMS X Area, Synchronization always runs on all TMS data, even when run during Batch Validation.</div>
+</div>
+<!-- class="sect2" -->
+<a id="CDCBJFJJ"></a>
+<div id="TMSUG11283" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Running Synchronization<a id="sthref181"></a><a id="sthref182"></a></h3>
+<p>To run Synchronization:</p>
+<ol>
+<li>
+<p>From the <span class="bold">Definition</span> menu, select <span class="bold">Jobs</span>, then <span class="bold">Synchronize Dictionary Data</span>. The Synchronization batch job window appears. There are no parameters to enter.</p>
+</li>
+<li>
+<p>Use the runner icons in the toolbar to save and retrieve parameter sets as necessary, submit the job, and monitor its progress.</p>
+</li>
+</ol>
+<p>See <a href="reports_jobs.htm#CHDEJFED">Chapter 2, "Reports and Batch Jobs"</a> for more information.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="i1002967"></a>
+<div id="TMSUG11284" class="sect1">
+<h2 class="sect1">Writing a Procedure to Change the Dictionary Display<a id="sthref183"></a></h2>
+<p>By default, the <span class="bold">Dictionary Term</span> field in the Classify VT Omissions and Reclassify Verbatim Terms windows displays the dictionary term to which the selected verbatim term is mapped. In some cases, however, you may require different information about a verbatim term's mapping within a particular dictionary to make a decision about classification&mdash;instead of the classification level term, you might want to see its parent term or another term in the hierarchy.</p>
+<p>By defining a Dictionary Term Display Procedure for a TMS dictionary, you can dictate the level of dictionary term shown in the derivation path for a dictionary. You specify which procedure to use in the <span class="bold">Base Dictionary</span> tab window in the Define Dictionaries window.</p>
+<p>If you leave the <span class="bold">Dictionary Term Display Procedure</span> field blank when defining the dictionary, TMS exhibits the default behavior: displaying the classification level term to which the selected verbatim term is mapped.</p>
+<div id="TMSUG11285" class="sect2"><a id="sthref184"></a>
+<h3 class="sect2">Writing a Dictionary Term Display Procedure</h3>
+<p>Any Dictionary Term Display Procedure must be written with the input and output parameters shown below. Oracle recommends that you create the procedure from the TMS role.</p>
+<pre dir="ltr">
+PROCEDURE <span class="codeinlineitalic">procedure_name</span> (
+   pDictContentId IN NUMBER
+   , pDefLevelId IN NUMBER
+   , pTermType IN NUMBER
+   , pCutOffDate IN DATE
+   , pReturnLevel IN OUT VARCHAR2
+   , pReturnTerm IN OUT VARCHAR2
+</pre>
+<p>After you write a procedure, grant the proper execute privilege to the tms_classify_priv role by issuing the following statement from TMS (or the role you used to write the procedure):</p>
+<p><code dir="ltr">grant execute on</code> <code dir="ltr"><span class="codeinlineitalic">procedure_name</span></code> <code dir="ltr">to tms_classify_priv</code></p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CHDDDBFG"></a>
+<div id="TMSUG11286" class="sect1">
+<h2 class="sect1">Controlling the Use of Materialized Views<a id="sthref185"></a></h2>
+<p>TMS can use materialized views to populate the lists of values for external system columns in the Filter window of Reclassify Verbatim Terms and Approve VTAs. Using materialized views accelerates populating many of these LOVs, but in databases with a high data volume, refreshing materialized views during Synchronization can be too slow.</p>
+<p>If the materialized views refresh during Synchronization is slowing Synchronization at your database, you have two options:</p>
+<ul>
+<li>
+<p>You can reduce the number of external system columns that rely on materialized views, switching some or all of them to regular views. To perform this switch, follow the steps in <a href="#CHDHHHFF">"Choosing Materialized or Regular Views for Each External System Value"</a>, then create the new views by <a href="#CHDJBBGB">"Creating Source Term Views"</a>.</p>
+</li>
+<li>
+<p>You can remove the materialized views refresh from the Synchronization process. To de-couple this refresh from Synchronization, perform the steps in <a href="#CHDFBHHE">"Including the Materialized Views Refresh in the Synchronization Process"</a>. If you use materialized views for any external system values, and you have made this refresh process independent of Synchronization, you must still perform the refresh periodically. See <a href="#CHDGFCBE">"Refreshing Source Term Materialized Views"</a>.</p>
+</li>
+</ul>
+<a id="CHDHHHFF"></a>
+<div id="TMSUG11287" class="sect2">
+<h3 class="sect2">Choosing Materialized or Regular Views for Each External System Value</h3>
+<p>The installation reference codelist TMS_SOURCE_MAT_VIEWS controls whether regular views or materialized views are used to populate the list of values for external system values in the Filter window. Each value in the codelist controls the view behavior of one external system field: for example, setting the long value of the codelist value MV1 to Y will make TMS use a materialized view to populate the list of values for the external value 1 in these Filter windows.</p>
+<p>By default, TMS_SOURCE_MAT_VIEWS specifies that materialized views be created for external values 1 to 5, and regular views for external values 6 to 8.</p>
+<p>Whenever any of the values in TMS_SOURCE_MAT_VIEWS are changed, you must run the Create Source Terms Views batch job. See <a href="#CHDJBBGB">"Creating Source Term Views"</a>.</p>
+<p>To change the view settings for an external system value:</p>
+<ol>
+<li>
+<p>Open the Installation Reference Codelists window. (From the <span class="bold">Definition</span> menu, select <span class="bold">Installation Reference Codelists</span>.)</p>
+</li>
+<li>
+<p>Query for the TMS_SOURCE_MAT_VIEWS codelist.</p>
+</li>
+<li>
+<p>Update the long value for each external system value that you want to change.</p>
+</li>
+<li>
+<p>Save.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CHDJBBGB"></a>
+<div id="TMSUG11288" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Creating Source Term Views<a id="sthref186"></a><a id="sthref187"></a></h3>
+<p>Whenever you change any of the values in the TMS_SOURCE_MAT_VIEWS reference codelist, TMS must create a new view for each external system value you changed. Run the Create Source Terms Views batch job to create the materialized or regular views that your change requires.</p>
+<p>To run this job from the user interface:</p>
+<p>From the <span class="bold">Definition</span> menu, select <span class="bold">Jobs</span>, then choose <span class="bold">Create Source Terms Views</span>.</p>
+<p>To run this job from a SQL*Plus prompt, execute the following API call:</p>
+<p>tms_user_data_admin.configSTMatViews</p>
+</div>
+<!-- class="sect2" -->
+<a id="CHDFBHHE"></a>
+<div id="TMSUG11289" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Including the Materialized Views Refresh in the Synchronization Process<a id="sthref188"></a><a id="sthref189"></a></h3>
+<p>You can control whether TMS refreshes materialized views during the Synchronization process by changing the reference codelist value SYNCREFRESHMV in the TMS_CONFIGURATION reference codelist. If this setting is Y, the materialized views refresh will be included in Synchronization.</p>
+<p>If you remove the materialized views refresh from Synchronization, you must periodically run the Refresh Source Term Materialized Views batch job to refresh them manually. See <a href="#CHDGFCBE">"Refreshing Source Term Materialized Views"</a>.</p>
+<p>To change the inclusion status of materialized views in Synchronization:</p>
+<ol>
+<li>
+<p>Open the Maintain Installation Codelists window. (From the <span class="bold">Definition</span> menu, select <span class="bold">Installation Reference Codelists</span>.)</p>
+</li>
+<li>
+<p>Query for the TMS_CONFIGURATION reference codelist.</p>
+</li>
+<li>
+<p>Scroll down to the SYNCREFRESHMV row, and change its long value setting. A long value of Y includes the materialized views refresh in Synchronization; N removes this refresh from Synchronization.</p>
+</li>
+<li>
+<p>Save. TMS will either couple or de-couple the materialized views refresh and the Synchronization process.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CHDGFCBE"></a>
+<div id="TMSUG11290" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Refreshing Source Term Materialized Views<a id="sthref190"></a><a id="sthref191"></a></h3>
+<p>If you do not refresh the materialized views as part of Synchronization, you must refresh them periodically by running the Refresh Source Term Materialized Views batch job.</p>
+<p>To run this job from the user interface:</p>
+<p>From the <span class="bold">Definition</span> menu, select <span class="bold">Jobs</span>, then select <span class="bold">Refresh Source Term Mat. Views</span>.</p>
+<p>To run this job from a SQL*Plus prompt, execute the following API call:</p>
+<p>tms_user_synchronization.RefreshMviews</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BAJGDCCA"></a>
+<div id="TMSUG11291" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Enabling Context Searches for Non-English Dictionaries<a id="sthref192"></a></h2>
+<p>Context searches enable you to be more flexible in your queries. You can perform context searches for word fragments, terms that share a common root, terms that sound similar, or terms that have the same meaning. For more information on context searches, see <a href="overview.htm#CHDEAADG">Entering a Context Query</a>.</p>
+<p>By default, TMS is configured to perform context searches for English-language dictionaries only. However, because TMS indexes information in a multi-lexer, a data structure that can store information in multiple languages; you can configure TMS to allow context searches in other languages.</p>
+<p>To add a new language to the Context Server Index:</p>
+<ol>
+<li>
+<p>From the Install directory, open the following script in a text editor:</p>
+<p>tms\database\tmscincontextinx.sql</p>
+<p>This script includes sample commands for adding Japanese, Danish, or German to the Context Server Index. To add one or more of these languages to your index, copy the appropriate lines to a buffer.</p>
+<p>To add a different language, modify the lines to suit the language you want. For more information, see the System-Defined Preferences section of the Indexing chapter in the <span class="italic">Oracle Text Reference</span> manual (part number A96518).</p>
+</li>
+<li>
+<p>Start a SQL*Plus session as TMS.</p>
+</li>
+<li>
+<p>Run the copied or edited lines.</p>
+</li>
+<li>
+<p>Refresh the Context Server Index by running the job from the <span class="bold">Definition</span> menu. See <a href="#i1001957">"Refreshing the Context Server Index"</a>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="i1001957"></a>
+<div id="TMSUG11292" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Refreshing the Context Server Index<a id="sthref193"></a><a id="sthref194"></a> <a id="sthref195"></a></h2>
+<p>When you insert new dictionary terms or VTAs into the TMS repository, the Context Server cannot find them in a query until you refresh the Context Server Index. Oracle recommends that you schedule this refresh as a batch job running as often as is appropriate for your TMS installation.</p>
+<p>You can refresh the Context Server Index by running the Refresh Context Server Index batch job.</p>
+<p>To refresh the Context Server Index:</p>
+<ol>
+<li>
+<p>From the <span class="bold">Definition</span> menu, select <span class="bold">Jobs</span>, then <span class="bold">Refresh Context Server Index</span>. The Refresh Context Server Index batch job window appears. There are no parameters to enter.</p>
+</li>
+<li>
+<p>Use the runner icons in the toolbar to save and retrieve parameter sets as necessary, submit the job, and monitor its progress.</p>
+</li>
+</ol>
+<p>See <a href="reports_jobs.htm#CHDEJFED">Chapter 2, "Reports and Batch Jobs"</a> for more information.</p>
+</div>
+<!-- class="sect1" -->
+<a id="CDCCHDAD"></a>
+<div id="TMSUG11293" class="sect1">
+<h2 class="sect1">Analyzing Tables<a id="sthref196"></a><a id="sthref197"></a></h2>
+<p>TMS automatically runs the Analyze Tables batch job after Activation to optimize TMS performance. You can also schedule this batch job to run periodically; from the Definition menu, select <span class="bold">Jobs</span>, then <span class="bold">Analyze Tables</span>, and specify the batch job's parameters.</p>
+<p>See <a href="reports_jobs.htm#CHDEJFED">Chapter 2, "Reports and Batch Jobs"</a> for more information.</p>
+</div>
+<!-- class="sect1" -->
+<a id="BAJIFFDF"></a>
+<div id="TMSUG11294" class="sect1">
+<h2 class="sect1">Running Scripts to Gather Schema Statistics for the 12c Optimizer</h2>
+<p>After upgrading from a release prior to TMS 5.0 and setting initialization parameter <span class="bold">optimizer_features_enable</span> to 12.1.0.2 you must gather statistics required for the Oracle 11g Optimizer to be effective for accounts used internally by TMS.</p>
+<p>Failure to execute these scripts can negatively impact performance.</p>
+<p>Scripts opastats.sql and tmsstats.sql, are available for this purpose. If your database contains large amounts of data, the scripts may take a long time to run. You may want to edit the scripts; for information on opastat.sql and tmsstats.sql parameters see the following documentation of the DBMS_STATS package that they call: <code dir="ltr"><a href="http://docs.oracle.com/cd/B19306_01/appdev.102/b14258/d_stats.htm#i1036456.">http://docs.oracle.com/cd/B19306_01/appdev.102/b14258/d_stats.htm#i1036456</a><a href=""></a></code>.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+This information is also available in the Installation Guide. You need to do this only once after installation. You should also do it after loading a dictionary. It is especially important after loading WHODrug Format C.</div>
+<p><a id="TMSUG11295"></a><span class="subhead3">tmsstats.sql&nbsp;</span>Since TMS already has a procedure, AnalyzeTable in tmspb_user_analyze.sql, that runs as part of every activation job, you may prefer to edit it if required and call it from tmsstats.sql to keep the two synchronized.</p>
+<p>The tmsstats.sql script prompts for the password of the account it processes: TMS.</p>
+<p>To change how TMS analyzes tables and ensure that tmsstats and AnalyzeTable remain in synch:</p>
+<ol>
+<li>
+<p>Modify the Analyze procedure in tmspb_user_analyze.sql.</p>
+</li>
+<li>
+<p>Edit tmsstats.sql to call tms_user_analyze.AnalyzeTable. Replace the section that analyzes tables with:</p>
+<p><code dir="ltr">exec tms_user_analyze.AnalyzeTables</code></p>
+</li>
+<li>
+<p>Run tmsstats.sql.</p>
+</li>
+</ol>
+<p><a id="TMSUG11296"></a><span class="subhead3">opastats.sql&nbsp;</span>captures new statistics in the OPA application account used by TMS. It is also used by Oracle Clinical and RDC Onsite.</p>
+</div>
+<!-- class="sect1" -->
+<a id="CDCIIAAB"></a>
+<div id="TMSUG11297" class="sect1">
+<h2 class="sect1">Adding and Configuring WebLogic Server Data Sources</h2>
+<p>When you run the TMS Installer, it sets up a connection, or data source, for OPA and the TMS Lite Browser from the WebLogic Server to the default database.</p>
+<p>If you plan to use more than one database, you must create an OPA and a TMS Lite Browser data source for each additional database. The OPA data source is used to run TMS reports.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+In addition, you must modify <span class="bold">tnsnames.ora</span> at C:\Oracle\Middleware\asinst_1\config. Ensure that it contains an entry for each database.
+<p>Oracle recommends maintaining a master tnsnames.ora file and copying it to each location&mdash;database and application servers&mdash; whenever you add a database.</p>
+</div>
+<div id="TMSUG11298" class="sect2"><a id="sthref198"></a>
+<h3 class="sect2">Add Data Sources</h3>
+<p>Go through these instructions for one data source at a time.</p>
+<ol>
+<li>
+<p>Log in to the WebLogic Server Administration Console at:</p>
+<pre dir="ltr">
+http://<span class="italic">host:</span>7101/console/login/LoginForm.jsp
+</pre></li>
+<li>
+<p>Select Data Sources, then New, then Generic Data Source.</p>
+</li>
+<li>
+<p>Enter a name for the data source.</p>
+</li>
+<li>
+<p>Enter the JNDI name as:</p>
+<ul>
+<li>
+<p>For TMS: <code dir="ltr"><span class="codeinlineitalic">jdbc/</span></code><code dir="ltr">tms</code><code dir="ltr"><span class="codeinlineitalic">database_name</span></code><code dir="ltr">DS</code></p>
+</li>
+<li>
+<p>For OPA: <code dir="ltr"><span class="codeinlineitalic">jdbc/</span></code><code dir="ltr">opa</code><code dir="ltr"><span class="codeinlineitalic">database_name</span></code><code dir="ltr">DS</code></p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Enter the JNDI name for OPA in the <a href="#BAJGIDIC">REPORTS_CONFIG</a> local reference codelist, JDBC_DATA_SRC setting.</div>
+</li>
+</ul>
+</li>
+<li>
+<p>On the next screen:</p>
+<ul>
+<li>
+<p>If the database you want to connect to is a RAC database, choose Oracle's Driver (Thin) for Service connections; Versions:9.0.1 and later</p>
+</li>
+<li>
+<p>If the database is not a RAC database, choose Oracle's Driver (Thin) for Instance connections; Versions 9.0.1 and later</p>
+</li>
+</ul>
+</li>
+<li>
+<p>On the next screen, deselect <span class="bold">Supports Global Transactions</span>.</p>
+</li>
+<li>
+<p>On the next screen, enter the database name, host name, and port for the database. For the user, enter the following user account and its password:</p>
+<ul>
+<li>
+<p>For OPA: <code dir="ltr">bc4j_internal</code></p>
+</li>
+<li>
+<p>For the TMS Lite Browser: <code dir="ltr">ops$tmsbrowser</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>On the next screen, select <span class="bold">Test Configuration</span> to validate if you can connect using the pool setup.</p>
+</li>
+<li>
+<p>On the next screen, assign <code dir="ltr">OpaServer1</code> as the target.</p>
+</li>
+<li>
+<p>Click <span class="bold">Finish</span>.</p>
+</li>
+<li>
+<p>Select the newly created Data Source, click the <span class="bold">Connection Pool</span> tab, and then click <span class="bold">Advanced</span>.</p>
+</li>
+<li>
+<p>Add the property <code dir="ltr">dataSourceName=OracleDataSource</code> into the <span class="bold">Properties</span> field (without quotes).</p>
+</li>
+<li>
+<p>If the following property has not already been created by the Create Data Source wizard, add the property <code dir="ltr">databaseName=</code><code dir="ltr"><span class="codeinlineitalic">SID_or_servicename</span></code> into the <span class="bold">Properties</span> field (without quotes).</p>
+</li>
+<li>
+<p>Uncheck <span class="bold">Wrap Data Types</span> and save.</p>
+</li>
+<li>
+<p>Review and set additional parameters in Advanced Settings as appropriate for your expected data load.</p>
+</li>
+<li>
+<p>Activate your changes or restart OpaServer1 for the changes to take effect.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CDCCGJBI"></a>
+<div id="TMSUG11299" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Configure Maximum Connections</h3>
+<p>By default, the value for the Maximum Capacity parameter for each data source, which determines the maximum number of concurrent connections, is 15.</p>
+<p>The value for the <span class="bold">Maximum Capacity</span> parameter should be equal to or greater than the maximum number of concurrent users you expect for:</p>
+<ul>
+<li>
+<p>TMS TMS Lite Browser (TMS data source)</p>
+</li>
+<li>
+<p>TMS Reports (OPA data source)</p>
+</li>
+</ul>
+<p>To change this value:</p>
+<ol>
+<li>
+<p>Log in to the WebLogic Server Administration Console at:</p>
+<pre dir="ltr">
+http://<span class="italic">host:</span>7101/console/login/LoginForm.jsp
+</pre></li>
+<li>
+<p>Select Data Sources, then select the data source whose setting you want to modify: for example, DS_1_tms for TMS or DS_1_ops for OPA (TMS reports).</p>
+</li>
+<li>
+<p>Click the <span class="bold">Connection Pool</span> tab.</p>
+</li>
+<li>
+<p>Scroll down to find the parameter <span class="bold">Maximum Capacity</span>.</p>
+</li>
+<li>
+<p>Enter a value as described above.</p>
+</li>
+<li>
+<p>Save.</p>
+</li>
+</ol>
+<p>You must then <a id="CDCGBJCA"></a><span class="bold">restart the OPA Server</span>:</p>
+<ol>
+<li>
+<p>In the same OPA domain WLS Administration Console, click on <span class="bold">Servers</span>, then the <span class="bold">Control</span> tab.</p>
+</li>
+<li>
+<p>Select <span class="bold">OpaServer1</span> and then <span class="bold">Shutdown - Force Shutdown now</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Refresh</span> to ensure the <span class="bold">State</span> changes to <span class="bold">Shutdown</span>.</p>
+</li>
+<li>
+<p>Select OpaServer1 and then <span class="bold">Start</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Refresh</span> to see the <span class="bold">State</span> change to <span class="bold">Running</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<div id="TMSUG11300" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref199"></a>
+<h3 class="sect2">Configure Inactive Connection Timeout</h3>
+<p>To ensure that a connection is available for a user who needs to run a report, change the default setting of the <span class="bold">Inactive Connection Timeout</span> of 0 to 5 or a similar value. This is the number of seconds of inactivity that is allowed before the connection is made available to another user. If set to zero, the feature is disabled.</p>
+<p>To change this value:</p>
+<ol>
+<li>
+<p>Log in to the OPA domain WebLogic Server Administration Console at:</p>
+<pre dir="ltr">
+http://<span class="italic">host:</span>7101/console/login/LoginForm.jsp
+</pre></li>
+<li>
+<p>Select Data Sources, then select the data source whose setting you want to modify: for example, DS_1_ops for OPA (TMS reports).</p>
+</li>
+<li>
+<p>Click the <span class="bold">Connection Pool</span> tab.</p>
+</li>
+<li>
+<p>Scroll down to find the parameter <a id="CDCFAICD"></a><span class="bold">Inactive Connection Timeout</span>.</p>
+</li>
+<li>
+<p>Enter a value; for example, <code dir="ltr">5</code>.</p>
+</li>
+<li>
+<p>Save.</p>
+</li>
+</ol>
+<p>You must then restart the OPA Server:</p>
+<ol>
+<li>
+<p>In the same OPA domain WLS Administration Console, click on <span class="bold">Servers</span>, then the <span class="bold">Control</span> tab.</p>
+</li>
+<li>
+<p>Select <span class="bold">OpaServer1</span> and then <span class="bold">Shutdown - Force Shutdown now</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Refresh</span> to ensure the <span class="bold">State</span> changes to <span class="bold">Shutdown</span>.</p>
+</li>
+<li>
+<p>Select OpaServer1 and then <span class="bold">Start</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Refresh</span> to see the <span class="bold">State</span> change to <span class="bold">Running</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CDCGBBCI"></a>
+<div id="TMSUG11301" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">TMS Lite Browser Administration<a id="sthref200"></a></h2>
+<p>This section describes the following administrative topics:</p>
+<ul>
+<li>
+<p><a href="#CDCEBFIC">Granting User Privileges for Using the TMS Lite Browser</a></p>
+</li>
+<li>
+<p><a href="#CDCEJECG">Creating a Launch Page, Button, or Link for the TMS Lite Browser</a></p>
+</li>
+<li>
+<p><a href="#CDCBHFCD">Customizing the TMS Lite Browser URL to Support Additional Databases or Automatic Login</a></p>
+</li>
+<li>
+<p><a href="#CDCBGAHG">Enabling and Disabling Automatic Login</a></p>
+</li>
+<li>
+<p><a href="#CDCJEEGH">Enabling TMS Lite Browser Logs</a></p>
+</li>
+<li>
+<p><a href="#CDCDJEBI">Using the About Window</a></p>
+</li>
+</ul>
+<a id="CDCEBFIC"></a>
+<div id="TMSUG11302" class="sect2">
+<h3 class="sect2">Granting User Privileges for Using the TMS Lite Browser</h3>
+<p>Users require the rxclin_read privilege to browse dictionary data. See <a href="#CDCEDCFI">"Security"</a> for information about creating TMS users and granting them roles appropriate to their work.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CDCEJECG"></a>
+<div id="TMSUG11303" class="sect2">
+<h3 class="sect2">Creating a Launch Page, Button, or Link for the TMS Lite Browser</h3>
+<p>You can customize the shipped TMS Launch page to add a link to the TMS Lite Browser, create a new Launch page, or create a button or link to the TMS Lite Browser from an existing website such as your users' Home page. Oracle provides scripts that help prevent problems that may arise in the TMS Lite Browser.</p>
+<p>In addition, you may want to customize the TMS Lite Browser URL:</p>
+<ul>
+<li>
+<p>If you have multiple databases, you can specify a database other than the default one set up during installation.</p>
+</li>
+<li>
+<p>You can enable automatic login, so that the system automatically logs in any user as ops$tmsdbrowser.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+By default, automatic login is disabled.</div>
+</li>
+</ul>
+<p>See <a href="#CDCBHFCD">"Customizing the TMS Lite Browser URL to Support Additional Databases or Automatic Login."</a></p>
+<div id="TMSUG11304" class="sect3"><a id="sthref201"></a>
+<h4 class="sect3">Creating or Customizing a Launch Page to Use Provided Scripts</h4>
+<p>Oracle recommends using the scripts provided here to control when and how the TMS Lite Browser Login page opens, to prevent users from having problems in the TMS Lite Browser application resulting from:</p>
+<ul>
+<li>
+<p>Using the browser's <span class="bold">Back</span> button&mdash;<a href="#CDCEDDBF">Sample Java Script for Launching in a New Window without Tool or Menu Bar</a> suppresses the browser toolbar, making the <span class="bold">Back</span> button unavailable.</p>
+</li>
+<li>
+<p>Turning on IE's Compatibility View&mdash;<a href="#CDCHIAJD">Sample JavaScript for Checking if Compatibility View Is On</a> detects if Compatibility View is turned on and if it is, does not open the application and displays a message telling the user to turn it off.</p>
+</li>
+<li>
+<p>Opening more than one TMS Lite Browser session to the same application server or from the same parent window&mdash;the scripts prevent this.</p>
+</li>
+</ul>
+<p>To use these scripts in your launch page:</p>
+<ol>
+<li>
+<p>Place the script from <a href="#CDCEDDBF">"Sample Java Script for Launching in a New Window without Tool or Menu Bar"</a> in a file called Launch.js.</p>
+</li>
+<li>
+<p>Place the script from <a href="#CDCHIAJD">"Sample JavaScript for Checking if Compatibility View Is On"</a> in a file called IeCompatCheck.js.</p>
+</li>
+<li>
+<p>Place the scripts at the same location as the Launch page or in a folder (called JS in the example code below) in the same location as Launch page. The shipped TMS Launch page, launch.htm, is located in <span class="italic">opa_home</span>/html.</p>
+</li>
+<li>
+<p>Create an HTML page that contains a button or link to the TMS Lite Browser that invokes the functions in the JavaScript files or add code to the shipped Launch page or an existing website to do the same.</p>
+<p>Put the code referencing the scripts near the top of the HTML page; for example:</p>
+<pre dir="ltr">
+ &lt;title&gt; Launch RDC Onsite &lt;/title&gt;
+ <span class="bold"> &lt;script type="text/javascript" src="JS/IeCompatCheck.js"&gt;&lt;/script&gt;</span>
+  <span class="bold">&lt;script type="text/javascript" src="JS/LaunchJS.js"&gt;&lt;/script&gt;</span>
+ 
+ &lt;/head&gt;
+&lt;body&gt;
+</pre>
+<p>Add button code or link code as follows, and see <a href="#CDCBHFCD">"Customizing the TMS Lite Browser URL to Support Additional Databases or Automatic Login."</a></p>
+<pre dir="ltr">
+&lt;script language="JavaScript"&gt;
+document.write('&lt;FORM&gt;');
+document.write('<span class="bold">&lt;input type="button" value="TMS Browser" onclick="return launch(event,\'../tmsadf/faces/Login\',\'TMSLite\')" class="loginButton"/&gt;</span>');
+document.write("&lt;/FORM&gt;");
+&lt;/script&gt;  
+
+&lt;noscript&gt;
+<span class="bold">&lt;a onclick="return launch(event,'../tmsadf/faces/Login',\'TMSLite\')" href="#"&gt;Launch TMS Browser&lt;/a&gt;</span>
+&lt;/noscript&gt;
+</pre></li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<a id="CDCEDDBF"></a>
+<div id="TMSUG11305" class="sect3">
+<h4 class="sect3">Sample Java Script for Launching in a New Window without Tool or Menu Bar</h4>
+<pre dir="ltr">
+function launch(event,url,windowname){
+            if(detectIECompatibility(event)){
+                cancelEvent(event);
+                return false;
+            }
+            if(!!!windowname){
+                windowname="_blank";
+            }
+            window.open(url,windowname,'location=0,resizable=1,toolbar=0,titlebar=1,status=1,scrollbars=1,menubar=0','true');
+} 
+</pre></div>
+<!-- class="sect3" -->
+<a id="CDCHIAJD"></a>
+<div id="TMSUG11306" class="sect3">
+<h4 class="sect3">Sample JavaScript for Checking if Compatibility View Is On</h4>
+<p>The following script checks if Compatibility View is on and if so, displays a message asking the user to turn it off.</p>
+<pre dir="ltr">
+function IECompatDetect(){       
+        this.isCompatOn = function(){
+                    var ua = navigator.userAgent;
+                    var on = false;
+                    for(var index=0; index&lt; this.ieUAProps.length; index++){
+                        var ieProp = this.ieUAProps[index];
+                        if(ua.search(ieProp.layoutEngine) == -1){
+                            continue;
+                        }
+                        if(ua.search(ieProp.browser) == -1){
+                            on = true;
+                            break;
+                        }                   
+                    }
+                    return (on);
+                };       
+        this.ieUAProps= [
+                        {
+                            browser: 'MSIE 10',
+                            layoutEngine: 'Trident/6'
+                        },
+                        {
+                            browser: 'MSIE 9',
+                            layoutEngine: 'Trident/5'
+                        },
+                        {
+                            browser: 'MSIE 8',
+                            layoutEngine: 'Trident/4'
+                        }
+                    ]
+ 
+    }
+function cancelEvent(e){
+    var event = e || window.event;
+    if(event == null){
+        return;
+    }
+    if(event.preventDefault){
+        event.preventDefault();
+    }else{
+        event.returnValue=false;
+        event.cancelBubble=true;
+    }
+}
+ 
+function compatCheck(event,isCompatRequiredToBeOn){
+    var compatOn=(new IECompatDetect()).isCompatOn();
+    if(compatOn &amp;&amp; !isCompatRequiredToBeOn){
+        cancelEvent(event);
+        alert("Please turn off IE's Compatibility View. Go to Tools-&gt;Compatibility View/Compatibility View Settings to do so.");   
+    }
+    if(!compatOn &amp;&amp; isCompatRequiredToBeOn){
+        cancelEvent(event);       
+        alert("Please turn on IE's Compatibility View. Go to Tools-&gt;Compatibility View/Compatibility View Settings to do so.");   
+    }
+    return compatOn;
+}
+function detectIECompatibility(e){   
+    return compatCheck(event,false);   
+}
+ 
+//Call on load
+(function(){
+    compatCheck(null,false);
+})();
+</pre></div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CDCBHFCD"></a>
+<div id="TMSUG11307" class="sect2">
+<h3 class="sect2">Customizing the TMS Lite Browser URL to Support Additional Databases or Automatic Login</h3>
+<p>The format of the TMS Lite Browser URL is:</p>
+<p><code dir="ltr">https://</code><code dir="ltr"><span class="codeinlineitalic">server.domain</span></code>/<code dir="ltr">tmsadf/faces/Login?setUpDone=Y</code> <code dir="ltr">&amp;</code><code dir="ltr"><span class="codeinlineitalic">parameter1</span></code><span class="bold">=</span><code dir="ltr"><span class="codeinlineitalic">value1</span></code><code dir="ltr">&amp;</code><code dir="ltr"><span class="codeinlineitalic">parameter2</span></code><span class="bold">=</span><code dir="ltr"><span class="codeinlineitalic">value2</span></code></p>
+<p>This URL, without any parameters, goes to the default database set up during installation and requires the user to log in. You can use one or more parameters to change this behavior:</p>
+<div id="TMSUG11308" class="tblformal">
+<p class="titleintable"><a id="sthref202"></a><a id="sthref203"></a>Table 3-1 Parameters Used to Customize the URL</p>
+<table class="cellalignment32" title="Parameters Used to Customize the URL" summary="table describes the db and event parameter" dir="ltr">
+<thead>
+<tr class="cellalignment26">
+<th class="cellalignment33" id="r1c1-t22">Parameter</th>
+<th class="cellalignment33" id="r1c2-t22">Parameter Value</th>
+<th class="cellalignment33" id="r1c3-t22">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment26">
+<td class="cellalignment34" id="r2c1-t22" headers="r1c1-t22">
+<p>db</p>
+</td>
+<td class="cellalignment34" headers="r2c1-t22 r1c2-t22">
+<p><span class="italic">database_name</span></p>
+</td>
+<td class="cellalignment34" headers="r2c1-t22 r1c3-t22">
+<p>Links to a database that is not the default one; see <a href="#CDCIIAAB">"Adding and Configuring WebLogic Server Data Sources."</a> The database name must be the JNDI name defined in the data source.</p>
+</td>
+</tr>
+<tr class="cellalignment26">
+<td class="cellalignment34" id="r3c1-t22" headers="r1c1-t22">
+<p>event</p>
+</td>
+<td class="cellalignment34" headers="r3c1-t22 r1c2-t22">
+<p>doAutoLogin</p>
+</td>
+<td class="cellalignment34" headers="r3c1-t22 r1c3-t22">
+<p>Helps enable automatic login; see<a href="#CDCBGAHG">"Enabling and Disabling Automatic Login."</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" -->
+<p>For example, when both parameters are used:</p>
+<p><code dir="ltr">https://</code><code dir="ltr"><span class="codeinlineitalic">server.domain</span></code>/<code dir="ltr">tmsadf/faces/Login?setUpDone=Y</code> <code dir="ltr">&amp; db=</code><code dir="ltr"><span class="codeinlineitalic">database</span></code><code dir="ltr">&amp; event</code><code dir="ltr">=doAutoLogin</code></p>
+</div>
+<!-- class="sect2" -->
+<a id="CDCBGAHG"></a>
+<div id="TMSUG11309" class="sect2">
+<h3 class="sect2">Enabling and Disabling Automatic Login</h3>
+<p>If automatic login is enabled, any user can click a link for the TMS Lite Browser and the application opens immediately, bypassing the Login page. The system passes the credentials for the ops$tmsbrowser user, using the password entered in the TMS Installer. Users who log in with automatic login cannot perform searches on patient data.</p>
+<p>By default, automatic login is disabled and when users click the link the Login page opens and they must enter their own credentials.</p>
+<div id="TMSUG11310" class="sect3"><a id="sthref204"></a>
+<h4 class="sect3">Enabling Automatic Login</h4>
+<p>To enable automatic login:</p>
+<ol>
+<li>
+<p>Open the tmsconfig.properties, which is located at c:\opapps51\config.</p>
+</li>
+<li>
+<p>Search for the parameter tms_auto_login. If it is not present, add it.</p>
+</li>
+<li>
+<p>Set it to Y:</p>
+<p><code dir="ltr">tms_auto_login=Y</code></p>
+</li>
+<li>
+<p>Save.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You must also add the string <code dir="ltr">event=doAutoLogin</code> to the TMS Lite Browser URL; see <a href="#CDCBHFCD">"Customizing the TMS Lite Browser URL to Support Additional Databases or Automatic Login."</a>.</div>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<div id="TMSUG11311" class="sect3"><a id="sthref205"></a>
+<h4 class="sect3">Disabling Automatic Login</h4>
+<p>Automatic login is disabled by default.</p>
+<p>The setting of the parameter tms_auto_login in the tmsconfig.properties file overrides the URL event setting. If it is set to any value other than Y, or if it is not present in the tmsconfig.properties file, even if the TMS Lite Browser URL includes <code dir="ltr">event=doAutoLogin</code>, the link goes to the Login page instead of automatically logging in the user as ops$tmsbrowser.</p>
+<p>To disable automatic login:</p>
+<ol>
+<li>
+<p>Open the tmsconfig.properties, which is located at c:\opapps51\config.</p>
+</li>
+<li>
+<p>Search for the parameter tms_auto_login.</p>
+</li>
+<li>
+<p>If it is set it to <code dir="ltr">Y</code>, change its setting to <code dir="ltr">N</code>.</p>
+</li>
+<li>
+<p>Save.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CDCJEEGH"></a>
+<div id="TMSUG11312" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Enabling TMS Lite Browser Logs</h3>
+<p>Do the following to enable exception log files for the TMS Lite Browser. A file named OpaServer-tms_1.log will be created in <span class="italic">Middlware_HOME</span>\user_projects\domains\OPADomain\ servers\OpaServer1\logs.</p>
+<ol>
+<li>
+<p>Open the logging config file logging.xml that is located at:</p>
+<p><span class="italic">Middlware_HOME</span>\userprojects\domains\OPADomain\config\fmwconfig\ servers\OpaServer1</p>
+</li>
+<li>
+<p>Add the following entry:</p>
+<pre dir="ltr">
+&lt;?xml version='1.0' encoding='UTF-8'?&gt; 
+&lt;logging_configuration&gt; 
+&lt;log_handlers&gt; 
+.. 
+.. 
+ &lt;log_handler name='tmshandler'   
+class='oracle.core.ojdl.logging.ODLHandlerFactory'   
+filter='oracle.dfw.incident.IncidentDetectionLogFilter'&gt; 
+   &lt;property name='path'   
+value='${domain.home}/servers/${weblogic.Name}/logs/${weblogic.Name}-tms_1.log 
+  
+'/&gt; 
+   &lt;property name='maxFileSize' value='10485760'/&gt; 
+   &lt;property name='maxLogSize' value='104857600'/&gt; 
+   &lt;property name='encoding' value='UTF-8'/&gt; 
+   &lt;property name='useThreadName' value='true'/&gt; 
+   &lt;property name='supplementalAttributes'   
+value='J2EE_MODULE.name,composite_name,component_name'/&gt; 
+  &lt;/log_handler&gt; 
+.. 
+.. 
+&lt;/log_handlers&gt; 
+&lt;loggers&gt; 
+.. 
+.. 
+  &lt;logger name='oracle.pharma.tms.logging' level='ALL'   
+useParentHandlers='false'&gt;   
+   &lt;handler name='tmshandler'/&gt; 
+  &lt;/logger&gt; 
+.. 
+.. 
+&lt;/loggers&gt; 
+&lt;/logging_configuration&gt; 
+  
+</pre></li>
+<li>
+<p>Add the following to the URL to get all debug information:</p>
+<pre dir="ltr">
+?setUpDone=Y&amp;debug=all
+</pre></li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CDCDJEBI"></a>
+<div id="TMSUG11313" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Using the About Window</h3>
+<p>The About window shows information about the TMS and other Oracle Health Sciences releases that have been applied to this database. Choose either TMS or OPA from the Installed Product list to browse:</p>
+<ul>
+<li>
+<p>Which releases have been applied to the middle and database tiers.</p>
+</li>
+<li>
+<p>The dates in which these releases were installed.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CDCCDEBC"></a>
+<div id="TMSUG11314" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Troubleshooting</h2>
+<div id="TMSUG11315" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref206"></a>
+<h3 class="sect2">Report Error</h3>
+<p>If you are getting an error message like "Java exception" followed by another message like "http://127.0.0.1/opaxdo/getXdoReport not found" when you try to run a TMS report, you may want to modify the setting of registry variable OPA_LOCAL_MT_URL. This variable is used to redirect the server to the opaxdo servlet to get reports. When not defined, http://127.0.0.1 is used as default value.</p>
+<p>Depending on the settings on middle tier, you may encounter this problem. To fix it, add a port number to the registry variable OPA_LOCAL_MT_URL value on the middle tier; for example, <code dir="ltr">http://127.0.0.1:7777</code>.</p>
+<p>To confirm that the path in the registry variable is correct, submit the value such as <code dir="ltr">http://127.0.0.1:7777</code> (or, without port, <code dir="ltr">http://127.0.0.1</code>) from a browser on the middle tier. If the registry value is correct, you receive the message "Got Request."</p>
+</div>
+<!-- class="sect2" -->
+<div id="TMSUG11316" class="sect2"><a id="sthref207"></a>
+<h3 class="sect2">Restart Application Server After Redeploying TMS Lite Browser</h3>
+<p>If you redeploy the TMS Lite Browser .ear file&mdash;for example, to apply a patch&mdash;restart the application server, including the WebLogic Admin Server. This helps clear connection pools and any DLLs that may be loaded.</p>
+<p>If you do not restart the server, an error message may be displayed the next time a user opens the TMS Lite Browser that includes:</p>
+<pre dir="ltr">
+java.lang.UnsatisfiedLinkError: Native Library
+</pre></div>
+<!-- class="sect2" -->
+<div id="TMSUG11317" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref208"></a>
+<h3 class="sect2">Cannot Log In to Application</h3>
+<p>If you cannot log in to the TMS Lite Browser, you may have entered the application's URL twice in the same browser window.</p>
+<p>Close all browser windows and try the URL again.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment25">
+<tr>
+<td class="cellalignment34">
+<table class="cellalignment30">
+<tr>
+<td class="cellalignment29"><a href="part1.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment29"><a href="ocinteg.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;1999, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment36">
+<table class="cellalignment28">
+<tr>
+<td class="cellalignment29"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment29"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment29"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment29"><a href="index.htm"><img width="24" height="24" src="../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td class="cellalignment29"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

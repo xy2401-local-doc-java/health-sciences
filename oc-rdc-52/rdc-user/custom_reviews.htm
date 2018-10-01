@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Performing Custom Reviews</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2017-08-28T5:11:11Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Oracle&reg; Clinical Remote Data Capture Onsite User's Guide" />
+<meta name="dcterms.identifier" content="E86392-01" />
+<meta name="dcterms.isVersionOf" content="RDCOG" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;1996, 2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Index" href="index.htm" title="Index" type="text/html" />
+<link rel="Prev" href="splistings.htm" title="Previous" type="text/html" />
+<link rel="Next" href="verifying.htm" title="Next" type="text/html" />
+<link rel="alternate" href="RDCOG.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="RDCOG.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="RDCOG.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">12/21</span> <!-- End Header -->
+<div id="RDCOG376" class="chapter"><a id="sthref873"></a>
+<h1 class="chapter"><span class="secnum">7</span> Performing Custom Reviews</h1>
+<p>Using Oracle Clinical, your sponsor can create custom review types to be used in RDC Onsite similar to the way verification and approval are used. These review types are configured for use by users with specific roles, such as data manager or safety expert. See the chapter "Configuring Custom Review Types" in the <a class="olink RDCAG" href="../rdc-admin/toc.htm"><span class="italic">Oracle Clinical Remote Data Capture Onsite Administrator's Guide</span></a> for more information.</p>
+<p>If your account has privileges to either update or browse the CRF review status for one or more custom review types, you may see Activities on the Home page specific to your review type(s), and you have the ability to perform group updates of CRF review status, depending on how these features are configured. Custom review search filters are available on all pages and in the Data Entry Window you can also update or view history of the CRF's review status for the review type(s) you have privileges for.</p>
+<p>To start reviewing CRFs, your Home page Activities may have been configured to help you identify CRFs that require review by you. Next, you can search for all CRFs with the status Review Required and update their status to Review Complete after you complete your review.</p>
+<p>This chapter includes:</p>
+<ul>
+<li>
+<p><a href="#BABJBICJ">Finding CRFs to Perform Custom Reviews</a></p>
+</li>
+<li>
+<p><a href="#BABDEJAF">Finding CRFs that Require Re-review</a></p>
+</li>
+<li>
+<p><a href="#BABIIGBB">Reviewing CRFs from the Data Entry Window</a></p>
+</li>
+<li>
+<p><a href="#BABHJIGA">Completing CRF Review from the Data Entry Window</a></p>
+</li>
+<li>
+<p><a href="#BACFDHCF">Group Update for Custom Review Status</a></p>
+</li>
+</ul>
+<a id="BABJBICJ"></a>
+<div id="RDCOG377" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Finding CRFs to Perform Custom Reviews</h2>
+<p>To find the patient CRFs that need a custom review, you can:</p>
+<ul>
+<li>
+<p>Use customized Activities links on the Home page.</p>
+</li>
+<li>
+<p>Select patients and navigate to the Review CRFs page or Patient Casebooks page.</p>
+</li>
+</ul>
+<div id="RDCOG378" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref874"></a>
+<h3 class="sect2">Using a Customized Activities Link on the Home Page</h3>
+<p>In Oracle Clinical Remote Data Capture Onsite (RDC Onsite), you can use the <span class="bold">Review non-blank CRFs ready for your_review_type</span> activity link for each type of custom review for which you have the update privilege. This link retrieves all the CRFs with the status Review Required and with no open discrepancies; CRFs intentionally marked blank are not retrieved.</p>
+<p>Your sponsor can also customize the Activities links. They can choose to create additional links, define different search criteria for links, rename links, or make some links unavailable. The links available to you depend on how your sponsor customized the RDC Onsite application.</p>
+<p class="orderedlisttitle">To use the default Activities links to find CRFs for review:&nbsp;</p>
+<ol>
+<li>
+<p>Select the activity you want to work with, for example <span class="bold">Review non-blank CRFs ready for your_review_type</span>, in the Activities section on the Home page.</p>
+</li>
+<li>
+<p>Optionally modify the search criteria for the Activities link:</p>
+<ol>
+<li>
+<p>Expand the Search pane to view the criteria in effect as a result of selecting the activity.</p>
+</li>
+<li>
+<p>Click <span class="bold">Reset</span> to specify different search criteria, if needed.</p>
+</li>
+<li>
+<p>Click <span class="bold">Search</span> to refresh the page according to your new criteria.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Proceed to review CRFs with the status Review Required.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<div id="RDCOG379" class="sect2"><a id="sthref876"></a>
+<h3 class="sect2">Selecting Patients and Reviewing CRFs<a id="sthref877"></a><a id="sthref878"></a><a id="sthref879"></a></h3>
+<p>You can select specific patients for review on the Home page, and then navigate to the Review CRFs page to view the CRFs ready for custom review.</p>
+<p class="orderedlisttitle">To select patients and view CRFs ready for custom review:&nbsp;</p>
+<ol>
+<li>
+<p>Open the Home page and expand the Search pane.</p>
+</li>
+<li>
+<p>Specify patient search criteria. For example, you can specify a patient range, patients assigned to a particular casebook (study protocol), or patients with no open discrepancies.</p>
+</li>
+<li>
+<p>Click <span class="bold">Search</span> to refresh the patient list according to your criteria.</p>
+</li>
+<li>
+<p>Select one or more patients for review from the Patients list. In order to do this you can click one row and then use the <span class="bold">Ctrl + A</span> keys to select all the patients displayed.</p>
+<p>Alternatively, you can click on the table header for the patient icon to select all the patients.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You can use combinations of keys including Ctrl on all supported devices except for iPad.</div>
+</li>
+<li>
+<p>From the <span class="bold">Action</span> list, select <span class="bold">Multi-Patient View</span>, <span class="bold">Single Patient View</span>, or <span class="bold">Review CRFs</span>.</p>
+<p>Depending on your selection, the Review CRFs page opens, displaying all entered CRFs for the selected patients, or the Patient Casebooks page opens, displaying all entered and expected CRFs for the selected patients in tabular format. Each row of icons represents data for a single patient. See <a href="entering.htm#BCGIBHFA">"Using the Patient Casebooks Page"</a> for information on navigating in the Patient Casebooks page.</p>
+</li>
+<li>
+<p>Expand the Search pane to specify CRF-level criteria, including CRF status for your review type (such as Review Required or Awaiting Re-review) and others (such as verification status, entry status, or discrepancy status).</p>
+</li>
+<li>
+<p>Click <span class="bold">Search</span> to refresh the CRF list after selecting additional criteria.</p>
+<p>To reset your patient selection entirely and specify a different search, click <span class="bold">Reset.</span></p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BABDEJAF"></a>
+<div id="RDCOG380" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><a id="sthref881"></a><a id="sthref882"></a><a id="sthref883"></a><a id="sthref884"></a><a id="sthref885"></a>Finding CRFs that Require Re-review</h2>
+<p>Data can be updated even after you set the CRF status to Review Complete. When this happens, the CRF automatically acquires a verification status of <span class="bold">Awaiting Re-review</span>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+CRFs with the status <span class="bold">Awaiting Re-review</span> are not retrieved when you search by the status <span class="bold">Review Required</span>.</div>
+<p class="orderedlisttitle">To find CRFs that require re-review:&nbsp;</p>
+<ol>
+<li>
+<p>On the Home page, select patients you want to work with and navigate to either the Patient Casebooks page or the CRF Review page.</p>
+</li>
+<li>
+<p>Expand the Search pane on either the Review CRFs page or the Patient Casebooks page.</p>
+</li>
+<li>
+<p>In the CRF Status group of filters, select the applicable <span class="bold">Review Type</span> if not already selected, then for Review Status select <span class="bold">Awaiting Re-review</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Search</span>.</p>
+</li>
+<li>
+<p>Continue to <a href="#BABIDEJG">"Reviewing Changes Since Latest Review Complete"</a>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="BABIIGBB"></a>
+<div id="RDCOG381" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><a id="sthref887"></a><a id="sthref888"></a><a id="sthref889"></a>Reviewing CRFs from the Data Entry Window</h2>
+<p>After identifying CRFs that require review, you can review them individually to ensure they meet your requirements for stating that your review is complete. Your review of CRFs can include:</p>
+<ul>
+<li>
+<p><a href="#BABGFABG">Reviewing Data</a></p>
+</li>
+<li>
+<p><a href="#BABGGBGJ">Reviewing Discrepancies</a></p>
+</li>
+<li>
+<p><a href="#BABHGIBI">Viewing Review History</a></p>
+</li>
+<li>
+<p><a href="#BABIDEJG">Reviewing Changes Since Latest Review Complete</a></p>
+</li>
+<li>
+<p><a href="#BABEGBCJ">Reviewing Audit History</a></p>
+</li>
+</ul>
+<a id="BABGFABG"></a>
+<div id="RDCOG382" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Reviewing Data</h3>
+<p class="orderedlisttitle">To review entered data for errors:&nbsp;</p>
+<ol>
+<li>
+<p>Open a CRF in the Data Entry window.</p>
+</li>
+<li>
+<p>Review data in the CRF fields.</p>
+</li>
+<li>
+<p>Create a manual discrepancy if you find a problem with data entered in the CRF.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+To add a discrepancy, you can right-click on the field to select Add discrepancy from the pop-up menu, or you can position the cursor in the discrepant field and select the Add Discrepancy icon from the toolbar.</div>
+</li>
+<li>
+<p>Save the CRF if you created a discrepancy.</p>
+</li>
+</ol>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+Click the <span class="bold">Next CRF</span> link to navigate through all CRFs for a patient visit without having to return to the Patient Casebook page or the CRF Review page.</div>
+</div>
+<!-- class="sect2" -->
+<a id="BABGGBGJ"></a>
+<div id="RDCOG383" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Reviewing Discrepancies</h3>
+<p>Your role may require that you review discrepancies before you complete your review. See <a href="managing.htm#BABIBGAJ">Chapter 4, "Managing Discrepancies"</a> for more information.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABHGIBI"></a>
+<div id="RDCOG384" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><a id="sthref891"></a><a id="sthref892"></a><a id="sthref893"></a>Viewing Review History</h3>
+<p>RDC Onsite lets you view custom review history for a CRF, if any.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Changes in review status that were applied as a result of changes to the custom review type requirements, not as a result of user action do not appear in the review history. However, administrators can retrieve this information by querying the columns crt_list and allow_crt_rn in the DCIS and DCIS$JN tables.</div>
+<p class="orderedlisttitle">To view the custom review history of a CRF:&nbsp;</p>
+<ol>
+<li>
+<p>Open the CRF in a Data Entry window.</p>
+</li>
+<li>
+<p>Click the<a id="sthref895"></a><a id="sthref896"></a> <span class="bold">Custom Review</span> icon in the toolbar. The upper pane of the Custom Review dialog box displays the following information about the review history, if any, for the CRF.</p>
+<p><span class="bold">Date &mdash;</span> Displays the date and time of the CRF custom review status change.</p>
+<p><span class="bold">Operation &mdash;</span> Displays the action that caused a change in review status: either an explicit change in custom review type status to Required, Not Required, or Complete, or a CRF Update, resulting in a new status of Awaiting Re-Review.</p>
+<p><span class="bold">Changed By &mdash;</span> Displays the full name of the user who changed the review status or updated the CRF.</p>
+<p><span class="bold">Comment &mdash;</span> Displays additional information about the Verify or Undo Verify action.</p>
+</li>
+<li>
+<p>Close the CRF Review dialog box.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BABIDEJG"></a>
+<div id="RDCOG385" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><a id="sthref897"></a><a id="sthref898"></a><a id="sthref899"></a>Reviewing Changes Since Latest Review Complete</h3>
+<p>If data in the CRF is entered or updated after you complete your review, RDC Onsite automatically changes the status of the CRF to <span class="bold">Awaiting Re-review.</span> You must review the changes in such a CRF before you set its status to <span class="bold">Review Complete</span> again.</p>
+<p class="orderedlisttitle">To review the changes to a CRF since the latest review:&nbsp;</p>
+<ol>
+<li>
+<p>Search for CRFs awaiting re-review. See <a href="#BABDEJAF">Finding CRFs that Require Re-review</a>.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If you search for Review status of <span class="bold">Requires Review</span>, the search does not include CRFs with an <span class="bold">Awaiting Re-review</span> status.</div>
+</li>
+<li>
+<p>Open a CRF in a Data Entry window.</p>
+</li>
+<li>
+<p>Click <a id="sthref901"></a><a id="sthref902"></a>the <span class="bold">Highlight</span> field in the toolbar, and select <span class="bold">Changed since last reviewed</span> from the list. Fields updated since the last review are highlighted in blue. Note that fields whose only update is an update to the investigator comment are highlighted.</p>
+</li>
+<li>
+<p>Right-click a field highlighted in blue, and select<a id="sthref903"></a><a id="sthref904"></a> <span class="bold">View Audit History.</span> The Audit History pane opens at the bottom of the Data Entry window, displaying the complete audit history for the field.</p>
+</li>
+<li>
+<p>Review the history of changes for the selected field.</p>
+</li>
+<li>
+<p>Continue to review the changes to other fields in the CRF since the last review.</p>
+</li>
+</ol>
+<p class="subhead2"><a id="RDCOG386"></a><a id="sthref905"></a>Finding Non-highlighted Changes in a CRF</p>
+<p>When you select <span class="bold">Changed since last reviewed</span> in the <span class="bold">Highlight</span> field in the Data Entry window, RDC Onsite does not highlight fields for which updates were restricted to discrepancies. To find such changes:</p>
+<ol>
+<li>
+<p>Click the <span class="bold">Custom Review</span> icon in the Data Entry window toolbar to establish the date of the latest review complete status change.</p>
+</li>
+<li>
+<p>Review the Discrepancy History to identify any updates since the last review complete status change.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BABEGBCJ"></a>
+<div id="RDCOG387" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><a id="sthref906"></a><a id="sthref907"></a><a id="sthref908"></a>Reviewing Audit History</h3>
+<p>The Audit History pane provides comprehensive information on the changes to each field in a CRF.</p>
+<p class="orderedlisttitle">To view the history of the changes to a field:&nbsp;</p>
+<ol>
+<li>
+<p>Open a CRF in a Data Entry window.</p>
+</li>
+<li>
+<p>Right-click a field and then select<a id="sthref910"></a><a id="sthref911"></a> <span class="bold">View Audit History.</span> The Audit History pane opens at the bottom of the Data Entry window.</p>
+</li>
+<li>
+<p>Review the history of changes for the selected field.</p>
+</li>
+</ol>
+<p>The Audit History pane does not include those changes made to discrepancies or investigator comments. You can, however, use the Navigator pane to view the Discrepancy History and the Investigator Comment History for information on those updates.</p>
+<p>Generate the CRF History report to view CRF history not available in the audit pane, such as the CRF creation, prior history for any deleted data rows, and/or history prior to the CRF being deleted.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BABHJIGA"></a>
+<div id="RDCOG388" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Completing CRF Review from the Data Entry Window</h2>
+<p>If you have update privileges for one or more custom review types, you can change the review status for one CRF at a time from within the Data Entry window.</p>
+<p class="orderedlisttitle">To change the CRF status for a custom review type:&nbsp;</p>
+<ol>
+<li>
+<p>Open a CRF in a Data Entry window.</p>
+</li>
+<li>
+<p>Click the Custom Review icon in the toolbar.</p>
+</li>
+<li>
+<p>In the CRF Review window, the History pane appears in the upper half of the window, and the Update pane in the lower half.</p>
+<img width="576" height="437" src="img/crf_review_dialog.gif" alt="The CRF Review dialog" /><br />
+<p>The History pane includes the review history of the CRF, if any, for the custom review types that you have the privilege to browse or update. By default, the history shown is for the first review type you have access to.</p>
+</li>
+<li>
+<p>In the lower pane, you can choose a new status for the CRF from the drop-down list. This can be any of the following, excluding the current status of the CRF, if any.</p>
+<ul>
+<li>
+<p>Review Complete</p>
+</li>
+<li>
+<p>Review Required</p>
+</li>
+<li>
+<p>No Review Required</p>
+</li>
+</ul>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If you have access to multiple review types, the upper pane can display the history of one review type, while the lower pane allows you to change the CRF status for another.</div>
+</li>
+<li>
+<p>Click <span class="bold">Apply Status</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="BACFDHCF"></a>
+<div id="RDCOG390" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Group Update for Custom Review Status</h2>
+<p>If allowed in RDC Onsite, you can change the review status for a group of CRFs simultaneously from the multi- or single-patient casebook page or the CRF Review page.</p>
+<p>You can set one of the following statuses: Review Not Required (RN), Review Required (RQ), Review Complete (RC).</p>
+<p>Refer to the section <span class="italic">Configuration Settings for RDC Onsite</span> in the <span class="italic">RDC Onsite Administrator's Guide</span> for more information on configuring group actions.</p>
+<img width="621" height="550" src="img/grp_upd_crt.gif" alt="Surrounding text describes grp_upd_crt.gif." /><br />
+<p class="orderedlisttitle">To update a custom review status for multiple CRFs:&nbsp;</p>
+<ol>
+<li>
+<p>Depending on which page you are using in RDC, choose the CRFs for which you want to change the review status by selecting:</p>
+<ul>
+<li>
+<p>Patients in the Multiple Patient Casebook page</p>
+</li>
+<li>
+<p>Visits in the Single Patient Casebook page</p>
+</li>
+<li>
+<p>CRFs in the Review CRFs page.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>From the <span class="bold">Action</span> list, select <span class="bold">Update Review Status</span>.</p>
+</li>
+<li>
+<p>Choose the exclusion and inclusion criteria.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The initial selection of inclusion and exclusion criteria is defined in Oracle Clinical for the Verification function.</div>
+</li>
+<li>
+<p>If you have update privileges for multiple custom review types, choose the appropriate custom review type from the Review Type list. Then, from the Review Status list, select the new status you want to assign to all the selected CRFs.</p>
+</li>
+<li>
+<p>Click <span class="bold">Apply Status</span>.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The review status for some of the selected CRFs may not be updated for any of the following reasons:
+<ul>
+<li>
+<p>The CRF already had the new review status.</p>
+</li>
+<li>
+<p>The CRF is being updated by another user or validation procedure.</p>
+</li>
+<li>
+<p>The CRF is locked by Oracle Clinical.</p>
+</li>
+<li>
+<p>You are trying to apply the review status Review not Required (RN) for a required review type and RN overrides are not allowed by the custom review requirements at the installation, study, or DCI level.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment1">
+<tr>
+<td class="cellalignment10">
+<table class="cellalignment6">
+<tr>
+<td class="cellalignment5"><a href="splistings.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment5"><a href="verifying.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;1996, 2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment12">
+<table class="cellalignment4">
+<tr>
+<td class="cellalignment5"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment5"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment5"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment5"><a href="index.htm"><img width="24" height="24" src="../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td class="cellalignment5"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

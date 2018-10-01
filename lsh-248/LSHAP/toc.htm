@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>Health Sciences Life Sciences Warehouse API Guide - Contents</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="description" content="This guide provides information on using the Application Programming Interface for Oracle Life Sciences Data Hub and Oracle Health Sciences Data Management Workbench." />
+<meta name="dcterms.created" content="2018-05-25T8:15:5Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Health Sciences Life Sciences Warehouse API Guide" />
+<meta name="dcterms.identifier" content="E87987-01" />
+<meta name="dcterms.isVersionOf" content="LSHAP" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2013, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"   src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"   src="../nav/js/doccd.js"></script>
+<link rel="Next" href="title.htm" title="Next" type="text/html" />
+<link rel="alternate" href="LSHAP.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="LSHAP.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="LSHAP.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript"  src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript"  src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript"  src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript"  src="../dcommon/js/foundation.min.js"></script>
+<script type="application/javascript"  src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript"  src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript"  src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="application/javascript"  src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="application/javascript"  src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="application/javascript"  src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="application/javascript"  src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">1/42</span> <!-- End Header -->
+<h1 class="toc">Contents</h1>
+<h2 class="tocheader"><a href="title.htm">Title and Copyright Information</a></h2>
+<h2 class="tocheader"><a href="preface.htm#sthref2">Preface</a></h2>
+<ul style="list-style-type:none">
+<li><a href="preface.htm#sthref3">Finding More Information</a></li>
+<li><a href="preface.htm#CHDHBHBB">Documentation Accessibility</a></li>
+</ul>
+<h2 class="tocheader"><a href="part1_api.htm#BGBDAHFC">Part I Essential Information</a></h2>
+<h2 class="tocheader"><a href="using_api.htm#BGBIIFJD"><span class="secnum">1</span> Using Application Programming Interfaces</a></h2>
+<ul style="list-style-type:none">
+<li><a href="using_api.htm#BGBEIFAF">About APIs</a></li>
+<li><a href="using_api.htm#A1170774">Tips</a>
+<ul style="list-style-type:none">
+<li><a href="using_api.htm#sthref5">Committing APIs</a></li>
+<li><a href="using_api.htm#sthref6">Get Attribute Values for Namespace Objects</a></li>
+</ul>
+</li>
+<li><a href="using_api.htm#BGBIJGCI">Calling APIs from Outside the Oracle Life Sciences Data Hub</a>
+<ul style="list-style-type:none">
+<li><a href="using_api.htm#BGBJBHDI">Security Setup Required</a></li>
+<li><a href="using_api.htm#BGBFBJHI">Calling the Security API Package</a></li>
+<li><a href="using_api.htm#BGBHEECB">Calling APIs from SAS</a></li>
+<li><a href="using_api.htm#BGBHFJDD">Using a Permanent Schema for Deploying Programs that Call APIs</a></li>
+</ul>
+</li>
+<li><a href="using_api.htm#BGBHDJGC">Calling APIs from Defined Programs</a></li>
+<li><a href="using_api.htm#BGBDHACE">Code Example Using Security and Error Message APIs</a></li>
+</ul>
+<h2 class="tocheader"><a href="reference_info_api.htm#BGBHHCBJ"><span class="secnum">2</span> Reference Information</a></h2>
+<ul style="list-style-type:none">
+<li><a href="reference_info_api.htm#CHDHFDGB">CDR Naming Version Object Type</a></li>
+<li><a href="reference_info_api.htm#CHDHBCDB">CDR Base Object Type</a></li>
+<li><a href="reference_info_api.htm#BGBGHGBJ">CDR Object-Specific Database Object Types</a></li>
+<li><a href="reference_info_api.htm#CDEBEJDD">Retrieving Reference Codelist Names and Values</a></li>
+<li><a href="reference_info_api.htm#CHDDCCJF">Retrieving the Instance Domain ID</a></li>
+<li><a href="reference_info_api.htm#A1274755">Retrieving the ID of a User-Defined Domain</a></li>
+<li><a href="reference_info_api.htm#A1274974">CDR_DF_NAMING_V View</a></li>
+<li><a href="reference_info_api.htm#CDEHDBAI">Standard Parameters</a></li>
+</ul>
+<h2 class="tocheader"><a href="part2_api.htm#sthref14">Part II Object APIs</a></h2>
+<h2 class="tocheader"><a href="application_areas_api.htm#BGBEDBCF"><span class="secnum">3</span> Application Areas</a></h2>
+<ul style="list-style-type:none">
+<li><a href="application_areas_api.htm#sthref15">Define and Modify Application Areas</a>
+<ul style="list-style-type:none">
+<li><a href="application_areas_api.htm#CHDFBHFF">Create an Application Area</a></li>
+<li><a href="application_areas_api.htm#CHDIFCFJ">Modify an Application Area</a></li>
+<li><a href="application_areas_api.htm#CHDFCAEE">Remove an Application Area</a></li>
+<li><a href="application_areas_api.htm#CHDJEFHB">Copy Objects into an Application Area</a></li>
+<li><a href="application_areas_api.htm#CHDHBAJH">Move Objects into an Application Area</a></li>
+</ul>
+</li>
+</ul>
+<h2 class="tocheader"><a href="business_areas_api.htm#CDEJICBG"><span class="secnum">4</span> Business Areas</a></h2>
+<ul style="list-style-type:none">
+<li><a href="business_areas_api.htm#BGBEGIGG">Define and Modify Business Areas</a>
+<ul style="list-style-type:none">
+<li><a href="business_areas_api.htm#BGBHDIFB">Create a Business Area</a></li>
+<li><a href="business_areas_api.htm#BGBBHABD">Modify a Business Area</a></li>
+<li><a href="business_areas_api.htm#BGBIGJHF">Check Out a Business Area</a></li>
+<li><a href="business_areas_api.htm#BGBIBGCB">Undo a Business Area Checkout</a></li>
+<li><a href="business_areas_api.htm#BGBGBBGG">Check In a Business Area</a></li>
+<li><a href="business_areas_api.htm#BGBDDIJJ">Remove a Business Area</a></li>
+</ul>
+</li>
+<li><a href="business_areas_api.htm#BGBBDDFB">Create and Modify Business Area Hierarchies</a>
+<ul style="list-style-type:none">
+<li><a href="business_areas_api.htm#BGBIEBID">Create a Business Area Hierarchy</a></li>
+<li><a href="business_areas_api.htm#BGBJAHCD">Modify a Hierarchy and a Hierarchy Column</a></li>
+<li><a href="business_areas_api.htm#BGBIHGCB">Reorder a Hierarchy Column</a></li>
+<li><a href="business_areas_api.htm#BGBIDCFG">Remove a Hierarchy Column</a></li>
+<li><a href="business_areas_api.htm#BGBDBIEH">Remove a Business Area Hierarchy</a></li>
+</ul>
+</li>
+<li><a href="business_areas_api.htm#BGBEEFIJ">Create and Modify Business Area Joins</a>
+<ul style="list-style-type:none">
+<li><a href="business_areas_api.htm#BGBBFIHC">Create a Join</a></li>
+<li><a href="business_areas_api.htm#BGBDDCCF">Modify a Join and a Join Column</a></li>
+<li><a href="business_areas_api.htm#BGBDFIED">Remove a Join Column</a></li>
+<li><a href="business_areas_api.htm#BGBIBGJB">Remove a Join</a></li>
+</ul>
+</li>
+<li><a href="business_areas_api.htm#BGBDCDAE">Public APIs and Naming Views for Generic Visualization Adapter (GVA)</a>
+<ul style="list-style-type:none">
+<li><a href="business_areas_api.htm#BGBGFJFG">Initialize a Generic Visualization Business Area Instance</a></li>
+<li><a href="business_areas_api.htm#BGBDDHDH">Reset a Generic Visualization Business Area Instance</a></li>
+<li><a href="business_areas_api.htm#BGBIEIBI">Get Possible Blinding Types of a Business Area Instance</a></li>
+<li><a href="business_areas_api.htm#BGBBEBGC">Get Snapshot Labels Common to all Tables in a BA Instance for a Given Blinding AccessType</a></li>
+<li><a href="business_areas_api.htm#BGBCBFGJ">Get Custom Listing Business Area ID</a></li>
+</ul>
+</li>
+</ul>
+<h2 class="tocheader"><a href="data_mart_api.htm#BGBCEIAB"><span class="secnum">5</span> Data Marts</a></h2>
+<ul style="list-style-type:none">
+<li><a href="data_mart_api.htm#sthref88">Define and Modify Data Marts</a>
+<ul style="list-style-type:none">
+<li><a href="data_mart_api.htm#CIHEJJIH">Create a Data Mart</a></li>
+<li><a href="data_mart_api.htm#CDECGDHJ">Check In a DataMart Definition</a></li>
+<li><a href="data_mart_api.htm#CDEHEIHE">Modify a Data Mart</a></li>
+<li><a href="data_mart_api.htm#CIHEDDBD">Check Out a Data Mart</a></li>
+<li><a href="data_mart_api.htm#CIHJEHHH">Remove a Data Mart</a></li>
+</ul>
+</li>
+</ul>
+<h2 class="tocheader"><a href="domains_api.htm#BABIAAEH"><span class="secnum">6</span> Domains</a></h2>
+<ul style="list-style-type:none">
+<li><a href="domains_api.htm#sthref104">Define and Modify Domains</a>
+<ul style="list-style-type:none">
+<li><a href="domains_api.htm#BABDIJFG">Create a Domain</a></li>
+<li><a href="domains_api.htm#BABEEDCF">Modify a Domain</a></li>
+<li><a href="domains_api.htm#BABGGADB">Copy a Domain</a></li>
+<li><a href="domains_api.htm#BABEABJC">Move Objects into a Domain</a></li>
+<li><a href="domains_api.htm#BABBAJJE">Copy Objects into a Domain</a></li>
+<li><a href="domains_api.htm#BABCIHBF">Check in Objects and Copy them into a Different Domain</a></li>
+<li><a href="domains_api.htm#BABIGFFE">Remove a Domain</a></li>
+</ul>
+</li>
+</ul>
+<h2 class="tocheader"><a href="data_loadrun_api.htm#CHDBBIAE"><span class="secnum">7</span> Load Sets</a></h2>
+<ul style="list-style-type:none">
+<li><a href="data_loadrun_api.htm#sthref126">Define and Modify Load Sets</a>
+<ul style="list-style-type:none">
+<li><a href="data_loadrun_api.htm#CHDJBGCF">Create a Load Set</a></li>
+<li><a href="data_loadrun_api.htm#CHDFCEIF">Check Out a Load Set</a></li>
+<li><a href="data_loadrun_api.htm#CHDCBBAI">Modify a Load Set</a></li>
+<li><a href="data_loadrun_api.htm#CHDIJEFH">Check In a Load Set Definition</a></li>
+<li><a href="data_loadrun_api.htm#BABJEFFJ">Undo Check Out for a Load Set Definition</a></li>
+<li><a href="data_loadrun_api.htm#CHDHEECH">Remove a Load Set</a></li>
+<li><a href="data_loadrun_api.htm#CHDECHAF">Synchronize Table Descriptors in a Load Set</a></li>
+</ul>
+</li>
+</ul>
+<h2 class="tocheader"><a href="parameter_set_api.htm#CHDCBCDJ"><span class="secnum">8</span> Parameter Sets</a></h2>
+<ul style="list-style-type:none">
+<li><a href="parameter_set_api.htm#sthref148">Create and Modify Parameter Sets</a>
+<ul style="list-style-type:none">
+<li><a href="parameter_set_api.htm#CHDBBEJJ">Create a Parameter Set Definition</a></li>
+<li><a href="parameter_set_api.htm#CHDBGJBH">Check Out a Parameter Set Definition</a></li>
+<li><a href="parameter_set_api.htm#CHDEJJGI">Modify a Parameter Set Definition</a></li>
+<li><a href="parameter_set_api.htm#CHDGDCHD">Modify a Parameter Set Detail</a></li>
+<li><a href="parameter_set_api.htm#CHDBIJAI">Check In a Parameter Set Definition</a></li>
+<li><a href="parameter_set_api.htm#CHDBFDDA">Remove a Parameter Set Definition</a></li>
+</ul>
+</li>
+</ul>
+<h2 class="tocheader"><a href="planned_output_api.htm#BGBHEEGE"><span class="secnum">9</span> Planned Outputs</a></h2>
+<ul style="list-style-type:none">
+<li><a href="planned_output_api.htm#sthref167">Create and Modify Planned Outputs</a>
+<ul style="list-style-type:none">
+<li><a href="planned_output_api.htm#BGBDACEJ">Create a Planned Output</a></li>
+<li><a href="planned_output_api.htm#BGBJGGEJ">Get a New Position Number</a></li>
+<li><a href="planned_output_api.htm#BGBFAEIG">Get a Planned Output Object</a></li>
+<li><a href="planned_output_api.htm#BGBIJGEH">Modify a Planned Output</a></li>
+<li><a href="planned_output_api.htm#BGBIGHIE">Identify whether a SAS Object</a></li>
+<li><a href="planned_output_api.htm#BGBGIECJ">Remove a Planned Output Object</a></li>
+</ul>
+</li>
+</ul>
+<h2 class="tocheader"><a href="program_api.htm#BABJEIJD"><span class="secnum">10</span> Programs</a></h2>
+<ul style="list-style-type:none">
+<li><a href="program_api.htm#BABDEAJB">Create and Modify Programs</a>
+<ul style="list-style-type:none">
+<li><a href="program_api.htm#BABFFAEG">Create a Program</a></li>
+<li><a href="program_api.htm#BABEFFAD">Copy Objects Into a Program</a></li>
+<li><a href="program_api.htm#BABGCJHJ">Modify a Program</a></li>
+<li><a href="program_api.htm#BABFHBAC">Check In a Program Definition</a></li>
+<li><a href="program_api.htm#BABHJHCE">Check Out a Program Definition</a></li>
+<li><a href="program_api.htm#BABCJFAD">Remove a Program</a></li>
+<li><a href="program_api.htm#BABIDEBA">Create a Planned Output for a Log File</a></li>
+<li><a href="program_api.htm#BGBCJJGB">Assign a Planned Output</a></li>
+<li><a href="program_api.htm#BABICJGE">Modify a Manual Validation Flag Value</a></li>
+</ul>
+</li>
+</ul>
+<h2 class="tocheader"><a href="report_set_api.htm#CDEEADDC"><span class="secnum">11</span> Report Sets</a></h2>
+<ul style="list-style-type:none">
+<li><a href="report_set_api.htm#CDEIJIHE">Create and Modify Report Set Entries</a>
+<ul style="list-style-type:none">
+<li><a href="report_set_api.htm#CDECCHDE">Create a Report Set Entry</a></li>
+<li><a href="report_set_api.htm#CDEICEBD">Add and Modify an Entry</a></li>
+<li><a href="report_set_api.htm#CDEGEFGH">Copy a Report Set Entry into Another</a></li>
+<li><a href="report_set_api.htm#CDEDBAAD">Modify a Report Set Entry</a></li>
+<li><a href="report_set_api.htm#CDEJCFEC">Move a Report Set Entry into Another</a></li>
+<li><a href="report_set_api.htm#CDEEDJBI">Reorder Report Set Entries in a Parent Report Set</a></li>
+<li><a href="report_set_api.htm#CDEGJCGD">Find if a Report Set is Checked Out</a></li>
+<li><a href="report_set_api.htm#CDEFHCDE">Check Unique and Strict Numbering in a Report Set</a></li>
+<li><a href="report_set_api.htm#CDEBECCB">Identify if a Report Set Contains Child Entries</a></li>
+<li><a href="report_set_api.htm#CDEEEIIJ">Find if a User has Modify Permission</a></li>
+<li><a href="report_set_api.htm#CDEDDIJF">Remove an Object from a Report Set Entry</a></li>
+<li><a href="report_set_api.htm#CDEDBHIH">Remove a Report Set Entry</a></li>
+<li><a href="report_set_api.htm#CDEDEDBJ">Get a Report Set Name</a></li>
+<li><a href="report_set_api.htm#CDEDFEFC">Get a Title</a></li>
+<li><a href="report_set_api.htm#CDEDCBHJ">Get a Chapter Number</a></li>
+<li><a href="report_set_api.htm#CDECCHCI">Get a Parent Number</a></li>
+<li><a href="report_set_api.htm#CDEBFFJD">Get a List of Report Set Entry Titles</a></li>
+<li><a href="report_set_api.htm#CDEBBDDC">Get All RSE Titles in a Report Set</a></li>
+<li><a href="report_set_api.htm#CDEDJGJG">Get Attribute Values Derived from a Parent</a></li>
+<li><a href="report_set_api.htm#CDEFDBIF">Get the Lowest Entry Number</a></li>
+<li><a href="report_set_api.htm#CDEGDFHJ">Get the Total Number of Report Set Entries</a></li>
+<li><a href="report_set_api.htm#CDEEFGHI">Create a Narrative</a></li>
+<li><a href="report_set_api.htm#CDECHDHJ">Update a Narrative</a></li>
+<li><a href="report_set_api.htm#CDEEGCAE">Delete a Narrative</a></li>
+<li><a href="report_set_api.htm#CDEIAHAD">Check if Copying Retains Valid Numbering in a Target Report Set</a></li>
+<li><a href="report_set_api.htm#CDECEJDB">Check if a Move Retains Valid Numbering in a Target Report Set</a></li>
+<li><a href="report_set_api.htm#sthref307">Check if a Move Retains Valid Numbering in the Parent Report Set</a></li>
+<li><a href="report_set_api.htm#CDEBCHBF">Check if Removal Retains Valid Numbering in a Parent Report Set</a></li>
+<li><a href="report_set_api.htm#CDEGCIHD">Check if Reordering Retains Valid Numbering in a Parent Report Set</a></li>
+<li><a href="report_set_api.htm#CDEIJJCE">Unassign a Planned Output</a></li>
+</ul>
+</li>
+<li><a href="report_set_api.htm#CDEIJGFJ">Create and Modify Report Sets</a>
+<ul style="list-style-type:none">
+<li><a href="report_set_api.htm#CDEICGIB">Create a Report Set</a></li>
+<li><a href="report_set_api.htm#CDEDCCIJ">Check Out a Report Set</a></li>
+<li><a href="report_set_api.htm#CDEBFFCB">Undo a Report Set Checkout</a></li>
+<li><a href="report_set_api.htm#CDEGGEFC">Copy Objects Into a Report Set</a></li>
+<li><a href="report_set_api.htm#CDEGHDAD">Get a Summary Output Validation Status</a></li>
+<li><a href="report_set_api.htm#CDEDECAE">Modify a Report Set</a></li>
+<li><a href="report_set_api.htm#CDEHIGDA">Move Objects into a Report Set</a></li>
+<li><a href="report_set_api.htm#sthref345">Remove Objects from a Report Set</a></li>
+<li><a href="report_set_api.htm#sthref349">Check In a Report Set</a></li>
+<li><a href="report_set_api.htm#sthref353">Remove a Report Set Definition</a></li>
+<li><a href="report_set_api.htm#sthref357">Remove a Report Set</a></li>
+</ul>
+</li>
+<li><a href="report_set_api.htm#CDEIIEAB">Create and Modify Overlay Template Definitions</a>
+<ul style="list-style-type:none">
+<li><a href="report_set_api.htm#CDEDBGCB">Create an Overlay Template Definition</a></li>
+<li><a href="report_set_api.htm#CDEJAGIH">Modify an Overlay Template Definition File Definition</a></li>
+<li><a href="report_set_api.htm#CDEFGFHE">Get an Overlay Template Definition File as a BLOB</a></li>
+<li><a href="report_set_api.htm#CDEEAJIE">Remove an Overlay Template Definition File Definition</a></li>
+</ul>
+</li>
+<li><a href="report_set_api.htm#CDEDFHDI">Report Set Overlay Template</a>
+<ul style="list-style-type:none">
+<li><a href="report_set_api.htm#CDEHCCBB">Create an Overlay Template</a></li>
+<li><a href="report_set_api.htm#CDEFGIEB">Check Out an Overlay Template</a></li>
+<li><a href="report_set_api.htm#CDEJDGCA">Undo an Overlay Template Checkout</a></li>
+<li><a href="report_set_api.htm#CDEDBBJF">Copy Objects Into an Overlay Template</a></li>
+<li><a href="report_set_api.htm#CDEBCJEH">Modify an Overlay Template</a></li>
+<li><a href="report_set_api.htm#CDEFEGBJ">Check In an Overlay Template</a></li>
+<li><a href="report_set_api.htm#CDEECCHE">Remove an Overlay Template</a></li>
+</ul>
+</li>
+</ul>
+<h2 class="tocheader"><a href="software_code_api.htm#BGBDJHFF"><span class="secnum">12</span> Software Source Codes</a></h2>
+<ul style="list-style-type:none">
+<li><a href="software_code_api.htm#BGBIBBDE">Create and Modify Source Code</a>
+<ul style="list-style-type:none">
+<li><a href="software_code_api.htm#BGBEAACC">Create a Source Code Object</a></li>
+<li><a href="software_code_api.htm#BGBEDJIF">Get a Source Code CLOB</a></li>
+<li><a href="software_code_api.htm#BGBDBECG">Modify Source Code</a></li>
+<li><a href="software_code_api.htm#BGBIDABD">Set the Primary Flag to Yes</a></li>
+<li><a href="software_code_api.htm#BGBFICEG">Update a Shareable Flag</a></li>
+<li><a href="software_code_api.htm#BGBCFAFA">Remove a Source Code Object</a></li>
+</ul>
+</li>
+</ul>
+<h2 class="tocheader"><a href="metadata_reg_obj_api.htm#BABBHFHJ"><span class="secnum">13</span> Tables</a></h2>
+<ul style="list-style-type:none">
+<li><a href="metadata_reg_obj_api.htm#sthref414">Create and Modify Tables</a>
+<ul style="list-style-type:none">
+<li><a href="metadata_reg_obj_api.htm#BABDCCAG">Create a Table Definition</a></li>
+<li><a href="metadata_reg_obj_api.htm#BABGECAJ">Create a Table Instance</a></li>
+<li><a href="metadata_reg_obj_api.htm#BABFHAEH">Create a Temporary Blob</a></li>
+<li><a href="metadata_reg_obj_api.htm#BABBBCHE">Create a Table Column</a></li>
+<li><a href="metadata_reg_obj_api.htm#BABGDDGC">Modify a Table Column</a></li>
+<li><a href="metadata_reg_obj_api.htm#BABJHBAH">Create a Table Constraint</a></li>
+<li><a href="metadata_reg_obj_api.htm#BABFCAHH">Modify a Table Constraint</a></li>
+<li><a href="metadata_reg_obj_api.htm#BABEAGIG">Modify a Table Definition</a></li>
+<li><a href="metadata_reg_obj_api.htm#BABBEIEF">Create a Table Descriptor</a></li>
+<li><a href="metadata_reg_obj_api.htm#BABGEFIF">Modify a Table Descriptor</a></li>
+<li><a href="metadata_reg_obj_api.htm#BABDHFJF">Modify a Table Instance</a></li>
+<li><a href="metadata_reg_obj_api.htm#BABDICAG">Reorder a Column</a></li>
+<li><a href="metadata_reg_obj_api.htm#BABIGBJI">Upload a Table Descriptor or Column</a></li>
+<li><a href="metadata_reg_obj_api.htm#BABIHEBF">Check Out a Table</a></li>
+<li><a href="metadata_reg_obj_api.htm#BABFBCIC">Check In a Table</a></li>
+<li><a href="metadata_reg_obj_api.htm#BABCFCGA">Undo Check Out for a Table Definition</a></li>
+<li><a href="metadata_reg_obj_api.htm#BABBHCCG">Remove a Single Object</a></li>
+</ul>
+</li>
+</ul>
+<h2 class="tocheader"><a href="parameter_api.htm#CHDGBHHI"><span class="secnum">14</span> Parameters</a></h2>
+<ul style="list-style-type:none">
+<li><a href="parameter_api.htm#CHDGBFJE">Define and Modify Parameters</a>
+<ul style="list-style-type:none">
+<li><a href="parameter_api.htm#CDEIHBEJ">Create a Parameter</a></li>
+<li><a href="parameter_api.htm#sthref467">Check Out a Parameter</a></li>
+<li><a href="parameter_api.htm#CDEJGCGH">Check In a Parameter</a></li>
+<li><a href="parameter_api.htm#CDEECCEI">Get Displayed Parameter Values</a></li>
+</ul>
+</li>
+<li><a href="parameter_api.htm#CHDIDJII">Define Parameter Relations</a>
+<ul style="list-style-type:none">
+<li><a href="parameter_api.htm#CHDCFAJC">Create a Parameter Relation Collection</a></li>
+<li><a href="parameter_api.htm#CHDDHHCA">Get Parameter Instances for Value Passing</a></li>
+<li><a href="parameter_api.htm#CHDIJEEC">Remove Parameter Relations</a></li>
+</ul>
+</li>
+</ul>
+<h2 class="tocheader"><a href="variable_api.htm#BABGHCGD"><span class="secnum">15</span> Variables</a></h2>
+<ul style="list-style-type:none">
+<li><a href="variable_api.htm#sthref486">Create and Modify Variables</a>
+<ul style="list-style-type:none">
+<li><a href="variable_api.htm#BABBFFHE">Create a Variable</a></li>
+<li><a href="variable_api.htm#BABHJGBC">Check Out a Variable</a></li>
+<li><a href="variable_api.htm#BABCBJCB">Modify a Variable</a></li>
+<li><a href="variable_api.htm#BABHHCCH">Check In a Variable</a></li>
+<li><a href="variable_api.htm#BABFIFHJ">Remove a Variable</a></li>
+</ul>
+</li>
+</ul>
+<h2 class="tocheader"><a href="work_areas_api.htm#CDEEGIEJ"><span class="secnum">16</span> Work Areas</a></h2>
+<ul style="list-style-type:none">
+<li><a href="work_areas_api.htm#sthref502">Define and Modify Work Areas</a>
+<ul style="list-style-type:none">
+<li><a href="work_areas_api.htm#CDEBJCCG">Create a Work Area</a></li>
+<li><a href="work_areas_api.htm#CDEGECGA">Install a Work Area</a></li>
+<li><a href="work_areas_api.htm#CDEJBIAJ">Check In a Work Area</a></li>
+<li><a href="work_areas_api.htm#CDEHGHFB">Modify a Work Area</a></li>
+<li><a href="work_areas_api.htm#CDEEHBCF">Clone a Work Area</a></li>
+<li><a href="work_areas_api.htm#CDEGCACH">Copy Objects into a Work Area</a></li>
+<li><a href="work_areas_api.htm#CDEBGBBA">Clone an Object</a></li>
+<li><a href="work_areas_api.htm#CDEFIHGH">Remove a Work Area</a></li>
+<li><a href="work_areas_api.htm#CDEGAAGI">Get the Usage Intent RC of a Work Area</a></li>
+<li><a href="work_areas_api.htm#CDEGHBEE">Update a Work Area's Usage Intent</a></li>
+<li><a href="work_areas_api.htm#CDECHHBD">Install a Program</a></li>
+<li><a href="work_areas_api.htm#BGBHDAGI">Apply or Move a Snapshot Label</a></li>
+<li><a href="work_areas_api.htm#BGBJEJFF">Remove a Snapshot Label from a Work Area</a></li>
+</ul>
+</li>
+</ul>
+<h2 class="tocheader"><a href="workflow_item_api.htm#CHDCEGGJ"><span class="secnum">17</span> Workflows</a></h2>
+<ul style="list-style-type:none">
+<li><a href="workflow_item_api.htm#sthref542">Create and Modify Workflows</a>
+<ul style="list-style-type:none">
+<li><a href="workflow_item_api.htm#CHDCCJFE">Create a Workflow</a></li>
+<li><a href="workflow_item_api.htm#CHDIBAGF">Check Out a Workflow Definition</a></li>
+<li><a href="workflow_item_api.htm#CHDGECAH">Create a Workflow Transition</a></li>
+<li><a href="workflow_item_api.htm#CHDDBDAH">Create a Workflow Structure Instance</a></li>
+<li><a href="workflow_item_api.htm#CHDCABBE">Modify a Workflow</a></li>
+<li><a href="workflow_item_api.htm#CHDBGDEB">Modify a Workflow</a></li>
+<li><a href="workflow_item_api.htm#CHDEIDAA">Check In a Workflow Definition</a></li>
+<li><a href="workflow_item_api.htm#CHDCABII">Remove a Transition</a></li>
+<li><a href="workflow_item_api.htm#CHDCAAHA">Remove a Workflow Activity</a></li>
+<li><a href="workflow_item_api.htm#CHDBJJBJ">Remove a Workflow Instance</a></li>
+<li><a href="workflow_item_api.htm#CHDJHHJB">Remove a Workflow Definition</a></li>
+</ul>
+</li>
+</ul>
+<h2 class="tocheader"><a href="workflow_notify_api.htm#BGBFAIEA"><span class="secnum">18</span> Workflow Notifications</a></h2>
+<ul style="list-style-type:none">
+<li><a href="workflow_notify_api.htm#sthref576">Create and Modify Notifications</a>
+<ul style="list-style-type:none">
+<li><a href="workflow_notify_api.htm#BGBIAHDF">Create a Notification</a></li>
+<li><a href="workflow_notify_api.htm#BGBEBHAA">Create a Notification Recipient</a></li>
+<li><a href="workflow_notify_api.htm#BGBFDFBB">Create a Notification Link</a></li>
+<li><a href="workflow_notify_api.htm#BGBJHGFA">Check Out a Notification Definition</a></li>
+<li><a href="workflow_notify_api.htm#BGBHFBHB">Modify a Notification Definition</a></li>
+<li><a href="workflow_notify_api.htm#BGBIDFJE">Modify a Notification Instance</a></li>
+<li><a href="workflow_notify_api.htm#BGBHIFFD">Send a Notification</a></li>
+<li><a href="workflow_notify_api.htm#BGBDIJHB">Check In a Notification Definition</a></li>
+<li><a href="workflow_notify_api.htm#BGBECDEJ">Remove a Notification Link</a></li>
+<li><a href="workflow_notify_api.htm#BGBEFHCF">Remove a Notification Recipient</a></li>
+<li><a href="workflow_notify_api.htm#BGBCBAGJ">Remove a Notification</a></li>
+</ul>
+</li>
+</ul>
+<h2 class="tocheader"><a href="part3_api.htm#sthref610">Part III Common APIs</a></h2>
+<h2 class="tocheader"><a href="setup_utility_api.htm#BGBIGCIB"><span class="secnum">19</span> Setup Utilities</a></h2>
+<ul style="list-style-type:none">
+<li><a href="setup_utility_api.htm#BGBEJHFA">Initialize APIs</a>
+<ul style="list-style-type:none">
+<li><a href="setup_utility_api.htm#BGBIEGCD">Initialize a Package</a></li>
+<li><a href="setup_utility_api.htm#BGBDBHBH">Verify Whether an API is Enabled</a></li>
+<li><a href="setup_utility_api.htm#BGBJHHJE">Enable an API</a></li>
+<li><a href="setup_utility_api.htm#BGBBBACC">Disable an API</a></li>
+</ul>
+</li>
+<li><a href="setup_utility_api.htm#BGBBAJFJ">Get Factory Support</a>
+<ul style="list-style-type:none">
+<li><a href="setup_utility_api.htm#BGBHFCJC">Get a Naming Version Object</a></li>
+<li><a href="setup_utility_api.htm#CHDDEHEJ">Get a User ID</a></li>
+<li><a href="setup_utility_api.htm#BGBGHCIE">Get a User Name</a></li>
+</ul>
+</li>
+<li><a href="setup_utility_api.htm#BGBHHAHC">Get Factory Utilities</a>
+<ul style="list-style-type:none">
+<li><a href="setup_utility_api.htm#BGBGJDCB">Get a Base Object Type</a></li>
+<li><a href="setup_utility_api.htm#BGBIEDGD">Get a Company ID</a></li>
+</ul>
+</li>
+<li><a href="setup_utility_api.htm#BGBFDHGE">Get Factory Validations</a>
+<ul style="list-style-type:none">
+<li><a href="setup_utility_api.htm#BGBDDIGA">Validate a Namespace</a></li>
+<li><a href="setup_utility_api.htm#BGBIHJEF">Validate a Reference</a></li>
+</ul>
+</li>
+<li><a href="setup_utility_api.htm#BGBBHBIC">Get Data from Object Naming Tables</a>
+<ul style="list-style-type:none">
+<li><a href="setup_utility_api.htm#BGBGEBAB">Get the Latest Version</a></li>
+<li><a href="setup_utility_api.htm#BGBBHDAC">Get a Maximum Version</a></li>
+<li><a href="setup_utility_api.htm#BGBHHGIC">Get the Type of a Naming Object</a></li>
+<li><a href="setup_utility_api.htm#BGBFIIBC">Get an Object's Naming Version</a></li>
+<li><a href="setup_utility_api.htm#BGBHIEFA">Get an Object's Subtype ID</a></li>
+<li><a href="setup_utility_api.htm#BGBJHFCC">Get an Object's Checkout Status</a></li>
+<li><a href="setup_utility_api.htm#BGBGJJFD">Get Checkout Properties</a></li>
+<li><a href="setup_utility_api.htm#BGBJGDDF">Get a Naming Object's Parent</a></li>
+<li><a href="setup_utility_api.htm#BGBGBIDI">Get a Parent Naming Object</a></li>
+<li><a href="setup_utility_api.htm#BGBBDEJB">Get the Latest Version of the Parent Object</a></li>
+<li><a href="setup_utility_api.htm#BGBFHAAJ">Get the Naming Status of a Parent Object</a></li>
+<li><a href="setup_utility_api.htm#BGBBGECF">Get the Validation Status of a Parent Object</a></li>
+<li><a href="setup_utility_api.htm#BGBJGHEH">Get a Definition Object</a></li>
+<li><a href="setup_utility_api.htm#BGBHHJDD">Get a Lookup Meaning</a></li>
+<li><a href="setup_utility_api.htm#BGBBIFJD">Find Whether an Object is an Instance</a></li>
+<li><a href="setup_utility_api.htm#BGBBHJFB">Find Whether Checked Out By Current User</a></li>
+<li><a href="setup_utility_api.htm#BGBJHBII">Find Whether a Checkout is User-Specific</a></li>
+<li><a href="setup_utility_api.htm#BGBFCIBH">Find Whether Checkout is Implicit</a></li>
+</ul>
+</li>
+<li><a href="setup_utility_api.htm#BGBJEGBF">Define and Modify Adapters</a>
+<ul style="list-style-type:none">
+<li><a href="setup_utility_api.htm#BGBBHHJI">Create an Adapter Domain</a></li>
+<li><a href="setup_utility_api.htm#BGBEBDBH">Modify an Adapter Domain</a></li>
+<li><a href="setup_utility_api.htm#BGBJFIEG">Create an Adapter Area</a></li>
+<li><a href="setup_utility_api.htm#BGBEHJIF">Modify an Adapter Area</a></li>
+<li><a href="setup_utility_api.htm#BGBBBBJE">Populate a Tech Type Table</a></li>
+<li><a href="setup_utility_api.htm#BGBFIEIG">Modify a Tech Type Table</a></li>
+</ul>
+</li>
+<li><a href="setup_utility_api.htm#BGBEJEEF">Host Definition Constants</a></li>
+<li><a href="setup_utility_api.htm#BGBGHICG">Read Messages</a>
+<ul style="list-style-type:none">
+<li><a href="setup_utility_api.htm#BGBHGFAJ">Get a Message</a></li>
+<li><a href="setup_utility_api.htm#BGBCGDBB">Get a Message Count</a></li>
+<li><a href="setup_utility_api.htm#BGBDCFDC">Initialize a Message Stack</a></li>
+</ul>
+</li>
+<li><a href="setup_utility_api.htm#CHDIAGCJ">Change Tablespaces</a></li>
+</ul>
+<h2 class="tocheader"><a href="exe_setupinfo_api.htm#BGBHIJCH"><span class="secnum">20</span> Execution Setups</a></h2>
+<ul style="list-style-type:none">
+<li><a href="exe_setupinfo_api.htm#sthref753">Create and Modify Execution Setups</a>
+<ul style="list-style-type:none">
+<li><a href="exe_setupinfo_api.htm#BGBHEHEG">Create an Execution Setup</a></li>
+<li><a href="exe_setupinfo_api.htm#BGBCABDC">Check Out an Execution Setup</a></li>
+<li><a href="exe_setupinfo_api.htm#BGBEHIDD">Modify an Execution Setup</a></li>
+<li><a href="exe_setupinfo_api.htm#BGBIJAAI">Modify a Parameter</a></li>
+<li><a href="exe_setupinfo_api.htm#BGBBEFFG">Modify an Execution Setup Parameter</a></li>
+<li><a href="exe_setupinfo_api.htm#BGBBBEBC">Load Parameter Details</a></li>
+<li><a href="exe_setupinfo_api.htm#BGBIBFIH">Copy an Execution Setup</a></li>
+<li><a href="exe_setupinfo_api.htm#BGBCEAEB">Check In an Execution Setup</a></li>
+<li><a href="exe_setupinfo_api.htm#BGBGGCHB">Submit an Execution Setup</a></li>
+<li><a href="exe_setupinfo_api.htm#BGBFFDGG">Submit an Execution Setup for Instances</a></li>
+<li><a href="exe_setupinfo_api.htm#BGBFEGJF">Submit an Execution Setup for Compound Objects</a></li>
+<li><a href="exe_setupinfo_api.htm#BGBGFEAD">Upgrade an Execution Setup</a></li>
+<li><a href="exe_setupinfo_api.htm#BGBIGCFI">Upgrade All Execution Setups</a></li>
+<li><a href="exe_setupinfo_api.htm#BGBFEIIH">Make an Execution Setup Active</a></li>
+<li><a href="exe_setupinfo_api.htm#BGBIBAAA">Remove an Execution Setup</a></li>
+</ul>
+</li>
+</ul>
+<h2 class="tocheader"><a href="column_map_api.htm#BGBEJGHD"><span class="secnum">21</span> Mappings</a></h2>
+<ul style="list-style-type:none">
+<li><a href="column_map_api.htm#sthref799">Create and Modify Mappings</a>
+<ul style="list-style-type:none">
+<li><a href="column_map_api.htm#BGBGIJDA">Map a Column</a></li>
+<li><a href="column_map_api.htm#BGBIAEJH">Map a Table Descriptor to a Table Instance</a></li>
+<li><a href="column_map_api.htm#BGBEJBHA">Get a Table Instance ID</a></li>
+<li><a href="column_map_api.htm#BGBHIIIH">Create a Table Descriptor from a Table Instance</a></li>
+<li><a href="column_map_api.htm#BGBDFHGJ">Create a Table Instance from a Table Descriptor</a></li>
+<li><a href="column_map_api.htm#BGBDEFCD">Modify a Mapping Column</a></li>
+<li><a href="column_map_api.htm#BGBICBAH">Modify a Mapping at the Table Descriptor Level</a></li>
+<li><a href="column_map_api.htm#BGBCFFAF">Get a PRREF_ID for an Executable in a Workflow</a></li>
+<li><a href="column_map_api.htm#BGBCFGDD">Get a PRREF_ID for an Object in a Work Area</a></li>
+<li><a href="column_map_api.htm#BGBHAAAH">Get a PRREF_ID for a Program in a Report Set</a></li>
+</ul>
+</li>
+</ul>
+<h2 class="tocheader"><a href="output_api.htm#CDECJEIE"><span class="secnum">22</span> Outputs</a></h2>
+<ul style="list-style-type:none">
+<li><a href="output_api.htm#sthref831">Generate Outputs</a>
+<ul style="list-style-type:none">
+<li><a href="output_api.htm#CDEEABCF">Submit a Print Request</a></li>
+<li><a href="output_api.htm#CDEJDIAJ">Get an Output's BLOB</a></li>
+<li><a href="output_api.htm#CDECHCJA">Get an Output's CLOB</a></li>
+</ul>
+</li>
+</ul>
+<h2 class="tocheader"><a href="gen_object_api.htm#CDEDGAAC"><span class="secnum">23</span> Version Labels</a></h2>
+<ul style="list-style-type:none">
+<li><a href="gen_object_api.htm#sthref844">Modify Version Labels</a>
+<ul style="list-style-type:none">
+<li><a href="gen_object_api.htm#sthref845">Update a Version Label</a></li>
+</ul>
+</li>
+</ul>
+<h2 class="tocheader"><a href="object_class_api.htm#CHDGCHHH"><span class="secnum">24</span> Classification</a></h2>
+<ul style="list-style-type:none">
+<li><a href="object_class_api.htm#CHDEHEHG">Classify Objects</a>
+<ul style="list-style-type:none">
+<li><a href="object_class_api.htm#CHDGGGBA">Classify an Object</a></li>
+<li><a href="object_class_api.htm#CHDIGEJB">Declassify an Object</a></li>
+</ul>
+</li>
+<li><a href="object_class_api.htm#CHDGBGIC">Classify Subtypes</a>
+<ul style="list-style-type:none">
+<li><a href="object_class_api.htm#CHDFHCCD">Get a Subtype Classification Level</a></li>
+<li><a href="object_class_api.htm#CHDCBJFD">Get an Object Classification Value</a></li>
+<li><a href="object_class_api.htm#CHDEGFCA">Get Child Terms</a></li>
+</ul>
+</li>
+<li><a href="object_class_api.htm#CHDGDGIE">Create and Modify Classification Hierarchy Values</a>
+<ul style="list-style-type:none">
+<li><a href="object_class_api.htm#CHDDCHEC">Insert a Classification Value</a></li>
+<li><a href="object_class_api.htm#CHDFBHHA">Update a Classification Value</a></li>
+<li><a href="object_class_api.htm#CHDGJFBI">Delete a Classification Value</a></li>
+</ul>
+</li>
+</ul>
+<h2 class="tocheader"><a href="exe_job_api.htm#BABDGHHJ"><span class="secnum">25</span> Job Execution</a></h2>
+<ul style="list-style-type:none">
+<li><a href="exe_job_api.htm#BABDDEDC">Create and Execute Output LOBs</a>
+<ul style="list-style-type:none">
+<li><a href="exe_job_api.htm#BABHBACC">Create a Binary Output</a></li>
+<li><a href="exe_job_api.htm#BABDIEIA">Upload an Output BLOB</a></li>
+<li><a href="exe_job_api.htm#BABFBGCI">Upload an Output CLOB</a></li>
+<li><a href="exe_job_api.htm#BABEIGJG">Upload a LOB to a Temporary Table</a></li>
+<li><a href="exe_job_api.htm#BABICAAI">Download a Job Output BLOB</a></li>
+<li><a href="exe_job_api.htm#BABIADJC">Queue a Job</a></li>
+<li><a href="exe_job_api.htm#BABJJGCD">Wait for a Job to Complete</a></li>
+<li><a href="exe_job_api.htm#BABFGECE">Generate an XML Payload</a></li>
+</ul>
+</li>
+<li><a href="exe_job_api.htm#BABCDIBF">Retrieve Information about Ongoing Jobs</a>
+<ul style="list-style-type:none">
+<li><a href="exe_job_api.htm#BABIAGGB">Get an Ongoing Job ID</a></li>
+<li><a href="exe_job_api.htm#BABFAGCA">Get Currently Executing Parameters</a></li>
+<li><a href="exe_job_api.htm#BABBHECA">Get Information About a Job</a></li>
+<li><a href="exe_job_api.htm#BABCDHCA">Get Additional Job Information (Overloaded)</a></li>
+</ul>
+</li>
+<li><a href="exe_job_api.htm#BABBBCDH">Set Execution Statuses</a>
+<ul style="list-style-type:none">
+<li><a href="exe_job_api.htm#BABBDHHF">Set a User-specific Completion Status</a></li>
+<li><a href="exe_job_api.htm#BABEIFDD">Set a Customized Output Title</a></li>
+<li><a href="exe_job_api.htm#BABIEAGF">Set a Customized Output Subtitle</a></li>
+<li><a href="exe_job_api.htm#BABCBHIF">Set an Output Parameter</a></li>
+<li><a href="exe_job_api.htm#BABIJIHF">Get a Completion Status</a></li>
+</ul>
+</li>
+<li><a href="exe_job_api.htm#BABIJGDH">Submit Messages</a>
+<ul style="list-style-type:none">
+<li><a href="exe_job_api.htm#sthref934">Submit a Message</a></li>
+</ul>
+</li>
+<li><a href="exe_job_api.htm#BABJBGJB">Create Submission Records</a>
+<ul style="list-style-type:none">
+<li><a href="exe_job_api.htm#BABCBFAC">Start a Job</a></li>
+<li><a href="exe_job_api.htm#BABGBJCJ">Create a Submission, Get Job ID</a></li>
+<li><a href="exe_job_api.htm#BABDDAFC">Create a Submission</a></li>
+<li><a href="exe_job_api.htm#BABDDHCI">Add a Job Log</a></li>
+</ul>
+</li>
+</ul>
+<h2 class="tocheader"><a href="obj_security_policy_api.htm#BABJJACG"><span class="secnum">26</span> Security Policy</a></h2>
+<ul style="list-style-type:none">
+<li><a href="obj_security_policy_api.htm#sthref951">Create and Modify Security Policies</a>
+<ul style="list-style-type:none">
+<li><a href="obj_security_policy_api.htm#BABBAEHI">Create a Subtype</a></li>
+<li><a href="obj_security_policy_api.htm#BABHBDBI">Copy a Subtype</a></li>
+<li><a href="obj_security_policy_api.htm#BABBHFBD">Modify a Subtype</a></li>
+<li><a href="obj_security_policy_api.htm#BABGEHEJ">Assign Roles to a Subtype Operation</a></li>
+<li><a href="obj_security_policy_api.htm#BABEBBBE">Assign Operations to a Subtype Role</a></li>
+<li><a href="obj_security_policy_api.htm#BABGBAEB">Remove a Subtype</a></li>
+<li><a href="obj_security_policy_api.htm#BABHCBBB">Create a Role</a></li>
+<li><a href="obj_security_policy_api.htm#BABBJECB">Modify a Role</a></li>
+<li><a href="obj_security_policy_api.htm#BABICHEH">Add a Group Role</a></li>
+<li><a href="obj_security_policy_api.htm#BABIIIEC">Get Roles for a User</a></li>
+<li><a href="obj_security_policy_api.htm#BABDGIIB">Remove a Role</a></li>
+<li><a href="obj_security_policy_api.htm#BABJCCJE">Remove a Group Role</a></li>
+<li><a href="obj_security_policy_api.htm#BABGAJHI">Create a User Group</a></li>
+<li><a href="obj_security_policy_api.htm#BABBDJAD">Add Users to a Group</a></li>
+<li><a href="obj_security_policy_api.htm#BABIJIAE">Remove Users from a Role in a User Group</a></li>
+<li><a href="obj_security_policy_api.htm#BABEBGBG">Assign a User Group to an Object</a></li>
+<li><a href="obj_security_policy_api.htm#BABCCJDA">Copy a User Group</a></li>
+<li><a href="obj_security_policy_api.htm#BABGJBBI">Copy a User Group with its Users</a></li>
+<li><a href="obj_security_policy_api.htm#BABJHIDE">Modify a User Group</a></li>
+<li><a href="obj_security_policy_api.htm#BABCCCEG">Remove All Group Roles from a User Group</a></li>
+<li><a href="obj_security_policy_api.htm#BABHEECG">Remove All Users in a Group</a></li>
+<li><a href="obj_security_policy_api.htm#BABDCHIH">Revoke a User Group From an Object</a></li>
+<li><a href="obj_security_policy_api.htm#BABECJDH">Undo a Revoke a User Group Action</a></li>
+<li><a href="obj_security_policy_api.htm#BABEBDIJ">Remove a User Group</a></li>
+<li><a href="obj_security_policy_api.htm#BABGJDEF">Unassign a User Group From an Object</a></li>
+<li><a href="obj_security_policy_api.htm#BABIAGGE">Unassign Roles from an Operation on an Object's Subtype</a></li>
+<li><a href="obj_security_policy_api.htm#BABDDDGD">Unassign Operations on an Object Subtype's Role</a></li>
+<li><a href="obj_security_policy_api.htm#sthref1034">Initialize Access to a Security View</a></li>
+<li><a href="obj_security_policy_api.htm#sthref1039">Prevent Access to a Security View</a></li>
+</ul>
+</li>
+</ul>
+<h2 class="tocheader"><a href="validation_fwk_api.htm#BGBJFEJI"><span class="secnum">27</span> Validation</a></h2>
+<ul style="list-style-type:none">
+<li><a href="validation_fwk_api.htm#BGBICGIJ">Validate Objects</a>
+<ul style="list-style-type:none">
+<li><a href="validation_fwk_api.htm#sthref1044">Update an Object's Validation Status</a></li>
+</ul>
+</li>
+<li><a href="validation_fwk_api.htm#BGBBBDGI">Create and Modify Validation Supporting Documents</a>
+<ul style="list-style-type:none">
+<li><a href="validation_fwk_api.htm#BGBJIFCH">Create a Validation Supporting Document</a></li>
+<li><a href="validation_fwk_api.htm#BGBDGIFG">Update a Validation Supporting Document</a></li>
+<li><a href="validation_fwk_api.htm#BGBFICFG">Obsolete a Validation Supporting Document</a></li>
+</ul>
+</li>
+</ul>
+<h2 class="tocheader"><a href="part4_api.htm#sthref1057">Part IV Oracle Health Sciences Data Management Workbench APIs</a></h2>
+<h2 class="tocheader"><a href="introd_apis.htm#BCFJIGBJ"><span class="secnum">28</span> Introduction to Oracle DMW APIs</a></h2>
+<ul style="list-style-type:none">
+<li><a href="introd_apis.htm#BCFEDACE">Set Up the Study Environment</a>
+<ul style="list-style-type:none">
+<li><a href="introd_apis.htm#sthref1058">Initialize a Study and Lifecycle</a></li>
+</ul>
+</li>
+<li><a href="introd_apis.htm#BCFCEEFD">Create or Modify an Expression</a></li>
+</ul>
+<h2 class="tocheader"><a href="model_apis.htm#CHDFIICA"><span class="secnum">29</span> Clinical Data Models</a></h2>
+<ul style="list-style-type:none">
+<li><a href="model_apis.htm#A1132205">Create and Modify Clinical Data Models</a>
+<ul style="list-style-type:none">
+<li><a href="model_apis.htm#CHDHIAGJ">Create a Study Clinical Data Model</a></li>
+<li><a href="model_apis.htm#CIHGHDBJ">Create a Study Clinical Data Model from a Library Model</a></li>
+<li><a href="model_apis.htm#BABGHGHF">Modify a Model's Name and Description</a></li>
+<li><a href="model_apis.htm#CIHCHEBB">Check Out a Clinical Data Model</a></li>
+<li><a href="model_apis.htm#CIHEIBDE">Check In a Clinical Data Model</a></li>
+<li><a href="model_apis.htm#CIHFEEHF">Undo a Clinical Data Model Checkout</a></li>
+<li><a href="model_apis.htm#CIHGDAJA">Install a Study Clinical Data Model</a></li>
+<li><a href="model_apis.htm#CIHBDEAJ">Promote a Clinical Data Model to Quality Control or Production</a></li>
+<li><a href="model_apis.htm#CIHJAJDI">Remove a Clinical Data Model</a></li>
+<li><a href="model_apis.htm#CIHJJADA">Upgrade a Clinical Data Model to the Latest Library Model Version</a></li>
+<li><a href="model_apis.htm#CIHJDBFH">Copy the Subject and/or Subject/Visit Table</a></li>
+<li><a href="model_apis.htm#CIHJHDDG">Add a Table to a Clinical Data Model</a></li>
+<li><a href="model_apis.htm#CIHHCGHF">Modify Table in Clinical Data Model</a></li>
+<li><a href="model_apis.htm#sthref1101">Remove Table from Clinical Data Model</a></li>
+<li><a href="model_apis.htm#CIHHHHEC">Add a Column to a Table in a Clinical Data Model</a></li>
+<li><a href="model_apis.htm#CIHHGBHG">Modify a Column in a Clinical Data Model Table</a></li>
+<li><a href="model_apis.htm#CIHDGFDB">Remove Column from Clinical Data Model Table</a></li>
+<li><a href="model_apis.htm#CIHHAHBC">Add a Constraint to a Clinical Data Model Table</a></li>
+<li><a href="model_apis.htm#CIHGEDDE">Modify a Constraint in a Clinical Data Model Table</a></li>
+<li><a href="model_apis.htm#CIHFBAHD">Remove Constraint from a Clinical Data Model Table</a></li>
+<li><a href="model_apis.htm#CIHHAJAJ">Reorder Columns in a Clinical Data Model Table</a></li>
+<li><a href="model_apis.htm#sthref1126">Display Metadata Differences between Tables</a></li>
+</ul>
+</li>
+<li><a href="model_apis.htm#A135222297">Get a Custom Listing Business Area ID for a Model</a>
+<ul style="list-style-type:none">
+<li><a href="model_apis.htm#sthref1133">Required Profile for Custom Listing BAs</a></li>
+</ul>
+</li>
+</ul>
+<h2 class="tocheader"><a href="codelist_apis.htm#CHDFIICB"><span class="secnum">30</span> Codelists</a></h2>
+<ul style="list-style-type:none">
+<li><a href="codelist_apis.htm#CHDIFCFB">Create and Modify Codelists</a>
+<ul style="list-style-type:none">
+<li><a href="codelist_apis.htm#CHDHIAGZ">Create a Codelist</a></li>
+<li><a href="codelist_apis.htm#BABGHGHZ">Modify a Codelist</a></li>
+<li><a href="codelist_apis.htm#CHDGGJIB">Remove a Codelist</a></li>
+<li><a href="codelist_apis.htm#BABIBFAI">Check In a Codelist</a></li>
+<li><a href="codelist_apis.htm#BABIFCFF">Check Out a Codelist</a></li>
+<li><a href="codelist_apis.htm#BABBGJIB">Add Values to a Codelist</a></li>
+<li><a href="codelist_apis.htm#BABJCACB">Remove Values from a Codelist</a></li>
+<li><a href="codelist_apis.htm#CHDJFCGC">Get Codelist Details for a Given Column</a></li>
+</ul>
+</li>
+</ul>
+<h2 class="tocheader"><a href="fmar_apis.htm#BABHGIDJ"><span class="secnum">31</span> Flags, Categories, and Actions</a></h2>
+<ul style="list-style-type:none">
+<li><a href="fmar_apis.htm#BABEDAIA">Flag-Related APIs</a>
+<ul style="list-style-type:none">
+<li><a href="fmar_apis.htm#BABHFFCE">Set Flag</a></li>
+<li><a href="fmar_apis.htm#BABEDGDI">Get Flag</a></li>
+<li><a href="fmar_apis.htm#BABHJGFG">Get Flags on Data</a></li>
+<li><a href="fmar_apis.htm#BABIHCFA">Delete Flag</a></li>
+<li><a href="fmar_apis.htm#BABBJGHE">Get Surrogate Key Values for Records in a Flag State</a></li>
+</ul>
+</li>
+<li><a href="fmar_apis.htm#BGBEHIFC">Flag Name-Related APIs</a>
+<ul style="list-style-type:none">
+<li><a href="fmar_apis.htm#CHDIIDCD">Get Flag Name Definition, Version 1</a></li>
+<li><a href="fmar_apis.htm#CHDGCDJB">Get Flag Name Definition, Version 2</a></li>
+<li><a href="fmar_apis.htm#CHDIEFBA">Get Flag Name Definitions</a></li>
+</ul>
+</li>
+<li><a href="fmar_apis.htm#CHDDFGEG">Get Flag States</a></li>
+<li><a href="fmar_apis.htm#BGBHJGBD">Clinical Data Model Category-Related APIs</a>
+<ul style="list-style-type:none">
+<li><a href="fmar_apis.htm#CHDDDAID">Create Model Flag Category Mapping</a></li>
+<li><a href="fmar_apis.htm#CHDFDFAI">Get Categories for Model</a></li>
+</ul>
+</li>
+<li><a href="fmar_apis.htm#BGBHIBJC">Action-Related APIs</a>
+<ul style="list-style-type:none">
+<li><a href="fmar_apis.htm#CHDGFJEI">Create Discrepancy Action</a></li>
+<li><a href="fmar_apis.htm#CHDBAAAG">Get Discrepancy Action, Version 1</a></li>
+<li><a href="fmar_apis.htm#CHDEHGBH">Get Discrepancy Action, Version 2</a></li>
+<li><a href="fmar_apis.htm#CHDIGFBD">Update Discrepancy Action</a></li>
+<li><a href="fmar_apis.htm#BCFEFEIJ">Delete Discrepancy Action</a></li>
+</ul>
+</li>
+</ul>
+<h2 class="tocheader"><a href="transf_apis.htm#BCFFHGHI"><span class="secnum">32</span> Transformations</a></h2>
+<ul style="list-style-type:none">
+<li><a href="transf_apis.htm#sthref1205">Create and Modify Transformation Maps</a>
+<ul style="list-style-type:none">
+<li><a href="transf_apis.htm#BCFIHJGF">Create Transformation Maps</a></li>
+<li><a href="transf_apis.htm#BCFEFDIF">Modify Transformation Maps</a></li>
+<li><a href="transf_apis.htm#CHDFCGJJ">Mark Table Maps Not Used</a></li>
+<li><a href="transf_apis.htm#CHDBJBJC">Mark Column Maps Not Used</a></li>
+<li><a href="transf_apis.htm#BCFIGAAH">Check In Transformation Maps</a></li>
+<li><a href="transf_apis.htm#BCFHCCGE">Check Out Transformation Maps</a></li>
+<li><a href="transf_apis.htm#BCFBJBBI">Undo Checkout Transformation Map</a></li>
+<li><a href="transf_apis.htm#BCFEICBJ">Auto Map Tables</a></li>
+<li><a href="transf_apis.htm#BCFDCJBG">Accept Table Mappings</a></li>
+<li><a href="transf_apis.htm#BCFHAGDC">Auto Map Columns</a></li>
+<li><a href="transf_apis.htm#BCFBEGFA">Accept Column Mappings</a></li>
+<li><a href="transf_apis.htm#BCFCEEAG">Upgrade Transformation Map</a></li>
+<li><a href="transf_apis.htm#BCFBBAJA">Install Transformation Map</a></li>
+<li><a href="transf_apis.htm#BCFIGEHF">Remove Transformation Map</a></li>
+<li><a href="transf_apis.htm#BCFEGCHG">Validate Transformation Maps</a></li>
+<li><a href="transf_apis.htm#BCFDFABF">Update Validation Status</a></li>
+<li><a href="transf_apis.htm#BCFJBCHI">Execute Transformation Map</a></li>
+<li><a href="transf_apis.htm#BCFGJHGI">Create Staging Table</a></li>
+<li><a href="transf_apis.htm#BCFICIAE">Validate Expression</a></li>
+<li><a href="transf_apis.htm#BCFDDIAB">Refresh Static Packages</a></li>
+</ul>
+</li>
+</ul>
+<h2 class="tocheader"><a href="vlch_apis.htm#CHDDHDBA"><span class="secnum">33</span> Validation Checks</a></h2>
+<ul style="list-style-type:none">
+<li><a href="vlch_apis.htm#sthref1266">Create and Modify Validation Checks and Batches</a>
+<ul style="list-style-type:none">
+<li><a href="vlch_apis.htm#CHDGCGHI">Create a Validation Check Batch</a></li>
+<li><a href="vlch_apis.htm#CHDCJEGF">Modify a Validation Check Batch</a></li>
+<li><a href="vlch_apis.htm#CHDIEJAD">Remove Validation Check Batch</a></li>
+<li><a href="vlch_apis.htm#CHDDIDCD">Create a Validation Check</a></li>
+<li><a href="vlch_apis.htm#BABBDFAH">Update a Validation Check</a></li>
+<li><a href="vlch_apis.htm#BABEIDDJ">Install a Validation Check Batch</a></li>
+<li><a href="vlch_apis.htm#BABEBDEC">Submit a Validation Check Batch</a></li>
+<li><a href="vlch_apis.htm#BABCGICD">Check In a Validation Check Batch</a></li>
+<li><a href="vlch_apis.htm#BABGCBHI">Check Out a Validation Check Batch</a></li>
+<li><a href="vlch_apis.htm#BABEIHBJ">Undo Checkout For a Validation Check Batch</a></li>
+<li><a href="vlch_apis.htm#BABIDBAC">Update Validation Status of a Validation Check Batch</a></li>
+<li><a href="vlch_apis.htm#CHDIDFBF">Upgrade a Validation Check Batch</a></li>
+<li><a href="vlch_apis.htm#CHDBJEJJ">Remove Validation Check(s)</a></li>
+<li><a href="vlch_apis.htm#CHDGBFDJ">Enable or Disable Validation Checks</a></li>
+<li><a href="vlch_apis.htm#CHDJHDIF">Reorder Validation Checks</a></li>
+</ul>
+</li>
+</ul>
+<h2 class="tocheader"><a href="part5_views.htm#sthref1312">Part V Public Views</a></h2>
+<h2 class="tocheader"><a href="public_views.htm#CHDGBEFA"><span class="secnum">34</span> Public Views</a></h2>
+<ul style="list-style-type:none">
+<li><a href="public_views.htm#CHDFDAJF">Clinical Data Model Views</a>
+<ul style="list-style-type:none">
+<li><a href="public_views.htm#sthref1313">DME_DATAMODEL_V</a></li>
+<li><a href="public_views.htm#sthref1314">DME_TABLES_V</a></li>
+<li><a href="public_views.htm#sthref1315">DME_COLUMNS_V</a></li>
+<li><a href="public_views.htm#sthref1316">DME_CONSTRAINT_V</a></li>
+<li><a href="public_views.htm#sthref1317">DME_CONSTRAINT_COLS_V</a></li>
+<li><a href="public_views.htm#sthref1318">DME_LOV_VALUES_V</a></li>
+<li><a href="public_views.htm#sthref1319">DME_SDTM_COL_IDENTIFIERS_V</a></li>
+<li><a href="public_views.htm#sthref1320">DME_SDTM_TAB_IDENTIFIERS_V</a></li>
+</ul>
+</li>
+<li><a href="public_views.htm#BACIEBGJ">Codelist Views</a>
+<ul style="list-style-type:none">
+<li><a href="public_views.htm#CHDJEDEE">DME_PUB_CODELIST_V</a></li>
+<li><a href="public_views.htm#BACCHGIA">DME_PUB_CODELIST_VALUES_V</a></li>
+<li><a href="public_views.htm#sthref1321">DME_PUB_XFM_FILTER_VALUES_V</a></li>
+</ul>
+</li>
+<li><a href="public_views.htm#CHDCDIEE">Discrepancy Views</a>
+<ul style="list-style-type:none">
+<li><a href="public_views.htm#sthref1322">DME_PUB_DISCREPANCIES_V</a></li>
+<li><a href="public_views.htm#sthref1323">DME_PUB_DISC_SEND_ERRORS_V</a></li>
+</ul>
+</li>
+<li><a href="public_views.htm#CHDDCFHC">Validation Checks Views</a>
+<ul style="list-style-type:none">
+<li><a href="public_views.htm#CHDEDBGC">DME_PUB_VC_BATCHES_V</a></li>
+<li><a href="public_views.htm#CHDFECAB">DME_PUB_VC_DETAILS_V</a></li>
+</ul>
+</li>
+<li><a href="public_views.htm#CHDHBHGB">Transformation Views</a>
+<ul style="list-style-type:none">
+<li><a href="public_views.htm#CHDEIEFH">DME_PUB_DF_XFORM_MAP_V</a></li>
+<li><a href="public_views.htm#CHDHIADD">DME_PUB_DF_MAP_ENTITY_V</a></li>
+<li><a href="public_views.htm#sthref1324">DME_XFM_FILTER_VALUES_V</a></li>
+<li><a href="public_views.htm#CHDECDHE">DME_PUB_XFM_SOURCE_TABLES_V</a></li>
+<li><a href="public_views.htm#CHDJJIDG">DME_PUB_XFM_SOURCE_COLUMNS_V</a></li>
+<li><a href="public_views.htm#CHDJBCBC">DME_ PUB_XFM_TARGET_TABLES_V</a></li>
+<li><a href="public_views.htm#CHDIABIC">DME_ PUB_XFM_TARGET_COLUMNS_V</a></li>
+<li><a href="public_views.htm#CHDGEJDA">DME_ PUB_XFM_AUTOMAPS_V</a></li>
+<li><a href="public_views.htm#CHDBAJCF">DME_PUB_XFM_COL_AUTOMAPS_V</a></li>
+<li><a href="public_views.htm#CHDIBDFE">DME_PUB_XFM_CUSTOM_PROGRAMS_V</a></li>
+<li><a href="public_views.htm#CHDDFEEA">DME_PUB_XFM_EXPR_STDFUNC_V</a></li>
+<li><a href="public_views.htm#CHDDHCJF">DME_PUB_XFM_EXPR_STATIC_PKGS_V</a></li>
+</ul>
+</li>
+<li><a href="public_views.htm#A134611030">Thesaurus Management System-Related Views</a>
+<ul style="list-style-type:none">
+<li><a href="public_views.htm#sthref1325">DME_PUB_TMS_STUDY_DOM_ELEMS_V</a></li>
+<li><a href="public_views.htm#sthref1326">DME_PUB_TMS_SETS_V</a></li>
+<li><a href="public_views.htm#sthref1327">DME_PUB_TMS_SET_COLS_V</a></li>
+</ul>
+</li>
+<li><a href="public_views.htm#BGBBHJBB">Generic Business Area Views</a>
+<ul style="list-style-type:none">
+<li><a href="public_views.htm#sthref1328">CDR_PUB_GENERIC_BA_V</a></li>
+<li><a href="public_views.htm#sthref1329">CDR_PUB_GENERIC_BA_TABLES_V</a></li>
+</ul>
+</li>
+<li><a href="public_views.htm#BACFCCCF">Security-Related Views</a>
+<ul style="list-style-type:none">
+<li><a href="public_views.htm#sthref1330">CDR_PUB_UG_ROLES_V</a></li>
+<li><a href="public_views.htm#sthref1331">CDR_PUB_USER_UG_ROLES_V</a></li>
+<li><a href="public_views.htm#sthref1332">CDR_PUB_SUBTYPE_OPR_ROLES_V</a></li>
+<li><a href="public_views.htm#sthref1333">CDR_PUB_OBJ_UG_V</a></li>
+</ul>
+</li>
+<li><a href="public_views.htm#A134612378">Snapshot Label View</a>
+<ul style="list-style-type:none">
+<li><a href="public_views.htm#sthref1334">CDR_PUB_SNAPSHOT_LABEL_V</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment15">
+<tr>
+<td class="cellalignment22">
+<table class="cellalignment26">
+<tr>
+<td class="cellalignment19"><a href="title.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2013, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment24">
+<table class="cellalignment25">
+<tr>
+<td class="cellalignment19"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment19"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment19"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

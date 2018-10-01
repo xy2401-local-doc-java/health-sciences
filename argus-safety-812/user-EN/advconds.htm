@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Use Advanced Conditions</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2018-02-14T2:27:59Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Argus Safety User's Guide" />
+<meta name="dcterms.identifier" content="E93471-01" />
+<meta name="dcterms.isVersionOf" content="AEOAF" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2014, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Prev" href="reviewyourcases.htm" title="Previous" type="text/html" />
+<link rel="Next" href="medbrowse.htm" title="Next" type="text/html" />
+<link rel="alternate" href="AEOAF.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="AEOAF.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="AEOAF.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+                    <script>var w=window;if(w.performance||w.mozPerformance||w.msPerformance||w.webkitPerformance){var d=document;AKSB=w.AKSB||{},AKSB.q=AKSB.q||[],AKSB.mark=AKSB.mark||function(e,_){AKSB.q.push(["mark",e,_||(new Date).getTime()])},AKSB.measure=AKSB.measure||function(e,_,t){AKSB.q.push(["measure",e,_,t||(new Date).getTime()])},AKSB.done=AKSB.done||function(e){AKSB.q.push(["done",e])},AKSB.mark("firstbyte",(new Date).getTime()),AKSB.prof={custid:"322179",ustr:"",originlat:"0",clientrtt:"2",ghostip:"23.212.3.15",ipv6:false,pct:"10",clientip:"45.78.37.67",requestid:"2273b0f",region:"32996",protocol:"",blver:14,akM:"dsca",akN:"ae",akTT:"O",akTX:"1",akTI:"2273b0f",ai:"206465",ra:"false",pmgn:"",pmgi:"",pmp:"",qc:""},function(e){var _=d.createElement("script");_.async="async",_.src=e;var t=d.getElementsByTagName("script"),t=t[t.length-1];t.parentNode.insertBefore(_,t)}(("https:"===d.location.protocol?"https:":"http:")+"//ds-aksb-a.akamaihd.net/aksb.min.js")}</script>
+                    <script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">8/12</span> <!-- End Header -->
+<div id="AEOAF390" class="chapter"><a id="CHDBEAGC"></a>
+<h1 class="chapter"><span class="secnum">5</span> Use Advanced Conditions</h1>
+<p>You can create complex or non-standard queries in the <span class="bold">Advanced Conditions</span> screen where you can define field-level search criteria. To create advanced conditions, detailed knowledge of the database schema is not required.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Only users with execute rights for an advanced condition, can view the advanced condition in the drop-down list in the <span class="bold">Case Open</span> dialog box.</div>
+<p>When using Advanced Conditions:</p>
+<ul>
+<li>
+<p>By default, the <span class="bold">Advanced Conditions</span> drop-down list enables you to view only the <span class="bold">New</span>, <span class="bold">None</span>, and already selected Advanced Conditions.</p>
+</li>
+<li>
+<p>Access rights and permissions can be assigned to the individual advanced conditions. You can execute and modify access rights to one or more groups on a per-advanced condition basis.</p>
+</li>
+</ul>
+<div id="AEOAF398" class="sect1"><a id="sthref187"></a>
+<h2 class="sect1">Create, View or Modify Advanced Conditions</h2>
+<ol>
+<li>
+<p>From the <span class="bold">Advanced Conditions</span> drop-down list, select <span class="bold">New</span>.</p>
+<p>OR</p>
+<p>Click the Advanced Conditions icon.</p>
+</li>
+<li>
+<p>To create a new advanced condition query set, in the Confirmation dialog box, click <span class="bold">Yes</span>.</p>
+</li>
+<li>
+<p>To create a new advanced condition by associating logical operators (like AND, OR) with items from the Case Form, in the Confirmation dialog box, click <span class="bold">No.</span></p>
+<p>The Use the Advanced Condition Set Dialog Box appears.</p>
+</li>
+</ol>
+<p class="subhead2"><a id="AEOAF1639"></a>Use the Advanced Condition Set Dialog Box</p>
+<p>You can search entities under the Properties tree-list that are from either the case data or from the code list.</p>
+<img width="813" height="622" src="img/acs.jpg" alt="Surrounding text describes acs.jpg." /><br />
+<p>The dialog box has two buttons that provide this functionality:</p>
+<ul>
+<li>
+<p>From Code List&mdash;Displays a list of all values configured in the Code List in the <span class="bold">Value</span> drop-down list. The values in the Code List are configured by the administrator in Argus Console. To configure these values, refer to the Administrator's Guide.</p>
+</li>
+<li>
+<p>From Case Data&mdash;Displays <span class="bold">only</span> the values actually in the cases in the <span class="bold">Value</span> drop-down list.</p>
+</li>
+<li>
+<p>These radio buttons appear <span class="bold">only</span> if the selected entity belongs to a code list.</p>
+<p>To search the entity based on the code list or case data, select the relevant entity and one of the radio buttons.</p>
+</li>
+<li>
+<p>In the following sections, select the product from the company product browser instead of the drop-down values. To do so, in the <span class="bold">Read Only</span> text field, click <span class="bold">Select</span>.</p>
+<ul>
+<li>
+<p>Suspect Product Name</p>
+</li>
+<li>
+<p>Product Name 2/Study Cases</p>
+</li>
+<li>
+<p>Company Product</p>
+</li>
+<li>
+<p>Study Drug</p>
+</li>
+<li>
+<p>Primary Suspect Drug</p>
+</li>
+</ul>
+</li>
+<li>
+<p>To enable you to search on the selected product, the Product Name is transferred to the user interface.</p>
+</li>
+<li>
+<p>From the <span class="bold">Properties</span> tree list, select a property type.</p>
+</li>
+</ul>
+<p class="subhead2"><a id="AEOAF1640"></a>Use Information from Properties for Advanced Conditions</p>
+<p>The items available in the folders in the Properties list represent Case Form fields that you can use to perform search in the advanced conditions.</p>
+<ul>
+<li>
+<p>To enable a field-to-field comparison, you can auto-populate an Advanced Condition by right-clicking a field in the <span class="bold">Properties</span> section.</p>
+</li>
+<li>
+<p>To enable the <span class="bold">Select</span> button, select a property for which terms can be encoded.</p>
+<p>To select (possibly) multiple terms for the property, use the MedDRA Browser. See <span class="italic">Using the MedDRA Browser</span> for further details.</p>
+</li>
+<li>
+<p>The enable SMQ icon, from the Properties tree-list, select SMQ-related properties.</p>
+<p>To view details about the selected SMQ, click this icon.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+To view or modify the SQL statement associated with an advanced condition, click <span class="bold">Show SQL</span>.</div>
+</li>
+<li>
+<p>In the <span class="bold">Conditions</span> list, select a condition that must apply to the item selected above.</p>
+<ol>
+<li>
+<p>In the <span class="bold">Value</span> field, enter the value that applies to the property or select an a value from the list.</p>
+</li>
+<li>
+<p>To link this created condition with another condition, from the list adjoining <span class="bold">Value</span>, select a logical operator.</p>
+</li>
+<li>
+<p>To add the newly created condition to the advanced condition, click <span class="bold">Add</span>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+You can use the AND and OR logical operators to link an existing condition to a new condition.
+<ul>
+<li>
+<p>If you are using the AND operator to link two conditions, both conditions must be TRUE for the advanced condition to be TRUE. In all other cases, the advanced condition evaluates to FALSE.</p>
+</li>
+<li>
+<p>If you are using the OR operator to link two conditions, the advanced condition is TRUE if either or both conditions are TRUE. The advanced condition evaluates to FALSE if both conditions are FALSE.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>To add more conditions to the advanced condition, repeat above steps.</p>
+</li>
+<li>
+<p>When all the conditions are entered, click <span class="bold">Save</span>.</p>
+</li>
+<li>
+<p>Enter a name for the advanced condition, and click <span class="bold">OK</span>.</p>
+</li>
+</ol>
+</li>
+</ul>
+<p class="subhead2"><a id="AEOAF1641"></a>Use the Advanced Conditions from the Case Selection Dialog Box</p>
+<p>Users can view a list of Cases that satisfies an Advanced conditions from the Case Open screen.</p>
+<ol>
+<li>
+<p>Select Case Actions &gt; Open.</p>
+</li>
+<li>
+<p>You can do the following:</p>
+<ul>
+<li>
+<p>Use a set of previously saved criteria</p>
+</li>
+<li>
+<p>Select the appropriate set of criteria from the <span class="bold">Advanced Condition</span> list.</p>
+</li>
+<li>
+<p>Select the set of criteria from the <span class="bold">Advanced</span> list, and click the adjoining Advanced Condition icon.</p>
+</li>
+<li>
+<p>Add a new condition to a set of criteria.</p>
+</li>
+<li>
+<p>Create a new advanced condition by associating logical operators (like AND, OR) with items from the Case Form.</p>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<div id="AEOAF402" class="sect1"><a id="sthref188"></a>
+<h2 class="sect1">Share Advanced Conditions</h2>
+<p>You can share the advanced conditions with other users. This feature can be made available by the administrator by logging into Argus Console.</p>
+<p>To enable other users to use the advanced condition, click the <span class="bold">Share with other users</span>.</p>
+<ul>
+<li>
+<p>If an Advanced Condition is not shared with other users, the Advanced Condition does not appear in the Advanced Condition list for any user except the Administrator and the user who created it.</p>
+</li>
+<li>
+<p>If the Advanced Condition is shared, all users in the system can view the advanced condition, but <span class="bold">cannot</span> modify it.</p>
+</li>
+<li>
+<p>You <span class="bold">cannot</span> stop sharing an Advanced Condition, if the Advanced Condition is in use in the system.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+To enter a customized Date Range:
+<ol>
+<li>
+<p>Select <span class="bold">Custom Date Range</span> from the list.</p>
+</li>
+<li>
+<p>Enter a date range in the custom date range dialog box.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+</ol>
+</div>
+</div>
+<!-- class="sect1" -->
+<div id="AEOAF405" class="sect1"><a id="sthref189"></a>
+<h2 class="sect1">Create an Advanced Condition Query Set</h2>
+<ol>
+<li>
+<p>From the <span class="bold">Advanced Conditions</span> drop-down list, select <span class="bold">New</span>.</p>
+<p>Or, click the Advanced Conditions icon.</p>
+</li>
+<li>
+<p>To create a set of advanced conditions by linking the previously defined advanced conditions, click <span class="bold">Yes</span>.</p>
+<p>You can link the advanced conditions by using the set operators like UNION, MINUS, and INTERSECT</p>
+</li>
+<li>
+<p>To add an advanced condition to the query set, click <span class="bold">Add</span>.</p>
+<p>A new row opens in the advanced condition selection area.</p>
+<p>From the list, select an advanced condition.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+To modify, open, or delete advanced conditions, in the Advanced Conditions dialog box, select an advanced condition, and click <span class="bold">Open</span>.</div>
+</li>
+<li>
+<p>From the <span class="bold">Set Operator</span> list, select an operator.</p>
+<p>This set operator will link this advanced condition to the next advanced condition.</p>
+</li>
+<li>
+<p>To add the next advanced condition to the query set, click <span class="bold">Add</span>.</p>
+</li>
+<li>
+<p>To enter multiple advanced conditions in the query set, repeat above mentioned steps.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If the required advanced condition is not already present in the list, it can be created by selecting (New) from the list.
+<p>If an existing advanced condition requires modification, select it and click Edit.</p>
+<p>The advanced condition can be edited only if you have created it.</p>
+</div>
+</li>
+<li>
+<p>When each advanced conditions for the query set is entered, click <span class="bold">Save</span>.</p>
+</li>
+<li>
+<p>Enter a name for the advanced condition, and click <span class="bold">OK</span>.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+To view or modify the SQL statement associated with an advanced condition, click <span class="bold">Show SQL</span>.</div>
+</li>
+</ol>
+<div id="AEOAF407" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref190"></a>
+<h3 class="sect2">Rename Query Sets</h3>
+<p>You can save and retrieve sets of search criteria (advanced conditions), and add, edit, or delete them.</p>
+<p>You can select and rename a query set on the <span class="bold">Advanced Condition</span> screen based on the permissions to modify the advanced condition. When you open an advanced condition or query set, the query name is displayed in the <span class="bold">Name</span> field.</p>
+<ul>
+<li>
+<p>To enable the <span class="bold">Save</span> button, in the <span class="bold">Name</span> field, enter an advanced condition name.</p>
+</li>
+<li>
+<p>To record changes to the advanced condition name, click <span class="bold">Save</span>.</p>
+<p>The query set is saved with the new name and description, and the <span class="bold">Query Set</span> drop-down list is refreshed.</p>
+</li>
+</ul>
+<ul>
+<li>
+<p>To update the changes to the query set name, click <span class="bold">Save</span>.</p>
+</li>
+<li>
+<p>When you click <span class="bold">New</span>, all the values in the <span class="bold">Name</span>, <span class="bold">Description</span>, and <span class="bold">Query Set</span> fields are cleared.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<div id="AEOAF1039" class="sect1"><!-- infolevel="all" infotype="General" --><a id="sthref191"></a>
+<h2 class="sect1">Import and Export Cases in the Advanced Conditions</h2>
+<ul>
+<li>
+<p>You can import an XLS, XLSX or TXT file with <span class="bold">one</span> column containing case numbers.</p>
+</li>
+<li>
+<p>When you upload a text file, each line in the file is considered a <span class="bold">complete</span> case number.</p>
+</li>
+<li>
+<p>If a case is missing (cannot be found) or has been deleted, a message appears.</p>
+</li>
+<li>
+<p>If the same case has been entered multiple times; only one entry is retained for the same and rest are ignored after the import process is complete.</p>
+</li>
+<li>
+<p>For <span class="bold">Hit List</span>, the import process, imports 1000 cases/60 seconds.</p>
+</li>
+<li>
+<p>When the <span class="bold">Hit List</span> is created, click <span class="bold">Store Hit List</span>.</p>
+<p>The advanced condition is saved and the hit list is stored later use.</p>
+</li>
+<li>
+<p>For further processing of all other data and options available on the Case Open screen, click <span class="bold">Hit List</span>.</p>
+</li>
+<li>
+<p>You can export the hit list data in CSV format.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect1" -->
+<div id="AEOAF393" class="sect1"><a id="sthref192"></a>
+<h2 class="sect1">Re-use an Existing Advanced Condition</h2>
+<ol>
+<li>
+<p>Go to <span class="bold">Case Actions &gt; Open,</span> and open the <span class="bold">Case Open</span> page.</p>
+</li>
+<li>
+<p>To open the Advanced Conditions Lookup dialog box, click the <span class="bold">Lookup</span> icon next to the <span class="bold">Advanced Condition</span> drop-down list.</p>
+</li>
+<li>
+<p>Under <span class="bold">Filter</span>, select an option.</p>
+<ul>
+<li>
+<p><span class="bold">Contains</span>&mdash;Filters the advanced conditions that contain the entered criteria.</p>
+</li>
+<li>
+<p><span class="bold">Starts With</span>&mdash;Filters all the advanced conditions that start with the entered criteria.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Enter the search criteria for the advanced conditions in the text box, and click <span class="bold">Filter</span>.</p>
+</li>
+<li>
+<p>Select an advanced condition from the list, and execute any of the following actions:</p>
+<ul>
+<li>
+<p>To list the selected advanced condition in the <span class="bold">Advanced Conditions</span> drop-down list, click <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>To display the details for the selected advanced condition in the <span class="bold">Advanced Conditions</span> dialog box, click <span class="bold">AC</span>.</p>
+</li>
+<li>
+<p>To close the <span class="bold">Advanced Condition Lookup</span> dialog box without saving changes, click <span class="bold">Cancel</span>.</p>
+</li>
+<li>
+<p>Select a previously selected advanced condition from the drop-down list to apply the search criteria for that condition.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p class="subhead2"><a id="AEOAF1642"></a>To view the results of an existing Advanced Condition:</p>
+<ol>
+<li>
+<p>From the <span class="bold">Advanced Conditions</span> drop-down list, select an Advanced Condition.</p>
+</li>
+<li>
+<p>Click <span class="bold">Search</span>.</p>
+<p>A list of matching cases appears in the <span class="bold">Total Number of Rows</span> section.</p>
+<p>TIP: The search results are also dependent on the values entered for Date Range and the Initial/Follow-up selection. Therefore, if the Advanced Condition returns a case, but it is not part of the Date Range, the case won't be displayed when you click Search.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<div id="AEOAF408" class="sect1"><a id="sthref193"></a>
+<h2 class="sect1">Search for a Case</h2>
+<p>To search for cases that match the query set criteria for the advanced condition, in the Advanced Conditions &gt; <span class="bold">Hit List</span> tab, click <span class="bold">Find Now</span>.</p>
+<p>A search based on the selected query set is performed, and a list of cases that satisfy the advanced condition query set appear.</p>
+<p>The following table show the operations you can perform in the <span class="bold">Hit List</span> tab.</p>
+<div class="inftblinformal">
+<table class="cellalignment19" summary="The following table show the operations you can perform in the Hit List tab." dir="ltr">
+<thead>
+<tr class="cellalignment13">
+<th class="cellalignment20" id="r1c1-t9">To...</th>
+<th class="cellalignment20" id="r1c2-t9">Do the following</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment13">
+<td class="cellalignment21" id="r2c1-t9" headers="r1c1-t9">Manually add an existing case to the hit list</td>
+<td class="cellalignment21" headers="r2c1-t9 r1c2-t9">Click Add and enter the Case ID in the text box.</td>
+</tr>
+<tr class="cellalignment13">
+<td class="cellalignment21" id="r3c1-t9" headers="r1c1-t9">Remove a case from the hit list</td>
+<td class="cellalignment21" headers="r3c1-t9 r1c2-t9">Click Delete.</td>
+</tr>
+<tr class="cellalignment13">
+<td class="cellalignment21" id="r4c1-t9" headers="r1c1-t9">Save the hit list result for future use</td>
+<td class="cellalignment21" headers="r4c1-t9 r1c2-t9">Click Store Hit List.</td>
+</tr>
+<tr class="cellalignment13">
+<td class="cellalignment21" id="r5c1-t9" headers="r1c1-t9">Retrieve results of the saved hit list</td>
+<td class="cellalignment21" headers="r5c1-t9 r1c2-t9">Click Retrieve Hit List.</td>
+</tr>
+<tr class="cellalignment13">
+<td class="cellalignment21" id="r6c1-t9" headers="r1c1-t9">Save the hit list as a text file</td>
+<td class="cellalignment21" headers="r6c1-t9 r1c2-t9">Click Export.</td>
+</tr>
+<tr class="cellalignment13">
+<td class="cellalignment21" id="r7c1-t9" headers="r1c1-t9">View SQL for Query</td>
+<td class="cellalignment21" headers="r7c1-t9 r1c2-t9">Click Show SQL.</td>
+</tr>
+<tr class="cellalignment13">
+<td class="cellalignment21" id="r8c1-t9" headers="r1c1-t9">Run a Query</td>
+<td class="cellalignment21" headers="r8c1-t9 r1c2-t9">Click Find.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" --></div>
+<!-- class="sect1" -->
+<div id="AEOAF831" class="sect1"><a id="sthref194"></a>
+<h2 class="sect1">Use the Advanced Conditions Library</h2>
+<p>From the Utilities drop-down menu, select <span class="bold">Advanced Conditions Library</span>.</p>
+<p>From this screen, you can:</p>
+<ul>
+<li>
+<p>Create a new advanced condition</p>
+</li>
+<li>
+<p>Reassign an advanced condition</p>
+</li>
+<li>
+<p>Set advanced condition permission levels</p>
+</li>
+<li>
+<p>Modify an existing advanced condition</p>
+</li>
+<li>
+<p>Delete an advanced condition</p>
+</li>
+<li>
+<p>Print a list of advanced conditions</p>
+</li>
+</ul>
+<p>To search for an existing query sets or advanced conditions, enter the search criteria, and click <span class="bold">Search</span>.</p>
+</div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment12">
+<tr>
+<td class="cellalignment21">
+<table class="cellalignment17">
+<tr>
+<td class="cellalignment16"><a href="reviewyourcases.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment16"><a href="medbrowse.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2014, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment23">
+<table class="cellalignment15">
+<tr>
+<td class="cellalignment16"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment16"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment16"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment16"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

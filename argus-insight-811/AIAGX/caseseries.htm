@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Working with Case Series</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2017-10-03T12:35:27Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Argus Insight Administrator's Guide" />
+<meta name="dcterms.identifier" content="E85143-01" />
+<meta name="dcterms.isVersionOf" content="AIAGX" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2011, 2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="advconditionsam.htm" title="Previous" type="text/html" />
+<link rel="Next" href="standardrepbip.htm" title="Next" type="text/html" />
+<link rel="alternate" href="AIAGX.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="AIAGX.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="AIAGX.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">10/17</span> <!-- End Header -->
+<div id="AIAGX245" class="chapter"><a id="CHDHCGEA"></a>
+<h1 class="chapter"><span class="secnum">7</span> Working with Case Series</h1>
+<p>When you execute a QBE, a filter, or an advanced condition, Argus Insight generates a list of cases that match the querying criteria. This list of cases is called a <span class="italic">case series.</span> Argus Insight displays the case series in a listing format on the ACTIVE CASE SERIES page.</p>
+<p>The case series is the communication foundation between all modules of Argus Insight.</p>
+<p>If the Argus Insight case series are created by using the Argus Mart advanced condition, then these case series records only case IDs, case revision effective start dates, and query criteria (as a text string).</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The case series might become obsolete each time the data mart is refreshed by running an ETL because new cases with similar attributes might get added to the data mart.</div>
+<a id="CHDJDCIA"></a>
+<div id="AIAGX246" class="sect1">
+<h2 class="sect1"><span class="secnum">7.1</span> Working with the Active Case Series</h2>
+<a id="CHDEDCJH"></a>
+<div id="AIAGX247" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">7.1.1</span> Viewing the Active Case Series</h3>
+<p>The system assigns the <span class="italic">active</span> status to the case series that was last generated by executing a <span class="italic">query</span>. Only one case series can be active at a time. The last case series generated remains active until you:</p>
+<ul>
+<li>
+<p>Generate another case series.</p>
+</li>
+<li>
+<p>Save modifications to an existing case series.</p>
+</li>
+<li>
+<p>Manually assign the active status to a case series that has been saved to the case series library.</p>
+<p>See <a href="#CHDDEGHI">"Making a Case Series Active"</a> for details.</p>
+</li>
+</ul>
+<p>To view the active case series, navigate to <span class="bold">Case Series &gt; Open Case Series &gt; Active</span><span class="bold">.</span></p>
+<p>The ACTIVE CASE SERIES page appears with the last case series that is executed, modified, or manually made active.</p>
+<p>The ACTIVE CASE SERIES page displays different fields based on the type of the point-in-time query used to generate the case series.</p>
+<ul>
+<li>
+<p>The <span class="bold">Effective Start Date</span> field appears for <span class="bold">Current Data</span>, and <span class="bold">As of Date</span> queries with the most recent revisions available in Argus Safety regardless of whether the cases are locked or unlocked, and historical data respectively.</p>
+</li>
+<li>
+<p>The <span class="bold">Locked Date</span> field appears for <span class="bold">At Lock</span>, <span class="bold">Last Locked Revision as of a Point in Time</span>, and <span class="bold">Last Locked Revision for a Version in Period</span> queries with locked date for all the case revisions which are returned in the case series.</p>
+<p>The tool tip for this field also displays &lt;Locked Date&gt; (&lt;Effective Start Date&gt;) values for each row.</p>
+</li>
+</ul>
+<div id="AIAGX248" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref65"></a>
+<h4 class="sect3"><span class="secnum">7.1.1.1</span> Active Case Series and Active Query Names</h4>
+<p>On the ACTIVE CASE SERIES page, note that:</p>
+<ul>
+<li>
+<p>The <span class="bold">Active Query Name</span> label displays the name of the saved query (QBE, filter, or advanced condition) that generated the case series. If the query was not saved, the label displays the text <code dir="ltr">&lt;Not Saved&gt;.</code></p>
+<p>Now, Argus Insight supports two Active Queries: <span class="bold">Active Query for Argus Mart</span> and <span class="bold">Active Query for Insight Mart</span>.</p>
+</li>
+<li>
+<p>The <span class="bold">Active Case Series</span> label displays the text <code dir="ltr">&lt;Not Saved&gt;</code> until you save the case series by a name. Similarly, the <span class="bold">Name</span> field displays the text <code dir="ltr">&lt;Not Saved&gt;</code> until you save the case series by a name.</p>
+<p>You can enter the name of the case series in the <span class="bold">Name</span> field, and click <span class="bold">Save</span>.</p>
+<p>To rename an already saved case series, enter the new name in the <span class="bold">Name</span> field, and click <span class="bold">Save</span>.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<div id="AIAGX249" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref66"></a>
+<h4 class="sect3"><span class="secnum">7.1.1.2</span> Sorting, Searching, and Navigating</h4>
+<p>On the ACTIVE CASE SERIES page, use the tools in the table header to sort, search, and navigate through the list of cases.</p>
+<ul>
+<li>
+<p>To sort the list by a specific column, click the arrow icon next to a column heading.</p>
+</li>
+<li>
+<p>To filter the list, enter search criteria into one or more of the fields below the column headings, and then click <span class="bold">Search.</span></p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If you search for a text comprising an underscore, it is treated as a wildcard and is replaced by a letter in the displayed results. For example, If you have queries with names - CURE, CORE, and CARE and you search for C_RE, all three queries are displayed in the result.</div>
+</li>
+<li>
+<p>To move forward and backward through the pages of case series, click the Page Navigation icons. A page displays 50 cases.</p>
+</li>
+</ul>
+<p>When you export the data to a Microsoft Excel file, the system retains any changes you made to the sorting and filtering order.</p>
+<p>See <a href="#CHDFJFDG">"Exporting a Case Series to Microsoft Excel"</a> for more information.</p>
+<img width="1248" height="238" src="img/casefilters.jpg" alt="Surrounding text describes casefilters.jpg." /><br />
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The ACTIVE CASE SERIES page displays different fields (Effective Start Date/Locked Date) based on the type of the point-in-time query used to generate the case series.</div>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CHDCJIBC"></a>
+<div id="AIAGX250" class="sect2">
+<h3 class="sect2"><span class="secnum">7.1.2</span> Saving the Active Case Series</h3>
+<p>Before you can save a case series, you must enter a description for the case series in the <span class="bold">Description</span> field.</p>
+<p>If you have not saved the active case series to the system yet, click either <span class="bold">Save</span> or <span class="bold">Save</span> <span class="bold">As</span> to assign a name to the case series and save it to the Case Series library.</p>
+<p>If you are modifying a case series that is already saved, click <span class="bold">Save</span> to save your modifications or click <span class="bold">Save As</span> to save the case series by another name.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+All the Argus Aggregate Case Series will be saved under <span class="bold">Compliance</span> category by default after copying these from Argus Safety database through ETL process.
+<p>Besides, the <span class="bold">Save As</span> option for Aggregate Case Series will save the case series as Argus Mart case series.</p>
+</div>
+</div>
+<!-- class="sect2" -->
+<a id="CHDIJDJD"></a>
+<div id="AIAGX251" class="sect2">
+<h3 class="sect2"><span class="secnum">7.1.3</span> Viewing the Criteria that Generated the Active Case Series</h3>
+<p>Use one of the following options to view the query criteria that generated the active case series:</p>
+<ul>
+<li>
+<p>To return to the appropriate <span class="italic">Queries</span> page (QUERY BY EXAMPLE page, FILTER VALUE SET page, or ADVANCED CONDITIONS EDITOR page) and view the query criteria that generated the case series, click <span class="bold">View Query.</span></p>
+<p>The <span class="bold">View Query</span> button is enabled <span class="italic">only if</span> the active case series is not yet saved to the system.</p>
+</li>
+<li>
+<p>To view the query criteria in a statement format, click <span class="bold">View Query Criteria.</span> The Query Criteria dialog box opens and displays the query.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="CHDHFEGC"></a>
+<div id="AIAGX252" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">7.1.4</span> Assigning Group-Level Access Permissions</h3>
+<p>You can assign group-level access permissions for the case series. These permissions determine which user groups will be able to view, modify, or delete a case series.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You can set permissions only on case series you saved to the system.</div>
+<p>To set case series permissions:</p>
+<ol>
+<li>
+<p>Navigate to <span class="bold">Case Series &gt; Open Case Series &gt;</span> <span class="bold">Active.</span></p>
+<p>The ACTIVE CASE SERIES page appears.</p>
+</li>
+<li>
+<p>To assign group-level permissions on the saved case series, click <span class="bold">Permissions</span>.</p>
+<p>The <span class="bold">Permissions</span> dialog box appears with the names of all the groups (except the <span class="bold">Administrator</span> group) that the system administrator has created.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+For Argus Aggregate case series, the <span class="bold">Permission</span> button will be enabled if you have permission to share case series in Case Editor page.
+<p>For example, if Argus Aggregate case series is shared to any Argus Insight group (Group_1) using the Permission settings, then the shared aggregate case series will be available to all the users belonging to that group (Group_1). This permission will not be effected by Argus Mart ETL.</p>
+</div>
+</li>
+<li>
+<p>To assign permissions to the group members on the case series you have created, use the drop-down list next to a group name. The available options are:</p>
+<div class="inftblhruleinformal">
+<table class="cellalignment103" summary="The table describes the QBE options in the list box placed next to a group name to assign permissions to the group members." dir="ltr">
+<thead>
+<tr class="cellalignment93">
+<th class="cellalignment104" id="r1c1-t8">Permission</th>
+<th class="cellalignment104" id="r1c2-t8">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r2c1-t8" headers="r1c1-t8">R/W/D/P</td>
+<td class="cellalignment99" headers="r2c1-t8 r1c2-t8">Group members will be able to view, modify, delete, and assign permission on the case series.</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r3c1-t8" headers="r1c1-t8">R/W/D</td>
+<td class="cellalignment99" headers="r3c1-t8 r1c2-t8">Group members will be able to view, modify, and delete the case series.</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r4c1-t8" headers="r1c1-t8">R/W</td>
+<td class="cellalignment99" headers="r4c1-t8 r1c2-t8">Group members will be able to view and modify the case series.</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r5c1-t8" headers="r1c1-t8">R</td>
+<td class="cellalignment99" headers="r5c1-t8 r1c2-t8">Group members will be able to only view the case series.</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r6c1-t8" headers="r1c1-t8">No Access (Default)</td>
+<td class="cellalignment99" headers="r6c1-t8 r1c2-t8">No group members will be able to access the case series.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblhruleinformal" -->
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The author of the case series always has the highest level of permission (R/W/D/P) on the case series. For example, suppose you belong to the Data Entry group and you assign the <span class="bold">No Access</span> permission level to the Data Entry group on a case series that you generate. In this case, you will continue to have the highest level of permission on your case series; other members in your group cannot access your case series.</div>
+</li>
+<li>
+<p>Click <span class="bold">OK</span> to save the permission settings.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CHDHFJFC"></a>
+<div id="AIAGX253" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">7.1.5</span> Adding an Annotation to a Case</h3>
+<p>A <span class="italic">case annotation</span> is the addition of notes to a case. For example, you may want to add explanatory notes, critical comments about the case, or updates for the reporter. Adding relevant and important information about a case makes for better understanding of that case.</p>
+<a id="CIHBBBAD"></a>
+<div id="AIAGX254" class="sect3">
+<h4 class="sect3"><span class="secnum">7.1.5.1</span> About Case Annotations</h4>
+<p>A case annotation:</p>
+<ul>
+<li>
+<p>Supports a maximum of 200 characters.</p>
+</li>
+<li>
+<p>Is saved with the case series. Once entered, an annotation is saved for the case series. You do not need to explicitly save a case series to save the annotations.</p>
+</li>
+<li>
+<p>Is applicable for the case in only the same case series where it was saved. It is not applicable even for the same case if the case is in a different case series.</p>
+</li>
+<li>
+<p>Is frozen along with a frozen case series. Therefore, you cannot edit, add, or delete an annotation in a frozen case series.</p>
+</li>
+<li>
+<p>Is copied to a new case series if the case series where it was created is also copied.</p>
+</li>
+<li>
+<p>Is exported to Microsoft Excel when you use the Export to Excel feature.</p>
+</li>
+<li>
+<p>Is kept with a case if the case series is subsetted.</p>
+</li>
+<li>
+<p>Is retained when the case series merges with another case series. As shown in the following graphic, the Case Series #1 section title on the CASE SERIES MERGE page includes a statement that the notes from this series will be preserved in the merged case series:</p>
+<img width="1140" height="180" src="img/merge.jpg" alt="Surrounding text describes merge.jpg." /><br /></li>
+</ul>
+<p>If you can access a case series, you can access its corresponding case annotations.</p>
+</div>
+<!-- class="sect3" -->
+<div id="AIAGX255" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref67"></a>
+<h4 class="sect3"><span class="secnum">7.1.5.2</span> Annotations in the Active Case Series</h4>
+<p>For any case in the active case series, you may include an annotation with the case.</p>
+<p>To add an annotation to a specific case:</p>
+<ol>
+<li>
+<p>Navigate to the ACTIVE CASE SERIES page.</p>
+</li>
+<li>
+<p>Select the case that you want to annotate.</p>
+</li>
+<li>
+<p>In the Notes column, click the <span class="bold">Annotate</span> icon.</p>
+</li>
+<li>
+<p>From the drop-down menu, select <span class="bold">Annotate</span>.</p>
+<p>The Case Annotation dialog box appears.</p>
+<img width="599" height="343" src="img/annotations.gif" alt="Surrounding text describes annotations.gif." /><br /></li>
+<li>
+<p>Enter notes, comments, or remarks about the case.</p>
+</li>
+<li>
+<p>Click <span class="bold">Save &amp; Close.</span></p>
+</li>
+</ol>
+<p>The selected case is updated with the annotation. In addition, the Notes column displays the beginning text of the annotation.</p>
+<p>To view the complete annotation, position the cursor over the Annotate icon.</p>
+<p>To modify or delete an existing annotation, open the Case Annotation dialog box, edit the text, and save your changes.</p>
+</div>
+<!-- class="sect3" -->
+<div id="AIAGX256" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref68"></a>
+<h4 class="sect3"><span class="secnum">7.1.5.3</span> Annotations in Advanced Conditions</h4>
+<p>To use annotations when you create an advanced condition, navigate to <span class="bold">Case Series, Cases,</span> and select <span class="bold">Case Annotations.</span> This field is a freehand text field and supports single select only.</p>
+<p>This note is not available in Argus Safety and does not impact the case series in Argus Safety.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CHDJIGGF"></a>
+<div id="AIAGX257" class="sect2">
+<h3 class="sect2"><span class="secnum">7.1.6</span> Adding a Case to a Case Series</h3>
+<p>If required, you can modify the case series by adding cases manually.</p>
+<p>To add a case to the case series:</p>
+<ol>
+<li>
+<p>Navigate to the ACTIVE CASE SERIES page.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Add Case</span> icon <img width="23" height="21" src="img/acs_insert_case.gif" alt="insert case series" /> on the left bar.</p>
+<p>The Add Case to Case Series dialog box appears.</p>
+</li>
+<li>
+<p>Enter the case number to add to the case series manually.</p>
+</li>
+<li>
+<p>To select the reason to modify the case series, click the <span class="bold">Justification</span> field.</p>
+<p>Alternatively, you may type your own justification text to explain why you are modifying the case series.</p>
+<p>In addition, you may define the choices that Argus Insight lists for the Justification field by using the Case Series Modification Justification option in the List Maintenance tab on the ADMINISTRATION TOOLS page.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK.</span></p>
+<ul>
+<li>
+<p>If the case number you specified exists in the data mart, the system adds the case to the case series and saves the changes. A message dialog box reports that the case number was successfully inserted.</p>
+</li>
+<li>
+<p>If the case number you specified does not exist in the data mart, the system displays an error message. For example:</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">OK</span> to close the message dialog box.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CHDIJIEJ"></a>
+<div id="AIAGX258" class="sect2">
+<h3 class="sect2"><span class="secnum">7.1.7</span> Deleting a Case from a Case Series</h3>
+<ol>
+<li>
+<p>Navigate to the ACTIVE CASE SERIES page.</p>
+</li>
+<li>
+<p>Select the case you want to delete.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Delete Case</span> icon <img width="24" height="21" src="img/acs_delete_case.gif" alt="Delete case series" /> on the left bar.</p>
+<p>The Delete Case Number dialog box appears.</p>
+</li>
+<li>
+<p>To select the reason to delete the case, click the <span class="bold">Justification</span> field.</p>
+<p>Alternatively, you may type your own justification text to explain why you are deleting the case.</p>
+<p>In addition, you may define the justification choices that Argus Insight lists for the Justification field by using the Case Series Modification Justification option in the List Maintenance tab on the ADMINISTRATION TOOLS page.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span> to delete the case from the case series and saves the changes.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CHDIEHCH"></a>
+<div id="AIAGX259" class="sect1">
+<h2 class="sect1"><span class="secnum">7.2</span> Working with Case Series Saved in the Library</h2>
+<p>When you execute a QBE, a filter, or an advanced condition, Argus Insight generates a list of cases that match your query criteria. This list of cases is called a <span class="italic">case series.</span></p>
+<p>You can choose to save a case series for future reference. You provide a brief description and a unique name for the case series; the system stores all saved case series in the Case Series library.</p>
+<a id="CHDHEECG"></a>
+<div id="AIAGX260" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">7.2.1</span> Opening the CASE SERIES LIBRARY Page</h3>
+<p>The CASE SERIES LIBRARY page, lists all the case series saved to the system.</p>
+<p>To open the CASE SERIES LIBRARY page, navigate to <span class="bold">Case Series &gt; Open Case Series &gt; Library</span><span class="bold">.</span></p>
+<p>The CASE SERIES LIBRARY page displays the following information for each case series:</p>
+<ul>
+<li>
+<p>Name of the case series.</p>
+</li>
+<li>
+<p>Brief description of the case series.</p>
+</li>
+<li>
+<p>Date when the case series was last modified.</p>
+</li>
+<li>
+<p>Name of the user who generated the case series.</p>
+</li>
+<li>
+<p>Category assigned to the case series.</p>
+<p>For example, Compliance, General, Management, or Pharmacovigilance.</p>
+</li>
+<li>
+<p>Source of the case series.</p>
+<ul>
+<li>
+<p><span class="bold">Argus Insight</span> indicates the case series was generated using Argus Insight querying tools.</p>
+</li>
+<li>
+<p><span class="bold">Argus Mart</span> indicates the case series was generated using Argus Mart querying tools.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+To import Argus Insight or Argus Mart based case series, see <a href="#CHDIDHHF">"Importing a Case Series from an External Source"</a>.</div>
+</li>
+<li>
+<p><span class="bold">Argus Aggregate</span> indicates the case series was imported into Argus Insight (for Argus Mart data source only) from Argus Safety via ETL process. These case series belongs to Argus periodic/aggregate reporting.</p>
+<p>Access permission for all the Aggregate Case Series are brought over from Argus Safety database to Argus Insight. You may access Aggregate Case Series, only when you have access to Argus Safety or Argus Insight, assigned from Argus Insight Group Permissions.</p>
+<p>For more information in Group Permissions, see <a href="#CHDHFEGC">Assigning Group-Level Access Permissions</a>.</p>
+<p>All Aggregate Case Series fetched from Argus Safety will have query criteria as <span class="bold">Argus Aggregate Case Series</span>.</p>
+<p>To view all these case series, select <span class="bold">Include Aggregate Case Series</span> check box. This check box is disabled if there are either no Aggregate Case Series in Argus Insight database or you do not have access to any of the Aggregate Case Series. This check box is not available when application is running on Insight Mart data source only.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Number of cases in the case series.</p>
+<p>In addition, the Cases column displays the following icons:</p>
+<ul>
+<li>
+<p><span class="bold">For Argus Insight Case Series</span>&mdash;A snowflake icon <img width="30" height="30" src="img/snowflake.jpg" alt="snowflake icon image" /> if the case series is frozen. Positioning the cursor over the icon displays the date and time the case series was frozen.</p>
+</li>
+<li>
+<p><span class="bold">For Argus Mart Case Series</span>&mdash;A snowflake icon <img width="30" height="30" src="img/snowflake.jpg" alt="snowflake icon image" /> along with the case counts for all case series other that Current Data. Positioning the cursor over the icon displays the type of the case series.</p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="CHDDEJDH"></a>
+<div id="AIAGX261" class="sect2">
+<h3 class="sect2"><span class="secnum">7.2.2</span> Searching for a Saved Case Series in the Library</h3>
+<p>You can search a saved case series by its name, description, modified date, author, category, and source. You can enter a value for one, several, or all search fields to find a saved case series.</p>
+<p>To search for a saved case series:</p>
+<ol>
+<li>
+<p>Navigate to the CASE SERIES LIBRARY page.</p>
+</li>
+<li>
+<p>Enter search criteria into one or more of the fields below the column headings.</p>
+<p>To search for a case series:</p>
+<ul>
+<li>
+<p>By its name, type the name of the case series in the <span class="bold">Name</span> field.</p>
+</li>
+<li>
+<p>By its description, type part of the description in the <span class="bold">Description</span> field. The system searches for the specified text string in all case series descriptions.</p>
+</li>
+<li>
+<p>By its date of modification, enter the modification date in the first <span class="bold">Last Modified</span> date field. To specify a date range, type the start and end dates in the first and second date fields, respectively.</p>
+</li>
+<li>
+<p>By its author, select the author name from the <span class="bold">User Full Name</span> field.</p>
+</li>
+<li>
+<p>By its category, select the category from the <span class="bold">Category</span> field.</p>
+</li>
+<li>
+<p>By its source, select the source from the <span class="bold">Source</span> field.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If you search for a text comprising an underscore, it is treated as a wildcard and is replaced by a letter in the displayed results. For example, If you have queries with names - CURE, CORE, and CARE and you search for C_RE, all three queries are displayed in the result.</div>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Search.</span></p>
+<p>The search results appear based on the specified criteria.</p>
+<ul>
+<li>
+<p>To sort the search results, click the sort icon next to a column header.</p>
+</li>
+<li>
+<p>To clear the search results and list all the saved case series, click <span class="bold">Clear.</span></p>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CHDDEGHI"></a>
+<div id="AIAGX262" class="sect2">
+<h3 class="sect2"><span class="secnum">7.2.3</span> Making a Case Series Active</h3>
+<ol>
+<li>
+<p>Navigate to the CASE SERIES LIBRARY page.</p>
+</li>
+<li>
+<p>To view Argus Aggregate Case Series, select <span class="bold">Include Aggregate Case Series</span> check box.</p>
+</li>
+<li>
+<p>Select a case series to make active.</p>
+</li>
+<li>
+<p>Click <span class="bold">Make Active.</span></p>
+<p>The <span class="bold">Active Case Series</span> label in the upper-right corner of the CASE SERIES LIBRARY page displays the name of the case series you made active.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CHDJCHGF"></a>
+<div id="AIAGX263" class="sect2">
+<h3 class="sect2"><span class="secnum">7.2.4</span> Modifying a Case Series</h3>
+<p>You may want to modify an existing case series by adding cases to it or deleting existing cases. You can also change the group-level access permissions on the case series.</p>
+<p>To modify a case series:</p>
+<ol>
+<li>
+<p>Navigate to the CASE SERIES LIBRARY page.</p>
+</li>
+<li>
+<p>Select the case series you want to modify.</p>
+</li>
+<li>
+<p>Click <span class="bold">Modify</span>.</p>
+<p>See <a href="#CHDJDCIA">"Working with the Active Case Series"</a> for detailed information about making modifications to the case series and setting permissions.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CHDEBJBE"></a>
+<div id="AIAGX264" class="sect2">
+<h3 class="sect2"><span class="secnum">7.2.5</span> Merging Case Series</h3>
+<p>Argus Insight lets you create a new case series by merging two case series through a <span class="italic">set operator.</span> The set operator you select works on the case numbers. The case numbers included in the merged case series depend on the type of set operator you use:</p>
+<ul>
+<li>
+<p><span class="bold">Union &mdash;</span> Creates a new case series that contains all the cases in both case series; common case numbers are included, and are listed only once.</p>
+</li>
+<li>
+<p><span class="bold">Intersect &mdash;</span> Creates a new case series that contains only those case numbers that exist in both case series.</p>
+</li>
+<li>
+<p><span class="bold">Minus &mdash;</span> Creates a new case series that contains only those case numbers that are present in the first case series, but are not present in the second case series.</p>
+</li>
+</ul>
+<p>To generate a merged case series:</p>
+<ol>
+<li>
+<p>Navigate to the CASE SERIES LIBRARY page.</p>
+</li>
+<li>
+<p>Click <span class="bold">Merge.</span></p>
+<p>The CASE SERIES MERGE page appears.</p>
+<img width="1280" height="722" src="img/csmerge.jpg" alt="Surrounding text describes csmerge.jpg." /><br /></li>
+<li>
+<p>From the <span class="bold">Data Source</span> drop-down list, select a data source (Insight Mart/Argus Mart).</p>
+<p>Based on the selected data source, the list of case series in both the columns Case Series #1 and Case Series #2 are updated.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Argus Aggregate case series are available for merging only when Data Source from the drop-down list is selected as Argus Mart. Beside, merged aggregate case series will be reflected as Argus Mart.</div>
+</li>
+<li>
+<p>Select the two case series to merge:</p>
+<ol>
+<li>
+<p>From the <span class="bold">Case Series # 1</span> list, select the first case series.</p>
+</li>
+<li>
+<p>From the <span class="bold">Case Series # 2</span> list, select the second case series.</p>
+</li>
+</ol>
+<p>Note that the system populates the Description and Author fields for each selected case. You may modify the information if necessary.</p>
+</li>
+<li>
+<p>Select the <span class="bold">Action</span> (set operator) to merge the two selected case series.</p>
+<p>As described previously, you can select one of the following actions:</p>
+<ul>
+<li>
+<p><span class="bold">Union &mdash;</span> Creates a new case series that contains all the cases in both case series; common case numbers are included, and are listed only once.</p>
+</li>
+<li>
+<p><span class="bold">Intersect &mdash;</span> Creates a new case series that contains only those case numbers that exist in both case series.</p>
+</li>
+<li>
+<p><span class="bold">Minus &mdash;</span> Creates a new case series that contains only those case numbers present in the first case series, but not present in the second case series.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>For <span class="bold">Data Source</span> as <span class="bold">Argus Mart</span>, from <span class="bold">Merge Type</span> drop-down list, select:</p>
+<ul>
+<li>
+<p><span class="bold">Current Data</span>&mdash;To save single revision per case after UNION/INTERSECT/MINUS. Every time you open the saved case series, the latest data in case series is displayed.</p>
+</li>
+<li>
+<p><span class="bold">Latest Revision</span>&mdash;To save single revision per case after UNION/INTERSECT/MINUS. Saved Revision will be the highest revision of the case at the time of operation. Every time you open the saved case series, data as per saved revision is displayed.</p>
+</li>
+<li>
+<p><span class="bold">All Revisions from Source</span>&mdash;To save all the revisions after UNION/INTERSECT/MINUS. Every time you open saved case series, the data as per saved revision is displayed.</p>
+</li>
+</ul>
+<p>To view <span class="bold">Locked Date</span> in the Case Series Editor page for the merged case series, select <span class="bold">Show Locked Date</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Merge</span>.</p>
+<p>The ACTIVE CASE SERIES page appears with the resultant case series.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CHDIDHHF"></a>
+<div id="AIAGX265" class="sect2">
+<h3 class="sect2"><span class="secnum">7.2.6</span> Importing a Case Series from an External Source</h3>
+<p>You can import a case series from an external source into Argus Insight. The requirements are as follows:</p>
+<ul>
+<li>
+<p>The external source file can be a text (TXT) file or a comma-separated values (CSV)&nbsp;file.</p>
+</li>
+<li>
+<p>Each case number in the file must be on a new line.</p>
+</li>
+<li>
+<p>Each case number must be separated by a line return (Enter) or a semicolon&nbsp;(;).</p>
+</li>
+</ul>
+<p>To import a case series from an external source into Argus Insight:</p>
+<ol>
+<li>
+<p>Navigate to the CASE SERIES LIBRARY page.</p>
+</li>
+<li>
+<p>Click <span class="bold">Import</span>.</p>
+<p>The Select File For Import dialog box appears.</p>
+</li>
+<li>
+<p>From the <span class="bold">Target Data Source</span> drop-down list, select a data source (Insight Mart/Argus Mart).</p>
+</li>
+<li>
+<p>To locate and select the external case series source file, click <span class="bold">Browse</span>.</p>
+<p>Alternatively, in the <span class="bold">File</span> field, enter the file name with its complete system path.</p>
+</li>
+<li>
+<p>Verify if the first row in your TXT or CSV file has the column headings. If so, be sure to select the <span class="bold">First row contains column header(s)</span> check box.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK.</span></p>
+<p>The Import Case Series dialog box appears with the status of the import operation.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+To view the import operation log, click <span class="bold">View Log.</span></div>
+</li>
+<li>
+<p>Click <span class="bold">OK</span> to display the imported case series on the ACTIVE CASE SERIES page.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CHDEFBGJ"></a>
+<div id="AIAGX266" class="sect2">
+<h3 class="sect2"><span class="secnum">7.2.7</span> Deleting a Case Series from the Library</h3>
+<ol>
+<li>
+<p>Navigate to the CASE SERIES LIBRARY page.</p>
+</li>
+<li>
+<p>Select <span class="bold">Include Aggregate Case Series</span> check box.</p>
+</li>
+<li>
+<p>Select the case series to delete.</p>
+</li>
+<li>
+<p>Click <span class="bold">Delete.</span></p>
+<p>A confirmation dialog box appears.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+<p>You return to the CASE SERIES LIBRARY page.</p>
+</li>
+</ol>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+When Argus Aggregate Case Series is deleted from Argus Insight, it will be re-populated if that case series is still available in Argus Safety. Beside, when any Aggregate Case Series is deleted from Argus Safety then it will also be deleted from Argus Insight.</div>
+</div>
+<!-- class="sect2" -->
+<a id="CHDBIJEH"></a>
+<div id="AIAGX267" class="sect2">
+<h3 class="sect2"><span class="secnum">7.2.8</span> Viewing the Query Criteria that Generated the Case Series</h3>
+<ol>
+<li>
+<p>Navigate to the CASE SERIES LIBRARY page.</p>
+</li>
+<li>
+<p>Select a case series.</p>
+</li>
+<li>
+<p>Click <span class="bold">Query Criteria</span> to open the Query Criteria dialog box and display the query in an SQL-statement format.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+For a <span class="italic">saved</span> case series, you can view the query details only in a SQL-statement format in the Query Criteria dialog box.
+<p>However, for an active case series that <span class="italic">is not yet saved</span> to the system, you can view the query details within the query tool interface as well as in the SQL-statement format. See <a href="#CHDIJDJD">"Viewing the Criteria that Generated the Active Case Series"</a> for more information.</p>
+</div>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CHDBIABG"></a>
+<div id="AIAGX268" class="sect1">
+<h2 class="sect1"><span class="secnum">7.3</span> Sharing Case Series with Argus Safety Web</h2>
+<p>You can share cases between Argus Safety Web and Argus Insight.</p>
+<p>To enable case sharing between these two applications, you need a common user name (ID) and password for Argus Safety Web and Argus Insight. If you do not have a valid user ID in Argus Safety Web, the system displays the following error message:</p>
+<p><code dir="ltr">Your user ID is not present in Argus.</code></p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+<span class="bold">Import from Argus Safety</span> option is available only when the target data source is selected as Insight Mart or Both (Insight Mart and Argus Mart).</div>
+<p>To share cases between Argus Insight and Argus Safety Web:</p>
+<ol>
+<li>
+<p>Log in to Argus Insight.</p>
+</li>
+<li>
+<p>Navigate to <span class="bold">Case Series &gt; Open Case Series &gt;</span> <span class="bold">Import from Argus Safety.</span></p>
+<p>The list of active case series appears from Argus Safety Web.</p>
+<p>The active case series present in Argus Safety are now the active case series in Argus Insight.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+An error message appears if there are no cases present in the active series of Argus Safety.</div>
+</li>
+<li>
+<p>Click <span class="bold">Save</span> or <span class="bold">Save As</span> to save the case series.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="CHDFJFDG"></a>
+<div id="AIAGX269" class="sect1">
+<h2 class="sect1"><span class="secnum">7.4</span> Exporting a Case Series to Microsoft Excel</h2>
+<ol>
+<li>
+<p>Create a new query using a QBE, a filter, or an advanced condition, or open a saved query from the Query library.</p>
+</li>
+<li>
+<p>Click <span class="bold">Execute</span> to open the ACTIVE CASE SERIES page with the list of cases.</p>
+</li>
+<li>
+<p>Make adjustments to the listing, if necessary. You can sort the list or enter search criteria to filter the list. The system retains the sorting and filtering order when you export the data to a Microsoft Excel file.</p>
+</li>
+<li>
+<p>Click <span class="bold">Export to Excel.</span> The File Download dialog box opens and prompts you to open or save the Microsoft Excel file.</p>
+<ul>
+<li>
+<p>To open the Excel file and view the case series results, click <span class="bold">Open.</span></p>
+</li>
+<li>
+<p>To save the Excel file to your system, click <span class="bold">Save.</span></p>
+<p>The system prompts for the location to save the file. Once the file is saved, you can open the file and view the case series results.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>The Excel spreadsheet has two tabs:</p>
+<ul>
+<li>
+<p>The <span class="bold">Case Series</span> tab provides information about each case in the case series, including the case number, report type, primary company product, primary event, seriousness criteria, and outcome.</p>
+</li>
+<li>
+<p>The <span class="bold">Case Series Details</span> tab provides information about the entire case series, including the name specified when the case series was saved, the total number of cases in the series, the description specified when the case series was saved, and the query criteria (in SQL-statement format) used to generate the case series.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect1" -->
+<a id="CHDDIBBB"></a>
+<div id="AIAGX270" class="sect1">
+<h2 class="sect1"><span class="secnum">7.5</span> Freezing and Unfreezing Case Series Data</h2>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The Freeze and Unfreeze functionality is available for Insight Mart only. Argus Mart case series cannot be frozen. The Freeze and Unfreeze buttons are not available for Argus Mart.</div>
+<p>Before you freeze the data in a case series, review the information in this section to understand the restrictions and usage for frozen case series.</p>
+<ul>
+<li>
+<p><span class="bold">Access Rights</span></p>
+<p>System administrators define the freeze and unfreeze access rights when creating user groups.</p>
+<p>You can freeze and unfreeze case series <span class="italic">only if</span> you have the access rights (privileges).</p>
+</li>
+<li>
+<p><span class="bold">Working with Frozen Case Series</span></p>
+<p>When you work with frozen case series, note that:</p>
+<ul>
+<li>
+<p>You cannot insert cases into a frozen case series.</p>
+</li>
+<li>
+<p>You cannot share a frozen case series with Argus Safety.</p>
+</li>
+<li>
+<p>You can delete cases from a frozen case series.</p>
+</li>
+<li>
+<p>When you run a query or an advanced condition against a frozen case series, Argus Insight uses the frozen data.</p>
+</li>
+<li>
+<p>The link to the Medical Review dialog box accesses the latest data for the case.</p>
+</li>
+<li>
+<p>The following Argus Insight features <span class="bold">do not</span> require all case data to be frozen:</p>
+<ul>
+<li>
+<p>Copy Configuration utility</p>
+</li>
+<li>
+<p>Derivation rules</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="bold">List Maintenance Items and Derivation Rules in a Frozen Case Series</span></p>
+<ul>
+<li>
+<p>List Maintenance items are not frozen. Therefore, some reports will have a mismatch of List Maintenance items and the frozen case series data.</p>
+</li>
+<li>
+<p>The derivation rules operate against current case data if the List Maintenance rules are modified. The frozen case series are shown if there is a change in the case data resulting from the derivation rules.</p>
+</li>
+<li>
+<p>If suppress condition is checked in the derivation rule, then List Maintenance records related to the derivation rule will not be deleted in cases used in the frozen case data table.</p>
+</li>
+</ul>
+</li>
+</ul>
+<a id="CHDFFABG"></a>
+<div id="AIAGX271" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">7.5.1</span> Freezing a Case Series</h3>
+<p>You can freeze a custom case series when editing the case series from the CASE SERIES LIBRARY page.</p>
+<p>To freeze the existing cases in a case series:</p>
+<ol>
+<li>
+<p>Navigate to the CASE SERIES LIBRARY page.</p>
+</li>
+<li>
+<p>Select a case series.</p>
+</li>
+<li>
+<p>Click <span class="bold">Freeze Case Series.</span></p>
+<p>The Freeze Case Series dialog box appears.</p>
+</li>
+<li>
+<p>Enter a name for this frozen case series.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK.</span></p>
+<p>The system freezes and saves the case series with the specified name.</p>
+</li>
+</ol>
+<div id="AIAGX272" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref69"></a>
+<h4 class="sect3"><span class="secnum">7.5.1.1</span> Recognizing a Frozen Case Series</h4>
+<p>To indicate that a case series is frozen, the Cases column on the CASE SERIES LIBRARY page displays a snowflake icon. Positioning the cursor over the snowflake icon displays the date and time the selected case series was frozen.</p>
+<img width="438" height="244" src="img/csfreezeicon.jpg" alt="Surrounding text describes csfreezeicon.jpg." /><br /></div>
+<!-- class="sect3" -->
+<div id="AIAGX273" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref70"></a>
+<h4 class="sect3"><span class="secnum">7.5.1.2</span> Freezing and Saving Case Series</h4>
+<p>You can freeze any system-generated case series (active or inactive) (for example, using Argus Insight queries, filters, and advanced conditions) by clicking <span class="bold">Freeze and Save.</span></p>
+<p>The system freezes the case series and then displays the standard Case Series Save dialog box. You must enter a name for the saved case series.</p>
+<p>If you have not yet saved the case series from the ACTIVE CASE SERIES page, and you click <span class="bold">Freeze and Save,</span> the system saves only one copy of the frozen case in the library. The frozen case series is now the active case series.</p>
+<p>On the CASE SERIES LIBRARY page, you can position the cursor over the snowflake icon in the Cases column to view the date and time the selected case series was frozen.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CHDIIDHG"></a>
+<div id="AIAGX274" class="sect2">
+<h3 class="sect2"><span class="secnum">7.5.2</span> Unfreezing Case Series Data</h3>
+<p>On the CASE SERIES LIBRARY page, you have the option to unfreeze a currently frozen case series. Unfreezing a case series forces Argus Insight to retrieve the latest information for all the cases in the series.</p>
+<p>When you unfreeze a case series, you must provide a justification, or reason, for this action. You can either type a new justification or select a preconfigured justification.</p>
+<p>If you have access rights to the List Maintenance tab on the ADMINISTRATION TOOLS page, use the <span class="bold">Case Series Un-Freezing Justification</span> option to configure one or more justifications that can be selected when you unfreeze a case series. You can add new justifications, modify existing justifications, or delete an existing justification.</p>
+<p>To unfreeze a case series that is currently frozen:</p>
+<ol>
+<li>
+<p>Navigate to the CASE SERIES LIBRARY page.</p>
+</li>
+<li>
+<p>Select the frozen case series to unfreeze.</p>
+<p>If a case series is frozen, the Cases column displays a snowflake icon for that series.</p>
+<p>The <span class="bold">Un-freeze Case Series</span> button is enabled <span class="italic">only if</span> you select a case series that is frozen.</p>
+</li>
+<li>
+<p>Click <span class="bold">Un-freeze Case Series.</span></p>
+<p>The Un-freeze Case Series dialog box appears.</p>
+</li>
+<li>
+<p>From the <span class="bold">Justification</span> drop-down list, select the reason to unfreeze the case series.</p>
+<p>Alternatively, you may enter your own justification text to explain why you are unfreezing the case series.</p>
+<p>In addition, you may define the choices that Argus Insight lists for the Justification field if you have access rights to the Case Series Un-freezing Justification option in the List Maintenance tab on the ADMINISTRATION TOOLS page.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK.</span></p>
+<p>The system retrieves the latest information for all the cases in the series, refreshes the CASE SERIES LIBRARY page, and displays the updated case series in the list.</p>
+<p>In addition, system removes the snowflake icon from the Cases column because the case series is no longer frozen.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CHDIHJDH"></a>
+<div id="AIAGX275" class="sect1">
+<h2 class="sect1"><span class="secnum">7.6</span> Using the Link to Argus Safety Medical Review</h2>
+<p>On the ACTIVE CASE SERIES page, you can click a link in the Case Number column to access Argus Safety and open the Medical Review dialog box in read-only mode.</p>
+<p>All reports that can be executed from the Medical Review dialog box are available to you.</p>
+<p>You may not be able to link successfully to the Medical Review dialog box for the following reasons:</p>
+<ul>
+<li>
+<p>If you do not have access to the case from an Argus Safety perspective, the system displays the following message:</p>
+<p><code dir="ltr"><span class="codeinlineitalic">user_name</span></code> <code dir="ltr">does not have access to the case in Argus Safety.</code></p>
+</li>
+<li>
+<p>If you try to access a case that has been deleted since the last ETL, the system displays the following message:</p>
+<p><code dir="ltr">This case has been deleted in Argus Safety since the last ETL.</code></p>
+</li>
+<li>
+<p>If Oracle Access Manager (OAM) is not enabled in Argus Safety and Argus Insight, <span class="italic">and</span> you log in to Argus Insight without logging through Argus Safety, the system displays the following message:</p>
+<p><code dir="ltr"><span class="codeinlineitalic">user_name</span></code> <code dir="ltr">is not logged into Argus Safety.</code></p>
+</li>
+</ul>
+</div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment92">
+<tr>
+<td class="cellalignment99">
+<table class="cellalignment97">
+<tr>
+<td class="cellalignment96"><a href="advconditionsam.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment96"><a href="standardrepbip.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2011, 2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment101">
+<table class="cellalignment95">
+<tr>
+<td class="cellalignment96"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment96"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment96"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment96"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

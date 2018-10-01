@@ -1,0 +1,62 @@
+&#xfeff;<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="EN" xmlns="http://www.w3.org/1999/xhtml" xml:lang="EN">
+<head>
+<title> (Optional) Create review states and stages for use in the InForm Data Viewer </title>
+<meta name="Generator" content="Author-it" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="Keywords" content=""/>
+<script language="javascript" type="text/javascript" charset="UTF-8" src="dhtml_toc.js"></script>
+<script language="javascript" type="text/javascript" charset="UTF-8" src="open_parent.js"></script>
+<script language="javascript" type="text/javascript" charset="UTF-8" src="dhtml_load.js"></script>
+<script language="javascript" type="text/javascript" charset="UTF-8" src="dhtml_search.js"></script>
+<link rel="stylesheet" type="text/css" href="newwave.css"/>
+<link rel="stylesheet" type="text/css" href="index_stylesheet.css"/>
+<base target="CONTENT"/>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body onload="loadParent();;bodyLoad();;;if (isTOCLoaded()) {expand('218409');highlight('218766')}" text="#000000" link="#0000A0" alink="#008000" vlink="#FF0000">
+	<div id="searchResultsNone"></div>
+	<div id="content" style="padding-bottom: 50px;">
+		<table summary="" class="relatedtopics aboveheading" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td width= "18">
+<p class="bodytext"><a href="216723.htm" target="_self"><img width="34" height="34" src="125.gif" alt="Previous Topic" vspace="0" hspace="0" align="bottom" border="0" /></a></p></td>
+<td width= "18">
+<p class="bodytext"><a href="218340.htm" target="_self"><img width="33" height="34" src="124.gif" alt="Next Topic" vspace="0" hspace="0" align="bottom" border="0" /></a></p></td>
+<td width= "48">
+<p class="bodytext"><a href="javascript:expand('218409');highlight('218766')" onclick="loadTOC()" target="_self"><img width="165" height="27" src="122.gif" alt="Book Contents" vspace="0" hspace="0" align="bottom" border="0" /></a></p></td>
+</tr>
+</table>
+<h2 class="heading2">(Optional) Create review states and stages for use in the InForm Data Viewer</h2>
+<p class="bodytext"><a class="newwavelinktourl" title="" href="https://apexapps.oracle.com/pls/apex/f?p=44785:265:0:::265:P265_CONTENT_ID:23923" target="new"><img width="12" height="12" src="220665.gif" alt="Video icon" vspace="0" hspace="0" align="bottom" border="0" /></a> <strong class="specialbold"><a class="newwavelinktourl" title="" href="https://apexapps.oracle.com/pls/apex/f?p=44785:265:0:::265:P265_CONTENT_ID:23923" target="new">Show me how to create review states</a></strong></p>
+<ol class="listnumber"><li class="listnumber">At the bottom of the Project Explorer, click the <strong class="buttons"><strong class="buttons">Study Information</strong></strong> (<img width="21" height="19" src="218343.gif" alt="Study Information" vspace="0" hspace="0" align="bottom" border="0" />) button.</li><li class="listnumber">Expand the <strong class="buttons">InForm </strong>folder, right-click <strong class="buttons"><strong class="buttons">Review States</strong></strong>, and select <strong class="buttons"><strong class="buttons">New Review State</strong></strong>.</li><li class="listnumber">Enter a title, RefName, and description, and click <strong class="buttons"><strong class="buttons">OK</strong></strong>.<p class="listcontinue"><img width="12" height="15" src="211896.png" alt="Tip" vspace="0" hspace="0" align="bottom" border="0" /><strong class="specialbold"> Tips:</strong> </p>
+<ul class="listbullet2"><li class="listbullet2">If you create a review state to replace a deleted review state, the new review state must have the same RefName and state number as the review state that was deleted.</li><li class="listbullet2">After you deploy the study to InForm, you cannot change the state number or any RefNames in the review state. If you do so, deployment fails.</li></ul></li><li class="listnumber">In the Project Explorer, expand the <strong class="buttons"><strong class="buttons">Review States</strong></strong> folder, and select the review state you created.</li><li class="listnumber">In the English (United States) tab and, optionally, in the Japanese (Japan) tab, enter the following for the review state:<ul class="listbullet2"><li class="listbullet2"><strong class="specialbold">Label</strong>&mdash;Name for the review state, which appears in hover Help and drop-down lists in InForm. </li><li class="listbullet2"><strong class="specialbold">Mnemonic</strong>&mdash;Abbreviated name for the review state, which appears in column headings in the Data Viewer in InForm.</li></ul></li><li class="listnumber">In the Stage 1, Stage 2, and Stage 3 sections, enter the following for each review stage in the review state:<ul class="listbullet2"><li class="listbullet2"><strong class="specialbold">Name</strong>&mdash;RefName of the review stage. Each RefName must be unique within its review state.<p class="listcontinue2"><img width="12" height="15" src="211896.png" alt="Tip" vspace="0" hspace="0" align="bottom" border="0" /><strong class="specialbold"> Tip:</strong>  If you change the RefName property of a stage before deploying, but after developing rules, make sure to update any rules that refer to the stage.</p>
+</li><li class="listbullet2"><strong class="specialbold">Label</strong>&mdash;Name for the review stage, which appears in hover Help and drop-down lists in InForm.</li><li class="listbullet2"><strong class="specialbold">Mnemonic</strong>&mdash;Abbreviated name for the review stage, which appears in column headings in the Data Viewer in InForm.</li></ul><p class="listcontinue"><img width="12" height="15" src="211896.png" alt="Tip" vspace="0" hspace="0" align="bottom" border="0" /><strong class="specialbold"> Tip:</strong> The Label and Mnemonic fields for the review state and each review stage are required for each InForm product locale (English and Japanese). If a required value is missing in a product locale tab, the value from the other locale (if it is defined) appears in the field in red, and an icon appears in the tab to indicate that translation is required. Study validation also checks for missing translated values. Because both English and Japanese locales are always required for review states, the study definition does not need to have the Japanese locale selected, and you do not need the Japanese language skill to translate the review state fields.</p>
+</li><li class="listnumber">Create up to five review states with three stages each.</li></ol>
+
+		
+	</div>
+	<div id="feedback"><a href="mailto:inform_doc_feedback_grp@oracle.com?Subject=Comments about the Central Designer 6.2  - (Optional) Create review states and stages for use in the InForm Data Viewer" target="_top"><img width="24" height="108" src="feedback.gif" alt="Send Feedback"></a>
+	</div>
+	
+	<div id="foot">		
+			<ul style="padding: 0;">
+				<li class="footer" style="padding: 0 7px 0 0;"><a href="217485.htm">Access to Oracle Support</a></li>
+				<li class="footer"><a href="http://www.oracle.com/pls/topic/lookup?ctx=acc&id=docacc" target="_blank">Accessibility</a></li>
+				<li class="footer" style="border-right-style: none;"><a href="217488.htm">Legal Notices</a></li>
+			</ul>
+			<p style="font-size:12px;">Copyright &copy; 2018 Oracle and/or its affiliates. All rights reserved.</p>
+	</div>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>
+<footer>
+</footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+<script>$(document).foundation();</script>
+</body>
+</html>

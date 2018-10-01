@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Using Oracle Argus Analytics</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2017-10-04T8:20:58Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Argus Analytics User's Guide" />
+<meta name="dcterms.identifier" content="E88812-01" />
+<meta name="dcterms.isVersionOf" content="OANEP" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Prev" href="intro.htm" title="Previous" type="text/html" />
+<link rel="Next" href="working.htm" title="Next" type="text/html" />
+<link rel="alternate" href="OANEP.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="OANEP.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="OANEP.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">6/16</span> <!-- End Header -->
+<div id="OANEP512" class="chapter"><a id="CIHDEDEH"></a>
+<h1 class="chapter"><span class="secnum">2</span> Using Oracle Argus Analytics</h1>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The appearance of the user interface that you see in the application may vary from the figures displayed in the subsequent sections.</div>
+<p>See Also:</p>
+<p><span class="italic">Oracle Business Intelligence Administrator Guide and User Guide</span></p>
+<a id="BABBDIEH"></a>
+<div id="OANEP513" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">2.1</span> Overview</h2>
+<p>Oracle Argus Analytics includes dashboards, reports, and metrics that let you view relevant, interactive information&mdash;current as at the last date the data mart was refreshed. It also includes dashboards and reports to access the run-time data.</p>
+<p><span class="italic">Dashboards</span> are access points for information. Each dashboard is designed for a specific job responsibility.</p>
+<p>When you access a dashboard, the information displayed changes based on your security privileges. For example, a user with BIConsumer application role may not be able to see the same data as the user with BIAuthor role.</p>
+<p>A dashboard contains one or more related dashboard <span class="italic">pages</span>. A dashboard page contains a series of related <span class="italic">reports</span> (also called <span class="italic">requests</span>). A report can contain a tabular report, pivot table, or graph. You can drill down to detailed report by clicking the linked data. You can also filter the data that you see in reports using a set of <span class="italic">parameters</span> (called <span class="italic">filters</span>). Figure 2-1 displays the report hierarchy.</p>
+<div id="OANEP514" class="figure">
+<p class="titleinfigure"><a id="sthref13"></a>Figure 2-1 The Report Hierarchy</p>
+<img width="516" height="336" src="img/rep_hierarchy.gif" alt="Description of Figure 2-1 follows" /><br />
+<a id="sthref14" href="img_text/rep_hierarchy.htm">Description of ''Figure 2-1 The Report Hierarchy''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p>In addition to the dashboards and reports that are packaged with Oracle Argus Analytics, you can also create and manage reports or dashboards if you have appropriate permissions. Use Oracle BI Analysis to manage reports.</p>
+<p>OBIEE includes additional applications that are not directly used by Oracle Argus Analytics. These include Oracle BI Agents and Oracle BI Publisher. These applications extend the usefulness of the information provided by Oracle Argus Analytics.</p>
+<p>Use Oracle BI Agents to detect specific analytic results and notify appropriate user or group about the result. Use Oracle BI Publisher to create formatted and printable reports.</p>
+<p><span class="bold">See Also:</span></p>
+<ul>
+<li>
+<p><a href="working.htm#BCGJEGJF">Chapter 3, "Working with Reports"</a> for more information about creating and managing reports.</p>
+</li>
+<li>
+<p><a href="catalog.htm#BABDBFJG">Appendix B, " Oracle Argus Analytics Presentation Catalog"</a> for more information about the columns in Oracle Argus Analytics that you can use to create and modify reports.</p>
+</li>
+<li>
+<p><span class="italic">Oracle Business Intelligence Administrator Guide and User Guide</span>.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect1" -->
+<a id="CIHEAFJD"></a>
+<div id="OANEP515" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">2.2</span> Accessing Oracle Argus Analytics</h2>
+<p>Your security privileges determine what reports you can see and what you can do in Oracle Argus Analytics.</p>
+<div id="OANEP519" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref15"></a>
+<h3 class="sect2"><span class="secnum">2.2.1</span> Viewing a Dashboard</h3>
+<p>Perform the following steps to view a dashboard:</p>
+<ol>
+<li>
+<p>Log in to Oracle Argus Analytics.</p>
+</li>
+<li>
+<p>Click the Dashboard drop-down menu and select the relevant dashboard.</p>
+</li>
+</ol>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You might get the following errors while accessing reports if there is no data in Argus Safety:
+<p><span class="italic">Error Codes: OPR4ONWY:U9IM8TAC:OI2DL65P</span></p>
+<p><span class="italic">State: HY000. Code: 10058. [NQODBC] [SQL_STATE: HY000] [nQSError: 10058] A general error has occurred. [nQSError: 43113] Message returned from OBIS</span>.</p>
+<p>[<span class="italic">nQSError: 23006] The session variable, NQ_SESSION.USER_LN, has no value definition. (HY000)</span></p>
+<p>Conditions that will produce this error:</p>
+<p>1. The connection pool in the RPD is not set to the correct credentials to point to the RPD schema that was created during the install. a. To verify this we can open the RPD in online mode via the BI Administration Tool and check the DB connection details in the RPD, Physical Layer -&gt; OPVA_DWH -&gt; OPVA_CP and OPVA_CP_Initblocks connection pools.</p>
+<p>2. The PVA row level security is inherited from the Argus Safety Instance that it is linked to. The user names that one creates in OBIEE (if using the built-in LDAP of WLS or external LDAP) should be the same as that in the Argus Safety system. For example, if 'admin' is the login for the OBIEE user that has been created, then the same login should have been present in the Argus Safety Instance as well. The OPVA ETLs when run would have already picked up the relevant Enterprise, Case Processing Site, Study, and Product accesses that the user 'admin' has in the Argus Safety Instance and the OPVA RPD applies the same in the PVA requests created via Answers or in the Dashboards.</p>
+<p>3. There is no data in Argus Saftey at the time you are trying to access these reports.</p>
+</div>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BEHIEFEE"></a>
+<div id="OANEP520" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">2.3</span> Using Oracle Business Intelligence</h2>
+<p>Oracle BI helps end-users obtain, view, and analyze the data. After the data has been organized and analyzed, it can provide an organization with the metrics to measure the state of Safety data. These capabilities enable the pharmaceutical organization to make better decisions, take informed action, and implement more efficient business processes.</p>
+<div id="OANEP516" class="sect2"><a id="sthref16"></a>
+<h3 class="sect2"><span class="secnum">2.3.1</span> Logging In</h3>
+<p>To log in to Oracle Argus Analytics, you must have a browser on your computer and a URL, username, and password provided by your company. For the list of supported browsers, versions, and platforms, refer to the Oracle Argus Analytics Installation Guide.</p>
+<ol>
+<li>
+<p>Open your browser and enter the URL provided by your company.</p>
+<p>Typically, the URL to access the dashboards will be</p>
+<p><code dir="ltr">http://&lt;system_name_or_ip_address&gt;:&lt;port_number&gt;/analytics/saw.dll?Dashboard</code></p>
+<div id="OANEP517" class="figure">
+<p class="titleinfigure"><a id="sthref17"></a>Figure 2-2 Oracle Argus Analytics Login Page</p>
+<img width="753" height="529" src="img/login.jpg" alt="Surrounding text describes Figure 2-2 ." /><br /></div>
+<!-- class="figure" --></li>
+<li>
+<p>Enter your user ID and password.</p>
+</li>
+<li>
+<p>Click <span class="bold">Login</span>.</p>
+<p>After your login credentials are authenticated, your default dashboard page is displayed.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<div id="OANEP521" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref18"></a>
+<h3 class="sect2"><span class="secnum">2.3.2</span> Working with Oracle Business Intelligence</h3>
+<p>In the Oracle BI Enterprise Edition (BI EE), you can work with:</p>
+<p><span class="bold">Analysis</span></p>
+<p>This area of OBIEE is also known as Answers. Analysis are queries against an organization's data that provide answers to business questions. Analysis allows you to explore and interact with information by visually presenting data in easy-to-understand formats (such as tables and graphs). You can save, organize, and share the results of analysis. Your organization might also have purchased prebuilt analysis specific to your industry. Pre-built analysis can be used as purchased or modified to suit the information needs of your business.</p>
+<p><span class="bold">Dashboards</span></p>
+<p>This area of OBIEE is also known as Interactive Dashboards. Dashboards provide personalized views of corporate and external information. A dashboard consists of one or more pages that contain content, such as analyses, links to Web sites, Oracle BI Publisher reports, and so on. Dashboards allow you to provide end users with access to analytics information. Your organization might also have purchased preconfigured dashboards that contain prebuilt analyses specific to your industry.</p>
+<p><span class="bold">Filters, Selection Steps, and Prompts</span></p>
+<p>Filters, selection steps, and prompts allow you to limit or specify the data that is displayed in dashboards and analyses.</p>
+<p><span class="bold">Agents</span></p>
+<p>This area of OBIEE is also known as Delivers. Agents enable you to automate your business processes. You can use agents to provide event-driven alerting, scheduled content publishing, and conditional event-driven action execution. Agents can be scheduled or can be triggered by a specific condition, which enables you to deliver timely information to users.</p>
+<p><span class="bold">Conditions</span></p>
+<p>Conditions are objects that return a single Boolean value that is based on the evaluation of an analysis or of a Key Performance Indicator (KPI). You use conditions to determine whether something is to be done, for example whether an agent is to deliver its content.</p>
+<p><span class="bold">Actions</span></p>
+<p>Actions provide functionality to navigate to related content or to invoke operations, functions, or processes in external systems. You can include actions in various objects, such as analyses and dashboard pages. Actions allow users to take the proper action based on the business insight that they gained from the data that they received.</p>
+<p><span class="bold">Scorecards</span></p>
+<p>This area of OBIEE is known as Oracle Scorecard and Strategy Management. Scorecards allow you to model the objectives and initiatives that comprise your corporate strategy, evaluate their performance by assigning KPIs, and determine and display overall performance.</p>
+<p><span class="bold">Other Products</span></p>
+<p>OBIEE interacts in various ways with other products. For example, with the Oracle Business Intelligence Add-in for Microsoft Office, you can access and run analyses from OBIEE directly within your Microsoft Office workspace.</p>
+<div id="OANEP523" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref19"></a>
+<h4 class="sect3"><span class="secnum">2.3.2.1</span> Oracle Business Intelligence Interactive Dashboards</h4>
+<p>Dashboards provide personalized views of corporate and external information. A dashboard consists of one or more pages. Pages can display anything that you can access or open with a Web browser, including the following:</p>
+<p>The results of analysis - The result of an analysis is the output returned from the Oracle BI Server that matches the analysis criteria. It can be shown in various views, such as a table, graph, and gauge. Users can examine and analyze results, print as PDF or HTML, save as PDF, or export them to a spreadsheet.</p>
+<p>Alerts from agents</p>
+<p>Action links and action link menus</p>
+<p>Images</p>
+<p>Text</p>
+<p>Views of folders in the Oracle BI Presentation Catalog</p>
+<p>Links to websites</p>
+<p>Links to documents</p>
+<p>Embedded content (such as Web pages or documents)</p>
+<p>Oracle BI Publisher Reports</p>
+<p>When you open a dashboard, the content of the dashboard is displayed in one or more dashboard pages. Dashboard pages are identified by tabs across the top of the dashboard. A toolbar at the top right contains buttons that let you:</p>
+<p>Edit the dashboard, if you have the appropriate permissions and privileges</p>
+<p>Display various options for working with a Dashboard Page, such as printing the current page</p>
+</div>
+<!-- class="sect3" -->
+<div id="OANEP976" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref20"></a>
+<h4 class="sect3"><span class="secnum">2.3.2.2</span> Oracle Business Intelligence Analysis</h4>
+<p>An analysis is a query against an organization's data that provides answers to business questions. A query contains the underlying SQL statements that are issued to the Oracle BI Server.</p>
+<p>Analysis let you explore and interact with information by visually presenting data in tables, graphs, pivot tables, and so on. You can save, organize, and share the results of analyses.</p>
+<p>Analysis that you create can be saved in the Oracle BI Presentation Catalog and integrated into any OBIEE dashboard. Analyses can be enhanced through features such as graphs, result layout, calculated items, and drilling.</p>
+</div>
+<!-- class="sect3" -->
+<div id="OANEP977" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref21"></a>
+<h4 class="sect3"><span class="secnum">2.3.2.3</span> Oracle Business Intelligence Agents</h4>
+<p>Agents enable you to automate your business processes. You can use them to provide event-driven alerting, scheduled content publishing, and conditional event-driven action execution.</p>
+<p>You can choose:</p>
+<p>A schedule that the Agent runs on</p>
+<p>A data condition that determines what the Agent does</p>
+<p>An analysis that can be distributed</p>
+<p>Actions that can be automatically executed depending on whether the data condition is met</p>
+<p>Agents can dynamically detect information-based problems and opportunities, determine the appropriate individuals to notify, and deliver information to them through a wide range of devices such as e-mail, phones, etc.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BEHFFJIB"></a>
+<div id="OANEP525" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">2.4</span> Performing Common Tasks in Oracle Business Intelligence</h2>
+<a id="BEHIHBGH"></a>
+<div id="OANEP526" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">2.4.1</span> Signing Out of Oracle Business Intelligence Enterprise Edition</h3>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Do not close the browser window to sign out of OBIEE.</div>
+<p>To sign out of OBIEE:</p>
+<ol>
+<li>
+<p>In the global header, click <span class="bold">Sign Out</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BEHCFBCJ"></a>
+<div id="OANEP528" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">2.4.2</span> Using Online Help</h3>
+<p>Oracle Business Intelligence includes Oracle Argus Analytics-specific online help for both dashboards and reports.</p>
+<p>The following image provides a sample view of the Help links (highlighted in yellow) that exist on each page.</p>
+<div id="OANEP978" class="figure">
+<p class="titleinfigure"><a id="sthref22"></a>Figure 2-3 Using The Help Links</p>
+<img width="938" height="584" src="img/opva_help.gif" alt="Surrounding text describes Figure 2-3 ." /><br /></div>
+<!-- class="figure" -->
+<div id="OANEP529" class="tblruleformal">
+<p class="titleintable"><a id="sthref23"></a><a id="sthref24"></a>Table 2-1 Accessing Online Help</p>
+<table class="cellalignment15" title="Accessing Online Help" summary="This table provides information about accessing online help." dir="ltr">
+<thead>
+<tr class="cellalignment2">
+<th class="cellalignment14" id="r1c1-t5">Name of Help Link</th>
+<th class="cellalignment14" id="r1c2-t5">Clicking on this link...</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r2c1-t5" headers="r1c1-t5">
+<p>Help</p>
+</td>
+<td class="cellalignment8" headers="r2c1-t5 r1c2-t5">
+<p>Opens the entire Help system, in an online book format.</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r3c1-t5" headers="r1c1-t5">
+<p>&lt;Name of Dashboard/Page-specific Help&gt;</p>
+</td>
+<td class="cellalignment8" headers="r3c1-t5 r1c2-t5">
+<p>Re-directs to the description about the specific &lt;Dashboard/Page&gt;.</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r4c1-t5" headers="r1c1-t5">
+<p>?</p>
+</td>
+<td class="cellalignment8" headers="r4c1-t5 r1c2-t5">
+<p>Pops up the description about the specific report.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<p>Online help opens in a new browser window. You can scroll down the help page or use hyperlinks to navigate to other topics.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BEHEBIBH"></a>
+<div id="OANEP535" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">2.5</span> Navigating in Oracle Business Intelligence</h2>
+<p>This section explains basic navigation within Oracle BI.</p>
+<div id="OANEP536" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref25"></a>
+<h3 class="sect2"><span class="secnum">2.5.1</span> What is Available to You After Accessing Oracle BI?</h3>
+<p>After signing in to OBIEE, you are presented with one of the following pages, depending on what has been configured for you:</p>
+<ul>
+<li>
+<p>Your personal dashboard, named My Dashboard</p>
+</li>
+<li>
+<p>A Home page</p>
+</li>
+<li>
+<p>A dashboard that is specific to your job function</p>
+</li>
+</ul>
+<p>This page is your starting point for working in OBIEE. As you work, you can use the global header and the Home page as the primary ways to navigate OBIEE.</p>
+<ul>
+<li>
+<p>The Global Header:</p>
+</li>
+</ul>
+<p>The global header is displayed at the top of the OBIEE interface and is always available as you work. It enables you to easily access the functionality that OBIEE provides. For example, you can access the Home page, access dashboards, open objects (such as analyses and dashboard prompts), Create new objects, and so on.</p>
+<ul>
+<li>
+<p>The Home Page</p>
+</li>
+</ul>
+<p>From the Home page, you can learn how to get started with OBIEE, create and modify objects, and browse and manage objects in the catalog. After you have accessed the starting point of a task, the interface then presents you with the page, dialog, or editor that you use to perform the task.</p>
+</div>
+<!-- class="sect2" -->
+<div id="OANEP979" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref26"></a>
+<h3 class="sect2"><span class="secnum">2.5.2</span> What is the OBIEE Home Page?</h3>
+<p>The Home page provides a starting point for performing tasks in OBIEE. The Home page is divided into sections that allow you to quickly begin a specific task, locate an object, or access technical documentation. It also includes sections that allow you to quickly access objects that you have recently viewed, created, or updated, and objects that are accessed the most often by the users assigned to the groups to which you belong.</p>
+<p>Depending on what has been configured as your starting page, you might be presented with the Home page when you sign in to OBIEE.</p>
+<p>Alternatively, you can always navigate to the Home page by clicking the Home page link in the global header.</p>
+<img width="1207" height="696" src="img/homepage.gif" alt="Surrounding text describes homepage.gif." /><br /></div>
+<!-- class="sect2" -->
+<div id="OANEP980" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref27"></a>
+<h3 class="sect2"><span class="secnum">2.5.3</span> What is the OBIEE Global Header?</h3>
+<p>The global header provides quick access to commonly used functions and is always available from the user interface.</p>
+<p>For example, you can use the global header to begin a new task, search the Oracle BI Presentation Catalog, access the product documentation, or view a different object, without having to return to the Home page. The global header also includes the Home page link so that you can quickly access the Home page from other pages.</p>
+<div id="OANEP981" class="figure">
+<p class="titleinfigure"><a id="sthref28"></a>Figure 2-4 The Global Header</p>
+<img width="1045" height="102" src="img/navigate.gif" alt="Surrounding text describes Figure 2-4 ." /><br /></div>
+<!-- class="figure" -->
+<p>The Global Header includes the following components:</p>
+<ul>
+<li>
+<p><span class="bold">Search</span> - Enables you to search the catalog.</p>
+</li>
+<li>
+<p><span class="bold">Advanced</span> - Displays the "Catalog page" in search mode, where you can search for objects in the catalog. In search mode, the "Search pane" is displayed rather than the "Folders pane" within the page.</p>
+</li>
+<li>
+<p><span class="bold">Administration</span> - Available only if you are logged in as an administrator. Displays the Administration page, where you can perform administration tasks such as managing privileges and metadata for maps.</p>
+</li>
+<li>
+<p><span class="bold">Help</span> - Displays the following options:</p>
+<p><span class="bold">xxx Help</span> - (where <span class="italic">xxx</span> is the name of the page, editor, or tab) - Dynamically changes to display the Help topic for the current page, editor, or tab.</p>
+<p><span class="bold">Help Contents</span> - Displays a cascading menu that provides options that link to the tables of contents for OBIEE, BI Publisher, and Marketing.</p>
+<p><span class="bold">Documentation</span> - Displays the documentation library for OBIEE.</p>
+<p><span class="bold">OTN</span> - Displays the Business Intelligence and Data Warehousing Technology Center page on the Oracle Technology Network (OTN).</p>
+<p><span class="bold">About OBIEE</span> - Displays a dialog identifying the OBIEE version and copyright information.</p>
+</li>
+<li>
+<p><span class="bold">Sign Out</span> - Signs you out of OBIEE.</p>
+</li>
+<li>
+<p><span class="bold">Alerts</span> - Available only if one or more alerts have been generated for you. Displays the Alerts dialog, where you can manage your alerts. An alert is a notification that is generated by an agent that delivers personalized and actionable content to specified recipients and to subscribers to the agent.</p>
+</li>
+<li>
+<p><span class="bold">Home</span> - Displays the Home page.</p>
+</li>
+<li>
+<p><span class="bold">Catalog</span> - Displays the Catalog page, where you can locate objects in the catalog and perform tasks specific to those objects.</p>
+</li>
+<li>
+<p><span class="bold">Dashboards</span> - Contains links to all dashboards that are stored within the Dashboards sub-folder of the user's folder or any shared folder (note that dashboards not saved to the Dashboards sub-folders are not displayed from the global header's Dashboard list).</p>
+</li>
+<li>
+<p><span class="bold">New</span> - Displays a list of the objects that you can create. To create an object, select it from the list. The appropriate dialog or editor is displayed for you to create the object.</p>
+</li>
+<li>
+<p><span class="bold">Open</span> - Displays the following options:</p>
+<p><span class="bold">Open</span> - Displays the Open dialog, where you can select the object with which you want to work.</p>
+<p><span class="bold">Recent Objects</span> - Displays a list of the objects that you have recently viewed, created, or updated. You can use this list to select an object with which you want to work.</p>
+<p><span class="bold">Most Popular Objects</span> - Displays a list of the objects that are accessed the most often by the users that are assigned to the groups to which you belong. You can use this list to select an object with which you want to work.</p>
+</li>
+<li>
+<p><span class="bold">Signed In As username</span> - (where <span class="italic">username</span> is the user name that your current session is using) Displays the following options:</p>
+<p><span class="bold">My Account</span> - Displays the My Account dialog, where you can specify your preferences, such as time zone, delivery devices, and delivery profile.</p>
+<p><span class="bold">Act As</span> - Available only if your organization has enabled this functionality and you have been granted the appropriate permissions. Enables you to act as another user.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<div id="OANEP982" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref29"></a>
+<h3 class="sect2"><span class="secnum">2.5.4</span> Setting Preferences</h3>
+<p>You and end-users can set personal preferences for OBIEE. By using the My Account dialog (depending on your privileges), you can:</p>
+<ul>
+<li>
+<p>View general account information, such as your display name and user ID</p>
+</li>
+<li>
+<p>View and modify your preferences, such as language, time zone, and currency</p>
+</li>
+<li>
+<p>View and modify your preferences for BI Publisher, such as location and time zone</p>
+</li>
+<li>
+<p>View and modify your delivery options for agents</p>
+</li>
+<li>
+<p>View the roles and groups to which you belong</p>
+</li>
+</ul>
+<div id="OANEP983" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref30"></a>
+<h4 class="sect3"><span class="secnum">2.5.4.1</span> Steps to Set Preferences</h4>
+<p>Execute the following steps to set preferences:</p>
+<ol>
+<li>
+<p>In the global header, click <span class="bold">Signed In As &lt;username&gt;</span> and select <span class="bold">My Account</span>. The My Account dialog is displayed.</p>
+</li>
+<li>
+<p>Complete the appropriate settings.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span> to save your changes.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<a id="BEHIDBCB"></a>
+<div id="OANEP532" class="sect3">
+<h4 class="sect3"><span class="secnum">2.5.4.2</span> Exporting the Oracle BI Results</h4>
+<p>Oracle BI provides options for exporting results into different formats. This is done using the Export link available in each report and dashboard. The different export options are listed as follows:</p>
+<ul>
+<li>
+<p>Adobe PDF</p>
+</li>
+<li>
+<p>Microsoft Excel 2003+</p>
+</li>
+<li>
+<p>Microsoft Powerpoint (Powerpoint 2003, Powerpoint 2007+)</p>
+</li>
+<li>
+<p>WebArchive (mht)</p>
+</li>
+<li>
+<p>Data (CSV Format, Tab delimited format, and XML)</p>
+</li>
+</ul>
+<p>The following steps assume that you are already on a result page:</p>
+<ul>
+<li>
+<p><span class="bold">Exporting into a PDF</span></p>
+<p>The result can be exported in PDF format with the following steps:</p>
+<ol>
+<li>
+<p>Click <span class="bold">Export</span>.</p>
+</li>
+<li>
+<p>Select the <span class="bold">PDF</span> option.</p>
+</li>
+<li>
+<p>The <span class="bold">File Download</span> dialog opens. Click <span class="bold">Open</span> or <span class="bold">Save</span> in the File Download dialog.</p>
+</li>
+<li>
+<p>Based on the user action, the result would either open in PDF format (if Adobe Reader is available in the machine) or will proceed with the Save.</p>
+</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li>
+<p><span class="bold">Exporting to Microsoft Excel 2003+</span></p>
+<p>The result can be stored in Excel format with the following steps:</p>
+<ol>
+<li>
+<p>Click <span class="bold">Export</span>.</p>
+</li>
+<li>
+<p>Select the <span class="bold">Excel 2003+</span> option.</p>
+</li>
+<li>
+<p>The <span class="bold">File Download</span> dialog opens. Click <span class="bold">Open</span> or <span class="bold">Save</span> in the File Download dialog.</p>
+</li>
+<li>
+<p>Based on the user action, the result would either open as an Excel sheet (if Microsoft Excel is available in the machine) or will proceed with the Save.</p>
+</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li>
+<p><span class="bold">Exporting to Microsoft Powerpoint</span></p>
+<p>The result can be stored in Powerpoint slides with this option. This option also has two sub-options: Powerpoint 2003 and Powerpoint 2007+.</p>
+<p>Execute the following steps:</p>
+<ol>
+<li>
+<p>Click <span class="bold">Export</span>.</p>
+</li>
+<li>
+<p>Select the <span class="bold">Powerpoint</span> option.</p>
+</li>
+<li>
+<p>Select from one of the secondary options: <span class="bold">Powerpoint 2003</span> or Powerpoint 2007+.</p>
+</li>
+<li>
+<p>The <span class="bold">File Download</span> dialog opens. Click <span class="bold">Open</span> or <span class="bold">Save</span> in the File Download dialog.</p>
+</li>
+<li>
+<p>Based on the user action, the result would either open in Powerpoint (if Microsoft Powerpoint is available in the machine) or will proceed with the Save.</p>
+</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li>
+<p><span class="bold">Exporting to Web Archive (mht)</span></p>
+<p>Execute the following steps:</p>
+<ol>
+<li>
+<p>Click <span class="bold">Export</span>.</p>
+</li>
+<li>
+<p>Select the <span class="bold">WebArchive (mht)</span> option.</p>
+</li>
+<li>
+<p>The <span class="bold">File Download</span> dialog opens. Click <span class="bold">Open</span> or <span class="bold">Save</span> in the File Download dialog.</p>
+</li>
+<li>
+<p>Based on the user action, the result would either open as an MHT file or will proceed with the Save.</p>
+</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li>
+<p><span class="bold">Exporting the results in Data Format</span></p>
+<p>The results can be exported in CSV format, tab delimited format, and XML format.</p>
+<p>Execute the following steps:</p>
+<ol>
+<li>
+<p>Click <span class="bold">Export</span>.</p>
+</li>
+<li>
+<p>Select the <span class="bold">Data</span> option.</p>
+</li>
+<li>
+<p>Select the <span class="bold">CSV</span> sub-option.</p>
+</li>
+<li>
+<p>The <span class="bold">File Download</span> dialog opens. Click <span class="bold">Open</span> or <span class="bold">Save</span> in the File Download dialog.</p>
+</li>
+<li>
+<p>Based on the user action, the result would either open as a CSV formatted file with the application for which CSV format is configured or will proceed with the Save.</p>
+</li>
+</ol>
+</li>
+</ul>
+<div id="OANEP984" class="sect4"><a id="sthref31"></a>
+<h5 class="sect4"><span class="secnum">2.5.4.2.1</span> Add to Briefing Book</h5>
+<p>This section explains about briefing books and steps to add contents to briefing books.</p>
+<div id="OANEP985" class="sect4"><a id="sthref32"></a>
+<h5 class="sect4"><span class="secnum">2.5.4.2.2</span> About Briefing Books</h5>
+<p>A briefing book is a collection of static or updatable snapshots of dashboard pages, individual analyses, and BI Publisher reports. If your organization is licensed for Oracle BI Briefing Books, you can work with briefing books. A briefing book allows you to perform the following tasks:</p>
+<ul>
+<li>
+<p>Add the content of dashboard pages (including pages that contain BI Publisher reports) or individual analyses to new or existing briefing books.</p>
+</li>
+<li>
+<p>Edit briefing books to reorder content, delete content, and change the content type, navigation link properties, and content description.</p>
+</li>
+<li>
+<p>Download briefing books in PDF or MHTML format for printing and viewing.</p>
+</li>
+<li>
+<p>Add a list of briefing books to a dashboard page.</p>
+</li>
+<li>
+<p>Update, schedule, and deliver briefing books using agents, if your organization is licensed to Oracle Business Intelligence Delivers.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect4" -->
+<div id="OANEP986" class="sect4"><a id="sthref33"></a>
+<h5 class="sect4"><span class="secnum">2.5.4.2.3</span> Adding Content to Briefing Books</h5>
+<p>Execute the following steps to add content to a briefing book:</p>
+<ol>
+<li>
+<p>Navigate to the page to add or to the page that contains the analysis to be added.</p>
+</li>
+<li>
+<p>Perform one of the following actions:</p>
+<p>To add the contents of the dashboard page to a briefing book, click the <span class="bold">Page Options</span> toolbar button on the Dashboard page and select <span class="bold">Add To Briefing Book</span>.</p>
+<p>To add the results of an individual analysis to a briefing book, locate the analysis on the dashboard and click the <span class="bold">Add to Briefing Book</span> link.</p>
+</li>
+<li>
+<p>The <span class="bold">Save Briefing Book Content</span> dialog is displayed.</p>
+</li>
+<li>
+<p>Click <span class="bold">Browse</span> to display the Save As dialog.</p>
+</li>
+<li>
+<p>In the <span class="bold">Save As</span> dialog:</p>
+<p>To save the contents to a new briefing book, specify the location in which to save the briefing book in the <span class="bold">Save In</span> field. Enter a name for the briefing book in the <span class="bold">Name</span> field. You can also enter a description in the <span class="bold">Description</span> field (optional), and click <span class="bold">OK</span>.</p>
+<p>To save the contents to an existing briefing book, select the briefing book and click <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>In the <span class="bold">Save Briefing Book Content</span> dialog, complete the remaining fields as appropriate.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>The content is now added to the briefing book.</p>
+</li>
+</ol>
+<p>For more information about the briefing book, please refer to the OBIEE Administration and User Guide or Help files.</p>
+</div>
+<!-- class="sect4" --></div>
+<!-- class="sect4" --></div>
+<!-- class="sect3" -->
+<div id="OANEP987" class="sect3"><a id="sthref34"></a>
+<h4 class="sect3"><span class="secnum">2.5.4.3</span> Sorting Options Menu and Buttons</h4>
+<p>This section explains about sorting values in columns.</p>
+<div id="OANEP988" class="sect4"><a id="sthref35"></a>
+<h5 class="sect4"><span class="secnum">2.5.4.3.1</span> Sorting Mechanisms</h5>
+<p>You can use one of the following mechanisms to sort values in columns:</p>
+<ul>
+<li>
+<p>Right-click in the column header of pivot tables and tables to display the following list of options for sorting the columns. In the Selected Columns pane, click the Options button. You can also right-click to display the Right-Click Menu for Tables and Pivot Tables, where you can select options for sorting.</p>
+</li>
+<li>
+<p><span class="bold">Sort Ascending</span> - Sorts the values in the column by ascending order, as a first-level sort. For example, string values sort alphabetically A through Z, numbers sort lowest to highest, and dates sort earliest to latest. In the Selected Columns pane, when you select this option as the first sort, a Sort button is displayed to the left of the column name in the Selected Columns pane. If you later add another sort, then the Sort button includes the number 1.</p>
+</li>
+<li>
+<p><span class="bold">Sort Descending</span> - Sorts the values in the column by descending order, as a first-level sort. In the Selected Columns pane, when you select this option as the first sort, a Sort button is displayed to the left of the column name in the Selected Columns pane. If you later add another sort, then the Sort button includes the number 1.</p>
+</li>
+<li>
+<p><span class="bold">Add Ascending Sort</span> - Specifies that an ascending sort for this column is added as another sort for the analysis. In the Selected Columns pane, when you select this option, a Sort button with a number such as 2 or 3 is displayed to the left of the column name in the Selected Columns pane.</p>
+</li>
+<li>
+<p><span class="bold">Add Descending Sort</span> - Specifies that an descending sort for this column is added as another sort for the analysis. In the Selected Columns pane, when you select this option, a Sort button with a number such as 2 or 3 is displayed to the left of the column name in the Selected Columns pane.</p>
+</li>
+<li>
+<p><span class="bold">Clear Sort</span> - Removes the sort specification for the specified column. This option works differently in the Selected Columns pane than in other places. If you make sort specifications in both the Selected Columns pane and in the view itself, then you return to the Selected Columns pane and click Clear Sort, only the sort that you specified in the Selected Columns pane is removed. A sort that you specified in the view remains.</p>
+</li>
+<li>
+<p><span class="bold">Clear Sorts in All Columns or Clear All Sorts in View</span> - Removes all sort specifications that you have made. The Clear Sorts in All Columns option works differently in the Selected Columns pane than in other places. If you make sort specifications in both the Selected Columns pane and in the view itself, then you return to the Selected Columns pane and click Clear Sorts for All Columns, only the sorts that you specified in the Selected Columns pane are removed. Sorts that you specified in the view remain.</p>
+</li>
+<li>
+<p>Hover the mouse pointer over the area to the right of the column name in the header of a pivot table or table and click either the upward facing triangle (Sort Ascending) or the downward facing triangle (Sort Descending) for that column. These sort specifications override those that you make with the right-click menu. Hovering is not available in the Selected Columns pane.</p>
+</li>
+</ul>
+<p>If you see a shaded-in sort button in the column header or the row header, then you know that the column contains a primary sort. You can add a second-level or third-level sort by hovering over another innermost column header or row header and clicking the appropriate sort button.</p>
+<p>These options are also available in the Results tab: Data View editor, the Results tab: Table editor, and in views on dashboards. The Sort Ascending and Sort Descending triangles are not available in the Selected Columns pane or the Layout pane.</p>
+</div>
+<!-- class="sect4" --></div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<div id="OANEP541" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref36"></a>
+<h3 class="sect2"><span class="secnum">2.5.5</span> Drilling In Results</h3>
+<p>Many of the results that are displayed in views represent hierarchical data structures. The metadata specifies these hierarchies, and this enables you to access the different levels of detail within them. For example, information in a sales graph might be categorized by region. Clicking a specific region in the graph might display each country within that region, if the country is the next level within the hierarchy of the metadata. Such clicking is referred to as drilling.</p>
+<p>If the content designer has set up views for drilling, then you can drill in them on dashboards.</p>
+<div id="OANEP989" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref37"></a>
+<h4 class="sect3"><span class="secnum">2.5.5.1</span> What Is Drilling?</h4>
+<p>Drilling is a way to navigate through data in views quickly and easily.</p>
+<ul>
+<li>
+<p>You drill down to display data in more detail, which displays more members.</p>
+<p>You can drill down to an actual item in the database. For example, if you work in sales, you can drill down to the city level within a sales analysis, and observe that there is a large sale pending in Paris.</p>
+</li>
+<li>
+<p>You drill up to display data in less detail, in hierarchical columns.</p>
+<p>For example, you might drill up from a month value to see a summary for the whole year. You can drill up in the current hierarchy, either for the entire column at the header level or for individual members. You can drill up from District to Region. Drilling up hides the current level (such as District) and retains the higher level (such as Region).</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<div id="OANEP990" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref38"></a>
+<h4 class="sect3"><span class="secnum">2.5.5.2</span> Where Can I Drill?</h4>
+<p>You can drill in the following types of views:</p>
+<ul>
+<li>
+<p>Table and Pivot Table</p>
+</li>
+<li>
+<p>Graphs</p>
+</li>
+<li>
+<p>Maps</p>
+</li>
+<li>
+<p>Drilling in Tables and Pivot Tables</p>
+</li>
+</ul>
+<p>When you drill down in a table or a pivot table, the detail level data is added to the current data. For example, when you drill from a continent, the table displays data for the continent and for the countries in that continent. For an attribute column, the list of members in the header is expanded, and it includes the original member.</p>
+<p>The way that you drill in tables and pivot tables depends on the column type, as described in the following sections:</p>
+<div id="OANEP991" class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref39"></a>
+<h5 class="sect4"><span class="secnum">2.5.5.2.1</span> Drilling in Attribute Columns</h5>
+<p>To drill in an attribute column, click the heading or member in which you want to drill. When you hover over the value before clicking, an underline is displayed below the value to indicate that you can click to drill.</p>
+<p>When you drill in an attribute column, you add the lower level to the view. All views are affected by drilling in an attribute column, which is equivalent to a filter drill. After you click the value, a column is added to the analysis and a filter is automatically created and listed in the Criteria tab.</p>
+<p>You cannot drill on groups for attribute columns. To see the definition of a group for an attribute column, edit the corresponding step in the Selection Steps pane.</p>
+</div>
+<!-- class="sect4" -->
+<div id="OANEP992" class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref40"></a>
+<h5 class="sect4"><span class="secnum">2.5.5.2.2</span> Drilling in Hierarchical Columns</h5>
+<p>To drill in a hierarchical column, click the Expand and Collapse icons beside the members. Click to expand or collapse one level. For example, expanding from Total Products to Products inserts the Product members while retaining the value for Total Products.</p>
+<p>When you drill in a hierarchical column, you expand and collapse the nodes of data that are in the view. Drilling in a hierarchical column affects only that particular view. No other views are affected.</p>
+<p>Drilling in level-based hierarchies and value-based hierarchies works the same. Each time you drill in a hierarchy, you expand or collapse one level. For example, if the hierarchy has a level for continents, regions, and cities, and the view shows continent data, you can expand from Australia down one level to display regions in Australia. From there, you can expand one level from a region, to cities in that region, or you can collapse one level, back to continents.</p>
+<p>When you drill, the drill state is preserved. If you collapse at a higher level and re-expand, then the members are re-displayed at the same drill point.</p>
+<p>When you click the Collapse icon, you collapse back to the current level any levels in the hierarchy that are present in the analysis, regardless of whether they were added by drilling down or by adding the levels from the Subject Areas pane.</p>
+<p>You can perform asymmetric drilling, which enables you to drill various members to different levels. For example, if you expand World, then you might see Americas, Asia, and Australia at the same second-level for continents. You can then drill Americas to expand it and see its regions, while Asia and Australia are not expanded.</p>
+<p>You can expand and collapse the members of a group for hierarchical columns. For example, if you have a group that includes cities and the group is included in a view, then you see the cities when you click the group name.</p>
+</div>
+<!-- class="sect4" -->
+<div id="OANEP993" class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref41"></a>
+<h5 class="sect4"><span class="secnum">2.5.5.2.3</span> Drilling in Graphs</h5>
+<p>When you drill down in a graph, the detail level data replaces the current data. For example, when you drill down from a continent, the graph displays data for the countries in that continent, but not for the continent itself.</p>
+<p>You can drill down in the following ways:</p>
+<ul>
+<li>
+<p>You can click a label (for which drilling is available) on any axis or in the legend to drill down. A change in the mouse pointer indicates that drilling is available.</p>
+</li>
+<li>
+<p>If the graph contains only attribute columns and measure columns, then you can click a data point to drill all columns.</p>
+</li>
+<li>
+<p>If the graph contains multiple columns including at least one hierarchical column, then when you click a label or a data point, you see a menu from which you can select which columns to drill down. If there are action links available, then the menu also displays those links.</p>
+</li>
+</ul>
+<p>You do not drill up in a graph. Click the <span class="bold">Back</span> button on the browser to return to a previous graph.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The time series line graph does not support drill down on a time column where data types other than data or date-time are used.</div>
+</div>
+<!-- class="sect4" --></div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<div id="OANEP994" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref42"></a>
+<h3 class="sect2"><span class="secnum">2.5.6</span> Printing an Oracle BI Dashboard or Saved Request</h3>
+<p>You can display printer-friendly versions of existing dashboards and requests. A printer-friendly version does not contain any extraneous links or other hypertext items.</p>
+<p>You can print using HTML or Adobe PDF (Portable Document Format). Adobe PDF is the only print option available for Oracle BI Publisher reports. Adobe Reader 6.0 or greater is required to print using Adobe PDF.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The HTML method of printing relies on the print handling capabilities of your browser. If you do not get the results you want, choose PDF to open, and then print the dashboard or request.</div>
+<p>To print a dashboard or a request:</p>
+<ol>
+<li>
+<p>Navigate to an existing dashboard or request.</p>
+</li>
+<li>
+<p>To print a request, click the <span class="bold">Print</span> link, and then choose <span class="bold">HTML</span> or <span class="bold">PDF</span>.</p>
+<p>To print a dashboard page, click the following icon at the bottom of the dashboard, and choose HTML or PDF: <img width="25" height="21" src="img/icon_print.gif" alt="Surrounding text describes icon_print.gif." /><br /></p>
+<ul>
+<li>
+<p>For HTML, a new window shows the selected item without the extraneous links. Choose <span class="bold">File &gt; Print</span> on the browser menu.</p>
+</li>
+<li>
+<p>For PDF, use the options available in the Adobe PDF window to save or print the file.</p>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<div id="OANEP995" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref43"></a>
+<h3 class="sect2"><span class="secnum">2.5.7</span> Emailing an Oracle BI Dashboard Page or Request</h3>
+<p>You can email a dashboard page or a request as an attachment. The format you use depends on your browser, such as Web Archive, Single File (.mht) in Internet Explorer or Mozilla Archive Format (.maf) in Mozilla and Firefox.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The Mozilla Archive Format capability is available as a separately downloaded plug-in.</div>
+<p>In any browser, you can also save a dashboard page or request as a collection of HTML files. You can then zip and email the corresponding directory of associated files.</p>
+<p>To email a dashboard page or request:</p>
+<ol>
+<li>
+<p>Navigate to the dashboard page or request that you want to send.</p>
+</li>
+<li>
+<p>To email a request, click the <span class="bold">Print</span> link, and then choose <span class="bold">HTML</span> or <span class="bold">PDF</span>. To email a dashboard page, locate and click the Print icon at the bottom of the dashboard, and then choose HTML or PDF.</p>
+<p>A new browser window opens that contains the dashboard page or the request.</p>
+</li>
+<li>
+<p>From the browser's toolbar, choose <span class="bold">File &gt; Save As</span>.</p>
+</li>
+<li>
+<p>Save the file to the desired location, with the appropriate file type for your browser.</p>
+</li>
+<li>
+<p>Send the saved attachment using an email application.</p>
+</li>
+</ol>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The saved attachments can also be used as a means to archive and restore requests as they exist at a particular point in time.</div>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment1">
+<tr>
+<td class="cellalignment8">
+<table class="cellalignment6">
+<tr>
+<td class="cellalignment5"><a href="intro.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment5"><a href="working.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment10">
+<table class="cellalignment4">
+<tr>
+<td class="cellalignment5"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment5"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment5"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment5"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

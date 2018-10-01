@@ -1,0 +1,3356 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Excel.Sheet>
+<meta name=Generator content="Microsoft Excel 15">
+<link id=Main-File rel=Main-File href="../index.htm">
+<link rel=File-List href=filelist.xml>
+<link rel=Stylesheet href=stylesheet.css>
+<style>
+<!--table
+	{mso-displayed-decimal-separator:"\.";
+	mso-displayed-thousand-separator:"\,";}
+@page
+	{margin:.75in .7in .75in .7in;
+	mso-header-margin:.3in;
+	mso-footer-margin:.3in;}
+-->
+</style>
+<![if !supportTabStrip]><script language="JavaScript">
+<!--
+function fnUpdateTabs()
+ {
+  if (parent.window.g_iIEVer>=4) {
+   if (parent.document.readyState=="complete"
+    && parent.frames['frTabs'].document.readyState=="complete")
+   parent.fnSetActiveSheet(0);
+  else
+   window.setTimeout("fnUpdateTabs();",150);
+ }
+}
+
+if (window.name!="frSheet")
+ window.location.replace("../index.htm");
+else
+ fnUpdateTabs();
+//-->
+</script>
+<![endif]>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+
+<body link="#0563C1" vlink="#954F72">
+
+<table summary="" border=0 cellpadding=0 cellspacing=0 width=2916 style='border-collapse:
+ collapse;table-layout:fixed;width:2187pt'>
+ <col width=31 style='mso-width-source:userset;mso-width-alt:1133;width:23pt'>
+ <col width=391 style='mso-width-source:userset;mso-width-alt:14299;width:293pt'>
+ <col width=565 style='mso-width-source:userset;mso-width-alt:20662;width:424pt'>
+ <col width=124 style='mso-width-source:userset;mso-width-alt:4534;width:93pt'>
+ <col width=155 style='mso-width-source:userset;mso-width-alt:5668;width:116pt'>
+ <col width=418 style='mso-width-source:userset;mso-width-alt:15286;width:314pt'>
+ <col width=501 style='mso-width-source:userset;mso-width-alt:18322;width:376pt'>
+ <col width=731 style='mso-width-source:userset;mso-width-alt:26733;width:548pt'>
+ <tr height=20 style='height:15.0pt'>
+  <td colspan=2 height=20 class=xl77 width=422 style='height:15.0pt;width:316pt'><a
+  href="https://docs.oracle.com/health-sciences/cleartrial/index.html"
+  target="_parent"><span style='color:#00B0F0'>&lt; Back to Oracle Help Center</span></a></td>
+  <td width=565 style='width:424pt'>&nbsp;</td>
+  <td width=124 style='width:93pt'>&nbsp;</td>
+  <td width=155 style='width:116pt'>&nbsp;</td>
+  <td width=418 style='width:314pt'>&nbsp;</td>
+  <td width=501 style='width:376pt'>&nbsp;</td>
+  <td width=731 style='width:548pt'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td class=xl65>Switch between tabs using the controls in the bottom left.</td>
+  <td colspan=6 style='mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=40 style='height:30.0pt;mso-xlrowspan:2'>
+  <td height=40 colspan=8 style='height:30.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr class=xl65 height=20 style='height:15.0pt'>
+  <td height=20 class=xl65 style='height:15.0pt'>&nbsp;</td>
+  <td class=xl65>Variable Name</td>
+  <td class=xl65>Description</td>
+  <td class=xl65>Scope</td>
+  <td class=xl65>Data Type</td>
+  <td class=xl65>UI Field (if applicable)</td>
+  <td class=xl65>Comments</td>
+  <td class=xl65>UI Comments</td>
+ </tr>
+ <tr height=6 style='mso-height-source:userset;height:4.5pt'>
+  <td height=6 colspan=8 style='height:4.5pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$bioFactor</td>
+  <td>Indication-specific factor of complexity</td>
+  <td>Study</td>
+  <td>floating-point number</td>
+  <td>--</td>
+  <td>Indication-specific value</td>
+  <td>Can be used in a field on any tab</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$edcFactor</td>
+  <td>Indication-specific factor of complexity related to EDC</td>
+  <td>Study</td>
+  <td>floating-point number</td>
+  <td>--</td>
+  <td>Indication-specific value</td>
+  <td>Can be used in a field on any tab</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$edcMaturityLevel</td>
+  <td>Represents the choice of maturity level for EDC</td>
+  <td>Study</td>
+  <td>integer (identifier)</td>
+  <td>Data -&gt; EDC Maturity Level</td>
+  <td>Corresponds to EDC Maturity Level Choices shown on the Lookups tab</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Data tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$indicationID</td>
+  <td>Numeric identifier of the Indication</td>
+  <td>Study</td>
+  <td>integer (identifier)</td>
+  <td>--</td>
+  <td>Corresponds to the Indications Lookup Table on the Lookups tab</td>
+  <td>Can be used in a field on any tab</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$isCrossoverTrialDesign</td>
+  <td>Will subjects cross between treatment arms (e.g. Latin Square)</td>
+  <td>Study</td>
+  <td>boolean</td>
+  <td>Treatment -&gt; Trial Design</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$isEDC</td>
+  <td>Indicates whether data collection method is Electronic Data Capture</td>
+  <td>Study</td>
+  <td>boolean</td>
+  <td>Data -&gt; Data Collection Method</td>
+  <td>Corresponds specifically to the choice of &quot;Electronic Data
+  Capture&quot; as the Data Co<span style='display:none'>llection Method;<span
+  style='mso-spacerun:yes'>&nbsp; </span>returns false if the choice is EDC 3rd
+  Party</span></td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Data tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$isEDCThirdParty</td>
+  <td>Indicates whether Electronic Data Capture is done by a third-party</td>
+  <td>Study</td>
+  <td>boolean</td>
+  <td>Data -&gt; Data Collection Method</td>
+  <td>Corresponds specifically to the choice of<span style='mso-spacerun:yes'>&nbsp;
+  </span>&quot;EDC 3rd Party&quot;<span style='mso-spacerun:yes'>&nbsp; </span>as
+  the Data Collection <span style='display:none'>Method;<span
+  style='mso-spacerun:yes'>&nbsp; </span>returns false if the choice is
+  &quot;Electronic Data Capture&quot;</span></td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Data tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$isElectronicDiary</td>
+  <td>Indicates whether subject diary pages are online</td>
+  <td>Study</td>
+  <td>boolean</td>
+  <td>Treatment -&gt; Will there be an electronic subject diary?</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$isEndpointTrial</td>
+  <td>Indicates whether the trial is modeled as an endpoint trial</td>
+  <td>Study</td>
+  <td>boolean</td>
+  <td>Treatment -&gt; Is this an endpoint study?</td>
+  <td>Always false for Phase 1 (HV)</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$isMedicalMonitoring24by7</td>
+  <td>Indicates whether 24 x 7 medical monitoring is expected</td>
+  <td>Study</td>
+  <td>boolean</td>
+  <td>Monitoring -&gt; 24/7 coverage</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Monitoring tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$isOnsiteMonitoringUsed</td>
+  <td>Indicates whether onsite monitoring visits are expected</td>
+  <td>Location</td>
+  <td>boolean</td>
+  <td>Monitoring -&gt; Monitoring will be performed</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Monitoring tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$isOutsourced</td>
+  <td>Returns true if the task is assigned to a vendor<span
+  style='mso-spacerun:yes'>&nbsp;</span></td>
+  <td>Either</td>
+  <td>boolean</td>
+  <td>Assignments -&gt; Assign to&#x0085;</td>
+  <td>&nbsp;</td>
+  <td>Can only be used for a Level of Effort algorithm for a resource
+  performing a task<span style='mso-spacerun:yes'>&nbsp;</span></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$isParallelTrialDesign</td>
+  <td>Will treatment arms run in parallel with separate subject populations</td>
+  <td>Study</td>
+  <td>boolean</td>
+  <td>Treatment -&gt; Trial Design</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$isPhaseFourNoInd</td>
+  <td>Is this a Phase IV (No IND) trial</td>
+  <td>Study</td>
+  <td>boolean</td>
+  <td>--</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$isPhaseFourWithInd</td>
+  <td>Is this a Phase IV (With IND) trial</td>
+  <td>Study</td>
+  <td>boolean</td>
+  <td>--</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$isPhaseOneHV</td>
+  <td>Is this a Phase One (Healthy Volunteers) trial</td>
+  <td>Study</td>
+  <td>boolean</td>
+  <td>--</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$isPhaseOneOncologyOrVaccines</td>
+  <td>Is this a Phase One Oncology or Vaccines trial</td>
+  <td>Study</td>
+  <td>boolean</td>
+  <td>--</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$isPhaseThree</td>
+  <td>Is this a Phase III trial</td>
+  <td>Study</td>
+  <td>boolean</td>
+  <td>--</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$isPhaseTwo</td>
+  <td>Is this a Phase II trial</td>
+  <td>Study</td>
+  <td>boolean</td>
+  <td>--</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$isPhoneBasedMonitoringUsed</td>
+  <td>Indicates whether onsite monitoring visits are expected</td>
+  <td>Location</td>
+  <td>boolean</td>
+  <td>Monitoring -&gt; Monitoring will be performed</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Monitoring tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$medicalMonitoringFactor</td>
+  <td>Indication-specific factor of complexity related to medical monitoring</td>
+  <td>Study</td>
+  <td>floating-point number</td>
+  <td>--</td>
+  <td>Indication-specific value</td>
+  <td>Can be used in a field on any tab</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$mohDelay</td>
+  <td>Location-specific regulatory delay</td>
+  <td>Location</td>
+  <td>integer</td>
+  <td>Locations -&gt; MOH/FDA Delay</td>
+  <td>if used in a study-scoped formula, returns 0</td>
+  <td>Can be used in a field on any tab</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$monitoringTimeRequiredForBaselineVisit</td>
+  <td>The number of minutes required to monitor pages collected during baseline
+  visit</td>
+  <td>Study</td>
+  <td>floating-point number</td>
+  <td class=xl72>Treatment -&gt; Baseline visit monitoring time required (in
+  minutes)</td>
+  <td>Applies only to crossover trials</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numBednightsDuringWashoutPeriod</td>
+  <td>The number of bednights expected during washout period</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td class=xl72>Treatment -&gt; Number of bednights during the washout period</td>
+  <td>Applies only to Phase 1 (HV) crossover trials</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numBedNightsTreatmentA</td>
+  <td>The number of nights subjects will be confined to the study center for
+  treatment A</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; A -&gt; Number of bednights</td>
+  <td>Applies only to Phase 1 (HV) trials</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numBedNightsTreatmentB</td>
+  <td>The number of nights subjects will be confined to the study center for
+  treatment B</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; B -&gt; Number of bednights</td>
+  <td>Applies only to Phase 1 (HV) trials</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numBedNightsTreatmentC</td>
+  <td>The number of nights subjects will be confined to the study center for
+  treatment C</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; C -&gt; Number of bednights</td>
+  <td>Applies only to Phase 1 (HV) trials</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numBedNightsTreatmentD</td>
+  <td>The number of nights subjects will be confined to the study center for
+  treatment D</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; D -&gt; Number of bednights</td>
+  <td>Applies only to Phase 1 (HV) trials</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numBedNightsTreatmentE</td>
+  <td>The number of nights subjects will be confined to the study center for
+  treatment E</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; E -&gt; Number of bednights</td>
+  <td>Applies only to Phase 1 (HV) trials</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numCohortEscalationReviews</td>
+  <td>The number of cohort escalation reviews</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>--</td>
+  <td>Total across (scope)</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numCohortEscalationReviewsTreatmentA</td>
+  <td>The number of cohort escalation reviews for treatment A</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; A -&gt; Cohort escalation reviews</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numCohortEscalationReviewsTreatmentB</td>
+  <td>The number of cohort escalation reviews for treatment B</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; B -&gt; Cohort escalation reviews</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numCohortEscalationReviewsTreatmentC</td>
+  <td>The number of cohort escalation reviews for treatment C</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; C -&gt; Cohort escalation reviews</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numCohortEscalationReviewsTreatmentD</td>
+  <td>The number of cohort escalation reviews for treatment D</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; D -&gt; Cohort escalation reviews</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numCohortEscalationReviewsTreatmentE</td>
+  <td>The number of cohort escalation reviews for treatment E</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; E -&gt; Cohort escalation reviews</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numCrfBooksPrinted</td>
+  <td>The number of CRF books to be printed</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>--</td>
+  <td>This is based on the number of subjects</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Data tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numCrfPagesAudited</td>
+  <td>The number of CRF Page equivalents to be audited</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>--</td>
+  <td>This is based on Percent of database data to audit</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Data tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numCrfPagesInBaselineVisit</td>
+  <td>The number of CRF pages to be collected during baseline visit</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; Number of CRF pages collected in the baseline visit</td>
+  <td>Applies only to crossover trials*</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numCrfPagesPerExtendedVisitTreatmentA</td>
+  <td>The number of CRF pages per extended visit for treatment A</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; A -&gt; Average CRF pages per extended visit</td>
+  <td>Applies only to endpoint studies</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numCrfPagesPerExtendedVisitTreatmentB</td>
+  <td>The number of CRF pages per extended visit for treatment B</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; B -&gt; Average CRF pages per extended visit</td>
+  <td>Applies only to endpoint studies</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numCrfPagesPerExtendedVisitTreatmentC</td>
+  <td>The number of CRF pages per extended visit for treatment C</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; C -&gt; Average CRF pages per extended visit</td>
+  <td>Applies only to endpoint studies</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numCrfPagesPerExtendedVisitTreatmentD</td>
+  <td>The number of CRF pages per extended visit for treatment D</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; D -&gt; Average CRF pages per extended visit</td>
+  <td>Applies only to endpoint studies</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numCrfPagesPerExtendedVisitTreatmentE</td>
+  <td>The number of CRF pages per extended visit for treatment E</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; E -&gt; Average CRF pages per extended visit</td>
+  <td>Applies only to endpoint studies</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numCrfPagesPerScreenFailure</td>
+  <td>The number of CRF pages collected for each screen failure</td>
+  <td>Location</td>
+  <td>integer</td>
+  <td>Subject -&gt; Number of CRF pages per screen failure</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Subject tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numCrfPagesPerSubjectTreatmentA</td>
+  <td>The number of CRF pages per subject for treatment A</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; A -&gt; CRF pages per subject</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numCrfPagesPerSubjectTreatmentB</td>
+  <td>The number of CRF pages per subject for treatment B</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; B -&gt; CRF pages per subject</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numCrfPagesPerSubjectTreatmentC</td>
+  <td>The number of CRF pages per subject for treatment C</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; C -&gt; CRF pages per subject</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numCrfPagesPerSubjectTreatmentD</td>
+  <td>The number of CRF pages per subject for treatment D</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; D -&gt; CRF pages per subject</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numCrfPagesPerSubjectTreatmentE</td>
+  <td>The number of CRF pages per subject for treatment E</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; E -&gt; CRF pages per subject</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numCrfPagesWithDrops</td>
+  <td>Total number of CRF pages expected, accounting for subject drop rate</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>Total CRF pages monitored (accounting for subject drops)</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numCrfPagesWithoutDrops</td>
+  <td>Total number of CRF pages expected if no subjects drop</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>Monitoring -&gt; Total CRF pages generated (without subject drops)</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numDataImports</td>
+  <td>The number of data imports expected</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Data -&gt; Total number of data imports from 3rd party vendors</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Data tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numDataTransfers</td>
+  <td>The number of data transfers expected</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Data -&gt; Total number of data transfers</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Data tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numDays</td>
+  <td>The number of days between the study start date and the date the final
+  report is due</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>--</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Data tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numDaysActiveTreatment</td>
+  <td>The number of days between FSI and LSO</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>--</td>
+  <td>&quot;Either&quot; scope fields return a value appropriate to the scope
+  in which it is used</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numDaysForCost</td>
+  <td>The number of days during which the cost occurs</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>--</td>
+  <td>&quot;Either&quot; scope fields return a value appropriate to the scope
+  in which it is used</td>
+  <td>Can only be used in algorithms for a pass-through or miscellaneous cost</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numDaysForTask</td>
+  <td>The number of days during which the effort for the task occurs</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>--</td>
+  <td>&quot;Either&quot; scope fields return a value appropriate to the scope
+  in which it is used</td>
+  <td>Can only be used in Level of Effort algorithms for a resource for a task</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numDaysFromDbLockToDraftReport</td>
+  <td>The number of days from Database Lock to delivery of draft report</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Data -&gt; Days from Database Lock until Draft Report due</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Data tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numDaysFromDbLockToFinalReport</td>
+  <td>The number of days from Database Lock to delivery of final report</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Data -&gt; Days from Database Lock until Final Report due</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Data tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numDaysFromDbLockToStatReport</td>
+  <td>The number of days from Database Lock to delivery of stat report</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Data -&gt; Days from Database Lock until Statistical Report due</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Data tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numDaysFromFirstSiteToLastSite</td>
+  <td>The number of days from FSA to LSA</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>--</td>
+  <td>&quot;Either&quot; scope fields return a value appropriate to the scope
+  in which it is used</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Site tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numDaysFromFsiToEndpoint</td>
+  <td>The number of days from FSI to Endpoint date</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>Treatment -&gt; Weeks from FSI to endpoint</td>
+  <td>&quot;Either&quot; scope fields return a value appropriate to the scope
+  in which it is used</td>
+  <td>Should not be used on tabs prior to the Treatment tab</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numDaysFromFsiToFso</td>
+  <td>The number of days from FSI to FSO</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>Treatment -&gt; Treatment duration</td>
+  <td>&quot;Either&quot; scope fields return a value appropriate to the scope
+  in which it is used</td>
+  <td>Should not be used on tabs prior to the Treatment tab</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numDaysFromFsiToLsi</td>
+  <td>The number of days from FSI to LSI</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>Subject -&gt; Enrollment period</td>
+  <td>&quot;Either&quot; scope fields return a value appropriate to the scope
+  in which it is used</td>
+  <td>Should not be used on tabs prior to the Subject tab</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numDaysFromFsiToLso</td>
+  <td>The number of days from FSI to LSO (the active treatment period)</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>--</td>
+  <td>&quot;Either&quot; scope fields return a value appropriate to the scope
+  in which it is used</td>
+  <td>Should not be used on tabs prior to the Treatment tab</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numDaysFromFsoToLsi</td>
+  <td>The number of days from FSO to LSI</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>--</td>
+  <td>&quot;Either&quot; scope fields return a value appropriate to the scope
+  in which it is used</td>
+  <td>Should not be used on tabs prior to the Treatment tab</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numDaysFromFsoToLso</td>
+  <td>The number of days from FSO to LSO</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>--</td>
+  <td>&quot;Either&quot; scope fields return a value appropriate to the scope
+  in which it is used</td>
+  <td>Should not be used on tabs prior to the Treatment tab</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numDaysFromLsiToEndpoint</td>
+  <td>The number of days from LSI to Endpoint date</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>--</td>
+  <td>&quot;Either&quot; scope fields return a value appropriate to the scope
+  in which it is used</td>
+  <td>Should not be used on tabs prior to the Treatment tab</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numDaysFromLsiToLso</td>
+  <td>The number of days from LSI to LSO</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>--</td>
+  <td>&quot;Either&quot; scope fields return a value appropriate to the scope
+  in which it is used</td>
+  <td>Should not be used on tabs prior to the Treatment tab</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numDaysFromLsoToDbLock</td>
+  <td>The number of days from LSO/LSLV to Database Lock</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>Data -&gt; Days from LSO/LPO until Database Lock</td>
+  <td>&quot;Either&quot; scope fields return a value appropriate to the scope
+  in which it is used</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Data tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numDaysFromStartToFirstSite</td>
+  <td>The number of days from PASD to FSA</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>--</td>
+  <td>&quot;Either&quot; scope fields return a value appropriate to the scope
+  in which it is used</td>
+  <td>Should not be used on tabs prior to the Site tab</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numDaysFromStartToFsi</td>
+  <td>The number of days from PASD to FSI</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>--</td>
+  <td>&quot;Either&quot; scope fields return a value appropriate to the scope
+  in which it is used</td>
+  <td>Should not be used on tabs prior to the Subject tab</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numDaysFromStartToGlobalFsi</td>
+  <td>The number of days from PASD to Global FSI</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>--</td>
+  <td>&nbsp;</td>
+  <td>Should not be used on tabs prior to the Subject tab</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numDaysFromStartToGlobalLsi</td>
+  <td>The number of days from PASD to Global LSI</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>--</td>
+  <td>&nbsp;</td>
+  <td>Should not be used on tabs prior to the Subject tab</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numDaysFromStartToLastSite</td>
+  <td>The number of days from PASD to LSA</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>--</td>
+  <td>&quot;Either&quot; scope fields return a value appropriate to the scope
+  in which it is used</td>
+  <td>Should not be used on tabs prior to the Site tab</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numDaysFromStartToLsi</td>
+  <td>The number of days from PASD to LSI</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>--</td>
+  <td>&quot;Either&quot; scope fields return a value appropriate to the scope
+  in which it is used</td>
+  <td>Should not be used on tabs prior to the Subject tab</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numDaysFromStartToLso</td>
+  <td>The number of days from PASD to LSO/LSLV</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>--</td>
+  <td>&quot;Either&quot; scope fields return a value appropriate to the scope
+  in which it is used</td>
+  <td>Should not be used on tabs prior to the Treatment tab</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numDaysTreatmentA</td>
+  <td>The duration of treatment A (in days)</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; A -&gt; Treatment duration</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numDaysTreatmentB</td>
+  <td>The duration of treatment B (in days)</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; B -&gt; Treatment duration</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numDaysTreatmentC</td>
+  <td>The duration of treatment C (in days)</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; C -&gt; Treatment duration</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numDaysTreatmentD</td>
+  <td>The duration of treatment D (in days)</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; D -&gt; Treatment duration</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numDaysTreatmentE</td>
+  <td>The duration of treatment E (in days)</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; E -&gt; Treatment duration</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numDiaryPagesPerExtendedVisitTreatmentA</td>
+  <td>The number of subject diary pages per extended visit for treatment A</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; A -&gt; Subject diary pages per extended visit</td>
+  <td>Applies only to endpoint studies</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numDiaryPagesPerExtendedVisitTreatmentB</td>
+  <td>The number of subject diary pages per extended visit for treatment B</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; B -&gt; Subject diary pages per extended visit</td>
+  <td>Applies only to endpoint studies</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numDiaryPagesPerExtendedVisitTreatmentC</td>
+  <td>The number of subject diary pages per extended visit for treatment C</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; C -&gt; Subject diary pages per extended visit</td>
+  <td>Applies only to endpoint studies</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numDiaryPagesPerExtendedVisitTreatmentD</td>
+  <td>The number of subject diary pages per extended visit for treatment D</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; D -&gt; Subject diary pages per extended visit</td>
+  <td>Applies only to endpoint studies</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numDiaryPagesPerExtendedVisitTreatmentE</td>
+  <td>The number of subject diary pages per extended visit for treatment E</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; E -&gt; Subject diary pages per extended visit</td>
+  <td>Applies only to endpoint studies</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numDiaryPagesPerSubjectTreatmentA</td>
+  <td>The number of subject diary pages per subject for treatment A</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; A -&gt; Subject diary pages<span
+  style='mso-spacerun:yes'>&nbsp;</span></td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numDiaryPagesPerSubjectTreatmentB</td>
+  <td>The number of subject diary pages per subject for treatment B</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; B -&gt; Subject diary pages<span
+  style='mso-spacerun:yes'>&nbsp;</span></td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numDiaryPagesPerSubjectTreatmentC</td>
+  <td>The number of subject diary pages per subject for treatment C</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; C -&gt; Subject diary pages</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numDiaryPagesPerSubjectTreatmentD</td>
+  <td>The number of subject diary pages per subject for treatment D</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; D -&gt; Subject diary pages</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numDiaryPagesPerSubjectTreatmentE</td>
+  <td>The number of subject diary pages per subject for treatment E</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; E -&gt; Subject diary pages</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numDrugAccountabilityVisitsPerSite</td>
+  <td>The number of additional drug-accountability visits per site</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Monitoring -&gt; Additional drug accountability visits per site</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Monitoring tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numDrugShipments</td>
+  <td>The total number of drug or device shipments</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>--</td>
+  <td>Total across (scope)</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Site tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numDrugShipmentsPerSite</td>
+  <td>The number of drug or device shipments to each site</td>
+  <td>Location</td>
+  <td>integer</td>
+  <td>Site -&gt; Number of drug shipments per site</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Site tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numDsmbReports</td>
+  <td>The number of DSMB reports expected</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>--</td>
+  <td>Based on frequency chosen for Data Tab field, &quot;Provide data to the
+  DSMB&quot;<span style='mso-spacerun:yes'>&nbsp;</span></td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Data tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numEdcTrainingSessions</td>
+  <td>The number of EDC Training Sessions expected</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Data -&gt; Number of online EDC training sessions</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Data tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numExpeditedSAEs</td>
+  <td>The number of SAE reports expedited to regulatory agencies and ethics
+  committees</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>--</td>
+  <td>Based on the Data Tab field, &quot;Expected percent of SAE Reports to be
+  expedited&quot;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Data tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numFourAndOneHalfDayMonitoringTrips</td>
+  <td>The number of four and one half day monitoring visits expected</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>Monitoring -&gt;<span style='mso-spacerun:yes'>&nbsp; </span>(table of values)</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Monitoring tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numFourDayMonitoringTrips</td>
+  <td>The number of four day monitoring visits expected</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>Monitoring -&gt;<span style='mso-spacerun:yes'>&nbsp; </span>(table of values)</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Monitoring tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numGrantPayments</td>
+  <td>The total number of grant payments</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>Total across (scope)</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numGrantPaymentsPerSite</td>
+  <td>The number of grant payments per site</td>
+  <td>Location</td>
+  <td>integer</td>
+  <td>Site -&gt; Number of grant payments per site</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numHalfDayMonitoringTrips</td>
+  <td>The number of half day monitoring visits expected</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>Monitoring -&gt;<span style='mso-spacerun:yes'>&nbsp; </span>(table of values)</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Monitoring tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numHoursAvgMonitoringTravel</td>
+  <td>The average number of hours a monitor will need to travel to sites</td>
+  <td>Location</td>
+  <td>floating-point number</td>
+  <td>Monitoring -&gt; Avg travel time (in hours) for site monitors</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Monitoring tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numHoursMedicalMonitoringPerSAE</td>
+  <td>The number of hours a medical monitor will spend with each SAE</td>
+  <td>Study</td>
+  <td>floating-point number</td>
+  <td>Data -&gt; Hours medical monitor will spend with each SAE</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Data tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numHoursPhoneBasedMonitoring</td>
+  <td>The number of hours of phone-based monitoring expected</td>
+  <td>Location</td>
+  <td>floating-point number</td>
+  <td>--</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Monitoring tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numInterimAnalyses</td>
+  <td>The number of interim analyses expected</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Data -&gt; Number of interim analyses to be performed</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Data tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numInvestigatorMeetings</td>
+  <td>The number of investigator meetings planned</td>
+  <td>Location** / Either</td>
+  <td>integer</td>
+  <td>--</td>
+  <td>Returns the number of meetings planned to take place in the specified
+  location o<span style='display:none'>r the total number of Inv Meetings</span></td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Meetings tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numLabDiagnosticTestsPerSubjectTreatmentA</td>
+  <td>The number of diagnostic tests per subject for treatment A</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; A -&gt; Lab and diagnostic tests per subject</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numLabDiagnosticTestsPerSubjectTreatmentB</td>
+  <td>The number of diagnostic tests per subject for treatment B</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; B -&gt; Lab and diagnostic tests per subject</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numLabDiagnosticTestsPerSubjectTreatmentC</td>
+  <td>The number of diagnostic tests per subject for treatment C</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; C -&gt; Lab and diagnostic tests per subject</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numLabDiagnosticTestsPerSubjectTreatmentD</td>
+  <td>The number of diagnostic tests per subject for treatment D</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; D -&gt; Lab and diagnostic tests per subject</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numLabDiagnosticTestsPerSubjectTreatmentE</td>
+  <td>The number of diagnostic tests per subject for treatment E</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; E -&gt; Lab and diagnostic tests per subject</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numLocations</td>
+  <td>The number of locations</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>Locations</td>
+  <td>for each specific location, just returns '1'</td>
+  <td>Can be used on any tab, but probably doesn't make sense on the Overview
+  tab</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numMedicalDataListingReviews</td>
+  <td>The number of medical data listing reviews expected</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Data -&gt; Number of medical data listing reviews</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Monitoring tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numMinutesCrfDataCoordination</td>
+  <td>The number of minutes (per page) for data coordination</td>
+  <td>Study</td>
+  <td>floating-point number</td>
+  <td>Data -&gt; Minutes for Data Coordination per CRF page</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Data tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numMinutesCrfDataEntry</td>
+  <td>The number of minutes (per page) for data entry</td>
+  <td>Study</td>
+  <td>floating-point number</td>
+  <td>Data -&gt; Minutes for Data Entry per CRF page</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Data tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numMinutesQueryReview</td>
+  <td>The number of minutes to re-review queries/CRF data from a previous visit</td>
+  <td>Either</td>
+  <td>floating-point number</td>
+  <td>Time to review queries from previous visit (minutes)</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Monitoring tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numMonitoringDays</td>
+  <td>The number of monitoring days expected</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>Monitoring -&gt;<span style='mso-spacerun:yes'>&nbsp; </span>(table of values)</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Monitoring tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numMonitoringMinutesPerCrfPageTreatmentA</td>
+  <td>The number of minutes to monitor each page for treatment A</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; A -&gt; Monitoring minutes per CRF page</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numMonitoringMinutesPerCrfPageTreatmentB</td>
+  <td>The number of minutes to monitor each page for treatment B</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; B -&gt; Monitoring minutes per CRF page</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numMonitoringMinutesPerCrfPageTreatmentC</td>
+  <td>The number of minutes to monitor each page for treatment C</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; C -&gt; Monitoring minutes per CRF page</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numMonitoringMinutesPerCrfPageTreatmentD</td>
+  <td>The number of minutes to monitor each page for treatment D</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; D -&gt; Monitoring minutes per CRF page</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numMonitoringMinutesPerCrfPageTreatmentE</td>
+  <td>The number of minutes to monitor each page for treatment E</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; E -&gt; Monitoring minutes per CRF page</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numMonitoringVisits</td>
+  <td>The number of monitoring visits expected</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>Monitoring -&gt; Total visits</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numMonths</td>
+  <td>The number of months between the study start date and the date the final
+  report is due</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>--</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Data tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numMonthsForCost</td>
+  <td>The number of months during which the cost occurs</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>--</td>
+  <td>&nbsp;</td>
+  <td>Can only be used in algorithms for pass-through or miscellaneous costs</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numMonthsForTask</td>
+  <td>The number of months during which the effort for the task occurs</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>--</td>
+  <td>&nbsp;</td>
+  <td>Can only be used in a Levlel of Effort algorithm for a resource
+  performing a task</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numNewsletters</td>
+  <td>The number of newsletters expected</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Data -&gt; Number of newsletters</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Site tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numOneAndOneHalfDayMonitoringTrips</td>
+  <td>The number of one and one half day monitoring visits expected</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>Monitoring -&gt;<span style='mso-spacerun:yes'>&nbsp; </span>(table of values)</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Monitoring tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numOneDayMonitoringTrips</td>
+  <td>The number of one day monitoring visits expected</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>Monitoring -&gt;<span style='mso-spacerun:yes'>&nbsp; </span>(table of values)</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Monitoring tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numPharmacoEconomicPagesPerExtendedVisitTreatmentA</td>
+  <td>The number of pharmacoeconomic pages/extended visit for treatment A</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; A -&gt; Pharmacoeconomic pages per extended visit</td>
+  <td>Applies only to endpoint studies</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numPharmacoEconomicPagesPerExtendedVisitTreatmentB</td>
+  <td>The number of pharmacoeconomic pages/extended visit for treatment B</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; B -&gt; Pharmacoeconomic pages per extended visit</td>
+  <td>Applies only to endpoint studies</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numPharmacoEconomicPagesPerExtendedVisitTreatmentC</td>
+  <td>The number of pharmacoeconomic pages/extended visit for treatment C</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; C -&gt; Pharmacoeconomic pages per extended visit</td>
+  <td>Applies only to endpoint studies</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numPharmacoEconomicPagesPerExtendedVisitTreatmentD</td>
+  <td>The number of pharmacoeconomic pages/extended visit for treatment D</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; D -&gt; Pharmacoeconomic pages per extended visit</td>
+  <td>Applies only to endpoint studies</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numPharmacoEconomicPagesPerExtendedVisitTreatmentE</td>
+  <td>The number of pharmacoeconomic pages/extended visit for treatment E</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; E -&gt; Pharmacoeconomic pages per extended visit</td>
+  <td>Applies only to endpoint studies</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numPharmacoEconomicPagesPerSubjectTreatmentA</td>
+  <td>The number of pharmacoeconomic pages/subject for treatment A</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; A -&gt; Pharmacoeconomic pages</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numPharmacoEconomicPagesPerSubjectTreatmentB</td>
+  <td>The number of pharmacoeconomic pages/subject for treatment B</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; B -&gt; Pharmacoeconomic pages</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numPharmacoEconomicPagesPerSubjectTreatmentC</td>
+  <td>The number of pharmacoeconomic pages/subject for treatment C</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; C -&gt; Pharmacoeconomic pages</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numPharmacoEconomicPagesPerSubjectTreatmentD</td>
+  <td>The number of pharmacoeconomic pages/subject for treatment D</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; D -&gt; Pharmacoeconomic pages</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numPharmacoEconomicPagesPerSubjectTreatmentE</td>
+  <td>The number of pharmacoeconomic pages/subject for treatment E</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; E -&gt; Pharmacoeconomic pages</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numPreStudySiteVisits</td>
+  <td>The number of pre-study site visits</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>--</td>
+  <td>Based on Site -&gt; Percent of sites requiring a pre-study site visit
+  (in-person)</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Site tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numPhoneMonitoringVisits</td>
+  <td>The number of phone-based initerim monitoring visits expected</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>Monitoring -&gt; Total calls</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Monitoring<span style='mso-spacerun:yes'>&nbsp; </span>tab or
+  beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numProtocolAmendments</td>
+  <td>The number of protocol amendments expected</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>--</td>
+  <td>Based on Data Tab amendments; one per added amendement</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Data tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numPublications</td>
+  <td>The number of manuscripts or publications expected</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Data -&gt; Number of manuscripts</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Data tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numQolPagesPerExtendedVisitTreatmentA</td>
+  <td>The number of Quality of Life pages per extended visit for treatment A</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; A -&gt; QOL pages per extended visit</td>
+  <td>Applies only to endpoint studies</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numQolPagesPerExtendedVisitTreatmentB</td>
+  <td>The number of Quality of Life pages per extended visit for treatment B</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; B -&gt; QOL pages per extended visit</td>
+  <td>Applies only to endpoint studies</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numQolPagesPerExtendedVisitTreatmentC</td>
+  <td>The number of Quality of Life pages per extended visit for treatment C</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; C -&gt; QOL pages per extended visit</td>
+  <td>Applies only to endpoint studies</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numQolPagesPerExtendedVisitTreatmentD</td>
+  <td>The number of Quality of Life pages per extended visit for treatment D</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; D -&gt; QOL pages per extended visit</td>
+  <td>Applies only to endpoint studies</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numQolPagesPerExtendedVisitTreatmentE</td>
+  <td>The number of Quality of Life pages per extended visit for treatment E</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; E -&gt; QOL pages per extended visit</td>
+  <td>Applies only to endpoint studies</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numQolPagesPerSubjectTreatmentA</td>
+  <td>The number of Quality of Life pages per subject for treatment A</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; A -&gt; QOL pages</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numQolPagesPerSubjectTreatmentB</td>
+  <td>The number of Quality of Life pages per subject for treatment B</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; B -&gt; QOL pages</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numQolPagesPerSubjectTreatmentC</td>
+  <td>The number of Quality of Life pages per subject for treatment C</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; C -&gt; QOL pages</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numQolPagesPerSubjectTreatmentD</td>
+  <td>The number of Quality of Life pages per subject for treatment D</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; D -&gt; QOL pages</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numQolPagesPerSubjectTreatmentE</td>
+  <td>The number of Quality of Life pages per subject for treatment E</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; E -&gt; QOL pages</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numQueries</td>
+  <td>Represents the number of queries monitors are expected to resolve</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>--</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Data tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numRepeatDataFigures</td>
+  <td>The number of repeat/copy data figures/graphs expected</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Data -&gt; Number of Repeat Figures and Graphs</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Data tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numRepeatDataListings</td>
+  <td>The number of repeat/copy data listings expected</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Data -&gt; Number of Repeat Data Listings</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Data tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numRepeatDataTables</td>
+  <td>The number of repeat/copy data tables expected</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Data -&gt; Number of Repeat Data Tables</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Data tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numRepeatPkPdDataFigures</td>
+  <td>The number of repeat/copy data PK/PD figures/graphs (*Phase 1 HV only*)</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Data -&gt; Number of Repeat Pk/Pd Figures and Graphs</td>
+  <td>Applies only to Phase 1 (HV) trials</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Data tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numRepeatPkPdDataListings</td>
+  <td>The number of repeat/copy PK/PD data listings (*Phase 1 HV only*)</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Data -&gt; Number of Repeat Pk/Pd Data Listings</td>
+  <td>Applies only to Phase 1 (HV) trials</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Data tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numRepeatPkPdDataTables</td>
+  <td>The number of repeat/copy PK/PD data tables (*Phase 1 HV only*)</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Data -&gt; Number of Repeat Pk/Pd Data Tables</td>
+  <td>Applies only to Phase 1 (HV) trials</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Data tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numSAEs</td>
+  <td>The number of Serious Adverse Events expected</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>--</td>
+  <td>Based on Data -&gt; SAE rate as a percent of randomized subjects</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Data tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numScreenFailsPaid</td>
+  <td>The number of screen failures for which the sponsor will pay</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>--</td>
+  <td>Based on Subject -&gt; Percent of screen failures paid for</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Site tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numScreensPerCrfBook</td>
+  <td>The number of screens to be designed for the CRF book</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>--</td>
+  <td>Based on Number of screens per CRF page and number of books</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Data tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numScreensPerCrfPage</td>
+  <td>The average number of screens per CRF page</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Data -&gt; Percent of screen failures paid for</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Data tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numSiteCloseoutVisits</td>
+  <td>The number of site closeout visits</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>--</td>
+  <td>Based on Site -&gt; Percent of onsite close-out visits</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Site tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numSiteInitiationVisits</td>
+  <td>The number of site initiation visits</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>--</td>
+  <td>Based on Site -&gt; Percent of sites requiring site initiation visits
+  (in-person)</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Site tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numSites</td>
+  <td>The number of sites</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>Locations -&gt; Number of Sites</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not make sense on the Overview
+  tab</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numSitesIdentifiedBySponsor</td>
+  <td>The number of sites to be identified by the Sponsor</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>--</td>
+  <td>Based on Site -&gt; Percent of sites identified by sponsor</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Site tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numSitesIdentifiedByVendor</td>
+  <td>The number of sites to be identified by the vendor</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>--</td>
+  <td>Based on Site -&gt; Percent of sites identified by sponsor</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Site tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numSitesRequiringAudit</td>
+  <td>The number of sites requiring a QA audit</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>--<span style='mso-spacerun:yes'>&nbsp;</span></td>
+  <td>Based on Site -&gt; Percent of sites requiring a QA audit</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Site tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numSitesUsingCentralIRB</td>
+  <td>The number of sites using a Central IRB/EC</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>--<span style='mso-spacerun:yes'>&nbsp;</span></td>
+  <td>Based on Site -&gt; Percent of sites using ONLY a central IRB/EC +
+  Percent of sites usi<span style='display:none'>ng BOTH a central and a local
+  IRB/EC</span></td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Site tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numSitesUsingLocalIRB</td>
+  <td>The number of sites using a local IRB/EC</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>--<span style='mso-spacerun:yes'>&nbsp;</span></td>
+  <td>Based on Site -&gt; Percent of sites using ONLY a local IRB/EC + Percent
+  of sites using<span style='display:none'> BOTH a central and a local IRB/EC</span></td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Site tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numSitesUsingLocalMonitoring</td>
+  <td>The number of sites using local monitoring</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>--<span style='mso-spacerun:yes'>&nbsp;</span></td>
+  <td>Based on Site -&gt; Percent of sites using local monitoring</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Site tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numSitesWithOnsiteCOV</td>
+  <td>The number of sites requiring onsite close-out visits</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>--<span style='mso-spacerun:yes'>&nbsp;</span></td>
+  <td>Based on Site -&gt; Percent of onsite close-out visits</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Site tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numSitesWithOnsiteSIV</td>
+  <td>The number of sites requiring site initiation visits (in-person)</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>--<span style='mso-spacerun:yes'>&nbsp;</span></td>
+  <td>Based on Site -&gt; Percent of sites requiring site initiation visits
+  (in-person)</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Site tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numSitesWithOverhead</td>
+  <td>The number of sites requiring overhead</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>--<span style='mso-spacerun:yes'>&nbsp;</span></td>
+  <td>Based on Site -&gt; Percent of sites requiring overhead</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Site tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numSitesWithPhoneCOV</td>
+  <td>The number of sites requiring only phone-based close-out</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>--<span style='mso-spacerun:yes'>&nbsp;</span></td>
+  <td>Based on Site -&gt; Percent of sites requiring only phone-based
+  close-outs</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Site tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numSitesWithPhonePSSV</td>
+  <td>The number of sites requiring a phone-based prestudy site visit</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>--<span style='mso-spacerun:yes'>&nbsp;</span></td>
+  <td>Based on Site -&gt; Percent of sites requiring a phone-based pre-study
+  site visit</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Site tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numSitesWithPhoneSIV</td>
+  <td>The number of sites requiring only phone-based site initiation</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>--<span style='mso-spacerun:yes'>&nbsp;</span></td>
+  <td>Based on Site -&gt; Percent of sites requiring only phone-based site
+  initiation</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Site tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numSubjects</td>
+  <td>The number of subjects to be randomized</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>Locations -&gt; Subjects to Randomize</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not make sense on the Overview
+  tab</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numSubjectsFailScreen</td>
+  <td>The number of potential subjects that will fail screening</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>--</td>
+  <td>Based on Subject -&gt; Screen failure rate</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Site tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numSubjectsPerSitePerMonth</td>
+  <td>The expected enrollment rate (subjects per site per month)</td>
+  <td>Either</td>
+  <td>floating-point number</td>
+  <td>--</td>
+  <td>Calculated</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Subject tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numSubjectsToScreen</td>
+  <td>The number of potential subjects to be screened</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>Site -&gt; Number of subjects to screen</td>
+  <td>Based on Subject -&gt; Screen failure rate</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Site tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numSubjectsTreatmentA</td>
+  <td>The number of subjects randomized to Treatment A</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>Treatment -&gt; A -&gt; Number of subjects</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numSubjectsTreatmentB</td>
+  <td>The number of subjects randomized to Treatment B</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>Treatment -&gt; B -&gt; Number of subjects</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numSubjectsTreatmentC</td>
+  <td>The number of subjects randomized to Treatment C</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>Treatment -&gt; C -&gt; Number of subjects</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numSubjectsTreatmentD</td>
+  <td>The number of subjects randomized to Treatment D</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>Treatment -&gt; D -&gt; Number of subjects</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numSubjectsTreatmentE</td>
+  <td>The number of subjects randomized to Treatment E</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>Treatment -&gt; E -&gt; Number of subjects</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numSubjectsWillComplete</td>
+  <td>The number of subjected expected to complete all visits</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>--</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Site tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numSubjectVisits</td>
+  <td>The number of visits for all subjects</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>--</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numThirdPartyDataVendors</td>
+  <td>The number of third party data vendors or sources expected</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Data -&gt; Number of 3rd party vendors/data sources</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Data tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numThreeAndOneHalfDayMonitoringTrips</td>
+  <td>The number of three and one half day monitoring visits expected</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>Monitoring -&gt;<span style='mso-spacerun:yes'>&nbsp; </span>(table of values)</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Monitoring tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numThreeDayMonitoringTrips</td>
+  <td>The number of three day monitoring visits expected</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>Monitoring -&gt;<span style='mso-spacerun:yes'>&nbsp; </span>(table of values)</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Monitoring tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numTranslations</td>
+  <td>The number of languages into which documents must be translated</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Locations -&gt; Number of Translations/Dialects</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Site tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numTwoAndOneHalfDayMonitoringTrips</td>
+  <td>The number of two and one half day monitoring visits expected</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>Monitoring -&gt;<span style='mso-spacerun:yes'>&nbsp; </span>(table of values)</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Monitoring tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numTwoDayMonitoringTrips</td>
+  <td>The number of two day monitoring visits expected</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>Monitoring -&gt;<span style='mso-spacerun:yes'>&nbsp; </span>(table of values)</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Monitoring tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numUniqueDataFigures</td>
+  <td>The number of unique data figures/graphs expected</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Data -&gt; Number of Repeat Figures and Graphs</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Data tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numUniqueDataListings</td>
+  <td>The number of unique data listings expected</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Data -&gt; Number of Repeat Data Listings</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Data tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numUniqueDataTables</td>
+  <td>The number of unique data tables expected</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Data -&gt; Number of Repeat Data Tables</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Data tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numUniquePages</td>
+  <td>The number of unique CRF pages to be designed</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Data -&gt; Number of Unique Pages</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Data tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numUniquePkPdDataFigures</td>
+  <td>The number of unique PK/PD data figures/graphs (*Phase 1 HV only*)</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Data -&gt; Number of Repeat Pk/Pd Figures and Graphs</td>
+  <td>Applies only to Phase 1 (HV) trials</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Data tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numUniquePkPdDataListings</td>
+  <td>The number of unique PK/PD data listings (*Phase 1 HV only*)</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Data -&gt; Number of Repeat Pk/Pd Data Listings</td>
+  <td>Applies only to Phase 1 (HV) trials</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Data tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numUniquePkPdDataTables</td>
+  <td>The number of unique PK/PD data tables (*Phase 1 HV only*)</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Data -&gt; Number of Repeat Pk/Pd Data Tables</td>
+  <td>Applies only to Phase 1 (HV) trials</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Data tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numVisitsTreatmentA</td>
+  <td>The number of weeks (or days) in which a subject visit occurs for
+  treatment A</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; A -&gt; Visits per subject</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numVisitsTreatmentB</td>
+  <td>The number of weeks (or days) in which a subject visit occurs for
+  treatment B</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; B -&gt; Visits per subject</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numVisitsTreatmentC</td>
+  <td>The number of weeks (or days) in which a subject visit occurs for
+  treatment C</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; C -&gt; Visits per subject</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numVisitsTreatmentD</td>
+  <td>The number of weeks (or days) in which a subject visit occurs for
+  treatment D</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; D -&gt; Visits per subject</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numVisitsTreatmentE</td>
+  <td>The number of weeks (or days) in which a subject visit occurs for
+  treatment E</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; E -&gt; Visits per subject</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numWeeks</td>
+  <td>The number of weeks between the study start date and the date the final
+  report is due</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>--</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Data tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numWeeksEnrollment</td>
+  <td>The number of weeks expected for subject enrollment</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>Subject -&gt; Enrollment period</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Subject tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numWeeksForCost</td>
+  <td>The number of weeks during which the cost occurs</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>--</td>
+  <td>&nbsp;</td>
+  <td>Can only be used in algorithms for a pass-through or miscellaneous cost</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numWeeksForTask</td>
+  <td>The number of weeks during which the effort for the task occurs</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>--</td>
+  <td>&nbsp;</td>
+  <td>Can only be used in Level of Effort algorithms for a resource for a task</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numWeeksProjectManagement</td>
+  <td>The number of weeks of Project Management expected</td>
+  <td>Either</td>
+  <td>integer</td>
+  <td>--</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Data tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numWeeksTreatmentA</td>
+  <td>The duration of treatment A (in weeks)</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; A -&gt; Treatment duration</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numWeeksTreatmentB</td>
+  <td>The duration of treatment B (in weeks)</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; B -&gt; Treatment duration</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numWeeksTreatmentC</td>
+  <td>The duration of treatment C (in weeks)</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; C -&gt; Treatment duration</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numWeeksTreatmentD</td>
+  <td>The duration of treatment D (in weeks)</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; D -&gt; Treatment duration</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$numWeeksTreatmentE</td>
+  <td>The duration of treatment E (in weeks)</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; E -&gt; Treatment duration</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$otherOnsiteHoursPerVisit</td>
+  <td>Other onsite hours expected per Onsite Monitoring Visit</td>
+  <td>Either</td>
+  <td>floating-point number</td>
+  <td>Monitoring -&gt; Other hours onsite per visit</td>
+  <td>Applies to Plans using the 5.7.0 cost model or later</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Monitoring tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$pctRegulatoryDocsCollected</td>
+  <td>The percent of regulatory documents to be collected</td>
+  <td>Location</td>
+  <td>floating-point number</td>
+  <td>Site -&gt; Percent of regulatory documents collected</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Site tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$pctSdv</td>
+  <td>The percent of source document verification expected</td>
+  <td>Location</td>
+  <td>floating-point number</td>
+  <td>Monitoring -&gt; Percent of source document verification</td>
+  <td colspan=2 style='mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$pctSiteOverhead</td>
+  <td>The average percent overhead for sites requiring overhead</td>
+  <td>Location</td>
+  <td>floating-point number</td>
+  <td>Site -&gt; Percent of sites requiring overhead</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Site tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$pctSitesWithOnsitePSSV</td>
+  <td>The percent of sites requiring an onsite prestudy site visit</td>
+  <td>Location</td>
+  <td>floating-point number</td>
+  <td>Site -&gt; Percent of sites requiring a pre-study site visit (in-person)</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Site tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$pctSubjectsFailScreen</td>
+  <td>The percent of potential subjects that will fail screening</td>
+  <td>Location</td>
+  <td>floating-point number</td>
+  <td>Subject -&gt; Screen failure rate</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Site tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$queryRate</td>
+  <td>The percent of pages expected to generate queries</td>
+  <td>Study</td>
+  <td>floating-point number</td>
+  <td>Data -&gt; Query Rate</td>
+  <td>&nbsp;</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Data tab or beyond</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$therapeuticAreaID</td>
+  <td>Numeric identifier of the Therapeutic Area</td>
+  <td>Study</td>
+  <td>integer (identifier)</td>
+  <td>--</td>
+  <td>&nbsp;</td>
+  <td>Can be used on any tab.</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$transportFactor</td>
+  <td>Location-specific transportation factor</td>
+  <td>Location</td>
+  <td>floating-point number</td>
+  <td>--</td>
+  <td>&nbsp;</td>
+  <td>Can be used on any tab past the Locations tab</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 colspan=8 style='height:15.0pt;mso-ignore:colspan'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 style='height:15.0pt'>&nbsp;</td>
+  <td>$washoutPeriodDuration</td>
+  <td>Length of washout period, in weeks for late stage trials and days for
+  Phase I trials</td>
+  <td>Study</td>
+  <td>integer</td>
+  <td>Treatment -&gt; Washout period duration</td>
+  <td>Applies only to crossover trials</td>
+  <td>Can be used in a field on any tab, but may not return the correct value
+  unless it is on the Treatment tab or beyond</td>
+ </tr>
+ <![if supportMisalignedColumns]>
+ <tr height=0 style='display:none'>
+  <td width=31 style='width:23pt'>&nbsp;</td>
+  <td width=391 style='width:293pt'>&nbsp;</td>
+  <td width=565 style='width:424pt'>&nbsp;</td>
+  <td width=124 style='width:93pt'>&nbsp;</td>
+  <td width=155 style='width:116pt'>&nbsp;</td>
+  <td width=418 style='width:314pt'>&nbsp;</td>
+  <td width=501 style='width:376pt'>&nbsp;</td>
+  <td width=731 style='width:548pt'>&nbsp;</td>
+ </tr>
+ <![endif]>
+</table>
+
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+
+</html>
+<footer>
+</footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+<script>$(document).foundation();</script>
+</body>
+</html>

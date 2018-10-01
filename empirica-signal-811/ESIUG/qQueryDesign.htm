@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-US" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Defining query conditions</title>
+<link rel="StyleSheet" href="Empirica.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Working with queries\nCreating a query\nDefining query conditions");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("About_WebVDME.htm", "", "&gt;", "Overview", "About_WebVDME_1.htm");
+document.write("<a href=\"About_Queries.htm\">Working with queries<\/a> &gt; <a href=\"qQueryDesign.htm\">Creating a query<\/a> &gt; Defining query conditions<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('About_WebVDME.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Defining query conditions</h1>
+<p>When you create or edit a query, the Define Query page appears. On the Define Query page, you specify conditions and link them with operators. For information about operators, see <a href="qQueryEditLogic.htm">Specifying query logic</a>.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">1.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Click the <span class="Button">Queries</span> tab.</p>
+
+<p class="ListContinue1">The Queries page appears and lists your queries and queries published to you.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">2.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Click <span class="Button">Create Using Query Wizard</span>.</p>
+
+<p class="ListContinue1">The Select Configuration page appears.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">3.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>From the Configuration drop-down list, select a <a href="cfgSelectConfigPopup.htm">data configuration</a>. You can click <span class="Button">Browse</span> to select from a descriptive list of data configurations.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">4.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Click <span class="Button">Next</span>.</p>
+
+<p class="ListContinue1">The <a href="qQueryDesign.htm">Define Query page</a> appears.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">5.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Click <span class="Button">Select Variables</span>.</p>
+
+<p class="ListContinue1">The Select Variables dialog box appears.</p>
+<p class="ListContinue1">If you need more information about variables, click <span class="Button">Show Variables</span>. The Configuration Variables dialog box appears, showing a description of each variable.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">6.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>From the <span class="Button">All Variables in all Tables</span> list, <a href="qQuerySelectVariables.htm">select one or multiple variables</a> on which to base conditions. For more information, see <a href="cfgSelectVarValues.htm">Selecting values from a list</a>.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">7.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Click <span class="Button">OK</span>.</p>
+
+<p class="ListContinue1">The Define Query page appears.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">8.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>A field for each variable you selected appears on the Define Query page. If you point to the field name, a description of the field appears. The application assigns a number to each variable. When you specify query logic, you use that number to refer to the condition that is based on that variable.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">9.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>If you are creating or editing a query from the Queries tab or for an interactive report, you can specify values for each variable in the query. When running the query, you can change the specified values or enter values (if none were provided in the original query).</p>
+
+<p class="ListContinue1">or</p>
+<p class="ListContinue1">If you are creating or editing a query in the process of defining a database restriction, custom term, or case series, you must specify values for each variable or remove the variable.</p>
+<p class="ListContinue1">The way in which you specify values depends on the type of variable. For more information, see <a href="Selecting_query_values.htm">Selecting query variables</a>.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">10.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Each condition that you specify must be referenced by the query logic. If you are not going to reference a condition, you must remove the condition from the query. To remove a condition, click [<span class="Button">X</span>] in the upper right corner of the box containing the variable. (After deleting a condition, you might need to respecify values for variables in the other conditions.)</p>
+
+<p class="ListNote1"><span style="font-weight: bold;">Note:</span> You can include the same variable in the query multiple times. For example, cases for which the subject's age is between 17 and 25 or above 65. You include the AGE variable and set it to 17-25; include the AGE variable again and set it to above 65; then connect the variables with the OR operator.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">11.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>After adding all variables that you need for specifying conditions, specify query logic by clicking <span class="Button">Edit</span>. For more information, see <a href="qQueryEditLogic.htm">Specifying query logic</a>.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">12.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Click <span class="Button">OK</span>.</p>
+
+<p class="ListNote1"><span class="Button">Note:</span> If you add or delete another query variable after this step, the query logic is reset to a default.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">13.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>If your <a href="useroptions.htm#Show_case_count_by_default_on_preview_page">user preferences</a> include <span class="Button">Show case count by default on preview page</span>, you can check <span class="Button">Display Case Count in Query Preview.</span> This option requires that you have specified values for all variables in the query. The next page, which is the Preview Query page, shows the count of cases. Computation of the case count can be time-consuming, so Oracle recommends that you display it only when necessary.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">14.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>To save the query to the library (the Queries page),&#160;check <span class="Button">Add Query to Library</span>. This option is available when you are defining a new query for a database restriction, custom term, or interactive report or creating a query-based case series. The query has the same name as the case series.</p>
+
+<p class="ListContinue1">If you add the query to the library, it is separate from the database restriction, custom term, interactive report, or case series. Subsequent modifications of the query in the library have no effect on the database restriction, custom term, interactive report, or case series.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">15.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Click <span style="font-weight: bold;">Next</span>.</p>
+
+<p class="ListContinue1">The <a href="qQueryPreview.htm">Preview Query page</a> appears.</p>
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="margin-bottom: 0pt;">Copyright © 2002, 2018, Oracle and/or 
+	 its affiliates. All rights reserved. </p>
+	<p style="text-align: right; margin-top: 0pt; margin-bottom: 0pt;">Help 
+	 Build 8.1.1</p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

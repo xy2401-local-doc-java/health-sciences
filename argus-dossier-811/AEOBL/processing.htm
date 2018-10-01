@@ -1,0 +1,2818 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Processing Dossier Reports</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2017-09-29T1:37:39Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Argus Dossier User's Guide" />
+<meta name="dcterms.identifier" content="E87518-01" />
+<meta name="dcterms.isVersionOf" content="AEOBL" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2016, 2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Prev" href="intro.htm" title="Previous" type="text/html" />
+<link rel="Next" href="scripts.htm" title="Next" type="text/html" />
+<link rel="alternate" href="AEOBL.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="AEOBL.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="AEOBL.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">5/6</span> <!-- End Header -->
+<div id="AEOBL120" class="chapter"><a id="CHDIIDAE"></a>
+<h1 class="chapter"><span class="secnum">2</span> Processing Dossier Reports</h1>
+<p>Generating Dossier reports requires the use of templates. A <span class="italic">template</span> is a pre-defined report format created in Microsoft Word. Before you can begin using templates to create reports, you (or someone with script writing or programming background) must create the template scripts. Information about writing template scripts is in <a href="scripts.htm#CIHCCBDD">Chapter 3, "Writing Template Scripts"</a>.</p>
+<div id="AEOBL121" class="sect1"><a id="sthref8"></a>
+<h2 class="sect1">Using Templates</h2>
+<p>When using templates, be aware of the following:</p>
+<ul>
+<li>
+<p>The application parses template elements sequentially. This prevents elements from being used before they are declared.</p>
+</li>
+<li>
+<p>The order in which the templates appear on the template tab is the order in which they will appear on the generated report. If you need the sections in a different order, use the <span class="bold">Up</span> and <span class="bold">Down</span> keys to change their position.</p>
+</li>
+</ul>
+<p>You should assign users (authors, reviewers, and owner) to each template section.</p>
+<div id="AEOBL122" class="sect2"><a id="sthref9"></a>
+<h3 class="sect2">About the Templates Tab</h3>
+<p>The Dossier <span class="bold">Template</span> tab enables you to access report templates used to generate periodic reports (CTPR, ICH PSUR, IND, NDA). The following is an illustration of the <span class="bold">Templates</span> tab. <img width="1000" height="730" src="img/ctpradattch.gif" alt="Surrounding text describes ctpradattch.gif." /><br /></p>
+<p>The following table lists and describes the fields and controls on this tab.</p>
+<div class="inftblinformal">
+<table class="cellalignment17" summary="About the Templates tab." dir="ltr">
+<thead>
+<tr class="cellalignment11">
+<th class="cellalignment18" id="r1c1-t2">Field/Control</th>
+<th class="cellalignment18" id="r1c2-t2">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r2c1-t2" headers="r1c1-t2">Templates</td>
+<td class="cellalignment19" headers="r2c1-t2 r1c2-t2">Enables you to add, modify, delete, assign and arrange the sections in your templates.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r3c1-t2" headers="r1c1-t2">Add</td>
+<td class="cellalignment19" headers="r3c1-t2 r1c2-t2">Click <span class="bold">Add</span> to add a new section to the report template.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r4c1-t2" headers="r1c1-t2">Delete</td>
+<td class="cellalignment19" headers="r4c1-t2 r1c2-t2">Click <span class="bold">Delete</span> to delete a section of a template.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r5c1-t2" headers="r1c1-t2">Assign</td>
+<td class="cellalignment19" headers="r5c1-t2 r1c2-t2">Click <span class="bold">Assign</span> to choose who can access a template.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r6c1-t2" headers="r1c1-t2">Up</td>
+<td class="cellalignment19" headers="r6c1-t2 r1c2-t2">Click <span class="bold">Up</span> to move the template section up one level.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r7c1-t2" headers="r1c1-t2">Down</td>
+<td class="cellalignment19" headers="r7c1-t2 r1c2-t2">Click <span class="bold">Down</span> to move the template section down a level.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r8c1-t2" headers="r1c1-t2">Print</td>
+<td class="cellalignment19" headers="r8c1-t2 r1c2-t2">Click <span class="bold">Print</span> to print the report configuration.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r9c1-t2" headers="r1c1-t2">#</td>
+<td class="cellalignment19" headers="r9c1-t2 r1c2-t2">This column contains the template number. This number changes as you move or change the order of the templates.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r10c1-t2" headers="r1c1-t2">Section</td>
+<td class="cellalignment19" headers="r10c1-t2 r1c2-t2">This column contains the name of the template.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r11c1-t2" headers="r1c1-t2">Description</td>
+<td class="cellalignment19" headers="r11c1-t2 r1c2-t2">This column contains a description of the section.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r12c1-t2" headers="r1c1-t2">Attachment File Name</td>
+<td class="cellalignment19" headers="r12c1-t2 r1c2-t2">This column contains the name of the template file.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r13c1-t2" headers="r1c1-t2">Modify</td>
+<td class="cellalignment19" headers="r13c1-t2 r1c2-t2">Click <span class="bold">Modify</span> to change a template document.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r14c1-t2" headers="r1c1-t2">Attach</td>
+<td class="cellalignment19" headers="r14c1-t2 r1c2-t2">Click <span class="bold">Attach</span> to attach a new template document. Once the document is attached, this changes to <span class="bold">Modify</span>.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r15c1-t2" headers="r1c1-t2">Header/Footer</td>
+<td class="cellalignment19" headers="r15c1-t2 r1c2-t2">This section enables you to attach header/footer information to the template.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r16c1-t2" headers="r1c1-t2">Include Header/Footer</td>
+<td class="cellalignment19" headers="r16c1-t2 r1c2-t2">Click this checkbox if you want to include header/footer information from a specific Word document in your template.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r17c1-t2" headers="r1c1-t2">Portrait Template</td>
+<td class="cellalignment19" headers="r17c1-t2 r1c2-t2">Enables you to use header/footer information from a document in portrait orientation in your template</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r18c1-t2" headers="r1c1-t2">Landscape Template</td>
+<td class="cellalignment19" headers="r18c1-t2 r1c2-t2">Enables you to use header/footer information from a document in landscape orientation in your template.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r19c1-t2" headers="r1c1-t2">Attach</td>
+<td class="cellalignment19" headers="r19c1-t2 r1c2-t2">Enables you to attach a Microsoft Word document to a template.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r20c1-t2" headers="r1c1-t2">Include Page Numbering</td>
+<td class="cellalignment19" headers="r20c1-t2 r1c2-t2">Enables you to specify whether or not you want page numbering in the template and the location of the page numbers.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r21c1-t2" headers="r1c1-t2">Header Left</td>
+<td class="cellalignment19" headers="r21c1-t2 r1c2-t2">Click this option to place the page number on the left side of the header.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r22c1-t2" headers="r1c1-t2">Header Center</td>
+<td class="cellalignment19" headers="r22c1-t2 r1c2-t2">Click this option to place the page number in the center of the header.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r23c1-t2" headers="r1c1-t2">Header Right</td>
+<td class="cellalignment19" headers="r23c1-t2 r1c2-t2">Click this option to place the page number on the right of the header.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r24c1-t2" headers="r1c1-t2">Footer Left</td>
+<td class="cellalignment19" headers="r24c1-t2 r1c2-t2">Click this option to place the page number on the left side of the footer.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r25c1-t2" headers="r1c1-t2">Footer Center</td>
+<td class="cellalignment19" headers="r25c1-t2 r1c2-t2">Click this option to place the page number in the center of the footer.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r26c1-t2" headers="r1c1-t2">Footer Right</td>
+<td class="cellalignment19" headers="r26c1-t2 r1c2-t2">Click this option to place the page number on the right of the footer.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r27c1-t2" headers="r1c1-t2">OK</td>
+<td class="cellalignment19" headers="r27c1-t2 r1c2-t2">Click <span class="bold">OK</span> update the template page.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r28c1-t2" headers="r1c1-t2">Cancel</td>
+<td class="cellalignment19" headers="r28c1-t2 r1c2-t2">Click <span class="bold">Cancel</span> to exit from the template page without saving.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" -->
+<p>To access the template tab:</p>
+<ol>
+<li>
+<p>Select Reports -&gt; Periodic Reports -&gt; &lt;Report Type&gt;.</p>
+<img width="692" height="169" src="img/ctprmenu.gif" alt="Surrounding text describes ctprmenu.gif." /><br /></li>
+<li>
+<p>When the system opens the page for the report type you selected:</p>
+<ul>
+<li>
+<p>Locate the report and click the row to highlight it.</p>
+</li>
+<li>
+<p>Click <span class="bold">Modify</span>.</p>
+<p>OR</p>
+<p>Click New Report.</p>
+<img width="1152" height="661" src="img/ctpr.gif" alt="Surrounding text describes ctpr.gif." /><br /></li>
+</ul>
+</li>
+<li>
+<p>When the application opens the report dialog box, click the <span class="bold">Templates</span> tab.</p>
+</li>
+<li>
+<p>The system opens the Templates tab.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<div id="AEOBL123" class="sect2"><a id="sthref10"></a>
+<h3 class="sect2">Adding a Template</h3>
+<p>A <span class="italic">template</span> can consist of single or multiple sections. Multiple sections enable you to assign different authors and reviewers for each section.</p>
+<p>When it uploads the template, the application does the following:</p>
+<ul>
+<li>
+<p>Opens a status dialog box to show the executing process.</p>
+</li>
+<li>
+<p>Scans the template for scripting instructions, validates the instructions, and extracts the information to be stored for later use.</p>
+<p>To add a template:</p>
+<ol>
+<li>
+<p>Select Reports -&gt; Periodic Reports -&gt;&lt;Report Type&gt;.</p>
+</li>
+<li>
+<p>When the system opens the page for the report type you selected:</p>
+<ul>
+<li>
+<p>Locate the report and click the row to highlight it.</p>
+</li>
+<li>
+<p>Click <span class="bold">Modify</span> or <span class="bold">New</span>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>When the application opens the report dialog box, click the Templates tab.</p>
+</li>
+<li>
+<p>When the system opens the Templates tab, click Add.</p>
+</li>
+<li>
+<p>When the application adds a new row in the template section:</p>
+<ul>
+<li>
+<p>Enter the section name in the text field in the <span class="bold">Section</span> column.</p>
+</li>
+<li>
+<p>Enter a description of the section in the text field in the <span class="bold">Description</span> column.</p>
+</li>
+<li>
+<p>Click <span class="bold">Attach</span>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>When the system opens the Attachment dialog box:</p>
+<img width="705" height="127" src="img/attach.gif" alt="Surrounding text describes attach.gif." /><br />
+<ul>
+<li>
+<p>Type the template file path name <span class="bold">OR</span> click <span class="bold">Browse</span> to locate and select the template file (DOC or DOCX format) to attach.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK.</span></p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<div id="AEOBL124" class="sect2"><a id="sthref11"></a>
+<h3 class="sect2">Modifying an Existing Template</h3>
+<p>When you modify a template, the application overwrites the old version of the template with the new version.</p>
+<ol>
+<li>
+<p>Select Reports -&gt; Periodic Reports -&gt; &lt;Report Type&gt;.</p>
+</li>
+<li>
+<p>When the system opens the page for the report type you selected:</p>
+<ul>
+<li>
+<p>Locate the report and click the row to highlight it.</p>
+</li>
+<li>
+<p>Click <span class="bold">Modify</span>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>When the application opens the report dialog box, click the Templates tab.</p>
+</li>
+<li>
+<p>When the system opens the Templates tab, select the appropriate row you wish to overwrite and click Modify.</p>
+</li>
+<li>
+<p>When the system opens the Attachment message dialog box:</p>
+<img width="400" height="200" src="img/modify.gif" alt="Surrounding text describes modify.gif." /><br />
+<ul>
+<li>
+<p>Click <span class="bold">Yes</span> to continue modifying the template.</p>
+<p>OR</p>
+<p>Click <span class="bold">No</span> to abort the modify operation.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>When the system opens the Attachment dialog box, enter the attachment name in the File Attachment field and click OK.</p>
+</li>
+</ol>
+<p>The system uploads the new template.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<div id="AEOBL125" class="sect1"><a id="sthref12"></a>
+<h2 class="sect1">Assigning Template Users</h2>
+<p>Dossier enables you to assign specific template access levels to template users. Template users can be:</p>
+<p><span class="bold">Author:</span> The template <span class="italic">author</span> can answer any questions and create a draft or final version of a template section. There can be multiple authors for any given section of a template.</p>
+<p><span class="bold">Reviewer:</span> The template <span class="italic">reviewer</span> <span class="bold">does not</span> have access to authoring functions, but can manually edit individual sections of a template after the author has marked the template <span class="italic">Ready for Review</span>. Multiple reviewers can be assigned to any section of a template.</p>
+<p><span class="bold">Author &amp; Reviewer:</span> The template <span class="italic">author &amp; reviewer</span> has access to both authoring and review functions.</p>
+<p><span class="bold">Owner:</span> A template can be owned by one or more user groups. Users assigned to these groups can:</p>
+<ul>
+<li>
+<p>Access all authoring and reviewing functions</p>
+</li>
+<li>
+<p>Assign user access rights as defined for such roles</p>
+</li>
+<li>
+<p>Build and publish reports</p>
+</li>
+</ul>
+<p>To assign group rights:</p>
+<ol>
+<li>
+<p>Select Reports-&gt;Periodic Reports-&gt;&lt;Report Type&gt;.</p>
+</li>
+<li>
+<p>When the system opens the page for the report type you selected:</p>
+<ul>
+<li>
+<p>Locate the report and click the row to highlight it.</p>
+</li>
+<li>
+<p>Click <span class="bold">Modify</span>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>When the application opens the report dialog box, click the Templates tab.</p>
+</li>
+<li>
+<p>When the system opens the Templates tab, click Assign.</p>
+</li>
+<li>
+<p>When the application opens the Dossier Security dialog box, click the Group Assignments tab:</p>
+<img width="382" height="257" src="img/secu-ga.gif" alt="Surrounding text describes secu-ga.gif." /><br />
+<ul>
+<li>
+<p>Select one or more <span class="bold">authors</span> from the <span class="bold">Group Name</span> list, and click <span class="bold">Add</span> to add the names to the list of authors in the <span class="bold">Authors</span> list.</p>
+</li>
+<li>
+<p>Select one or more <span class="bold">reviewers</span> from the <span class="bold">Group Name</span> list, and click <span class="bold">Add</span> to add the names to the list of reviewers in the <span class="bold">Reviewers</span> list.</p>
+</li>
+<li>
+<p>Select one or more <span class="bold">author/reviewers</span> from the <span class="bold">Group Name</span> list, and click <span class="bold">Add</span> to add the names to the list of reviewers in the <span class="bold">Author &amp; Reviewers</span> list.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Notify</span> tab.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>When the system opens the Notify tab:</p>
+<img width="383" height="257" src="img/secu-notify.gif" alt="Surrounding text describes secu-notify.gif." /><br />
+<ul>
+<li>
+<p>Select one or more groups from the <span class="bold">Group Name</span> list, and click <span class="bold">Add</span> to add the names to the <span class="bold">Notify</span> list OR Click <span class="bold">Add All</span> to add all the names in the <span class="bold">Group Name</span> list to the <span class="bold">Notify</span> list.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Owner</span> tab.</p>
+</li>
+</ul>
+<img width="360" height="312" src="img/secu-owner.gif" alt="Surrounding text describes secu-owner.gif." /><br /></li>
+<li>
+<p>When the system opens the Owner tab, select one or more groups from the Group Name drop-down list and click Add to add the selected group to the Owner list.</p>
+</li>
+<li>
+<p>Click OK to save the assignments information.</p>
+<p>Click <span class="bold">OK</span> to save your changes, then click the <span class="bold">Print</span> icon to view and print a PDF document listing associated assignments. The system only prints saved entries.</p>
+</li>
+</ol>
+<p>See the following sections for information about the individual tabs and for more information about printing the security assignments:</p>
+<div id="AEOBL126" class="sect2"><a id="sthref13"></a>
+<h3 class="sect2">About the Group Assignment Tab</h3>
+<p>The <span class="bold">Group Assignment</span> tab enables you to assign particular roles to users. Any user who <span class="bold">is not</span> assigned a user role, cannot modify a template or a report. You can assign any of the following roles:</p>
+<ul>
+<li>
+<p>Author</p>
+</li>
+<li>
+<p>Reviewer</p>
+</li>
+<li>
+<p>Author &amp; Reviewer</p>
+</li>
+</ul>
+<p>The following is an illustration of the <span class="bold">Group Assignment</span> tab.</p>
+<img width="382" height="257" src="img/secu-ga.gif" alt="Surrounding text describes secu-ga.gif." /><br />
+<div id="AEOBL127" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref14"></a>
+<h4 class="sect3">Group Assignment Tab Fields</h4>
+<p>The following table lists and describes the fields on the <span class="bold">Group Assignment</span> tab.</p>
+<div class="inftblinformal">
+<table class="cellalignment17" summary="Group Assignment fields." dir="ltr">
+<thead>
+<tr class="cellalignment11">
+<th class="cellalignment18" id="r1c1-t3">Field/Control</th>
+<th class="cellalignment18" id="r1c2-t3">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r2c1-t3" headers="r1c1-t3">Section Name</td>
+<td class="cellalignment19" headers="r2c1-t3 r1c2-t3">Enables you to select the template section name for privileges assignment</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r3c1-t3" headers="r1c1-t3">Group Name</td>
+<td class="cellalignment19" headers="r3c1-t3 r1c2-t3">Enables you to select one or more user groups to be authors and/or reviewers.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r4c1-t3" headers="r1c1-t3">Author</td>
+<td class="cellalignment19" headers="r4c1-t3 r1c2-t3">Enables you to assign the Author role to one or more groups selected in the Group Name list.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r5c1-t3" headers="r1c1-t3">Reviewer</td>
+<td class="cellalignment19" headers="r5c1-t3 r1c2-t3">Enables you to assign the Reviewer role to one or more groups selected in the Group Name list.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r6c1-t3" headers="r1c1-t3">Author &amp; Reviewer</td>
+<td class="cellalignment19" headers="r6c1-t3 r1c2-t3">Enables you to assign the Author &amp; Reviewer role to one or more groups selected in the Group Name list.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r7c1-t3" headers="r1c1-t3">Add button</td>
+<td class="cellalignment19" headers="r7c1-t3 r1c2-t3">Click <span class="bold">Add</span> to add a selected group or groups to the <span class="bold">Author</span>, <span class="bold">Reviewer</span>, or <span class="bold">Author &amp; Reviewer</span> lists.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r8c1-t3" headers="r1c1-t3">Remove button</td>
+<td class="cellalignment19" headers="r8c1-t3 r1c2-t3">Click <span class="bold">Remove</span> to move one or more selected groups from the <span class="bold">Author</span>, <span class="bold">Reviewer</span>, or <span class="bold">Author &amp; Reviewer</span> lists and return them to the <span class="bold">Group Name</span> list.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r9c1-t3" headers="r1c1-t3">OK button</td>
+<td class="cellalignment19" headers="r9c1-t3 r1c2-t3">Click <span class="bold">OK</span> to save the assignment information.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r10c1-t3" headers="r1c1-t3">Cancel button</td>
+<td class="cellalignment19" headers="r10c1-t3 r1c2-t3">Click <span class="bold">Cancel</span> to abort the assignment operation.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" --></div>
+<!-- class="sect3" -->
+<div id="AEOBL128" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref15"></a>
+<h4 class="sect3">Group Assignment Tab Usage Considerations</h4>
+<p>When using the <span class="bold">Group Assignment</span> tab be aware of the following:</p>
+<ul>
+<li>
+<p>The default tab is the Group Assignment tab.</p>
+</li>
+<li>
+<p>The <span class="bold">Section Name</span> drop down is blank by default.</p>
+</li>
+<li>
+<p>The Section Name contains a list of sections as configured in the periodic report configuration screen.</p>
+</li>
+<li>
+<p>You can add group(s) to each of the three user role lists.</p>
+<ul>
+<li>
+<p>Author</p>
+</li>
+<li>
+<p>Reviewer</p>
+</li>
+<li>
+<p>Author &amp; Reviewer</p>
+</li>
+</ul>
+</li>
+<li>
+<p>You <span class="bold">cannot</span> assign the same group to more than one user role. In other words, you can assign Group A to either the Author or the Author &amp; Reviewer user role, but you cannot assign it to both.</p>
+<ul>
+<li>
+<p>The user can select a group or groups in the Group Name multi-select box (on left) and grant that/those groups privileges by clicking the Add button.</p>
+</li>
+<li>
+<p>The user can select a group or groups in any user role list and click <span class="bold">Remove</span> to remove the users.</p>
+<ul>
+<li>
+<p>The system returns the names of the removed groups to the <span class="bold">Group Name</span> list.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>The groups are listed alphabetically in ascending order in all multi-select boxes.</p>
+</li>
+<li>
+<p>When you move to another tab, the system temporarily saves your current choices.</p>
+</li>
+<li>
+<p>You must click <span class="bold">OK</span> to save your changes permanently.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<div id="AEOBL129" class="sect2"><a id="sthref16"></a>
+<h3 class="sect2">About the Notify Tab</h3>
+<p>The <span class="bold">Notify</span> tab enables you select users to receive e-mail notification of new or modified assignments. The following is an illustration of the <span class="bold">Notify</span> tab.</p>
+<img width="383" height="257" src="img/secu-notify.gif" alt="Surrounding text describes secu-notify.gif." /><br />
+<div id="AEOBL130" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref17"></a>
+<h4 class="sect3">Notify Tab Fields</h4>
+<p>The following table lists and describes the fields on the <span class="bold">Notify</span> tab.</p>
+<div class="inftblinformal">
+<table class="cellalignment17" summary="Field descriptions for the Notify tab." dir="ltr">
+<thead>
+<tr class="cellalignment11">
+<th class="cellalignment18" id="r1c1-t4">Field</th>
+<th class="cellalignment18" id="r1c2-t4">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r2c1-t4" headers="r1c1-t4">Section Name</td>
+<td class="cellalignment19" headers="r2c1-t4 r1c2-t4">Enables you to select the template section name for assignment notification.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r3c1-t4" headers="r1c1-t4">Group Name</td>
+<td class="cellalignment19" headers="r3c1-t4 r1c2-t4">Enables you to select one or more user groups to notify of new assignments or changes to existing assignments.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r4c1-t4" headers="r1c1-t4">Add button</td>
+<td class="cellalignment19" headers="r4c1-t4 r1c2-t4">Enables you to add one or more groups selected in the Group Name list to the Notify list.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r5c1-t4" headers="r1c1-t4">Add All button</td>
+<td class="cellalignment19" headers="r5c1-t4 r1c2-t4">Enables you to add all groups in the Group Name list to the Notify list.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r6c1-t4" headers="r1c1-t4">Notify</td>
+<td class="cellalignment19" headers="r6c1-t4 r1c2-t4">Enables you to notify the users in this list of new assignments or changes to existing assignments.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r7c1-t4" headers="r1c1-t4">Remove button</td>
+<td class="cellalignment19" headers="r7c1-t4 r1c2-t4">Enables you to remove one or more selected users from the Notify list.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r8c1-t4" headers="r1c1-t4">Remove All button</td>
+<td class="cellalignment19" headers="r8c1-t4 r1c2-t4">Enables you to remove all users from the Notify list.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" --></div>
+<!-- class="sect3" -->
+<div id="AEOBL131" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref18"></a>
+<h4 class="sect3">Notify Tab Usage Considerations</h4>
+<p>When using the <span class="bold">Notify</span> tab, be aware of the following:</p>
+<ul>
+<li>
+<p>The <span class="bold">Section Name</span> drop-down contains a list of template sections. If you do not select a section, the <span class="bold">Add/Remove</span> buttons are disabled.</p>
+</li>
+<li>
+<p>Select one or more groups from the <span class="bold">Group Name</span> list to include the users in the group in the notification list.</p>
+<ul>
+<li>
+<p>Available groups have been granted access from the <span class="bold">Group Assignment</span> tab.</p>
+</li>
+<li>
+<p>When you click <span class="bold">Add</span>, the system places the selected group or groups to be notified in the Notify multi-select box (on right).</p>
+</li>
+<li>
+<p>Select one or more groups in the <span class="bold">Notify</span> list and click <span class="bold">Remove</span> to remove them from the notification list.</p>
+</li>
+<li>
+<p>The application removes the selected groups from the <span class="bold">Notify</span> list and returns them to the <span class="bold">Group Name</span> list.</p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<div id="AEOBL132" class="sect2"><a id="sthref19"></a>
+<h3 class="sect2">About the Owner Tab</h3>
+<p>The <span class="bold">Owner</span> tab enables you to designate one or more groups to own an entire periodic report. Owner groups can do the following:</p>
+<ul>
+<li>
+<p>Access all authoring and reviewing functions</p>
+</li>
+<li>
+<p>Assign user access rights as defined for such roles</p>
+</li>
+<li>
+<p>Build and publish reports</p>
+</li>
+</ul>
+<p>The following is an illustration of the <span class="bold">Owner</span> tab.</p>
+<img width="360" height="312" src="img/secu-owner.gif" alt="Surrounding text describes secu-owner.gif." /><br />
+<div id="AEOBL133" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref20"></a>
+<h4 class="sect3">Owner Tab Fields</h4>
+<p>The following tables lists and describes the fields on the <span class="bold">Owner</span> tab.</p>
+<div class="inftblinformal">
+<table class="cellalignment17" summary="Field descriptions for the Owner tab." dir="ltr">
+<thead>
+<tr class="cellalignment11">
+<th class="cellalignment18" id="r1c1-t5">Field</th>
+<th class="cellalignment18" id="r1c2-t5">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r2c1-t5" headers="r1c1-t5">Group Name</td>
+<td class="cellalignment19" headers="r2c1-t5 r1c2-t5">Contains a list of user groups who can be designated as owners of a report.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r3c1-t5" headers="r1c1-t5">Add button</td>
+<td class="cellalignment19" headers="r3c1-t5 r1c2-t5">Enables you to designate groups selected in the Group Name pane as owners of a template by moving the group name from the Group Name pane to the Owner pane.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r4c1-t5" headers="r1c1-t5">Remove button</td>
+<td class="cellalignment19" headers="r4c1-t5 r1c2-t5">Enables you to remove a selected group from the Owner pane and return it to the Group Name pane.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r5c1-t5" headers="r1c1-t5">Owner</td>
+<td class="cellalignment19" headers="r5c1-t5 r1c2-t5">Contains a list of user groups who are designated as owners of a report.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" --></div>
+<!-- class="sect3" -->
+<div id="AEOBL134" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref21"></a>
+<h4 class="sect3">Owner Tab Usage Considerations</h4>
+<p>When using the <span class="bold">Owner</span> tab, be aware of the following:</p>
+<ul>
+<li>
+<p>All active groups that have been granted access privileges from the <span class="bold">Group Assignment</span> tab are included in the <span class="bold">Owner</span> drop-down list.</p>
+</li>
+<li>
+<p>You can select one or more groups as the owner of the entire Periodic Report.</p>
+<ul>
+<li>
+<p>The owner can perform the generate and build operations.</p>
+</li>
+<li>
+<p>The owner can be both the author and the reviewer and is assigned the access rights defined for such roles.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>You must select at least one group to be the owner of a Periodic Report.</p>
+<ul>
+<li>
+<p>If you fail to select a group to be the owner of the Periodic Report, the system presents the following message:</p>
+<p>You must assign a Dossier owner group.</p>
+</li>
+<li>
+<p>Click OK.</p>
+</li>
+<li>
+<p>If you remove all the owner groups, the system presents the following message:</p>
+<p>You must assign a Dossier owner group.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>AG Service sends e-mail notifications to all Authors, Owners, and Reviewers, if you have selected them for notification when a specific period report is generated or regenerated when the following occur:</p>
+<ul>
+<li>
+<p>Report is generated</p>
+</li>
+<li>
+<p>Report is ready to build</p>
+</li>
+<li>
+<p>Build is completed successfully</p>
+</li>
+<li>
+<p>Build is failed in between processing</p>
+</li>
+</ul>
+</li>
+<li>
+<p>The system sends an e-mail notification to the users in the groups listed in the <span class="bold">Notify</span> list. The application sends e-mail notifications to users when the following occur:</p>
+<ul>
+<li>
+<p>A Periodic Report is generated:</p>
+</li>
+<li>
+<p>The author has checked the <span class="italic">Ready for Review</span> checkbox.</p>
+<ul>
+<li>
+<p>The application sends an e-mail notification to the appropriate reviewers.</p>
+</li>
+<li>
+<p>If there are multiple reviewers groups specified for a given section, the application sends each reviewer an e-mail notification.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>The email notification includes the following:</p>
+<ul>
+<li>
+<p>Subject - Dossier Section for <span class="italic">&lt;Periodic Report Name&gt;</span> ready for Review</p>
+</li>
+<li>
+<p>Section Name &amp; Description - The name and description of the completed section.</p>
+</li>
+<li>
+<p>Report Name -- The name of the report this section has been completed for.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>E-Mail Layout</p>
+<p>Subject:</p>
+<p>&lt;Periodic Report&gt; Section for &lt;Periodic Report Name&gt; is ready for Review</p>
+<p><span class="bold">Body:</span> (<span class="italic">the following four fields are taken directly from the Reports - Periodic Reports dialog</span>)</p>
+<p>Trade Name: <span class="italic">&lt;Product Name(s)&gt;</span> Destination: <span class="italic">&lt;Submission Destination&gt;</span></p>
+<p>Description: <span class="italic">&lt;Description&gt;</span></p>
+<p>Due Date: <span class="italic">&lt;Due Date of Periodic Report&gt;</span></p>
+<p>The authoring of the <span class="italic">&lt;section name&gt;</span> <span class="italic">&lt;Section Description&gt;</span> for the <span class="italic">&lt;periodic report&gt;</span><span class="italic">"&lt;PSUR Name&gt;"</span> has been completed and is ready for your review. Please log into Argus to review your section utilizing the menu option "Reports &gt; Periodic Reports" and selecting the "View Argus Dossier" option for the correct report.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<div id="AEOBL135" class="sect2"><a id="sthref22"></a>
+<h3 class="sect2">Printing a Dossier Security List</h3>
+<p>On the <span class="bold">Templates</span> tab, you can click <span class="bold">Print</span> to print a list of template assignments. This is called a <span class="bold">Dossier Security</span> report but may also be called a <span class="bold">template assignment list</span>. When you click <span class="bold">Print</span>, the application presents the following message:</p>
+<p><span class="italic">To print the current Dossier security settings, the system must save the periodic report configuration.</span></p>
+<ol>
+<li>
+<p>Go to the <span class="bold">Template</span> tab.</p>
+</li>
+<li>
+<p>Select the appropriate template from the template list and click <span class="bold">Print</span>.</p>
+</li>
+<li>
+<p>Click OK when the system displays the following message:</p>
+<p><span class="italic">To print the current Dossier security settings, the system must save the periodic report configuration</span>.</p>
+</li>
+<li>
+<p>The system saves the security settings and prints the Dossier Security report shown in the following illustration.</p>
+</li>
+</ol>
+<img width="276" height="302" src="img/print.gif" alt="Surrounding text describes print.gif." /><br />
+<p>The following table lists and describes the elements in the <span class="bold">Dossier Security</span> report.</p>
+<div class="inftblinformal">
+<table class="cellalignment17" summary="Elements in Dossier Security." dir="ltr">
+<thead>
+<tr class="cellalignment11">
+<th class="cellalignment18" id="r1c1-t6">Report Section</th>
+<th class="cellalignment18" id="r1c2-t6">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r2c1-t6" headers="r1c1-t6">Report Title</td>
+<td class="cellalignment19" headers="r2c1-t6 r1c2-t6">The name of the report is always <span class="bold">Dossier Security</span>.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r3c1-t6" headers="r1c1-t6">Save Date and Time</td>
+<td class="cellalignment19" headers="r3c1-t6 r1c2-t6">The date and time the template and security assignments were last saved.
+<p>The date and time are recorded in GMT (Greenwich Mean Time). The date is actually local time with the GMT offset listed. It is NOT printed in GMT. GMT is only listed to display the offset for GMT.</p>
+<p>The format is as follows:</p>
+<p>"Last saved <span class="italic">dd-MMM-yyyy HH:mm GMT -n"</span></p>
+<p>For example:</p>
+<p>Last saved 21 JUL 2008 16:11 GMT -8</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r4c1-t6" headers="r1c1-t6">Template Name</td>
+<td class="cellalignment19" headers="r4c1-t6 r1c2-t6">The name of the template.
+<p>Each template is listed separately</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r5c1-t6" headers="r1c1-t6">Report Details</td>
+<td class="cellalignment19" headers="r5c1-t6 r1c2-t6">This section contains three columns that contain information about the assigned users:
+<p>Group Name - The name of the user group sorted alphabetically in ascending order.</p>
+<p>Role - The role assigned to the group. A group can be assigned multiple roles.</p>
+<p>Notify - Indicates whether the group should be notified.</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r6c1-t6" headers="r1c1-t6">Report Template Owner</td>
+<td class="cellalignment19" headers="r6c1-t6 r1c2-t6">The owner or owners of the periodic report.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<div id="AEOBL136" class="sect1"><a id="sthref23"></a>
+<h2 class="sect1">Accessing the Author Tab</h2>
+<p>Use the following procedure to access the <span class="bold">Author</span> tab:</p>
+<ol>
+<li>
+<p>Select Reports-&gt;Compliance-&gt;Periodic to display a list of periodic reports.</p>
+<img width="1029" height="417" src="img/prdc.gif" alt="Surrounding text describes prdc.gif." /><br /></li>
+<li>
+<p>When the application opens the list of periodic reports, locate the appropriate report and click its associated report icon.</p>
+</li>
+<li>
+<p>Select View Argus Dossier from the pop-up menu.</p>
+<img width="184" height="152" src="img/popup.gif" alt="Surrounding text describes popup.gif." /><br /></li>
+<li>
+<p>The system opens the Author tab for the selected report.</p>
+</li>
+</ol>
+<div id="AEOBL137" class="sect2"><a id="sthref24"></a>
+<h3 class="sect2">About the Author Tab</h3>
+<p>All the tasks required to generate a Dossier report can be performed from the <span class="bold">Author</span> tab in the View <span class="italic">&lt;template name&gt;</span> Template. Generating a Dossier report requires you to do the following:</p>
+<ul>
+<li>
+<p>Provide report content</p>
+</li>
+<li>
+<p>Review the report</p>
+</li>
+<li>
+<p>Approve the report</p>
+</li>
+<li>
+<p>Publish the report</p>
+</li>
+</ul>
+<p>The following is an illustration of the <span class="bold">Author</span> tab.</p>
+<img width="859" height="571" src="img/viewadt.jpg" alt="Surrounding text describes viewadt.jpg." /><br />
+<div id="AEOBL138" class="sect3"><a id="sthref25"></a>
+<h4 class="sect3">Author Tab Fields</h4>
+<p>The following table lists and describes the fields and controls on the <span class="bold">Author</span> tab.</p>
+<div class="inftblinformal">
+<table class="cellalignment17" summary="Lists and describes the fields and controls on the Author tab" dir="ltr">
+<thead>
+<tr class="cellalignment11">
+<th class="cellalignment18" id="r1c1-t7">Field/Control</th>
+<th class="cellalignment18" id="r1c2-t7">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r2c1-t7" headers="r1c1-t7">Periodic Report Name</td>
+<td class="cellalignment19" headers="r2c1-t7 r1c2-t7">Displays the periodic report name as configured in the Subject Tab</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r3c1-t7" headers="r1c1-t7">Start Date</td>
+<td class="cellalignment19" headers="r3c1-t7 r1c2-t7">Displays the start date of the periodic reporting period from report configuration</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r4c1-t7" headers="r1c1-t7">End Date</td>
+<td class="cellalignment19" headers="r4c1-t7 r1c2-t7">Displays the end date of the periodic reporting period from report configuration</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r5c1-t7" headers="r1c1-t7">Generated Date</td>
+<td class="cellalignment19" headers="r5c1-t7 r1c2-t7">Displays the date the report was generated.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r6c1-t7" headers="r1c1-t7"># of Cases</td>
+<td class="cellalignment19" headers="r6c1-t7 r1c2-t7">Displays the number of cases that have been included in the PSUR report.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r7c1-t7" headers="r1c1-t7">Agency</td>
+<td class="cellalignment19" headers="r7c1-t7 r1c2-t7">Displays name of the agency</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r8c1-t7" headers="r1c1-t7">IBD</td>
+<td class="cellalignment19" headers="r8c1-t7 r1c2-t7">Displays the IBD name of the configured product</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r9c1-t7" headers="r1c1-t7">Templates Section</td>
+<td class="cellalignment19" headers="r9c1-t7 r1c2-t7">This section displays a list of all PSUR template section names.
+<p>Click the template name to view the unprocessed template doc or docx file in a separate window.</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r10c1-t7" headers="r1c1-t7">Collapse/Expand icons</td>
+<td class="cellalignment19" headers="r10c1-t7 r1c2-t7">Click the <span class="bold">Collapse</span> icon to collapse the <span class="bold">Templates</span> section.
+<p>Click the <span class="bold">Expand</span> icon to expand the <span class="bold">Templates</span> section.</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r11c1-t7" headers="r1c1-t7">Section</td>
+<td class="cellalignment19" headers="r11c1-t7 r1c2-t7">Displays the names of the sections included in the template.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r12c1-t7" headers="r1c1-t7">Description</td>
+<td class="cellalignment19" headers="r12c1-t7 r1c2-t7">Display a description of the section contents.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r13c1-t7" headers="r1c1-t7">Author button</td>
+<td class="cellalignment19" headers="r13c1-t7 r1c2-t7">Click <span class="bold">Author</span> to perform report-related tasks based on your assigned user role.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r14c1-t7" headers="r1c1-t7">Ready for Review</td>
+<td class="cellalignment19" headers="r14c1-t7 r1c2-t7">Displays if the section of the template is ready to review.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r15c1-t7" headers="r1c1-t7">Ready for Build</td>
+<td class="cellalignment19" headers="r15c1-t7 r1c2-t7">Displays if the section of the template is ready to generate.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r16c1-t7" headers="r1c1-t7">Check Out Button / Check In Button</td>
+<td class="cellalignment19" headers="r16c1-t7 r1c2-t7">Click <span class="bold">Check In</span> to check a template section in. This button displays only if a section has been checked out.
+<p>Click <span class="bold">Check Out</span> to check in a template section. When you click <span class="bold">Check Out</span> the system displays the <span class="bold">Check Out</span> screen. This button displays only if the authoring task has been successfully completed.</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r17c1-t7" headers="r1c1-t7">Comments</td>
+<td class="cellalignment19" headers="r17c1-t7 r1c2-t7">Enables you to enter comments regarding the template.
+<p>Click the <span class="bold">Zoom</span> icon to view all user comments.</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r18c1-t7" headers="r1c1-t7">Generated Reports</td>
+<td class="cellalignment19" headers="r18c1-t7 r1c2-t7">Provides a list of generated reports.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r19c1-t7" headers="r1c1-t7">Collapse/Expand icons</td>
+<td class="cellalignment19" headers="r19c1-t7 r1c2-t7">Click the <span class="bold">Collapse</span> icon to collapse the <span class="bold">Generated Reports</span> section.
+<p>Click the <span class="bold">Expand</span> icon to expand the <span class="bold">Generated Reports</span> section.</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r20c1-t7" headers="r1c1-t7">Section</td>
+<td class="cellalignment19" headers="r20c1-t7 r1c2-t7">Provides a link to the unprocessed template file.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r21c1-t7" headers="r1c1-t7">Type</td>
+<td class="cellalignment19" headers="r21c1-t7 r1c2-t7">Identifies the type of report the system generated</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r22c1-t7" headers="r1c1-t7">Additional Content</td>
+<td class="cellalignment19" headers="r22c1-t7 r1c2-t7">Displays any additional content of the user has added content</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r23c1-t7" headers="r1c1-t7">Collapse/Expand icons</td>
+<td class="cellalignment19" headers="r23c1-t7 r1c2-t7">Enables you to collapse or expand the <span class="bold">Additional Contents</span> section.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r24c1-t7" headers="r1c1-t7">Add</td>
+<td class="cellalignment19" headers="r24c1-t7 r1c2-t7">Enables you to add additional content to the report.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r25c1-t7" headers="r1c1-t7">Delete</td>
+<td class="cellalignment19" headers="r25c1-t7 r1c2-t7">Enables you to delete any uploaded additional content.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r26c1-t7" headers="r1c1-t7">Content</td>
+<td class="cellalignment19" headers="r26c1-t7 r1c2-t7">File name of the attached content</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r27c1-t7" headers="r1c1-t7">Description</td>
+<td class="cellalignment19" headers="r27c1-t7 r1c2-t7">This is the additional content Description</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r28c1-t7" headers="r1c1-t7">Header and Footer</td>
+<td class="cellalignment19" headers="r28c1-t7 r1c2-t7">Enables the users to view the header and footer files as they appear on the pages that follow.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r29c1-t7" headers="r1c1-t7">Collapse/Expand icons</td>
+<td class="cellalignment19" headers="r29c1-t7 r1c2-t7">Displays any additional content of the user has added content</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r30c1-t7" headers="r1c1-t7">Layout</td>
+<td class="cellalignment19" headers="r30c1-t7 r1c2-t7">Indicates whether the document is in portrait or landscape orientation.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r31c1-t7" headers="r1c1-t7">File</td>
+<td class="cellalignment19" headers="r31c1-t7 r1c2-t7">The name of the current file as a link. When you click this link the system opens the current header/footer file.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r32c1-t7" headers="r1c1-t7">Check Out/Check In</td>
+<td class="cellalignment19" headers="r32c1-t7 r1c2-t7">Enables you to check out a file for modification and check it back in.
+<p>Check out and check in are for the user of owners and reviewers.</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r33c1-t7" headers="r1c1-t7">Ready for Build</td>
+<td class="cellalignment19" headers="r33c1-t7 r1c2-t7">Indicates whether the report is ready to build.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r34c1-t7" headers="r1c1-t7">Draft</td>
+<td class="cellalignment19" headers="r34c1-t7 r1c2-t7">Generates the draft header footer template in PDF format.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r35c1-t7" headers="r1c1-t7">Comments</td>
+<td class="cellalignment19" headers="r35c1-t7 r1c2-t7">Enables the user to enter any relevant comments.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r36c1-t7" headers="r1c1-t7">Close</td>
+<td class="cellalignment19" headers="r36c1-t7 r1c2-t7">Closes the active window.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" --></div>
+<!-- class="sect3" -->
+<div id="AEOBL139" class="sect3"><a id="sthref26"></a>
+<h4 class="sect3">Author Tab Usage Considerations</h4>
+<p>When using the <span class="bold">Author</span> tab, consider the following:</p>
+<ul>
+<li>
+<p>The system disables the <span class="bold">Generation Status</span> button until you initiate the report build process,</p>
+</li>
+<li>
+<p>The screen displays all periodic report configuration elements in sections on the tab.</p>
+<ul>
+<li>
+<p>Templates Section</p>
+<p>This section lists all sections of the template as configured in previous steps</p>
+<p>The <span class="bold">Template</span> name is a hyperlink. When you click the template name, the application opens the raw template from the database.</p>
+<p>This section displays all the pre configured templates you added when you created the report.</p>
+<p>The templates are listed in the order they were in when the report was created.</p>
+<p>Click the report section link to view the template file.</p>
+<p>The application displays a minimum of six rows. If there are more rows, a scroll bar is available. The scroll bars appears as necessary</p>
+</li>
+<li>
+<p>Generated Reports Section</p>
+<p>The application displays the report sections ascending order by <span class="bold">Type</span> and then by <span class="bold">Section</span>.</p>
+<p>Click the report name to view the latest version of a report. The system displays the report (in PDF format) in a separate window.</p>
+<p>Click the report section link to view the section report.</p>
+<p>The system displays a minimum of six (6) rows. If there are more than six (6) rows, the system displays a scroll bar</p>
+<p>Generated report types are: PSUR, CTPR, NDA, and IND. The following table lists the report names for each report type.</p>
+<div class="inftblinformal">
+<table class="cellalignment17" summary="Lists the report names for each report type." dir="ltr">
+<thead>
+<tr class="cellalignment11">
+<th class="cellalignment18" id="r1c1-t8">Report Type</th>
+<th class="cellalignment18" id="r1c2-t8">Report Names</th>
+<th class="cellalignment18" id="r1c3-t8"><br /></th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r2c1-t8" headers="r1c1-t8">PSUR</td>
+<td class="cellalignment19" headers="r2c1-t8 r1c2-t8">Report Configuration
+<p>Line Listing</p>
+<p>Index of Cases in Line Listing</p>
+<p>Summary of Cases missing assessments</p>
+<p>Line Listing Tabulation</p>
+<p>Summary of Unlocked Cases</p>
+<p>CIOMS reports</p>
+</td>
+<td class="cellalignment19" headers="r2c1-t8 r1c3-t8">Cumulative Summary
+<p>FDA - Adverse Event Summary</p>
+<p>FDA - Domestic Consumer Report</p>
+<p>FDA - MedWatch forms</p>
+<p>CDA or CL based on cases in Line Listing (*)</p>
+<p>CDA based on all cases (*)</p>
+<p>CDA or CL based on date range</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r3c1-t8" headers="r1c1-t8">CTPR</td>
+<td class="cellalignment19" headers="r3c1-t8 r1c2-t8">Report Configuration
+<p>Line Listing</p>
+<p>Index of Cases in Line Listing</p>
+<p>Summary of Cases missing assessments</p>
+<p>Count of Cases per Report Type</p>
+<p>Event Count per Study Drug (1)</p>
+<p>Event Count per Study Drug (2)</p>
+<p>Line Listing Tabulation</p>
+<p>Summary of Unlocked Cases</p>
+</td>
+<td class="cellalignment19" headers="r3c1-t8 r1c3-t8">CIOMS reports
+<p>Cumulative Summary</p>
+<p>FDA - Adverse Event Summary</p>
+<p>FDA - Domestic Consumer Report</p>
+<p>FDA - MedWatch forms</p>
+<p>CDA or CL based on cases in Line Listing (*)</p>
+<p>CDA based on all cases (*)</p>
+<p>CDA or CL based on date range</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r4c1-t8" headers="r1c1-t8">NDA</td>
+<td class="cellalignment19" headers="r4c1-t8 r1c2-t8">Report Configuration
+<p>Tab 1: MW or VAERS forms</p>
+<p>Tab 2: Index of MW or VAERS forms</p>
+<p>Tab 3 Part 1: Line listing of 15-day reports submitted</p>
+<p>Tab 3 Part 2: Tabulation by SOC of all events submitted</p>
+<p>Tab 3 Part 3: Cases sent to FDA under a different NDA</p>
+</td>
+<td class="cellalignment19" headers="r4c1-t8 r1c3-t8">Summary of Cases missing assessments
+<p>Summary of Unlocked Cases</p>
+<p>List of Nullified 15-day cases</p>
+<p>Custom Case Summary Tabulation</p>
+<p>CDA based on cases in Line Listing (*)</p>
+<p>CDA based on all cases (*)</p>
+<p>Case Count Summary</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r5c1-t8" headers="r1c1-t8">IND</td>
+<td class="cellalignment19" headers="r5c1-t8 r1c2-t8">Report Configuration
+<p>Line Listing of Cases</p>
+<p>Line Listing of Death Cases</p>
+</td>
+<td class="cellalignment19" headers="r5c1-t8 r1c3-t8">CDA based on cases in Line Listing (*)
+<p>CDA based on all cases (*)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" --></li>
+</ul>
+</li>
+<li>
+<p>Additional Content Section</p>
+<p>You can upload additional information to attach to the report.</p>
+<ul>
+<li>
+<p>You can <span class="bold">only</span> upload the following file types: .PDF, .DOC, and .DOCX</p>
+</li>
+<li>
+<p>If you try to upload another file type, the system displays the following error message:</p>
+<p><span class="italic">Your file has not been uploaded. File type must be .pdf, .doc, or .docx.</span></p>
+</li>
+<li>
+<p>When you click <span class="bold">Add</span>, the system opens an upload pop-up box.</p>
+</li>
+<li>
+<p>You <span class="bold">must</span> enter a description of the file you are uploading. If you fail to enter a description and click <span class="bold">OK</span>, the system displays the following error message:</p>
+<p><span class="italic">You must enter a description for the file you are uploading</span>.</p>
+</li>
+<li>
+<p>The maximum size of the uploaded file is 30 MB.</p>
+</li>
+</ul>
+<p>The names in the <span class="bold">Additional Content</span> section are links. Click the link to open the file.</p>
+<p>If you select a row and click <span class="bold">Delete</span>, the system displays a confirmation dialog box with the following message:</p>
+<p><span class="italic">Are you sure you want to delete the highlighted Row.</span></p>
+<ul>
+<li>
+<p>Click <span class="bold">Yes</span> to delete the row.</p>
+</li>
+<li>
+<p>Click <span class="bold">No</span> to dismiss the dialog box without deleting the row.</p>
+<p>The system displays a minimum of four (4) rows in the section. A scroll bar displays if there are more than four (4) rows.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>General Usage Information</p>
+<ul>
+<li>
+<p>Click the collapse and expand icons to collapse/expand each section.</p>
+</li>
+<li>
+<p>The system highlights a selected row.</p>
+</li>
+</ul>
+<p>An <span class="bold">Author</span> button is available for each template.</p>
+<ul>
+<li>
+<p>The system enables the <span class="bold">Author</span> button to all user roles that have access to Dossier.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Author</span> button to open the <span class="bold">Questions</span> dialog.</p>
+</li>
+<li>
+<p>All users can view all questions; however, only <span class="bold">Authors</span> and <span class="bold">Owners</span> can change answers.</p>
+</li>
+</ul>
+<p>Only a user assigned an <span class="bold">Author</span> role can execute individual templates.</p>
+<ul>
+<li>
+<p>The <span class="bold">Author</span> operation guides you through all questions (as defined in the template and processed during upload). You are <span class="bold">expected</span> to answer the questions.</p>
+</li>
+<li>
+<p>After the user clicks Draft or Final, the system generates a Word document (.DOC/.DOCX format) that contains the processed content and narratives.</p>
+</li>
+<li>
+<p>Once the user clicks Final, the system generates the final version of the template and allows the Author user to check the Ready for Review check box.</p>
+</li>
+</ul>
+<p>The system enables the <span class="bold">Ready for Review</span> and <span class="bold">Ready for Build</span> checkboxes and the <span class="bold">Check In</span> and <span class="bold">Check Out</span> buttons when a Template is <span class="bold">Final</span>.</p>
+<p>When a template is Final, the system enables the <span class="bold">Ready for Review</span> check box.</p>
+<ul>
+<li>
+<p>Only the template Reviewer and the report Owner can check this check box.</p>
+</li>
+<li>
+<p>Once this box is checked, the system does the following:</p>
+<p>Enables the <span class="bold">Ready for Build</span> option.</p>
+<p>Prevents you from generating a final template.</p>
+<p>Disables the <span class="bold">Ready for Review</span> check box. Once checked, this check box <span class="bold">cannot</span> be unchecked.</p>
+</li>
+</ul>
+<p>The system enables the <span class="bold">Ready to Build</span> option when you select <span class="bold">Ready for Review</span>.</p>
+<ul>
+<li>
+<p>Only the Author or Owner can check the <span class="bold">Ready for Build</span> option.</p>
+</li>
+<li>
+<p>You can uncheck this option after it has been checked.</p>
+</li>
+</ul>
+<p>The system enables the <span class="bold">Check In</span> and <span class="bold">Check Out</span> buttons when you check the <span class="bold">Ready for Review</span> option.</p>
+<ul>
+<li>
+<p>Click the <span class="bold">Check Out</span> button to open the <span class="bold">Check Out</span> dialog box.</p>
+</li>
+<li>
+<p>When a document is checked out, the system hides the <span class="bold">Check Out</span> button.</p>
+</li>
+<li>
+<p>The system displays the <span class="bold">Check In</span> button only if the final template has been checked out.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Check In</span> button to open the <span class="bold">Check In</span> dialog.</p>
+</li>
+<li>
+<p>The Final template can be checked out by <span class="bold">one</span> user at a time.</p>
+</li>
+<li>
+<p>Only the user who checked the document out can check it in.</p>
+</li>
+</ul>
+<p>The system displays the <span class="bold">Last Check in Comments</span> in a text box on the screen for each template. Click the <span class="bold">Zoom</span> icon to open the check in comments in a popup dialog.</p>
+<p>When all template sections and Header and Footer sections are checked, the Owner can build the report. The build process does the following:</p>
+<ul>
+<li>
+<p>Merges all template sections into one.</p>
+</li>
+<li>
+<p>Creates a comprehensive .doc or .docx file.</p>
+</li>
+<li>
+<p>Saves the final document in the database and opens it on the screen.</p>
+</li>
+<li>
+<p>Enables all users (if the build was successful) to check-out the document and edit it manually.</p>
+</li>
+<li>
+<p>Enables users to check-in this document after check-out.</p>
+</li>
+</ul>
+<p>The system enables the <span class="bold">Build</span> button only if the following are true:</p>
+<ul>
+<li>
+<p>The user is the owner of the periodic report.</p>
+</li>
+<li>
+<p>All the templates have been marked as <span class="bold">Ready for Build</span>.</p>
+</li>
+</ul>
+<p>If Documentum is configured, AG Services picks up the built file and saves it in Documentum.</p>
+<ul>
+<li>
+<p>If Documentum is not configured, the file is marked <span class="bold">not submitted.</span></p>
+</li>
+<li>
+<p>The file is saved in .PDF format.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<div id="AEOBL140" class="sect3"><a id="sthref27"></a>
+<h4 class="sect3">Role Security Requirements</h4>
+<p>The following table show which user types have access to various elements in the GUI.</p>
+<div class="inftblinformal">
+<table class="cellalignment17" summary="Users with access to GUI elements." dir="ltr">
+<thead>
+<tr class="cellalignment11">
+<th class="cellalignment18" id="r1c1-t9">User Type</th>
+<th class="cellalignment18" id="r1c2-t9"><br /></th>
+<th class="cellalignment18" id="r1c3-t9"><br /></th>
+<th class="cellalignment18" id="r1c4-t9"><br /></th>
+<th class="cellalignment18" id="r1c5-t9"><br /></th>
+</tr>
+<tr class="cellalignment11">
+<th class="cellalignment18" id="r2c1-t9" headers="r1c1-t9">GUI Element</th>
+<th class="cellalignment18" id="r2c2-t9" headers="r2c1-t9 r1c2-t9">Owner</th>
+<th class="cellalignment18" id="r2c3-t9" headers="r2c1-t9 r1c3-t9">Reviewer</th>
+<th class="cellalignment18" id="r2c4-t9" headers="r2c1-t9 r1c4-t9">Author</th>
+<th class="cellalignment18" id="r2c5-t9" headers="r2c1-t9 r1c5-t9">Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r3c1-t9" headers="r1c1-t9 r2c1-t9">Author Button</td>
+<td class="cellalignment19" headers="r3c1-t9 r1c2-t9 r2c2-t9">Yes</td>
+<td class="cellalignment19" headers="r3c1-t9 r1c3-t9 r2c3-t9">Yes</td>
+<td class="cellalignment19" headers="r3c1-t9 r1c4-t9 r2c4-t9">Yes</td>
+<td class="cellalignment19" headers="r3c1-t9 r1c5-t9 r2c5-t9">&nbsp;</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r4c1-t9" headers="r1c1-t9 r2c1-t9">Final</td>
+<td class="cellalignment19" headers="r4c1-t9 r1c2-t9 r2c2-t9">Yes</td>
+<td class="cellalignment19" headers="r4c1-t9 r1c3-t9 r2c3-t9">No</td>
+<td class="cellalignment19" headers="r4c1-t9 r1c4-t9 r2c4-t9">Yes</td>
+<td class="cellalignment19" headers="r4c1-t9 r1c5-t9 r2c5-t9">&nbsp;</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r5c1-t9" headers="r1c1-t9 r2c1-t9">Draft</td>
+<td class="cellalignment19" headers="r5c1-t9 r1c2-t9 r2c2-t9">Yes</td>
+<td class="cellalignment19" headers="r5c1-t9 r1c3-t9 r2c3-t9">Yes</td>
+<td class="cellalignment19" headers="r5c1-t9 r1c4-t9 r2c4-t9">Yes</td>
+<td class="cellalignment19" headers="r5c1-t9 r1c5-t9 r2c5-t9">&nbsp;</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r6c1-t9" headers="r1c1-t9 r2c1-t9">Save</td>
+<td class="cellalignment19" headers="r6c1-t9 r1c2-t9 r2c2-t9">Yes</td>
+<td class="cellalignment19" headers="r6c1-t9 r1c3-t9 r2c3-t9">No</td>
+<td class="cellalignment19" headers="r6c1-t9 r1c4-t9 r2c4-t9">Yes</td>
+<td class="cellalignment19" headers="r6c1-t9 r1c5-t9 r2c5-t9">&nbsp;</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r7c1-t9" headers="r1c1-t9 r2c1-t9">Ready for Review</td>
+<td class="cellalignment19" headers="r7c1-t9 r1c2-t9 r2c2-t9">Yes</td>
+<td class="cellalignment19" headers="r7c1-t9 r1c3-t9 r2c3-t9">No</td>
+<td class="cellalignment19" headers="r7c1-t9 r1c4-t9 r2c4-t9">Yes</td>
+<td class="cellalignment19" headers="r7c1-t9 r1c5-t9 r2c5-t9"><span class="bold">Ready for Review</span> is available when the <span class="bold">Final</span> has been generated for the Template.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r8c1-t9" headers="r1c1-t9 r2c1-t9">Ready for Build</td>
+<td class="cellalignment19" headers="r8c1-t9 r1c2-t9 r2c2-t9">Yes</td>
+<td class="cellalignment19" headers="r8c1-t9 r1c3-t9 r2c3-t9">Yes</td>
+<td class="cellalignment19" headers="r8c1-t9 r1c4-t9 r2c4-t9">No</td>
+<td class="cellalignment19" headers="r8c1-t9 r1c5-t9 r2c5-t9"><span class="bold">Ready for Build</span> is available only when <span class="bold">Ready for Review</span> is checked.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r9c1-t9" headers="r1c1-t9 r2c1-t9">Section Checkout</td>
+<td class="cellalignment19" headers="r9c1-t9 r1c2-t9 r2c2-t9">Yes</td>
+<td class="cellalignment19" headers="r9c1-t9 r1c3-t9 r2c3-t9">Yes</td>
+<td class="cellalignment19" headers="r9c1-t9 r1c4-t9 r2c4-t9">No</td>
+<td class="cellalignment19" headers="r9c1-t9 r1c5-t9 r2c5-t9"><span class="bold">Ready for Build</span> is available only when <span class="bold">Ready for Review</span> is checked.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r10c1-t9" headers="r1c1-t9 r2c1-t9">Add Other Content</td>
+<td class="cellalignment19" headers="r10c1-t9 r1c2-t9 r2c2-t9">Yes</td>
+<td class="cellalignment19" headers="r10c1-t9 r1c3-t9 r2c3-t9">Yes</td>
+<td class="cellalignment19" headers="r10c1-t9 r1c4-t9 r2c4-t9">Yes</td>
+<td class="cellalignment19" headers="r10c1-t9 r1c5-t9 r2c5-t9">If the user is a Reviewer for any of the section templates, then he/she will have access
+<p>If the user is an author for any of the section templates, then he/she will have access.</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r11c1-t9" headers="r1c1-t9 r2c1-t9">Build</td>
+<td class="cellalignment19" headers="r11c1-t9 r1c2-t9 r2c2-t9">Yes</td>
+<td class="cellalignment19" headers="r11c1-t9 r1c3-t9 r2c3-t9">No</td>
+<td class="cellalignment19" headers="r11c1-t9 r1c4-t9 r2c4-t9">No</td>
+<td class="cellalignment19" headers="r11c1-t9 r1c5-t9 r2c5-t9">Available only when all templates are checked in and <span class="bold">Ready for build</span> is checked for all templates.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r12c1-t9" headers="r1c1-t9 r2c1-t9">Checkout</td>
+<td class="cellalignment19" headers="r12c1-t9 r1c2-t9 r2c2-t9">Yes</td>
+<td class="cellalignment19" headers="r12c1-t9 r1c3-t9 r2c3-t9">Yes</td>
+<td class="cellalignment19" headers="r12c1-t9 r1c4-t9 r2c4-t9">No</td>
+<td class="cellalignment19" headers="r12c1-t9 r1c5-t9 r2c5-t9">Only available when the Build Process is complete.
+<p>If the user is a Reviewer for any of the section templates, he/she will have access</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r13c1-t9" headers="r1c1-t9 r2c1-t9">View</td>
+<td class="cellalignment19" headers="r13c1-t9 r1c2-t9 r2c2-t9">Yes</td>
+<td class="cellalignment19" headers="r13c1-t9 r1c3-t9 r2c3-t9">Yes</td>
+<td class="cellalignment19" headers="r13c1-t9 r1c4-t9 r2c4-t9">Yes</td>
+<td class="cellalignment19" headers="r13c1-t9 r1c5-t9 r2c5-t9">Only available when the Build Process is complete.
+<p>If the user is a Reviewer for any of the section templates, he/she will have access</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r14c1-t9" headers="r1c1-t9 r2c1-t9">Publish</td>
+<td class="cellalignment19" headers="r14c1-t9 r1c2-t9 r2c2-t9">Yes</td>
+<td class="cellalignment19" headers="r14c1-t9 r1c3-t9 r2c3-t9">No</td>
+<td class="cellalignment19" headers="r14c1-t9 r1c4-t9 r2c4-t9">No</td>
+<td class="cellalignment19" headers="r14c1-t9 r1c5-t9 r2c5-t9">Only available when the Build process is complete and the report is checked in.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r15c1-t9" headers="r1c1-t9 r2c1-t9">View</td>
+<td class="cellalignment19" headers="r15c1-t9 r1c2-t9 r2c2-t9">Yes</td>
+<td class="cellalignment19" headers="r15c1-t9 r1c3-t9 r2c3-t9">Yes</td>
+<td class="cellalignment19" headers="r15c1-t9 r1c4-t9 r2c4-t9">Yes</td>
+<td class="cellalignment19" headers="r15c1-t9 r1c5-t9 r2c5-t9">Only available when the Publish is complete.
+<p>Only available when the Build Process is complete.</p>
+<p>If the user is a Reviewer for any of the section templates, he/she will have access.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" --></div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<div id="AEOBL141" class="sect1"><a id="sthref28"></a>
+<h2 class="sect1">Providing Report Content</h2>
+<p>Dossier enables you to provide report content if you have one of the following user roles:</p>
+<ul>
+<li>
+<p>Author</p>
+</li>
+<li>
+<p>Author &amp; Reviewer</p>
+</li>
+<li>
+<p>Owner</p>
+</li>
+</ul>
+<p>When you click <span class="bold">Author</span> on the <span class="bold">Author</span> tab, the system opens the <span class="bold">Author</span> window shown in the following illustration.</p>
+<img width="737" height="607" src="img/author-dtls.gif" alt="Surrounding text describes author-dtls.gif." /><br />
+<div id="AEOBL142" class="sect2"><a id="sthref29"></a>
+<h3 class="sect2">Author Window Fields</h3>
+<p>The following table lists and describes the fields and controls in the <span class="bold">Author</span> window.</p>
+<div class="inftblinformal">
+<table class="cellalignment17" summary="Fields in the Author window." dir="ltr">
+<thead>
+<tr class="cellalignment11">
+<th class="cellalignment18" id="r1c1-t10">Field/Control</th>
+<th class="cellalignment18" id="r1c2-t10">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r2c1-t10" headers="r1c1-t10">Section Name</td>
+<td class="cellalignment19" headers="r2c1-t10 r1c2-t10">The name of the section being created for the report.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r3c1-t10" headers="r1c1-t10">Description</td>
+<td class="cellalignment19" headers="r3c1-t10 r1c2-t10">A description of the purpose of the section</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r4c1-t10" headers="r1c1-t10">Completed Questions</td>
+<td class="cellalignment19" headers="r4c1-t10 r1c2-t10">Click the expand icon to display a list of completed questions. The system places the questions in this section as you answer them.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r5c1-t10" headers="r1c1-t10">Incompleted Questions</td>
+<td class="cellalignment19" headers="r5c1-t10 r1c2-t10">Click the expand icon to display a list of questions that you must answer before building the report.
+<p>Click the question link to display the list of acceptable answers in the Answer section.</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r6c1-t10" headers="r1c1-t10">Answer</td>
+<td class="cellalignment19" headers="r6c1-t10 r1c2-t10">Enables you to answer the questions presented in the Incompleted Questions section.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r7c1-t10" headers="r1c1-t10">Ignore Question</td>
+<td class="cellalignment19" headers="r7c1-t10 r1c2-t10">Enables you to skip a questions by click the check box.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r8c1-t10" headers="r1c1-t10">Save</td>
+<td class="cellalignment19" headers="r8c1-t10 r1c2-t10">Saves the answers entered during the session in the database</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r9c1-t10" headers="r1c1-t10">Close</td>
+<td class="cellalignment19" headers="r9c1-t10 r1c2-t10">Closes the Authoring window.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r10c1-t10" headers="r1c1-t10">Draft</td>
+<td class="cellalignment19" headers="r10c1-t10 r1c2-t10">Generates and displays a draft version (doc/docx file) with current saved answers. It does not save the file to the database.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r11c1-t10" headers="r1c1-t10">Final</td>
+<td class="cellalignment19" headers="r11c1-t10 r1c2-t10">Generates and displays a doc/docx file and saves the final version of the template in the database.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r12c1-t10" headers="r1c1-t10">View</td>
+<td class="cellalignment19" headers="r12c1-t10 r1c2-t10">Displays the saved doc/docx file.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r13c1-t10" headers="r1c1-t10">Spell Check</td>
+<td class="cellalignment19" headers="r13c1-t10 r1c2-t10">Enables you to run spell check on text entered in a text field.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" --></div>
+<!-- class="sect2" -->
+<div id="AEOBL143" class="sect2"><a id="sthref30"></a>
+<h3 class="sect2">Author Window Usage Considerations</h3>
+<p>When entering content in the <span class="bold">Author</span> window, be aware of the following:</p>
+<p>The application processes each section and stores it in the database</p>
+<p>The <span class="bold">Author</span> button is available only to users that have been assigned as authors to the section.</p>
+<p>When multiple users are assigned as author to the same section, the application will allow a single section to be "Authored" by a single author at a time.</p>
+<p>Clicking <span class="bold">Author</span> enables you to navigate through the questions and user prompts from the database.</p>
+<ul>
+<li>
+<p>If there are no questions for this template, the system displays <span class="italic">No Questions Found</span> in the dialog.</p>
+</li>
+<li>
+<p>Clicking a question enables you to select or enter the answer in the <span class="bold">Answer</span> text box. If the question has been answered during an earlier session, the system displays the previous answer.</p>
+</li>
+</ul>
+<p>The Questions Tree has two sections: <span class="bold">Completed Questions</span> and <span class="bold">Incompleted Questions</span>.</p>
+<ul>
+<li>
+<p>Completed Questions - The system displays a list of all answered questions. When you answer a question, the system moves the question from the Incompleted Questions section to this section</p>
+</li>
+<li>
+<p>Incompleted Questions - The system displays a list of all unanswered questions. If you fail to answer a previously answered questions, the system moves the questions beck to the incompleted questions category.</p>
+</li>
+</ul>
+<p>The first part of the screen displays all the questions that have been asked in the template section.</p>
+<ul>
+<li>
+<p>The first question is selected by default.</p>
+</li>
+<li>
+<p>You can scroll to view any question in the list.</p>
+</li>
+</ul>
+<p>The second section of the screen enables you to enter any text or select any option value as required.</p>
+<p>Click <span class="bold">Spell Check</span> to check for spelling errors in a question answered in a text box.</p>
+<ul>
+<li>
+<p>The system enables the <span class="bold">Spell Check</span> button only when you are required to enter the answer in a text box and when focus is on the text box.</p>
+</li>
+<li>
+<p>If the question requires you to select an answer from a drop-down list, the system disables the <span class="bold">Spell Check</span> button.</p>
+</li>
+</ul>
+<p>Click <span class="bold">Close</span> to stop the authoring process.</p>
+<ul>
+<li>
+<p>If any questions have been answered, the system displays the following messages:</p>
+<p>By closing this window will lose any answers that have not been saved. Are you sure you want to continue?</p>
+<p>If you click <span class="bold">Yes</span> (default), the system closes the message and the Author window <span class="bold">without saving</span> answers that have not been saved.</p>
+<p>If you click <span class="bold">No</span>, the system closes the message box and the <span class="bold">Author</span> window remains open.</p>
+</li>
+</ul>
+<p>Click <span class="bold">Save</span> to save all answered questions before moving to the next question.</p>
+<p>You can continue the authoring process at any time.</p>
+<p>The system lists all completed (saved) questions in the Completed Question section.</p>
+<p>You can return to a previous question and change its answer.</p>
+<p>Select <span class="bold">Ignore Question</span> if you wish to skip a question. The unanswered questions remain in raw format in the body of the file itself.</p>
+<ul>
+<li>
+<p>This check box is active only when a question is selected and unanswered.</p>
+</li>
+</ul>
+<p>Click <span class="bold">Final</span> to generate a final.doc/.docx for a template. A final documents replaces the questions and operands with answers from the database.</p>
+<ul>
+<li>
+<p>If one or more of the questions have not been answered, the system displays the following message:</p>
+<p>There are unanswered questions. Do you wish to generate the final document?</p>
+<p>Click <span class="bold">Yes</span> to generate the .doc/.docx file and skip any unanswered questions.</p>
+<ul>
+<li>
+<p>If you choose this option, you will have to check out the document and answer the remaining questions manually.</p>
+</li>
+<li>
+<p>If you click <span class="bold">No</span>, the Authoring window remains open for further entry.</p>
+<p>Any values derived from the unanswered questions will be left blank.</p>
+<p>Once the final has been generated, click <span class="bold">Final</span> to open the generated .doc/.docx file from the database.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Click <span class="bold">Draft</span> to generate a .doc/.docx file using the latest data from the database in a read only state. The .doc/.docx will not be saved to the database.</p>
+<p>You can move to the next question without answering the current question.</p>
+<p>Only one Author can enter report content at a time.</p>
+<p>The Author process can be audited.</p>
+</div>
+<!-- class="sect2" -->
+<div id="AEOBL144" class="sect2"><a id="sthref31"></a>
+<h3 class="sect2">Entering Report Content</h3>
+<p>Use the following process to enter report content:</p>
+<ol>
+<li>
+<p>Select Reports-&gt;Compliance-&gt;Periodic to display a list of periodic reports.</p>
+</li>
+<li>
+<p>When the application opens the list of periodic reports, locate the appropriate report and click its associated report icon.</p>
+</li>
+<li>
+<p>Select View Argus Dossier from the pop-up menu.</p>
+</li>
+<li>
+<p>When the system opens the Author tab for the selected report, click Author.</p>
+</li>
+<li>
+<p>When the system opens the Author window, click the expand icon form the Incompleted Questions section to display a list of questions you must answer.</p>
+</li>
+<li>
+<p>Click the question you want to answer to display open the Answer section, then do the following:</p>
+<ul>
+<li>
+<p>Select the answer from the drop-down list in the <span class="bold">Answer</span> section or enter any text as necessary.</p>
+</li>
+<li>
+<p>Click <span class="bold">Save</span> to save the answers to the question.</p>
+</li>
+<li>
+<p>Repeat steps 6a and 6b until you have answered all remaining questions.</p>
+</li>
+<li>
+<p>Click <span class="bold">Final</span> to save the completed section of the report in the database.</p>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<div id="AEOBL145" class="sect2"><a id="sthref32"></a>
+<h3 class="sect2">Setting Ready for Review</h3>
+<p>Once the final has been generated, the report author can indicate whether the template section is ready for review.</p>
+<ol>
+<li>
+<p>Select Reports-&gt;Compliance-&gt;Periodic to display a list of periodic reports.</p>
+</li>
+<li>
+<p>When the application opens the list of periodic reports, locate the appropriate report and click its associated report icon.</p>
+</li>
+<li>
+<p>Select View Argus Dossier from the pop-up menu.</p>
+</li>
+<li>
+<p>When the system opens the Author tab for the selected report, locate the appropriate template and click the associated check box in the Ready for Review column.</p>
+</li>
+<li>
+<p>When the system opens the Ready for review dialog box, click Yes.</p>
+<img width="270" height="134" src="img/ready.gif" alt="Surrounding text describes ready.gif." /><br /></li>
+<li>
+<p>The system places a checkmark in the check box and enables the Check Out button.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<div id="AEOBL146" class="sect2"><a id="sthref33"></a>
+<h3 class="sect2">Editing a Template Manually</h3>
+<p>Dossier enables you to use Microsoft Word to manually edit a template. Only one person can check out and edit a document at a time.</p>
+<ol>
+<li>
+<p>Select Reports-&gt;Compliance-&gt;Periodic to display a list of periodic reports.</p>
+</li>
+<li>
+<p>When the application opens the list of periodic reports, locate the appropriate report and click its associated report icon.</p>
+</li>
+<li>
+<p>Select View Argus Dossier from the pop-up menu.</p>
+</li>
+<li>
+<p>When the system opens the Author tab, locate the appropriate template and click Check Out.</p>
+</li>
+<li>
+<p>When the system opens the Check Out dialog box, type a relevant comment in the Comment field and click Download.</p>
+<img width="390" height="219" src="img/chckout.gif" alt="Surrounding text describes chckout.gif." /><br /></li>
+<li>
+<p>When the system opens the File Download dialog box, click Open to download a copy of the template file and open it in Microsoft Word.</p>
+<img width="271" height="189" src="img/dialog.gif" alt="Surrounding text describes dialog.gif." /><br /></li>
+<li>
+<p>Edit the document as required and save it.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You must save the document in one of the standard Microsoft Word file types (.doc or .docx). Otherwise, you will be unable to check the document in.</div>
+</li>
+</ol>
+<div id="AEOBL147" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref34"></a>
+<h4 class="sect3">About the Check Out Dialog Box</h4>
+<p>The following table lists and describes the fields in the <span class="bold">Check Out</span> dialog box.</p>
+<div class="inftblinformal">
+<table class="cellalignment17" summary="Fields in the Check Out dialog." dir="ltr">
+<thead>
+<tr class="cellalignment11">
+<th class="cellalignment18" id="r1c1-t12">Field/Control</th>
+<th class="cellalignment18" id="r1c2-t12">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r2c1-t12" headers="r1c1-t12">Section Name</td>
+<td class="cellalignment19" headers="r2c1-t12 r1c2-t12">The name of the section you are checking out.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r3c1-t12" headers="r1c1-t12">Comments</td>
+<td class="cellalignment19" headers="r3c1-t12 r1c2-t12">Any relevant comments about the document. The system stores such comments in the Template History.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r4c1-t12" headers="r1c1-t12">Cancel</td>
+<td class="cellalignment19" headers="r4c1-t12 r1c2-t12">Click Cancel to abort the check-out operation.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r5c1-t12" headers="r1c1-t12">Download</td>
+<td class="cellalignment19" headers="r5c1-t12 r1c2-t12">Click Download to download a Microsoft Word (.doc/.docx) version of the template for manual editing.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" --></div>
+<!-- class="sect3" -->
+<div id="AEOBL148" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref35"></a>
+<h4 class="sect3">Usage Considerations</h4>
+<p>When using the <span class="bold">Check Out</span> dialog box, be aware of the following:</p>
+<ul>
+<li>
+<p>You can check out a processed template (.doc/.docx) only after the authoring operation is successfully completed and the author has checked <span class="bold">Ready for Review</span>.</p>
+</li>
+<li>
+<p>Any user role (Author/Reviewer/Owner) can check the file out.</p>
+</li>
+<li>
+<p>You cannot check a file in unless it has been checked out.</p>
+</li>
+<li>
+<p>You can enter comments when checking out a document. Comments are record in the comments field.</p>
+</li>
+<li>
+<p>Click <span class="bold">Download</span> to save the file in .doc/.docx format to a file location of the your choosing.</p>
+</li>
+<li>
+<p>All check-outs are auditable.</p>
+</li>
+<li>
+<p>The <span class="bold">Check In</span> button is disabled except for the person who checked the document out.</p>
+</li>
+<li>
+<p>The Check In dialog pop-up has an <span class="bold">Undo Checkout</span> button that enables you to reverse the check-out operation.</p>
+<ul>
+<li>
+<p>When you click <span class="bold">Undo Checkout</span>, the system dismisses the pop-up dialog box and makes the file available to other users.</p>
+</li>
+<li>
+<p>The system <span class="bold">does not</span> save any changes you may have made to the template.</p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<div id="AEOBL149" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref36"></a>
+<h4 class="sect3">Undoing a Check Out Operation</h4>
+<p>Under some circumstances, you may find it necessary to reverse a check out operation. When you check a document out, the system changes the <span class="bold">Check Out</span> button to a <span class="bold">Check In</span> button as shown in the following illustration.</p>
+<img width="419" height="277" src="img/chckin.gif" alt="Surrounding text describes chckin.gif." /><br />
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+To reverse a check out operation</div>
+<ol>
+<li>
+<p>Go to the <span class="bold">Author</span> tab.</p>
+</li>
+<li>
+<p>Locate and click the appropriate <span class="bold">Check In</span> button.</p>
+</li>
+<li>
+<p>When the system opens the Check In dialog box, click Undo Checkout.</p>
+<img width="577" height="326" src="img/undochckout.gif" alt="Surrounding text describes undochckout.gif." /><br />
+<img width="485" height="159" src="img/checkin.gif" alt="Surrounding text describes checkin.gif." /><br /></li>
+<li>
+<p>The system reverses the check out operation without saving changes you may have made to the document.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<div id="AEOBL150" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref37"></a>
+<h4 class="sect3">Checking In an Edited Template</h4>
+<p>After using Microsoft Word to edit and save a template document, you must check it in using the <span class="bold">Check In</span> button on the <span class="bold">Author</span> tab.</p>
+<p>To check in an edited document:</p>
+<ol>
+<li>
+<p>Go to the <span class="bold">Author</span> tab.</p>
+</li>
+<li>
+<p>Locate and click the appropriate <span class="bold">Check In</span> button.</p>
+</li>
+<li>
+<p>When the system opens the Check In dialog box:</p>
+<ul>
+<li>
+<p>Type the full path name for the template in the <span class="bold">File Name</span> field OR Click <span class="bold">Browse</span> to locate and select the appropriate document.</p>
+</li>
+<li>
+<p>Type any relevant information in the <span class="bold">Comment</span> field.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>The system checks the document in.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<div id="AEOBL151" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref38"></a>
+<h4 class="sect3">About the Check In Dialog Box</h4>
+<p>The following table lists and describes the fields and controls in the <span class="bold">Check In</span> dialog box.</p>
+<div class="inftblinformal">
+<table class="cellalignment17" summary="Fields in the Check In dialog." dir="ltr">
+<thead>
+<tr class="cellalignment11">
+<th class="cellalignment18" id="r1c1-t14">Field/Control</th>
+<th class="cellalignment18" id="r1c2-t14">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r2c1-t14" headers="r1c1-t14">Section Name</td>
+<td class="cellalignment19" headers="r2c1-t14 r1c2-t14">The name of the template you have checked out for editing. This can be a maximum of 50 characters.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r3c1-t14" headers="r1c1-t14">File Name</td>
+<td class="cellalignment19" headers="r3c1-t14 r1c2-t14">The local path of the file that you have updated. The path name can be a maximum of 200 characters.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r4c1-t14" headers="r1c1-t14">Browse</td>
+<td class="cellalignment19" headers="r4c1-t14 r1c2-t14">Click <span class="bold">Browse</span> to display the file selection dialog box and enable you to browse the local directory and locate the file to check in.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r5c1-t14" headers="r1c1-t14">OK</td>
+<td class="cellalignment19" headers="r5c1-t14 r1c2-t14">Click <span class="bold">OK</span> to upload the edited file.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r6c1-t14" headers="r1c1-t14">Cancel</td>
+<td class="cellalignment19" headers="r6c1-t14 r1c2-t14">Click <span class="bold">Cancel</span> to abort the upload operation.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r7c1-t14" headers="r1c1-t14">Undo Checkout</td>
+<td class="cellalignment19" headers="r7c1-t14 r1c2-t14">Click <span class="bold">Undo Checkout</span> to reverse the check-out operation. This button is available only to the user who has the document checked out.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" --></div>
+<!-- class="sect3" -->
+<div id="AEOBL152" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref39"></a>
+<h4 class="sect3">Usage Considerations</h4>
+<p>When checking in a document, be aware of the following:</p>
+<ul>
+<li>
+<p><span class="bold">Check In</span> is available only if the file is checked-out previously by the person updating the template.</p>
+<ul>
+<li>
+<p>The system disables the <span class="bold">Check In</span> button for all users except the user who checked the document out.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>You can indicate whether a section is ready for review</p>
+</li>
+<li>
+<p>The Check In dialog pop-up enables you to reverse the checkout.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span> to initiate the upload process.</p>
+</li>
+<li>
+<p>You can identify a section that is ready for generation by clicking the <span class="bold">Ready for Review</span> checkbox on the <span class="bold">Author</span> tab.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<div id="AEOBL153" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref40"></a>
+<h4 class="sect3">Retaining Template Versions</h4>
+<p>The Dossier application provides version control for authored templates. Checking out an authored template initiates the review process and enables you to modify a template as necessary. The Dossier application tracks the template version whether or not has is has a document management system configured for its use. In other words, if a DMS is not configured for Dossier's use, you can check out and modify templates and the system maintains an updated version of the template when you check it in. Once you check in a template, Dossier retains a version of the modified template and makes it available for later viewing by any user who has access to Dossier comments.</p>
+<p>The following is an illustration of the Comments window. You can view the checked-in template by clicking the Version Num icon.</p>
+<img width="255" height="288" src="img/comments.gif" alt="Surrounding text describes comments.gif." /><br />
+<p>When checking templates in and out, be aware of the following:</p>
+<ul>
+<li>
+<p>An icon identifies a document that is checked in.</p>
+</li>
+<li>
+<p>When you place the mouse cursor on the icon, the system provides the following version information:</p>
+<ul>
+<li>
+<p>Version Num: x where: x is the incremental version number.</p>
+<p>The system version of the document is considered Version 1 and the version number appears on the Word icon.</p>
+<p>When you check out the system version (version 1) and check it in again, the system updates the version number to 2.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>When you click the Word icon, the system opens the document in the correct application.</p>
+<ul>
+<li>
+<p>If you want to replace a version of the document, you must save the file locally and check out the current template and check in the historical version.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>All checked out files retain the document history.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<div id="AEOBL154" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref41"></a>
+<h4 class="sect3">About the Template History and Comments Log</h4>
+<p>The <span class="bold">Comments and History</span> dialog box provides you with information about the whether the document is checked out and who has checked it out, and how the document has been modified and who has modified it.</p>
+<p>The following is an illustration of the <span class="bold">Comments and History</span> dialog box.</p>
+<img width="255" height="288" src="img/comments.gif" alt="Surrounding text describes comments.gif." /><br /></div>
+<!-- class="sect3" -->
+<div id="AEOBL155" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref42"></a>
+<h4 class="sect3">Fields and Control</h4>
+<p>The following table lists and describes the fields and controls in the <span class="bold">Comments and History</span> dialog box.</p>
+<div class="inftblinformal">
+<table class="cellalignment17" summary="Fields in the Comments and History dialog." dir="ltr">
+<thead>
+<tr class="cellalignment11">
+<th class="cellalignment18" id="r1c1-t15">Field/Control</th>
+<th class="cellalignment18" id="r1c2-t15">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r2c1-t15" headers="r1c1-t15">Comments (entry)</td>
+<td class="cellalignment19" headers="r2c1-t15 r1c2-t15">Enables you to enter comments retained in the Template History.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r3c1-t15" headers="r1c1-t15">Action</td>
+<td class="cellalignment19" headers="r3c1-t15 r1c2-t15">Displays the action, if any.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r4c1-t15" headers="r1c1-t15">Comments (historical)</td>
+<td class="cellalignment19" headers="r4c1-t15 r1c2-t15">Enables the user to review comments in the Template History.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r5c1-t15" headers="r1c1-t15">Username</td>
+<td class="cellalignment19" headers="r5c1-t15 r1c2-t15">Displays the user name of the user that entered the comments</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r6c1-t15" headers="r1c1-t15">Date</td>
+<td class="cellalignment19" headers="r6c1-t15 r1c2-t15">Displays the time date stamp in local user time (GMT offset)</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r7c1-t15" headers="r1c1-t15">OK</td>
+<td class="cellalignment19" headers="r7c1-t15 r1c2-t15">Dismisses the window and records any comments entered by the user.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r8c1-t15" headers="r1c1-t15">Cancel</td>
+<td class="cellalignment19" headers="r8c1-t15 r1c2-t15">Cancels any action and dismisses the dialog</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r9c1-t15" headers="r1c1-t15">Spell Check</td>
+<td class="cellalignment19" headers="r9c1-t15 r1c2-t15">Checks for spelling errors in the comments text box</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" --></div>
+<!-- class="sect3" -->
+<div id="AEOBL156" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref43"></a>
+<h4 class="sect3">Usage Considerations</h4>
+<p>When using the <span class="bold">Comments and History</span> dialog box, be aware of the following:</p>
+<ul>
+<li>
+<p>When you click <span class="bold">OK</span>, the system records any comments you entered and places them in the Template History.</p>
+</li>
+<li>
+<p>The Template History section retains a history of the following actions that have occurred for each template row:</p>
+<ul>
+<li>
+<p>Template Authoring Marked as Final</p>
+</li>
+<li>
+<p>Template Marked Ready for Review</p>
+</li>
+<li>
+<p>Template Checked Out</p>
+</li>
+<li>
+<p>Template Checked In</p>
+</li>
+<li>
+<p>Template Marked Ready for Build</p>
+</li>
+</ul>
+</li>
+<li>
+<p>The template history box is not editable.</p>
+</li>
+<li>
+<p>The format of this history is as follows:</p>
+<ul>
+<li>
+<p>Row A-Left "Action: &lt;action from the above listed items&gt;"</p>
+<p>If no action occurs, do not print any text.</p>
+</li>
+<li>
+<p>Row B-Left "Comments: &lt;any comments entered&gt;"</p>
+<p>If no comments exist for the action, do not print any text.</p>
+<p>Comments should display up to 255 characters (which is the limit on the comments box) and should wrap if needed.</p>
+</li>
+<li>
+<p>Row 1-Right "&lt;username&gt;" aligned right</p>
+<p>Always print row 1-Right.</p>
+</li>
+<li>
+<p>Row 2-Right Time date stamp "dd-mmm-yyyy HH:mm" aligned right.</p>
+<p>Always print row 2-Right.</p>
+<p>TimeDate Stamp shows the local time.</p>
+</li>
+<li>
+<p>The Template History displays the history in descending order. (i.e., most recent record on top).</p>
+</li>
+<li>
+<p>Template history records are separated by a line (&frac14; point).</p>
+</li>
+<li>
+<p>You can enter comments without any action being completed. In this case only the comment will be recorded.</p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<div id="AEOBL157" class="sect1"><a id="sthref44"></a>
+<h2 class="sect1">Setting Ready for Build</h2>
+<p>Once the final has been generated, reviewed, and approved the report reviewer and/or report owner can indicate whether the template section is ready for the report build. <span class="bold">Ready to Build</span> must be checked for all sections of the report before the system can build the report.</p>
+<p>To indicate a template section is ready for the report build:</p>
+<ol>
+<li>
+<p>Select Reports-&gt;Compliance-&gt;Periodic to display a list of periodic reports.</p>
+</li>
+<li>
+<p>When the application opens the list of periodic reports, locate the appropriate report and click its associated report icon.</p>
+</li>
+<li>
+<p>Select View Argus Dossier from the pop-up menu.</p>
+</li>
+<li>
+<p>When the system opens the Author tab for the selected report, locate the appropriate template and click the associated check box in the Ready for Build column.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<div id="AEOBL158" class="sect1"><a id="sthref45"></a>
+<h2 class="sect1">Building a Dossier Report</h2>
+<p>Only the assigned owner can build a Dossier report. You can do this from the <span class="bold">Arrange</span> tab. Steps involved in building the report include the following:</p>
+<ul>
+<li>
+<p>Setting Section Order</p>
+</li>
+<li>
+<p>Creating a Table of Contents</p>
+</li>
+<li>
+<p>Generating the Report</p>
+</li>
+<li>
+<p>Viewing the PDF</p>
+</li>
+</ul>
+<div id="AEOBL159" class="sect2"><a id="sthref46"></a>
+<h3 class="sect2">About the Arrange Tab</h3>
+<p>On the <span class="bold">Arrange</span> tab, you can change the order in which sections appear in the final report. You can also delete a section as necessary.</p>
+<p>To access the Arrange tab:</p>
+<ol>
+<li>
+<p>Select Reports-&gt;Compliance-&gt;Periodic to display a list of periodic reports.</p>
+</li>
+<li>
+<p>When the application opens the list of periodic reports, locate the appropriate report and click its associated report icon.</p>
+</li>
+<li>
+<p>Select View Argus Dossier from the pop-up menu.</p>
+</li>
+<li>
+<p>When the system opens the Author tab, click Arrange to open the Arrange tab.</p>
+</li>
+<li>
+<p>The system opens the Arrange tab.</p>
+</li>
+</ol>
+<img width="418" height="277" src="img/arrange.gif" alt="Surrounding text describes arrange.gif." /><br /></div>
+<!-- class="sect2" -->
+<div id="AEOBL160" class="sect2"><a id="sthref47"></a>
+<h3 class="sect2">Arrange Tab Fields and Controls</h3>
+<p>The following table lists and describes the sections and fields on the <span class="bold">Arrange</span> tab.</p>
+<div class="inftblinformal">
+<table class="cellalignment17" summary="About the Arrange tab." dir="ltr">
+<thead>
+<tr class="cellalignment11">
+<th class="cellalignment18" id="r1c1-t16">Section/Field/Control</th>
+<th class="cellalignment18" id="r1c2-t16">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r2c1-t16" headers="r1c1-t16">Templates / Generated Reports / Additional Content</td>
+<td class="cellalignment19" headers="r2c1-t16 r1c2-t16">This section lists and describes the template sections in the report.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r3c1-t16" headers="r1c1-t16">Save button</td>
+<td class="cellalignment19" headers="r3c1-t16 r1c2-t16">Enables you to save the current report layout.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r4c1-t16" headers="r1c1-t16">Remove button</td>
+<td class="cellalignment19" headers="r4c1-t16 r1c2-t16">Enables you to remove any section. When you click Remove, the application removes the section and places it in the Removed Content section of the tab.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r5c1-t16" headers="r1c1-t16">Up button</td>
+<td class="cellalignment19" headers="r5c1-t16 r1c2-t16">Enables you to move the selected report section up in the list.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r6c1-t16" headers="r1c1-t16">Down button</td>
+<td class="cellalignment19" headers="r6c1-t16 r1c2-t16">Enables you to move the selected report section up in the list.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r7c1-t16" headers="r1c1-t16">Section</td>
+<td class="cellalignment19" headers="r7c1-t16 r1c2-t16">This column contains the name of each section of the report. Click the link to open the report section.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r8c1-t16" headers="r1c1-t16">Description / Type</td>
+<td class="cellalignment19" headers="r8c1-t16 r1c2-t16">This is either the Description added by the user or the type of file when the item is a generated report</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r9c1-t16" headers="r1c1-t16">TOC After</td>
+<td class="cellalignment19" headers="r9c1-t16 r1c2-t16">Indicates where the TOC will be placed in the report.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r10c1-t16" headers="r1c1-t16">Remove Content</td>
+<td class="cellalignment19" headers="r10c1-t16 r1c2-t16">This section displays the content of the report that has been removed.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r11c1-t16" headers="r1c1-t16">Reinstate button</td>
+<td class="cellalignment19" headers="r11c1-t16 r1c2-t16">Allows you to put the removed content back in the report at the bottom of the list. User the Up and Down buttons to put the section in its correct position in the report.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r12c1-t16" headers="r1c1-t16">Minimize / Maximize icons</td>
+<td class="cellalignment19" headers="r12c1-t16 r1c2-t16">Enables you to collapse (minimize) or expand (maximize) the Remove Content section.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r13c1-t16" headers="r1c1-t16">Section</td>
+<td class="cellalignment19" headers="r13c1-t16 r1c2-t16">This column contains the name of each section that has been removed. Click the link to open the removed section.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r14c1-t16" headers="r1c1-t16">Description / Type</td>
+<td class="cellalignment19" headers="r14c1-t16 r1c2-t16">This is either the Description added by the user or the Type of file when the item is a generated report that has been removed</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r15c1-t16" headers="r1c1-t16">Build button</td>
+<td class="cellalignment19" headers="r15c1-t16 r1c2-t16">Allows users to initiate the generate process</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r16c1-t16" headers="r1c1-t16">Generation Status</td>
+<td class="cellalignment19" headers="r16c1-t16 r1c2-t16">Enables you to see the status of the report build. This button is not available until you initiate the build operation.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r17c1-t16" headers="r1c1-t16">View PDF button</td>
+<td class="cellalignment19" headers="r17c1-t16 r1c2-t16">Enables you to view the compiled report.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r18c1-t16" headers="r1c1-t16">Publish</td>
+<td class="cellalignment19" headers="r18c1-t16 r1c2-t16">Enables you to initiate the publish operation.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" --></div>
+<!-- class="sect2" -->
+<div id="AEOBL161" class="sect2"><a id="sthref48"></a>
+<h3 class="sect2">Arrange Tab Usage Considerations</h3>
+<p>When using the <span class="bold">Arrange</span> tab, be aware of the following:</p>
+<ul>
+<li>
+<p>Select the row and click <span class="bold">Up</span> or <span class="bold">Down</span> to arrange the report sections in the desired order for the final report.</p>
+<ul>
+<li>
+<p>If you select the first row, the system disables the <span class="bold">Up</span> button.</p>
+</li>
+<li>
+<p>If you select the last row, the system disables the <span class="bold">Down</span> button.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>If you move reports or attachments, the system does not save them until you click <span class="bold">Save</span>.</p>
+<ul>
+<li>
+<p>The system displays the following message:</p>
+<p>The information was saved successfully</p>
+</li>
+<li>
+<p>If you click <span class="bold">Close</span> to leave the screen, the system displays the following message:</p>
+<p>You have made changes to the Dossier report order, if you press OK, changes made will be lost.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>You can remove a section to prevent it from being included in the final build.</p>
+<ul>
+<li>
+<p>If you remove a section, the system maintains the order.</p>
+</li>
+<li>
+<p>If the Build process is completed, the system disables the Up and Down buttons.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>You must select a row before clicking <span class="bold">Remove</span>.</p>
+<ul>
+<li>
+<p>If you do not select a row, the system disables the <span class="bold">Remove</span> button.</p>
+<p>When you click <span class="bold">Remove</span>, the system displays the following message:</p>
+<p>Are you sure you want to remove the highlighted row?</p>
+</li>
+</ul>
+</li>
+<li>
+<p>When you click <span class="bold">Remove</span>, the system moves the selected row to the <span class="bold">Remove Content</span> section.</p>
+<ul>
+<li>
+<p>Click the <span class="bold">Minimize/Maximize</span> buttons to collapse and expand the <span class="bold">Remove Content</span> section.</p>
+</li>
+<li>
+<p>Collapsing the section provides more space for the <span class="bold">Templates / Generated Reports / Additional Content</span> section.</p>
+</li>
+<li>
+<p>When expanded, the <span class="bold">Remove Content</span> section displays a minimum of three rows.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Reinstate</span> to put a removed section back in the report.</p>
+<ul>
+<li>
+<p>You must select a row before clicking <span class="bold">Reinstate</span>.</p>
+</li>
+<li>
+<p>The system disables the <span class="bold">Reinstate</span> button until you select the row.</p>
+</li>
+<li>
+<p>When you click <span class="bold">Reinstate</span>, the system displays the following message.</p>
+<p>Are you sure you want to reinstate the highlighted row.</p>
+</li>
+<li>
+<p>When you click <span class="bold">Reinstate</span>, the system moves the selected row to the bottom of the Templates / Generated Reports / Additional Content section.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>If the Build process has completed, the <span class="bold">Remove</span> and <span class="bold">Reinstate</span> buttons are disabled</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<div id="AEOBL162" class="sect2"><a id="sthref49"></a>
+<h3 class="sect2">Arranging the Sections of a Report</h3>
+<p>Use the following procedure to arrange the sections of a report.</p>
+<p>To arrange the sections of a report:</p>
+<ol>
+<li>
+<p>Select Reports-&gt;Compliance-&gt;Periodic to display a list of periodic reports.</p>
+</li>
+<li>
+<p>When the application opens the list of periodic reports, locate the appropriate report and click its associated report icon.</p>
+</li>
+<li>
+<p>Select View Argus Dossier from the pop-up menu.</p>
+</li>
+<li>
+<p>When the system opens the Author tab, click Arrange to open the Arrange tab.</p>
+</li>
+<li>
+<p>When the system opens the Arrange tab:</p>
+<ul>
+<li>
+<p>Select a row.</p>
+</li>
+<li>
+<p>Click <span class="bold">Up</span> to move the row up in the list OR Click <span class="bold">Down</span> to move the row down in the list.</p>
+</li>
+<li>
+<p>Click <span class="bold">Save</span>.</p>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<div id="AEOBL163" class="sect2"><a id="sthref50"></a>
+<h3 class="sect2">Removing a Section from a Report</h3>
+<p>Use the following procedure to remove a section of a report:</p>
+<ol>
+<li>
+<p>Select Reports-&gt;Compliance-&gt;Periodic to display a list of periodic reports.</p>
+</li>
+<li>
+<p>When the application opens the list of periodic reports, locate the appropriate report and click its associated report icon.</p>
+</li>
+<li>
+<p>Select View Argus Dossier from the pop-up menu.</p>
+</li>
+<li>
+<p>When the system opens the Author tab, click Arrange to open the Arrange tab.</p>
+</li>
+<li>
+<p>When the system opens the Arrange tab, select a row and click Remove.</p>
+</li>
+<li>
+<p>When the system removes the section and places it in the Remove Content section of the tab, click Save to save the changes to the report.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<div id="AEOBL164" class="sect2"><a id="sthref51"></a>
+<h3 class="sect2">Reinstating a Section in a Report</h3>
+<p>Use the following procedure to reinstate a section in a report:</p>
+<ol>
+<li>
+<p>Select Reports-&gt;Compliance-&gt;Periodic to display a list of periodic reports.</p>
+</li>
+<li>
+<p>When the application opens the list of periodic reports, locate the appropriate report and click its associated report icon.</p>
+</li>
+<li>
+<p>Select View Argus Dossier from the pop-up menu.</p>
+</li>
+<li>
+<p>When the system opens the Author tab, click Arrange to open the Arrange tab.</p>
+</li>
+<li>
+<p>When the system opens the Arrange tab, go to the Remove Content section, select the section to put back in the report, and click Reinstate.</p>
+</li>
+<li>
+<p>When the system displays the following message, click Yes to put the section back in the report.</p>
+<img width="270" height="136" src="img/reinstate.gif" alt="Surrounding text describes reinstate.gif." /><br /></li>
+<li>
+<p>When the system places the reinstate section at the bottom of the section list:</p>
+<p>Leave the document in its present position OR Select the row and use the <span class="bold">Up</span><span class="bold">r</span> and <span class="bold">Down</span><span class="bold">s</span> buttons to move the section to its correct position.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<div id="AEOBL165" class="sect1"><a id="sthref52"></a>
+<h2 class="sect1">Creating a Table of Contents</h2>
+<p>The table of contents for a Dossier report is created at run time. Therefore, you must specify the location of the table of contents in the document on the <span class="bold">Arrange</span> tab. If you do not specify a location, the system automatically prints the table of contents as the first page of the report. Click the appropriate option button in the <span class="bold">TOC After</span> column to indicate where to place the TOC. For example, if you want the TOC to appear <span class="bold">after</span> the title page, click the TOC After option button associated with the Title Page section.</p>
+<p>When specifying the location of the table of contents, be aware of the following:</p>
+<ul>
+<li>
+<p>On the <span class="bold">Arrange</span> tab, you can specify, at any time, which content section the TOC follows.</p>
+<ul>
+<li>
+<p>You can select the <span class="bold">TOC After</span> option button for the section the TOC will be placed after during the final build.</p>
+</li>
+<li>
+<p>Pages before the table of contents <span class="bold">will not</span> be numbered automatically.</p>
+</li>
+<li>
+<p>Pages before the table of contents <span class="bold">will not</span> include the header and footer. However, the header and footer will be included on the TOC pages.</p>
+<p>A section must be specified as <span class="bold">TOC After</span>; otherwise the TOC begins printing on the first page of the report</p>
+<p>If you remove a row specified as <span class="bold">TOC After</span>, the system removes the row from the build content. None of the remaining section will have <span class="bold">TOC After</span> specified.</p>
+<p>If you reinstate the removed section, TOC After <span class="bold">will not</span> be specified.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>The system generates the Table of Contents based on the order of the report sections when the final build is started.</p>
+<ul>
+<li>
+<p>Each section row is a new chapter.</p>
+</li>
+<li>
+<p>The chapter name comes from the section name.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>The system creates Acrobat bookmarks for each section row of the report using the section name given by the user or the system.</p>
+</li>
+<li>
+<p>The system creates up to 10,000 bookmarks for each MedWatch, CIOMS, or VAERS form. If there are more than 10,000 forms, the system creates a single bookmark for all forms.</p>
+</li>
+<li>
+<p>The system generates and displays the TOC in portrait orientation.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect1" -->
+<div id="AEOBL166" class="sect1"><a id="sthref53"></a>
+<h2 class="sect1">Generating a Dossier Report</h2>
+<p>The build process merges the report sections and generates a comprehensive period report. Since there is no need to modify a generated report, the system produces all reports in PDF format.</p>
+<p>The periodic report owner is the only person who can generate a report and can start the build process <span class="bold">only</span> after all sections of the periodic report have been marked <span class="bold">Ready for Build</span>.</p>
+<p>Once all sections have been marked <span class="bold">Ready for Build</span>, the system enables the <span class="bold">Build</span> button on the <span class="bold">Arrange</span> tab.</p>
+<p>To generate a report:</p>
+<ol>
+<li>
+<p>Select Reports-&gt;Compliance-&gt;Periodic to display a list of periodic reports.</p>
+</li>
+<li>
+<p>When the application opens the list of periodic reports, locate the appropriate report and click its associated report icon.</p>
+</li>
+<li>
+<p>Select View Argus Dossier from the pop-up menu.</p>
+</li>
+<li>
+<p>When the system opens the Author tab, verify that all parts of the report are marked Ready for Build and click the Arrange tab.</p>
+</li>
+<li>
+<p>When the system opens the Arrange tab, click Build to generate the report.</p>
+</li>
+<li>
+<p>The system generates the report.</p>
+</li>
+</ol>
+<div id="AEOBL167" class="sect2"><a id="sthref54"></a>
+<h3 class="sect2">Report Generation Usage Considerations</h3>
+<p>When building a report, consider the following:</p>
+<ul>
+<li>
+<p>Only the owner of the periodic report can initiate the generate process.</p>
+</li>
+<li>
+<p>The owner can initiate the build process <span class="bold">only</span> after all sections of the periodic report have been marked <span class="bold">Ready for Build</span>.</p>
+</li>
+<li>
+<p>The <span class="bold">Build</span> button active if the <span class="bold">Ready for Build</span> check box on the <span class="bold">Author</span> tab is checked.</p>
+</li>
+<li>
+<p>When you click <span class="bold">Build</span>, the system compiles the report in the order on the <span class="bold">Arrange</span> tab.</p>
+<ul>
+<li>
+<p>The system converts all files to PDF (if not already PDF) and adds any required header, footers, and page numbers to the report.</p>
+</li>
+<li>
+<p>The system displays a message box with the following message:</p>
+<p>Your Dossier report has been submitted to final build.</p>
+</li>
+<li>
+<p>The system saves the current arrangement before it starts the <span class="bold">Build</span> process.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>The Build process does the following:</p>
+<p>Merges all template sections into a single PDF file.</p>
+<p>Ignores instructional comments.</p>
+</li>
+<li>
+<p>You <span class="bold">cannot</span> modify a periodic report while the Dossier build process is running, and the system disables the <span class="bold">Modify</span> and <span class="bold">Print</span> buttons until the build process is complete.</p>
+</li>
+<li>
+<p>The system prevents you from moving any section on the <span class="bold">Arrange</span> tab while the system is building the report. The <span class="bold">Arrange</span> section should be grayed out and you cannot move any sections of the report.</p>
+</li>
+<li>
+<p>Once the final build is completed, the system disables the <span class="bold">Build</span> button.</p>
+</li>
+<li>
+<p>If you make any changes on the <span class="bold">Arrange</span> tab and click <span class="bold">Save</span> after the build is successfully completed, the system displays the following message:</p>
+<p><span class="italic">Your dossier is already built. Saving any changes will require that you rebuild the dossier again. Are you sure you want to save these changes</span>.</p>
+<p>If you click <span class="bold">Yes</span>, the system does the following:</p>
+<ul>
+<li>
+<p>Dismisses the message.</p>
+</li>
+<li>
+<p>Removes the existing report.</p>
+</li>
+<li>
+<p>Enables the <span class="bold">Build</span> button.</p>
+</li>
+<li>
+<p>Disables the <span class="bold">View PDF</span> button.</p>
+</li>
+<li>
+<p>Disables the <span class="bold">Publish</span> button.</p>
+<p>If you click <span class="bold">No</span>, the system retains the existing report.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Status Button</p>
+<ul>
+<li>
+<p>The system activates this button <span class="bold">after</span> you start the build process.</p>
+</li>
+<li>
+<p>This button remains active once the build process is completed</p>
+</li>
+<li>
+<p>If you click this button after the build process starts, the system displays the status of the build process in the standard report generation pop.</p>
+</li>
+<li>
+<p>When you click Close on the status window, the system does the following:</p>
+<ul>
+<li>
+<p>Closes the status window.</p>
+</li>
+<li>
+<p>Continues to generate the report.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>The status window displays the progress of the build process.</p>
+</li>
+</ul>
+<img width="250" height="156" src="img/status.gif" alt="Surrounding text describes status.gif." /><br /></li>
+<li>
+<p>The system displays the following statuses, in order of occurrence:</p>
+<p>Dossier Report Generation Request Received</p>
+<ul>
+<li>
+<p>Status is followed by a date and time stamp for when this action kicked off the report in local user GMT offset date/time: "dd mmm yyyy HH:mm" (i.e. "02-FEB-2008 15:43")</p>
+</li>
+</ul>
+<p>Dossier Report Generation Started</p>
+<ul>
+<li>
+<p>The system displays a grayed out check mark until this process starts (picked up by AG Service)</p>
+</li>
+<li>
+<p>Once AG Service picks up the process, the system displays a date and time stamp showing when this action started in local user GMT offset date/time: "dd mmm yyyy HH:mm" (i.e. "02-FEB-2008 15:43")</p>
+</li>
+</ul>
+<p>Report Converting Templates to PDF</p>
+<ul>
+<li>
+<p>The system displays a grayed out checkmark until this process starts.</p>
+</li>
+<li>
+<p>While the process is in progress, the system displays "Processing&hellip;"</p>
+</li>
+<li>
+<p>When the process is complete, the system displays the total processing time in minutes and the gray checkmark changes to green.</p>
+</li>
+<li>
+<p>Processing time displays as follows: "(completed in xx min.)"</p>
+</li>
+</ul>
+<p>Merging Sections before Table of Contents</p>
+<ul>
+<li>
+<p>The system displays a grayed out checkmark until this process starts.</p>
+</li>
+<li>
+<p>While the process is in progress, the system displays "Processing&hellip;"</p>
+</li>
+<li>
+<p>When the process is complete, the system displays the total processing time in minutes and the gray checkmark changes to green.</p>
+</li>
+<li>
+<p>Processing time displays as follows: "(completed in xx min.)"</p>
+</li>
+</ul>
+<p>Merging Sections after Table of Contents</p>
+<ul>
+<li>
+<p>The system displays a grayed out checkmark until this process starts.</p>
+</li>
+<li>
+<p>While the process is in progress, the system displays "Processing&hellip;"</p>
+</li>
+<li>
+<p>When the process is complete, the system displays the total processing time in minutes and the gray checkmark changes to green.</p>
+</li>
+<li>
+<p>Processing time displays as follows: "(completed in xx min.)"</p>
+</li>
+</ul>
+<p>Creating Table Of Contents and Bookmarks</p>
+<ul>
+<li>
+<p>The system displays a grayed out checkmark until this process starts.</p>
+</li>
+<li>
+<p>While the process is in progress, the system displays "Processing&hellip;"</p>
+</li>
+<li>
+<p>When the process is complete, the system displays the total processing time in minutes and the gray checkmark changes to green.</p>
+</li>
+<li>
+<p>Processing time displays as follows: "(completed in xx min.)"</p>
+</li>
+</ul>
+<p>Creating Final Dossier</p>
+<ul>
+<li>
+<p>The system displays a grayed out checkmark until this process starts.</p>
+</li>
+<li>
+<p>While the process is in progress, the system displays "Processing&hellip;"</p>
+</li>
+<li>
+<p>When the process is complete, the system displays the total processing time in minutes and the gray checkmark changes to green.</p>
+</li>
+<li>
+<p>Processing time displays as follows: "(completed in xx min.)"</p>
+</li>
+</ul>
+<p>Dossier Report Generation Completed</p>
+<ul>
+<li>
+<p>A grayed out checkmark is displayed until this process is started</p>
+</li>
+<li>
+<p>Once the process is complete, the system displays a date and time stamp showing when this action started in local user GMT offset date/time: "dd mmm yyyy HH:mm" (i.e. "02-FEB-2008 15:43"). Errors in the build process are logged into the Safety Error Log.</p>
+</li>
+<li>
+<p>The system displays a grayed out check mark until this process starts (picked up by AG Service)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>If an error occurs during any of the build process, a status box displays the following error message:</p>
+<p><span class="italic">"Failure, please refer to the Argus Safety Error Log for details.</span>"</p>
+<p>Any final build error(s) are recorded in the Argus Safety error log.</p>
+<p>When an error occurs, the system destroys any compiled documents. You must restart the process</p>
+</li>
+</ul>
+<p>View PDF Button</p>
+<ul>
+<li>
+<p>Once the final build process is completed, the system enables the <span class="bold">View PDF</span> button.</p>
+</li>
+<li>
+<p>Click this button to display the report.</p>
+</li>
+</ul>
+<p>Publish PDF Button</p>
+<ul>
+<li>
+<p>Once the final build process is completed, the system enables the <span class="bold">Publish</span> button.</p>
+</li>
+<li>
+<p>If you make changes to the report, the system disables this button until a new build process is completed.</p>
+</li>
+</ul>
+<p>If you make any changes in the Arrange window (i.e., move a report section up or down or add or remove a report section) after the build is completed, the following occurs:</p>
+<ul>
+<li>
+<p>The system displays the following message:</p>
+<p><span class="italic">"The final dossier has been generated. Making changes now will require the report to be rebuilt. Are you sure you want to make changes?" Options OK or Cancel.</span>"</p>
+</li>
+<li>
+<p>If you click <span class="bold">OK</span>, the system does the following:</p>
+<ul>
+<li>
+<p>Disables the <span class="bold">View PDF</span> button.</p>
+</li>
+<li>
+<p>Disables the <span class="bold">Status</span> button.</p>
+</li>
+<li>
+<p>Disables the <span class="bold">Publish</span> button.</p>
+</li>
+<li>
+<p>Enables the <span class="bold">Build</span> button.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>If you click <span class="bold">Cancel</span>, the system closes the message box and cancels the change action.</p>
+</li>
+</ul>
+<p>When the system opens the Argus Dossier Template window, only the following are enabled. All other buttons, icons, or links are disabled.</p>
+<p>Status Button</p>
+<p>Author Tab Section Links</p>
+<ul>
+<li>
+<p>Template Section Links</p>
+</li>
+<li>
+<p>Generated Report Links</p>
+</li>
+<li>
+<p>Additional Content Links</p>
+</li>
+<li>
+<p>Header/Footer Links</p>
+</li>
+</ul>
+<p>Author Tab Comments Icon</p>
+<ul>
+<li>
+<p>The comments are read-only, and you <span class="bold">cannot</span> enter new comments for the Templates Comment icon and the Header and Footer Comments icon.</p>
+</li>
+</ul>
+<p>Arrange Tab</p>
+<ul>
+<li>
+<p>Arrange Tab Section Links including links to templates, generated reports, and additional content links</p>
+</li>
+<li>
+<p>Removed content links.</p>
+</li>
+<li>
+<p>View PDF Button</p>
+</li>
+</ul>
+<p>Per the regulation "Guidance for Industry, Providing Regulatory Submissions in Electronic Format - General Considerations" (1999), "the initial page of the paper document should be numbered page 1."</p>
+<ul>
+<li>
+<p>Set the common profile swith to "Starting from the First Page" so that the first page of the report is page 1, no matter where the table of contents is placed on the Dossier Arrange tab.</p>
+</li>
+<li>
+<p>If page numbering is turned off, no page number prints. However, the first page of the report is considered page 1.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<div id="AEOBL168" class="sect1"><a id="sthref55"></a>
+<h2 class="sect1">Publishing a Dossier Report</h2>
+<p>The <span class="bold">Publish</span> function is available only after the report has been successfully generated.</p>
+<p>To publish a report:</p>
+<ol>
+<li>
+<p>Select Reports -&gt; Compliance -&gt; Periodic to display a list of periodic reports.</p>
+</li>
+<li>
+<p>When the application opens the list of periodic reports, locate the appropriate report and click its associated report icon.</p>
+</li>
+<li>
+<p>Select View Argus Dossier from the pop-up menu.</p>
+</li>
+<li>
+<p>When the system opens the Author tab, verify that all parts of the report are marked Ready for Build and click the Arrange tab.</p>
+</li>
+<li>
+<p>When the system opens the Arrange tab, click <span class="bold">Publish</span> to publish the report. The report gets pushed to Documentum after <span class="bold">Publish</span> is clicked. The system activates the <span class="bold">Publish</span> button on the <span class="bold">Arrange</span> tab after the report has been generated successfully.</p>
+</li>
+<li>
+<p>The system publishes the report.</p>
+</li>
+<li>
+<p>Click <span class="bold">View PDF</span> to view the completed report.</p>
+</li>
+</ol>
+<div id="AEOBL169" class="sect2"><a id="sthref56"></a>
+<h3 class="sect2">Publish Usage Considerations</h3>
+<p>When publishing a report, be aware of the following:</p>
+<ul>
+<li>
+<p>The Publish function is available <span class="bold">after</span> a report has been successfully generated.</p>
+</li>
+<li>
+<p>The system will publish the report only <span class="bold">after</span> the report has been built.</p>
+</li>
+<li>
+<p>The system displays the status of the <span class="bold">Publish</span> process.</p>
+<img width="480" height="310" src="img/submitpeicon.gif" alt="Surrounding text describes submitpeicon.gif." /><br /></li>
+<li>
+<p>Users can have access to information used to create the Dossier Report even after Dossier generates the report. Left-click the Status icon to the left of the submitted report and select <span class="bold">View Argus Dossier</span> from the menu.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment10">
+<tr>
+<td class="cellalignment19">
+<table class="cellalignment23">
+<tr>
+<td class="cellalignment14"><a href="intro.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment14"><a href="scripts.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2016, 2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment21">
+<table class="cellalignment13">
+<tr>
+<td class="cellalignment14"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment14"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment14"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment14"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-US" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>About work teams</title>
+<link rel="StyleSheet" href="Empirica.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Empirica Signal administration\nManaging users, login groups, and work teams\nManaging work teams\nAbout work teams");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("About_WebVDME.htm", "", "&gt;", "Overview", "About_WebVDME_1.htm");
+document.write("<a href=\"Users_page.htm\">Empirica Signal administration<\/a> &gt; <a href=\"Users_page.htm\">Managing users, login groups, and work teams<\/a> &gt; <a href=\"About_Work_Teams.htm\">Managing work teams<\/a> &gt; About work teams<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('About_WebVDME.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>About work teams</h1>
+<p>A work team is a subset of the users who belong to a single <a href="admLoginGroups.htm">login group</a>. Work teams are used only in the context of the <a href="About_Topics.htm">topics</a> feature, and are intended to structure the level of access that different users have to topics.</p>
+<p>When adding or editing a topic, users can make the topic visible to a work team or teams. Users can either specify a single work team for a topic or zero, one, or more work teams (as defined by the topic workflow configuration that is in use). Only members of the specified work team(s) can see or act on the topic, and then only in the ways permitted by their assigned work team permissions. (A topic that is not made visible to any work teams can only be viewed and acted on by its creator. For work on these topics, work team permissions are not needed.)</p>
+<p class="Note"><span class="Button">Note:</span> When assigning work team permissions, note that only users with the View Topics <a href="User_Permissions.htm">user permission</a> can access the Topics tab<span style="mso-spacerun: yes;">&#160;</span><span style="font-size: 10.0pt; font-family: Verdana, sans-serif; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">and work with associated topics on the Signals tab</span>. Work team permissions grant different levels of access to the topics on those tabs, but not to the topics feature itself.</p>
+<p>You can define multiple work teams within the same login group. For example, different work teams can represent various therapeutic areas. A user can be a member of one, several, or none of the login group's work teams.</p>
+<p>Users with the Administer Users user permission can add and delete work teams, and edit work teams to specify members and assign work team permissions to them. (One of the work team permissions, Administer Work Team, can be used to give designated members editing access only to a work team.)</p>
+<p class="Subhead">&#160;</p>
+<p class="Subhead"><u><b><span class="Button"><a href="javascript:void(0);" onclick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) &gt;=2 &amp;&amp; typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'_blank','Adding or editing a work team','tmWorkTeamEdit.htm','Viewing existing work teams','tmWorkTeamManage.htm','Work team permissions','Work_Team_Permissions.htm');return false;" title=" Related Topics"><span style="font-family:Verdana;font-size:10pt;font-weight:normal;font-style:normal;text-decoration:none"><nobr>  Related Topics </nobr></span></a> </span></b></u></p>
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="margin-bottom: 0pt;">Copyright © 2002, 2018, Oracle and/or 
+	 its affiliates. All rights reserved. </p>
+	<p style="text-align: right; margin-top: 0pt; margin-bottom: 0pt;">Help 
+	 Build 8.1.1</p>
+</div>
+<script type="text/javascript" language="JavaScript">//<![CDATA[
+if (parseInt(navigator.appVersion) >= 3 && typeof (WritePopupMenuLayer) == "function")
+  WritePopupMenuLayer();
+//]]></script><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

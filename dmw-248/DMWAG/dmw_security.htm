@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>User management</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2018-05-25T8:57:7Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Health Sciences Data Management Workbench Administration Guide" />
+<meta name="dcterms.identifier" content="E96068-01" />
+<meta name="dcterms.isVersionOf" content="DMWAG" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2017, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="dmw_admin.htm" title="Previous" type="text/html" />
+<link rel="Next" href="adm_adv_topics.htm" title="Next" type="text/html" />
+<link rel="alternate" href="DMWAG.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="DMWAG.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="DMWAG.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">8/11</span> <!-- End Header -->
+<div id="DMWAG10383" class="chapter"><a id="CDDDHDJF"></a>
+<h1 class="chapter"><span class="secnum">5</span> User management</h1>
+<p class="subhead1"><a id="DMWAG176"></a>What do you want to do?</p>
+<ul>
+<li>
+<p>Create and set up user accounts:</p>
+<ul>
+<li>
+<p><a href="#A135289848">Create and set up user accounts</a></p>
+</li>
+<li>
+<p><a href="#CDDEBFCJ">Assign application roles to users</a></p>
+</li>
+<li>
+<p><a href="#CDDGFJFB">Create database accounts</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Create and use object roles:</p>
+<ul>
+<li>
+<p><a href="#CDDDJFHH">Use predefined object roles</a></p>
+</li>
+<li>
+<p><a href="#CDDEAFJH">Create object security roles</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Set up user groups:</p>
+<ul>
+<li>
+<p><a href="#CDDDIJFJ">Create and develop user groups</a></p>
+</li>
+<li>
+<p><a href="#CDDCBDGF">Copy user groups with or without users</a></p>
+</li>
+<li>
+<p><a href="#CDDDJHAF">Add users to user groups</a></p>
+</li>
+<li>
+<p><a href="#CDDHBDJE">Assign a group administrator</a></p>
+</li>
+<li>
+<p><a href="#CDDDJHAF">Add users to user groups</a> (The group administrator must do this.)</p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#CDDFJAHC">Assign user groups to custom programs and study groupings</a></p>
+</li>
+<li>
+<p><a href="#A135643149">Assign user groups to adapters for technology privileges</a></p>
+</li>
+</ul>
+<p>See also: <a href="#CDCBCBJF">How security works</a></p>
+<p>DMW's security system is based on the Oracle Life Sciences Data Hub (LSH) security system. The following tasks are done there.</p>
+<a id="A135289848"></a>
+<div id="DMWAG10420" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Create and set up user accounts</h2>
+<p>If Oracle DMW is installed at your company, follow these instructions. If it is hosted at Oracle, follow instructions at <code dir="ltr"><a href="https://docs.oracle.com/health-sciences/ohs-iams/admin-guide/toc.htm#IAMSA102">https://docs.oracle.com/health-sciences/ohs-iams/admin-guide/toc.htm#IAMSA102</a><a href=""></a></code>.</p>
+<div id="DMWAG348" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref20"></a>
+<h3 class="sect2">Create user accounts</h3>
+<ol>
+<li>
+<p>Log in to Oracle LSH.</p>
+</li>
+<li>
+<p>Select <span class="bold">User Management</span> from the main menu on the left or from the Navigator drop-down.</p>
+</li>
+<li>
+<p>Click <span class="bold">Users</span>.</p>
+</li>
+<li>
+<p>In the <span class="bold">Register</span> drop-down, select <span class="bold">External Organization Contact</span> and click <span class="bold">Go</span>.</p>
+</li>
+<li>
+<p>Enter values in the following fields:</p>
+<ul>
+<li>
+<p><span class="bold">Email</span>. The user's email address.</p>
+</li>
+<li>
+<p><span class="bold">Name Fields</span></p>
+</li>
+<li>
+<p><span class="bold">Organization</span>. Enter or search for the Organization to which the user belongs.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You must set up the list of allowed values as a post-installation step for Oracle Applications, as described in the <span class="italic">Oracle&reg; E-Business Suite System Administrator's Guide - Security</span>.
+<p>See <code dir="ltr"><a href="http://download.oracle.com/docs/cd/B53825_08/current/acrobat/121sasg.pdf">http://download.oracle.com/docs/cd/B53825_08/current/acrobat/121sasg.pdf</a><a href=""></a></code>.</p>
+</div>
+</li>
+<li>
+<p><span class="bold">Phone Number</span></p>
+</li>
+<li>
+<p><span class="bold">Account Information--Password</span>. If you select <span class="bold">Generate Automatically</span>, the system generates and emails the password to the user's email account.</p>
+<p>If you select <span class="bold">Enter Manually</span> you must type and confirm the password an inform the user what it is. The user must reset the password in either case.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You can set the minimum length and other requirements for passwords; see <a href="x_stdy_lsh.htm#CHDCAFDA">"Set login-related and other profile values"</a>.</div>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Submit</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CDDEBFCJ"></a>
+<div id="DMWAG351" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Assign application roles to users</h3>
+<p>If Oracle DMW is installed at your company, follow these instructions. If it is hosted at Oracle, follow instructions at <code dir="ltr"><a href="https://docs.oracle.com/health-sciences/ohs-iams/admin-guide/toc.htm#IAMSA104">https://docs.oracle.com/health-sciences/ohs-iams/admin-guide/toc.htm#IAMSA104</a><a href=""></a></code>.</p>
+<p>For an explanation of application roles, see:</p>
+<ul>
+<li>
+<p><a href="dmw_roles.htm#CHDGEBAI">"Application roles for specialized administrators"</a></p>
+</li>
+<li>
+<p><a href="dmw_roles.htm#BABJBCCG">"Application roles for user interface access"</a></p>
+</li>
+<li>
+<p><a href="dmw_roles.htm#BABGFEDF">"Data Blinding-related application roles"</a></p>
+</li>
+</ul>
+<ol>
+<li>
+<p>Log in to Oracle LSH.</p>
+</li>
+<li>
+<p>Select <span class="bold">User Management</span> from the main menu on the left or from the Navigator drop-down.</p>
+</li>
+<li>
+<p>Click <span class="bold">Users</span>.</p>
+</li>
+<li>
+<p>In the User Maintenance screen, search for the user to whom you want to assign roles.</p>
+</li>
+<li>
+<p>Click the user's Update icon. The Update User screen appears.</p>
+</li>
+<li>
+<p>In the Roles subtab, click <span class="bold">Assign Roles</span>. The Search and Select screen appears.</p>
+</li>
+<li>
+<p>Search for all Oracle LSH predefined roles by selecting Search By Role, entering <code dir="ltr">LSH%</code>, and clicking <span class="bold">Go</span>. The system displays all the predefined Oracle LSH application roles in the lower part of the screen.</p>
+</li>
+<li>
+<p>Select each role you want to assign.</p>
+</li>
+<li>
+<p>Click <span class="bold">Select</span>. The system adds the roles to the user and the Update User screen appears.</p>
+</li>
+<li>
+<p>Enter a justification for assigning each role to the user.</p>
+</li>
+<li>
+<p>Click <span class="bold">Apply</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CDDGFJFB"></a>
+<div id="DMWAG353" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Create database accounts</h3>
+<p>Study configurators need a database account to create and modify studies and study components. People viewing DMW data through a visualization tool also need database accounts.</p>
+<ol>
+<li>
+<p>Log in to Oracle LSH.</p>
+</li>
+<li>
+<p>Expand the Life Sciences Data Hub node in the main menu on the left or from the Navigator drop-down. Select <span class="bold">Database Account</span>.</p>
+<p>Or, if Oracle LSH is already open, go to the Administration tab and select the <span class="bold">Database Account</span> subtab.</p>
+</li>
+<li>
+<p>Click <span class="bold">Create</span>.</p>
+</li>
+<li>
+<p>Enter values in the following fields:</p>
+<ul>
+<li>
+<p><span class="bold">User Name</span>. Click the Search icon and enter search criteria for the Oracle LSH user for whom you are creating a database account.</p>
+</li>
+<li>
+<p><span class="bold">Database Account Name</span>. Enter a username for the database account. The text you enter is stored in uppercase.</p>
+</li>
+<li>
+<p><span class="bold">Password</span>. Enter a password of 8 characters or more for the Definer to use with the database account.</p>
+</li>
+<li>
+<p><span class="bold">Confirm Password</span>. Reenter the password.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+For security reasons, the user should reset the password in his or her Preferences screen.</div>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Apply</span>. The system returns you to the Database Account screen.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<div id="DMWAG357" class="sect1"><!-- infolevel="all" infotype="General" --><a id="sthref21"></a>
+<h2 class="sect1">Use or create object security roles</h2>
+<p>A role consists of a name, description, and a set of operations allowed on object subtypes. Users in a user group that have access to a particular object will be able to perform the operations on the types of objects specified by the role(s) they have in the user group.</p>
+<a id="CDDDJFHH"></a>
+<div id="DMWAG99835" class="sect2">
+<h3 class="sect2">Use predefined object roles</h3>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+These roles are sample roles provided for illustrative purposes only and are not intended to be used for production needs.</div>
+<p>Predefined object roles cover most non-administrator users for the lifecycle stage(s) they will be working in:</p>
+<ul>
+<li>
+<p><span class="bold">DMW_STUDY_DEVELOPER</span> (Development lifecycle stage) Only this role allows the creation of clinical data models, transformations, and validation checks. These are study configuration tasks.</p>
+</li>
+<li>
+<p><span class="bold">DMW_STUDY_QC</span> (Quality Control lifecycle stage) This role is intended for people who will do formal testing of clinical data models, transformations, and validation checks in a study.</p>
+</li>
+<li>
+<p><span class="bold">DMW_STUDY_PROD</span> (Production lifecycle stage) This role is intended for users who need to view and act on production data. (Users needing only View access should have the <span class="bold">DMW_STUDY_INST_ACCESS</span> role.)</p>
+</li>
+</ul>
+<p>The DMW_STUDY_DEVELOPER, QC, and PROD roles allow the following privileges in the corresponding lifecycle stage:</p>
+<ul>
+<li>
+<p>Loading data.</p>
+</li>
+<li>
+<p>Reviewing nonblinded and unblinded data and creating and managing discrepancies.</p>
+</li>
+<li>
+<p>Half the privileges required to view currently blinded data (blind break) or to unblind data. Application roles are required for the other half.</p>
+</li>
+<li>
+<p>Modifying clinical data models, transformations, validation checks, and custom listings.</p>
+</li>
+</ul>
+<p>For a list of all operations included in these roles, see <a href="dmw_roles.htm#A1137474">"Predefined object security roles"</a>.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CDDEAFJH"></a>
+<div id="DMWAG358" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Create object security roles</h3>
+<ol>
+<li>
+<p>Log in to Oracle LSH.</p>
+</li>
+<li>
+<p>Expand the Life Sciences Data Hub node in the main menu on the left or from the Navigator drop-down. Select <span class="bold">Roles</span>.</p>
+<p>Or, if Oracle LSH is already open, go to the Security tab and select the <span class="bold">Roles</span> subtab.</p>
+</li>
+<li>
+<p>Click <span class="bold">Create</span>.</p>
+</li>
+<li>
+<p>Enter values in the following fields:</p>
+<ul>
+<li>
+<p><span class="bold">Role Name</span>. Enter a unique name for the role to be displayed in the Oracle LSH user interface.</p>
+</li>
+<li>
+<p><span class="bold">Code Value</span>. Enter a unique code for the role to be used internally by Oracle LSH.</p>
+</li>
+<li>
+<p><span class="bold">Description</span>. Enter a description of the role to help group administrators decide if they want to assign the role to a particular user in their user group.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Apply</span>. The Manage Roles screen appears. You can query for the role by name to check that it was created successfully.</p>
+</li>
+<li>
+<p>Set it to Active so that it is available for use:</p>
+<ol>
+<li>
+<p>In the Manage Roles screen, query for the role. The role appears.</p>
+</li>
+<li>
+<p>Click the icon in the <span class="bold">Update</span> column. The Update Role screen appears.</p>
+</li>
+<li>
+<p>Select <span class="bold">Is Active</span> and click <span class="bold">Apply</span>. You can assign subtype operations only to Active roles.</p>
+</li>
+</ol>
+</li>
+</ol>
+<p>Next: <a href="#CDDHFJCD">Assign roles to operations</a></p>
+</div>
+<!-- class="sect2" -->
+<a id="CDDHFJCD"></a>
+<div id="DMWAG359" class="sect2">
+<h3 class="sect2">Assign roles to operations</h3>
+<p>Users assigned to a role within a user group will be able to perform the operations you assign to the role.</p>
+<p>To assign roles to operations, go to the Subtype subtab of the Security tab and do the following:</p>
+<ol>
+<li>
+<p>Log in to Oracle LSH.</p>
+</li>
+<li>
+<p>Expand the Life Sciences Data Hub node in the main menu on the left or from the Navigator drop-down. Select <span class="bold">Subtypes</span>.</p>
+<p>Or, if Oracle LSH is already open, go to the Security tab and select the <span class="bold">Subtypes</span> subtab.</p>
+</li>
+<li>
+<p>From the <span class="bold">View Subtype By</span> drop-down, select <span class="bold">Operation</span>.</p>
+</li>
+<li>
+<p>Expand the node (+) of the object type. All the subtypes appear.</p>
+</li>
+<li>
+<p>Expand the node (<span class="bold">+</span>) of the object subtype. All the subtype's operations appear.</p>
+</li>
+<li>
+<p>Click the icon in the Manage column of the operation to which you want to assign or remove a role. The Add Role(s) to Operation screen appears.</p>
+</li>
+<li>
+<p>Double-click on a role in the Available Roles column to move it into the Selected Roles column to assign it to the role. Or move it from Selected Roles to Available Roles to remove the assignment.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+Select multiple roles using Shift+Click or Control+Click and move them by clicking the arrows.</div>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+To promote an input clinical data model to QC or Production, a user must have a role with the "Modify Val Status to QC" or "Modify Val Status to PROD" operation on <span class="bold">load sets</span> as well as on data models.</div>
+</li>
+<li>
+<p>Click <span class="bold">Apply</span>. The system assigns the role(s) to the operation on the subtype and the Manage Subtype screen appears.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CDDDIJFJ"></a>
+<div id="DMWAG360" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Create and develop user groups</h2>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#CDDGFIEC">Create user groups</a></p>
+</li>
+<li>
+<p><a href="#CDDDJHAF">Add users to user groups</a></p>
+</li>
+<li>
+<p><a href="#CDDHBDJE">Assign a group administrator</a></p>
+</li>
+<li>
+<p><a href="#CDDIAIHB">Add users and assign roles</a> (The group administrator must do this.)</p>
+</li>
+</ul>
+<p>A user has access to an object only if he or she belongs to a user group that is assigned to the object, either explicitly or through inheritance.</p>
+<p>Plan your user groups based on which objects they will be assigned to and whether the assignment will be for Metadata, Development, QC, or Production.</p>
+<a id="CDDGFIEC"></a>
+<div id="DMWAG361" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Create user groups</h3>
+<ol>
+<li>
+<p>Log in to Oracle LSH.</p>
+</li>
+<li>
+<p>Expand the Life Sciences Data Hub node in the main menu on the left or from the Navigator drop-down. Select <span class="bold">User Groups</span>.</p>
+<p>Or, if Oracle LSH is already open, go to the Security tab and select the <span class="bold">User Groups</span> subtab.</p>
+</li>
+<li>
+<p>Click <span class="bold">Create</span>.</p>
+</li>
+<li>
+<p>Enter values in the following fields:</p>
+<ul>
+<li>
+<p><span class="bold">Group Name</span></p>
+</li>
+<li>
+<p><span class="bold">Description</span></p>
+</li>
+<li>
+<p><span class="bold">Is Active</span>. If selected, a study configurator can assign the user group to an object.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Apply</span>.</p>
+</li>
+</ol>
+<p>Next: <a href="#CDDDJHAF">Add users to user groups</a>.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CDDDJHAF"></a>
+<div id="DMWAG362" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Add users to user groups</h3>
+<p>The roles you add to a user group are available for the Group Administrator to assign to users within the group.</p>
+<ol>
+<li>
+<p>Log in to Oracle LSH as the system administrator.</p>
+</li>
+<li>
+<p>Expand the Life Sciences Data Hub node in the main menu on the left or from the Navigator drop-down. Select <span class="bold">User Groups</span>.</p>
+<p>Or, if Oracle LSH is already open, go to the Security tab and select the <span class="bold">User Groups</span> subtab.</p>
+</li>
+<li>
+<p>Enter the name of the user group for which you want to add roles in the user group box.</p>
+<p>Or, to see all user groups, enter <code dir="ltr">%</code>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Go</span>.</p>
+</li>
+<li>
+<p>Click the required user group.</p>
+</li>
+<li>
+<p>Click <span class="bold">Add and Remove Role</span>.</p>
+</li>
+<li>
+<p>Double-click on a role in the Available Roles column to move it into the Selected Roles column.</p>
+<p>You can also select multiple Roles by using Shift+Click or Control+Click and use the arrows to move one, a few, or all at once to the column in the shuttle.</p>
+<p>You can change the order of the Roles using the Up and Down arrows on the right.</p>
+</li>
+<li>
+<p>Click <span class="bold">Apply</span>.</p>
+</li>
+</ol>
+<p>Next: <a href="#CDDHBDJE">Assign a group administrator</a>.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CDDHBDJE"></a>
+<div id="DMWAG363" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Assign a group administrator</h3>
+<p>The Group Administrator is responsible for adding and removing users to a particular user group, and changing users' role assignments within the group.</p>
+<p>You must have the LSH Security Admin or LSH Function Security Admin role to assign the LSH Group Admin role to a user.</p>
+<p>To assign a Group Administrator to a user group:</p>
+<ol>
+<li>
+<p>Log in to Oracle LSH.</p>
+</li>
+<li>
+<p>Expand the Life Sciences Data Hub node in the main menu on the left or from the Navigator drop-down. Select <span class="bold">User Groups</span>.</p>
+<p>Or, if Oracle LSH is already open, go to the Security tab and select the <span class="bold">User Groups</span> subtab.</p>
+</li>
+<li>
+<p>Enter the name of the user group for which you want to add roles in the user group box.</p>
+<p>Or, to see all user groups, enter <code dir="ltr">%</code>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Go</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Expand All</span>.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Add User</span> icon corresponding to the LSH Group Administrator role. The Search and Select Users to Add to Role screen appears.</p>
+</li>
+<li>
+<p>Search for and select the users who need to be LSH Group Administrators for this User Group.</p>
+</li>
+<li>
+<p>Click <span class="bold">Select</span>. The system assigns the LSH Group Administrator role to the selected users and the Group screen appears.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Group Administrators must have the Group Admin application role assigned. See <a href="#CDDEBFCJ">"Assign application roles to users"</a>.</div>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CDDIAIHB"></a>
+<div id="DMWAG364" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Add users and assign roles</h3>
+<p>The group administrator adds users to a group, at the same time assigning the user to one or more roles within the group.</p>
+<ol>
+<li>
+<p>Log in to Oracle LSH.</p>
+</li>
+<li>
+<p>Expand the Life Sciences Data Hub node in the main menu on the left or from the Navigator drop-down. Select <span class="bold">User Groups</span>.</p>
+<p>Or, if Oracle LSH is already open, go to the Security tab and select the <span class="bold">User Groups</span> subtab.</p>
+</li>
+<li>
+<p>In the user group box, type the name of the user group to which you want to assign users.</p>
+<p>If you are not sure of the name, you can use % as a wildcard.</p>
+</li>
+<li>
+<p>Click <span class="bold">Search</span>. The system displays all the groups you administer that match the search criteria.</p>
+</li>
+<li>
+<p>Click the required user group. The Group screen appears.</p>
+</li>
+<li>
+<p>Click the plus (+) icon to see the roles assigned to the user group.</p>
+</li>
+<li>
+<p>Find the role you want to assign to the user you are adding, and click its Add User icon.</p>
+</li>
+<li>
+<p>Type the user name, first name, and/or last name of the user.</p>
+<p>If you are not sure of the name, you can use % as a wildcard.</p>
+</li>
+<li>
+<p>Click <span class="bold">Search</span>. All the users matching the search criteria appear.</p>
+</li>
+<li>
+<p>Select one or more users you want to assign to the role.</p>
+</li>
+<li>
+<p>Click <span class="bold">Select</span>. The system assigns the selected user(s) to this role within this user group and returns to the User Group screen.</p>
+</li>
+<li>
+<p>Repeat until you have added all the users and given each user all the roles he or she needs within the group.</p>
+</li>
+<li>
+<p>When you have finished, <a href="#CDDFIIFH">Clear the Oracle Applications cache</a>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CDDFIIFH"></a>
+<div id="DMWAG365" class="sect2">
+<h3 class="sect2">Clear the Oracle Applications cache</h3>
+<p>Every time you change user assignments to a user group, clear the Oracle Applications cache so that users logging into Oracle LSH see only the appropriate options. (Note that if you do not clear the cache, users may be able to see the wrong options but they cannot actually do them.)</p>
+<ol>
+<li>
+<p>Log in as an Oracle LSH user with the Functional Administrator responsibility. See <a href="#CDDEBFCJ">"Assign application roles to users"</a> for instructions on granting this responsibility.</p>
+<p>The Security tab's Grants screen appears.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You can also log in as the <code dir="ltr">sysadmin</code> user if you do not want to assign the Functional Administrator responsibility only for the purpose of clearing cache.</div>
+</li>
+<li>
+<p>Click the <span class="bold">Core Services</span> tab from the Grants screen. The Lookup Types screen appears.</p>
+</li>
+<li>
+<p>Click <span class="bold">Caching Framework</span> from the list of secondary tabs. The Overview screen opens.</p>
+</li>
+<li>
+<p>Click <span class="bold">Global Configuration</span> from the left panel. The Global Cache Configuration screen opens.</p>
+</li>
+<li>
+<p>Click <span class="bold">Clear All Cache</span>. A warning appears.</p>
+<p>Click <span class="bold">Yes</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CDDCBDGF"></a>
+<div id="DMWAG366" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Copy user groups with or without users</h3>
+<p>You can create copies of a user group in two ways. Either you can duplicate only the user group definition with its supported roles or you can duplicate the definition with its supported roles and also the users assigned to it and their role assignments. When you duplicate a user group, the system appends 'Copy of' to the name of the user group.</p>
+<ol>
+<li>
+<p>Log in to Oracle LSH.</p>
+</li>
+<li>
+<p>Expand the Life Sciences Data Hub node in the main menu on the left or from the Navigator drop-down. Select <span class="bold">User Groups</span>.</p>
+<p>Or, if Oracle LSH is already open, go to the Security tab and select the <span class="bold">User Groups</span> subtab.</p>
+</li>
+<li>
+<p>Enter a search string&mdash;the name of the user group you want to duplicate in the User Group box or text with the wildcard %, or leave blank to retrieve all user groups.</p>
+</li>
+<li>
+<p>Click <span class="bold">Go</span>. All the user groups matching the search criteria appear.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Select</span> checkbox corresponding to the required user group.</p>
+</li>
+<li>
+<p>Click <span class="bold">Duplicate with Roles</span> or <span class="bold">Duplicate with Roles, Users</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CDDFJAHC"></a>
+<div id="DMWAG367" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Assign user groups to custom programs and study groupings</h2>
+<p>You can assign user groups to:</p>
+<ul>
+<li>
+<p><span class="bold">Custom programs and functions</span>. If you assign a user group to the DMW_UTILS domain, its users have access to all custom programs and functions. If you assign a user group to an application area in the DMW_UTILS domain, its users have access to all programs and functions in that application area.</p>
+<p>This is the only way to grant access to custom programs and functions. Programmers writing the programs and functions and study configurators using them in transformations and validation checks need access.</p>
+</li>
+<li>
+<p><span class="bold">Study groupings</span>. If you assign a user group to a study grouping domain, users in the group have access to all studies and library objects, in all lifecycle stages, within the grouping. Study configurators can explicitly remove user groups from studies, objects, and lifecycle stages, and assign other user groups.</p>
+</li>
+</ul>
+<ol>
+<li>
+<p>Navigate to the study grouping or application area:</p>
+<ol>
+<li>
+<p>Log in to Oracle LSH.</p>
+</li>
+<li>
+<p>Expand the Life Sciences Data Hub node in the main menu on the left or from the Navigator drop-down. Select <span class="bold">Applications</span>.</p>
+<p>Or, if Oracle LSH is already open, go to the Applications tab.</p>
+</li>
+<li>
+<p>Click the <img width="20" height="19" src="img/lsh_icon_search.gif" alt="Icon is a magnifying glass." />Search icon next to the <span class="bold">Select Domain</span> field.</p>
+</li>
+<li>
+<p>Select Search By <span class="bold">Domain Name</span>, enter either:</p>
+<p>- <code dir="ltr">DMW_DOMAIN</code> for study groupings.</p>
+<p>- <code dir="ltr">DMW_UTILS</code> for custom programs and functions.</p>
+<p>Click <span class="bold">Go</span>.</p>
+</li>
+<li>
+<p>Click the <img width="22" height="20" src="img/lhs_icon_quick_select.gif" alt="Icon includes a down arrow." />Quick Select icon for the domain.</p>
+</li>
+<li>
+<p>Click the domain or application area you want.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>From the <span class="bold">Actions</span> drop-down, select <span class="bold">Apply Security</span> and click <span class="bold">Go</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Assign User Group</span>.</p>
+</li>
+<li>
+<p>To see all user groups, enter <code dir="ltr">%</code> and click <span class="bold">Search</span>.</p>
+<p>Or enter part of a user group name and click <span class="bold">Search</span>.</p>
+</li>
+<li>
+<p>Select one or more user groups to assign and click <span class="bold">Apply</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="A135643149"></a>
+<div id="DMWAG99827" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Assign user groups to adapters for technology privileges</h2>
+<p>To do certain tasks in DMW that involve an integrated application or technology, users must be in a user group assigned to an <span class="italic">adapter</span> or <span class="italic">adapter family</span> (adapters grouped by application/technology).</p>
+<p>Users with the <span class="bold">DMW_STUDY_DEVELOPER</span>, <span class="bold">QC</span>, and <span class="bold">PROD</span> predefined object security role need to be in a user group assigned to adapters.</p>
+<ol>
+<li>
+<p>Log in to Oracle LSH.</p>
+</li>
+<li>
+<p>Expand the Life Sciences Data Hub node in the main menu on the left or from the Navigator drop-down. Select <span class="bold">Adapter Security</span>.</p>
+<p>Or, if Oracle LSH is already open, go to the Security tab and select the <span class="bold">Adapter Security</span> subtab.</p>
+</li>
+<li>
+<p>Click the <img width="17" height="19" src="img/lsh_icon_apply_security.gif" alt="Icon is a padlock." />Apply Security icon for the adapter family or individual adapter to which you want to assign a user group. To see individual adapters, expand the node of the adapter family. See the <a href="#CDDICHFF">List of adapters</a>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+If you assign a user group to a <span class="italic">family</span> adapter, it grants access to all the adapters within the family adapter.</div>
+</li>
+<li>
+<p>Click <span class="bold">Assign Group</span>.</p>
+</li>
+<li>
+<p>To see all user groups, enter <code dir="ltr">%</code>.</p>
+<p>To find a particular user group, enter part of its name.</p>
+</li>
+<li>
+<p>Click <span class="bold">Search</span>.</p>
+</li>
+<li>
+<p>Select each user group you want to assign to the adapter or adapter family, and click <span class="bold">Apply</span>.</p>
+</li>
+</ol>
+<a id="CDDICHFF"></a>
+<div id="DMWAG178" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">List of adapters</h3>
+<p>DMW uses the following adapters. Other adapters appear in the Oracle LSH UI, but they are used only in LSH.</p>
+<ul>
+<li>
+<p>The <span class="bold">InForm Family Adapter</span> includes:</p>
+<ul>
+<li>
+<p><span class="bold">InForm Data</span> is required for users to set up an InForm clinical data model, including loading data from InForm and scheduling data loading.</p>
+</li>
+<li>
+<p><span class="bold">InForm Metadata</span> is required for users to set up an InForm clinical data model, including loading InForm metadata.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="bold">Oracle Export</span> is required for users to create, modify, or install a clinical data model that is set up for exporting data in an Oracle Export file. It is also required to run the job to create the Oracle Export file.</p>
+</li>
+<li>
+<p>The <span class="bold">Oracle Family Adapter</span> is not required.</p>
+<ul>
+<li>
+<p><span class="bold">Oracle Tables and Views</span> is not supported in this release.</p>
+</li>
+<li>
+<p><span class="bold">PLSQL</span> This adapter is used internally. Users do not need access to it.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="bold">SAS Export</span> is required for users to create, modify, or install a clinical data model that is set up for exporting data in a SAS file. It is also required to run the job to create the SAS file.</p>
+</li>
+<li>
+<p>The <span class="bold">SAS Family Adapter</span> includes:</p>
+<ul>
+<li>
+<p><span class="bold">SAS</span> is required for users who upload SAS files to create table metadata in clinical data models.</p>
+</li>
+<li>
+<p><span class="bold">SAS Program</span> is required to upload SAS programs or to run a transformation or validation check that uses a SAS custom program.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="bold">Text Export</span> is required for users to create, modify, or install a clinical data model that is set up for exporting data in a text file. It is also required to run the job to create the text file.</p>
+</li>
+<li>
+<p>The <span class="bold">Text Family Adapter</span>/<span class="bold">Text</span> is required for users who create an input file clinical data model of type Text.</p>
+</li>
+<li>
+<p>The <span class="bold">Visualization Adapter</span>/<span class="bold">Generic Visualization</span> is required to view data using a visualization tool.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CDCBCBJF"></a>
+<div id="DMWAG1139" class="sect1">
+<h2 class="sect1">How security works</h2>
+<p>Studies, clinical data models, transformations, and validation checks are all <span class="italic">objects</span>. Users are allowed to perform an operation on an object when they:</p>
+<ul>
+<li>
+<p>Belong to a user group that is assigned to the object either explicitly or by inheritance. For information on inheritance, see <a href="dmw_roles.htm#A3100547">"Object ownership"</a>.</p>
+</li>
+<li>
+<p>Are assigned to a role within that user group that allows the operation on the object.</p>
+</li>
+<li>
+<p>Have an application role that allows access to the required part of the user interface.</p>
+</li>
+<li>
+<p>To either view blinded data or to unblind data, both an object privilege and an application role are required.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment1">
+<tr>
+<td class="cellalignment8">
+<table class="cellalignment6">
+<tr>
+<td class="cellalignment5"><a href="dmw_admin.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment5"><a href="adm_adv_topics.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2017, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment10">
+<table class="cellalignment4">
+<tr>
+<td class="cellalignment5"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment5"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment5"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment5"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

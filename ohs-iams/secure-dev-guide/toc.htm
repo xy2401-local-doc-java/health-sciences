@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>Oracle&reg; Health Sciences Identity and Access Management Service Secure Development Guide</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="description" content="This Secure Development Guide provides assistance in mitigating common security risks for developers using the Oracle Health Sciences Identity and Access Management Service (OHSIAMS) OHSIAMS Inbound User Provisioning Service API, developed based on the SCIM standard and REST framework." />
+<meta name="dcterms.created" content="2017-05-31T15:30:32Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Health Sciences Identity and Access Management Service Secure Development Guide" />
+<meta name="dcterms.identifier" content="E76092-01" />
+<meta name="dcterms.isVersionOf" content="IAMSS" />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="Stylesheet" href="../dcommon/css/doccd.css" title="Default" type="text/css" />
+<script type="application/javascript"   src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"   src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="alternate" href="IAMSS.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="IAMSS.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="IAMSS.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript"  src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript"  src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript"  src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript"  src="../dcommon/js/foundation.min.js"></script>
+<script type="application/javascript"  src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript"  src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript"  src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="application/javascript"  src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="application/javascript"  src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="application/javascript"  src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="application/javascript"  src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0"><p>Go to main content</p><table class="cellalignment24"><tr><td class="cellalignment25"><b>Oracle&reg; Health Sciences Identity and Access Management Service Secure Development Guide<br />Release 1.2.1</b><br />E76092-01</td><td class="cellalignment26"><table class="cellalignment27"><tr><td class="cellalignment28"><img width="30" height="30" src="../dcommon/gifs/prodicon.gif" alt="Go to Documentation Home" /><br />Home</td><td class="cellalignment28"><img width="30" height="30" src="../dcommon/gifs/bookicon.gif" alt="Go to Book List" /><br />Book List</td><td class="cellalignment28"><img width="30" height="30" src="../dcommon/gifs/conticon.gif" alt="Go to Table of Contents" /><br />Contents</td><td class="cellalignment28"><img width="30" height="30" src="../dcommon/gifs/feedback.gif" alt="Go to Feedback page" /><br />Contact Us</td></tr></table></td></tr></table><hr /><table class="cellalignment24"><tr><td class="cellalignment25">&nbsp;</td><td class="cellalignment29">PDF &middot; Mobi &middot; ePub</td></tr></table></a><header><!--
+<p><a id="top" href="#BEGIN">Go to main content</a></p>
+<table class="cellalignment24">
+<tr>
+<td class="cellalignment25"><b>Oracle&reg; Health Sciences Identity and Access Management Service Secure Development Guide<br />
+Release 1.2.1</b><br />
+E76092-01</td>
+<td class="cellalignment26">
+<table class="cellalignment27">
+<tr>
+<td class="cellalignment28"><a href="../index.htm"><img width="30" height="30" src="../dcommon/gifs/prodicon.gif" alt="Go to Documentation Home" /><br />
+Home</a></td>
+<td class="cellalignment28"><a href="../nav/portal_booklist.htm"><img width="30" height="30" src="../dcommon/gifs/bookicon.gif" alt="Go to Book List" /><br />
+Book List</a></td>
+<td class="cellalignment28"><a href="toc.htm"><img width="30" height="30" src="../dcommon/gifs/conticon.gif" alt="Go to Table of Contents" /><br />
+Contents</a></td>
+<td class="cellalignment28"><a href="../dcommon/html/feedback.htm"><img width="30" height="30" src="../dcommon/gifs/feedback.gif" alt="Go to Feedback page" /><br />
+Contact Us</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="cellalignment24">
+<tr>
+<td class="cellalignment25">&nbsp;</td>
+<td class="cellalignment29"><a href="IAMSS.pdf">PDF</a> &middot; <a href="IAMSS.mobi">Mobi</a> &middot; <a href="IAMSS.epub">ePub</a></td>
+</tr>
+</table>
+<a id="BEGIN"></a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<!-- End Header -->
+<div class="letterstyle">
+<h1>Oracle&reg; Health Sciences Identity and Access Management Service</h1>
+<p class="booktitle">Secure Development Guide</p>
+<p><span class="revnumber">Release 1.2.1</span></p>
+<p class="invpartnumber">E76092-01</p>
+<p class="date">June 2017</p>
+<p><a id="IAMSS101"></a>This <span class="italic">Secure Development Guide</span> provides assistance in mitigating common security risks for developers using the Oracle Health Sciences Identity and Access Management Service (OHSIAMS) OHSIAMS Inbound User Provisioning Service API, developed based on the SCIM standard and REST framework.This guide describes how to prevent the main security risks, as identified by the Open Web Application Security Project (OWASP) in their top 10 critical web application security vulnerabilities for 2013, and provides insights for software developers into how the API was created and can be used while addressing these vulnerabilities.</p>
+<p>Since in-depth defense is an important strategy for a secure product, do not exclusively rely on the techniques documented in this guide. Implement and extend these techniques in your own code as you develop your interface to the API specification.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The recommendations in this guide are not exhaustive and no guarantee is offered that implementing all the suggestions provides sufficient protection against all security threats. You cannot delegate responsibility for secure application development to a third party or a single document.
+<p>The purpose of this document is to support developers in knowing the security tools and features that they can use to implement application security when using OHSIAMS APIs. This document does not replace a formal review process.</p>
+</div>
+<p class="subhead2"><a id="BABCHGFI"></a><a id="IAMSS102"></a>Contents</p>
+<ul>
+<li>
+<p><a href="#A132192609">About the OWASP Top 10 Security Vulnerabilities for 2013</a></p>
+</li>
+<li>
+<p><a href="#A132192878">About Security Awareness and Education</a></p>
+</li>
+<li>
+<p><a href="#A132193216">About the Risk Associated with "Build Your Own Security"</a></p>
+</li>
+<li>
+<p><a href="#A132193524">Addressing the Top Security Risks for OHSIAMS APIs</a></p>
+</li>
+<li>
+<p><a href="#A132194504">Other Aspects of Security</a></p>
+</li>
+<li>
+<p><a href="#A132194558">Recommended Reading</a></p>
+</li>
+<li>
+<p><a href="#A969465">Related Documents</a></p>
+</li>
+<li>
+<p><a href="#A132172625">Documentation Accessibility</a></p>
+</li>
+</ul>
+<a id="A132192609"></a>
+<div id="IAMSS103" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">About the OWASP Top 10 Security Vulnerabilities for 2013</h2>
+<p>The Open Web Application Security Project (OWASP) publishes an annual list of the 10 most critical security vulnerabilities identified for the current year to educate developers on the security risks they most likely need to protect against. The OWASP top 10 vulnerability listing is technology agnostic and does not contain language or framework specific examples, explanations, hints, or tips.</p>
+<p>The OWASP top 10 list for the year 2013 doesn't differ much from lists published for previous years, except for changes in ranking. The listed security threats are probably the most severe threats and application developers have to be aware of and protect against these threats.</p>
+<p>Addressing these ten security vulnerabilities doesn't provide for total security, but it is a good starting point in preventing the current major security threats. This document explains how the OHSIAMS Inbound User Provisioning Service API addresses these potential security risks and how API developers should address these security vulnerabilities and risks when using the API.</p>
+<p>General descriptions of the top 10 security risks identified by OWASP for 2013 are available at:</p>
+<p><code dir="ltr"><a href="https://www.owasp.org/index.php/Top_10_2013-Top_10">https://www.owasp.org/index.php/Top_10_2013-Top_10</a><a href=""></a></code></p>
+<p>You can get an overview of the security risk for an application at:</p>
+<p><code dir="ltr"><a href="https://www.owasp.org/index.php/Top_10_2013-Risk">https://www.owasp.org/index.php/Top_10_2013-Risk</a><a href=""></a></code></p>
+<p><span class="italic">Go to <a href="#BABCHGFI">Contents</a></span></p>
+</div>
+<!-- class="sect1" -->
+<a id="A132192878"></a>
+<div id="IAMSS104" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">About Security Awareness and Education</h2>
+<p>The best way to ensure application security is through education. Developers and project leaders should be aware of security issues and secure coding practices. Training for these roles should include an in-depth explanation of the potential risks, as well as cover the features of the development and deployment platforms that help mitigate exploits.</p>
+<p>The most important design principle for application security is to implement security by design and by default. Secure coding guidelines should be made available, adhered to, and enforced in all development organizations, irrespective of the tools and platforms being used.</p>
+<p>An example of security by default is the behavior of elevators in case of a power outage. Instead of releasing the breaks, we expect elevators to apply the breaks for the safety of passengers in the cabin. The elevator applies the brakes because this was defined as the default behavior.</p>
+<p>So, before thinking about how to prevent external attacks, identify secure defaults for an application that can protect it from the inside. This, however, does not work well without training and awareness.</p>
+<p><span class="italic">Go to <a href="#BABCHGFI">Contents</a></span></p>
+</div>
+<!-- class="sect1" -->
+<a id="A132193216"></a>
+<div id="IAMSS105" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">About the Risk Associated with "Build Your Own Security"</h2>
+<p>Developers don't always immediately identify the security measures they need for an application within the security toolset provided by a platform or built into a framework. As a result, "build your own security" is not uncommon among development projects. This is especially true if the application is a replacement of an existing system that uses its own non-standard security infrastructure. An example for this is database based authentication and authorization in combination with user provisioning and granting access to resources at runtime.</p>
+<p>The risk associated with building your own security is that you are also responsible for quality assurance of the security layer, application security propagation and single sign-on, as well as bug fixing and maintenance of the security layer. Not all developers are security experts, but experts are a necessity to build a custom security layer.</p>
+<p>We recommend allocating time to investigate and implement existing, well vetted security solutions. Applying existing solutions to custom applications may be easier and more cost-effective than creating custom mechanisms that may offer less protection in their incipient phases.</p>
+<p><span class="italic">Go to <a href="#BABCHGFI">Contents</a></span></p>
+</div>
+<!-- class="sect1" -->
+<a id="A132193524"></a>
+<div id="IAMSS106" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Addressing the Top Security Risks for OHSIAMS APIs</h2>
+<p>The below sections identify the controls within the Oracle Health Sciences Identity and Access Management Service OHSIAMS Inbound User Provisioning Service API that are used or may be used to address the top 10 security risks identified by OWASP for 2013.</p>
+<p>In some cases, the controls are part of the product and proper use of the controls by the clients is required to validate the integrity of the controls.</p>
+<p>The following risks are considered:</p>
+<ol>
+<li>
+<p><a href="#BABGFBIA">Injection</a></p>
+</li>
+<li>
+<p><a href="#BABCDDAC">Broken Authentication and Session Management</a></p>
+</li>
+<li>
+<p><a href="#BABEDIAF">Cross-site Scripting (XSS)</a></p>
+</li>
+<li>
+<p><a href="#BABBBJAH">Insecure Direction Object References</a></p>
+</li>
+<li>
+<p><a href="#BABHDCID">Security Misconfiguration</a></p>
+</li>
+<li>
+<p><a href="#BABIFJII">Sensitive Data Exposure</a></p>
+</li>
+<li>
+<p><a href="#BABEDGHD">Missing Function Level Access Control</a></p>
+</li>
+<li>
+<p><a href="#BABDEBIG">Cross-site Request Forgery (CSRF)</a></p>
+</li>
+<li>
+<p><a href="#BABFHFAC">Using Components with Known Vulnerabilities</a></p>
+</li>
+<li>
+<p><a href="#BABEAHFJ">Non-validated Redirects and Forwards</a></p>
+</li>
+</ol>
+<a id="BABGFBIA"></a>
+<div id="IAMSS107" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Injection</h3>
+<p>Injection vulnerabilities occur when data is sent into an interpreter via an interface specification and the party submitting the data does not check the data to ensure that only the expected actions are performed on the data by the interpreter.</p>
+<p>Injections of the type SQL, code, command, log, path transversal (XML) are all possible, based on the interpreter used in the container.</p>
+<div id="IAMSS108" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref1"></a>
+<h4 class="sect3">Valid Content Types</h4>
+<p>The REST service of the OHSIAMS Inbound User Provisioning Service supports only the JSON data format. The service client must accept and send 'application/json' as the media type when invoking the REST service.</p>
+</div>
+<!-- class="sect3" -->
+<div id="IAMSS109" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref2"></a>
+<h4 class="sect3">SQL Injection</h4>
+<p>To prevent SQL injections, the OHSIAMS Inbound User Provisioning Service API uses bind variables in SQL queries.</p>
+</div>
+<!-- class="sect3" -->
+<div id="IAMSS110" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref3"></a>
+<h4 class="sect3">XML Injection</h4>
+<p>XML injections are not possible because the OHSIAMS Inbound User Provisioning Service API accepts and generates only JSON data format.</p>
+</div>
+<!-- class="sect3" -->
+<div id="IAMSS111" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref4"></a>
+<h4 class="sect3">LDAP Injection</h4>
+<p>The OHSIAMS Inbound User Provisioning Service API checks all incoming user input through a preset whitelist of allowed input and checks the pattern of the ultimate payload for any attack. Although we generally do not recommend making use of custom code, you can further enhance protection against LDAP injections through custom code on the client side.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BABCDDAC"></a>
+<div id="IAMSS112" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Broken Authentication and Session Management</h3>
+<p>Risks associated with broken authentication and session management are often due to these functions not being implemented properly. As previously stated, custom authentication mechanisms should not be implemented. They have not been implemented for the OHSIAMS Inbound User Provisioning Service API, which uses a BASIC authentication mechanism. The session is created on request and destroyed at the end of the response. Each API request must be accompanied by BASIC authentication headers to prevent session hijacking.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABEDIAF"></a>
+<div id="IAMSS113" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Cross-site Scripting (XSS)</h3>
+<p>The OHSIAMS Inbound User Provisioning Service API prevents cross-site scripting by following the OWASP recommended methodologies.</p>
+<p>The best method to address XSS is to validate all data using whitelists and encode data as necessary, according to the presentation or handling of the data.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABBBJAH"></a>
+<div id="IAMSS114" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Insecure Direction Object References</h3>
+<p>When a developer exposes a reference to an object without proper access or other protection, this reference can become a means of attack. When developing code and sending data to and from the API, ensure that the authorization model of the API interface is consistent to guard against insecure direction object references.</p>
+<p>The authorization model in the SCIM interface ensures protection down to the object level and the SCIM interface has been validated for proper authorization constructs within the functions of the defined service. Any client code built to interact with the SCIM interface should complement this security model so that proper authorization is controlled at the object level.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABHDCID"></a>
+<div id="IAMSS115" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Security Misconfiguration</h3>
+<p>Since OHSIAMS is hosted in the Oracle Cloud for Industry (OCI) environment, its services adhere to the OCI policies, as described <code dir="ltr"><a href="http://www.oracle.com/us/corporate/contracts/cloud-ind-hosting-delivery-policies-1902876.pdf">here</a><a href=""></a></code>. Clients of the OHSIAMS API should implement similar security and available polices to ensure the confidentiality, integrity, and availability of data flowing through the interface.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABIFJII"></a>
+<div id="IAMSS116" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Sensitive Data Exposure</h3>
+<p>We recommend hiding sensitive information from unauthorized users and handling sensitive data securely. Failure in security configuration and selecting insecure default settings may facilitate data leakage.</p>
+<p>Web client developers should enforce encrypted data transport when the application transports sensitive data and should validate that all certificates are legitimate and signed by public authorities. Also, ciphers should be restricted to modern implementations.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABEDGHD"></a>
+<div id="IAMSS117" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Missing Function Level Access Control</h3>
+<p>As a best practice, do not assume that a method will only be called within the context for which it was initially designed.</p>
+<p>All access to functionality that manipulates data must be protected either by access control on the entity or by guarding the invocation of methods with the appropriate permission checks. The credential of the identity associated with the access control at the client application must be encrypted and stored securely.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABDEBIG"></a>
+<div id="IAMSS118" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Cross-site Request Forgery (CSRF)</h3>
+<p>Cross-Site Request Forgery requires a browser container. Generally, APIs are not meant to be supported directly in a browser container, meaning that the session is not kept as a browser cookie and CSRF is not normally a threat.</p>
+<p>To further prevent any CSRF attacks, the OHSIAMS Inbound User Provisioning Service API does not render any content in HTML and forces the browser to download the response as an attachment.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABFHFAC"></a>
+<div id="IAMSS119" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Using Components with Known Vulnerabilities</h3>
+<p>The technology stack for the OHSIAMS Inbound User Provisioning Service API is constantly updated with the latest security fixes and patches. Oracle recommends that developers using the API do the same on their end.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABEAHFJ"></a>
+<div id="IAMSS120" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Non-validated Redirects and Forwards</h3>
+<p>OHSIAMS Inbound User Provisioning Service API responses do not provide URLs to other resources or sub-resources in the representations that are returned, thus this API is not subject to this vulnerability.</p>
+<p><span class="italic">Go to <a href="#BABCHGFI">Contents</a></span></p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="A132194504"></a>
+<div id="IAMSS121" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Other Aspects of Security</h2>
+<p>Application security is ineffective if the application itself runs in an insecure environment. Perimeter security describes the levels of protection that are added on servers, the network, and other data access channels outside of the API domain and should also be considered to ensure thorough prevention of security risks.</p>
+<p>As can be seen in this document, not all of the OWASP top 10 security vulnerabilities for 2013 are relevant for application developers, depending on the implementation.</p>
+<p><span class="italic">Go to <a href="#BABCHGFI">Contents</a></span></p>
+</div>
+<!-- class="sect1" -->
+<a id="A132194558"></a>
+<div id="IAMSS122" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Recommended Reading</h2>
+<p>We recommend that you familiarize yourself with the content available on the OWASP website:</p>
+<p><code dir="ltr"><a href="https://www.owasp.org/index.php/Main_Page">https://www.owasp.org/index.php/Main_Page</a><a href=""></a></code></p>
+<p><span class="italic">Go to <a href="#BABCHGFI">Contents</a></span></p>
+</div>
+<!-- class="sect1" -->
+<a id="A969465"></a>
+<div id="IAMSS123" class="sect1">
+<h2 class="sect1">Related Documents</h2>
+<p>For more information, see the <a class="olink IAMSR" href="../user-provisioning-api/toc.htm"><span class="italic">Oracle Health Sciences Identity and Access Management Service Inbound User Provisioning API Guide</span></a> on the <code dir="ltr"><a href="https://docs.oracle.com/health-sciences/ohs-iams/iams-docs.htm">Oracle Help Center</a><a href=""></a></code>.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Always check the <code dir="ltr"><a href="https://docs.oracle.com/health-sciences/ohs-iams/iams-docs.htm">Oracle Help Center</a><a href=""></a></code> to ensure you have the latest documentation.</div>
+<p><span class="italic">Go to <a href="#BABCHGFI">Contents</a></span></p>
+</div>
+<!-- class="sect1" -->
+<a id="A132172625"></a>
+<div id="IAMSS124" class="sect1">
+<h2 class="sect1">Documentation Accessibility</h2>
+<p>For information about Oracle's commitment to accessibility, visit the Oracle Accessibility Program website at <code dir="ltr"><a href="http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=docacc">http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=docacc</a></code>.</p>
+<p class="subhead2"><a id="sthref5"></a>Access to Oracle Support</p>
+<p>Oracle customers that have purchased support have access to electronic support through My Oracle Support. For information, visit <code dir="ltr"><a href="http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=info">http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=info</a></code> or visit <code dir="ltr"><a href="http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=trs">http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=trs</a></code> if you are hearing impaired.</p>
+</div>
+<!-- class="sect1" -->
+<a id="sthref6"></a>
+<hr />
+<p>Oracle Health Sciences Identity and Access Management Service Inbound User Provisioning Service API Guide, Release 1.2.1</p>
+<p>E76092-01</p>
+<p>Copyright &copy; 2014, 2017,&nbsp;Oracle and/or its affiliates. All rights reserved.</p>
+<p>This software and related documentation are provided under a license agreement containing restrictions on use and disclosure and are protected by intellectual property laws. Except as expressly permitted in your license agreement or allowed by law, you may not use, copy, reproduce, translate, broadcast, modify, license, transmit, distribute, exhibit, perform, publish, or display any part, in any form, or by any means. Reverse engineering, disassembly, or decompilation of this software, unless required by law for interoperability, is prohibited.</p>
+<p>The information contained herein is subject to change without notice and is not warranted to be error-free. If you find any errors, please report them to us in writing.</p>
+<p>If this is software or related documentation that is delivered to the U.S. Government or anyone licensing it on behalf of the U.S. Government, then the following notice is applicable:</p>
+<p>U.S. GOVERNMENT END USERS: Oracle programs, including any operating system, integrated software, any programs installed on the hardware, and/or documentation, delivered to U.S. Government end users are "commercial computer software" pursuant to the applicable Federal Acquisition Regulation and agency-specific supplemental regulations. As such, use, duplication, disclosure, modification, and adaptation of the programs, including any operating system, integrated software, any programs installed on the hardware, and/or documentation, shall be subject to license terms and license restrictions applicable to the programs. No other rights are granted to the U.S. Government.</p>
+<p>This software or hardware is developed for general use in a variety of information management applications. It is not developed or intended for use in any inherently dangerous applications, including applications that may create a risk of personal injury. If you use this software or hardware in dangerous applications, then you shall be responsible to take all appropriate fail-safe, backup, redundancy, and other measures to ensure its safe use. Oracle Corporation and its affiliates disclaim any liability for any damages caused by use of this software or hardware in dangerous applications.</p>
+<p>Oracle and Java are registered trademarks of Oracle and/or its affiliates. Other names may be trademarks of their respective owners.</p>
+<p>Intel and Intel Xeon are trademarks or registered trademarks of Intel Corporation. All SPARC trademarks are used under license and are trademarks or registered trademarks of SPARC International, Inc. AMD, Opteron, the AMD logo, and the AMD Opteron logo are trademarks or registered trademarks of Advanced Micro Devices. UNIX is a registered trademark of The Open Group.</p>
+<p>This software or hardware and documentation may provide access to or information about content, products, and services from third parties. Oracle Corporation and its affiliates are not responsible for and expressly disclaim all warranties of any kind with respect to third-party content, products, and services unless otherwise set forth in an applicable agreement between you and Oracle. Oracle Corporation and its affiliates will not be responsible for any loss, costs, or damages incurred due to your access to or use of third-party content, products, or services, except as set forth in an applicable agreement between you and Oracle.</p>
+</div>
+<!-- class="letterstyle" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment24">
+<tr>
+<td class="cellalignment30">&nbsp;</td>
+<td class="cellalignment31">&nbsp;</td>
+<td class="cellalignment32">
+<table class="cellalignment27">
+<tr>
+<td class="cellalignment28"><a href="../index.htm"><img width="30" height="30" src="../dcommon/gifs/prodicon.gif" alt="Go to Documentation Home" /><br />
+Home</a></td>
+<td class="cellalignment28"><a href="../nav/portal_booklist.htm"><img width="30" height="30" src="../dcommon/gifs/bookicon.gif" alt="Go to Book List" /><br />
+Book List</a></td>
+<td class="cellalignment28"><a href="toc.htm"><img width="30" height="30" src="../dcommon/gifs/conticon.gif" alt="Go to Table of Contents" /><br />
+Contents</a></td>
+<td class="cellalignment28"><a href="../dcommon/html/feedback.htm"><img width="30" height="30" src="../dcommon/gifs/feedback.gif" alt="Go to Feedback page" /><br />
+Contact Us</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

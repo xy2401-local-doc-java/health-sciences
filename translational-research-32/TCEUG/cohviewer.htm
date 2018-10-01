@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Working with the Cohort Viewer</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2017-08-30T14:41:48Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Healthcare Translational Research User's Guide" />
+<meta name="dcterms.identifier" content="E84083-02" />
+<meta name="dcterms.isVersionOf" content="TCEUG" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2012, 2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Prev" href="cohquery.htm" title="Previous" type="text/html" />
+<link rel="Next" href="singpat.htm" title="Next" type="text/html" />
+<link rel="alternate" href="TCEUG.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="TCEUG.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="TCEUG.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">7/11</span> <!-- End Header -->
+<div id="TCEUG474" class="chapter"><a id="sthref121"></a>
+<h1 class="chapter"><span class="secnum">4</span> Working with the Cohort Viewer</h1>
+<p>This chapter contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#BGBJFGHH">Introduction</a></p>
+</li>
+<li>
+<p><a href="#BGBFJGDF">Viewing a Cohort List</a></p>
+</li>
+<li>
+<p><a href="#BGBDBECH">Viewing Cohort Timelines</a></p>
+</li>
+<li>
+<p><a href="#CHDDEAIA">Aligning Data by Patient or Subject Event</a></p>
+</li>
+<li>
+<p><a href="#CHDGJFDE">Including Criteria Used in Query</a></p>
+</li>
+<li>
+<p><a href="#BGBCIHGA">Viewing Cohort Reports</a></p>
+</li>
+<li>
+<p><a href="#BGBBIHFH">Exporting Genomic Data</a></p>
+</li>
+</ul>
+<a id="BGBJFGHH"></a>
+<div id="TCEUG475" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Introduction</h2>
+<p>Cohort viewers enables you to view patients or subjects in a variety of formats. With an Oracle Healthcare Omics (OHO, formerly known as ODB) license, you can look at genomic data in a circular genome viewer (using Visquick) or export data into formats acceptable by the Integrative Genome Viewer.</p>
+</div>
+<!-- class="sect1" -->
+<a id="BGBFJGDF"></a>
+<div id="TCEUG476" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Viewing a Cohort List</h2>
+<p>After the patient or subject count is displayed, you may want to review the data for these patients or subjects. You can view this data from the Cohort Queries tab as well. For details, see <a href="cohquery.htm#BGBCGFEA">Viewing Patient Count and Patient Data</a>.</p>
+<p>You can view a cohort list for:</p>
+<ul>
+<li>
+<p>a current active query</p>
+</li>
+<li>
+<p>a query from the library</p>
+</li>
+<li>
+<p>saved patient or subject list</p>
+</li>
+<li>
+<p>on an <span class="italic">ad-hoc</span> basis if you have specific patients or subjects you want to examine</p>
+</li>
+</ul>
+<div id="TCEUG477" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref122"></a>
+<h3 class="sect2">Viewing Cohort List for Current Active Query</h3>
+<p>To view a cohort list for the query currently loaded in the Cohort Query tab:</p>
+<ol>
+<li>
+<p>Click the <span class="bold">Cohort Viewer</span> tab.</p>
+</li>
+<li>
+<p>On the left side, check that <span class="bold">active query</span> is selected under <span class="bold">Patient IDs source</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Submit</span>. The cohort list and details are displayed on the right.</p>
+<p>Use the pane on the left to select and filter the data you want to view for the cohort list. For details on filtering data, see <a href="#CHDGJCGJ">Filtering Data in Cohort List</a>.</p>
+<img width="765" height="590" src="img/trc27.gif" alt="Description of trc27.gif follows" /><br />
+<a id="sthref123" href="img_text/trc27.htm">Description of the illustration ''trc27.gif''</a><br />
+<br /></li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<div id="TCEUG762" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref124"></a>
+<h3 class="sect2">Viewing Cohort List for Library Query, List or Ad-hoc</h3>
+<p>To view the cohort list for a library query or from a saved list or an ad-hoc query:</p>
+<ol>
+<li>
+<p>Navigate to the <span class="bold">Cohort Viewer</span> tab.</p>
+</li>
+<li>
+<p>On the left side, select one of the following:</p>
+<ul>
+<li>
+<p>library query - to view the cohort list for a patient or subject query from the library</p>
+</li>
+<li>
+<p>list - to view the cohort list for a saved patient or subject list</p>
+</li>
+<li>
+<p>ad-hoc - to view list for specific patients or subjects you want to examine</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Submit</span>. The cohort list details are displayed on the right.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CHDGJCGJ"></a>
+<div id="TCEUG479" class="sect2">
+<h3 class="sect2">Filtering Data in Cohort List</h3>
+<p>The left hand panel contains topics that reflect the query selection criteria from the Clinical Information category. To filter data for the cohort list:</p>
+<ol>
+<li>
+<p>Click <span class="bold">Data</span> on the left hand panel to view the topics under it.</p>
+</li>
+<li>
+<p>Select one or more check boxes for the data you want to display in your list.</p>
+</li>
+<li>
+<p>Click <span class="bold">Submit</span>. The system reruns the query and adds relevant patient or subject data for each patient or subject listed.</p>
+<p>A patient or subject may have multiple data for a particular data category, for example, a patient or subject can have more than one procedure or medication. Consequently, the cohort list details may display multiple rows or records for each patient or subject. Selecting several data categories to display may significantly limit your ability to review multiple patients or subject at the same time.</p>
+</li>
+<li>
+<p>To remove data, clear the appropriate boxes and select <span class="bold">Submit</span>.</p>
+</li>
+<li>
+<p>To export the list to a Microsoft Excel sheet, click <span class="bold">Export</span>. To display the date in the dd/mm/yyyy format, use the formatting option in Microsoft Excel.</p>
+</li>
+</ol>
+<img width="767" height="604" src="img/cohortlist.gif" alt="Description of cohortlist.gif follows" /><br />
+<a id="sthref125" href="img_text/cohortlist.htm">Description of the illustration ''cohortlist.gif''</a><br />
+<br /></div>
+<!-- class="sect2" -->
+<div id="TCEUG700" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref126"></a>
+<h3 class="sect2">Displaying Reference Range Values</h3>
+<p>Cohort List supports displaying Reference Range values, if available, along with numeric results of Observation. To display reference range values:</p>
+<ol>
+<li>
+<p>Click <span class="bold">Data</span> on the left hand panel to show the topics within it.</p>
+</li>
+<li>
+<p>Select <span class="bold">Test or Observation</span>.</p>
+</li>
+<li>
+<p>Enter the value you want to search for.</p>
+</li>
+<li>
+<p>Click <span class="bold">Submit</span>. Where available, the reference high and reference low range values are displayed along with numeric results.</p>
+<img width="535" height="372" src="img/trc80.gif" alt="Description of trc80.gif follows" /><br />
+<a id="sthref127" href="img_text/trc80.htm">Description of the illustration ''trc80.gif''</a><br />
+<br /></li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BGBDBECH"></a>
+<div id="TCEUG481" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Viewing Cohort Timelines</h2>
+<p>You can view patient or subject data for a small subset of patients in the form of a timeline. This process involves the following steps:</p>
+<ol>
+<li>
+<p><a href="#CHDEDBDH">Selecting Patients or Subjects</a></p>
+</li>
+<li>
+<p><a href="#CHDJGDAF">Selecting Data</a></p>
+</li>
+<li>
+<p><a href="#CHDEEGCD">Displaying Patient or Subject Data</a></p>
+</li>
+<li>
+<p><a href="#CHDDEAIA">Aligning Data by Patient or Subject Event</a></p>
+</li>
+<li>
+<p><a href="#CHDGJFDE">Including Criteria Used in Query</a></p>
+</li>
+</ol>
+<a id="CHDEDBDH"></a>
+<div id="TCEUG482" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Selecting Patients or Subjects</h3>
+<p>This step is similar to how you select patients or subjects for the <span class="bold">Cohort List</span>. You can select patients or subjects either from the current active query, from a query in the library, or by entering the Patient or Subject ID number.</p>
+<p>To select patients or subjects:</p>
+<ol>
+<li>
+<p>Navigate to <span class="bold">Cohort Viewer</span> &gt; <span class="bold">Cohort Timelines</span>.</p>
+</li>
+<li>
+<p>Select the source of your subject ID from among the active query, library query, saved list or an ad-hoc query.</p>
+</li>
+<li>
+<p>Click <span class="bold">Make initial pool</span>.All the subjects or patients in the selected query are added to the initial pool.</p>
+<div id="TCEUG763" class="figure">
+<p class="titleinfigure"><a id="sthref128"></a>Figure 4-1 Select Patient or Subjects</p>
+<img width="311" height="551" src="img/trc30.gif" alt="Description of Figure 4-1 follows" /><br />
+<a id="sthref129" href="img_text/trc30.htm">Description of ''Figure 4-1 Select Patient or Subjects''</a><br />
+<br /></div>
+<!-- class="figure" --></li>
+<li>
+<p>Now select up to 20 patients or subjects and move them from the initial pool to the display list by clicking the arrow button. This selection is what the system will reference for displaying data in the timelines view.</p>
+</li>
+<li>
+<p>Click <span class="bold">Submit</span> to view the corresponding data.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CHDJGDAF"></a>
+<div id="TCEUG485" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Selecting Data</h3>
+<p>After you have identified patients or subjects for the Display List, select the clinical information to be displayed in the viewer.</p>
+<ol>
+<li>
+<p>In the left hand panel, click <span class="bold">Data</span>. The system displays a list of data topics.</p>
+<p>Each data topic has a distinct color associated with it. This is so that data can be visually separated for the same patient or subject. You can change the assigned colors by using the drop-down arrow next to each color.</p>
+<div id="TCEUG486" class="figure">
+<p class="titleinfigure"><a id="sthref130"></a>Figure 4-2 Selecting Data</p>
+<img width="613" height="555" src="img/selectingdata.gif" alt="Description of Figure 4-2 follows" /><br />
+<a id="sthref131" href="img_text/selectingdata.htm">Description of ''Figure 4-2 Selecting Data''</a><br />
+<br /></div>
+<!-- class="figure" --></li>
+<li>
+<p>Select each data topic you want to view. Then click the magnifying glass icon for each selected topic to search or specify the particular criteria. A popup search window is displayed.</p>
+</li>
+<li>
+<p>For each topic, enter the details for the topic.</p>
+</li>
+<li>
+<p>Click <span class="bold">Search</span>.</p>
+</li>
+<li>
+<p>Select one or more items and use the arrow button to move them to the right hand box.</p>
+</li>
+<li>
+<p>Click <span class="bold">Submit</span>.</p>
+</li>
+<li>
+<p>Once you have selected and specified the data you want to view, select <span class="bold">Submit</span> at the bottom of the left hand panel. A linear view of the selected data is displayed.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CHDEEGCD"></a>
+<div id="TCEUG488" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Displaying Patient or Subject Data</h3>
+<p>The subject and patient data display is divided into two sections.</p>
+<ul>
+<li>
+<p>The left side has attributes about the selected patients</p>
+</li>
+<li>
+<p>The right side shows the colored layers of the selected clinical data, in a timeline view.</p>
+</li>
+</ul>
+<p>To move the section divider, hover the cursor on the white vertical line. Select and drag the divider to the desired position. You can hide either section, by clicking the small left hand arrow on the right hand side of the respective area.</p>
+<p>Click the Subject ID to navigate to the single patient viewer.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If you are using Mozilla Firefox, click the patient ID. On Microsoft Internet Explorer and Google Chrome, double-click the patient ID.</div>
+<img width="909" height="504" src="img/trc32.gif" alt="Description of trc32.gif follows" /><br />
+<a id="sthref132" href="img_text/trc32.htm">Description of the illustration ''trc32.gif''</a><br />
+<br />
+<ul>
+<li>
+<p>To view the data for a specific date range, use the <span class="bold">Time Scale</span> option for the date range. Enter the <span class="bold">From</span> and <span class="bold">to</span> dates and click <span class="bold">Update</span>.</p>
+<p>The default <span class="bold">Auto</span> option displays the data without a specific time reference.</p>
+</li>
+<li>
+<p>If an event has both Start Date and End Date values, then the timeline uses the Event Code to mark the start of an event.</p>
+</li>
+<li>
+<p>A tool tip on the timeline provides additional information about the event.</p>
+</li>
+<li>
+<p>On selecting one event in the timeline, the <span class="bold">Detail</span> table below the timeline lists all the occurrences of the event and provides additional information such as the start and the end date of the occurrences.</p>
+</li>
+<li>
+<p>For Test or Observation events with numeric result values, the <span class="bold">Detail</span> table displays the results of all the occurrences of the event. If two or more occurrences of Test or Observation event have numeric results available, then the <span class="bold">Graph</span> tab displays a line graph for those numeric result values.</p>
+</li>
+<li>
+<p>Since the Test or Observation event has only one date event, the user interface uses dummy End Date values that are 1 day later than the corresponding Start Date values to render the graph. The Detail table also displays these dummy End Date values.</p>
+</li>
+<li>
+<p>Events are not displayed on the left hand table or on the timeline in the following conditions:</p>
+<ul>
+<li>
+<p>When an event's Start Date is null.</p>
+</li>
+<li>
+<p>When an event has only one Date attribute (for example, Observation has only Observation Date) and the attribute's value is null.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>If an event's End Date is null, then the System Date is used for displaying the event.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<div id="TCEUG702" class="sect2"><a id="sthref133"></a>
+<h3 class="sect2">Selecting the Timeline Mode</h3>
+<p>Use the <span class="bold">View same Events</span> option to display the events in one of the following modes:</p>
+<p class="subhead2"><a id="TCEUG704"></a>Single Line</p>
+<p>This is the default mode of displaying data on the Timelines tab.</p>
+<img width="740" height="515" src="img/trc110.gif" alt="Description of trc110.gif follows" /><br />
+<a id="sthref134" href="img_text/trc110.htm">Description of the illustration ''trc110.gif''</a><br />
+<br />
+<p>In this mode, all instances of a repeating event are displayed on the same line and separate events are displayed on separate lines.</p>
+<p>Overlapping occurrences are displayed on separate lines in the timeline. However, the left hand table displays a single row corresponding to all occurrences of the event.</p>
+<p>The tabular display on the left side uses alternating background color to visually delineate data of different patients or subjects. All of the rows corresponding to a patient or subject, for a particular Event Type, have one background color and the next set of rows are in a different color.</p>
+<p class="subhead2"><a id="TCEUG705"></a>Multiple Lines</p>
+<img width="599" height="396" src="img/trc111.gif" alt="Description of trc111.gif follows" /><br />
+<a id="sthref135" href="img_text/trc111.htm">Description of the illustration ''trc111.gif''</a><br />
+<br />
+<img width="685" height="397" src="img/trc112.gif" alt="Description of trc112.gif follows" /><br />
+<a id="sthref136" href="img_text/trc112.htm">Description of the illustration ''trc112.gif''</a><br />
+<br />
+<p>In this mode, all of the instances of events are displayed on different lines, even if the events are repeating.</p>
+<img width="1228" height="223" src="img/trc113.gif" alt="Surrounding text describes trc113.gif." /><br /></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CHDDEAIA"></a>
+<div id="TCEUG490" class="sect1">
+<h2 class="sect1">Aligning Data by Patient or Subject Event</h2>
+<p>You can designate a particular piece of clinical data to serve as the anchor, around which the remaining data is adjusted in the viewer. For example, if you choose a particular procedure as the anchor for alignment, the medications or diagnostic tests are adjusted in the display to show how long before (or after) the anchor they were administered. To do this:</p>
+<ol>
+<li>
+<p>Click <span class="bold">Align Data by Subject Event</span>. The Align Data window is displayed.</p>
+</li>
+<li>
+<p>Enter <span class="bold">Subject ID</span>. You can also use the drop-down arrow to select a subject ID.</p>
+</li>
+<li>
+<p>Click the magnifying glass icon next to the Align by field and select the option you want to use.</p>
+<p>When you select a particular diagnosis or medication code to align patients, all the event codes at different hierarchical nodes are considered for the selected event code.</p>
+</li>
+<li>
+<p>Click <span class="bold">Submit</span>.</p>
+<img width="461" height="454" src="img/trc64.gif" alt="Description of trc64.gif follows" /><br />
+<a id="sthref137" href="img_text/trc64.htm">Description of the illustration ''trc64.gif''</a><br />
+<br /></li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="CHDGJFDE"></a>
+<div id="TCEUG706" class="sect1">
+<h2 class="sect1">Including Criteria Used in Query</h2>
+<p>You can view the data used to define the inclusion criteria of the currently active query by selecting the <span class="bold">Include criteria used in query</span> option in the Data section of the left hand panel. The criteria defined in the cohort query is then displayed in the data section of the cohort timeline.</p>
+<p>If the inclusion criteria of the active query is not based on any data topics supported on the cohort timeline, a message is displayed to select at least one supported data element.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The data topic <span class="italic">Clinical Encounter</span> can be selected only in conjunction with other data elements that are linked to Clinical Encounter, for example Diagnosis, Procedure and so on.</div>
+<p>For example, in the <a href="#CHDCIIHH">Figure 4-3</a>, <span class="bold">Diagnosis</span> is selected to be included in the criteria used in the query. After you select it, the corresponding diagnosis criteria is displayed. Click <span class="bold">Submit</span> to view the corresponding timeline events.</p>
+<div id="TCEUG707" class="figure">
+<p class="titleinfigure"><a id="CHDCIIHH"></a>Figure 4-3 Include Criteria Used in Query</p>
+<img width="308" height="513" src="img/trc81.gif" alt="Description of Figure 4-3 follows" /><br />
+<a id="sthref138" href="img_text/trc81.htm">Description of ''Figure 4-3 Include Criteria Used in Query''</a><br />
+<br /></div>
+<!-- class="figure" --></div>
+<!-- class="sect1" -->
+<a id="BGBCIHGA"></a>
+<div id="TCEUG498" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Viewing Cohort Reports</h2>
+<p>The Cohort Reports tab lets you view various cohort reports.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+In the Active Query mode, if no filters have been selected in Cohort Query, then the reports display data of only the first 10,000 patients or subjects. This limit is configurable and can be changed using the DEFAULT_ACTIVE_QUERY_LIMIT property in the TRC.properties file.
+<p>However, irrespective of the patient or subject selection option, if the count exceeds the value specified in GENOMIC.REPORTS_MAX_PATIENT_COUNT of TRC.properties file, a warning message is displayed. You can either continue to plot with a large number of patient or subjects (might impact performance) or change the selected cohort to a smaller number.</p>
+</div>
+<div id="TCEUG499" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref139"></a>
+<h3 class="sect2">Demographic Reports</h3>
+<p>You can view demographic reports for a patient list. The queries for these reports can be based on patient list in the cohort query, the library, patient list, ad-hoc query or omics. Perform the following steps to view demographic reports:</p>
+<ol>
+<li>
+<p>Navigate to <span class="bold">Cohort Viewer</span> &gt; <span class="bold">Cohort Reports</span> tab.</p>
+</li>
+<li>
+<p>Expand the <span class="bold">Patients</span> node on the left.</p>
+<div id="TCEUG500" class="figure">
+<p class="titleinfigure"><a id="sthref140"></a>Figure 4-4 Patient Node</p>
+<img width="609" height="462" src="img/trc61.gif" alt="Description of Figure 4-4 follows" /><br />
+<a id="sthref141" href="img_text/trc61.htm">Description of ''Figure 4-4 Patient Node''</a><br />
+<br /></div>
+<!-- class="figure" --></li>
+<li>
+<p>Select the <span class="bold">Patient IDs Source</span>.</p>
+</li>
+<li>
+<p>Expand the <span class="bold">Demographic Reports</span> tab.</p>
+<div id="TCEUG501" class="figure">
+<p class="titleinfigure"><a id="sthref142"></a>Figure 4-5 Select Demographic</p>
+<img width="324" height="398" src="img/trc60.gif" alt="Description of Figure 4-5 follows" /><br />
+<a id="sthref143" href="img_text/trc60.htm">Description of ''Figure 4-5 Select Demographic''</a><br />
+<br /></div>
+<!-- class="figure" --></li>
+<li>
+<p>Select the check boxes for the data you want displayed in your list.</p>
+</li>
+<li>
+<p>Select <span class="bold">Submit</span>.</p>
+</li>
+<li>
+<p>The system reruns the query and adds relevant patient or subject data for each patient or subject listed. Depending on you selection, reports age, gender, race and/or age and gender will be displayed. The data will be displayed as pie charts or bar graphs depending on your settings.</p>
+<div id="TCEUG502" class="figure">
+<p class="titleinfigure"><a id="CHDDJHJA"></a>Figure 4-6 Demographics Report</p>
+<img width="1231" height="638" src="img/trc62.gif" alt="Description of Figure 4-6 follows" /><br />
+<a id="sthref144" href="img_text/trc62.htm">Description of ''Figure 4-6 Demographics Report''</a><br />
+<br /></div>
+<!-- class="figure" --></li>
+</ol>
+<div id="TCEUG708" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref145"></a>
+<h4 class="sect3">Handling Unknown Data</h4>
+<p>If any missing or unknown data is present, a check box is provided at the bottom of each graph to include missing or unknown data as shown in <a href="#CHDDJHJA">Figure 4-6</a>.</p>
+<p>For the Age, Gender and Race graphs, if the check box is selected, the graph is refreshed with the unknown data. Here unknown data refers to age, gender or race details that are not defined for a particular patient.</p>
+<p>For the Age and Gender graph, the unknown age for different genders is combined into one group and the known age is in other group. Both groups are shown in the graph.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<div id="TCEUG503" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref146"></a>
+<h3 class="sect2">Clinical Reports</h3>
+<p>You can view clinical reports for a patient list. The queries for these reports can be based on patient list in the cohort query, the library, patient list, ad-hoc query or omics. Perform the following steps to view a clinical reports:</p>
+<ol>
+<li>
+<p>Navigate to <span class="bold">Cohort Viewer</span> &gt; <span class="bold">Cohort Reports</span> tab.</p>
+</li>
+<li>
+<p>Expand the <span class="bold">Patients</span> node on the left.</p>
+<div id="TCEUG504" class="figure">
+<p class="titleinfigure"><a id="sthref147"></a>Figure 4-7 Patient ID Source</p>
+<img width="609" height="462" src="img/trc61.gif" alt="Description of Figure 4-7 follows" /><br />
+<a id="sthref148" href="img_text/trc61.htm">Description of ''Figure 4-7 Patient ID Source''</a><br />
+<br /></div>
+<!-- class="figure" --></li>
+<li>
+<p>Select the <span class="bold">Patient IDs Source</span>.</p>
+</li>
+<li>
+<p>Expand the <span class="bold">Clinical Reports</span> tab.</p>
+</li>
+<li>
+<p>Select the <span class="bold">Specimen Available</span> check box.</p>
+</li>
+<li>
+<p>Select <span class="bold">Submit</span>.</p>
+</li>
+<li>
+<p>The system reruns the query and adds relevant patient or subject data for each patient or subject listed. Depending on you selection, reports age, gender, race and (or) age and gender will be displayed. The data will be displayed as pie charts or bar graphs depending on your settings.</p>
+<div id="TCEUG505" class="figure">
+<p class="titleinfigure"><a id="CHDEBAHE"></a>Figure 4-8 Clinical Report</p>
+<img width="931" height="647" src="img/trc63.gif" alt="Description of Figure 4-8 follows" /><br />
+<a id="sthref149" href="img_text/trc63.htm">Description of ''Figure 4-8 Clinical Report''</a><br />
+<br /></div>
+<!-- class="figure" --></li>
+</ol>
+<div id="TCEUG709" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref150"></a>
+<h4 class="sect3">Handling Unknown Data</h4>
+<p>If any missing or unknown data is present, a check box is provided at the bottom of each graph to include missing or unknown data as shown in <a href="#CHDEBAHE">Figure 4-8</a>.</p>
+<p>If <span class="bold">Include Unknown Specimen and Label With</span> or <span class="bold">Include Unknown Anatomical site and Label With</span> are selected, the graph is refreshed with the unknown data. Here unknown data refers to the specimen and anatomical site data that is not defined for a particular patient.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<div id="TCEUG506" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref151"></a>
+<h3 class="sect2">Genomic Reports</h3>
+<div id="TCEUG713" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref152"></a>
+<h4 class="sect3">Data Presence</h4>
+<p>The Genomic Reports - Data presence lets you view a breakup of the patient cohort as follows:</p>
+<ul>
+<li>
+<p>Patients in the cohort with specimens collected that have accessible genomic data</p>
+</li>
+<li>
+<p>Patients in the cohort with specimens collected but no genomic data</p>
+</li>
+<li>
+<p>Patients in the cohort with no specimens collected</p>
+</li>
+</ul>
+<p>You can view the Data Presence plot as Pie Chart, Horizontal Bars, Vertical Bars, and Table. The report also provides an option to view the distribution of present genomic data along the following available genomic data types:</p>
+<ul>
+<li>
+<p>Sequencing</p>
+</li>
+<li>
+<p>RNA-seq</p>
+</li>
+<li>
+<p>Gene Expression</p>
+</li>
+<li>
+<p>Copy Number Variation</p>
+</li>
+</ul>
+<p>Perform the following steps to view a Genomic data presence report:</p>
+<ol>
+<li>
+<p>Navigate to <span class="bold">Cohort Viewer</span> &gt; <span class="bold">Cohort Reports</span> tab.</p>
+</li>
+<li>
+<p>Expand the <span class="bold">Patients</span> node on the left and select the source of patient or subject identifiers.</p>
+</li>
+<li>
+<p>Expand the <span class="bold">Genomic Reports - Data Presence</span> node in the left panel.</p>
+</li>
+<li>
+<p>Select the <span class="bold">Genomic Data Presence</span> check box. An optional <span class="bold">Specimen Type</span> input field appears to allow for filtering the initial cohort on specimen type.</p>
+</li>
+<li>
+<p>Click <span class="bold">Submit</span> to generate the report.</p>
+<div id="TCEUG714" class="figure">
+<p class="titleinfigure"><a id="sthref153"></a>Figure 4-9 Genomic Data Presence</p>
+<img width="683" height="458" src="img/trc84.gif" alt="Description of Figure 4-9 follows" /><br />
+<a id="sthref154" href="img_text/trc84.htm">Description of ''Figure 4-9 Genomic Data Presence''</a><br />
+<br /></div>
+<!-- class="figure" --></li>
+<li>
+<p>To change the display type after generating the report, select display option from the <span class="bold">Display as</span> drop-down list.</p>
+<div id="TCEUG715" class="figure">
+<p class="titleinfigure"><a id="sthref155"></a>Figure 4-10 Data Presence - Table Display</p>
+<img width="555" height="397" src="img/trc85.gif" alt="Surrounding text describes Figure 4-10 ." /><br /></div>
+<!-- class="figure" --></li>
+<li>
+<p>To view a breakup of present genomic data by data type, click <span class="bold">View distribution of genomic data</span>.</p>
+<div id="TCEUG716" class="figure">
+<p class="titleinfigure"><a id="sthref156"></a>Figure 4-11 Distribution of Genomic Data</p>
+<img width="675" height="480" src="img/trc86.gif" alt="Description of Figure 4-11 follows" /><br />
+<a id="sthref157" href="img_text/trc86.htm">Description of ''Figure 4-11 Distribution of Genomic Data''</a><br />
+<br /></div>
+<!-- class="figure" --></li>
+<li>
+<p>To export the graphical plot type displays as a PNG image, and the table type displays as a Excel spreadsheet, click <span class="bold">Export</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<div id="TCEUG717" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref158"></a>
+<h4 class="sect3">SNP, Indel and CNV</h4>
+<div id="TCEUG507" class="sect4"><a id="sthref159"></a>
+<h5 class="sect4">Gene Level Reports - Mutated Gene Frequency and Gene Expression</h5>
+<p>Genomic Reports - SNP, Indel and CNV display the available SNP Indel genomic reports based on the selected cohort of patients or subjects, if in subject context.</p>
+<p>To view a SNP, Indel and CNV report:</p>
+<ol>
+<li>
+<p>Navigate to <span class="bold">Cohort Viewer</span> &gt; <span class="bold">Cohort Reports</span> tab.</p>
+</li>
+<li>
+<p>Expand the <span class="bold">Patients</span> node on the left and select the source of patient or subject identifiers.</p>
+</li>
+<li>
+<p>Navigate to <span class="bold">Genomic Reports - SNP, Indel, CNV</span> and select <span class="bold">Gene Level Reports.</span></p>
+</li>
+<li>
+<p>Select <span class="bold">Mutated Gene Frequency and Gene Expression</span>. You can also add additional parameters such Specimen Type, Anatomical Site, Assembly Version which will only consider results linked to the selected categories.</p>
+<p>Selecting <span class="bold">Include All Specimen</span> includes specimens without genomic data whereas not selecting this returns a result with only genomic data.</p>
+</li>
+<li>
+<p>Click <span class="bold">Submit</span>. A histogram report appears with the percentage of samples for the relevant cohort, which have sequence variants information within the selected genes.</p>
+<p>You can display the results as horizontal bars, vertical bars, or as a table. To export the bar results into PDF or the table results into Excel, click <span class="bold">Export</span>.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+When opening the Excel file, you may receive a warning from Excel stating that the file is in a different format than specified by the file extension. This warning can be safely ignored. For more information, see <code dir="ltr"><a href="http://docs.oracle.com/cd/E23943_01/web.1111/b31973/af_table.htm#autoId34">http://docs.oracle.com/cd/E23943_01/web.1111/b31973/af_table.htm#autoId34</a></code>.</div>
+<div id="TCEUG509" class="figure">
+<p class="titleinfigure"><a id="BGBHHHHG"></a>Figure 4-12 Show the Sequence Variants</p>
+<img width="1156" height="743" src="img/showsv.gif" alt="Description of Figure 4-12 follows" /><br />
+<a id="sthref160" href="img_text/showsv.htm">Description of ''Figure 4-12 Show the Sequence Variants''</a><br />
+<br /></div>
+<!-- class="figure" --></li>
+<li>
+<p>Clicking the histogram for the different selected genes displays a popup to either get the Gene Expression plot or the Variant Viewer to display details of the variant.</p>
+<div id="TCEUG510" class="figure">
+<p class="titleinfigure"><a id="sthref161"></a>Figure 4-13 Popup</p>
+<img width="1112" height="698" src="img/trc65.gif" alt="Description of Figure 4-13 follows" /><br />
+<a id="sthref162" href="img_text/trc65.htm">Description of ''Figure 4-13 Popup''</a><br />
+<br /></div>
+<!-- class="figure" --></li>
+<li>
+<p>To view the Gene Expression details for Single Channel or Dual Channel, click <span class="bold">Show Gene Expression</span> in the popup. In the Single Channel Expression, you must provide hybridization details.</p>
+</li>
+<li>
+<p>Selecting <span class="bold">Show Variant Viewer</span> displays necessary information about all variants present in that gene in the samples belonging to the selected cohort of subjects or patients.</p>
+<p>The Mutation plot displays the total number of specimen (on <span class="italic">y</span>-axis) having a particular mutation (on <span class="italic">y</span>-axis) falling in the selected gene for belonging to a specific reference. The <span class="italic">x</span>-axis contain the range of gene region including the flanking region.</p>
+<img width="1491" height="844" src="img/trc66.gif" alt="Description of trc66.gif follows" /><br />
+<a id="sthref163" href="img_text/trc66.htm">Description of the illustration ''trc66.gif''</a><br />
+<br />
+<p>The CDS plot displays bars of CDS regions for each of the Ensembl Transcripts belonging to the selected gene of a selected reference version. Each row in the CDS plot represents one Transcript ID of the selected gene and reference version.</p>
+<p>Details of each variant like Variant name, Variant Type, Replace Tag, Variant Effect if present, Location, Disease if loaded, Histology, Site Total number of samples, Patients are displayed. The results are grouped in descending order of specimen count, such that each row contains unique variants.</p>
+<img width="1061" height="260" src="img/trc67.gif" alt="Description of trc67.gif follows" /><br />
+<a id="sthref164" href="img_text/trc67.htm">Description of the illustration ''trc67.gif''</a><br />
+<br /></li>
+<li>
+<p>You can drill down to each mutation by clicking <span class="bold">Number of samples</span> present in the samples column of the table. A table and a pie chart are displayed below the table. The table contains details such Sample ID, Study (only in subject context), Anatomical Site and Patient or Subject ID, which contains the selected mutation, number of samples which do not contain this mutation (labeled as Other) from the group of samples having mutations for the selected gene and selected reference version.</p>
+<img width="876" height="392" src="img/trc68.gif" alt="Description of trc68.gif follows" /><br />
+<a id="sthref165" href="img_text/trc68.htm">Description of the illustration ''trc68.gif''</a><br />
+<br /></li>
+</ol>
+</div>
+<!-- class="sect4" -->
+<div id="TCEUG511" class="sect4"><a id="sthref166"></a>
+<h5 class="sect4">Copy Number Variation Frequency and Gene Expression</h5>
+<p>To view CNV Frequency and Gene Expression reports:</p>
+<ol>
+<li>
+<p>Navigate to <span class="bold">Cohort Viewer</span> &gt; <span class="bold">Cohort Reports</span> tab.</p>
+</li>
+<li>
+<p>Expand the <span class="bold">Patients</span> node on the left and select the source of patient or subject identifiers.</p>
+</li>
+<li>
+<p>Navigate to <span class="bold">Genomic Reports - SNP, Indel, CNV</span> and select <span class="bold">Gene Level Reports.</span></p>
+</li>
+<li>
+<p>Select <span class="bold">CNV Frequency and Gene Expression</span>. You can also add additional parameters such Specimen Type, Anatomical Site, Assembly Version, which will only consider results linked to the selected categories.</p>
+<p>Selecting <span class="bold">Include All Specimen</span> includes specimens without genomic data whereas not selecting this returns a result with only genomic data.</p>
+<div id="TCEUG512" class="figure">
+<p class="titleinfigure"><a id="BGBEHDAD"></a>Figure 4-14 Select Source of Patient or Subject Identifiers</p>
+<img width="410" height="508" src="img/selectingsource.gif" alt="Description of Figure 4-14 follows" /><br />
+<a id="sthref167" href="img_text/selectingsource.htm">Description of ''Figure 4-14 Select Source of Patient or Subject Identifiers''</a><br />
+<br /></div>
+<!-- class="figure" --></li>
+<li>
+<p>Click <span class="bold">Submit</span>. A histogram report displays the percentage of samples for the relevant cohort, which have copy number variants information within the selected genes.</p>
+<p>You can display the results as horizontal bars, vertical bars, or as a table. To export the bar results into or table results into Excel by clicking <span class="bold">Export</span>.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+When opening the Excel file, you may receive a warning from Excel stating that the file is in a different format than specified by the file extension. This warning can be safely ignored. For more information, refer to <code dir="ltr"><a href="http://docs.oracle.com/cd/E23943_01/web.1111/b31973/af_table.htm#autoId34">http://docs.oracle.com/cd/E23943_01/web.1111/b31973/af_table.htm#autoId34</a></code>.</div>
+<div id="TCEUG513" class="figure">
+<p class="titleinfigure"><a id="BGBIEGAF"></a>Figure 4-15 Show the Copy Number Variations</p>
+<img width="1073" height="702" src="img/trc69.gif" alt="Description of Figure 4-15 follows" /><br />
+<a id="sthref168" href="img_text/trc69.htm">Description of ''Figure 4-15 Show the Copy Number Variations''</a><br />
+<br /></div>
+<!-- class="figure" --></li>
+<li>
+<p>Clicking the histogram displays a popup is to either get the Gene Expression plot or the CNV Viewer to display details of the variant.</p>
+<img width="645" height="336" src="img/trc70.gif" alt="Description of trc70.gif follows" /><br />
+<a id="sthref169" href="img_text/trc70.htm">Description of the illustration ''trc70.gif''</a><br />
+<br /></li>
+<li>
+<p>To display the Gene Expression details for Single Channel or Dual Channel, select <span class="bold">Show Gene Expression</span>. In the Single Channel Expression, you must provide hybridization details.</p>
+</li>
+<li>
+<p>Clicking <span class="bold">Show CNV Viewer</span> displays necessary information about all CNV variants that are present in that gene in the samples belonging to the selected cohort of subjects or patients.</p>
+<p>The CNV plot displays each specimen (on <span class="italic">y</span>-axis) and its values falling in the selected gene for belonging to a specific reference.The <span class="italic">x</span>-axis plots the range of gene region. The plot is color coded with CNV with Gain (CNV &gt; 0.2) is Red, Normal (-0.2&lt;CNV&lt;0.2) in grey and Loss (CNV &lt; -2) in Green.</p>
+<img width="897" height="210" src="img/trc71.gif" alt="Description of trc71.gif follows" /><br />
+<a id="sthref170" href="img_text/trc71.htm">Description of the illustration ''trc71.gif''</a><br />
+<br />
+<p>The CNV table provides details of CNV data such as Samples, File Type, Chromosome, Anatomical Site, Start Position, End Position, CNV Value and Patient or Subject ID.</p>
+<img width="939" height="70" src="img/trc72.gif" alt="Description of trc72.gif follows" /><br />
+<a id="sthref171" href="img_text/trc72.htm">Description of the illustration ''trc72.gif''</a><br />
+<br /></li>
+</ol>
+</div>
+<!-- class="sect4" -->
+<div id="TCEUG718" class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref172"></a>
+<h5 class="sect4">Mutated Gene vs Sample Matrix</h5>
+<p>The Mutated Gene vs Sample Matrix plot displays a high-level pictorial view of the presence of specific variants in genes of interest across various specimens of patients or subjects in a cohort. You can see if a particular gene from a specimen has selected mutations or no-mutations or no-data loaded. The same plot lets you view CNV data on the genes for the specimens.</p>
+<p>The specimens are grouped together for each patient or subject and are ordered based on their collection date.</p>
+<p>You can also view <span class="italic">patient_id:specimen_number(specimen_vendor_number):collection_dt:no of variants</span> in the tooltip for each data point.</p>
+<p>Variant selection is based on variant impact, implying that the depiction of mutations on genes for each specimen is based on the variants having selected variant impacts. For example, if you select <span class="italic">frameshift</span> mutation for EGFR, then the query searches for variants causing frameshift impact for EGFR gene and reports as <span class="italic">mutation</span> if it finds any such variants. If there is only non-variant information, then it reports as non-mutation in the plot. If there is no data, then it shows no-data in the plot.</p>
+<p>Following are the definitions of various types of data in the plot.</p>
+<div class="inftblhruleinformalwidemax">
+<table class="cellalignment50" summary="Types of data in plot" dir="ltr">
+<thead>
+<tr class="cellalignment41">
+<th class="cellalignment51" id="r1c1-t7">Data</th>
+<th class="cellalignment51" id="r1c2-t7">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r2c1-t7" headers="r1c1-t7">Mutation</td>
+<td class="cellalignment47" headers="r2c1-t7 r1c2-t7">If any of the variants are present in the selected gene of a specimen, then it is reported as mutation.</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r3c1-t7" headers="r1c1-t7">No Mutation</td>
+<td class="cellalignment47" headers="r3c1-t7 r1c2-t7">If none of the variants are present in the selected gene of a specimen and there is non-variant information available for that gene, then it is reported as No Mutation.</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r4c1-t7" headers="r1c1-t7">No data</td>
+<td class="cellalignment47" headers="r4c1-t7 r1c2-t7">If there are no variants and also no non-variant information and there is no-call data for the selected gene of a specimen or there is no-data loaded for this specimen, then it will be reported as no data.</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r5c1-t7" headers="r1c1-t7">Amplification</td>
+<td class="cellalignment47" headers="r5c1-t7 r1c2-t7">If there is CNV data, which has seg_mean value more than zero, then it is reported as amplification.</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r6c1-t7" headers="r1c1-t7">Deletion</td>
+<td class="cellalignment47" headers="r6c1-t7 r1c2-t7">If there is CNV data which has seg_mean value less than zero, then it is reported as deletion.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblhruleinformalwidemax" -->
+<p>To view this plot:</p>
+<ol>
+<li>
+<p>Navigate to <span class="bold">Cohort Viewer</span> &gt; <span class="bold">Cohort Reports</span> tab.</p>
+</li>
+<li>
+<p>Expand the <span class="bold">Patients</span> node on the left and select the source of patient or subject identifiers.</p>
+</li>
+<li>
+<p>Navigate to <span class="bold">Genomic Reports - SNP, Indel, CNV</span> and select <span class="bold">Gene Level Reports.</span></p>
+</li>
+<li>
+<p>Select <span class="bold">Mutated Gene vs Sample Matrix</span>.</p>
+</li>
+<li>
+<p>Select genes either by ad-hoc list, pathway or gene set. Data is filtered using the Variant Impact or the cosmic mutation selected.You can also add additional parameters such Specimen Type, Anatomical Site, Assembly Version, which will only consider results linked to the selected categories.</p>
+<p>Selecting <span class="bold">Include All Specimen</span> includes specimens without genomic data whereas not selecting this returns a result with only genomic data.</p>
+</li>
+<li>
+<p>Click <span class="bold">Submit</span>. A report displays the percentage and details of samples for the relevant cohort which have sequence variants and copy number variants information within the selected genes.</p>
+<div id="TCEUG719" class="figure">
+<p class="titleinfigure"><a id="sthref173"></a>Figure 4-16 Mutated Gene vs Sample Matrix Report</p>
+<img width="750" height="231" src="img/trc87.gif" alt="Description of Figure 4-16 follows" /><br />
+<a id="sthref174" href="img_text/trc87.htm">Description of ''Figure 4-16 Mutated Gene vs Sample Matrix Report''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p>Each bar represents a specimen, which is grouped patient-wise and in the order of the specimen collection date. The Sequence Variants and CNV information for each specimen is displayed. The percentage of specimens with mutation on the gene is also mentioned. Export functionality is provided at each specimen level.</p>
+<img width="750" height="227" src="img/trc89.gif" alt="Description of trc89.gif follows" /><br />
+<a id="sthref175" href="img_text/trc89.htm">Description of the illustration ''trc89.gif''</a><br />
+<br />
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+When opening the Excel file, you may receive a warning from Excel stating that the file is in a different format than specified by the file extension. This warning can be safely ignored. For more information, refer to <code dir="ltr"><a href="http://docs.oracle.com/cd/E23943_01/web.1111/b31973/af_table.htm#autoId34">http://docs.oracle.com/cd/E23943_01/web.1111/b31973/af_table.htm#autoId34</a></code>.</div>
+<p>There is a limit to the number of specimens that can be seen in the gene matrix plot. This is an application level parameter called 'MAX_SPEC_REPORT' that is defined in the TRC.properties file. The default value of this parameter is 1000. If the number of specimens in the cohort used for this analysis is greater than the specified value, then the following warning message is displayed:</p>
+<img width="746" height="155" src="img/trc90.gif" alt="Description of trc90.gif follows" /><br />
+<a id="sthref176" href="img_text/trc90.htm">Description of the illustration ''trc90.gif''</a><br />
+<br />
+<p>If you continue from this warning message, the report displays the summary statistics instead of the matrix plot. You may have to decrease the cohort size based on some criteria like specimen type or anatomical site or otherwise use cohort query to view the matrix plot. Alternatively, you can also change the default value of MAX_SPEC_REPORT parameter to a desired value and rebuild the plot. However, rebuilding maybe affect the performance of the plot generation.</p>
+<img width="746" height="285" src="img/trc91.gif" alt="Description of trc91.gif follows" /><br />
+<a id="sthref177" href="img_text/trc91.htm">Description of the illustration ''trc91.gif''</a><br />
+<br />
+<p>The summary report only displays the percentage of specimens with different categories of data as shown in the image above.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect4" -->
+<div id="TCEUG720" class="sect4"><a id="sthref178"></a>
+<h5 class="sect4">Variant vs Sample Reports</h5>
+<p>This option is displayed on the Genomic Reports - SNP Indel genomic reports available, based on the selected cohort of patients or subjects, if in subject context. It provides a high level pictorial view of the presence of specific variants of interest across various specimens of patients or subjects in a cohort.</p>
+<p>The specimens are grouped together for each patient or subject and are ordered based on their collection date. You can also view <span class="italic">patient_id:specimen_number(specimen_vendor_number):collection_dt</span> in the tooltip for each data point.</p>
+<p>To generate the plot:</p>
+<ol>
+<li>
+<p>Navigate to <span class="bold">Cohort Viewer</span> &gt; <span class="bold">Cohort Reports</span> tab.</p>
+</li>
+<li>
+<p>Expand the <span class="bold">Patients</span> node on the left and select the source of patient or subject identifiers.</p>
+</li>
+<li>
+<p>Navigate to <span class="bold">Genomic Reports - SNP, Indel, CNV</span> and select <span class="bold">Variant vs Sample Report</span>.</p>
+<img width="286" height="467" src="img/trc92.gif" alt="Description of trc92.gif follows" /><br />
+<a id="sthref179" href="img_text/trc92.htm">Description of the illustration ''trc92.gif''</a><br />
+<br /></li>
+<li>
+<p>Select <span class="bold">Variant ID</span>.</p>
+<p>You can also add additional parameters such Specimen Type, Anatomical Site, Assembly Version, which will only consider results linked to the selected categories.</p>
+<p>Selecting <span class="bold">Include All Specimen</span> includes specimens without genomic data whereas not selecting this returns a result with only genomic data.</p>
+</li>
+<li>
+<p>Click <span class="bold">Submit</span>. A report displays the percentage and details of samples for the relevant cohort, which have mutation within the selected genes.</p>
+<div id="TCEUG721" class="figure">
+<p class="titleinfigure"><a id="sthref180"></a>Figure 4-17 Variant vs Sample Report</p>
+<img width="751" height="165" src="img/trc93.gif" alt="Description of Figure 4-17 follows" /><br />
+<a id="sthref181" href="img_text/trc93.htm">Description of ''Figure 4-17 Variant vs Sample Report''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p>Each bar represents a specimen, which is grouped together patient wise and in the order of the specimen collection date. The mutation information for each specimen is displayed. Each row represents one variant and the label represents reference_id, assembly version and the variant replace_tag value to maintain the uniqueness of the variant. The percentage of specimens for each mutation is also mentioned.</p>
+<img width="743" height="240" src="img/trc94.gif" alt="Description of trc94.gif follows" /><br />
+<a id="sthref182" href="img_text/trc94.htm">Description of the illustration ''trc94.gif''</a><br />
+<br />
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+When opening the Excel file, you may receive a warning from Excel stating that the file is in a different format than specified by the file extension. This warning can be safely ignored. For more information, refer to <code dir="ltr"><a href="http://docs.oracle.com/cd/E23943_01/web.1111/b31973/af_table.htm#autoId34">http://docs.oracle.com/cd/E23943_01/web.1111/b31973/af_table.htm#autoId34</a></code>.</div>
+<p>There is a limit on the number of specimens that can be seen in matrix plot. This is an application level parameter called 'MAX_SPEC_REPORT' that is defined in the TRC.properties file. The default value of this parameter is 1000. If the number of specimens in the cohort used for this analysis is greater that the specified value then the following warning message is shown below:</p>
+<img width="746" height="155" src="img/trc90.gif" alt="Description of trc90.gif follows" /><br />
+<a id="sthref183" href="img_text/trc90.htm">Description of the illustration ''trc90.gif''</a><br />
+<br />
+<p>If you continue from this warning message, the report will display the summary statistics instead of the matrix plot. You may have to decrease cohort size based on some criteria like specimen type or anatomical site or otherwise using cohort query to view the matrix plot. Alternatively, you can also change the default value of MAX_SPEC_REPORT parameter to a desired value and rebuild the plot but the performance of the plot generation may be effected. The summary report will only display the percentage of specimens with different categories of data as shown below.</p>
+<img width="427" height="291" src="img/trc95.gif" alt="Description of trc95.gif follows" /><br />
+<a id="sthref184" href="img_text/trc95.htm">Description of the illustration ''trc95.gif''</a><br />
+<br /></li>
+</ol>
+</div>
+<!-- class="sect4" --></div>
+<!-- class="sect3" -->
+<div id="TCEUG492" class="sect3"><a id="sthref185"></a>
+<h4 class="sect3">Structural Variations</h4>
+<div id="TCEUG764" class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref186"></a>
+<h5 class="sect4">Structural Variations in Genes</h5>
+<p>To view the structural variations in genes:</p>
+<ol>
+<li>
+<p>Navigate to <span class="bold">Cohort Viewer</span> &gt; <span class="bold">Cohort Reports</span> tab.</p>
+</li>
+<li>
+<p>Expand the <span class="bold">Patients</span> node on the left and select the source of patient or subject identifiers.</p>
+</li>
+<li>
+<p>Navigate to <span class="bold">Genomic Reports - Structural Variations</span> and select <span class="bold">Structural Variations in Genes</span>.</p>
+<p>You can also add additional parameters such as specimen type, anatomical site, DNA version, which will only consider results linked to the selected categories.</p>
+<div id="TCEUG493" class="figure">
+<p class="titleinfigure"><a id="BGBGHFIB"></a>Figure 4-18 Select Source of Patient or Subject Identifiers</p>
+<img width="322" height="512" src="img/trc96.gif" alt="Description of Figure 4-18 follows" /><br />
+<a id="sthref187" href="img_text/trc96.htm">Description of ''Figure 4-18 Select Source of Patient or Subject Identifiers''</a><br />
+<br /></div>
+<!-- class="figure" --></li>
+<li>
+<p>Click <span class="bold">Submit</span>. A histogram report shows the occurrence of structural variations involving genes sorted from the gene involved in most SVs for a given cohort, and subsequently display genes with decreasing frequency of Structural Variations. By default, the top 10 genes are shown and you can increase or decrease the number of genes displayed.</p>
+</li>
+<li>
+<p>You can display the results as horizontal bars, vertical bars, or as a table. To export the bar results into PDF or table results into Excel, click <span class="bold">Export</span>.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+When opening the Excel file, you may receive a warning from Excel stating that the file is in a different format than specified by the file extension. This warning can be safely ignored. For more information, refer to <code dir="ltr"><a href="http://docs.oracle.com/cd/E23943_01/web.1111/b31973/af_table.htm#autoId34">http://docs.oracle.com/cd/E23943_01/web.1111/b31973/af_table.htm#autoId34</a></code>.</div>
+<div id="TCEUG494" class="figure">
+<p class="titleinfigure"><a id="BGBEIICE"></a>Figure 4-19 Show the Structural Variations</p>
+<img width="930" height="645" src="img/trc97.gif" alt="Description of Figure 4-19 follows" /><br />
+<a id="sthref188" href="img_text/trc97.htm">Description of ''Figure 4-19 Show the Structural Variations''</a><br />
+<br /></div>
+<!-- class="figure" --></li>
+</ol>
+</div>
+<!-- class="sect4" -->
+<div id="TCEUG495" class="sect4"><a id="sthref189"></a>
+<h5 class="sect4">Structural Variations in Gene Pairs</h5>
+<p>Structural Variations in Gene Pairs is one of the SV genomic reports available to you based on the selected cohort of patients or subjects, if it is in the subject context.</p>
+<ol>
+<li>
+<p>Navigate to <span class="bold">Cohort Viewer</span> &gt; <span class="bold">Cohort Reports</span> tab.</p>
+</li>
+<li>
+<p>Expand the <span class="bold">Patients</span> node on the left and select the source of patient or subject identifiers.</p>
+</li>
+<li>
+<p>Navigate to <span class="bold">Genomic Reports - Structural Variations</span> and select <span class="bold">Structural Variations in Gene Pairs</span>.</p>
+<p>You can also add additional parameters such as specimen type, anatomical site, DNA version, which will only consider results linked to the selected categories.</p>
+<div id="TCEUG765" class="figure">
+<p class="titleinfigure"><a id="sthref190"></a>Figure 4-20 Select Source of Patient or Subject Identifiers</p>
+<img width="322" height="512" src="img/trc96.gif" alt="Description of Figure 4-20 follows" /><br />
+<a id="sthref191" href="img_text/trc96.htm">Description of ''Figure 4-20 Select Source of Patient or Subject Identifiers''</a><br />
+<br /></div>
+<!-- class="figure" --></li>
+<li>
+<p>Click <span class="bold">Submit</span>. A histogram report displays the frequency of occurrence of structural variations in a cohort among gene pairs. The histogram is automatically sorted from the gene pair with most SVs as per cohort and the incidence decreases or at best stays the same for each subsequent gene pair. By default, top 10 gene pairs are shown and you can change the default number of bars shown.</p>
+</li>
+<li>
+<p>You can display the results as horizontal bars, vertical bars, or as a table. To export the bar results into PDF or the table results into Excel, click <span class="bold">Export</span>.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+When opening the Excel file, you may receive a warning from Excel stating that the file is in a different format than specified by the file extension. This warning can be safely ignored. For more information, refer to <code dir="ltr"><a href="http://docs.oracle.com/cd/E23943_01/web.1111/b31973/af_table.htm#autoId34">http://docs.oracle.com/cd/E23943_01/web.1111/b31973/af_table.htm#autoId34</a></code>.</div>
+<div id="TCEUG497" class="figure">
+<p class="titleinfigure"><a id="BGBCCCHI"></a>Figure 4-21 Show the Structural Variations</p>
+<img width="930" height="645" src="img/trc97.gif" alt="Description of Figure 4-21 follows" /><br />
+<a id="sthref192" href="img_text/trc97.htm">Description of ''Figure 4-21 Show the Structural Variations''</a><br />
+<br /></div>
+<!-- class="figure" --></li>
+</ol>
+</div>
+<!-- class="sect4" --></div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BGBBIHFH"></a>
+<div id="TCEUG514" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Exporting Genomic Data</h2>
+<p>The <span class="bold">Genomic Data Export</span> page is used to export the genomic data for patients or subjects filtered based on Study, Specimen type and Anatomical Site in a specific file format.</p>
+<p>Currently, exporting variation data from sequencing platform, single and double channel gene expression and Copy Number Variation data in VCF, SEG, RES and GCT file formats are supported. These formats are supported by the IGV browser.</p>
+<div id="TCEUG515" class="figure">
+<p class="titleinfigure"><a id="sthref193"></a>Figure 4-22 Genomic Data Export</p>
+<img width="382" height="613" src="img/trc73.gif" alt="Description of Figure 4-22 follows" /><br />
+<a id="sthref194" href="img_text/trc73.htm">Description of ''Figure 4-22 Genomic Data Export''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<div id="TCEUG516" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref195"></a>
+<h3 class="sect2">Selecting Patients or Subjects</h3>
+<p>You can download data for patients or subjects already selected in an active query or from a query library or from ad-hoc list of patients ID. There is no upper limit on the number of patients or subjects to be selected, however the performance slows down as more and more patients are selected.</p>
+</div>
+<!-- class="sect2" -->
+<div id="TCEUG517" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref196"></a>
+<h3 class="sect2">Selecting Results to Export</h3>
+<div id="TCEUG518" class="figure">
+<p class="titleinfigure"><a id="sthref197"></a>Figure 4-23 Selecting Results to Export</p>
+<img width="362" height="238" src="img/trc35.gif" alt="Description of Figure 4-23 follows" /><br />
+<a id="sthref198" href="img_text/trc35.htm">Description of ''Figure 4-23 Selecting Results to Export''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p>After selecting Patients, select the <span class="bold">Assembly Version</span>, <span class="bold">Specimen Type</span>, and <span class="bold">Anatomical Site</span>. These selection criteria will help you filter out patients based on the requirements. <span class="bold">Specimen Type</span> and <span class="bold">Anatomical Site</span> also have multiselect options. Currently only one version of data can be exported at a time.</p>
+</div>
+<!-- class="sect2" -->
+<div id="TCEUG519" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref199"></a>
+<h3 class="sect2">Selecting Location</h3>
+<div id="TCEUG520" class="figure">
+<p class="titleinfigure"><a id="sthref200"></a>Figure 4-24 Selecting Location</p>
+<img width="585" height="280" src="img/trc36.gif" alt="Description of Figure 4-24 follows" /><br />
+<a id="sthref201" href="img_text/trc36.htm">Description of ''Figure 4-24 Selecting Location''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p>You can download genomic data for either a list of genes or pathway or a gene set for a defined region in chromosome. You can also export the genomic data for a specific chromosome region and also the complete genomic data for the patient using the <span class="bold">All Data</span> option.</p>
+<p>On Exadata, the code takes advantage of chromosome based partitioned data for VCF and SEG export. This enables more accurate results to be exported, including intergenic result. On non-Exadata systems, only the results that lie within any gene boundary are exported.</p>
+<div id="TCEUG521" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref202"></a>
+<h4 class="sect3">In Genes From</h4>
+<p>You can select genes from one or more of the provided three options.</p>
+<ul>
+<li>
+<p>Using ad-hoc List, you can select one or more genes.</p>
+</li>
+<li>
+<p>Using Pathway, you can select one or more pathways which in turn will get the list of genes associated with the selected pathway internally for querying.</p>
+</li>
+<li>
+<p>With Gene Set, you can use the user-defined collection of genes.</p>
+</li>
+</ul>
+<p>The genomic data to be downloaded is based on the above selected genes.</p>
+</div>
+<!-- class="sect3" -->
+<div id="TCEUG523" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref203"></a>
+<h4 class="sect3">At Genomic Position</h4>
+<p>You can alternatively download genomic data using the genomic co-ordinates. You specify the chromosome region in a standard format for the Variation and CNV data to be exported. The Gene Expression - RES and Gene Expression - GCT download option would be disabled for genomic region criteria. You can specify a complete chromosome or a part of chromosome as criteria. Currently, only one chromosome region at a time is implemented for search.</p>
+<p>The following chromosome region formats are supported.</p>
+<ul>
+<li>
+<p>CHR15:10000-200000: Considers region between 10000 to 200000 in chromosome 15.</p>
+</li>
+<li>
+<p>CHR15:1,200,000+5000 - Considers 5000 bases upstream from 1,200,000 position in chromosome 15.</p>
+</li>
+<li>
+<p>CHR15 - Considers whole of the chromosome 15.</p>
+</li>
+<li>
+<p>CHR15:1000 - Considers 1000th nucleotide position of chromosome 15.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<div id="TCEUG524" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref204"></a>
+<h4 class="sect3">All Data</h4>
+<p>The genomic location selection is <span class="bold">All Data</span> option, which is only available for Schedule download and not for immediate download. With this option you can download all the data available for the specimens belonging to the selected patients or subjects falling under the selected criteria.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<div id="TCEUG525" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref205"></a>
+<h3 class="sect2">Selecting File Type</h3>
+<p>This panel lists out four file type options to export. You can select all four options at a time. For Genomic Region criteria, the Gene Expression &ndash; RES, and Gene Expression Dual Channel options are disabled.</p>
+<p>Click <span class="bold">Submit</span>. The data is generated and a link is provided in the bottom panel separately for each result type.</p>
+<div id="TCEUG526" class="figure">
+<p class="titleinfigure"><a id="sthref206"></a>Figure 4-25 File Type to Export options</p>
+<img width="267" height="127" src="img/trc38.gif" alt="Description of Figure 4-25 follows" /><br />
+<a id="sthref207" href="img_text/trc38.htm">Description of ''Figure 4-25 File Type to Export options''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<div id="TCEUG527" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref208"></a>
+<h4 class="sect3">Mutation - VCF</h4>
+<p>This option exports the sequencing variation data for the selected patients or subjects for either the selected genes, pathway, geneset or for a given chromosome region as selected in the previous option. VCF supports multiple specimens' data in a single file.</p>
+<p>The metadata header gives the following information that differs based on the search criteria:</p>
+<ol>
+<li>
+<p>##fileformat=VCFv4.1</p>
+</li>
+<li>
+<p>##fileDate: Date and time of the VCF file generated.</p>
+</li>
+<li>
+<p>##source=Oracle Healthcare Omics (OHO, formerly known as Omics Data Bank)</p>
+</li>
+<li>
+<p>##Total Number of patients included in this VCF file</p>
+</li>
+<li>
+<p>##Total Number of samples included in this VCF file</p>
+</li>
+<li>
+<p>7. ##INFO=&lt;ID=NS, Number=1, Type=Integer, Description=Number of Samples With Data&gt;</p>
+</li>
+<li>
+<p>##FORMAT=&lt;ID=GT,Number=1,Type=String,Description=Genotype&gt;</p>
+</li>
+<li>
+<p>##FORMAT=&lt;ID=GQ, Number=1, Type=Integer, Description=Genotype Quality&gt;</p>
+</li>
+<li>
+<p>##FORMAT=&lt;ID=GQVAF, Number=2, Type=Integer, Description=Genotype_quality_X&gt;</p>
+</li>
+<li>
+<p>##FORMAT=&lt;ID=DP, Number=1, Type=Integer, Description=Read Depth&gt;</p>
+</li>
+<li>
+<p>##FORMAT=&lt;ID=AD,Number=.,Type=Integer,Description=Allelic depths for the ref and alt alleles in the order listed &gt;</p>
+</li>
+<li>
+<p>##FORMAT=&lt;ID=HQ, Number=2, Type=Integer, Description=Haplotype Quality&gt;</p>
+</li>
+<li>
+<p>##FORMAT=&lt;ID=BQ,Number=.,Type=Integer,Description=Average base quality &gt;</p>
+</li>
+<li>
+<p>##FORMAT=&lt;ID=MQ,Number=.,Type=Integer,Description=Average mapping quality &gt;</p>
+</li>
+<li>
+<p>##FORMAT=&lt;ID=SS,Number=1,Type=Integer,Description=Variant status relative to non-adjacent Normal,0=wildtype,1=germline,2=somatic,3=LOH,4=post-transcriptional modification,5=unknown&gt;</p>
+</li>
+<li>
+<p>##FORMAT=&lt;ID=SSC,Number=1,Type=Integer,Description=Somatic Score&gt;</p>
+</li>
+</ol>
+<p>The following data types are imported to VCF file:</p>
+<div class="inftblhruleinformalwidemax">
+<table class="cellalignment50" summary="Imported data types" dir="ltr">
+<thead>
+<tr class="cellalignment41">
+<th class="cellalignment51" id="r1c1-t12">Data Type</th>
+<th class="cellalignment51" id="r1c2-t12">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r2c1-t12" headers="r1c1-t12">CHROM</td>
+<td class="cellalignment47" headers="r2c1-t12 r1c2-t12">chromosome</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r3c1-t12" headers="r1c1-t12">POS</td>
+<td class="cellalignment47" headers="r3c1-t12 r1c2-t12">position of the variation</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r4c1-t12" headers="r1c1-t12">ID</td>
+<td class="cellalignment47" headers="r4c1-t12 r1c2-t12">dbSNP ID or COSMIC ID associated with a variant</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r5c1-t12" headers="r1c1-t12">REF</td>
+<td class="cellalignment47" headers="r5c1-t12 r1c2-t12">reference allele</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r6c1-t12" headers="r1c1-t12">ALT</td>
+<td class="cellalignment47" headers="r6c1-t12 r1c2-t12">variant alleles</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r7c1-t12" headers="r1c1-t12">QUAL</td>
+<td class="cellalignment47" headers="r7c1-t12 r1c2-t12">not populated. Will have '.' specified in this column.</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r8c1-t12" headers="r1c1-t12">FILTER</td>
+<td class="cellalignment47" headers="r8c1-t12 r1c2-t12">is populated as PASS</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r9c1-t12" headers="r1c1-t12">INFO</td>
+<td class="cellalignment47" headers="r9c1-t12 r1c2-t12">Not populated. Will have '.' specified in this column.</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r10c1-t12" headers="r1c1-t12">FORMAT:GT</td>
+<td class="cellalignment47" headers="r10c1-t12 r1c2-t12">genotypic data for each specimen.</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r11c1-t12" headers="r1c1-t12">FORMAT:GQ</td>
+<td class="cellalignment47" headers="r11c1-t12 r1c2-t12">genotype quality. If not value available in DB, then '.' is specified in the file.</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r12c1-t12" headers="r1c1-t12">FORMAT:GQX</td>
+<td class="cellalignment47" headers="r12c1-t12 r1c2-t12">mapped to GENOTYPE_QUALITY_X column</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r13c1-t12" headers="r1c1-t12">FORMAT:DP</td>
+<td class="cellalignment47" headers="r13c1-t12 r1c2-t12">this stores the TotalReadCount for a specific variant</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r14c1-t12" headers="r1c1-t12">FORMAT:AD</td>
+<td class="cellalignment47" headers="r14c1-t12 r1c2-t12">this stores the reference read count and Allele read count for a specific variant.</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r15c1-t12" headers="r1c1-t12">FORMAT:HQ</td>
+<td class="cellalignment47" headers="r15c1-t12 r1c2-t12">not populated as of now. Will have '.' specified in this column.</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r16c1-t12" headers="r1c1-t12">FORMAT:FT</td>
+<td class="cellalignment47" headers="r16c1-t12 r1c2-t12">this stores GENOTYPE_FILTER column value</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r17c1-t12" headers="r1c1-t12">FORMAT:BQ</td>
+<td class="cellalignment47" headers="r17c1-t12 r1c2-t12">stores the RMS base quality</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r18c1-t12" headers="r1c1-t12">FORMAT:MQ</td>
+<td class="cellalignment47" headers="r18c1-t12 r1c2-t12">stores the RMS mapping quality</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r19c1-t12" headers="r1c1-t12">FORMAT:SS</td>
+<td class="cellalignment47" headers="r19c1-t12 r1c2-t12">stores the somatic status</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r20c1-t12" headers="r1c1-t12">FORMAT:SSC</td>
+<td class="cellalignment47" headers="r20c1-t12 r1c2-t12">stores the somatic status score value</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r21c1-t12" headers="r1c1-t12">Flex field format</td>
+<td class="cellalignment47" headers="r21c1-t12 r1c2-t12">If any custom formats are available, they are also included in the export.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblhruleinformalwidemax" -->
+<p>1000 Genomes VCF 4.1 conventions are followed while exporting variation data, however certain datatypes, which are non-standard, like BQ and MQ, may differ in convention for some customers since there is no standard way to represent them.</p>
+<div id="TCEUG634" class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref209"></a>
+<h5 class="sect4">Handling Non-variant and No-call Data</h5>
+<p>If NON_VARIANT and (or) NOCALL records exist for any given position, the zygosity is checked to determine if the format information from these tables is used.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+For <span class="italic">het-ref</span> or <span class="italic">half</span> zygosity values, these other format fields are compared with the existing SEQUENCING information. This information is then used with zygosity to create the format string.</div>
+<p>The NON_VARIANT data allows for GQ, GQX, MQ, BQ and the first reference read count of AD. The NOCALL data allows for all format fields to be compared. Both NON_VARIANT and NOCALL do not support exporting flex fields. The GT value of the format string reflects the stored zygosity as follows:</p>
+<div class="inftblruleinformalwidemax">
+<table class="cellalignment50" summary="Zygosity and their corresponding FORMAT values with examples" dir="ltr">
+<thead>
+<tr class="cellalignment41">
+<th class="cellalignment51" id="r1c1-t14">Zygosity</th>
+<th class="cellalignment51" id="r1c2-t14">FORMAT string GT:GQ:GQX:BQ:MQ:AD:DP</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r2c1-t14" headers="r1c1-t14">het-ref</td>
+<td class="cellalignment47" headers="r2c1-t14 r1c2-t14">1/0:99:98:38:45:20:10,10</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r3c1-t14" headers="r1c1-t14">Half</td>
+<td class="cellalignment47" headers="r3c1-t14 r1c2-t14">1/.:99:98:34,34:45,45:20:10,5</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r4c1-t14" headers="r1c1-t14">Het-alt</td>
+<td class="cellalignment47" headers="r4c1-t14 r1c2-t14">1/2:99:98:43,44:56,67:20:0,10,10</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r5c1-t14" headers="r1c1-t14">Hom</td>
+<td class="cellalignment47" headers="r5c1-t14 r1c2-t14">1/1:99:98:34,34:45,45:20:0,19</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblruleinformalwidemax" -->
+<p>If there are no result records for any specimen, the export displays "." with no other information for the format.</p>
+</div>
+<!-- class="sect4" -->
+<div id="TCEUG635" class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref210"></a>
+<h5 class="sect4">Handling Ambiguous Sequencing Data in Export</h5>
+<p>There could be cases where users reload genetic information multiple times for the same specimen. This may create ambiguous values for the different fields that exist in the VCF export file. The export code deals with such ambiguous numerical values that represent the quality (that is, GQ, GQX, AD, BQ, MQ). This code now computes minimum values and ensure that the value of least confidence is reported. There could be more complex cases, for instance, if there are 2 different alleles for the same position belonging to the same specimen, or variants with same position for same specimen with different zygosity. The export code uses MIN functions on all values including all the text fields. This allows for VCF export to create a valid file that can be loaded into genome browsers.</p>
+<p>Alternatively, you can choose not to consider data from a specific specimen or a specific file using following methods:</p>
+<ul>
+<li>
+<p>Using DELETE_FLG - A user may load results for a specimen more than once that can completely contradict previous results. Users can set the DELETE_FLG as 'Y' on W_EHA_RSLT_SPECIMEN and (or) W_EHA_SPEC_PATIENT or W_EHA_SPEC_SUBJECT to have previous loads excluded, and then reload the correct result files. When the user now exports the data, only the latest loaded specimen data is considered for export.</p>
+</li>
+<li>
+<p>Using FILE_URI - Oracle recommends using this method since you need not reload the data again as opposed to the above method. When there are multiple files loaded with contradicting data for the same specimen, user can set some files as obsolete by changing the W_EHA_FILE_LOAD.FILE_WID column. For example, if you have loaded the same specimen data 3 times and would like to consider the latest file loaded for export, then you must first identify the latest FILE_WID from W_EHA_FILE_LOAD table. Then change the FILE_WID of two old files in W_EHA_FILE_LOAD table to the latest FILE_WID. Now, all the three records belonging to the three file loads contain same FILE_WID, which represents the latest file load and only the latest file export data is exported.</p>
+</li>
+</ul>
+<p class="subhead2"><a id="TCEUG636"></a>Representing AD Values</p>
+<p>Allele depth values represented under the AD datatype are in the order of the alleles represented in the GT. Refer to the following table with examples:</p>
+<div class="inftblruleinformalwidemax">
+<table class="cellalignment50" summary="Table describing examples of AD datatype" dir="ltr">
+<thead>
+<tr class="cellalignment41">
+<th class="cellalignment51" id="r1c1-t15">ALT</th>
+<th class="cellalignment51" id="r1c2-t15">FORMAT</th>
+<th class="cellalignment51" id="r1c3-t15">SAMPLE1</th>
+<th class="cellalignment51" id="r1c4-t15"><br /></th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r2c1-t15" headers="r1c1-t15">G,C,T</td>
+<td class="cellalignment47" headers="r2c1-t15 r1c2-t15">GT:AD</td>
+<td class="cellalignment47" headers="r2c1-t15 r1c3-t15">1/2:0,4,6</td>
+<td class="cellalignment47" headers="r2c1-t15 r1c4-t15">0 represents reference_read_count
+<p>4 represents allele_read_count of 'G'</p>
+<p>6 represents allele_read_count of 'C'</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r3c1-t15" headers="r1c1-t15">G,T</td>
+<td class="cellalignment47" headers="r3c1-t15 r1c2-t15">GT:AD</td>
+<td class="cellalignment47" headers="r3c1-t15 r1c3-t15">2/2:0,4</td>
+<td class="cellalignment47" headers="r3c1-t15 r1c4-t15">0 represents reference_read_count
+<p>4 represents allele_read_count of 'T'</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r4c1-t15" headers="r1c1-t15">G,T</td>
+<td class="cellalignment47" headers="r4c1-t15 r1c2-t15">GT:AD</td>
+<td class="cellalignment47" headers="r4c1-t15 r1c3-t15">1/0:10,5</td>
+<td class="cellalignment47" headers="r4c1-t15 r1c4-t15">10 represents reference_read_count
+<p>5 represents allele_read_count of 'G'</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblruleinformalwidemax" --></div>
+<!-- class="sect4" --></div>
+<!-- class="sect3" -->
+<div id="TCEUG528" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref211"></a>
+<h4 class="sect3">Copy Number Variation - SEG</h4>
+<p>The copy number variation data is exported in SEG format. Currently, CNV data from any array based system like Affymetrix Genome Wide SNP 6 array whose data is in SEG format while loading in OHO is supported. The main requirement for exporting CNV data is to have the SEG_MEAN value in the CNV table of OHO.</p>
+<p>For exporting data that is not loaded from SEG files, for example, data from CGI CNV files or any other source of CNV data, users have to create their own loader. The loader is expected to calculate the SEG_MEAN value since this value is most important for export.</p>
+<ol>
+<li>
+<p>ID: specimen ID of the reported CNV segment</p>
+</li>
+<li>
+<p>chrom: chromosome name</p>
+</li>
+<li>
+<p>loc.start: start position of the CNV segment</p>
+</li>
+<li>
+<p>loc.end: end position of the CNV segment</p>
+</li>
+<li>
+<p>num.mark: for array based CNV data, this stores the number of probes details</p>
+</li>
+<li>
+<p>seg.mean: this stores the segment mean value from SEG_MEAN column in CNV table.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<div id="TCEUG529" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref212"></a>
+<h4 class="sect3">Gene Expression - RES</h4>
+<p>RES is one of the gene expression formats supported by IGV browser. Currently, only microarray gene expression data is exported to this format. Following data types are imported to RES format:</p>
+<ol>
+<li>
+<p>Description: hugo name of a specific probe</p>
+</li>
+<li>
+<p>Accession: probe ID</p>
+</li>
+<li>
+<p>Intensity: intensity value of the associated probe</p>
+</li>
+<li>
+<p>Call: call of the associated probe</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<div id="TCEUG530" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref213"></a>
+<h4 class="sect3">Gene Expression Dual Channel - GCT</h4>
+<p>GCT is one of the gene expression formats supported by IGV browser. Currently, only AgilentG4502A platform microarray gene expression data is exported to this format. Following data types are imported to GCT format:</p>
+<ol>
+<li>
+<p>Description: Gene symbol of a specific probe</p>
+</li>
+<li>
+<p>Accession: probe ID</p>
+</li>
+<li>
+<p>Intensity: intensity value of the associated probe</p>
+</li>
+<li>
+<p>Call: call of the associated probe</p>
+</li>
+</ol>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The GCT file takes its gene symbol for the probe from the 2-channel composite element of ADF file. This is input into the ADF composite table in OHO. This value may not match with HUGO name in certain cases as OHTR associates 2-channel records in the result table that has partial (which includes a flanking region set by the user) genomic coordinate. The coordinate overlaps between composite elements and gene segments in the reference. This may also result in some cases in more than one unique gene in the reference mapping to a gene composite element.</div>
+</div>
+<!-- class="sect3" -->
+<div id="TCEUG531" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref214"></a>
+<h4 class="sect3">Export Options</h4>
+<p>You can export data in the following two ways:</p>
+<ul>
+<li>
+<p>Select option to download last loaded file(s)</p>
+</li>
+<li>
+<p>Immediately, which is the default option</p>
+</li>
+<li>
+<p>Schedule</p>
+</li>
+</ul>
+<div id="TCEUG532" class="figure">
+<p class="titleinfigure"><a id="sthref215"></a>Figure 4-26 Export Options - Schedule Mode</p>
+<img width="366" height="242" src="img/trc74.gif" alt="Description of Figure 4-26 follows" /><br />
+<a id="sthref216" href="img_text/trc74.htm">Description of ''Figure 4-26 Export Options - Schedule Mode''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p>The <span class="bold">Immediately</span> option gives you the file link on the same screen and you can click to download it immediately. The link provided has a specific naming convention: &lt;<span class="italic">file type</span>&gt;_OHO_&lt;<span class="italic">date:MM-DD-YYYY</span>&gt;_&lt;<span class="italic">time:HH24*-MI-SS</span>&gt;.&lt;<span class="italic">file_type_extension</span>&gt;. For example, RES_OHO_09-14-2014_04-26.res. A short description of the file stating data type and advise on the expected count of features is displayed below the created link.</p>
+<p>The <span class="bold">Schedule</span> option runs the process as a job. You can track the status of the job from the <span class="bold">Home</span> &gt; <span class="bold">Jobs</span> tab. This option is best suited for exporting large data set like <span class="bold">All Data</span>, whole chromosome variants and so on. For schedule option, you must provide a job name and description. Then click <span class="bold">Submit</span> to start the process. For more details, see <a href="cohortexp.htm#BGBHEBBE">Working with Jobs</a>.</p>
+<p>There is a possibility of replicate and duplicate data in the database. This could be due to loading multiple files belonging to the same specimen_number. This can happen if the same library is sequenced multiple times or the data is reanalyzed, for example, the reads were realigned using the new reference version and hence new VCF or gVCF files are created for same sample. In this scenario, you can use the option to export VCF data only from last loaded files. For example if variation data has been loaded for a specimen in Jan 2015, Mar 2015 and July 2015, then using this option you can export data from the file loaded in July 2015 and it would not consider variants from the file loaded in Jan and Mar 2015.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The Schedule Jobs option uses an asynchronous approach to store the file in DBFS. As an alternative to downloading the file using the link in the Oracle Healthcare Translational Research Jobs page, there are other ways to access DBFS. From a Linux OS, you can mount DBFS using <span class="italic">dbfs_client</span> application and then browse the directories. Windows OS does not support the FUSE interface and cannot mount DBFS directly. However, there is a <span class="italic">dbfs_client</span> application for Windows that can execute commands to access DBFS. The Windows version of <span class="italic">dbfs_client</span> lets you use the command line to execute normal directory commands. You can list the DBFS directories as well as copy data from DBFS to the local drive. The <span class="italic">dbfs_client</span> application is part of the standard Oracle client software.
+<p>For more information about using <span class="italic">dbfs_client</span>, see <code dir="ltr"><a href="http://docs.oracle.com/cd/E11882_01/appdev.112/e18294/adlob_client.htm#ADLOB0006">http://docs.oracle.com/cd/E11882_01/appdev.112/e18294/adlob_client.htm#ADLOB0006</a></code>.</p>
+</div>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment40">
+<tr>
+<td class="cellalignment47">
+<table class="cellalignment45">
+<tr>
+<td class="cellalignment44"><a href="cohquery.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment44"><a href="singpat.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2012, 2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment49">
+<table class="cellalignment43">
+<tr>
+<td class="cellalignment44"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment44"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment44"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment44"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

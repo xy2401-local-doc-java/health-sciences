@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Designing a Security System</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="description" content="This guide introduces Oracle Life Sciences Data Hub and contains information you need to design your Oracle LSH implementation to fill your company's needs." />
+<meta name="dcterms.created" content="2018-05-18T12:50:30Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Life Sciences Data Hub Implementation Guide" />
+<meta name="dcterms.identifier" content="E95828-01" />
+<meta name="dcterms.isVersionOf" content="LSHIM" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2011, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="org.htm" title="Previous" type="text/html" />
+<link rel="Next" href="class.htm" title="Next" type="text/html" />
+<link rel="alternate" href="LSHIM.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="LSHIM.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="LSHIM.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">7/12</span> <!-- End Header -->
+<div id="LSHIM216" class="chapter"><a id="CIHJIIBI"></a>
+<h1 class="chapter"><span class="secnum">4</span> Designing a Security System</h1>
+<p>This section includes information on the following topics:</p>
+<ul>
+<li>
+<p><a href="#BCGBDHGJ">About Security Design in the Oracle Life Sciences Data Hub</a></p>
+</li>
+<li>
+<p><a href="#BCGJJFHD">Object Security Elements</a></p>
+</li>
+<li>
+<p><a href="#BCGJFGJF">User Interface Security</a></p>
+</li>
+<li>
+<p><a href="#CIHGIBFF">Security for Blinded Data</a></p>
+</li>
+<li>
+<p><a href="#CIHJEFGF">Example of Security Design</a></p>
+</li>
+<li>
+<p><a href="#BCGBHCBI">Design Decision Summary</a></p>
+</li>
+</ul>
+<a id="BCGBDHGJ"></a>
+<div id="LSHIM217" class="sect1">
+<h2 class="sect1">About Security Design in the Oracle Life Sciences Data Hub</h2>
+<p>The Oracle Life Sciences Data Hub (Oracle LSH) security system determines which users can perform which operations on which defined objects (such as Programs and Tables) and outputs (such as reports). Users are allowed to perform an operation on an object or output when they:</p>
+<ul>
+<li>
+<p>belong to a user group that is assigned to the object or output either explicitly or by inheritance</p>
+</li>
+<li>
+<p>and are assigned to a role within that user group that allows the operation on the object</p>
+</li>
+</ul>
+<p>You must design and set up a security system before you can use Oracle LSH.</p>
+<p>To create an Oracle LSH security system you must do the following:</p>
+<ol>
+<li>
+<p>Design an <span class="bold">organizational structure</span>, or set of containers&mdash;Domains, Application Areas and Work Areas&mdash;to contain definitional objects(see <a href="org.htm#BGBFAHGA">Chapter 3, "Designing an Organizational Structure"</a>). If you grant security access to user groups at the Domain, Application Area, and Work Area levels, the user group assignment automatically cascades to all contained objects. Design your security system in conjunction with your organizational structure to take advantage of this feature and minimize the number of user group assignments you need to make to individual objects (see <a href="#BCGBJBHE">"User Group Assignment by Inheritance"</a>).</p>
+</li>
+<li>
+<p>(Optional) Define one or more <span class="bold">subtypes</span> for any of the predefined object types; for example, Clinical Outputs and Financial Outputs. You can then assign different privileges to different roles on different subtypes of the same object type; for example, allow statisticians to view Clinical Outputs but not Financial ones. Subtypes are also used to differentiate classification requirements (see <a href="class.htm#CHDGCFDE">Chapter 5, "Designing a Classification System for Searching and Browsing"</a>). One subtype is predefined for each object type.</p>
+</li>
+<li>
+<p>Design a set of <span class="bold">roles</span>. A role consists of a set of privileges: operations allowed on object subtypes. Some roles should reflect professional job descriptions at your company. Other roles should cover specific Oracle LSH responsibilities such as breaking data blinds. Users can have multiple roles in the same user group and different roles in different user groups. See <a href="#BCGFAJGG">"Roles"</a>.</p>
+<p>Predefined <span class="bold">application roles</span> determine user access to the user interface (UI) but are not used in the security enforcement algorithm for defined objects or outputs. See <a href="#BCGJFGJF">"User Interface Security"</a>.</p>
+</li>
+<li>
+<p>Design and create a set of <span class="bold">user groups</span>, each with a set of roles, and assign them to Domains, Application Areas, or Work Areas. See <a href="#BCGHHIEF">"User Groups"</a>.</p>
+</li>
+</ol>
+<p>To complete the security system you must create a user account for each person who will use Oracle LSH and assign at least one user to be the group administrator for each user group. The group administrator then assigns users to roles within the group. Each group administrator must then add users to his or her group and assign users to roles within the group.</p>
+<p>You can add organizational containers, object subtypes, roles, and user groups, as well as users, over time as necessary.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+In this chapter the word "object" is used to apply to object definitions and object instances. Users get security access and privileges on both definitions and instances in the same way. However, you can define different security requirements for each because they are distinct object types. For example, you can give a Definer privileges on Program definitions as well as instances, and give a Consumer access to Program instances only.</div>
+</div>
+<!-- class="sect1" -->
+<a id="BCGJJFHD"></a>
+<div id="LSHIM218" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Object Security Elements</h2>
+<p>The Oracle LSH security system is based on objects subtypes, roles, user groups, and user accounts. Object types and the "Default" object subtype for each object type are predefined. Defining additional object subtypes is optional. You must define all the other elements. Instructions are included in "Setting Up the Security System" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub System Administrator's Guide</span></span>. The elements are described in the following sections:</p>
+<ul>
+<li>
+<p><a href="#BCGEFBFC">Object Subtypes</a></p>
+</li>
+<li>
+<p><a href="#BCGFAJGG">Roles</a></p>
+</li>
+<li>
+<p><a href="#BCGHHIEF">User Groups</a></p>
+</li>
+<li>
+<p><a href="#BCGIAIFD">Users</a></p>
+</li>
+</ul>
+<div id="LSHIM219" class="figure">
+<p class="titleinfigure"><a id="sthref20"></a>Figure 4-1 Logical Representation of the Object Security Elements and Their Relations</p>
+<img width="633" height="459" src="img/security_model.gif" alt="Description of Figure 4-1 follows" /><br />
+<a id="sthref21" href="img_text/security_model.htm">Description of ''Figure 4-1 Logical Representation of the Object Security Elements and Their Relations''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p>As shown in the above diagram, object security elements have the following relations:</p>
+<ul>
+<li>
+<p>Each object type defines which operations can be performed on objects of that type.</p>
+</li>
+<li>
+<p>Each object type must have at least one object subtype.</p>
+</li>
+<li>
+<p>Object subtypes inherit characteristics from object types (namely allowed operations).</p>
+</li>
+<li>
+<p>Each object is of one and only one subtype.</p>
+</li>
+<li>
+<p>A role specifies which operations can be performed on an object of a given subtype by a user with that role (in a user group assigned to the object).</p>
+</li>
+<li>
+<p>User groups support roles.</p>
+</li>
+<li>
+<p>A user is assigned to a user group by assigning him or her to one or more supported roles in the user group.</p>
+</li>
+<li>
+<p>User groups are assigned to objects and users gain access to an object through one or more user groups assigned to the object. The operations they can perform on an object depend on the roles they have in user groups assigned to the object.</p>
+</li>
+</ul>
+<a id="BCGEFBFC"></a>
+<div id="LSHIM220" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Object Subtypes</h3>
+<p>Oracle LSH ships with predefined object types, including Program definitions, Program instances, Table definitions and instances, Report Set definitions and instances, and so on. Each object type includes a set of operations allowed on objects of that type; for example, Modify or Submit (for a complete list, see <a href="obj_types.htm#BABHIEJG">Appendix A, "Object Types with Operations"</a>). One subtype (called "Default") is shipped for every object type.</p>
+<p>All user-defined objects must be created based on an object subtype. An object's subtype helps determine its security and classification requirements. If you choose to, you can create additional subtypes; for example, Clinical and Financial. You can then differentiate security and classification requirements for different subtypes of the same object type.</p>
+<p>For example, you can create two subtypes&mdash;Clinical and Financial&mdash;for Outputs. You can then assign different roles to the same operations on the two subtypes, so that some people can view financial reports but not clinical ones, and others can view clinical reports but not financial ones.</p>
+<div id="LSHIM221" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref22"></a>
+<h4 class="sect3">Subtypes and Security</h4>
+<p>Object subtypes have the same set of allowed operations as their parent object type. You must create a set of roles and assign each role to a set of operations on object subtypes. Users with a particular role can then perform the operations on the subtypes specified for the role, if the user group in which they have the role is assigned to the object.</p>
+<p>If you create additional subtypes, you can assign different roles to their operations. For example, you might want to allow different people to view clinical and financial reports. To do this, you must create the appropriate roles and assign them to the appropriate operations on only the appropriate object subtype. For example:</p>
+<ul>
+<li>
+<p>Give the Financial Officer role privileges on the Financial Output subtype but not the Clinical Output subtype.</p>
+</li>
+<li>
+<p>Give the Statistician role privileges on the Clinical Output subtype but not the Financial Output subtype.</p>
+</li>
+<li>
+<p>Give the Trial Administrator role privileges on both Output subtypes.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<div id="LSHIM222" class="sect3"><a id="sthref23"></a>
+<h4 class="sect3">Subtypes and Classification</h4>
+<p>Oracle LSH uses classifications to help users find objects through searching and browsing. You assign classificationhierarchy levels to subtypes to determine the classification hierarchy levels to which an object of that subtype can and must be assigned. For example, you can require that Financial Outputs be classified to the Fiscal Year &gt; Quarter &gt; Month hierarchy but Clinical Outputs be classified to the Project &gt; Study &gt; Site hierarchy.</p>
+<p>See <a href="class.htm#CHDGCFDE">Chapter 5, "Designing a Classification System for Searching and Browsing"</a> and specifically <a href="class.htm#CDDBCIGC">"Assigning Classification Levels to Object Subtypes"</a> for further information.</p>
+</div>
+<!-- class="sect3" -->
+<div id="LSHIM223" class="sect3"><a id="sthref24"></a>
+<h4 class="sect3">Subtype Inheritance</h4>
+<p>When a Definer creates an object, the object inherits its parent's subtype by default, if that subtype exists for its object type. The Definer can change the subtype as necessary if there is more than one subtype for the object type. For example, if a Definer creates a Report Set definition in an Application Area whose subtype is Clinical, the Report Set inherits a subtype of Clinical if you have created a Report Set subtype called Clinical. If not, the report Set definition is created with the subtype designated as the default for Report Set definitions&mdash;either the shipped subtype called Default or another subtype you designate as the default for Report Set definitions.</p>
+<p>Definers create Report Set instances in Work Areas, so Report Set instances inherit their subtype from the Work Area, if the same subtype exists for Report Set instances.</p>
+<p>See <a href="obj_own.htm#CACGAJBJ">Appendix B, "Object Ownership"</a> for information about all parent/child object relationships.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BCGFAJGG"></a>
+<div id="LSHIM224" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Roles</h3>
+<p>A role consists of a set of privileges: operations allowed on a set of object subtypes. A single user can have any number of roles, and can have different roles in different user groups. You must assign roles to user groups and to users within user groups.</p>
+<div id="LSHIM225" class="sect3"><a id="sthref25"></a>
+<h4 class="sect3">Roles Based on Job Description</h4>
+<p>Most of the roles you define should correspond to a professional role such as Statistician or Data Manager, and allow the appropriate operations on appropriate objects for that job description. For example, the Statistician role might have View and Submit privileges on Clinical Report Sets only, while a Data Manager or Programmer might have full privileges on all types and subtypes of object definitions and instances.</p>
+<p>Consumers need to be able to run and view reports. For this they need the Submit privilege on Execution Setups and the View operation on outputs.</p>
+<p>Some Consumers may need to create data visualizations using Oracle Business Intelligence Enterprise Edition. These people need View privileges on Business Area instances and Read Data operations on Table instances to have access to Oracle LSH data.</p>
+<p>Programmers (Oracle LSH Definers) need many privileges. They need to be able to run and view reports as Consumers do. In addition, they need at least View privileges on Domains and Application Areas in order to see Domains and Application Areas and browse for objects contained in them. Definers also need View privileges on an object subtype in order to copy a definition of that subtype, and Create privileges for each object subtype on an Application Area in order to create a definition of that subtype in an Application Area.</p>
+</div>
+<!-- class="sect3" -->
+<div id="LSHIM226" class="sect3"><a id="sthref26"></a>
+<h4 class="sect3">Oracle LSH-Specific Roles</h4>
+<p>Oracle LSH-specific roles are useful for sensitive operations that only a few people should be allowed to do in Oracle LSH. You can assign these roles to users who also have more general roles assigned. For example, you may want to define the following roles:</p>
+<ul>
+<li>
+<p><span class="bold">Blind Break</span>. A blind break is the execution of a report on real, sensitive data while it is still blinded&mdash;usually done for medical emergency reasons during the course of a trial. Create a Blind Break role specifically to allow creating a one-time blind break on patient data at runtime, and read the resulting report(s). This requires the Blind Break operation on both Table instances and on Outputs.</p>
+</li>
+<li>
+<p><span class="bold">Unblind</span>. Create an Unblind role to allow permanently unblinding Tables at the end of a study.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+To perform a blind break or to permanently unblind data, a user must have a special application role as well as access to the particular object through a user group; see <a href="#BCGCBHIJ">"Application Roles"</a>.</div>
+</li>
+<li>
+<p><span class="bold">Librarian</span>. Create a Librarian role with all operation privileges on all definitional object types, add the role only to user groups assigned to a Domain, and within those user groups assign the role only to the few Data Managers you want to be able to modify library definitions. (You can allow all definition-related roles, such as Programmers and Data Managers, to view all object definitions in the Domain library so that they can see, copy, and reference library definitions.)</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<div id="LSHIM227" class="sect3"><a id="sthref27"></a>
+<h4 class="sect3">Application Roles</h4>
+<p>In addition, Oracle LSH ships with a set of predefined roles that serve an entirely different purpose. Most of these <span class="bold">application roles</span> allow access to parts of the Oracle LSH user interface (UI) such as tabs and subtabs, and allow specific actions in those UI tabs and subtabs. You must assign at least one application role to each user account. See <a href="#BCGJFGJF">"User Interface Security"</a> for further information, including a list of Oracle LSH's application roles.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BCGHHIEF"></a>
+<div id="LSHIM228" class="sect2">
+<h3 class="sect2">User Groups</h3>
+<p>A user group definition consists of a name, description and a list of roles available to assign to users within the group. A user group also includes at least one group administrator, who adds users to the group and assigns them to roles within the group. The group administrator can also remove users from the group and remove roles from users within the group.</p>
+<p>The security administrator creates users and user groups and assigns users to be group administrators, but cannot add or remove users from groups or assign him or herself as a group administrator.</p>
+<p>To make user group creation easier, the security administrator can copy one user group definition, which includes the roles assigned to the group, to create another user group. It is possible to copy the assigned users as well. The group administrator can then add and delete users and change users' role assignments.</p>
+<p>User groups determine which users have access to which objects. (The operations they can perform on an object depend on the roles they have within the user group that allows them access to the object.) To have access of any kind to an object, a user must belong to a user group that is assigned to the object. User groups can be assigned to an object either directly or indirectly by inheritance.</p>
+<p>User group object assignments are not object version-specific. As an object is upgraded to one new version after another, the same user groups have access to it unless you explicitly usassign them. If you usassign a user group, its users can no longer see any version of the object.</p>
+<p>To explicitly assign or unassign a user group to an object, or to revoke an inherited user group assignment, a user must have a role that allows the Manage Security operation on the object.</p>
+<div id="LSHIM229" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref28"></a>
+<h4 class="sect3">Explicit User Group Assignment to Objects</h4>
+<p>If you have the necessary privileges, you can explicitly assign a user group to any object, including containers, object definitions, object instances, Execution Setups, and outputs, at any time.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BCGBJBHE"></a>
+<div id="LSHIM230" class="sect3">
+<h4 class="sect3">User Group Assignment by Inheritance</h4>
+<p>Objects inherit the user group assignments of their container object. You can explicitly revoke an inherited user group assignment for a particular object if necessary.</p>
+<p>For example, if you assign a user group to a Domain, the system assigns that user group by default to all child objects as they are created: the child Domains in the Domain (if any), all the Application Areas in the Domain and in all of its child Domains, and all the object definitions and Work Areas in the Application Areas, all the object instances in the Work Areas, and all the execution setups and outputs of all the object instances. See <a href="#BCGGFDHF">Figure 4-2, "LSH Object Ownership"</a> and <a href="obj_own.htm#CACGAJBJ">Appendix B, "Object Ownership"</a> to see these relationships displayed graphically.</p>
+<p>Assignment revocations are also inherited. If you explicitly revoke the inherited user group assignment to a particular Application Area within the Domain, the user group is also no longer assigned to any of the object definitions or Work Areas contained in the Application Area.</p>
+<p>Because user group assignments are inherited, in general it is best to create user groups with narrowly defined roles to assign to Domains. Assign users to roles with maximum privileges at the level where they will primarily work: for Definers, the Application Area (to allow creating object definitions through instances in the Work Area). Put Consumers in a user group assigned to the production Work Area so they can see and execute Execution Setups and outputs. See <a href="#CIHJEFGF">"Example of Security Design"</a>.</p>
+<div id="LSHIM231" class="figure">
+<p class="titleinfigure"><a id="BCGGFDHF"></a>Figure 4-2 LSH Object Ownership</p>
+<img width="373" height="313" src="img/sys_hier.gif" alt="Description of Figure 4-2 follows" /><br />
+<a id="sthref29" href="img_text/sys_hier.htm">Description of ''Figure 4-2 LSH Object Ownership''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+*Execution Setups, jobs and outputs are contained in instances of executable objects only&mdash;not in Table or Business Area instances.</div>
+<p><a href="#BCGGFDHF">Figure 4-2</a> shows the containers that constitute the organizational structure&mdash;Domains, Application Areas, and Work Areas&mdash;and the object definitions or instances they contain.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BCGBFDGE"></a>
+<div id="LSHIM232" class="sect3">
+<h4 class="sect3">Duplicate Assignments</h4>
+<p>It is possible to assign the same user group to an object both implicitly (by inheritance) and explicitly. In that case, if either one of the assignments is removed, the user group is still assigned to the object because of the other assignment.</p>
+<p>You can see all inherited and explicit assignments in the object's security screen.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BCGIAIFD"></a>
+<div id="LSHIM233" class="sect2">
+<h3 class="sect2">Users</h3>
+<p>Enroll each person who will use Oracle LSH in any way by defining a user account for him or her. The user account includes a user ID, encrypted password, email address, and at least one application role.</p>
+<p>Application roles allow the user to view a portion of the Oracle LSH user interface (UI) or to perform special operations; see <a href="#BCGJFGJF">"User Interface Security"</a>. A user's assigned application roles apply across all Oracle LSH Domains and objects; they are not associated with user groups.</p>
+<p><a id="LSHIM234"></a><span class="subhead3">Assigning Users to User Groups&nbsp;</span>A person's assignments to user groups and the roles to which he or she is assigned within those groups determine which operations the person can perform on which objects; see <a href="#BCGBDHGJ">"About Security Design in the Oracle Life Sciences Data Hub"</a>. A user can belong to any number of user groups, and can have any number of object security roles within a group. A user can have different roles in different user groups. A user must have at least one role within each group. The group administrator assigns users to groups and to roles within groups.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BCGJFGJF"></a>
+<div id="LSHIM235" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">User Interface Security</h2>
+<p>Oracle LSH ships with predefined application roles that allow access to portions of the Oracle LSH user interface. Application roles apply to the user across the Oracle LSH application; they are not user group-specific. When you create a user account, you must assign it at least one application role so that the user can see at least part of the Oracle LSH user interface.</p>
+<p>There are two types of user interface roles:</p>
+<ul>
+<li>
+<p><a href="#BCGCBHIJ">Application Roles</a> allow users to work with Oracle LSH on an ongoing basis.</p>
+</li>
+<li>
+<p><a href="#BCGICFID">Administrator Roles</a> are required for the initial setup of Oracle LSH. Some administration roles are also required for the ongoing maintenance of Oracle LSH.</p>
+</li>
+</ul>
+<a id="BCGCBHIJ"></a>
+<div id="LSHIM236" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Application Roles</h3>
+<p>Most Oracle LSH users need one or more of the predefined application roles to perform their work in Oracle LSH. The predefined Oracle LSH application roles are:</p>
+<p><a id="LSHIM237"></a><span class="subhead3">LSH Consumer&nbsp;</span>Users assigned the LSH Consumer role have access to the Home and Reports tabs in the Oracle LSH user interface. Assign this role to users who need to retrieve information from Oracle LSH and/or run Oracle LSH applications to load and transform data. Oracle LSH object security determines which operations these users are allowed to perform on particular applications and reports.</p>
+<p><a id="LSHIM238"></a><span class="subhead3">LSH Definer&nbsp;</span>Users assigned the LSH Definer role have access to the same tabs as the LSH Consumer plus the Applications tab. Assign this role to users who must build, test, or validate Oracle LSH applications. Oracle LSH object security determines which operations these users are allowed to perform on particular defined objects and outputs.</p>
+<p><a id="LSHIM239"></a><span class="subhead3">LSH Data Blind Break User&nbsp;</span>Only the <a href="#BCGEGFHC">LSH Data Blind Admin</a> can assign this role to users. This role does not provide access to any tabs in the Oracle LSH user interface. Users assigned to this role typically also have the LSH Consumer role.</p>
+<p>Users with this application role can do the following, if they have normal Oracle LSH object security access and the blinding-related object security privilege noted:</p>
+<ul>
+<li>
+<p>Run a job on Tables with a Blinding Status of Blinded that displays the real data, not the dummy data (also requires an object security role with the Blind Break operation on Table instances)</p>
+</li>
+<li>
+<p>View the output(s) generated by a job run on real, blinded data (also requires an object security role with the Blind Break operation on outputs)</p>
+</li>
+</ul>
+<p><a id="LSHIM240"></a><span class="subhead3">LSH Data Unblind User&nbsp;</span>Only the <a href="#BCGEGFHC">LSH Data Blind Admin</a> can assign this role to users. This role does not provide access to any tabs in the Oracle LSH user interface. Users assigned to this role typically also have the LSH Consumer role.</p>
+<p>Users with this application role can do the following, if they have normal Oracle LSH object security access and the blinding-related object security privilege noted:</p>
+<ul>
+<li>
+<p>Permanently unblind data in Table instances (also requires an object security role with the Unblind operation on Table instances)</p>
+</li>
+<li>
+<p>Run a job on real data in Table instances whose status is Unblinded (also requires an object security role with the Read Unblind operation on Table instances)</p>
+</li>
+<li>
+<p>Change the status of an output from Blinded to Unblinded (also requires an object security role with the Unblind operation on outputs)</p>
+</li>
+<li>
+<p>Read outputs with a status of Unblinded (also requires an object security role with the Read Unblind operation on outputs)</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="BCGICFID"></a>
+<div id="LSHIM241" class="sect2">
+<h3 class="sect2">Administrator Roles</h3>
+<p>To provide the most secure environment, the tasks required to set up Oracle LSH are logically grouped, and each group of tasks must be performed by a user with a different administrative application role.</p>
+<p>The System Administrator role is automatically created during Oracle LSH installation. Your designated system administrator must log on using this account, create at least one user account and assign the LSH Setup Admin role to the account (or create at least two user accounts and assign the two Setup Admin component accounts&mdash;LSH Data Security Admin and LSH Function Security Admin&mdash;separately).</p>
+<p><a href="#BCGHIAIJ">Figure 4-4</a> shows the flow of Oracle LSH security tasks.</p>
+<div id="LSHIM242" class="figure">
+<p class="titleinfigure"><a id="sthref30"></a>Figure 4-3 Oracle LSH Security Adminstrator Tasks</p>
+<img width="577" height="385" src="img/admin_setup_impl.gif" alt="Description of Figure 4-3 follows" /><br />
+<a id="sthref31" href="img_text/admin_setup_impl.htm">Description of ''Figure 4-3 Oracle LSH Security Adminstrator Tasks''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p>The Oracle LSH Administrator roles are:</p>
+<p><a id="LSHIM243"></a><span class="subhead3">LSH Data Security Admin&nbsp;</span>The LSH Data Security Administrator has access to the Security tab in the Oracle LSH user interface and works with user groups, subtypes, and roles to set up object-related security.</p>
+<p><a id="LSHIM244"></a><span class="subhead3">LSH Function Security Admin&nbsp;</span>The LSH Function Security Administrator works in the Oracle Applications UMX user interface to register users (create user accounts) and assign application roles to them.</p>
+<p><a id="LSHIM245"></a><span class="subhead3">LSH Security Admin&nbsp;</span>LSH Security Administrator is a predefined composite role that combines the functions of the LSH Data Security Admin and LSH Function Security Admin roles. To allow the same person to perform both functions, assign just the LSH Security Admin role.</p>
+<p><a id="LSHIM246"></a><span class="subhead3">LSH Classification Admin&nbsp;</span>The LSH Classification Administrator has access to the Classifications tab in the Oracle LSH user interface and can create classification hierarchies and add terms to them.</p>
+<p><a id="BCGEGFHC"></a><a id="LSHIM247"></a><span class="subhead3">LSH Data Blind Admin&nbsp;</span>The LSH Data Blind Administrator can assign the LSH Data Blind Break User role and the LSH Data Unblind User role to users.</p>
+<p><a id="LSHIM248"></a><span class="subhead3">LSH Group Admin&nbsp;</span>Every Oracle LSH user group must have at least one LSH Group Administrator. The Group Administrator can add and remove users from the user group and change users' role assignments within the group.</p>
+<p><a id="LSHIM249"></a><span class="subhead3">LSH Bootstrap Admin&nbsp;</span>The LSH Bootstrap Administrator can create Domains and assign user groups to the Domains. This is the first step in creating an organizational structure.</p>
+<p><a id="LSHIM250"></a><span class="subhead3">LSH Super User&nbsp;</span>The LSH Super User has access to all user interface tabs in LSH: Home, Applications, Reports, Classification, Security, and Administration, as well as the Oracle Applications user and role screens. The Super User role does not include the Bootstrap role or the blinding-related roles.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CIHGIBFF"></a>
+<div id="LSHIM251" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Security for Blinded Data</h2>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#BCGDCIHA">About Data Blinding, Blind Breaks, and Unblinding</a></p>
+</li>
+<li>
+<p><a href="#BCGDFDEJ">Blinding-Related Security Privileges</a></p>
+</li>
+<li>
+<p><a href="#BCGEBAEH">Interaction of Blinding Statuses and User Privileges on Executing Jobs and Viewing Data</a></p>
+</li>
+</ul>
+<a id="BCGDCIHA"></a>
+<div id="LSHIM252" class="sect2">
+<h3 class="sect2">About Data Blinding, Blind Breaks, and Unblinding</h3>
+<p>Some sensitive clinical data must be protected from viewing during the course of a clinical trial; for example, treatment codes that would reveal which patients were receiving which drugs.</p>
+<p>Oracle LSH supports data blinding in Oracle LSH Table instances and in all reports generated using one or more blinded Table instances as a source. Users with special privileges can unblind data (for example, at the end of a trial) or break the blind temporarily as required during the trial. Separate privileges are required to run and view reports generated on blinded and unblinded data.</p>
+<p>All Table instances have a Blinding flag. You must set this flag to Yes to indicate that the Table instance may contain blinded data. If the Blinding flag is set to Yes, Oracle LSH maintains two sets of rows: one set for the real data and another set for dummy data, effectively partitioning the table in the database.</p>
+<p>When a user loads data or runs a Program that reads from or writes to a Table instance whose Blinding flag is set to Yes, he or she must indicate in the submission form whether the job is running on real, blinded data or on dummy data. The system reads from and writes to the partition the user indicates. The options for the particular user submitting the job are limited by his or her own blinding-related security privileges; see <a href="#BCGDFDEJ">"Blinding-Related Security Privileges"</a>.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Oracle LSH cannot ascertain whether data in an external system requires blinding or not. You must set up your security system so that only people who understand the issues and the source data can run Load Sets that may load sensitive data.</div>
+<p>Table instances also have a Blinding Status attribute. Table instances whose Blinding flag is set to Yes can have a Blinding Status of either Blinded or Unblinded to indicate the current state of the data. Table instances whose Blinding flag is set to No can have a status of either Not Applicable (the default) or Authorized, which makes it possible for a nonblinded Table instance to be the target of a Program that reads from one or more blinded Table instances; see <a href="#BCGCGFFA">"Reading from Blinded Table Instances and Writing to Nonblinded Table Instances"</a>.</p>
+<p>Oracle LSH allows you to keep data securely blinded and also allows the following:</p>
+<ul>
+<li>
+<p><span class="bold">Blind Break</span>. A blind break is access to real, sensitive data that remains blinded to other users; it is a single execution of a job that reads from or writes to one or more blinded or unblinded Table instances. The Program may produce a report that displays the real, sensitive data. Even the log file of the job may contain sensitive information. One privilege is required to execute the job, and another privilege is required to view any resulting outputs. All blinded Table instances involved remain blinded and the same privilege is required to run the same executable again on the real data.</p>
+<p>The Blind Break privilege also allows access to real, blinded data through the Browse Data feature, through an integrated development environment (IDE), and through data visualizations; see <a href="#BCGDFDEJ">"Blinding-Related Security Privileges"</a> below.</p>
+</li>
+<li>
+<p><span class="bold">Unblind</span>. Users with unblind privileges can permanently unblind data in a Table instance. They can also reblind the Table instance if necessary. A separate privilege is required to view reports generated on unblinded data.</p>
+</li>
+</ul>
+<p>For further details on how Oracle LSH handles blinded data, see "Execution and Data Handling" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Application Developer's Guide</span></span>.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BCGDFDEJ"></a>
+<div id="LSHIM253" class="sect2">
+<h3 class="sect2">Blinding-Related Security Privileges</h3>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#BCGFJJCE">Blinding-Related Object Security Operations</a></p>
+</li>
+<li>
+<p><a href="#BCGHJIFC">Blinding-Related Application Roles</a></p>
+</li>
+</ul>
+<p>To perform most operations on sensitive data, a user must have normal security access to the particular Table instances or outputs that contain the sensitive data, a specific blinding-related operation on those objects, and a specific blinding-related application role.</p>
+<a id="BCGFJJCE"></a>
+<div id="LSHIM254" class="sect3">
+<h4 class="sect3">Blinding-Related Object Security Operations</h4>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#BCGICECF">Operations on Table Instances</a></p>
+</li>
+<li>
+<p><a href="#BCGIDAGB">Operations on Outputs</a></p>
+</li>
+</ul>
+<p>To perform a blinding-related operation on a Table instance or output, a user must be assigned a role that includes the relevant object security operation on Table instances or outputs of the relevant subtype within a user group assigned to the particular Table instance or output.</p>
+<p><a id="BCGICECF"></a><a id="LSHIM255"></a><span class="subhead3">Operations on Table Instances&nbsp;</span>Oracle LSH has the following blinding-related object security operations on Table instances:</p>
+<ul>
+<li>
+<p><span class="bold">Blind Break</span> allows access to real data in a Table instance whose Blinding Status is currently either Blinded or Unblinded as follows:</p>
+<ul>
+<li>
+<p>If a user has Blind Break privileges on all blinded and unblinded Table instances that serve as a data source or target for a job, the user can run the job on real data to produce an output and/or write data to one or more target Table instances.</p>
+</li>
+<li>
+<p>If a user has Blind Break privileges on all blinded and unblinded Table instances in the underlying Business Area, the user can view real data when he or she launches a data visualization tool such as Oracle Business Intelligence Enterprise Edition.</p>
+</li>
+<li>
+<p>If a user has Blind Break privileges on a blinded or unblinded Table instance, the user can choose to view real data in the Table instance using the Browse Data feature.</p>
+</li>
+<li>
+<p>If a user has Blind Break privileges on all blinded and unblinded Table instances mapped to a Program instance, the user can choose to view real data when he or she launches an integrated development environment (IDE) such as SAS to work on the Program instance.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The functionality described in the last two points is intended for Definers, and users must also have the LSH Definer application role to see the Applications tab in the user interface and use these features.</div>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="bold">Read Unblind</span> allows access to real data in the Table instances in all the same situations as Blind Break above, but only if all the relevant Table instances have been unblinded.</p>
+</li>
+<li>
+<p><span class="bold">Read Data</span> allows access only to dummy data in the blinded and unblinded Table instances in all the same situations as Blind Break above.</p>
+</li>
+<li>
+<p><span class="bold">Unblind</span> allows the user to unblind and reblind Table instances.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Unblinding Table instances also requires the LSH Definer application role to see the Applications tab in the user interface.</div>
+</li>
+</ul>
+<p><a id="BCGIDAGB"></a><a id="LSHIM256"></a><span class="subhead3">Operations on Outputs&nbsp;</span>Oracle LSH has the following blinding-related operations on outputs:</p>
+<ul>
+<li>
+<p><span class="bold">Blind Break</span> allows viewing outputs with a status of Blind Break (whose data was generated from, or written to, one or more Table instances whose Blinding Status was Blinded or Unblinded at runtime).</p>
+</li>
+<li>
+<p><span class="bold">Read Unblind</span> allows viewing outputs with a status of Unblinded (whose data was generated from, or written to, one or more Table instances whose Blinding Status was Unblinded and no Table instances whose Blinding Status was Blinded at runtime).</p>
+</li>
+<li>
+<p><span class="bold">Unblind</span> is designed to allow unblinding outputs but has not been implemented in Oracle LSH Release 2.4.8.</p>
+</li>
+</ul>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+In the <a href="#CIHJEFGF">Example of Security Design</a>, roles allowing blinding-related operations are included only in the Production Work Area user group. Users assigned these roles can perform blinding-related operations on all Table instances and outputs in the Production Work Area.
+<p>If you want to restrict a user's unblinding privileges to a single Table instance, you must create a user group specifically for that Table instance with the necessary role and assign it to the few users who should have unblinding privileges on that Table instance.</p>
+</div>
+</div>
+<!-- class="sect3" -->
+<a id="BCGHJIFC"></a>
+<div id="LSHIM257" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Blinding-Related Application Roles</h4>
+<p>To perform blinding-related operations on Table instances or outputs, a user must have the relevant blinding-related application role in addition to the required blinding-related object security privilege.</p>
+<p>While a user group administrator assigns blinding-related object security privileges to a user in the context of a particular user group, blinding-related application roles are assigned to users by a system administrator and apply across Oracle LSH; they are not limited to a particular user group, object subtype, or Domain, for example.</p>
+<p><a id="LSHIM258"></a><span class="subhead3">LSH Data Blind Break User&nbsp;</span>A user must have the LSH Data Blind Break User application role in order to perform a Blind Break object security operation on Table instances or outputs; see <a href="#BCGFJJCE">"Blinding-Related Object Security Operations"</a> .</p>
+<p><a id="LSHIM259"></a><span class="subhead3">LSH Data Unblind User&nbsp;</span>A user must have the LSH Data Unblind User application role to either unblind or reblind Table instances. (No application role is required for the Read Unblind operation on either Table instances or outputs.)</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BCGEBAEH"></a>
+<div id="LSHIM260" class="sect2">
+<h3 class="sect2">Interaction of Blinding Statuses and User Privileges on Executing Jobs and Viewing Data</h3>
+<p>The interaction of Table instance and output Blinding Statuses and blinding-related user privileges is summarized in <a href="#BCGDABIG">Table 4-1</a> and described in detail below. The information in the column Data Available to User applies to users who are running jobs, using the Browse Data feature on a single Table instance, launching a visualization, or working on a Program in an IDE.</p>
+<p>The information in the rightmost columns applies only to outputs generated by running jobs on the source Table instances (not to Browse Data, visualizations, or IDEs).</p>
+<div id="LSHIM261" class="tblformal">
+<p class="titleintable"><a id="sthref32"></a><a id="BCGDABIG"></a>Table 4-1 Summary of the Interaction of Blinding Statuses and User Privileges on Viewing Data</p>
+<table class="cellalignment68" title="Summary of the Interaction of Blinding Statuses and User Privileges on Viewing Data" summary="Summary of the Interaction of Blinding Statuses and User Privileges" dir="ltr">
+<thead>
+<tr class="cellalignment57">
+<th class="cellalignment69" id="r1c1-t9">Most Restrictive Blinding Status of Any Source Table Instance</th>
+<th class="cellalignment69" id="r1c2-t9">Most Powerful User Privilege on All Relevant Table Instances</th>
+<th class="cellalignment69" id="r1c3-t9">Data Available to User</th>
+<th class="cellalignment69" id="r1c4-t9">Resulting Output Blinding Status</th>
+<th class="cellalignment69" id="r1c5-t9">User Privilege Required on Output to View Output</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment57">
+<td class="cellalignment63" id="r2c1-t9" headers="r1c1-t9">
+<p>Blinded</p>
+</td>
+<td class="cellalignment63" headers="r2c1-t9 r1c2-t9">
+<p>Blind Break (and the LSH Data Blind Break User application role)</p>
+</td>
+<td class="cellalignment63" headers="r2c1-t9 r1c3-t9">
+<p>Dummy or Real</p>
+</td>
+<td class="cellalignment63" headers="r2c1-t9 r1c4-t9">
+<p>If real data processed: Blinded</p>
+<p>If dummy data processed: Dummy</p>
+</td>
+<td class="cellalignment63" headers="r2c1-t9 r1c5-t9">
+<p>If real data processed: Blind Break (and the LSH Data Blind Break User application role)</p>
+<p>If dummy data processed: View</p>
+</td>
+</tr>
+<tr class="cellalignment57">
+<td class="cellalignment63" id="r3c1-t9" headers="r1c1-t9">
+<p>Blinded</p>
+</td>
+<td class="cellalignment63" headers="r3c1-t9 r1c2-t9">
+<p>Read Data or Read Unblind</p>
+</td>
+<td class="cellalignment63" headers="r3c1-t9 r1c3-t9">
+<p>Dummy</p>
+</td>
+<td class="cellalignment63" headers="r3c1-t9 r1c4-t9">
+<p>Dummy</p>
+</td>
+<td class="cellalignment63" headers="r3c1-t9 r1c5-t9">
+<p>View</p>
+</td>
+</tr>
+<tr class="cellalignment57">
+<td class="cellalignment63" id="r4c1-t9" headers="r1c1-t9">
+<p>Unblinded</p>
+</td>
+<td class="cellalignment63" headers="r4c1-t9 r1c2-t9">
+<p>Blind Break (and the LSH Data Blind Break User application role) or Read Unblind</p>
+</td>
+<td class="cellalignment63" headers="r4c1-t9 r1c3-t9">
+<p>Dummy or Real</p>
+</td>
+<td class="cellalignment63" headers="r4c1-t9 r1c4-t9">
+<p>If real data processed: Unblinded</p>
+<p>If dummy data processed: Dummy</p>
+</td>
+<td class="cellalignment63" headers="r4c1-t9 r1c5-t9">
+<p>If real data processed: Read Unblind</p>
+<p>If dummy data processed: View</p>
+</td>
+</tr>
+<tr class="cellalignment57">
+<td class="cellalignment63" id="r5c1-t9" headers="r1c1-t9">
+<p>Unblinded</p>
+</td>
+<td class="cellalignment63" headers="r5c1-t9 r1c2-t9">
+<p>Read Data</p>
+</td>
+<td class="cellalignment63" headers="r5c1-t9 r1c3-t9">
+<p>Dummy</p>
+</td>
+<td class="cellalignment63" headers="r5c1-t9 r1c4-t9">
+<p>Dummy</p>
+</td>
+<td class="cellalignment63" headers="r5c1-t9 r1c5-t9">
+<p>View</p>
+</td>
+</tr>
+<tr class="cellalignment57">
+<td class="cellalignment63" id="r6c1-t9" headers="r1c1-t9">
+<p>Not Applicable</p>
+</td>
+<td class="cellalignment63" headers="r6c1-t9 r1c2-t9">
+<p>Read Data, Blind Break, or Read Unblind</p>
+</td>
+<td class="cellalignment63" headers="r6c1-t9 r1c3-t9">
+<p>Not Applicable</p>
+</td>
+<td class="cellalignment63" headers="r6c1-t9 r1c4-t9">
+<p>Not Applicable</p>
+</td>
+<td class="cellalignment63" headers="r6c1-t9 r1c5-t9">
+<p>View</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" -->
+<p>The following sections describe the information summarized in the above table.</p>
+<p><a id="LSHIM262"></a><span class="subhead3">Blinded Table Instances&nbsp;</span>If the user has the Blind Break operation on all blinded and unblinded source and target Table instances and the LSH Data Blind Break User application role, he or she can choose to run a job on&mdash;or view&mdash;either dummy or real data and:</p>
+<ul>
+<li>
+<p>Any output produced on real data has a Blinding Status of Blinded and the Blind Break operation on the output and the LSH Data Blind Break User application role are required to view the output.</p>
+</li>
+<li>
+<p>Any output produced on dummy data has a Blinding Status of Dummy and the View operation on the output is required to view the output.</p>
+</li>
+</ul>
+<p>If any of the source or target Table instances whose Blinding flag is set to Yes has a Blinding Status of Blinded, and the user has only the Read Data or the Read Unblind operation on any of these Table instances, the user can run a job on&mdash;or view in an IDE&mdash; only dummy data. Any outputs produced have a Blinding Status of Dummy. The View operation on outputs is required to view them.</p>
+<p><a id="LSHIM263"></a><span class="subhead3">Unblinded Table Instances&nbsp;</span>If all of the applicable Table instances whose Blinding flag is set to Yes have a Blinding Status of Unblinded, and the user has the Read Unblind operation on all the unblinded Table instances or the Blind Break operation on all the unblinded Table instances (and the LSH Data Blind Break User application role), the user can choose to run a job on&mdash;or view&mdash;real or dummy data.</p>
+<ul>
+<li>
+<p>Any output produced on real data has a Blinding Status of Unblinded and the Read Unblind operation on the output is required to view the output.</p>
+</li>
+<li>
+<p>Any output produced on dummy data has a Blinding Status of Dummy and the View operation on the output is required to view the output.</p>
+</li>
+</ul>
+<p>If any of the applicable Table instances whose Blinding flag is set to Yes has a Blinding Status of Unlinded, and the user has only the Read Data operation on any of these blinded Table instances, the user can run a job on&mdash;or view in an IDE&mdash;only dummy data. Any outputs produced have a Blinding Status of Dummy. The View operation on outputs is required to view them.</p>
+<p><a id="LSHIM264"></a><span class="subhead3">Nonblinded Table Instances&nbsp;</span>If all the applicable Table instances have their Blinding flag set to No and their Blinding Status is Not Applicable, the Table instances contain real data that is not sensitive and does not required blinding. The user requires only the Read Data operation on the Table instances to run a job on&mdash;or view&mdash;the data. Any output produced has a Blinding Status of Not Applicable, and the View operation on the output is required to view the output.</p>
+<p><a id="BCGCGFFA"></a><a id="LSHIM540"></a><span class="subhead3">Reading from Blinded Table Instances and Writing to Nonblinded Table Instances&nbsp;</span>In rare cases you may need to run a Program that reads from one or more blinded or unblinded Table instances and writes to one or more nonblinded Table instances (whose Blinding flag is set to No). Executing such a job fails unless:</p>
+<ul>
+<li>
+<p>Every target Table instance whose Blinding flag is set to No has a Blinding Status of Authorized.</p>
+</li>
+<li>
+<p>The user running the Program has Blind Break privileges on all blinded source and target Table instances and either Blind Break or Unblind privileges on all unblinded source and target Table instances.</p>
+</li>
+<li>
+<p>The user running the Program explicitly authorizes running the Program after a warning that the Program reads from one or more blinded or unblinded Table instances and writes to one or more nonblinded Table instances.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CIHJEFGF"></a>
+<div id="LSHIM265" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Example of Security Design</h2>
+<p>In this example, pictured below, are the following Domains:</p>
+<ul>
+<li>
+<p>One Domain for each drug project. Inside each project Domain is a library of standard definitions for use within that project, an Application Area for each study, plus another Application Area for projectwide analysis. Within each Application Area are three Work Areas, one each for development, quality control, and production.</p>
+</li>
+<li>
+<p>One Domain for companywide reports with two Application Areas: one Application Area for the report listing all investigators and another for companywide enrollment reports. A Domain library contains the standard companywide report definitions</p>
+</li>
+<li>
+<p>One Domain for a library of standard company definitions.</p>
+</li>
+</ul>
+<p>In general, there is a user group defined for each organizational structure (Domain, Application Area, and Work Area). See <a href="#BCGBHAAD">"Example User Groups"</a>.</p>
+<div id="LSHIM266" class="figure">
+<p class="titleinfigure"><a id="BCGHIAIJ"></a>Figure 4-4 Organizational Structure for Security Design Example</p>
+<img width="766" height="730" src="img/sec_org_struct.gif" alt="Description of Figure 4-4 follows" /><br />
+<a id="sthref33" href="img_text/sec_org_struct.htm">Description of ''Figure 4-4 Organizational Structure for Security Design Example''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<a id="BCGBHAAD"></a>
+<div id="LSHIM267" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Example User Groups</h3>
+<p>Following is information on each user group used in this example, including a list of the roles assigned to each.</p>
+<a id="BCGBIHCF"></a>
+<div id="LSHIM268" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Project 123 Domain User Group</h4>
+<p>The Project 123 user group is assigned to the Domain that includes all of Project 123.</p>
+<p>The privileges granted to a user through his or her role(s) in a user group assigned to a Domain apply by default to the Application Areas and Work Areas in the Domain, unless the user group is explicitly unassigned from a particular container.</p>
+<p>Therefore, the roles assigned to the Domain user group should allow only the operations required to allow the proper use of the object definitions in the Domain library. See <a href="org.htm#BHCEDJBI">"Domain Libraries"</a> for a discussion of the recommended usage of Domain Libraries.</p>
+<p>The Project 123 user group includes the following two roles:</p>
+<ul>
+<li>
+<p><span class="bold">Librarian/Project Programmer</span>. The Librarian (or Project Programmer) role allows maintenance&mdash;including creation, modification, and deletion&mdash; of the object definitions of all types in the Domain library. The Create operation is required to move an object into the library.</p>
+<p>We recommend that these definitions be developed in the Domain's Application Areas and moved into the library only after they are stable, validated, and approved for reuse. They should then need very little maintenance. Assign this role to only a few people.</p>
+</li>
+<li>
+<p><span class="bold">View All Definitions</span>. All Programmers and Data Managers working on Project 123 need the View operation on all object definitions in the Project 123 Domain library so that they can reuse those definitions. Therefore, all users who have the Programmer or Data Manager role for any study in the Project 123 Domain also belong to this user group with the role View All Definitions.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<div id="LSHIM269" class="sect3"><a id="sthref34"></a>
+<h4 class="sect3">Study 123ABC Development User Group</h4>
+<p>The Study 123ABC user group is assigned to the Study 123ABC Application Area.</p>
+<p>Programmers work on object instances in a Work Area, but when they create a new object, Oracle LSH automatically simultaneously puts the new object definition in the Application Area that contains the Work Area, and an instance of it in the Work Area. Therefore, to be able to develop new object definitions for a study, Programmers need Create and Modify privileges on object definitions in the Application Area as well as on object instances in the Work Area. They also need View privileges on each object subtype.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If you develop a set of standard modular object definitions, you may be able to develop applications entirely by reusing those definitions. In that case, some users may require only Create, Modify, and Delete privileges on object instances in the Development Work Area and View privileges in the library of standard definitions.</div>
+<p>The privileges granted to a user through his or her role(s) in a user group assigned to an Application Area apply by default to all the Work Areas in the Application Area, unless the user group is explicitly unassigned from a Work Area.</p>
+<p>In this example this user group is explicitly unassigned from the Quality Control and Production Work Areas so that Definers cannot modify on objects in those Work Areas. Definers work in the Development Work Area only. See <a href="valsops.htm#BACDDGIF">"Work Area Usage Intent and Validation Status"</a>.</p>
+<p>The Study 123ABC user group includes the following roles:</p>
+<p><a id="LSHIM270"></a><span class="subhead3">Programmer&nbsp;</span>The Programmer role allows all the creation of all object definition types in an Application Area and modification operations on object definitions and instances of all types, including Modify Validation Status QC. The Programmer role has these same privileges on object instances types in a Work Area. The Programmer can therefore create new object definitions and instances or create new instances of existing definitions, test them, and promote them to Quality Control after successful testing.</p>
+<p><a id="LSHIM271"></a><span class="subhead3">Data Manager&nbsp;</span>The Data Manager role allows the same operations as the Programmer role, but has Modify Validation Status Production (instead of QC), which allows promotion to both QC and Production. In addition, a Data Manager can clone Work Areas. For this, the Data Manager must have the Modify rights on Work Areas as well as Clone.</p>
+</div>
+<!-- class="sect3" -->
+<div id="LSHIM272" class="sect3"><a id="sthref35"></a>
+<h4 class="sect3">Study 123ABC Quality Control User Group</h4>
+<p>The Study 123ABC Quality Control user group is assigned to the Quality Control Work Area in the Study 123ABC Application Area. Its purpose is to allow Quality Control engineers to test applications but not to modify objects.</p>
+<p><a id="LSHIM273"></a><span class="subhead3">Quality Control Engineer&nbsp;</span>The Quality Control role allows the View operation on object instances of all types, and the Submit operation on object instances of all executable object types. Therefore Quality Control engineers can run all executable objects in any Work Area in the Application Area and view the resulting outputs, but they cannot modify any objects.</p>
+<p><a id="LSHIM274"></a><span class="subhead3">Data Manager&nbsp;</span>The Data Manager role allows all operations on all object types. Because this user group is assigned to a Work Area, only the operations on object instances are relevant. The Data Manager can modify object instances so that they point to the new version of a fixed object. The Data Manager has the IQ_Submit role needed to run executables to test them before promoting object instances to the Quality Control validation status. The Data Manager can also clone the Work Area.</p>
+<p>See <a href="valsops.htm#BACDDGIF">"Work Area Usage Intent and Validation Status"</a> for information on the intended usage of Work Areas and the interaction of objects' validation status and the Work Area Usage Intent attribute.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+In this example, the Study 123ABC user group is explicitly unassigned from the Quality Control Work Area so that Programmers cannot change object instances in the QC environment. Programmers should make any necessary changes in the Development Work Area, and then the Data Manager should clone the modified Work Area onto the Quality Control Work Area for testing.
+<p>Alternatively, if your operating procedure is for your Definers to test their own applications, you do not need the Quality Control user group. To allow programmers and data managers full privileges on the Quality Control Work Area, simply do not unassign the Development user group from it.</p>
+</div>
+</div>
+<!-- class="sect3" -->
+<div id="LSHIM275" class="sect3"><a id="sthref36"></a>
+<h4 class="sect3">Study 123ABC Production User Group</h4>
+<p>The Study 123ABC Productionuser group is assigned to the Study 123ABC Production Work Area. The Production Work Area controls security access to the Oracle LSH schema that contains production data and outputs on production data. Therefore all personnel who need to see reports on production data need access to the Production Work Area.</p>
+<p>This is the first user group in this example to differentiate between privileges on one subtype and another. In this security system, Programmers, Data Managers, and Quality Control Engineers can work on objects of any subtype; for example, Financial or Clinical Report Sets. However, the Production Work Area user group includes users who can see only Clinical object subtypes, users who can see only Financial object subtypes, and some users who can see both subtypes.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+In this example, the Study 123ABC Development user group is explicitly unassigned from the Production Work Area so that Programmers cannot change object instances in the production environment.</div>
+<p>Some of the roles listed here have the same privileges on the same object types. From the point of view of Oracle LSH, a single role could be substituted for these. However, it may be easier to administer user accounts if you create roles for actual job titles in use in your company and assign them to the people who hold those jobs.</p>
+<p>The following roles have Submit and View privileges on instances of Programs, Report Sets, Workflows, and Business Areas (for data visualizations). They also have the Read Data operation on Table instances so they can run executables on Table instances, and the View operation on outputs.</p>
+<p>Most roles should include</p>
+<ul>
+<li>
+<p><span class="bold">Investigator</span>. Has operations on subtype Clinical Programs, Report Sets, Workflows, and Business Areas only.</p>
+</li>
+<li>
+<p><span class="bold">Statistician</span>. Has operations on subtype Clinical Programs, Report Sets, Workflows, and Business Areas only.</p>
+</li>
+<li>
+<p><span class="bold">Project Manager</span>. Has operations on both subtypes: Clinical and Financial Programs, Report Sets, Workflows, and Business Areas.</p>
+</li>
+<li>
+<p><span class="bold">Blind Break Manager</span>. Has operations on subtype Clinical Programs, Report Sets, Workflows, and Business Areas only.</p>
+</li>
+</ul>
+<p>The following roles have Submit and View privileges on Execution Setups of Load Sets and Data Marts in addition to Programs, Report Sets, Workflows, and Business Areas:</p>
+<ul>
+<li>
+<p><span class="bold">Trial Manager</span>. Has operations on both subtypes, Clinical and Financial, for each object type.</p>
+</li>
+<li>
+<p><span class="bold">Submission Officer</span>. Has operations on only the Clinical subtype of each object type.</p>
+</li>
+</ul>
+<p>Three additional roles allow certain operations on blinded data. By creating a separate role for this purpose, you can limit this sensitive privilege to the minimum number of people required to perform it in your organization. You can assign these roles to users who also have other roles. See <a href="#CIHGIBFF">"Security for Blinded Data"</a>.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+These roles are different from the LSH Data Blink Break User application role and the LSH Data Unblind User application role. One of those application roles is required in addition to these object-specific roles to create a blind break or unblind data. See <a href="#BCGDABIG">Table 4-1, "Summary of the Interaction of Blinding Statuses and User Privileges on Viewing Data"</a>.
+<p>In addition, the user must be assigned to one of these roles in a user group with access to the object.</p>
+</div>
+<ul>
+<li>
+<p><span class="bold">Blind Break</span>. The Blind Break role includes the Blind Break operation on Table instances and on outputs. The Blind Break role allows a user to run a Program or other executable on a Table instance with a Blinding Status of Blinded and view the resulting outputs (see <a href="#CIHGIBFF">"Security for Blinded Data"</a>).</p>
+</li>
+<li>
+<p><span class="bold">Permanently Unblind</span>. The Permanently Unblind role includes the Unblind operation on both Table instances and outputs. The Unblind operation allows the user to change the Blinding Status of the Table instance or output from Blinded to Unblinded.</p>
+</li>
+<li>
+<p><span class="bold">View Unblinded Data</span>. The View Unblinded Data role includes the Read Unblind operation on both Table instances and outputs. Even after a Table or output has been permanently unblinded, this role is required to see the unblinded data.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<div id="LSHIM276" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref37"></a>
+<h4 class="sect3">User Groups for the Other Domains, Application Areas, and Work Areas</h4>
+<p>You may be able to use the user groups described in this example as standard user groups for all Domains, Application Areas, Quality Control Work Areas and Production Work Areas. Even the users in the user groups may be the same in some cases&mdash;especially in groups intended for Programmers and Data Managers.</p>
+<p>You can copy user group definitions in two ways:</p>
+<ul>
+<li>
+<p>Copy just the definition, including the name, description, and assigned roles.</p>
+</li>
+<li>
+<p>Copy all of the above plus all the users assigned to the user group, with their role assignments.</p>
+</li>
+</ul>
+<p>For example, the same simple, two-role Domain user group structure may be appropriate for all your Domains. In this case, you have the following choices:</p>
+<ul>
+<li>
+<p>If exactly the same people should have access to two Domains, with the same roles in each Domain, you can assign the same user group to both Domains.</p>
+</li>
+<li>
+<p>If most of the same people should have access to two Domains, with the same roles in each Domain, you can copy the first Domain user group you create, including the users assigned to the group. You assign it to the second Domain and the Group Administrator can then make any necessary changes to users and users' role assignments.</p>
+</li>
+<li>
+<p>If different people should have access to two Domains, you can copy the first Domain user group you create, using the option to not include any of the users. You can assign it to the second Domain. The Group Administrator then assigns users to roles within the group.</p>
+</li>
+</ul>
+<p>If the user group definition itself needs to be different from other Domains, you can define an entirely new user group or copy an existing one and make any necessary changes.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<div id="LSHIM277" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref38"></a>
+<h3 class="sect2">Example Users</h3>
+<p>In this example, you might have the following users:</p>
+<ul>
+<li>
+<p>Karl Martin. Karl is a <span class="bold">programmer</span> who works on both studies in Project 123. He is assigned to the following user groups: Project 123 Domain user group, Study 123ABC Development user group, and Study 123DEF Development user group.</p>
+<p>In the Domain user group he has the View All Definitions role. In the two study user groups he has the Programmer role.</p>
+</li>
+<li>
+<p>Sylvia Green. Sylvia is the <span class="bold">data manager</span> for Project 123. She is assigned to the following user groups: Project 123 Domain user group, Study 123ABC Development user group, Study 123ABC Quality Control user group, Study 123ABC Production user group, Study 123DEF Development user group, Study 123DEF Quality Control user group, Study 123DEF Production user group.</p>
+<p>In the Project 123 Domain user group she has the Librarian role. In the other user groups she has the Data Manager role.</p>
+</li>
+<li>
+<p>Sanjay Rao. Sanjay is a <span class="bold">statistician</span> working on both Project 123 and Project 456. He is assigned to the Production Work Area user group for all studies in Project 123 and all studies in Project 456.</p>
+<p>In each user group he has the Statistician role, allowing him to see and execute Clinical Programs, Report Sets, Workflows, and Business Areas. He also has the Permanently Unblind role and the LSH Data Unblind User application role, allowing him to permanently unblind study data and view the results.</p>
+</li>
+<li>
+<p>Sining Chen. Sining is an <span class="bold">investigator</span> for Study 123ABC. He is assigned to the Study 123ABC Production Work Area user group with the Investigator and Data Blind Break roles.</p>
+<p>He can see reports and create data visualizations for Study 123ABC and create a Blind Break during the trial if necessary.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BCGBHCBI"></a>
+<div id="LSHIM278" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Design Decision Summary</h2>
+<p>To design a security system, you must complete the following tasks:</p>
+<ul>
+<li>
+<p><a href="#BCGHGJIH">Design an Organizational Structure</a></p>
+</li>
+<li>
+<p><a href="#BCGJBBCJ">Design a Set of User Groups</a></p>
+</li>
+<li>
+<p><a href="#BCGDDFFE">(Optional) Design One or More Object Subtypes</a></p>
+</li>
+<li>
+<p><a href="#BCGGEFAA">Design a Set of Roles and their User Group Assignments</a></p>
+</li>
+</ul>
+<a id="BCGHGJIH"></a>
+<div id="LSHIM279" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Design an Organizational Structure</h3>
+<p>Take advantage of the fact that user group assignments are inherited by objects from their container. Design an organizational structure of Domains, Application Areas, and Work Areas where you can use this feature and avoid excessive manual assignments of user groups to containers and objects.</p>
+<p><a id="LSHIM280"></a><span class="subhead3">Restrictions&nbsp;</span>None.</p>
+<p>You can define any organizational structure you choose; see <a href="org.htm#BGBFAHGA">Chapter 3, "Designing an Organizational Structure"</a>.</p>
+<p><a id="LSHIM281"></a><span class="subhead3">Considerations&nbsp;</span>Take the following into consideration:</p>
+<ul>
+<li>
+<p>You will assign user groups to the container objects in your organizational structure, so design an organization that reflects the logical units that the same group of users need to access.</p>
+</li>
+<li>
+<p>You can explicitly unassign and reassign user groups to containers and other objects at any time.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="BCGJBBCJ"></a>
+<div id="LSHIM282" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Design a Set of User Groups</h3>
+<p>Design a set of user groups in conjunction with your organizational structure design.</p>
+<p>See <a href="#BCGHHIEF">"User Groups"</a> for further information.</p>
+<p><a id="LSHIM283"></a><span class="subhead3">Restrictions&nbsp;</span>None.</p>
+<p>You can define any number of user groups. You can assign any number of roles to user groups.</p>
+<p><a id="LSHIM284"></a><span class="subhead3">Considerations&nbsp;</span>Take the following into consideration:</p>
+<ul>
+<li>
+<p>By default, all objects are automatically assigned the same user groups as their containing object.</p>
+</li>
+<li>
+<p>You can explicitly unassign and reassign user groups to objects at any time.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="BCGDDFFE"></a>
+<div id="LSHIM285" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">(Optional) Design One or More Object Subtypes</h3>
+<p>Oracle LSH ships with a set of predefined primary object types, including definitions and instances of Tables, Programs, Load Sets, Report Sets, Data Marts, Workflows, and Business Areas. Oracle LSH also ships with one predefined subtype for each of these object types.</p>
+<p>A role consists of a set of allowed operations on object subtypes. If you define additional subtypes for an object type, you can allow different roles to have operations allowed on different subtypes. For example, you might want different people to be able to view clinical reports and financial reports, in which case you can create Clinical and Financial Report Set Output subtypes.</p>
+<p>See <a href="#BCGEFBFC">"Object Subtypes"</a> for further information.</p>
+<p><a id="LSHIM286"></a><span class="subhead3">Restrictions&nbsp;</span>None.</p>
+<p>You can define any number of subtypes for any primary object type.</p>
+<p><a id="LSHIM287"></a><span class="subhead3">Considerations&nbsp;</span>Take the following into consideration:</p>
+<ul>
+<li>
+<p>Use subtypes for broad categories of information separate from the logical categories you use for your organizational structure and user groups, but which also differentiate which users should have access to which objects. For example, if your organizational structure and user groups use Project and Study as their primary logical units, you could define subtypes of Clinical, Financial, and Administrative, which apply to all projects and studies.</p>
+</li>
+<li>
+<p>If you are using Oracle LSH only for clinical data, you probably do not need additional subtypes. If you decide to use Oracle LSH for other types of data in the future, you can add subtypes then.</p>
+</li>
+<li>
+<p>Objects inherit the subtype of their container object, if a subtype with the same name is defined for their own object type. Objects can also inherit classifications from their container objects, if you choose. To make object creation simpler, create a subtype with the same name for all object types, or at least all container and primary objects (Domains, Application Areas, Work Areas, Programs, Tables, Load Sets, Report Sets, Data Marts, and Business Areas). See <a href="class.htm#CHDBBIFE">"Design Decision Summary"</a> in <a href="class.htm#CHDGCFDE">Chapter 5, "Designing a Classification System for Searching and Browsing"</a> for additional considerations.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="BCGGEFAA"></a>
+<div id="LSHIM288" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Design a Set of Roles and their User Group Assignments</h3>
+<p>A role definition consists of a name, description, and a set of allowed operations on one or more object subtypes. You assign roles to user groups and users to roles within user groups. A single user can have any number of roles, and can have different roles in different user groups.</p>
+<p>See <a href="#BCGFAJGG">"Roles"</a> for further information.</p>
+<p><a id="LSHIM289"></a><span class="subhead3">Restrictions&nbsp;</span>None.</p>
+<p>You can define any number of roles with any number of operations on object subtypes assigned to each role.</p>
+<p><a id="LSHIM290"></a><span class="subhead3">Considerations&nbsp;</span>Take the following into consideration:</p>
+<ul>
+<li>
+<p>To simplify assigning users to roles, create roles that correspond to the actual jobs in your company.</p>
+</li>
+<li>
+<p>You may want to create a few roles specifically to do certain Oracle LSH tasks, especially blinding-related tasks. You can then assign just a few users to those roles to keep blinded data as secure as possible.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment56">
+<tr>
+<td class="cellalignment63">
+<table class="cellalignment61">
+<tr>
+<td class="cellalignment60"><a href="org.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment60"><a href="class.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2011, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment65">
+<table class="cellalignment59">
+<tr>
+<td class="cellalignment60"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment60"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment60"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment60"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

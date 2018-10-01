@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>Oracle&reg; Healthcare Translational Research Security Guide</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1090" />
+<meta name="dcterms.created" content="2017-03-22T21:50:54Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Healthcare Translational Research Security Guide" />
+<meta name="dcterms.identifier" content="E86020-01" />
+<meta name="dcterms.isVersionOf" content="HTRSG" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2013, 2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"   src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"   src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="alternate" href="HTRSG.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="HTRSG.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="HTRSG.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript"  src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript"  src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript"  src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript"  src="../dcommon/js/foundation.min.js"></script>
+<script type="application/javascript"  src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript"  src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript"  src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="application/javascript"  src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="application/javascript"  src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="application/javascript"  src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="application/javascript"  src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<!-- End Header -->
+<div class="letterstyle">
+<h1>Oracle&reg; Healthcare Translational Research</h1>
+<p class="booktitle">Security Guide</p>
+<p><span class="revnumber">Release 3.2</span></p>
+<p class="invpartnumber">E86020-01</p>
+<p class="date">March 2017</p>
+<p>Oracle Healthcare Translational Research (OHTR) enables posing biologically meaningful questions by combining both clinical and cross-platform omics data. It also enables visualizing clinical records and omics features using both in-house business intelligence tools and omics viewers developed by the research community.</p>
+<p>OHTR also comprises Clinical Genomics APIs. RESTful APIs are developed to access data directly from CDM and ODB data models without using the UI. These APIs enable you to use the data for further downstream analysis. The APIs mimic the Cohort Query functionality and include endpoints to retrieve clinical phenotypic data, clinical and specimen metadata and genomic data export. Security or access restrictions are enforced on the APIs.</p>
+<p>This guide describes various security guidelines for the OHTR installation. Refer to the Oracle Help Center for the latest version of user documentation.</p>
+<p>It contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#CJABDIBJ">Section 1, "General Security Principles"</a></p>
+</li>
+<li>
+<p><a href="#BABCECAE">Section 2, "Security Guidelines for Database Objects and Database Options"</a></p>
+</li>
+<li>
+<p><a href="#CEGBABIA">Section 3, "Disabling Unnecessary Operating System Level Services"</a></p>
+</li>
+<li>
+<p><a href="#CHDBBAFE">Section 4, "Designing Multiple Layers of Protection"</a></p>
+</li>
+<li>
+<p><a href="#CEGBFIAH">Section 5, "Security Guidelines for the Middle Tier"</a></p>
+</li>
+<li>
+<p><a href="#CEGDGCHI">Section 6, "Protecting Data"</a></p>
+</li>
+<li>
+<p><a href="#CEGJEEDC">Section 8, "Documentation Accessibility"</a></p>
+</li>
+</ul>
+<a id="CJABDIBJ"></a>
+<div id="HTRSG217" class="sect1">
+<h2 class="sect1"><span class="secnum">1</span> General Security Principles</h2>
+<p>The following principles are fundamental to using any application securely.</p>
+<div id="HTRSG218" class="sect2"><a id="sthref1"></a>
+<h3 class="sect2"><span class="secnum">1.1</span> Keep Software Up To Date</h3>
+<p>One of the principles of good security practice is to keep all software versions and patches up to date. Ensure that you are current on CPUs.</p>
+</div>
+<!-- class="sect2" -->
+<div id="HTRSG219" class="sect2"><a id="sthref2"></a>
+<h3 class="sect2"><span class="secnum">1.2</span> Keep Up To Date on Latest Security Information Critical Patch Updates</h3>
+<p>Oracle continually improves its software and documentation. Critical Patch Updates are the primary means of releasing security fixes for Oracle products to customers with valid support contracts. They are released on the Tuesday closest to the 17th day of January, April, July and October. We highly recommend customers apply these patches as soon as they are released.</p>
+</div>
+<!-- class="sect2" -->
+<div id="HTRSG220" class="sect2"><a id="sthref3"></a>
+<h3 class="sect2"><span class="secnum">1.3</span> Configuring Strong Passwords on the Database</h3>
+<p>Although the importance of passwords is well known, the following basic rule of security management is worth repeating:</p>
+<p>Ensure all your passwords are strong passwords.</p>
+<p>You can strengthen passwords by creating and using password policies for your organization. For guidelines on securing passwords and for additional ways to protect passwords, see the specific to the database release you are using.</p>
+<p>You should modify the following passwords to use your policy-compliant strings:</p>
+<ul>
+<li>
+<p>Passwords for the database default accounts, such as SYS and SYSTEM.</p>
+</li>
+<li>
+<p>Passwords for the database application-specific schema accounts, such as HDM.</p>
+</li>
+<li>
+<p>Password for the database listener. You should not configure a password for the database listener as that will enable remote administration. For more information, see the <span class="italic">Removing the Listener Password</span> section of <span class="italic">Oracle&reg; Database Net Services Reference 11g Release 2 (11.2)</span></p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<div id="HTRSG221" class="sect2"><a id="sthref4"></a>
+<h3 class="sect2"><span class="secnum">1.4</span> Following the Principle of Least Privilege</h3>
+<p>The principle of least privilege states that users should be given the least amount of privilege to perform their jobs. Overly ambitious granting of responsibilities, roles, grants &mdash; especially early on in an organization's life cycle when people are few and work needs to be done quickly &mdash; often leaves a system wide open for abuse. User privileges should be reviewed periodically to determine relevance to current job responsibilities.</p>
+<p>Create the database by following the steps listed in the <span class="italic">Oracle&reg; Healthcare Translational Research Installation Guide</span>.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BABCECAE"></a>
+<div id="HTRSG226" class="sect1">
+<h2 class="sect1"><span class="secnum">2</span> Security Guidelines for Database Objects and Database Options</h2>
+<p>This section describes security guidelines for OHTR database objects and database options.</p>
+<div id="HTRSG227" class="sect2"><a id="sthref5"></a>
+<h3 class="sect2"><span class="secnum">2.1</span> Oracle Healthcare Translational Research Objects</h3>
+<p>OHTR contains database objects. You can use DDL scripts and PL/SQL procedures and functions to create database objects and DML scripts to create seed data. These files are part of the media pack.</p>
+<p>The guidelines for installing and configuring Oracle Database Server are available at</p>
+<p><code dir="ltr"><a href="http://docs.oracle.com/database/122/nav/install-and-upgrade.htm">http://docs.oracle.com/database/122/nav/install-and-upgrade.htm</a></code></p>
+</div>
+<!-- class="sect2" -->
+<div id="HTRSG228" class="sect2"><a id="sthref6"></a>
+<h3 class="sect2"><span class="secnum">2.2</span> Oracle Database Options</h3>
+<p>The Oracle Database has options that provide additional security features. OHTR may include data that falls under HIPAA guidelines in the United States and similar guidelines elsewhere. These features can help you comply with those guidelines.</p>
+<p class="subhead2"><a id="HTRSG229"></a>Database Vault</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Database Vault requires a separate license.</div>
+<p>OHTR includes data that may fall under HIPAA or other regulations outside the United States. These data are highly sensitive and only those with a need to know should have access to it. To prevent database administrators and other <span class="italic">superuser</span> accounts from accessing the data, Oracle recommends that Oracle Database Vault be used to limit access to the OHTR schema.</p>
+<p class="subhead2"><a id="HTRSG230"></a>Oracle Audit Vault</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Oracle Audit Vault requires a separate license.</div>
+<p>Oracle Audit Vault automates the audit collection, monitoring, and reporting process, turning audit data into a key security resource for detecting unauthorized activity.</p>
+<p>Consider using this feature to satisfy compliance regulations such as SOX, PCI, and HIPAA, and to mitigate security risks. OHTR sets the client identifier in the database session to allow identification of the end user.</p>
+<p class="subhead2"><a id="HTRSG231"></a>Transparent Data Encryption</p>
+<p>Transparent Data Encryption is one of the three components of the Oracle Advanced Security option for Oracle Database 12c Enterprise Edition. It provides transparent encryption of stored data to support your compliance efforts. If you employ Transparent Data Encryption, applications do not have to be modified and continue to work seamlessly as before. Data is automatically encrypted when it is written to disk and automatically decrypted when accessed by the application. Key management is built in, eliminating the complex task of creating, managing and securing encryption keys. Note that the Advanced Security Option is licensed separately from the database.</p>
+<p class="subhead2"><a id="HTRSG246"></a>Tablespace Encryption</p>
+<p>Tablespace Encryption is another component of the Oracle Advanced Security option for Oracle Database 12c Edition. Tablespace encryption facilitates encryption of the entire tablespace contents, rather than having to configure encryption on a column-by-column basis. It encrypts data at the datafile level to keep users from viewing the Oracle datafiles directly. Oracle recommends that you perform tablespace encryption for maximum protection.</p>
+<p class="subhead2"><a id="HTRSG268"></a>User Management</p>
+<p>WebLogic Server supports several authentication security providers, for example, LDAP. For more information, see the <span class="italic">Oracle&reg; Fusion Middleware Administering Security for Oracle WebLogic Server</span> at</p>
+<p><code dir="ltr"><a href="http://docs.oracle.com/middleware/12212/wls/SECMG/conf-security-for-domain.htm#SECMG777">http://docs.oracle.com/middleware/12212/wls/SECMG/conf-security-for-domain.htm#SECMG777</a><a href=""></a></code></p>
+<p>OHTR supports any authentication security providers supported by WebLogic Server 12c (12.2.1.2).</p>
+<p class="subhead2"><a id="HTRSG269"></a>Virtual Private Database</p>
+<p>OHTR now uses Row Level Security (also referred to as Virtual Private Database or VPD) to store identifiable attributes. The policies created on the tables containing identifiable attributes are always controlled by policies to prevent any user from being able to query this information. The Row Level Security option used will return null values for any column value that a user does not have permission to view. OHTR now has views on all of these patient tables to use a NVL function on each identifiable attribute to show an obfuscated value instead of the real value. If a user has permission to see the real value, then the real value will be returned in the view. Earlier versions of OHTR only showed obfuscated values and never stored real identifiable attributes.</p>
+<p>There is an optional configuration to hide the rows of data that any user does not have permissions to view. By default this option is not enabled, meaning that users can query the data and see obfuscated values for all protected attributes. There is a default configuration that allows access to all identifiable data. Specific users that have proper credentials can be assigned access to this configuration. All control to the assignments of users is allowed to only users that have the VPD_ADMIN role assigned, and all calls use the CDM.VPD_UTIL package. For more information, see the <span class="italic">Oracle&reg; Healthcare Translational Administrator's Guide</span>.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CEGBABIA"></a>
+<div id="HTRSG247" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">3</span> Disabling Unnecessary Operating System Level Services</h2>
+<p>This section suggests various unused operating system level services that you can disable to improve security.</p>
+<a id="CHDJHBEB"></a>
+<div id="HTRSG241" class="sect2">
+<h3 class="sect2"><span class="secnum">3.1</span> Disabling the Telnet Service</h3>
+<p>OHTR does not use the Telnet service.</p>
+<p>Telnet listens on port 23 by default. If the Telnet service is available on any computer, Oracle recommends that you disable Telnet in favor of Secure Shell (SSH). Telnet, which sends clear-text passwords and user names through a log-in, is a security risk to your servers. Disabling Telnet tightens and protects your system security.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CHDCJHGH"></a>
+<div id="HTRSG242" class="sect2">
+<h3 class="sect2"><span class="secnum">3.2</span> Disabling Other Unused Services</h3>
+<p>OHTR does not use the following services or information for any functionality:</p>
+<ul>
+<li>
+<p>Simple Mail Transfer Protocol (SMTP). This protocol is an Internet standard for E-mail transmission across Internet Protocol (IP) networks.</p>
+</li>
+<li>
+<p>Identification Protocol (identd). This protocol is generally used to identify the owner of a TCP connection on UNIX.</p>
+</li>
+<li>
+<p>Simple Network Management Protocol (SNMP). This protocol is a method for managing and reporting information about different systems.</p>
+</li>
+<li>
+<p>File transfer Protocol (FTP). This protocol is used for downloading or uploading files from the file server.</p>
+</li>
+</ul>
+<p>Therefore, restricting these services or information does not affect the use of OHTR. If you are not using these services for other applications, Oracle recommends that you disable these services to minimize your security exposure. If you need SMTP, identd, or SNMP for other applications, be sure to upgrade to the latest version of the protocol to provide the most up-to-date security for your system.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CHDBBAFE"></a>
+<div id="HTRSG243" class="sect1">
+<h2 class="sect1"><span class="secnum">4</span> Designing Multiple Layers of Protection</h2>
+<p>When designing a secure deployment, design multiple layers of protection. If a hacker should gain access to one layer, such as the application server, that should not automatically give them easy access to other layers, such as the database server.</p>
+<p>Providing multiple layers of protection may include:</p>
+<ul>
+<li>
+<p>Enabling only those ports required for communication between different tiers, for example, only allowing communication to the database tier on the port used for SQL*NET communications, (1521 by default).</p>
+</li>
+<li>
+<p>Placing firewalls between servers so that only expected traffic can move between servers.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect1" -->
+<a id="CEGBFIAH"></a>
+<div id="HTRSG248" class="sect1">
+<h2 class="sect1"><span class="secnum">5</span> Security Guidelines for the Middle Tier</h2>
+<p>This section describes the security guidelines for the OHTR middle tier.</p>
+<div id="HTRSG249" class="sect2"><a id="sthref7"></a>
+<h3 class="sect2"><span class="secnum">5.1</span> Removing Unused Applications from WebLogic</h3>
+<p>Currently, the WebLogic Server installation includes the entire JDK and some additional WebLogic Server development utilities (for example, wlsvc). These development programs are not needed at runtime and can be safely removed. The following are recommendations for making a WebLogic Server installation more secure:</p>
+<ul>
+<li>
+<p>Do not install the WebLogic Server sample applications.</p>
+</li>
+<li>
+<p>Delete development tools, such as the Configuration Wizard and the jCOM tools.</p>
+</li>
+<li>
+<p>Delete the Derby database, which is bundled with WebLogic Server for use by the sample applications and code examples as a demonstration database.</p>
+</li>
+</ul>
+<p>For more details, see the section on Determining Your Security Needs section in <span class="italic">Oracle&reg; Fusion Middleware Securing a Production Environment for Oracle WebLogic Server 12c (12.2.1.2)</span> available at</p>
+<p><code dir="ltr"><a href="http://docs.oracle.com/middleware/12211/wls/LOCKD/practices.htm#LOCKD116">http://docs.oracle.com/middleware/12211/wls/LOCKD/practices.htm#LOCKD116</a><a href=""></a></code></p>
+</div>
+<!-- class="sect2" -->
+<a id="CHDJAIHJ"></a>
+<div id="HTRSG244" class="sect2">
+<h3 class="sect2"><span class="secnum">5.2</span> Enabling SSL</h3>
+<p>Due to the complexity in setting up SSL it is not enabled by default during installation. Communications between the browser and the application servers should be restricted to SSL.</p>
+<p>It is optional to enable SSL, but Oracle strongly recommends SSL for a production environment.</p>
+<p>To enable SSL:</p>
+<ol>
+<li>
+<p>1og into WebLogic Server Administration Console.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Environment</span> node in the Domain Structure pane and click <span class="bold">Servers</span> in Environment table.</p>
+</li>
+<li>
+<p>Click the server where you deployed TrcApp.ear.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Configuration</span> tab.</p>
+</li>
+<li>
+<p>Click the <span class="bold">General</span> tab.</p>
+</li>
+<li>
+<p>If Save is disabled, click <span class="bold">Lock &amp; Edit</span> in the Change Center pane.</p>
+</li>
+<li>
+<p>Select the <span class="bold">SSL Listen Port Enabled</span> check box and enter a port number.</p>
+</li>
+<li>
+<p>To disable non-SSL port, deselect the <span class="bold">Listen Port Enabled</span> check box.</p>
+</li>
+<li>
+<p>Click <span class="bold">Save.</span></p>
+</li>
+<li>
+<p>Click <span class="bold">Activate Changes</span> in the Change Center pane, if it is enabled.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Control</span> tab.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Start/Stop</span> tab.</p>
+</li>
+<li>
+<p>Click <span class="bold">Restart SSL</span></p>
+</li>
+<li>
+<p>Click <span class="bold">Yes.</span></p>
+<p>The <span class="italic">SSL channels have been successfully restarted.</span> message appears.</p>
+</li>
+</ol>
+<p>You must also configure SSL, identity, and trust. For more information, see the <span class="italic">Oracle&reg; Fusion Middleware Securing Oracle WebLogic Server 12c (12.2.1.2).</span></p>
+</div>
+<!-- class="sect2" -->
+<div id="HTRSG250" class="sect2"><a id="sthref8"></a>
+<h3 class="sect2"><span class="secnum">5.3</span> Configuring SSL</h3>
+<p>To set up SSL, perform the following steps:</p>
+<ol>
+<li>
+<p>Obtain an identity (private key and digital certificates) and trust (certificates of trusted certificate authorities) for WebLogic Server. Use the digital certificates, private keys, and trusted CA certificates provided by WebLogic Server, the CertGen utility, the keytool utility, or a reputable vendor such as Entrust or Verisign to perform this step.</p>
+</li>
+<li>
+<p>Store the identity and trust. Private keys and trusted CA certificates which specify identity and trust are stored in keystores.</p>
+</li>
+<li>
+<p>Configure the identity and trust keystores for WebLogic Server in the WebLogic Server Administration Console.</p>
+</li>
+<li>
+<p>Set SSL configuration options for the private key alias and password in the WebLogic Server Administration Console. Optionally, set configuration options that require the presentation of client certificates (for two-way SSL).</p>
+</li>
+<li>
+<p>Oracle Software Security standards recommend that you disable <span class="italic">weak SSL cyphers</span>, that is, TLS lower than v1.1 and SSL v3 and v2.</p>
+</li>
+</ol>
+<p>For more details, see the section on Configuring SSL section in <span class="italic">Oracle&reg; Fusion Middleware Securing Oracle WebLogic Server 12c (112.2.1.2)</span> available at</p>
+<p><code dir="ltr"><a href="https://docs.oracle.com/middleware/1221/core/ASADM/sslconfig.htm#ASADM1800">https://docs.oracle.com/middleware/1221/core/ASADM/sslconfig.htm#ASADM1800</a><a href=""></a></code></p>
+</div>
+<!-- class="sect2" -->
+<div id="HTRSG252" class="sect2"><a id="sthref9"></a>
+<h3 class="sect2"><span class="secnum">5.4</span> Disabling Other Unused Services</h3>
+<p>OHTR does not use the following services or information for any functionality:</p>
+<ul>
+<li>
+<p>Simple Mail Transfer Protocol (SMTP). This protocol is an Internet standard for E-mail transmission across Internet Protocol (IP) networks.</p>
+</li>
+<li>
+<p>Identification Protocol (identd). This protocol is generally used to identify the owner of a TCP connection on UNIX.</p>
+</li>
+<li>
+<p>Simple Network Management Protocol (SNMP). This protocol is a method for managing and reporting information about different systems.</p>
+</li>
+<li>
+<p>File transfer Protocol (FTP). This protocol is used for downloading or uploading files from the file server.</p>
+</li>
+</ul>
+<p>Therefore, restricting these services or information does not affect the use of OHTR. If you are not using these services for other applications, Oracle recommends that you disable these services to minimize your security exposure. If you need SMTP, identd, or SNMP for other applications, be sure to upgrade to the latest version of the protocol to provide the most up-to-date security for your system.</p>
+</div>
+<!-- class="sect2" -->
+<div id="HTRSG254" class="sect2"><a id="sthref10"></a>
+<h3 class="sect2"><span class="secnum">5.5</span> Protecting User Accounts</h3>
+<p>WebLogic Server defines a set of configuration options to protect user accounts from intruders. In the default security configuration, these options are set for maximum protection. You can use the Administration Console to modify these options on the <span class="bold">Configuration</span> &gt; <span class="bold">User Lockout</span> page.</p>
+<p>As a system administrator, you have the option of turning off all the configuration options, increasing the number of login attempts before a user account is locked, increasing the time period in which invalid login attempts are made before locking the user account, and changing the amount of time a user account is locked. Remember that changing the configuration options lessens security and leaves user accounts vulnerable to security attacks. For more details, see the section on Configuring Security for a WebLogic Domain section in <span class="italic">Oracle&reg; Fusion Middleware Securing Oracle WebLogic Server 12c (12.2.1.2)</span> available at</p>
+<p><code dir="ltr"><a href="https://docs.oracle.com/middleware/1221/wls/SECMG/conf-security-for-domain.htm#SECMG777">https://docs.oracle.com/middleware/1221/wls/SECMG/conf-security-for-domain.htm#SECMG777</a><a href=""></a></code></p>
+<p class="subhead2"><a id="HTRSG271"></a>Monitoring Logs</p>
+<p>If you suspect any unusual transactions in the Cohort UI, monitor the diagnostic logs for any real-time, abnormal business activity.</p>
+<p>Application transactions should be monitored and real time corrective measures should be implemented to limit transaction rates outside application Service Level Agreements.</p>
+<div id="HTRSG270" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref11"></a>
+<h4 class="sect3"><span class="secnum">5.5.1</span> Password Validation Providers</h4>
+<p>WebLogic Server includes a Password Validation provider, which is configured by default in each security realm. The Password Validation provider manages and enforces a set of configurable password composition rules, and is automatically invoked by a supported authentication provider whenever a password is created or updated for a user in the realm. When invoked, the Password Validation provider performs a check to determine whether the password meets the criteria established by the composition rules. The password is then accepted or rejected as appropriate. For more information on the Password Validation provider, see the <span class="italic">Oracle&reg; Fusion Middleware Administering Security for Oracle WebLogic Server 12c (12.2.1.2)</span> available at</p>
+<p><code dir="ltr"><a href="https://docs.oracle.com/middleware/1221/wls/SECMG/password_atn.htm#SECMG206">https://docs.oracle.com/middleware/1221/wls/SECMG/password_atn.htm#SECMG206</a><a href=""></a></code></p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CEGDGCHI"></a>
+<div id="HTRSG255" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">6</span> Protecting Data</h2>
+<p>Data is vulnerable at many points in any computer system, and many security techniques and types of functionality can be employed to protect it.</p>
+</div>
+<!-- class="sect1" -->
+<a id="BABCIFGB"></a>
+<div id="HTRSG235" class="sect1">
+<h2 class="sect1"><span class="secnum">7</span> Setting Up Fine Grain Audit Policy</h2>
+<p>The OHTR application has 2 different schemas:</p>
+<ul>
+<li>
+<p>Application schema used by the OHTR application user interface</p>
+</li>
+<li>
+<p>Application schema used by the Clinical Genomic APIs</p>
+</li>
+</ul>
+<p>The following schemas from Oracle Healthcare Foundation (OHF) are used:</p>
+<ul>
+<li>
+<p>Schema for Cohort Data Mart (CDM)</p>
+</li>
+<li>
+<p>Schema for Omics Data Bank (ODB)</p>
+</li>
+<li>
+<p>Enterprise Schema (ENT)</p>
+</li>
+</ul>
+<p>For details on setting up the audit policy for these schemas, see the <span class="italic">Oracle&reg; Healthcare Foundation Security Guide</span>.</p>
+</div>
+<!-- class="sect1" -->
+<a id="CEGJEEDC"></a>
+<div id="HTRSG266" class="sect1">
+<h2 class="sect1"><span class="secnum">8</span> Documentation Accessibility</h2>
+<p>For information about Oracle's commitment to accessibility, visit the Oracle Accessibility Program website at <code dir="ltr"><a href="http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=docacc">http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=docacc</a></code>.</p>
+<p class="subhead2"><a id="sthref12"></a>Access to Oracle Support</p>
+<p>Oracle customers that have purchased support have access to electronic support through My Oracle Support. For information, visit <code dir="ltr"><a href="http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=info">http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=info</a></code> or visit <code dir="ltr"><a href="http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=trs">http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=trs</a></code> if you are hearing impaired.</p>
+</div>
+<!-- class="sect1" -->
+<a id="sthref13"></a>
+<hr />
+<p>Oracle Healthcare Translational Research Security Guide, Release 3.2</p>
+<p>E86020-01</p>
+<p>Copyright &copy; 2013, 2017,&nbsp;Oracle and/or its affiliates. All rights reserved.</p>
+<p>This software and related documentation are provided under a license agreement containing restrictions on use and disclosure and are protected by intellectual property laws. Except as expressly permitted in your license agreement or allowed by law, you may not use, copy, reproduce, translate, broadcast, modify, license, transmit, distribute, exhibit, perform, publish, or display any part, in any form, or by any means. Reverse engineering, disassembly, or decompilation of this software, unless required by law for interoperability, is prohibited.</p>
+<p>The information contained herein is subject to change without notice and is not warranted to be error-free. If you find any errors, please report them to us in writing.</p>
+<p>If this is software or related documentation that is delivered to the U.S. Government or anyone licensing it on behalf of the U.S. Government, then the following notice is applicable:</p>
+<p>U.S. GOVERNMENT END USERS: Oracle programs, including any operating system, integrated software, any programs installed on the hardware, and/or documentation, delivered to U.S. Government end users are "commercial computer software" pursuant to the applicable Federal Acquisition Regulation and agency-specific supplemental regulations. As such, use, duplication, disclosure, modification, and adaptation of the programs, including any operating system, integrated software, any programs installed on the hardware, and/or documentation, shall be subject to license terms and license restrictions applicable to the programs. No other rights are granted to the U.S. Government.</p>
+<p>This software or hardware is developed for general use in a variety of information management applications. It is not developed or intended for use in any inherently dangerous applications, including applications that may create a risk of personal injury. If you use this software or hardware in dangerous applications, then you shall be responsible to take all appropriate fail-safe, backup, redundancy, and other measures to ensure its safe use. Oracle Corporation and its affiliates disclaim any liability for any damages caused by use of this software or hardware in dangerous applications.</p>
+<p>Oracle and Java are registered trademarks of Oracle and/or its affiliates. Other names may be trademarks of their respective owners.</p>
+<p>Intel and Intel Xeon are trademarks or registered trademarks of Intel Corporation. All SPARC trademarks are used under license and are trademarks or registered trademarks of SPARC International, Inc. AMD, Opteron, the AMD logo, and the AMD Opteron logo are trademarks or registered trademarks of Advanced Micro Devices. UNIX is a registered trademark of The Open Group.</p>
+<p>This software or hardware and documentation may provide access to or information about content, products, and services from third parties. Oracle Corporation and its affiliates are not responsible for and expressly disclaim all warranties of any kind with respect to third-party content, products, and services unless otherwise set forth in an applicable agreement between you and Oracle. Oracle Corporation and its affiliates will not be responsible for any loss, costs, or damages incurred due to your access to or use of third-party content, products, or services, except as set forth in an applicable agreement between you and Oracle.</p>
+</div>
+<!-- class="letterstyle" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment55">
+<tr>
+<td class="cellalignment61">&nbsp;</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2013, 2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment63">
+<table class="cellalignment58">
+<tr>
+<td class="cellalignment59"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment59"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment59"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment59"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Transmitting and Monitoring Reports</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2018-02-13T11:0:59Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Argus Interchange User's Guide" />
+<meta name="dcterms.identifier" content="E93463-01" />
+<meta name="dcterms.isVersionOf" content="AEOBA" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Prev" href="e2bcheck.htm" title="Previous" type="text/html" />
+<link rel="Next" href="viewer.htm" title="Next" type="text/html" />
+<link rel="alternate" href="AEOBA.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="AEOBA.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="AEOBA.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">8/10</span> <!-- End Header -->
+<div id="AEOBA149" class="chapter"><a id="sthref34"></a>
+<h1 class="chapter"><span class="secnum">5</span> Transmitting and Monitoring Reports</h1>
+<p>Argus Safety provides utilities that enable you to schedule and transmit E2B reports. Using these utilities, you can also track the status of the transmitted E2B reports. This chapter includes discussions of the following:</p>
+<ul>
+<li>
+<p><a href="#BABIAAAH">Scheduling Reports</a></p>
+</li>
+<li>
+<p><a href="#BABIIAJB">Generating Reports</a></p>
+</li>
+<li>
+<p><a href="#BABHJDJE">Transmitting Reports</a></p>
+</li>
+</ul>
+<a id="BABIAAAH"></a>
+<div id="AEOBA150" class="sect1"><a id="Toc225301887"></a>
+<h2 class="sect1">Scheduling Reports</h2>
+<p>Argus Safety enables you to schedule your E2B, eMDR and eVAERS reports. In addition, it allows you to generate these reports that comply with the adverse event reporting requirements of different regulatory agencies.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+When you generate an E2B report, some characters entered by the user in the case form may not be display in the same way in the E2B report. Some characters are represented differently in the E2B report such as &amp;amp; for (&amp;), &amp;lt; for (&lt;), &amp;gt; for (&gt;), &amp;apos; for (') and &amp;quot; for (") as per XML specifications.</div>
+<p>To schedule an E2B report:</p>
+<ol>
+<li>
+<p>Open a case in Argus Safety and click the Regulatory Reports tab.</p>
+</li>
+<li>
+<p>When the system opens the Regulatory Reports tab, click Schedule New Report.</p>
+<img width="1149" height="658" src="img/regrep.gif" alt="Surrounding text describes regrep.gif." /><br /></li>
+<li>
+<p>When the system opens the New Expedited Report Dialog box, enter the relevant information and click OK.</p>
+<img width="558" height="494" src="img/repoinf.gif" alt="Surrounding text describes repoinf.gif." /><br /></li>
+</ol>
+<div id="AEOBA151" class="sect2"><a id="Toc245968594"></a>
+<h3 class="sect2">New Expedited Report Dialog Fields</h3>
+<p>The Schedule New Expedited Report window has a drop-down list on the top section.</p>
+<p><img width="267" height="237" src="img/schednew.gif" alt="Surrounding text describes schednew.gif." /><br /></p>
+<p>The following table lists and describes the fields in the New Expedited Report Dialog box.</p>
+<div class="inftblinformal">
+<table class="cellalignment17" summary="sum" dir="ltr">
+<thead>
+<tr class="cellalignment11">
+<th class="cellalignment18" id="r1c1-t3">Item</th>
+<th class="cellalignment18" id="r1c2-t3">Function</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r2c1-t3" headers="r1c1-t3">Product</td>
+<td class="cellalignment19" headers="r2c1-t3 r1c2-t3">Select the Company Suspect Product from this drop-down list.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r3c1-t3" headers="r1c1-t3">License Number</td>
+<td class="cellalignment19" headers="r3c1-t3 r1c2-t3">Select the particular license for which the report is to be scheduled.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r4c1-t3" headers="r1c1-t3">Destination</td>
+<td class="cellalignment19" headers="r4c1-t3 r1c2-t3">Select the Regulatory Agency to which the report is to be sent.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r5c1-t3" headers="r1c1-t3">Report Form</td>
+<td class="cellalignment19" headers="r5c1-t3 r1c2-t3">Select the Report Form from this drop down list.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r6c1-t3" headers="r1c1-t3">Message Type</td>
+<td class="cellalignment19" headers="r6c1-t3 r1c2-t3">Select the message type from the drop-down list.
+<p><span class="bold">Note:</span> This field is displayed when an E2B or eVAERS report is selected as the Report Form. If the Report Form is selected as eVAERS then the Message type is set to ichicsr and is disabled.</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r7c1-t3" headers="r1c1-t3">Aware Date</td>
+<td class="cellalignment19" headers="r7c1-t3 r1c2-t3">Select the Aware date for which the report is required to be scheduled.
+<p>Amendment reports can be scheduled by selecting the Aware date which is appended with text (A).</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r8c1-t3" headers="r1c1-t3">Group</td>
+<td class="cellalignment19" headers="r8c1-t3 r1c2-t3">If you want to assign the report to a specific group, the group can be selected from this drop down list.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r9c1-t3" headers="r1c1-t3">Notes</td>
+<td class="cellalignment19" headers="r9c1-t3 r1c2-t3">This field is directly mapped to the License but you can modify this field to put in extra notes, as desired.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r10c1-t3" headers="r1c1-t3">Protect confidentiality of Reporter and Patient</td>
+<td class="cellalignment19" headers="r10c1-t3 r1c2-t3">Select this checkbox if you do not wish to disclose the identity of the reporter and the patient in the report.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r11c1-t3" headers="r1c1-t3">Due Date</td>
+<td class="cellalignment19" headers="r11c1-t3 r1c2-t3">You can decide to schedule a report to be due in either 5, 15, or 30 days or any number of days or even on any specific date.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" -->
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Product, License Number, Destination, Report Form (E2B), and Due Date must be entered in the New Expedited Report Dialog to schedule an E2B report.</div>
+</div>
+<!-- class="sect2" -->
+<div id="AEOBA152" class="sect2"><a id="Toc245968601"></a>
+<h3 class="sect2">Nullification Reports</h3>
+<p>The system can automatically schedule, generate, and transmit a Nullification Report under the following circumstances:</p>
+<ul>
+<li>
+<p>When a case is deleted and an E2B Report is submitted to a reporting destination based on the Profile switch for sending E2B nullifications.</p>
+</li>
+<li>
+<p>When an E2B report is submitted and marked as unsubmitted from Reports | Compliance | Submitted Reports:</p>
+<ul>
+<li>
+<p>The Reason for Unsubmitting the report is sent as the nullification reason for the report.</p>
+</li>
+<li>
+<p>If the user selects the Send Nullification on Unsubmission of E2B Reports check box, the system also sends a nullification to the reporting destination where the E2B Report was previously submitted.</p>
+</li>
+<li>
+<p>If the user does not select the Send Nullification on Unsubmission of E2B Reports check box, the system does not send a nullification to the reporting destination where the E2B Report was previously submitted unless the user deletes the case.</p>
+</li>
+<li>
+<p>If a previous nullification for the E2B Report or an unsubmitted report is sent for a case and the case is deleted at a later date, the system does not send a duplicate nullification for the previous report.</p>
+</li>
+<li>
+<p>When the system generates the Nullification report, the system updates the following E2B items with updated values from the previous report.</p>
+</li>
+</ul>
+<div class="inftblinformal">
+<table class="cellalignment17" summary="The table describes the E2B values updated from the previous report when the system generates the Nullification report." dir="ltr">
+<thead>
+<tr class="cellalignment11">
+<th class="cellalignment18" id="r1c1-t5">Updated E2B Items</th>
+<th class="cellalignment18" id="r1c2-t5">Update Content</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r2c1-t5" headers="r1c1-t5">M.1.4/ N.1.2</td>
+<td class="cellalignment19" headers="r2c1-t5 r1c2-t5">System uses a different unique number from that used in the last report.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r3c1-t5" headers="r1c1-t5">M.1.7a</td>
+<td class="cellalignment19" headers="r3c1-t5 r1c2-t5">System enters the message date format.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r4c1-t5" headers="r1c1-t5">M.1.7b / N.1.5</td>
+<td class="cellalignment19" headers="r4c1-t5 r1c2-t5">System enters the message date.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r5c1-t5" headers="r1c1-t5">M.2</td>
+<td class="cellalignment19" headers="r5c1-t5 r1c2-t5">System increments this value every time it transmits the report.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r6c1-t5" headers="r1c1-t5">A.1.3a</td>
+<td class="cellalignment19" headers="r6c1-t5 r1c2-t5">System enters the message date format.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r7c1-t5" headers="r1c1-t5">A.1.3b/C.1.2</td>
+<td class="cellalignment19" headers="r7c1-t5 r1c2-t5">System enters the message date.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r8c1-t5" headers="r1c1-t5">A.1.13/C.1.11.1</td>
+<td class="cellalignment19" headers="r8c1-t5 r1c2-t5">System enters 1=Yes on the Nullification report.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r9c1-t5" headers="r1c1-t5">A.1.13.1/C.1.11.2</td>
+<td class="cellalignment19" headers="r9c1-t5 r1c2-t5">System enters the reason for the Nullification report.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r10c1-t5" headers="r1c1-t5">J.2</td>
+<td class="cellalignment19" headers="r10c1-t5 r1c2-t5">System increments this value every time it transmits the report.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r11c1-t5" headers="r1c1-t5">J.4b</td>
+<td class="cellalignment19" headers="r11c1-t5 r1c2-t5">System enters the PMDA Acknowledgement Number.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r12c1-t5" headers="r1c1-t5">J.5</td>
+<td class="cellalignment19" headers="r12c1-t5 r1c2-t5">System increments this value every time it submits the report.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r13c1-t5" headers="r1c1-t5">J.6</td>
+<td class="cellalignment19" headers="r13c1-t5 r1c2-t5">System will enter 1. 1 means that it is a completion report.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r14c1-t5" headers="r1c1-t5">J.7</td>
+<td class="cellalignment19" headers="r14c1-t5 r1c2-t5">System will remove the value of this tag, if it was present in the previous report.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" --></li>
+<li>
+<p>When you accept a Nullification report, the system creates an Action Item in the case. The action item tells you that the system will delete the case if you click OK on the acceptance Dialog for all unarchived cases.</p>
+<ul>
+<li>
+<p>Action Item is a type-ahead field and its default is blank.</p>
+</li>
+<li>
+<p>The field is populated with values from the action item configured in the code List.</p>
+</li>
+<li>
+<p>You can assign the number of days until the action item is due in the Due In field. The system enables this field after you select an Action Item type.</p>
+</li>
+<li>
+<p>The system calculates the due date as follows: System Date (local client date) + Due In number of days.</p>
+</li>
+<li>
+<p>The system puts the System Date (local client date) in the Date field.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>When creating the action item, you can select a value from the Code List and the Action Item Description. The system uses the following format: Nullification: xxx</p>
+<p>where:</p>
+<p>xxx is the value entered in the Notes field.</p>
+</li>
+<li>
+<p>By default, the system assigns the action item to the user group in the User Group field.</p>
+<ul>
+<li>
+<p>There can be a maximum of 25 user groups in the drop-down list.</p>
+</li>
+<li>
+<p>The system performs a like search when you select a value in the User Group field.</p>
+</li>
+<li>
+<p>If the User Group field is blank, the system does not assign the action item.</p>
+</li>
+<li>
+<p>This is enabled after you select an action item.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>If you do not select an action item, the system does not create an action item for the case.</p>
+</li>
+<li>
+<p>If you accept multiple cases, the system creates action items for all accepted cases.</p>
+</li>
+<li>
+<p>The system skips open, locked, or archived cases or cases you don't have permission to access.</p>
+</li>
+<li>
+<p>If the system archives a case while you are accepting the nullification report, the system displays the Archived Case Dialog to enable you to open the archived case.</p>
+</li>
+<li>
+<p>After you reopen the case, the system displays the Accept Nullification E2B Dialog.</p>
+</li>
+<li>
+<p>If you do not have permission to reopen an archived case, the system displays the following message:</p>
+<p><span class="italic">You do not have permission to Re-Open an archived/closed case.</span></p>
+</li>
+<li>
+<p>Nullification reports are not scheduled for eMDR.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<div id="AEOBA158" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref35"></a>
+<h3 class="sect2">Follow-Up eMDR Reports</h3>
+<p>If an eMDR report is manually scheduled or automatically scheduled for the same reporting Destination, system either schedules Initial or Follow-up report based on the same logic (product license ID and status of previously scheduled report) that is currently existing for Device reports.</p>
+<p>If the case was previously submitted to a Reporting Destination as MedWatch Device report and if the same reporting destination is configured for sending eMDR report:</p>
+<ol>
+<li>
+<p>System schedules the next eMDR as a follow-up report and displays the follow-up numbering in the Case Form ' Regulatory Reports ' Seq field by considering the previously reported MedWatch device report.</p>
+</li>
+<li>
+<p>System uses the same report number (F.2 or G.9) that was used in MedWatch Device report in eMDR for the data element ufimporterrepnumber(F2) or mfrreportnumber (G9).</p>
+</li>
+<li>
+<p>Follow-up number that is populated in (F7 uffollowupnumber or G7 gfollowupnumber) shall be incremented from (F7 or G7) of the previously submitted MedWatch Device report by considering the internal common profile switch <span class="italic">Allow generation of Report</span>.</p>
+</li>
+</ol>
+<p>Example : If F/p 1 report was submitted as 0000555-2014-00011 to CDRH in MedWatch format and the next follow-up report in eMDR format, then Mfr Report # shall be populated as 0000555-2014-00011 and F/p number as 2.</p>
+<p>If the previous report was sent by eMDR and the subsequent report is being sent as MedWatch Device to the same destination, the system shall maintain the report numbering (F2 or G9) same as of previously submitted eMDR.</p>
+<ol>
+<li>
+<p>System schedules a follow-up report by populating <span class="italic">Follow-up' in the Case Form</span> Regulatory Reports' Seq column.</p>
+</li>
+<li>
+<p>System uses the same report number (F2 or G9) from the previously submitted eMDR report in the F2 or G9 of MedWatch Device report.</p>
+</li>
+<li>
+<p>Follow-up number that is populated in (F7 or G7) is incremented from (F7 uffollowupnumber or G7 gfollowupnumber) of the previously submitted eMDR report by considering the internal common profile switch <span class="italic">Allow generation of Report</span>.</p>
+</li>
+<li>
+<p>The MedWatch Device scheduled after the eMDR report does not respect the Common Profile Switch "<span class="italic">Data to print on follow up MedWatch Device form</span> "and system displays a warning message during manual scheduling of report as <span class="italic">Delta data will not be printed MedWatch Device form for this Device license as it was previously submitted as an eMDR</span>. In case automatic scheduling, this warning message is logged against the report without impacting report scheduling or generation.</p>
+</li>
+</ol>
+<p>Example : If F/p 1 report was submitted as 0000555-2014-00011 to CDRH in eMDR format and the next follow-up report in eMDR report fails due to some reason and company decides to send them in MedWatch device format, then MedWatch report shall print Mfr Report # as 0000555-2014-00011 and F/p number as 2</p>
+<p>System includes complete data in follow-up eMDR as the other E2B (R3) reports.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Common Profile Switch Data to print on follow up MedWatch Device form does not have any impact on eMDR follow-ups.</div>
+<p>Downgrade report is scheduled automatically if the F/UP version does not satisfy the Regulatory Reporting Rules defined for eMDR for a case that was previously submitted in eMDR.</p>
+<p>Follow-up eMDR is scheduled automatically if the Significant F/UP version is marked as Amendment for a case that was previously submitted in eMDR (existing functionality for non E2B (R3) reports).</p>
+<p>Nullification reports are not scheduled for eMDR.</p>
+</div>
+<!-- class="sect2" -->
+<div id="AEOBA159" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref36"></a>
+<h3 class="sect2">Follow-up eVAERS Reports</h3>
+<p>If an eVAERS report is manually scheduled or automatically scheduled for the same reporting Destination, system either schedules Initial or Follow-up report based on the same logic (product license type and status of previously scheduled report) that is currently existing for E2B reports.</p>
+<p>If the case was previously submitted to a Reporting Destination in VAERS PDF format and if the same reporting destination is configured for sending eVAERS report:</p>
+<ol>
+<li>
+<p>System schedules the next eVAERS as a follow-up report and displays the follow-up numbering in the Case Form ' Regulatory Reports ' Seq field by considering the previously reported VAERS.</p>
+</li>
+<li>
+<p>If any Follow-up reports are scheduled to the same destination at a later point of time, system schedules a follow-up report by populating'<span class="italic">Follow-up&lt;##&gt; in Case Form</span> Regulatory Reports Seq column.</p>
+</li>
+<li>
+<p>System uses Case Number (as printed in the Manufacturer Control Number (that is listed in Box 24) of the previously submitted VAERS report) in data elements C.1.1. and C.1.8.1.</p>
+</li>
+</ol>
+<p>If a reporting destination is configured for eVAERS and VAERS reports and if the previous report was sent in eVAERS format and if the subsequent report is scheduled in VAERS PDF format to the same destination:</p>
+<ol>
+<li>
+<p>System schedules an initial report by populating <span class="italic">Initial' in the Case Form</span> Regulatory Reports Seq column.</p>
+</li>
+<li>
+<p>If any Follow-up reports are scheduled to the same destination at a later point of time, system schedules a follow-up report by populating <span class="italic">Follow-up&lt;##&gt; in Case Form</span> Regulatory Reports Seq column.</p>
+</li>
+<li>
+<p>System does not use (C.1.1) from the previously submitted eVAERS report as the Manufacturer Control Number of VAERS report.</p>
+</li>
+</ol>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If user tries to generate eVAERS and VAERS in parallel for a Case, then system has different MCN for eVAERS and VAERS reports for the same case.</div>
+<p>Downgrade report is scheduled automatically if the Significant F/UP version does not satisfy the Regulatory Reporting Rules defined for eVAERS for a case was submitted in eVAERS.</p>
+<p>System auto-schedules Amendment report instead of a follow-up report for a Reporting Destination configured with eVAERS profile, when:</p>
+<p><span class="bold">a.</span> eVAERS report was previously submitted to the same Reporting Destination for the same license type</p>
+<p><span class="bold">b.</span> if the latest record in the 'Amendment / Follow-up section' of Case Form ' General is an Amendment and the Amendment record was created for previously submitted eVAERS report</p>
+<p>System auto-schedules a Nullification report instead of follow-up report for a Reporting Destination configured with eVAERS, under the same conditions ( Case deletion and manually scheduling Nullification from Reports Compliance Submitted Reports Schedule Nullification) as per current functionality on Nullification reports for E2B profiles.</p>
+<p>When Nullification report is generated, following data element items have updated values from the previous report.</p>
+<ul>
+<li>
+<p>N.1.2 batchmessagenumb</p>
+</li>
+<li>
+<p>N.1.5 batchmessagedate</p>
+</li>
+<li>
+<p>N.2.r.4 messagecreationdate</p>
+</li>
+<li>
+<p>C.1.2 transmissiondater3</p>
+</li>
+<li>
+<p>C.1.11.1 casenullification</p>
+</li>
+<li>
+<p>C.1.11.2 nullificationreason</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BABIIAJB"></a>
+<div id="AEOBA160" class="sect1"><a id="Toc245968595"></a>
+<h2 class="sect1">Generating Reports</h2>
+<p>Use the following procedure to generate a scheduled report.</p>
+<ol>
+<li>
+<p>E2B, eMDR and eVAERS report scan be manually generated by clicking the draft/final links in the row that corresponds to the scheduled E2B Report in In the Regulatory Reports tab. The report is generated and can be viewed in the ICSR Viewer. If a validation error occurs during E2B report generation, the validation details are stored in the Report Details Dialog.</p>
+</li>
+<li>
+<p>E2B, eMDR and eVAERS reports are generated by AG Services for a locked case which has scheduled E2B report.</p>
+</li>
+</ol>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The system allows you to generate E2B reports through AG Service irrespective of the your access rights for blinded information. However, the Blind protected users are not allowed to view E2B reports despite having an Argus Interchange license. If such a user tries to view the E2B report, the system generates the message: <span class="italic">Report is generated but system is unable to show the report as user is protected from study information</span>.</div>
+</div>
+<!-- class="sect1" -->
+<div id="AEOBA161" class="sect1"><!-- infolevel="all" infotype="General" --><a id="sthref37"></a>
+<h2 class="sect1">Attachments in Reports</h2>
+<p>Case Form Attachments are sent to Reporting Destination with the E2B (R2) report as described below:</p>
+<ol>
+<li>
+<p>If attachment classification in the case is specified in the Reporting Destination, system reads such Attachments and converts .XLS, .TXT, .TIF, .DOC, .RTF, .PNG, .JPG or .BMP them into PDF and combine with the PDF attachments if any in the case.</p>
+</li>
+<li>
+<p>The single merged PDF has each attachment which is merged available as a link (bookmark) by the classification name provided for the attached file.</p>
+</li>
+<li>
+<p>Attachments are sent only if there is a E2B report sent out for that Agency. Attachments are not sent for nullification reports.</p>
+</li>
+</ol>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+While transmitting attachments using the FDA profile in the E2B (R2) format, the system places the attachment file (PDF file created by merging all relevant attachments) in the configured Attachment folder (<span class="bold">Reporting Destination</span> &gt; <span class="bold">EDI tab</span> &gt; <span class="bold">ICSR Attachment Outgoing folder</span>) only after receiving a positive ACK for the ICSR submitted in the E2B (R2) format as an Initial or Follow-up report.
+<p>The placement of Attachment files in configured folder after receipt of Positive Ack is done only for E2B (R2) generated using FDA E2B (R2) profile (CFG_PROFILE.AUTHORITY_ID=2.</p>
+<p>The system retains the ICSR Attachment in the Outgoing folder if a negative acknowledge is received for an ICSR.</p>
+</div>
+<p>Case Form Attachments are sent to the Reporting Destination with E2B (R3) report as described below:</p>
+<ol>
+<li>
+<p>Case Form Attachments are embedded within the ICSR sent in report formats such as E2B (R3), eVAERS and eMDR.</p>
+</li>
+<li>
+<p>Attachments are encoded in the B64 format and sent in the report. The selection of attachments is based on Reporting Destination configuration.</p>
+</li>
+<li>
+<p>Attachments for E2B(R3) are compressed using the compression algorithm configured before embedding them to ICSR. The default algorithm used is DF (Deflate). Attachments are not compressed in eVAERS and eMDR reports.</p>
+</li>
+<li>
+<p>Attachments that were sent out in previous submissions are not sent in Follow-up submission of E2B (R3), eVAERS and eMDR reports (only new and updated attachments are sent in Follow-up reports).</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="BABHJDJE"></a>
+<div id="AEOBA162" class="sect1"><a id="Toc245968596"></a>
+<h2 class="sect1">Transmitting Reports</h2>
+<div id="AEOBA163" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref38"></a>
+<h3 class="sect2">Transmitting ICSR Reports</h3>
+<p>Argus Safety enables you to simultaneously submit multiple adverse event reports to ease the submission process.</p>
+<p>After submission of ICSR, the Reporting Destination which receives the ICSR sends MDN and Business Acknowledgment to indicate the status of report acceptance.</p>
+<p>The section below describes use of the Bulk Reporting screen to transmit E2B reports and ICSR Transmit Status, ICSR Receive Status and Bulk ICSR transmit screen to track the report submissions and acknowledgement.</p>
+</div>
+<!-- class="sect2" -->
+<div id="AEOBA164" class="sect2"><a id="Toc245968597"></a>
+<h3 class="sect2">Transmitting Bulk Reports by Form</h3>
+<p>Use the following procedure to transmit Bulk Reports by Form:</p>
+<ol>
+<li>
+<p>Click Reports -&gt;Bulk Reporting.</p>
+<img width="1152" height="661" src="img/bulkrep.gif" alt="Surrounding text describes bulkrep.gif." /><br /></li>
+<li>
+<p>When the system opens the Bulk Reporting Dialog box, enter the appropriate data in the fields.</p>
+</li>
+<li>
+<p>In the Report Form list, select E2B, eMDR or eVAERS.</p>
+</li>
+<li>
+<p>Under Printing Options, select Transmit.</p>
+</li>
+<li>
+<p>Select the Mark as Submitted check box if it is required to mark the report as <span class="italic">submitted</span> after the transmission is successful.</p>
+</li>
+<li>
+<p>When Expedited reports are selected, the Mark as Submitted Dialog is displayed as shown below:</p>
+<img width="451" height="322" src="img/trans-comm.gif" alt="Surrounding text describes trans-comm.gif." /><br /></li>
+<li>
+<p>Click <span class="bold">OK</span> to transmit the report(s)</p>
+<p>or</p>
+<p>Click <span class="bold">Cancel</span> to close the Dialog box without transmitting the report.</p>
+</li>
+<li>
+<p>If the Marked as Submitted check box was selected in step 5, the system opens the Report Submission Information Dialog box.</p>
+<p>Enter the submission notes in the Notes field and click <span class="bold">OK</span>.Transmitting Bulk Reports by Form</p>
+<img width="396" height="215" src="img/mark-sub.gif" alt="Surrounding text describes mark-sub.gif." /><br /></li>
+</ol>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If the Marked as Submitted check box was not selected, the Report Submission Information Dialog does not appear automatically. In this case, once the report has been successfully transmitted, it can be marked as &rdquo;submitted&rdquo; from the Worklist as follows:
+<p>Go to Worklist -&gt;Bulk ICSR Transmit and verify that the View All radio button is selected.</p>
+<p>Scroll in the list to locate the required report. If the report status is <span class="italic">Success</span>, click the report icon and select Mark Report as Submitted.</p>
+<p>In the Report Submission Information Dialog box, enter the submission notes and click OK.</p>
+</div>
+</div>
+<!-- class="sect2" -->
+<div id="AEOBA166" class="sect2"><a id="Toc245968599"></a>
+<h3 class="sect2">Monitoring ICSR Transmit Status</h3>
+<p>Use the following procedure to monitor ICSR Transmit Status:</p>
+<ol>
+<li>
+<p>Click Utilities -&gt; ICSR -&gt; ICSR Transmit Status</p>
+</li>
+<li>
+<p>When the system opens the ICSR Transmit Status Dialog, enter the appropriate data.</p>
+<img width="984" height="489" src="img/icsrtrnsmit.jpg" alt="Surrounding text describes icsrtrnsmit.jpg." /><br /></li>
+</ol>
+<div id="AEOBA167" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref39"></a>
+<h4 class="sect3">ICSR Transmit Status Fields</h4>
+<p>The following table lists and describes the fields in the ICSR Transmit Status Dialog box.</p>
+<div class="inftblinformal">
+<table class="cellalignment17" summary="The following table lists and describes the fields in the E2B Transmit Status dialog box." dir="ltr">
+<thead>
+<tr class="cellalignment11">
+<th class="cellalignment18" id="r1c1-t11">Item</th>
+<th class="cellalignment18" id="r1c2-t11">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r2c1-t11" headers="r1c1-t11">Column Headers</td>
+<td class="cellalignment19" headers="r2c1-t11 r1c2-t11">Clicking the column header sort the data by that column alternately in a ascending and descending order.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r3c1-t11" headers="r1c1-t11">Agency / Trading Partner</td>
+<td class="cellalignment19" headers="r3c1-t11 r1c2-t11">Enables you to filter data by selecting the Agency / Trading Partner from the list.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r4c1-t11" headers="r1c1-t11">Transmit Date Range From</td>
+<td class="cellalignment19" headers="r4c1-t11 r1c2-t11">The search start date.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r5c1-t11" headers="r1c1-t11">Transmit Date Range To</td>
+<td class="cellalignment19" headers="r5c1-t11 r1c2-t11">The search end date</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r6c1-t11" headers="r1c1-t11">Range</td>
+<td class="cellalignment19" headers="r6c1-t11 r1c2-t11">A pre-defined date that you select from the list.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r7c1-t11" headers="r1c1-t11">Message # Range From</td>
+<td class="cellalignment19" headers="r7c1-t11 r1c2-t11">The beginning message number for the search.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r8c1-t11" headers="r1c1-t11">Message # Range To</td>
+<td class="cellalignment19" headers="r8c1-t11 r1c2-t11">The ending message number for the search.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r9c1-t11" headers="r1c1-t11">Type</td>
+<td class="cellalignment19" headers="r9c1-t11 r1c2-t11">Enables you to filter data by selecting the pre-defined Type of Message (MSG, ACK) from the list.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r10c1-t11" headers="r1c1-t11">Print</td>
+<td class="cellalignment19" headers="r10c1-t11 r1c2-t11">Enables you to print the current view.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r11c1-t11" headers="r1c1-t11">Search</td>
+<td class="cellalignment19" headers="r11c1-t11 r1c2-t11">Enables you to perform the search.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" -->
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The EDI Header control number is shown only for EDI files.</div>
+<ol>
+<li>
+<p>Select the appropriate agency or trading partner from the Agency/Trading Partner list.</p>
+</li>
+<li>
+<p>Select the appropriate option, Transmit Date or Message # to search by transmit date or by message number.</p>
+</li>
+<li>
+<p>Enter the appropriate search criteria beside the selected option and click Search.</p>
+</li>
+<li>
+<p>In the search results, click the appropriate report.</p>
+</li>
+<li>
+<p>The Message Acknowledgement Status Dialog appears.</p>
+<img width="803" height="495" src="img/msgacksts.jpg" alt="Surrounding text describes msgacksts.jpg." /><br /></li>
+<li>
+<p>This Dialog provides detailed information about the transmission status of the report. Enter the data for each field as required.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<div id="AEOBA168" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref40"></a>
+<h4 class="sect3">Message Acknowledgement Status Dialog Fields</h4>
+<p>The following table lists and describes the fields in the Message Acknowledgement Status Dialog box.</p>
+<div class="inftblinformal">
+<table class="cellalignment17" summary="The following table lists and describes the fields in the Message Acknowledgement Status dialog box." dir="ltr">
+<thead>
+<tr class="cellalignment11">
+<th class="cellalignment18" id="r1c1-t13">Item</th>
+<th class="cellalignment18" id="r1c2-t13">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r2c1-t13" headers="r1c1-t13">ICSR Message Number</td>
+<td class="cellalignment19" headers="r2c1-t13 r1c2-t13">This is the sender's transmission message number.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r3c1-t13" headers="r1c1-t13">Acknowledgement Message #</td>
+<td class="cellalignment19" headers="r3c1-t13 r1c2-t13">This is the receiver's acknowledgement message number.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r4c1-t13" headers="r1c1-t13">ICSR Message Sender ID</td>
+<td class="cellalignment19" headers="r4c1-t13 r1c2-t13">This is the sender name or identifier.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r5c1-t13" headers="r1c1-t13">ICSR Message Date</td>
+<td class="cellalignment19" headers="r5c1-t13 r1c2-t13">This is the date and time the sender transmitted the message.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r6c1-t13" headers="r1c1-t13">ICSR Message Receiver ID</td>
+<td class="cellalignment19" headers="r6c1-t13 r1c2-t13">This is the receiver name or identification.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r7c1-t13" headers="r1c1-t13">Acknowledgement Message Date</td>
+<td class="cellalignment19" headers="r7c1-t13 r1c2-t13">This is the date and time the message was received.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r8c1-t13" headers="r1c1-t13">Transmission Acknowledgement Code</td>
+<td class="cellalignment19" headers="r8c1-t13 r1c2-t13">This indicates whether the receiver loaded all transmitted reports or part of the transmitted reports into the database.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r9c1-t13" headers="r1c1-t13">Report Number</td>
+<td class="cellalignment19" headers="r9c1-t13 r1c2-t13">This is the report number for adverse event.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r10c1-t13" headers="r1c1-t13">Authority /Company Number</td>
+<td class="cellalignment19" headers="r10c1-t13 r1c2-t13">If the ICSR report originates from a regulatory authority/company, this is regulatory authority's/company's report identification number.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r11c1-t13" headers="r1c1-t13">Other Number</td>
+<td class="cellalignment19" headers="r11c1-t13 r1c2-t13">The system uses this number if the report originates from an entity other than a trading partner or a regulatory authority.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r12c1-t13" headers="r1c1-t13">Report Status</td>
+<td class="cellalignment19" headers="r12c1-t13 r1c2-t13">Report status can be either "Report Loaded" or "Report not loaded."</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r13c1-t13" headers="r1c1-t13">Report Type</td>
+<td class="cellalignment19" headers="r13c1-t13 r1c2-t13">This is the report type. It can be one of the following
+<p>Initial</p>
+<p>Follow up</p>
+<p>Nullification</p>
+<p>Duplicate</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r14c1-t13" headers="r1c1-t13">Error Message/Comments</td>
+<td class="cellalignment19" headers="r14c1-t13 r1c2-t13">This indicates whether an error message or comments are associated with the transmission or receipt of the report.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" --></div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<div id="AEOBA169" class="sect2"><a id="Toc245968600"></a>
+<h3 class="sect2">Monitoring ICSR Receive Status</h3>
+<p>Use the following procedure to monitor ICSR Receive Status:</p>
+<ol>
+<li>
+<p>Select Utilities -&gt; ICSR -&gt; ICSR Receive Status.</p>
+</li>
+<li>
+<p>When the system opens the ICSR Receive Status Dialog box, enter the appropriate data in each field.</p>
+</li>
+</ol>
+<div id="AEOBA170" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref41"></a>
+<h4 class="sect3">ICSR Receive Status Dialog Fields</h4>
+<p>The following table lists and describes the fields in the ICSR Receive Status Dialog box.</p>
+<div class="inftblinformal">
+<table class="cellalignment17" summary="The following table lists and describes the fields in the E2B Receive Status dialog box." dir="ltr">
+<thead>
+<tr class="cellalignment11">
+<th class="cellalignment18" id="r1c1-t14">Item</th>
+<th class="cellalignment18" id="r1c2-t14">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r2c1-t14" headers="r1c1-t14">Agency / Trading Partner</td>
+<td class="cellalignment19" headers="r2c1-t14 r1c2-t14">Enables you to filter data by selecting the Agency / Trading Partner from the list.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r3c1-t14" headers="r1c1-t14">Receive Date Range From</td>
+<td class="cellalignment19" headers="r3c1-t14 r1c2-t14">The search start date.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r4c1-t14" headers="r1c1-t14">Receive Date Range To</td>
+<td class="cellalignment19" headers="r4c1-t14 r1c2-t14">The search end date.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r5c1-t14" headers="r1c1-t14">Range</td>
+<td class="cellalignment19" headers="r5c1-t14 r1c2-t14">Enables you to select a pre-defined date range</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r6c1-t14" headers="r1c1-t14">Message # Range From</td>
+<td class="cellalignment19" headers="r6c1-t14 r1c2-t14">The beginning message number for the search.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r7c1-t14" headers="r1c1-t14">Message # Range To</td>
+<td class="cellalignment19" headers="r7c1-t14 r1c2-t14">The ending message number for the search.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r8c1-t14" headers="r1c1-t14">Type</td>
+<td class="cellalignment19" headers="r8c1-t14 r1c2-t14">Enables you to filter data by selecting the pre-defined Type of Message (MSG, ACK) from the list.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r9c1-t14" headers="r1c1-t14">Control #</td>
+<td class="cellalignment19" headers="r9c1-t14 r1c2-t14">The control number.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r10c1-t14" headers="r1c1-t14">Local Msg #</td>
+<td class="cellalignment19" headers="r10c1-t14 r1c2-t14">The local message number.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r11c1-t14" headers="r1c1-t14">Remote Msg #</td>
+<td class="cellalignment19" headers="r11c1-t14 r1c2-t14">The remote message number.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r12c1-t14" headers="r1c1-t14">Total Reports</td>
+<td class="cellalignment19" headers="r12c1-t14 r1c2-t14">The total number of reports.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r13c1-t14" headers="r1c1-t14">Rejected Reports</td>
+<td class="cellalignment19" headers="r13c1-t14 r1c2-t14">The number of rejected reports.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r14c1-t14" headers="r1c1-t14">File Name</td>
+<td class="cellalignment19" headers="r14c1-t14 r1c2-t14">The name of the received file.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r15c1-t14" headers="r1c1-t14">Received from EDI</td>
+<td class="cellalignment19" headers="r15c1-t14 r1c2-t14">The date and time the file was received.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r16c1-t14" headers="r1c1-t14">Transmission Status</td>
+<td class="cellalignment19" headers="r16c1-t14 r1c2-t14">The transmission status for the file.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r17c1-t14" headers="r1c1-t14">Print</td>
+<td class="cellalignment19" headers="r17c1-t14 r1c2-t14">Enables you to print the current view.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r18c1-t14" headers="r1c1-t14">Search</td>
+<td class="cellalignment19" headers="r18c1-t14 r1c2-t14">Enables you to initiate the search.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" -->
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The EDI Header control number is shown only for EDI files.</div>
+<ol>
+<li>
+<p>Select the appropriate agency or trading partner from the Agency/Trading Partner list</p>
+</li>
+<li>
+<p>You can search for the receive status by either receive date or message number. Select the appropriate option among Transmit Date and Message #.</p>
+</li>
+<li>
+<p>Enter the appropriate search criteria beside the selected option and click Search.</p>
+</li>
+<li>
+<p>In the search results, double-click the appropriate report.</p>
+</li>
+<li>
+<p>When the system opens the Message Acknowledgement Status Dialog, enter the appropriate data in each field.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<div id="AEOBA171" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref42"></a>
+<h4 class="sect3">Message Acknowledgement Status Dialog Fields</h4>
+<p>The following table lists and describes the fields in the Message Acknowledgement Status Dialog box.</p>
+<div class="inftblinformal">
+<table class="cellalignment17" summary="The following table lists and describes the fields in the Message Acknowledgement Status dialog box." dir="ltr">
+<thead>
+<tr class="cellalignment11">
+<th class="cellalignment18" id="r1c1-t16">Item</th>
+<th class="cellalignment18" id="r1c2-t16">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r2c1-t16" headers="r1c1-t16">ICSR Message Number</td>
+<td class="cellalignment19" headers="r2c1-t16 r1c2-t16">This is the sender's transmission message number.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r3c1-t16" headers="r1c1-t16">Acknowledgement Message #</td>
+<td class="cellalignment19" headers="r3c1-t16 r1c2-t16">This is the receiver's acknowledgement message number.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r4c1-t16" headers="r1c1-t16">ICSR Message Sender ID</td>
+<td class="cellalignment19" headers="r4c1-t16 r1c2-t16">This is the sender name or identifier.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r5c1-t16" headers="r1c1-t16">ICSR Message Date</td>
+<td class="cellalignment19" headers="r5c1-t16 r1c2-t16">This is the date and time the sender transmitted the message.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r6c1-t16" headers="r1c1-t16">ICSR Message Receiver ID</td>
+<td class="cellalignment19" headers="r6c1-t16 r1c2-t16">This is the receiver name or identification.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r7c1-t16" headers="r1c1-t16">Acknowledgement Message Date</td>
+<td class="cellalignment19" headers="r7c1-t16 r1c2-t16">This is the date and time the message was received.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r8c1-t16" headers="r1c1-t16">Transmission Acknowledgement Code</td>
+<td class="cellalignment19" headers="r8c1-t16 r1c2-t16">This indicates whether the receiver loaded all transmitted reports or part of the transmitted reports into the database.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r9c1-t16" headers="r1c1-t16">Report Number</td>
+<td class="cellalignment19" headers="r9c1-t16 r1c2-t16">This is the report number for adverse event.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r10c1-t16" headers="r1c1-t16">Authority /Company Number</td>
+<td class="cellalignment19" headers="r10c1-t16 r1c2-t16">If the ICSR report originates from a regulatory authority/company, this is regulatory authority's/company's report identification number.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r11c1-t16" headers="r1c1-t16">Other Number</td>
+<td class="cellalignment19" headers="r11c1-t16 r1c2-t16">The system uses this number if the report originates from an entity other than a trading partner or a regulatory authority.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r12c1-t16" headers="r1c1-t16">Report Status</td>
+<td class="cellalignment19" headers="r12c1-t16 r1c2-t16">Report status can be either "Report Loaded" or "Report not loaded."</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r13c1-t16" headers="r1c1-t16">Report Type</td>
+<td class="cellalignment19" headers="r13c1-t16 r1c2-t16">This is the report type. It can be one of the following
+<p>Initial</p>
+<p>Follow up</p>
+<p>Nullification</p>
+<p>Duplicate</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r14c1-t16" headers="r1c1-t16">Error Message/Comments</td>
+<td class="cellalignment19" headers="r14c1-t16 r1c2-t16">This indicates whether an error message or comments are associated with the transmission or receipt of the report.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" --></div>
+<!-- class="sect3" -->
+<div id="AEOBA172" class="sect3"><a id="sthref43"></a>
+<h4 class="sect3">Validation Check of Incoming Message</h4>
+<p>Prior to updating the transmission status of the reports, the application identifies the type of incoming message and validates the incoming message. The ICSR service processes all the incoming messages located in a folder either in incoming EDI directory or physical media directory. Incoming ICSR Messages are retrieved as SGML from a shared directory. The incoming folder is configurable in Argus Interchange Mapping Utility. ICSR message is parsed to check the validity of the SGML file using the correct version of DTD. The incoming message is saved after checking that message is in compliance with DTD.</p>
+<p>The recipient of the ICSR message acknowledges receipt of message and notifies the sender about the validity and usability of the data in the reports. The acknowledgment message is called as ICSR Acknowledgment Message. When a message is acknowledged, workflow status of the ICSR report is updated with one of the following three status:</p>
+<ul>
+<li>
+<p>All reports loaded into recipient database</p>
+</li>
+<li>
+<p>ICSR Error, not all reports loaded into database</p>
+</li>
+<li>
+<p>SGML parsing error no data extracted</p>
+</li>
+</ul>
+<p>The acknowledgement contains two sections, one concerning the validity of the message as a whole and the second containing comments on the validity of the individual reports within the message. Create a folder and configure it through the Argus Interchange Mapping Utility, where all the incoming messages can be stored. The Interchange service processes the received message and moves it in the Archive folder.</p>
+<p>The message is validated based on the ICH ICSR acknowledgement specifications and the format of the message identified by DTD version. Correctness of receiver and sender identifier present in the message header is also validated to verify that the message is not sent to the wrong recipient.</p>
+<p>The content of the message is validated based on the following:</p>
+<ul>
+<li>
+<p>Required Data</p>
+</li>
+<li>
+<p>Data Type</p>
+</li>
+<li>
+<p>Data Length</p>
+</li>
+<li>
+<p>Field Value</p>
+</li>
+</ul>
+<p>The system identifies message type (acknowledgement) and the DTD version of the message. If the application is unable to identify the message type or DTD version, then the error is logged in the log table and further processing is stopped. The application sends an email to configured email address indicating the failure to read the message.</p>
+<p>Application checks for the presence of the duplicate in the system based on the &amp;rsquor;Sender identifier' and &amp;rsquor;Acknowledgement Message Tracking #'. Processing of the acknowledgement is stopped, if duplicate message is found in the database and an error is logged into the log table.</p>
+<p>The following table describes the error messages and reasons for the occurrence of corresponding errors.</p>
+<div class="inftblinformal">
+<table class="cellalignment17" summary="The table describes the error messages that are logged in the log table and the also describes the possible reasons for errors that can occur." dir="ltr">
+<thead>
+<tr class="cellalignment11">
+<th class="cellalignment18" id="r1c1-t17">Process</th>
+<th class="cellalignment18" id="r1c2-t17">Error message</th>
+<th class="cellalignment18" id="r1c3-t17">Possible Reason of error</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r2c1-t17" headers="r1c1-t17">Read the Incoming message from the folder</td>
+<td class="cellalignment19" headers="r2c1-t17 r1c2-t17">XML File not in path.</td>
+<td class="cellalignment19" headers="r2c1-t17 r1c3-t17">File is removed.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r3c1-t17" headers="r1c1-t17">Identification of the incoming message type</td>
+<td class="cellalignment19" headers="r3c1-t17 r1c2-t17">&lt;&lt;File Name&gt;&gt; not a valid XML File</td>
+<td class="cellalignment19" headers="r3c1-t17 r1c3-t17">File format is not as per ICH guidelines.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r4c1-t17" headers="r1c1-t17">Identification of the incoming message type</td>
+<td class="cellalignment19" headers="r4c1-t17 r1c2-t17">Not valid ICH ICSR message Tag &amp;rsquor;&lt;ichicsrmessageheader&gt;' not found</td>
+<td class="cellalignment19" headers="r4c1-t17 r1c3-t17">File does not contain the valid ICH Message Header.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r5c1-t17" headers="r1c1-t17">Identification of the incoming message type</td>
+<td class="cellalignment19" headers="r5c1-t17 r1c2-t17">Failure to identify the type of incoming message. Either Tag &lt;messagetype&gt; is missing/misspelled or tag does not contain valid value. The valid values are ICHICSR, ICHICSRACK</td>
+<td class="cellalignment19" headers="r5c1-t17 r1c3-t17">The incoming file is identified as a message or acknowledgment. The identification value is wrong.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r6c1-t17" headers="r1c1-t17">Identification of the incoming message type</td>
+<td class="cellalignment19" headers="r6c1-t17 r1c2-t17">Record not found in CFG_PROFILE table for DTD version '2.0', DTD release '1.0', Active profile = 'Y' and profile type starts 'ACK%'</td>
+<td class="cellalignment19" headers="r6c1-t17 r1c3-t17">Profile does not exist in cfg_profile table.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r7c1-t17" headers="r1c1-t17">Validation of the incoming message type</td>
+<td class="cellalignment19" headers="r7c1-t17 r1c2-t17">M2 Validation failed for incoming message. The following are the elements and values:&lt;&lt;Element, value&gt;&gt;</td>
+<td class="cellalignment19" headers="r7c1-t17 r1c3-t17">M2 validation failed on the message header.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r8c1-t17" headers="r1c1-t17">Identification of the incoming acknowledgement type</td>
+<td class="cellalignment19" headers="r8c1-t17 r1c2-t17">Invalid ICH ICSR message Tag &amp;rsquor;&lt;messageacknowledgment&gt;' not found.</td>
+<td class="cellalignment19" headers="r8c1-t17 r1c3-t17">File does not contain the valid ICH Acknowledgment Header.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r9c1-t17" headers="r1c1-t17">Processing acknowledgment</td>
+<td class="cellalignment19" headers="r9c1-t17 r1c2-t17">Record not found in MESSAGES table for the ICSRMESSAGE number &lt;&lt;MessageNum&gt;&gt; ICSRMESSAGE receiver identifier &lt;&lt;receiver info&gt;&gt; for the received acknowledgment</td>
+<td class="cellalignment19" headers="r9c1-t17 r1c3-t17">Record is deleted from the database.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r10c1-t17" headers="r1c1-t17">Processing acknowledgment</td>
+<td class="cellalignment19" headers="r10c1-t17 r1c2-t17">Duplicate acknowledgment received for ICSRMESSAGE number &lt;&lt;message number&gt;&gt; and ICSRMESSAGE RECEIVER IDENTIFIER &lt;&lt;receiver info&gt;&gt;</td>
+<td class="cellalignment19" headers="r10c1-t17 r1c3-t17">Acknowledgment already exists for this message number.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r11c1-t17" headers="r1c1-t17">Processing acknowledgment</td>
+<td class="cellalignment19" headers="r11c1-t17 r1c2-t17">&lt;reportacknowledgment&gt; section is missing from the received acknowledgment, MESSAGE number &lt;&lt;message number&gt;&gt;</td>
+<td class="cellalignment19" headers="r11c1-t17 r1c3-t17">Acknowledgment does not contain the report acknowledgment body.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r12c1-t17" headers="r1c1-t17">Processing acknowledgment</td>
+<td class="cellalignment19" headers="r12c1-t17 r1c2-t17">Record not found in SAFETYREPORT table for company number &lt;&lt;Company Number&gt;&gt; and msg_id &lt;&lt;message id&gt;&gt;</td>
+<td class="cellalignment19" headers="r12c1-t17 r1c3-t17">Record is deleted from SAFETYREPORT table from database.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" -->
+<p>Refer to the sample email messages that are sent to the configured email address in case of message validation failure:</p>
+<ul>
+<li>
+<p>In case of invalid XML format:</p>
+<p>From: ICSR service user</p>
+<p>Subject: &lt;&lt;file name&gt;&gt; not valid XML formats file</p>
+<p>Content: This mail has been sent by the system to notify that the system has failed to identify the file &lt;&lt;file name&gt;&gt; as a valid XML file.</p>
+<p>Error has occurred on Line: &lt;&lt;line no&gt;&gt;, Source Text &lt;&lt;Error Text&gt;&gt;, Error Code &lt;&lt;Parsing Error Code&gt;&gt;, Error Reason &lt;&lt;Error Reason&gt;&gt;</p>
+<p>Thanks,</p>
+<p>&lt;&lt; ICSR service user &gt;&gt;</p>
+</li>
+<li>
+<p>In case the application fails to identify the incoming message:</p>
+<p>From: ICSR service user</p>
+<p>Subject: Failure to Identify the Type of Incoming Message.</p>
+<p>Content: This mail has been sent by the system to notify that the system has failed to identify the type of the incoming message (Acknowledgement or a Message) present in the file &lt;&lt;Incoming Message File Name&gt;&gt;.</p>
+<p>Thanks,</p>
+<p>&lt;&lt; ICSR service user &gt;&gt;</p>
+</li>
+<li>
+<p>In case of validation failure of the incoming acknowledgement:</p>
+<p>From: ICSR service user</p>
+<p>Subject: Validation Failure of the Incoming Acknowledgement.</p>
+<p>Content: This mail has been sent by the system to notify that the system has failed to further process the incoming acknowledgement present in the file &lt;&lt;Incoming Message File Name&gt;&gt;.</p>
+<p>The following are the reasons for this failure:</p>
+<p>#&lt;n&gt;. &lt;&lt;Insert the corresponding relevant error message.&gt;&gt;</p>
+<p>Thanks,</p>
+<p>&lt;&lt; ICSR service user &gt;&gt;</p>
+</li>
+</ul>
+<p>You can view the acknowledgement information of a report such as acknowledgement message tracking #, acknowledgement report tracking #, date acknowledge initiated, company ICSR message, and error reported by receiver, in the Report Details Dialog.</p>
+<p>The status of the each ICSR report is updated based on the information extracted from the ICSR acknowledgment, irrespective of the transmission status (Success or Failure). Refer to the section, Viewing Acknowledgement Information, for viewing the acknowledgement information.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<div id="AEOBA173" class="sect2"><a id="Toc245968602"></a>
+<h3 class="sect2">Viewing Status</h3>
+<p>Argus Safety provides the feature to monitor the transmission status of E2B, eMDR and eVAERS reports.</p>
+<p>Use the following procedure to check the status of transmitted E2B, eMDR and eVAERS reports.</p>
+<ol>
+<li>
+<p>Select Worklist -&gt; Bulk ICSR Transmit.</p>
+<img width="1168" height="607" src="img/bulkicsr.jpg" alt="Surrounding text describes bulkicsr.jpg." /><br /></li>
+<li>
+<p>Select E2B, eMDR or eVAERS report from the Report drop-down list.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Reports</span> tab to view the transmission status of E2B reports.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Message</span> tab to view the transmission status of individual E2B messages.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CHDDAHFB"></a>
+<div id="AEOBA174" class="sect2"><a id="Toc245968603"></a>
+<h3 class="sect2">Viewing Acknowledgement Information</h3>
+<p>In Argus Safety, you can view detailed acknowledgement information for a report sent to a trading partner or a regulatory authority. Use the following procedure to view acknowledgement information.</p>
+<p>The status of each report is updated, based on the information extracted from the ICSR acknowledgment, irrespective of the transmission status (Success or Failure).</p>
+<p>The acknowledgement information such as acknowledgement message tracking #, acknowledgement report tracking #, date acknowledge initiated, company ICSR message and error reported by receiver is displayed in the Report Details Dialog.</p>
+<ol>
+<li>
+<p>On the Regulatory Reports tab of the Case Form, click the E2B, eMDR, or eVAERS report and select View Report Details.</p>
+</li>
+<li>
+<p>When the system opens the Report Details Dialog, click View ACK Information to view the acknowledgement details for that report. If the report is rejected, an error message or a comment appears in the Notes area of the Dialog</p>
+<p>When the Acknowledgement Information Dialog opens:</p>
+<img width="543" height="420" src="img/viewack.jpg" alt="Surrounding text describes viewack.jpg." /><br />
+<p>Click Print to print the acknowledgement details</p>
+<p>OR</p>
+<p>Click OK to close the Dialog box.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment10">
+<tr>
+<td class="cellalignment19">
+<table class="cellalignment15">
+<tr>
+<td class="cellalignment14"><a href="e2bcheck.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment14"><a href="viewer.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment22">
+<table class="cellalignment13">
+<tr>
+<td class="cellalignment14"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment14"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment14"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment14"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

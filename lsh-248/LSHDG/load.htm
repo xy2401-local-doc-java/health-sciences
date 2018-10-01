@@ -1,0 +1,2324 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Defining Load Sets</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2018-05-25T8:22:15Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Life Sciences Data Hub Application Developer's Guide" />
+<meta name="dcterms.identifier" content="E95831-01" />
+<meta name="dcterms.isVersionOf" content="LSHDG" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2006, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="vars.htm" title="Previous" type="text/html" />
+<link rel="Next" href="dm.htm" title="Next" type="text/html" />
+<link rel="alternate" href="LSHDG.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="LSHDG.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="LSHDG.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">10/20</span> <!-- End Header -->
+<div id="LSHDG767" class="chapter"><a id="CHDJEBCD"></a>
+<h1 class="chapter"><span class="secnum">7</span> Defining Load Sets</h1>
+<p>This section contains information on the following topics:</p>
+<ul>
+<li>
+<p><a href="#BJEDDCJJ">About Load Sets</a></p>
+</li>
+<li>
+<p><a href="#BJEHJAAE">Creating a Load Set</a></p>
+</li>
+<li>
+<p><a href="#CHDCFDCH">Using the Load Set Properties Screen</a></p>
+</li>
+<li>
+<p><a href="#BJEDGFIE">Defining Table Descriptors</a></p>
+</li>
+<li>
+<p><a href="#BJEBBCFJ">Setting Load Set Parameters</a></p>
+</li>
+<li>
+<p><a href="#BJEFBFFF">About Load Set Planned Outputs</a></p>
+</li>
+<li>
+<p><a href="#BJEBADDC">Defining Different Load Set Types</a></p>
+<ul>
+<li>
+<p><a href="#BJEGJDGH">Oracle Tables and Views</a></p>
+</li>
+<li>
+<p><a href="#BJECFBCG">SAS</a></p>
+</li>
+<li>
+<p><a href="#BJEHDDDJ">Text</a></p>
+</li>
+<li>
+<p><a href="#BJEFEEED">Oracle Clinical Stable Interface</a></p>
+</li>
+<li>
+<p><a href="#BJEIAGCH">Oracle Clinical Data Extract SAS Views</a></p>
+</li>
+<li>
+<p><a href="#BJEEJIDJ">Oracle Clinical Data Extract Views</a></p>
+</li>
+<li>
+<p><a href="#BJEDEHDF">Oracle Clinical Design and Definition</a></p>
+</li>
+<li>
+<p><a href="#BJEHFDAH">Oracle Clinical Global Metadata</a></p>
+</li>
+<li>
+<p><a href="#BJEDAEHB">Oracle Clinical Labs</a></p>
+</li>
+<li>
+<p><a href="#BJEHADIB">Oracle Clinical Randomization</a></p>
+</li>
+<li>
+<p><a href="#BJEIJDGI">Oracle Clinical Study Data</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#BJECBDGE">Installing Load Set Instances</a></p>
+</li>
+<li>
+<p><a href="#CIHJCFDA">Modifying Load Sets</a></p>
+</li>
+</ul>
+<div id="LSHDG768" class="figure">
+<p class="titleinfigure"><a id="CEGCFGAC"></a>Figure 7-1 Process of Creating a Load Set Definition and Instance</p>
+<img width="937" height="393" src="img/load_set_process.gif" alt="Description of Figure 7-1 follows" /><br />
+<a id="sthref47" href="img_text/load_set_process.htm">Description of ''Figure 7-1 Process of Creating a Load Set Definition and Instance''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<a id="BJEDDCJJ"></a>
+<div id="LSHDG769" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">About Load Sets</h2>
+<p>To load data into the Oracle Life Sciences Data Hub (Oracle LSH), you define and run a Load Set.</p>
+<p>Oracle LSH allows you to load data from a wide variety of sources. The standard Oracle LSH installation (without any special customizations) allows you to load data from SAS, from any Oracle database, or from a text file. Oracle LSH also has a set of Load Set types developed especially for Oracle Clinical that allow you to load data from data extract views, from the discrepancy management subsystem, and from the global library.</p>
+<p>Oracle LSH uses a specialized executable defined object called a Load Set to handle data loading. A Load Set definition identifies the type of source data system and includes Table Descriptors that specify the required structure of one or more Tables into which to load the data in Oracle LSH. For Oracle and SAS Load Sets the system can create Table Descriptors based on tables or data sets in the source data system. For all types, you can create Table instances based on Table Descriptors and map them automatically, using a job in the <span class="bold">Actions</span> drop-down list.</p>
+<p>For Load Sets that load files&mdash;SAS and Text&mdash;you should not specify the file during Load Set definition because the system uploads the actual data file at that time. Let the person who executes the Load Set specify the file to get the most current data. For the same reason it does not make sense to set up a repeating schedule for running a SAS or Text Load Set; you would be loading the same data each time.</p>
+<p>For Oracle-technology Load Sets you can specify default values in the Load Set definition for the tables to be loaded. The system only creates views during Load Set definition, and always loads the most current data when you run the Load Set. You can set up a repeating execution schedule to update the data as necessary.</p>
+<p>At runtime, if the user submitting the Load Set specifies different external tables or files to load from the ones you used to create the Table Descriptors, the Load Set will run successfully if the data structure is compatible; see <a href="#BJEJEFGH">"Enforced Compatibility at Runtime"</a>.</p>
+<p>For information on loading blinded data, see <a href="exec.htm#BCGEGAIH">"Loading Real and Dummy Data"</a>.</p>
+<p><a id="CEGDIFBI"></a><a id="LSHDG770"></a><span class="subhead3">Load Set Types&nbsp;</span>The different types of Load Sets are as follows. You see only those types that your company uses and that you have security access for.</p>
+<ul>
+<li>
+<p><a href="#BJEGJDGH">Oracle Tables and Views</a>. Oracle LSH loads data and metadata from any Oracle database.</p>
+</li>
+<li>
+<p><a href="#BJECFBCG">SAS</a>. Oracle LSH loads one SAS data set at a time or, using a CPORT or XPORT file, multiple data sets. The system loads metadata at the time of Load Set definition and data at Load Set runtime.</p>
+</li>
+<li>
+<p><a href="#BJEHDDDJ">Text</a>. Oracle LSH loads one or more text files into one or more Table instances.</p>
+</li>
+<li>
+<p><a href="#BJEEJIDJ">Oracle Clinical Data Extract Views</a>. Oracle LSH loads patient data from Oracle views defined in Oracle Clinical.</p>
+</li>
+<li>
+<p><a href="#BJEIAGCH">Oracle Clinical Data Extract SAS Views</a>. Oracle LSH loads patient data from SAS views defined in Oracle Clinical.</p>
+</li>
+<li>
+<p><a href="#BJEHFDAH">Oracle Clinical Global Metadata</a>. Oracle LSH loads your Oracle Clinical Global Library definitions and automatically converts them to Oracle LSH definitions as follows: converts Oracle Clinical Questions to Oracle LSH Variables. If a Question is associated with a DVG, Oracle LSH also converts the Question to an Oracle LSH Parameter with the DVG as its list of allowed values. Oracle LSH converts Oracle Clinical Question Groups to Oracle LSH Tables with Columns based on the Variables corresponding to each Question in the Question Group.</p>
+</li>
+<li>
+<p><a href="#BJEDAEHB">Oracle Clinical Labs</a>. Oracle LSH loads Lab definitions, Lab Ranges, and Lab Assignment Criteria, and other Lab-related metadata (see <a href="#BJEBJCIH">"OC Labs Load Set Table Descriptors"</a> for a complete list).</p>
+</li>
+<li>
+<p><a href="#BJEIJDGI">Oracle Clinical Study Data</a>. Oracle LSH loads study-specific data including discrepancies, Data Clarification Forms (DCFs), page tracking information and patient status information.</p>
+</li>
+<li>
+<p><a href="#BJEFEEED">Oracle Clinical Stable Interface</a>. Oracle LSH loads tables described in the <span class="italic">Oracle Clinical 4.x Stable Interface Guide</span>.</p>
+</li>
+<li>
+<p><a href="#BJEHADIB">Oracle Clinical Randomization</a>. Oracle LSH loads Oracle Clinical tables related to the Randomization subsystem.</p>
+</li>
+</ul>
+<p><a id="LSHDG771"></a><span class="subhead3">Security&nbsp;</span>Each Load Set type uses a different predefined Oracle LSH adapter to handle the data and metadata exchange between the external system and Oracle LSH. An adapter consists of a group of predefined objects in an Adapter Area, which is contained in an Adapter Domain.</p>
+<p>Before you can create a Load Set for any Oracle source data system you must do the following setup: enter connection information for the remote location into Oracle LSH in the Remote Locations subtab of the Administration tab. Instructions are included in the chapter "Registering Locations and Connections" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub System Administrator's Guide</span></span>.</p>
+<ul>
+<li>
+<p>Create one or more user groups and assign them to Adapter Areas (see "Setting Up Security for Adapters" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub System Administrator's Guide</span></span>). Each Definer who will need to define Load Sets must belong to a user group that is assigned to the Adapter Area that corresponds to the Load Set type that he or she needs to define.</p>
+<p>In addition, you must add an administrator a user group assigned to each Oracle-technology adapter so that the administrator can define remote locations for the Oracle adapters.</p>
+</li>
+<li>
+<p>An administrator must define remote locations for the Oracle adapters. If you want to use shared connections, the administrator must create them. See the chapter on "Defining Remote Locations" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub System Administrator's Guide</span></span> for further information.</p>
+</li>
+<li>
+<p>Individual users with access to external Oracle systems can create their own connections for use in defining and running Load Sets Preferences, accessed from a link on the Oracle LSH My Home screen. See "Getting Started" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub User's Guide</span></span> for further information.</p>
+</li>
+</ul>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+When you define any Oracle technology-based Load Set you must enter a Remote Location and your own (or shared) connection information in the Attributes section of the Load Set definition in order to create the Load Set's Table Descriptors.
+<p>However, be careful not to enter your own or shared connection information as a runtime Parameter because this represents a breach of security on the source data system, enabling anyone with security access to the Load Set itself to run the Load Set regardless of whether he or she has the required privileges on the source system.</p>
+<p>Leave the Parameter value empty so that the user must enter his or her own connection information to run the Load Set.</p>
+</div>
+<p><a id="BJEDJGBG"></a><a id="LSHDG772"></a><span class="subhead3">Execution&nbsp;</span>Load Sets, like other Oracle LSH executable objects, have Execution Setups that serve as the basis for the submission form for running the job. You can modify the default value of Parameters in the Execution Setup definition, and the user submitting the Load Set can change them at runtime. See <a href="deftasks.htm#BEIGAICB">"Creating, Modifying, and Submitting Execution Setups"</a>.</p>
+<p>Oracle LSH uses the Processing Type you define for the target Table instances to determine how to process the data and whether to maintain an internal audit trail of inserts, updates, and deletes (see <a href="exec.htm#CHDHFBGG">"Data Processing Types"</a> for further information).</p>
+<p><a id="LSHDG773"></a><span class="subhead3">Loading Blinded Data&nbsp;</span>See <a href="exec.htm#BCGEGAIH">"Loading Real and Dummy Data"</a>.</p>
+<p><a id="LSHDG774"></a><span class="subhead3">Reports on Load Set Definitions and Instances&nbsp;</span>From the <span class="bold">Actions</span> drop-down list, you can generate reports that provide information on a Load Set definition or instance; see <a href="obj_reports.htm#CIHJIAJE">Chapter 14, "System Reports"</a> for information.</p>
+</div>
+<!-- class="sect1" -->
+<a id="BJEHJAAE"></a>
+<div id="LSHDG776" class="sect1">
+<h2 class="sect1">Creating a Load Set</h2>
+<p>When you create a Load Set in a Work Area, you are actually creating an instance of a Load Set definition.</p>
+<p>To create a new Load Set instance:</p>
+<ol>
+<li>
+<p>In a Work Area, select <span class="bold">Load Set</span> from the <span class="bold">Add</span> drop-down list.</p>
+</li>
+<li>
+<p>Click <span class="bold">Go</span>.</p>
+<p>The system displays the Create Load Set screen.</p>
+</li>
+<li>
+<p>Choose one of the following options:</p>
+<ul>
+<li>
+<p><span class="bold">Create a new Load set Definition and Instance</span>. Choose this option if no Load Set definition exists that can meet your needs, either as it is or with some modification.</p>
+</li>
+<li>
+<p><span class="bold">Create an instance of an existing definition</span>. Choose this option if a Load Set definition already exists that meets your needs.</p>
+<p>If you can adapt an existing Load Set definition to make it fit your needs, first copy it into the current Application Area, then choose this option and select the copied definition. See <a href="deftasks.htm#CHDEHHAG">"Finding an Appropriate Definition"</a> and <a href="deftasks.htm#CHDJIJBH">"Reusing Existing Definitions"</a> for further information.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Depending on your choice, follow one of the following sets of instructions:</p>
+<ul>
+<li>
+<p><a href="#BJEHJHDC">Creating a New Load Set Definition and Instance</a></p>
+</li>
+<li>
+<p><a href="deftasks.htm#CHDGAIDJ">Creating an Instance of an Existing Definition</a></p>
+</li>
+</ul>
+</li>
+</ol>
+<a id="BJEHJHDC"></a>
+<div id="LSHDG777" class="sect2">
+<h3 class="sect2">Creating a New Load Set Definition and Instance</h3>
+<p>When you select <span class="bold">Create a new Load set Definition and instance</span> in the Create Load Set screen, additional fields appear.</p>
+<ol>
+<li>
+<p>Enter values in the following fields:</p>
+<ul>
+<li>
+<p><span class="bold">Name</span>. See <a href="deftasks.htm#CHDBIJAH">"Naming Objects"</a>.</p>
+</li>
+<li>
+<p><span class="bold">Description</span>. See <a href="deftasks.htm#CHDIHBBC">"Creating and Using Object Descriptions"</a>.</p>
+</li>
+<li>
+<p><span class="bold">Load Set Type</span>. See <a href="#BJEBADDC">"Defining Different Load Set Types"</a> for information.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>In the <span class="bold">Classification</span> section, select the following for both the definition and the instance:</p>
+<ul>
+<li>
+<p><span class="bold">Subtype</span>. Select a subtype according to your company's policies.</p>
+</li>
+<li>
+<p><span class="bold">Classification Values</span>. See <a href="deftasks.htm#CHDJADAD">"Classifying Objects and Outputs"</a> for instructions.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Apply</span> to save your work and continue defining the Load Set.</p>
+<p>The system opens the Properties screen for the new Load Set instance.</p>
+</li>
+</ol>
+<p>See the following sections for general information that applies to most Load Set types:</p>
+<ul>
+<li>
+<p><a href="#CIHFABAA">Setting Load Set Attributes</a></p>
+</li>
+<li>
+<p><a href="#BJEBBCFJ">Setting Load Set Parameters</a></p>
+</li>
+<li>
+<p><a href="#BJEDGFIE">Defining Table Descriptors</a></p>
+</li>
+<li>
+<p><a href="#BJEFBFFF">About Load Set Planned Outputs</a></p>
+</li>
+</ul>
+<p>See <a href="#BJEBADDC">"Defining Different Load Set Types"</a> for information about each type of Load Set.</p>
+<a id="CIHFABAA"></a>
+<div id="LSHDG779" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Setting Load Set Attributes</h4>
+<p>Some Load Set types include attributes. These vary depending on the type of Load Set; see the instructions for each type of Load Set:</p>
+<ul>
+<li>
+<p><a href="#BJECCAAC">Oracle Load Set Attributes</a></p>
+</li>
+<li>
+<p><a href="#BJEGGJAJ">SAS Load Set Attributes</a></p>
+</li>
+<li>
+<p><a href="#BJEIGIED">Text Load Set Attributes</a></p>
+</li>
+<li>
+<p><a href="#BJECGEAG">OC Stable Interface Tables Load Set Attributes</a></p>
+</li>
+<li>
+<p><a href="#BJEJJCJI">OC DX SAS Views Load Set Attributes</a></p>
+</li>
+<li>
+<p><a href="#BJEGEHEE">OC Data Extract Views Load Set Attributes</a></p>
+</li>
+<li>
+<p><a href="#BJEHBDHB">OC Design and Definition Load Set Attributes</a></p>
+</li>
+<li>
+<p><a href="#BJEJDABE">OC Global Metadata Load Set Attributes</a></p>
+</li>
+<li>
+<p><a href="#BJEFDBIH">OC Labs Load Set Attribute</a></p>
+</li>
+<li>
+<p><a href="#BJEDHFBJ">OC Randomization Load Set Attributes</a></p>
+</li>
+<li>
+<p><a href="#BJEEBICG">OC Study Data Load Set Attributes</a></p>
+</li>
+</ul>
+<p>These values cannot be changed at runtime.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CIHBGDJA"></a>
+<div id="LSHDG780" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Creating an Instance of an Existing Load Set Definition</h3>
+<p>If you use an existing Load Set as a definition source, all of its Table Descriptors, Parameters and other characteristics are already defined. See <a href="deftasks.htm#CHDGAIDJ">"Creating an Instance of an Existing Definition"</a> for instructions.</p>
+<p>After you have created the Load Set instance, you must map the Table Descriptors to Table instances; see <a href="deftasks.htm#CIHDCCDA">"Mapping Table Descriptors to Table Instances"</a> for instructions.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CHDCFDCH"></a>
+<div id="LSHDG782" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Using the Load Set Properties Screen</h2>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#CIHGBJDA">Instance Properties</a></p>
+</li>
+<li>
+<p><a href="#CIHJCCEI">Definition Properties</a></p>
+</li>
+<li>
+<p><a href="#CEGIAJIE">Load Set Attributes</a></p>
+</li>
+<li>
+<p><a href="#CIHJCHHC">Buttons</a></p>
+</li>
+<li>
+<p><a href="deftasks.htm#CIHDAIFF">Using the Actions Drop-Down List</a></p>
+</li>
+<li>
+<p>Subtabs:</p>
+<ul>
+<li>
+<p><a href="#BJEDGFIE">Defining Table Descriptors</a></p>
+</li>
+<li>
+<p><a href="#BJEBBCFJ">Setting Load Set Parameters</a></p>
+</li>
+<li>
+<p><a href="#BJEFBFFF">About Load Set Planned Outputs</a></p>
+</li>
+<li>
+<p><a href="deftasks.htm#BEIIGDGF">Viewing Jobs</a></p>
+</li>
+</ul>
+</li>
+</ul>
+<p>See also <a href="#CEGCFGAC">Figure 7-1, "Process of Creating a Load Set Definition and Instance"</a>.</p>
+<p>See <a href="#CIHJCFDA">"Modifying Load Sets"</a> for information on modifying Load Sets.</p>
+<p>If you are working in a Work Area, you see the properties of both the Load Set instance and the Load Set definition it references. If you are working directly on the definition in an Application Area or Domain, you see only the properties of the definition.</p>
+<a id="CIHGBJDA"></a>
+<div id="LSHDG783" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Instance Properties</h3>
+<p>You can see the following instance properties:</p>
+<p><a id="LSHDG784"></a><span class="subhead3">Name&nbsp;</span>You can click <span class="bold">Update</span> and modify the name. See <a href="deftasks.htm#CHDBIJAH">"Naming Objects"</a> for further information.</p>
+<p><a id="LSHDG785"></a><span class="subhead3">Description&nbsp;</span>You can click <span class="bold">Update</span> and modify the description. See <a href="deftasks.htm#CHDIHBBC">"Creating and Using Object Descriptions"</a> for further information.</p>
+<p><a id="CIHDIGDB"></a><a id="LSHDG786"></a><span class="subhead3">Definition&nbsp;</span>This field specifies the Load Set definition to which this Load Set instance points. For further information, see <a href="#CIHGBHJH">"Definition Source"</a>.</p>
+<p>You can upgrade to a new version of the same definition. See <a href="deftasks.htm#BEIFAIDB">"Upgrading to a Different Definition Version from an Instance"</a>.</p>
+<p><a id="LSHDG787"></a><span class="subhead3">Version Label&nbsp;</span>This field displays the version label, if any, for the current Load Set instance version.</p>
+<p><a id="LSHDG788"></a><span class="subhead3">Validation Status&nbsp;</span>This field displays the current validation status of the Load Set instance. If you have the necessary privileges, you can change the validation status by selecting <span class="bold">Validation Supporting Information</span> from the <span class="bold">Actions</span> drop-down list. See <a href="deftasks.htm#BABGFFBG">"Validating Objects and Outputs"</a> for further information.</p>
+<p><a id="LSHDG789"></a><span class="subhead3">Status&nbsp;</span>This field displays the installable status of the Load Set: Installable or Non Installable. See <a href="status.htm#BABHIEJG">Appendix A, "Installation Requirements for Each Object Type"</a>.</p>
+<p><a id="LSHDG790"></a><span class="subhead3">Version&nbsp;</span>This field displays the current version number of the Load Set instance.</p>
+<p>For further information on object versions, see <a href="deftasks.htm#BEIBHCFH">"Understanding Object Versions and Checkin/Checkout"</a>.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CIHJCCEI"></a>
+<div id="LSHDG791" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Definition Properties</h3>
+<p>You can see the following definition properties:</p>
+<p><a id="LSHDG792"></a><span class="subhead3">Checked Out Status&nbsp;</span>This field displays the status of the definition: either Checked Out or Checked In. You must check out the definition to modify Table Descriptors, Parameters, or Planned Outputs. However, you can change Table Descriptor mappings without checking out the definition. See <a href="deftasks.htm#BEIBHCFH">"Understanding Object Versions and Checkin/Checkout"</a> for further information.</p>
+<p><a id="LSHDG793"></a><span class="subhead3">Latest Version&nbsp;</span>If set to <span class="bold">Yes</span>, this Load Set instance is pointing to the latest version of the Load Set definition. If set to <span class="bold">No</span>, this Load Set instance is pointing to an older version of the Load Set definition.</p>
+<p><a id="LSHDG794"></a><span class="subhead3">Checked Out By&nbsp;</span>This field displays the username of the person who has the Load Set definition checked out. See <a href="deftasks.htm#BEIBHCFH">"Understanding Object Versions and Checkin/Checkout"</a> for further information.</p>
+<p><a id="LSHDG795"></a><span class="subhead3">Version Label&nbsp;</span>This field displays the version label, if any, for this definition version.</p>
+<p><a id="LSHDG796"></a><span class="subhead3">Load Set / Adapter Type&nbsp;</span>This field displays the type of Load Set or Adapter. See <a href="#CEGDIFBI">"Load Set Types"</a>.</p>
+<p><a id="LSHDG797"></a><span class="subhead3">Validation Status&nbsp;</span>This field displays the current validation status of the Load Set definition. If you are working directly in the definition in an Application Area or Domain and you have the necessary privileges, you can change the validation status by selecting <span class="bold">Validation Supporting Information</span> from the <span class="bold">Actions</span> drop-down list. If you are working in an instance of the Load Set in a Work Area, and you want to change the validation status of the definition, you must go to the definition. See <a href="deftasks.htm#BABGFFBG">"Validating Objects and Outputs"</a> for further information.</p>
+<p><a id="LSHDG798"></a><span class="subhead3">Status&nbsp;</span>This field displays the installable status of the Load Set: Installable or Non Installable. See <a href="status.htm#BABHIEJG">Appendix A, "Installation Requirements for Each Object Type"</a>.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CEGIAJIE"></a>
+<div id="LSHDG799" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Load Set Attributes</h3>
+<p>This section of the Load Set screen displays attribute values for the type of Load Set you have created. See <a href="#CIHFABAA">"Setting Load Set Attributes"</a>.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CIHJCHHC"></a>
+<div id="LSHDG800" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Buttons</h3>
+<p>From a Load Set instance in a Work Area, you can use the following buttons:</p>
+<p><a id="LSHDG1978"></a><span class="subhead3">Install&nbsp;</span>Click <span class="bold">Install</span> to install the Load Set instance, including mapping target Table Descriptors and installing mapped target Table instances; see <a href="#BJECBDGE">"Installing Load Set Instances"</a>. For a list of reasons a Load Set instance may not be installable, see <a href="status.htm#BABHIEJG">Appendix A, "Installation Requirements for Each Object Type"</a>.</p>
+<p><a id="LSHDG801"></a><span class="subhead3">Submit&nbsp;</span>Click <span class="bold">Submit</span> to run the Load Set instance. Before you can run the Load Set, you must install it and create an Execution Setup for it (select <span class="bold">Execution Setups</span> from the <span class="bold">Actions</span> drop-down list).</p>
+<p><a id="LSHDG802"></a><span class="subhead3">Update&nbsp;</span>Click <span class="bold">Update</span> to modify the Load Set instance properties. See <a href="#CIHDHGDI">"Modifying Load Set Instance Properties"</a>. You can also update Load Set Attributes by clicking <span class="bold">Update</span> in the Load Set Attributes section of the screen. See <a href="#CIHFABAA">"Setting Load Set Attributes"</a>.</p>
+<p><a id="LSHDG803"></a><span class="subhead3">Check In/Out and Uncheck&nbsp;</span>Click these buttons to check out, check in, or uncheck the Load Set definition. Different buttons are displayed in the Load Set Definition Properties section depending on the Checked Out Status and whether or not you are the person who has the definition checked out. If someone else has checked out the definition, you cannot check it in or uncheck it. The username of the person who has checked it out is displayed. See <a href="deftasks.htm#BEIBHCFH">"Understanding Object Versions and Checkin/Checkout"</a>.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BJEDGFIE"></a>
+<div id="LSHDG805" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Defining Table Descriptors</h2>
+<p>Load Sets have only target Table Descriptors. They must be compatible with the structure of the external tables or data sets from which you are loading data and with the Table instances into which you are loading data.</p>
+<p>For all Load Set types, Oracle LSH can create the Table Descriptors based on data structures you specify in the source system. You can then create Table instances based on those Table Descriptors, or create Table instances based on standard (or any other compatible Table definitions) and map the two. See <a href="deftasks.htm#BABIABJJ">"Mapping Columns of Different Data Types and Lengths"</a> for an explanation of compatibility; for example, a source column or variable is compatible with a target column of a longer length, but not with a target column of a shorter length.</p>
+<p>The target Table instance must have one of the following process types: For information on the first three processing types, see <a href="exec.htm#CHDHFBGG">"Data Processing Types"</a>.</p>
+<ul>
+<li>
+<p><span class="bold">Staging with Audit</span> (the default)</p>
+</li>
+<li>
+<p><span class="bold">Staging Without Audit</span></p>
+</li>
+<li>
+<p><span class="bold">Reload</span></p>
+</li>
+<li>
+<p><span class="bold">Pass-Through View</span> For Oracle-technology Load Sets, you also have the option to create the target Table instances as pass-through views so that the physical source data remains in the external Oracle system. This approach allows you to minimize data storage space. After you map the Table instance to an Oracle-type Load Set, the system adds this option to the Processing Type drop-down list of the Table instance.</p>
+<p>It is not necessary to run Load Sets whose target Table instances are defined as pass-through views. As soon as you install the Load Set, the data in the external Oracle system is available to Oracle LSH.</p>
+<p>Programs can use Table instances defined as pass-through views as sources just as they can Table instances that contain data. When you run the Program, it reads data in the source system and can write data to Oracle LSH Table instances.</p>
+</li>
+</ul>
+<p><a id="BJEFCDGH"></a><a id="LSHDG806"></a><span class="subhead3">Mapping Table Descriptors to Table Instances&nbsp;</span>You can do either of the following:</p>
+<ul>
+<li>
+<p>Run the <span class="bold">Table Instances from Existing Table Descriptors</span> job from the <span class="bold">Actions</span> drop-down list to create a Table instance of the same structure as the Table Descriptor and automatically map the two. See <a href="deftasks.htm#BEIDGAEJ">"Creating Table Instances from Table Descriptors and Simultaneously Mapping Them"</a> for instructions.</p>
+</li>
+<li>
+<p>Create a Table instance&mdash;for example, create an instance of a standard CDISC Table definition&mdash;and map the Table Descriptor to the Table instance. If they have the same name, you can run the <span class="bold">Automatic Mapping by Name</span> job from the <span class="bold">Actions</span> drop-down list and it will map any Columns that have the same name. If not, you can map them manually. See <a href="deftasks.htm#CIHDCCDA">Mapping Table Descriptors to Table Instances</a>.</p>
+</li>
+</ul>
+<p><a id="BJEJEFGH"></a><a id="LSHDG807"></a><span class="subhead3">Enforced Compatibility at Runtime&nbsp;</span>At runtime a user can specify a remote data source with a different structure from the Table Descriptor you defined. If the structure are incompatible&mdash;the differences are such that they would cause data corruption&mdash; the load fails with an error.</p>
+<p>The following types of differences cause a failure:</p>
+<ul>
+<li>
+<p>The target Oracle LSH Table Column of a character data type is shorter than the source table column or data set variable.</p>
+</li>
+<li>
+<p>For number data types, the length and precision combined are smaller in the target than in the source.</p>
+</li>
+<li>
+<p>The target Table Column has a data type that is incompatible with the source data type. See <a href="deftasks.htm#BABBAADI">"Mapping Columns"</a> for information on compatible data types.</p>
+</li>
+<li>
+<p>The source table or data set includes a column or variable that is not included in the Table Descriptor.</p>
+</li>
+</ul>
+<p>See the section on each type of Load Set for details:</p>
+<ul>
+<li>
+<p><a href="#BJEHJHEC">Oracle Load Set Table Descriptors</a></p>
+</li>
+<li>
+<p><a href="#BJEDCIAH">SAS Load Set Table Descriptors</a></p>
+</li>
+<li>
+<p><a href="#BJEDCGHI">Text Load Set Table Descriptors</a></p>
+</li>
+<li>
+<p><a href="#BJEFFJJB">OC Stable Interface Tables Load Set Table Descriptors</a></p>
+</li>
+<li>
+<p><a href="#BJEGCFIB">OC DX SAS Views Load Set Table Descriptors</a></p>
+</li>
+<li>
+<p><a href="#BJEGIDGJ">OC Data Extract Views Load Set Table Descriptors</a></p>
+</li>
+<li>
+<p><a href="#BJEFCEHJ">OC Design and Definition Load Set Table Descriptors</a></p>
+</li>
+<li>
+<p><a href="#BJEJFFEA">OC Global Metadata Load Set Table Descriptors</a></p>
+</li>
+<li>
+<p><a href="#BJEBJCIH">OC Labs Load Set Table Descriptors</a></p>
+</li>
+<li>
+<p><a href="#CHDCBDGJ">OC Randomization Load Set Table Descriptor</a></p>
+</li>
+<li>
+<p><a href="#BJEDCHBJ">OC Study Data Load Set Table Descriptors</a></p>
+</li>
+</ul>
+<p>For general instructions see <a href="deftasks.htm#BACBIIJA">Defining and Mapping Table Descriptors</a>.</p>
+</div>
+<!-- class="sect1" -->
+<a id="BJEBBCFJ"></a>
+<div id="LSHDG808" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Setting Load Set Parameters</h2>
+<p>Each Load Set type has a different set of runtime Parameters. The system uses these Parameters to create the Execution Setup to be used to submit the Load Set for execution.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Because these are predefined and required Parameters you should not change anything except the default value in the Load Set definition, or the Load Set may not function properly. For Remote Location Parameters you should not even enter a default value for security reasons.</div>
+<p>The predefined Parameters are described for each type of Load Set:</p>
+<ul>
+<li>
+<p><a href="#BJEJGBDE">Oracle Load Set Parameters</a></p>
+</li>
+<li>
+<p><a href="#BJEJDFAC">SAS Load Set Parameters</a></p>
+</li>
+<li>
+<p><a href="#BJEHEEBI">Text Load Set Parameters</a></p>
+</li>
+<li>
+<p><a href="#BJEIECGA">OC Stable Interface Tables Load Set Parameter</a></p>
+</li>
+<li>
+<p><a href="#CHDFIHDI">OC DX SAS Views Load Set Parameters</a></p>
+</li>
+<li>
+<p><a href="#BJEEFGJJ">OC Data Extract Views Load Set Parameters</a></p>
+</li>
+<li>
+<p><a href="#CHDHDCIG">OC Design and Definition Load Set Parameters</a></p>
+</li>
+<li>
+<p><a href="#BJEBJEED">OC Global Metadata Load Set Parameters</a></p>
+</li>
+<li>
+<p><a href="#BJECCAAJ">OC Labs Load Set Parameters</a></p>
+</li>
+<li>
+<p><a href="#BJEIFHBD">OC Randomization Load Set Parameters</a></p>
+</li>
+<li>
+<p><a href="#BJEBBBAB">OC Study Data Load Set Parameters</a></p>
+</li>
+</ul>
+</div>
+<!-- class="sect1" -->
+<a id="BJEFBFFF"></a>
+<div id="LSHDG809" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">About Load Set Planned Outputs</h2>
+<p>Oracle LSH automatically creates the following Planned Outputs for Load Sets:</p>
+<ul>
+<li>
+<p><span class="bold">Log File</span>. Oracle LSH creates a log file Planned Output for all types of Load Sets. It is the only Planned Output for Load Sets of Oracle Tables and Views and OC adapters.</p>
+</li>
+<li>
+<p><span class="bold">Error File</span>. Oracle LSH creates an error file Planned Output for SAS and Text Load Sets and saves each rejected row into this error file. The generation of the error file does not indicate a job failure. A SAS or Text Load Set job fails when the number of rejected records exceeds the value of the Maximum Allowed Errors parameter.</p>
+</li>
+<li>
+<p><span class="bold">Input data file</span>. For SAS and Text Load Sets, if you set the Save Input File attribute to Yes, the system automatically creates a Planned Output and saves the input file as an actual output at runtime. If you classify this Planned Output, the system classifies the saved input file as an output with the classification you specified.</p>
+</li>
+<li>
+<p><span class="bold">Control File</span>. Oracle LSH creates this Planned Output for Text and SAS Load Sets. This Planned Output is always generated for Text Load Set jobs. For SAS Load Sets, the system generates it only for bulk loads (when you set the parameter Direct to Yes). This Planned Output stores the SQL*Loader control file.</p>
+</li>
+<li>
+<p><span class="bold">Textload.zip</span>. Oracle LSH creates this Planned Output if you set the <span class="bold">Save as Input</span> attribute to <span class="bold">Yes</span> while uploading a zipped Load Set file. This is applicable only to Text Load sets.</p>
+</li>
+</ul>
+<p>You can classify a Planned Output in order to classify the actual output when it is generated; see <a href="deftasks.htm#CHDCBGEI">"Classifying Outputs"</a> for further information.</p>
+<p>To view the log file or saved input file for a Load Set job, do one of the following:</p>
+<ul>
+<li>
+<p>Use the Search or Advanced Search feature.</p>
+</li>
+<li>
+<p>Browse for the log file in the Outputs subtab of the Reports tab.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect1" -->
+<a id="BJEBADDC"></a>
+<div id="LSHDG810" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Defining Different Load Set Types</h2>
+<p>This section includes information on the following topics:</p>
+<ul>
+<li>
+<p><a href="#BJEGJDGH">Oracle Tables and Views</a></p>
+</li>
+<li>
+<p><a href="#BJECFBCG">SAS</a></p>
+</li>
+<li>
+<p><a href="#BJEHDDDJ">Text</a></p>
+</li>
+<li>
+<p><a href="#BJEHFDAH">Oracle Clinical Global Metadata</a></p>
+</li>
+<li>
+<p><a href="#BJEEJIDJ">Oracle Clinical Data Extract Views</a></p>
+</li>
+<li>
+<p><a href="#BJEIAGCH">Oracle Clinical Data Extract SAS Views</a></p>
+</li>
+<li>
+<p><a href="#BJEDAEHB">Oracle Clinical Labs</a></p>
+</li>
+<li>
+<p><a href="#BJEIJDGI">Oracle Clinical Study Data</a></p>
+</li>
+<li>
+<p><a href="#BJEDEHDF">Oracle Clinical Design and Definition</a></p>
+</li>
+<li>
+<p><a href="#BJEFEEED">Oracle Clinical Stable Interface</a></p>
+</li>
+<li>
+<p><a href="#BJEHADIB">Oracle Clinical Randomization</a></p>
+</li>
+</ul>
+<a id="BJEGJDGH"></a>
+<div id="LSHDG811" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Oracle Tables and Views</h3>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#BJEIDFAC">About Oracle Tables and Views Load Sets</a></p>
+</li>
+<li>
+<p><a href="#BJECCAAC">Oracle Load Set Attributes</a></p>
+</li>
+<li>
+<p><a href="#BJEHJHEC">Oracle Load Set Table Descriptors</a></p>
+</li>
+<li>
+<p><a href="#BJEJGBDE">Oracle Load Set Parameters</a></p>
+</li>
+<li>
+<p><a href="#BJECEFHF">Oracle Load Set Planned Outputs</a></p>
+</li>
+</ul>
+<a id="BJEIDFAC"></a>
+<div id="LSHDG812" class="sect3">
+<h4 class="sect3">About Oracle Tables and Views Load Sets</h4>
+<p>Oracle Tables and Views Load Sets enable you to access data in Oracle LSH from any Oracle system external to Oracle LSH. The source of the data in the external system can be either a database table or a view with column data types of varchar2, number, and date.</p>
+<p>The adapter loads the primary key definitions of the source tables to the target Table instances when you define a Load Set.</p>
+<p>You can take two approaches to Oracle data in Oracle LSH:</p>
+<ul>
+<li>
+<p><span class="bold">Load the physical data into Oracle LSH</span>. Rerun the Load Set periodically to refresh the data in Oracle LSH.</p>
+</li>
+<li>
+<p><span class="bold">Define the Load Set's target Table instances as a pass-through view</span>, so that the physical source data remains in the external Oracle system. This approach allows you to minimize data storage space.</p>
+<p>Programs can use Table instances defined as pass-through views as sources just as they can Table instances that contain data. When you run the Program, it reads data in the source system and can write data to Oracle LSH Table instances.</p>
+<p>You specify whether to use the Load Set to load or view data as part of the definition of the target Table instance to which you map the Table Descriptor. The system adds the <span class="bold">Create Table as a View</span> option to the <span class="bold">Process Type</span> drop-down list of the Table instance after you map the Table instance to an Oracle-type Load Set.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+All target Table instances of the Load Set must be defined the same way&mdash;either as pass-through views or not. If some are defined as pass-through views and others are not, execution of the Load Set fails.</div>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<a id="BJECCAAC"></a>
+<div id="LSHDG813" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Oracle Load Set Attributes</h4>
+<p>Click <span class="bold">Update</span> and enter values for the remote location and database schema that are the source of the data to be loaded:</p>
+<ul>
+<li>
+<p><span class="bold">Remote Location</span>. Click the Search icon and choose a source remote location/connection combination from the list of values. The system displays only those locations and connections to which you have security access.</p>
+<p>If the location you need is not on the list, ask a system administrator to create a defined Remote Location for it in the Administration user interface.</p>
+<p>If you have a valid username and password for the required database, you can create a connection in the Preferences hyperlink at the top of most Oracle LSH screens. However, you cannot create a connection until an administrator has created a remote location.</p>
+<p>Your company may also use shared connections. If so, you can use those as well.</p>
+</li>
+<li>
+<p><span class="bold">Schema</span>. Select the database schema on the remote location where the table or view resides.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<a id="BJEHJHEC"></a>
+<div id="LSHDG814" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Oracle Load Set Table Descriptors</h4>
+<p>Use the <span class="bold">Upload Table Descriptors</span> function to specify the tables you want to load. The system generates a list of tables in the remote location that you specified in the Attributes section.</p>
+<p>See also <a href="#BJEDGFIE">"Defining Table Descriptors"</a>.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BJEJGBDE"></a>
+<div id="LSHDG815" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Oracle Load Set Parameters</h4>
+<p>The following are Oracle Load Set runtime Parameters:</p>
+<ul>
+<li>
+<p><span class="bold">Remote Location</span>. The user submitting the Load Set for execution must select his or her own remote location/connection combination (or a remote location with a shared connection) at runtime to ensure the proper security for the external database. Do not enter a default value or change any of the other Parameter settings.</p>
+</li>
+<li>
+<p><span class="bold">Direct</span>. If you set Direct to Yes (default is No), the system uses the direct path INSERT to load data into the target Table instance(s).</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+When writing to multiple Table instances, if all the Table instances are not of the Transactional High Throughput processing type, the system first inserts data into the Transactional High Throughput processing type Tables using the direct INSERT and subsequently inserts data using the conventional INSERT into Tables of other data processing types. The Load Set job completes with warnings and writes warning messages to the job log.</div>
+</li>
+<li>
+<p><span class="bold">Drop and Recreate Indexes</span>. This parameter applies only if you set Direct to Yes.</p>
+<p>If set to Yes (default), the system drops all non-unique indexes before running a data-loading job and recreates the non-unique indexes after loading data into the target Table instances. The system does not drop indexes if Direct is set to No.</p>
+</li>
+<li>
+<p><span class="bold">Logging</span>. This parameter applies only if you set Direct to Yes.</p>
+<p>If set to Yes (default), in the event of a failure the system can recover data committed to the database. If set to No, the system does not maintain a redo log file and cannot recover any data when a database failure occurs.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<a id="BJECEFHF"></a>
+<div id="LSHDG816" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Oracle Load Set Planned Outputs</h4>
+<p>Oracle Load Sets have only one Planned Output: a log file. See <a href="#BJEFBFFF">"About Load Set Planned Outputs"</a> for further information.</p>
+</div>
+<!-- class="sect3" -->
+<div id="LSHDG817" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref48"></a>
+<h4 class="sect3">Oracle Load Set Execution Setups</h4>
+<p>Do not set the Remote Location Parameter in the Execution Setup. See <a href="#BJEJGBDE">"Oracle Load Set Parameters"</a>.</p>
+<p>For general information on defining Execution Setups, see <a href="deftasks.htm#BEIGAICB">"Creating, Modifying, and Submitting Execution Setups"</a></p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BJECFBCG"></a>
+<div id="LSHDG819" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">SAS</h3>
+<p>This section includes the following topics:</p>
+<ul>
+<li>
+<p><a href="#BJEIDGIA">About SAS Load Sets</a></p>
+</li>
+<li>
+<p><a href="#BJEGHCFE">UTF8 Encoding</a></p>
+</li>
+<li>
+<p><a href="#BJEGGJAJ">SAS Load Set Attributes</a></p>
+</li>
+<li>
+<p><a href="#BJEDCIAH">SAS Load Set Table Descriptors</a></p>
+</li>
+<li>
+<p><a href="#BJEJDFAC">SAS Load Set Parameters</a></p>
+</li>
+<li>
+<p><a href="#BJECFCJB">SAS Load Set Planned Outputs</a></p>
+</li>
+<li>
+<p><a href="#BJECDDGI">SAS Load Set Execution Setups</a></p>
+</li>
+</ul>
+<a id="BJEIDGIA"></a>
+<div id="LSHDG820" class="sect3">
+<h4 class="sect3">About SAS Load Sets</h4>
+<p>A SAS Load Set loads data from a SAS file into Oracle LSH. You can define a SAS Load Set for a single data set or for multiple data sets in a SAS XPORT or CPORT file.</p>
+<p>Each time you run a SAS Load Set, you load all the data contained in the source file at runtime. You can load a zipped data set file (but not a zipped XPORT or CPORT file).</p>
+</div>
+<!-- class="sect3" -->
+<a id="BJEGHCFE"></a>
+<div id="LSHDG1979" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">UTF8 Encoding</h4>
+<p>To ensure that Oracle LSH stores and displays special characters in your data correctly, start SAS in UTF8 mode.</p>
+<p>If you are using SAS 9.2:</p>
+<ul>
+<li>
+<p>In Windows:</p>
+<pre dir="ltr">
+<span class="italic">Drive</span>:\Program Files\SAS\SASFoundation\9.2\sas.exe" -CONFIG
+<span class="italic">Drive</span>:\Program Files\SAS\SASFoundation\9.2\nls\u8\SASV9.CFG"
+</pre></li>
+<li>
+<p>In UNIX:</p>
+<pre dir="ltr">
+sas -encoding UTF8
+</pre></li>
+</ul>
+<p>If you are using SAS 9.1.3 on UNIX, use sas_dbcs instead of sas to start in unicode mode. For further information, see SAS Paper Paper 1036, <span class="italic">Multilingual Computing with the 9.1 SAS Unicode Server</span> at: <code dir="ltr"><a href="http://support.sas.com/rnd/papers/sugi28/unicodeserver.pdf">http://support.sas.com/rnd/papers/sugi28/unicodeserver.pdf</a><a href=""></a></code></p>
+</div>
+<!-- class="sect3" -->
+<a id="BJEGGJAJ"></a>
+<div id="LSHDG821" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">SAS Load Set Attributes</h4>
+<p>The only attribute is the Save Input File? flag:</p>
+<ul>
+<li>
+<p>If set to <span class="bold">Yes</span>, the system saves the uploaded file as an output. See <a href="#BJECFCJB">"SAS Load Set Planned Outputs"</a>.</p>
+</li>
+<li>
+<p>If set to <span class="bold">No</span>, the uploaded file is deleted after the load completes. This is the default value.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<a id="BJEDCIAH"></a>
+<div id="LSHDG822" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">SAS Load Set Table Descriptors</h4>
+<p>If you are using a transport file as a source, you can load more than one data set with a single Load Set, but you cannot load a zipped file. If you are using a data set file as a source, you can load only that one data set but you can load it as a zipped file.</p>
+<p>Oracle LSH automatically creates one Table Descriptor for each data set in the file you specify. If you specify a transport file with data sets that have indexes defined, Oracle LSH creates corresponding indexes in the Table definition as well.</p>
+<p>To create Table Descriptors for a SAS Load Set, do the following:</p>
+<ol>
+<li>
+<p>In the Table Descriptors subtab of the Load Set, click <span class="bold">Add</span>. The system opens the Create Table Descriptors screen.</p>
+</li>
+<li>
+<p>Select Create New Table Definition(s) and Descriptor(s) from a SAS file. The system refreshes the screen and adds a field with a <span class="bold">Browse</span> button.</p>
+</li>
+<li>
+<p>Click <span class="bold">Browse</span>. The system opens a standard Browse window.</p>
+</li>
+<li>
+<p>Navigate to the SAS file you want, select it, and click <span class="bold">Open</span>. The system returns to the Create Table Descriptors screen and enters the name of the file you selected in the Import From File field.</p>
+</li>
+<li>
+<p>Click <span class="bold">Apply</span>. The system creates one Table Descriptor for each data set in the file you specify.</p>
+</li>
+</ol>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+To create a SAS Load Set definition, Oracle LSH loads the file you specify with all its data. The more data the data set contains, the longer it takes to create the Load Set and the more resources are consumed. Therefore, copy the structure of the data set in SAS and use the empty copy to create the Table Descriptors.</div>
+<p>You can use the <span class="bold">Create Table Instances from Existing Table Descriptors</span> job from the <span class="bold">Actions</span> drop-down list to create and map all the Table instances you need. Alternatively, you can create instances of any compatible Table definitions and map them. See <a href="#BJEFCDGH">"Mapping Table Descriptors to Table Instances"</a> for further information.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BJEJDFAC"></a>
+<div id="LSHDG823" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">SAS Load Set Parameters</h4>
+<p>SAS Load Sets have the following runtime Parameters:</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+These are predefined, required, runtime Parameters and you should not change any of their properties, or the Load Set may not function properly.
+<p>These Parameters take meaningful values only at the time of submitting the Load Set's Execution Setup.</p>
+</div>
+<ul>
+<li>
+<p><span class="bold">BLOB ID (Temporary)</span>. This Parameter is for internal use only. It contains a pointer to the uploaded file.</p>
+</li>
+<li>
+<p><span class="bold">Dataset File Name</span>. Do not select a file while defining the Load Set. Oracle LSH uploads the file when you submit the Load Set's Execution Setup. If you upload the file during Load Set definition, the data will probably be outdated at the time the Load Set is executed. Therefore, leave this field blank. The user must enter the filename at runtime if <span class="bold">Load From Server OS</span> is set to No else the user has to enter the Server OS filename.</p>
+</li>
+<li>
+<p><span class="bold">Load from Server OS</span>. You have the option to load a data set file from your local computer or from a remote system. Set this parameter to Yes (default is No) if your file is either on the Oracle LSH DP server or on another computer that has its drives NFS-mounted on the DP server computer. If you set this parameter to No, you must upload a data set file from your local computer at the time of submitting the SAS Load Set job.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The system can load remote SAS data set files only from an Oracle LSH DP Server that is running the SAS and the SQL*Loader services. In addition, the SAS Service Location must point to the SQL*Loader executable. Provide the absolute path of the SQL*Loader executable in the Details field of the SAS Service. See the chapter on Setting Up Services in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub System Administrator's Guide</span></span> for more information.</div>
+</li>
+<li>
+<p><span class="bold">Server OS Filename</span>. If you set Load From Server OS to Yes, enter the absolute path of the remote data set file at the time of submitting the Load Set's Execution Setup else leave this parameter blank.</p>
+</li>
+<li>
+<p><span class="bold">Maximum Allowed Errors</span>. Tolerance factor; the maximum number of invalid records you are willing to accept before SQL*Loader stops the loading process and marks the Load Set job as failed. The default value of this parameter is 0.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If you are uploading a SAS CPORT or XPORT file, note that the value you enter here applies to <span class="italic">each</span> data set contained within the CPORT or XPORT file.</div>
+</li>
+<li>
+<p><span class="bold">Direct</span>. If set to Yes (default is No), the system uses the direct path INSERT to load data from the SAS dataset file into the Oracle LSH target Table instance.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+When writing to multiple Table instances, if all the Table instances are not of the Transactional High Throughput processing type, the system uses the direct path INSERT for the Transactional High Throughput processing type Tables and the conventional INSERT for Tables of other data processing types. The Load Set job completes with warnings and writes warning messages to the job log.</div>
+</li>
+<li>
+<p><span class="bold">Drop and Recreate Indexes</span>. If set to Yes (default), and if the value of the parameter Direct is Yes, the system drops all non-unique indexes before running a data-loading job and recreates the non-unique indexes after loading data into the target Tables. The system does not drop indexes if Direct is set to No.</p>
+</li>
+</ul>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+See <span class="italic">Oracle&reg; Database Utilities</span> at <code dir="ltr"><a href="http://download.oracle.com/docs/cd/E11882_01/server.112/e16536.pdf">http://download.oracle.com/docs/cd/E11882_01/server.112/e16536.pdf</a><a href=""></a></code> for more information on SQL*Loader parameters at:</div>
+</div>
+<!-- class="sect3" -->
+<a id="BJECFCJB"></a>
+<div id="LSHDG824" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">SAS Load Set Planned Outputs</h4>
+<p>Oracle LSH automatically creates the following Planned Outputs for SAS Load Sets:</p>
+<ul>
+<li>
+<p><span class="bold">SAS Loading Log File</span>. Oracle LSH writes the job log into this Planned Output for all jobs except bulk loading jobs. Bulk loading jobs write data from SAS data sets into Transactional High Throughput Table instances.</p>
+</li>
+<li>
+<p><span class="bold">SAS Loading Input Data File</span>. If you set the Save Input File attribute to Yes, the system uses that Planned Output as a placeholder for the input file saved as an output during execution. If you set Save Input File to No, the system still creates the Planned Output but does not create the actual output when you run the Load Set.</p>
+<p>You can classify the Planned Output and view the actual output through the Oracle LSH Outputs user interface, subject to normal Oracle LSH security rules. To view the contents of the file, you must download it and view it through SAS.</p>
+</li>
+<li>
+<p><span class="bold">SAS Bulk Loading Error File</span>. If you set the parameter Direct to Yes, and if the data loading job encounters one or more invalid records, the system generates this file and writes each rejected record into it. For SAS CPORT and XPORT files, Oracle LSH consolidates the error files that SQL*Loader generates for each data set.</p>
+</li>
+<li>
+<p><span class="bold">SQL*Loader Log File</span>. If you set the parameter Direct to Yes, SQL*Loader generates this log file for each data set when writing to a Table instance and stores in this Planned Output. For SAS CPORT and XPORT files, Oracle LSH consolidates the log files that SQL*Loader generates for each data set.</p>
+</li>
+<li>
+<p><span class="bold">SQL*Loader Control File</span>. If you set the parameter Direct to Yes, SAS generates the SQL*Loader control file for each data set when you run the Oracle LSH Load Set job. The system stores the control file in this Planned Output. If you use CPORT or XPORT, Oracle LSH consolidates all the control files into this Planned Output.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<a id="BJECDDGI"></a>
+<div id="LSHDG825" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">SAS Load Set Execution Setups</h4>
+<p>When you define an Execution Setup for a SAS Load Set, be careful to give it a name and description that will enable a person submitting the Load Set for execution to understand which file should be loaded.</p>
+<p>The file must contain data sets that correspond to the Table Descriptors defined for the Load Set, but the Table Descriptors are created as part of the Load Set definition, while the file should only be specified at runtime. Therefore, provide enough information in the Execution Setup Name and Description to make it clear which data sets this Load Set definition is intended to load.</p>
+<p>In addition, do not enter a value for Dataset File Name or the Server OS Filename in the Execution Setup definition. The person submitting the Load Set for execution must enter a file name. The system uploads the file at the time that you specify it. If you specify it during Load Set or Execution Setup definition, the data in the file may be out of date by the time the user runs the Load Set.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+It does not make sense to schedule a SAS Load Set for repeated execution because it would use the same BLOB ID each time, reloading the same data.
+<p>If you schedule a single run of a SAS Load Set for a later time, it loads the data that was current at the time you specified the file.</p>
+</div>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BJEHDDDJ"></a>
+<div id="LSHDG827" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Text</h3>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#BJEDAHDC">About Text Load Sets</a></p>
+</li>
+<li>
+<p><a href="#BJEGHCFE">UTF8 Encoding</a></p>
+</li>
+<li>
+<p><a href="#BJEIGIED">Text Load Set Attributes</a></p>
+</li>
+<li>
+<p><a href="#BJEDCGHI">Text Load Set Table Descriptors</a></p>
+</li>
+<li>
+<p><a href="#BJEHEEBI">Text Load Set Parameters</a></p>
+</li>
+<li>
+<p><a href="#BJEIIIJJ">Text Load Set Planned Outputs</a></p>
+</li>
+<li>
+<p><a href="#BJEGFEEE">Text Load Set Execution Setup</a></p>
+</li>
+</ul>
+<a id="BJEDAHDC"></a>
+<div id="LSHDG828" class="sect3">
+<h4 class="sect3">About Text Load Sets</h4>
+<p>A Text Load Set loads data in a text file in either fixed or delimited format into one or more Table instances in Oracle LSH.</p>
+<p>During Text Load Set definition, you can upload a metadata file. The system reads the data structure from the file and creates a Table Descriptor with the same structure. You can load multiple metadata files zipped together and create multiple Table Descriptors at the same time.</p>
+<p>During Text Load Set execution, you can include metadata files in a zipped file with data files. For each metadata file, the system creates a matching Table Descriptors if none exists or updates and synchronizes a Table Descriptor if it does exist, and loads data from the data file(s). The system identifies files with extension .mdd as a metadata definition file and treats other extensions as data files.</p>
+<p>You can specify tolerance factors to determine whether or not to continue loading if errors occur. See <a href="#BJEHEEBI">"Text Load Set Parameters"</a>.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+All text files must use carriage returns between records so that each record appears on its own line.</div>
+</div>
+<!-- class="sect3" -->
+<div id="LSHDG1980" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref49"></a>
+<h4 class="sect3">UTF8 Encoding</h4>
+<p>To ensure that Oracle LSH stores and displays special characters in your data correctly, convert text files that are not already using UTF8 encoding to UTF8 before uploading them to Oracle LSH.</p>
+<p>To do this, copy the text in the text file into a a text editor such as Notepad or Wordpad and use the <span class="bold">Save As</span> option to select UTF-8 as the <span class="bold">Encoding</span> value.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BJEIGIED"></a>
+<div id="LSHDG829" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Text Load Set Attributes</h4>
+<p>The only attribute is the <span class="bold">Save Input File?</span> flag:</p>
+<ul>
+<li>
+<p>If set to <span class="bold">Yes</span>, the system saves the uploaded file as an output. This is especially useful when uploading data files with multiple date formats; see <a href="#BJEIIIJJ">"Text Load Set Planned Outputs"</a>.</p>
+</li>
+<li>
+<p>If set to <span class="bold">No</span>, and the file was uploaded from the user's desktop, the uploaded file is deleted after the load completes. This is the default value. If the file is uploaded from the operating system, it is not deleted.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<a id="BJEDCGHI"></a>
+<div id="LSHDG830" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Text Load Set Table Descriptors</h4>
+<p>Oracle LSH can read the data structure from a metadata (.mdd) file using a specified format (see <a href="#BJEBBIBC">Example 7-1</a>) and define a Table Descriptor or read multiple metadata files zipped together to create multiple Table Descriptors. You can also define a target Table Descriptor manually; see <a href="deftasks.htm#BEIHFFAA">"Adding a New Target Table Descriptor"</a>.</p>
+<p>You can create multiple Table Descriptors by uploading a zip file containing multiple metadata files. The system unzips the file, identifies and reads the metadata files (.mdd extension) and ignores any other files. It uses the metadata information to either create new Table Descriptors or update and synchronize existing Table Descriptors as the case may be.</p>
+<p class="subhead2"><a id="LSHDG1981"></a>Creating a Metadata File</p>
+<p>If the file has an .mdd extension, the system expects a set of Column attribute values, optionally preceded by a row identifying the delimiter and a row defining Table attribute values, each of which must begin with a key word. A row beginning with dashes is treated as a comment. For example:</p>
+<p><code dir="ltr">--This is a comment.</code></p>
+<div id="LSHDG1982" class="example">
+<p class="titleinexample"><a id="BJEBBIBC"></a>Example 7-1 Text Load Set Metadata File</p>
+<pre dir="ltr">
+lsh_delimiter = ,
+--This section is for the Table attributes
+lsh_table= DM,DEMOG Table,EMP,EMP,EMP,Staging with Audit,Yes,Yes,Blinded,target,yes,yes
+ 
+--The following are columnsComment Line 2
+INITS,VARCHAR2,100,,inits,inits,2.,,inits,no,1
+AGE,NUMBER,10,,2,age,age,2.,,age,yes,1
+        DOB,DATE,,,3,dob,dob,datetime.,,dob,yes,1,MM/DD/YY HH24:MI:SS
+</pre></div>
+<!-- class="example" -->
+<p><a id="LSHDG1983"></a><span class="subhead3">Delimiter&nbsp;</span> The first row defines the delimiter used in the file. If not specified, Oracle LSH treats it as a comma delimited file. The delimiter row must begin with <code dir="ltr">lsh_delimiter=</code></p>
+<p><a id="LSHDG1984"></a><span class="subhead3">Table and Table Descriptor Attributes&nbsp;</span>The second row lists the table attributes required in the file. The Table attribute row must begin with <code dir="ltr">lsh_table=</code></p>
+<p>If the second row is not present or contains null values, the system assumes that the filename (without extension) is the Table Name and follows the normal Oracle LSH default behavior for the attribute values. The attributes and their required order in the file are: <code dir="ltr">Name, Description, Oracle Name, SAS Name, SAS Label, Process Type, Allow Snapshot?, Blinding Flag?, Blinding Status, SAS Library Name, Is Target?, Target as Dataset?, SDTM Identifier</code></p>
+<p>Some attributes have associated reference codelists and allow either the actual values for the associated reference codelist (RC) columns or the decode values defined in the "Meaning" attribute of the _RC lookup. For example, "select meaning from cdr_lookups where lookup_code='&lt; RC&gt;' so that <span class="bold">YES</span> or <span class="bold">Yes</span> or <span class="bold">$YESNO$YES</span> are acceptable values.</p>
+<p>The table below outlines the applicable values for each attribute that has an associated reference codelist.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Processing types that require audit keys are not supported.</div>
+<div id="LSHDG1985" class="tblformal">
+<p class="titleintable"><a id="sthref50"></a><a id="sthref51"></a>Table 7-1 Table Attributes with Reference Codelist Values</p>
+<table class="cellalignment81" title="Table Attributes with Reference Codelist Values" summary="attributes and reference codelist values" dir="ltr">
+<thead>
+<tr class="cellalignment71">
+<th class="cellalignment82" id="r1c1-t15">Attribute</th>
+<th class="cellalignment82" id="r1c2-t15">Values</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment71">
+<td class="cellalignment77" id="r2c1-t15" headers="r1c1-t15">
+<p>Processing Type</p>
+</td>
+<td class="cellalignment77" headers="r2c1-t15 r1c2-t15">
+<p>Staging with Audit, Staging without Audit, Transactional High Throughput, Transactional without Audit</p>
+</td>
+</tr>
+<tr class="cellalignment71">
+<td class="cellalignment77" id="r3c1-t15" headers="r1c1-t15">
+<p>Allow Snapshot</p>
+</td>
+<td class="cellalignment77" headers="r3c1-t15 r1c2-t15">
+<p>Yes, No</p>
+</td>
+</tr>
+<tr class="cellalignment71">
+<td class="cellalignment77" id="r4c1-t15" headers="r1c1-t15">
+<p>Blinding Flag</p>
+</td>
+<td class="cellalignment77" headers="r4c1-t15 r1c2-t15">
+<p>Yes, No</p>
+</td>
+</tr>
+<tr class="cellalignment71">
+<td class="cellalignment77" id="r5c1-t15" headers="r1c1-t15">
+<p>Blinding Status</p>
+</td>
+<td class="cellalignment77" headers="r5c1-t15 r1c2-t15">
+<p>Blinded, Unblinded</p>
+</td>
+</tr>
+<tr class="cellalignment71">
+<td class="cellalignment77" id="r6c1-t15" headers="r1c1-t15">
+<p>Is Target</p>
+</td>
+<td class="cellalignment77" headers="r6c1-t15 r1c2-t15">
+<p>Yes, No</p>
+</td>
+</tr>
+<tr class="cellalignment71">
+<td class="cellalignment77" id="r7c1-t15" headers="r1c1-t15">
+<p>Target as dataset</p>
+</td>
+<td class="cellalignment77" headers="r7c1-t15 r1c2-t15">
+<p>Yes, No</p>
+</td>
+</tr>
+<tr class="cellalignment71">
+<td class="cellalignment77" id="r8c1-t15" headers="r1c1-t15">
+<p>Data Type</p>
+</td>
+<td class="cellalignment77" headers="r8c1-t15 r1c2-t15">
+<p>Date, Number, Varchar2</p>
+</td>
+</tr>
+<tr class="cellalignment71">
+<td class="cellalignment77" id="r9c1-t15" headers="r1c1-t15">
+<p>Nullable</p>
+</td>
+<td class="cellalignment77" headers="r9c1-t15 r1c2-t15">
+<p>Nullable Yes, No</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" -->
+<p><a id="LSHDG1986"></a><span class="subhead3">Columns&nbsp;</span> Subsequent rows must contain the column and variable attributes with each represented by a new row in the text file with attributes. The position is determined by the order in which the column /variable rows are processed. For example, in a comma delimited file: <code dir="ltr">Name, Data Type, Length, Precision, Oracle Name, SAS Name, SAS Format, Description, SAS Label, Nullable, Default Value, Date Format</code></p>
+<p>Normal Oracle LSH validation rules apply to the Column or variable attributes. The operation uses Oracle LSH default values if invalid values are provided for any of the attributes.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BJEHEEBI"></a>
+<div id="LSHDG832" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Text Load Set Parameters</h4>
+<p>Text Load Sets include the Parameters listed below. You can change their default values in the Execution Setup definition. The user can change their values at runtime.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Because these are predefined, required Parameters you should change only the values specified below or the Load Set may not function properly. Do not change any other properties of these parameters.</div>
+<ul>
+<li>
+<p><span class="bold">Data File Name</span>. Do not select a file when defining the Load Set. Oracle LSH uploads the file when you submit the Load Set's Execution Setup. If you upload the file during Load Set definition, the data will probably be outdated at the time the Load Set is executed. Therefore, leave this field blank. The user must enter the filename at runtime if <span class="bold">Load From Server OS</span> is set to No.</p>
+</li>
+<li>
+<p><span class="bold">Data Format</span>. Choose either Fixed or Delimited:</p>
+<ul>
+<li>
+<p><span class="bold">Fixed</span>. The system uses the Load Set's target Table Descriptor Column definitions to interpret the data type and length of the values in the text file. The file must contain the correct number of characters for each value in each column of each record.</p>
+<p>In the case of Table Descriptor Columns with a Number data type (with a fixed format file), if you data includes a sign (+/-), you must increase the length by one to accommodate the positive (+) or negative (-) sign. In addition, if the data includes numbers with decimal places, you must declare the precision and increase the length by one to accommodate the decimal marker. See <a href="tables.htm#CHDGDJDD">"Defining Table Columns"</a> for further information.</p>
+</li>
+<li>
+<p><span class="bold">Delimited</span>. With delimited records, you specify the character used in the source file between each record as the separator character. Different records in the same column can be of different lengths, up to the maximum allowed. The system loads the contents between the separator character into each consecutive Column of the target Table instance.</p>
+<p>For example, if you have a Table instance with Columns Patient ID, Patient Initials, and Date of Birth, and the separator character was a comma, and the date format was DDMMYYYY, the first two records might look like this:</p>
+<p><code dir="ltr">54602,EKP,04081949</code></p>
+<p><code dir="ltr">66781,BAH,22011955</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="bold">Delimiter Character</span>. (Required for Delimited-format Load Sets only.) Specify the character(s) used as the value delimiter in the source text file. In the example above, the comma (,) is the separator character. The default character is the comma (,). You can use any two unicode characters as a delimiter. For example, to use tab as the delimiter character, enter <code dir="ltr">\t</code>.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Even if you specify that this is a fixed format Load Set, this Parameter is displayed. Leave the default value as is.</div>
+</li>
+<li>
+<p><span class="bold">Enclosing Character</span>. (For Delimited-format Load Sets only; recommended but not required.) If any record value may contain the delimiter character, you need an enclosing character. Specify the character used to enclose each value. The default character is double quotation marks (").</p>
+<p>For example, if a double quotation mark (") were the enclosing character, the same two records would look like this in the source text file:</p>
+<p><code dir="ltr">"54602","EKP","04081949"</code></p>
+<p><code dir="ltr">"66781","BAH","22011955"</code></p>
+<p>You can use any single unicode character as an enclosing character.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Even if you specify that this is a fixed format Load Set, this Parameter is displayed and is required. Leave the default value as is; the system does not use this value.</div>
+<div class="infobox-note">
+<p class="notep1">Notes:</p>
+Both delimiter and enclosing characters should be characters that never appear in the data content of the file.
+<p>The delimiter character and the enclosing character must be different. If they are the same, the Load Set execution will fail.</p>
+</div>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If you use a tab as the delimiter and specify an enclosing character, the following limitations apply:
+<ul>
+<li>
+<p>Tabs cannot be part of the data even if the data is enclosed.</p>
+</li>
+<li>
+<p>The length of the data, including enclosing characters and duplicate enclosing characters, cannot exceed 4000 characters.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><span class="bold">Initial Records to Skip</span>. If you want to not load records at the beginning of the file, enter the number of records you want the system to skip. The default value is zero (0).</p>
+</li>
+<li>
+<p><span class="bold">Maximum Allowed Errors</span>. Tolerance factor; the maximum number of invalid rows you are willing to tolerate before the SQL*Loader stops the load process and marks the Load Set job as failed. The default value is 0.</p>
+</li>
+<li>
+<p><span class="bold">Temp LOB ID</span>. This Parameter is for internal use only. Do not modify it.</p>
+</li>
+<li>
+<p><span class="bold">Date Format</span>. Enter the date format used in the source data or .mdd file, if any. The date format you enter here must correspond exactly with the date field in the source text file, else the Load Set cannot execute correctly. Do not enter a value here if the source text file does not contain a date field.</p>
+</li>
+<li>
+<p><span class="bold">Load From Server OS</span>. You have the option to load a file from your local computer or from a remote system. Set this parameter to Yes (default is No) if your file is either on the Oracle LSH DP server or on another computer that has its drives NFS-mounted on the DP server computer. If you set this parameter to No, you must upload a text file from your local computer when running the Text Load Set job by providing its name in the Data File Name parameter.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The system can load remote text files only from an Oracle LSH DP Server that is running the SQL*Loader service.</div>
+</li>
+<li>
+<p><span class="bold">Server OS Filename</span>. If you set Load From Server OS to Yes, enter the absolute path of the remote file with the filename and extension, else leave this parameter blank.</p>
+</li>
+<li>
+<p><span class="bold">Direct</span>. If set to Yes (default is No), the system uses the direct path INSERT to load data from the text file into the Oracle LSH target Table. If the Table Descriptor mapped to the Text Load Set is not of the Transactional High Throughput processing type, the system loads data using the conventional INSERT and writes warning messages to the job log.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+See the Oracle Database Utilities Guide (part number B14215-01) for more information on this SQL*Loader Command-Line Parameter.</div>
+</li>
+<li>
+<p><span class="bold">(Optional) Rows</span>. This parameter applies only when you set Direct to Yes.</p>
+<p>It indicates the number of rows that SQL*Loader reads together at one time from the datafile before writing them to the target Table and committing to the database. If you leave this parameter blank, by default the system reads all the rows from the datafile and then writes the data to the target Table.</p>
+<p>For conventional path loads, (if you set Direct to No), this parameter indicates the number of rows that SQL*Loader assigns to the bind array. If you leave this parameter blank, Oracle LSH calculates the number of rows.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+A very high or a very low value for Rows can adversely affect the system's performance. Enter a value only if you are absolutely sure that you need to change this.
+<p>See the Oracle Database Utilities Guide (part number B14215-01) for more information on this SQL*Loader Command-Line Parameter.</p>
+</div>
+</li>
+<li>
+<p><span class="bold">Drop and Recreate Indexes</span>. If set to Yes (default), and if the value of the parameter Direct is set to Yes, the system drops all non-unique indexes before running a data-loading job and recreates the non-unique indexes after loading data into the target Tables. The system does not drop indexes if Direct is set to No.</p>
+</li>
+<li>
+<p><span class="bold">Recoverable</span>. This parameter applies only when you set Direct to Yes.</p>
+<p>If set to Yes (default), the system can recover data in the event of a failure. If set to No, the data becomes unrecoverable because SQL*Loader does not maintain a redo log file for the data.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+For more information on the SQL*Loader UNRECOVERABLE clause at: <span class="italic">Oracle&reg; Database Utilities</span> at <code dir="ltr"><a href="http://download.oracle.com/docs/cd/E11882_01/server.112/e16536.pdf">http://download.oracle.com/docs/cd/E11882_01/server.112/e16536.pdf</a><a href=""></a></code></div>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<a id="BJEIIIJJ"></a>
+<div id="LSHDG833" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Text Load Set Planned Outputs</h4>
+<p>The system automatically creates four Planned Outputs for Text Load Sets:</p>
+<ul>
+<li>
+<p><span class="bold">Text Loading Log File (.log)</span>. The system writes the job log into the log file.</p>
+</li>
+<li>
+<p><span class="bold">Text Loading Control File (.ctl)</span> The system generates the SQL*Loader control file and writes the SQL*Loader options to this file. This is useful when you use bulk loading.</p>
+</li>
+<li>
+<p><span class="bold">Text Loading Error File (.err)</span>. The system writes each invalid record that got rejected while writing data into a target Table instance into this Planned Output.</p>
+</li>
+<li>
+<p><span class="bold">Text Loading Input Data File</span>. If you set the <span class="bold">Save Input File</span> attribute to <span class="bold">Yes</span>, Oracle LSH uses a Planned Output as a placeholder for the input file saved as an output during execution. If you set <span class="bold">Save Input File</span> to <span class="bold">No</span>, the system still creates the Planned Output but does not create the actual output when you run the Load Set.</p>
+<p>If you upload a zipped file with <span class="bold">Save as Input</span> set to <span class="bold">Yes</span>, the system always saves it as TEXTLOAD.ZIP&mdash;it does not have its original name when saved.</p>
+<p>Setting <span class="bold">Save as Input</span> to <span class="bold">Yes</span> when you are loading multiple zipped files is especially useful when uploading data files with multiple date formats. If the date formats are the same, the <span class="bold">Save as Input</span> setting is immaterial. If the date formats vary, and the <span class="bold">Save as Input</span> option is set to <span class="bold">Yes</span>, the system uses the date format specified in each metadata file.</p>
+</li>
+</ul>
+<p>You can classify the Planned Output and view the actual output through the Oracle LSH Outputs user interface, subject to normal Oracle LSH security rules. To view the contents of the file, you must download it and view it through SAS.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BJEGFEEE"></a>
+<div id="LSHDG834" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Text Load Set Execution Setup</h4>
+<p>When you define an Execution Setup for a Text Load Set, be careful to give it a name and description that will enable a person submitting the Load Set for execution to understand which file should be loaded.</p>
+<p>The file must contain data in a format that corresponds to the Table Descriptors defined for the Load Set, but the Table Descriptors are created as part of the Load Set definition, while the file can only be specified at runtime. Therefore, provide enough information in the Execution Setup Name and Description to make it clear which data this Load Set definition is intended to load.</p>
+<p>In addition, do not enter a value for Data File Name or Server OS Filename in the Execution Setup definition. The system uploads the file at the time that you specify it. If you specify it during Load Set or Execution Setup definition, the data in the file may be out of date by the time the user runs the Load Set.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+It does not make sense to schedule a Text Load Set for repeated execution because it would use the same BLOB ID each time, reloading the same data.
+<p>If you schedule a single run of a Text Load Set for a later time, it loads the data that was current at the time you specified the file.</p>
+</div>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BJEFEEED"></a>
+<div id="LSHDG836" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Oracle Clinical Stable Interface</h3>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#BJEDGEFB">About Oracle Clinical Stable Interface Load Sets</a></p>
+</li>
+<li>
+<p><a href="#BJECGEAG">OC Stable Interface Tables Load Set Attributes</a></p>
+</li>
+<li>
+<p><a href="#BJEFFJJB">OC Stable Interface Tables Load Set Table Descriptors</a></p>
+</li>
+<li>
+<p><a href="#BJEIECGA">OC Stable Interface Tables Load Set Parameter</a></p>
+</li>
+<li>
+<p><a href="#BJEHGCJJ">OC Stable Interface Tables Load Set Planned Outputs</a></p>
+</li>
+<li>
+<p><a href="#BJEGABJE">OC Stable Interface Tables Load Set Execution Setups</a></p>
+</li>
+</ul>
+<a id="BJEDGEFB"></a>
+<div id="LSHDG837" class="sect3">
+<h4 class="sect3">About Oracle Clinical Stable Interface Load Sets</h4>
+<p>Oracle Clinical Stable Interface Load Sets give you access to the metadata of all Oracle Clinical tables that are part of Oracle Clinical's stable interface.</p>
+<p>For information on Oracle Clinical tables and joins, request a copy of the <span class="italic">Oracle Clinical Stable Interface Guide</span> from Oracle Support. This documentation is available only to Oracle Clinical customers.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BJECGEAG"></a>
+<div id="LSHDG838" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">OC Stable Interface Tables Load Set Attributes</h4>
+<p>Click <span class="bold">Update</span> and enter a value for the following attribute:</p>
+<p><span class="bold">Remote Location</span>. Click the Search icon and select a source remote location/connection combination from the list of values.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BJEFFJJB"></a>
+<div id="LSHDG839" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">OC Stable Interface Tables Load Set Table Descriptors</h4>
+<p>Oracle LSH automatically creates Table Descriptors from the Oracle Clinical tables you specify.</p>
+<p>To specify the Oracle Clinical tables to load, do the following:</p>
+<ol>
+<li>
+<p>Click <span class="bold">Upload Table Descriptors</span>.</p>
+</li>
+<li>
+<p>Select one or more Oracle Clinical views to load.</p>
+<p>Refer to the Oracle Clinical documentation for information on these tables. Functional information is in <span class="italic">Creating a Study</span> and <span class="italic">Conducting a Study</span>. Table structure information is in the <span class="italic">Oracle Clinical Stable Interface Guide</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Apply</span>. The system returns you to the Load Set screen and displays the Table Descriptors in the Table Descriptors subtab.</p>
+</li>
+<li>
+<p>Map the Table Descriptors to Table instances. See <a href="#BJEFCDGH">"Mapping Table Descriptors to Table Instances"</a> for instructions.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<a id="BJEIECGA"></a>
+<div id="LSHDG840" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">OC Stable Interface Tables Load Set Parameter</h4>
+<p>Oracle Clinical Labs Load Sets have the following runtime Parameter:</p>
+<p><span class="bold">Remote Location</span>. The user submitting the Load Set for execution must select his or her own remote location/connection combination (or a remote location with a shared connection) at runtime to ensure the proper security for the external database. Do not enter a default value or change any of the other Parameter settings.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BJEHGCJJ"></a>
+<div id="LSHDG841" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">OC Stable Interface Tables Load Set Planned Outputs</h4>
+<p>The only Planned Output for any Oracle Clinical Load Set is a log file. See <a href="#BJEFBFFF">"About Load Set Planned Outputs"</a> for further information.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BJEGABJE"></a>
+<div id="LSHDG842" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">OC Stable Interface Tables Load Set Execution Setups</h4>
+<p>Do not set the Remote Location Parameter in the Execution Setup. See <a href="#BJEIECGA">"OC Stable Interface Tables Load Set Parameter"</a>.</p>
+<p>For general information on defining Execution Setups, see <a href="deftasks.htm#BEIGAICB">"Creating, Modifying, and Submitting Execution Setups"</a></p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BJEIAGCH"></a>
+<div id="LSHDG844" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Oracle Clinical Data Extract SAS Views</h3>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#BJEGFCFI">About OC DX SAS Views</a></p>
+</li>
+<li>
+<p><a href="#BJEJJCJI">OC DX SAS Views Load Set Attributes</a></p>
+</li>
+<li>
+<p><a href="#CHDFIHDI">OC DX SAS Views Load Set Parameters</a></p>
+</li>
+<li>
+<p><a href="#BJEGCFIB">OC DX SAS Views Load Set Table Descriptors</a></p>
+</li>
+<li>
+<p><a href="#BJEGAIJE">OC DX SAS Views Load Set Planned Outputs</a></p>
+</li>
+<li>
+<p><a href="#BJEBFFCI">OC DX SAS Views Load Set Execution Setups</a></p>
+</li>
+</ul>
+<a id="BJEGFCFI"></a>
+<div id="LSHDG845" class="sect3">
+<h4 class="sect3">About OC DX SAS Views</h4>
+<p>Data Extract (DX) SAS Views Load Sets allow you to make Oracle Clinical patient data available in Oracle LSH using the SAS DX Views your company has already defined in Oracle Clinical. There is no need to redefine the views in Oracle LSH.</p>
+<p>You can load views from one Study Access Account or Study Set Access Account at a time.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BJEJJCJI"></a>
+<div id="LSHDG846" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">OC DX SAS Views Load Set Attributes</h4>
+<p>Click <span class="bold">Update</span> and enter values for the following attributes:</p>
+<ul>
+<li>
+<p><span class="bold">Remote Location</span>. Click the Search icon and select a source remote location/connection combination from the list of values.</p>
+</li>
+<li>
+<p><span class="bold">Study Name</span>. Click the Search icon and select the name of the Study or Study Set whose views you want. The system displays all studies that your connection has access to in Oracle Clinical.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<a id="CHDFIHDI"></a>
+<div id="LSHDG848" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">OC DX SAS Views Load Set Parameters</h4>
+<p>Oracle Clinical Data Extract SAS Views Load Sets have the following runtime Parameters:</p>
+<ul>
+<li>
+<p><span class="bold">Remote Location</span>. The user submitting the Load Set for execution must select this or her own remote location/connection combination (or a remote location with a shared connection) at runtime to ensure the proper security for the external database. Do not enter a default value or change any of the other Parameter settings.</p>
+</li>
+<li>
+<p><span class="bold">View Type</span>. From the list of values, select the Oracle Clinical Study or Study Set Access Account that maintains the views you want.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Because this is a predefined, required Parameter you should not change anything except the default value in the Load Set definition, or the Load Set may not function properly.</div>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<a id="BJEGCFIB"></a>
+<div id="LSHDG847" class="sect3">
+<h4 class="sect3">OC DX SAS Views Load Set Table Descriptors</h4>
+<p>You can upload views from the Remote Location and study you specified. Oracle LSH uses the structure of the Oracle Clinical views to create the target Table Descriptor and its underlying Table definition.</p>
+<p>When you install an OC SAS DX Load Set using the <span class="bold">Install</span> button on the Load Set screen, if the Load Set has no Table Descriptors, the system creates a target Table Descriptor for each active SAS DX View at the specified Remote Location for the specified Oracle Clinical study or study set. It also creates a matching Table instance in the current Work Area for each Table Descriptor and maps the matching Table Descriptor and Table instance.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BJEGAIJE"></a>
+<div id="LSHDG849" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">OC DX SAS Views Load Set Planned Outputs</h4>
+<p>The only Planned Output for any Oracle Clinical Load Set is a log file. See <a href="#BJEFBFFF">"About Load Set Planned Outputs"</a> for further information.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BJEBFFCI"></a>
+<div id="LSHDG850" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">OC DX SAS Views Load Set Execution Setups</h4>
+<p>Do not set the Remote Location Parameter in the Execution Setup. See <a href="#CHDFIHDI">"OC DX SAS Views Load Set Parameters"</a>.</p>
+<p>For general information on defining Execution Setups, see <a href="deftasks.htm#BEIGAICB">"Creating, Modifying, and Submitting Execution Setups"</a></p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BJEEJIDJ"></a>
+<div id="LSHDG852" class="sect2">
+<h3 class="sect2">Oracle Clinical Data Extract Views</h3>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#BJEDHCDB">About OC Data Extract View Load Sets</a></p>
+</li>
+<li>
+<p><a href="#BJEGEHEE">OC Data Extract Views Load Set Attributes</a></p>
+</li>
+<li>
+<p><a href="#BJEEFGJJ">OC Data Extract Views Load Set Parameters</a></p>
+</li>
+<li>
+<p><a href="#BJEGIDGJ">OC Data Extract Views Load Set Table Descriptors</a></p>
+</li>
+<li>
+<p><a href="#BJEJCDEI">OC Data Extract Views Load Set Planned Outputs</a></p>
+</li>
+<li>
+<p><a href="#BJEHBCDH">OC Data Extract Views Load Set Execution Setups</a></p>
+</li>
+</ul>
+<a id="BJEDHCDB"></a>
+<div id="LSHDG853" class="sect3">
+<h4 class="sect3">About OC Data Extract View Load Sets</h4>
+<p>Oracle Clinical Data Extract (DX) Views Load Sets allow you to make Oracle Clinical patient data available in Oracle LSH using the Oracle DX Views your company has already defined in Oracle Clinical. There is no need to redefine the views in Oracle LSH.</p>
+<p>You can load views, including union views, from one Access Account at a time.</p>
+<p>You can either physically load patient records into Oracle LSH or use the Load Set as a pass-through view to Oracle Clinical; see <a href="#BJEGJDGH">"Oracle Tables and Views"</a>.</p>
+<p>You can load views of any type&mdash;stable, snapshot, or current&mdash;that are maintained in the specified access account. However, you can see data in current Oracle Clinical DX Views in Oracle LSH only if you do not physically load the data into Oracle LSH.</p>
+<p>There are two types of Oracle Clinical data extract view adapters: regular and incremental. The regular one uses full-mode reload processing. The incremental adapter uses incremental transactional processing, in either full or incremental load. For fastest performance, create the Load Set using the Incremental type and select incremental processing when you run the Load Set.</p>
+<div id="LSHDG1988" class="tblformalwide">
+<p class="titleintable"><a id="sthref52"></a><a id="sthref53"></a>Table 7-2 OC Data Extract View Load Set Types</p>
+<table class="cellalignment83" title="OC Data Extract View Load Set Types" summary="Describes Oracle Clinical load sets." dir="ltr">
+<thead>
+<tr class="cellalignment71">
+<th class="cellalignment82" id="r1c1-t27">Load Set Type</th>
+<th class="cellalignment82" id="r1c2-t27">OC DX View Types Allowed</th>
+<th class="cellalignment82" id="r1c3-t27">Processing Type Used</th>
+<th class="cellalignment82" id="r1c4-t27">Processing Options Available at Runtime</th>
+<th class="cellalignment82" id="r1c5-t27">Deletion Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment71">
+<td class="cellalignment77" id="r2c1-t27" headers="r1c1-t27">
+<p>Regular</p>
+</td>
+<td class="cellalignment77" headers="r2c1-t27 r1c2-t27">
+<p>Stable, Snapshot, or Current</p>
+</td>
+<td class="cellalignment77" headers="r2c1-t27 r1c3-t27">
+<p>Reload</p>
+</td>
+<td class="cellalignment77" headers="r2c1-t27 r1c4-t27">
+<p>Full</p>
+</td>
+<td class="cellalignment77" headers="r2c1-t27 r1c5-t27">
+<p>Soft-deletes records that are not reloaded. See <a href="exec.htm#CHDEHABB">"Reload Processing"</a>.</p>
+</td>
+</tr>
+<tr class="cellalignment71">
+<td class="cellalignment77" id="r3c1-t27" headers="r1c1-t27">
+<p>Incremental</p>
+</td>
+<td class="cellalignment77" headers="r3c1-t27 r1c2-t27">
+<p>Stable</p>
+</td>
+<td class="cellalignment77" headers="r3c1-t27 r1c3-t27">
+<p>Transactional, with or without audit (set in a profile, can be overwritten for a target table instance)</p>
+</td>
+<td class="cellalignment77" headers="r3c1-t27 r1c4-t27">
+<p>Full or incremental</p>
+</td>
+<td class="cellalignment77" headers="r3c1-t27 r1c5-t27">
+<p>In <span class="bold">Full</span> mode, the adapter first deletes all data and then loads all current data:</p>
+<ul>
+<li>
+<p>If you are using Transactional with Audit processing, the original data is soft-deleted. The data remains in the database with an end timestamp reflecting the time of the job.</p>
+</li>
+<li>
+<p>If you are using Transactional without Audit processing, the original data is hard-deleted. No record of the data is maintained.</p>
+</li>
+</ul>
+<p>In <span class="bold">Incremental</span> mode, uses DML statements to insert, update, or soft-delete changed records. In addition, data that has been hard-deleted in Oracle Clinical is hard-deleted in Oracle LSH.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformalwide" --></div>
+<!-- class="sect3" -->
+<a id="BJEGEHEE"></a>
+<div id="LSHDG854" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">OC Data Extract Views Load Set Attributes</h4>
+<p>Click <span class="bold">Update</span> and enter values for the following attributes:</p>
+<ul>
+<li>
+<p><span class="bold">Remote Location</span>. Click the Search icon and choose a source database/connection combination from the list of values.</p>
+</li>
+<li>
+<p><span class="bold">Study Name</span>. From the list of values, select the name of the Study or Study Set whose views you want. The system displays all studies that your connection has access to in Oracle Clinical.</p>
+</li>
+<li>
+<p><span class="bold">View Type</span>. From the list of values, select the type of view you want to load; for example, Stable, Snapshot, or Current.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<a id="BJEGIDGJ"></a>
+<div id="LSHDG855" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">OC Data Extract Views Load Set Table Descriptors</h4>
+<p>Use the <span class="bold">Upload Table Descriptors</span> function to specify the tables you want to load. The system generates a list of tables in the study in the location that you specified in the Attributes section.</p>
+<p>When you install an OC DX Load Set using the <span class="bold">Install</span> button on the Load Set screen, if the Load Set has no Table Descriptors, the system creates a target Table Descriptor for each active Oracle DX View at the specified Remote Location for the specified Oracle Clinical study or study set. It also creates a matching Table instance in the current Work Area for each Table Descriptor and maps the matching Table Descriptor and Table instance.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BJEEFGJJ"></a>
+<div id="LSHDG856" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">OC Data Extract Views Load Set Parameters</h4>
+<p>Oracle Clinical Data Extract Oracle Views Load Sets have the following runtime Parameters:</p>
+<ul>
+<li>
+<p><span class="bold">Remote Location</span>. The user submitting the Load Set for execution must enter his or her own remote location/connection combination (or a remote location and shared connection) at runtime to ensure the proper security for the external database. Do not enter a default value.</p>
+</li>
+<li>
+<p><span class="bold">View Type</span>. From the list of values, select the Oracle Clinical Study or Study Set Access Account that maintains the views you want.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Because this is a predefined, required Parameter you should not change anything except the default value in the Load Set definition, or the Load Set may not function properly.</div>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<a id="BJEJCDEI"></a>
+<div id="LSHDG857" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">OC Data Extract Views Load Set Planned Outputs</h4>
+<p>The only Planned Output for any Oracle Clinical Load Set is a log file. See <a href="#BJEFBFFF">"About Load Set Planned Outputs"</a> for further information.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BJEHBCDH"></a>
+<div id="LSHDG858" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">OC Data Extract Views Load Set Execution Setups</h4>
+<p>Do not set the Remote Location Parameter in the Execution Setup. See <a href="#BJEEFGJJ">"OC Data Extract Views Load Set Parameters"</a>.</p>
+<p>For general information on defining Execution Setups, see <a href="deftasks.htm#BEIGAICB">"Creating, Modifying, and Submitting Execution Setups"</a></p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BJEDEHDF"></a>
+<div id="LSHDG860" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Oracle Clinical Design and Definition</h3>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#BJEHFFGJ">About OC Design and Definition Load Sets</a></p>
+</li>
+<li>
+<p><a href="#BJEHBDHB">OC Design and Definition Load Set Attributes</a></p>
+</li>
+<li>
+<p><a href="#BJEFCEHJ">OC Design and Definition Load Set Table Descriptors</a></p>
+</li>
+<li>
+<p><a href="#CHDHDCIG">OC Design and Definition Load Set Parameters</a></p>
+</li>
+<li>
+<p><a href="#BJEDJIDB">OC Design and Definition Load Set Planned Outputs</a></p>
+</li>
+<li>
+<p><a href="#BJEBAGBD">OC Design and Definition Load Set Execution Setups</a></p>
+</li>
+</ul>
+<a id="BJEHFFGJ"></a>
+<div id="LSHDG861" class="sect3">
+<h4 class="sect3">About OC Design and Definition Load Sets</h4>
+<p>Oracle Clinical Design and Definition Load Sets load the metadata on which CRFs are based, including:</p>
+<ul>
+<li>
+<p>Data Collection Modules (DCMs)</p>
+</li>
+<li>
+<p>Data Collection Instruments (DCIs)</p>
+</li>
+<li>
+<p>Procedures</p>
+</li>
+<li>
+<p>Copy Groups</p>
+</li>
+<li>
+<p>Data Extract Queries and Templates</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<a id="BJEHBDHB"></a>
+<div id="LSHDG862" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">OC Design and Definition Load Set Attributes</h4>
+<p>Click <span class="bold">Update</span> and enter values for the following attributes:</p>
+<ul>
+<li>
+<p><span class="bold">Remote Location</span>. Click the Search icon and choose a source database/connection combination from the list of values.</p>
+</li>
+<li>
+<p><span class="bold">Design Sub-System</span>. Click the Search icon and select either Study Design or Study Definition. You can load tables from only one subsystem in a single Load Set. For a list of the tables you can load from each subsystem, see <a href="#BJEFCEHJ">"OC Design and Definition Load Set Table Descriptors"</a>.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<a id="BJEFCEHJ"></a>
+<div id="LSHDG863" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">OC Design and Definition Load Set Table Descriptors</h4>
+<p>Oracle LSH automatically creates Table Descriptors from the Oracle Clinical tables you specify. The tables available depend on the subsystem you specified.</p>
+<p>To specify the Oracle Clinical tables to load, do the following:</p>
+<ol>
+<li>
+<p>Click <span class="bold">Upload Table Descriptors</span> to specify the Oracle Clinical tables you want to load. Oracle LSH generates a list of tables in the study in the location that you specified in the Attributes section.</p>
+</li>
+<li>
+<p>Select one or more Oracle Clinical tables to load. The choices available depend on which subsystem you selected as an attribute; see <a href="#BJEFJDEH">"Study Design Table Descriptors"</a> and <a href="#BJEJCFEG">"Study Definition Table Descriptors"</a>.</p>
+<p>Refer to the Oracle Clinical documentation for information on these tables. Functional information is in <span class="italic">Creating a Study</span>. Table structure information is in the <span class="italic">Oracle Clinical Stable Interface Guide</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Apply</span>. The system returns you to the Load Set screen and displays the Table Descriptors in the Table Descriptors subtab.</p>
+</li>
+<li>
+<p>Map the Table Descriptors to Table instances. See <a href="#BJEFCDGH">"Mapping Table Descriptors to Table Instances"</a> for instructions.</p>
+</li>
+</ol>
+<p><a id="BJEFJDEH"></a><a id="LSHDG864"></a><span class="subhead3">Study Design Table Descriptors&nbsp;</span>If you set the Design Sub-System attribute to Study Design, you can load any of the following tables:</p>
+<br />
+Blind Breaks<br />
+Clinical Planned Events<br />
+Clinical Planned Processes<br />
+Clinical Procedures<br />
+Clinical Studies<br />
+Clinical Study History<br />
+Clinical Study Objectives<br />
+Clinical Study States<br />
+Clinical Study Versions<br />
+Clinical Study Version Sizes<br />
+Clinical Subjects<br />
+Clin Study Enrollment Criteria<br />
+Clin St Termination Criteria<br />
+Combined Treatment Components<br />
+Daily Doses<br />
+Enrollment Plans<br />
+Factors<br />
+Interval Treat Regimen Assign<br />
+OCL Dosage Forms<br />
+OCL Investigators<br />
+OCL Organization Units<br />
+OCL Product Masters<br />
+OCL Programs
+<p><a id="BJEJCFEG"></a><a id="LSHDG865"></a><span class="subhead3">Study Definition Table Descriptors&nbsp;</span>If you set the Design Sub-System attribute to Study Definition, you can load any of the following tables:</p>
+<br />
+Copy Groups<br />
+Copy Group Details<br />
+Correlation Items<br />
+Data Extract Views<br />
+DCIs<br />
+DCI Books<br />
+DCI Book DCI Constraints<br />
+DCI Book Pages<br />
+DCI Book Physical Pages<br />
+DCI Form Versions<br />
+DCI Modules<br />
+DCI Module Pages<br />
+DCMs<br />
+DCM Conditional Branches<br />
+DCM Layout ABS Pages<br />
+DCM Layout Graphics<br />
+DCM Layout Text<br />
+DCM Questions<br />
+DCM Question Groups<br />
+DCM Ques Repeat Defaults<br />
+DCM Schedules<br />
+Procedures<br />
+Procedure Details<br />
+Procedure Questions<br />
+Procedure Question Groups<br />
+Procedure Texts<br />
+Procedure Variables<br />
+Proc Det Var Usage<br />
+Queries<br />
+Query Details<br />
+Query Key Cols<br />
+Query Where<br />
+Query Where Cols<br />
+Templates<br />
+Template Columns<br />
+Template Indexes<br />
+Template Index Cols<br />
+Unions<br />
+View Question Mappings<br />
+View Restrictions<br />
+View Restriction Cols<br />
+View Template Questions</div>
+<!-- class="sect3" -->
+<a id="CHDHDCIG"></a>
+<div id="LSHDG866" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">OC Design and Definition Load Set Parameters</h4>
+<p>Oracle Clinical Design and Definition Load Sets have the following runtime Parameters:</p>
+<ul>
+<li>
+<p><span class="bold">Remote Location</span>. The user submitting the Load Set for execution must select his or her own remote location/connection combination (or a remote location with a shared connection) at runtime to ensure the proper security for the external database. Do not enter a default value or change any of the other Parameter settings.</p>
+</li>
+<li>
+<p><span class="bold">Study</span>. The user submitting the Load Set for execution must specify the study from which to load data.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Because this is a predefined, required Parameter you should not change anything except the default value in the Load Set definition, or the Load Set may not function properly.</div>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<a id="BJEDJIDB"></a>
+<div id="LSHDG867" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">OC Design and Definition Load Set Planned Outputs</h4>
+<p>The only Planned Output for any Oracle Clinical Load Set is a log file. See <a href="#BJEFBFFF">"About Load Set Planned Outputs"</a> for further information.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BJEBAGBD"></a>
+<div id="LSHDG868" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">OC Design and Definition Load Set Execution Setups</h4>
+<p>Do not set the Remote Location Parameter in the Execution Setup. See <a href="#CHDHDCIG">"OC Design and Definition Load Set Parameters"</a>.</p>
+<p>For general information on defining Execution Setups, see <a href="deftasks.htm#BEIGAICB">"Creating, Modifying, and Submitting Execution Setups"</a></p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BJEHFDAH"></a>
+<div id="LSHDG870" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Oracle Clinical Global Metadata</h3>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#BJEEEDBA">About OC Global Metadata Load Sets</a></p>
+</li>
+<li>
+<p><a href="#BJEJDABE">OC Global Metadata Load Set Attributes</a></p>
+</li>
+<li>
+<p><a href="#BJEJFFEA">OC Global Metadata Load Set Table Descriptors</a></p>
+</li>
+<li>
+<p><a href="#BJEBJEED">OC Global Metadata Load Set Parameters</a></p>
+</li>
+<li>
+<p><a href="#BJEIEJGF">OC Global Metadata Load Set Planned Outputs</a></p>
+</li>
+<li>
+<p><a href="#BJEIHHBH">OC Global Metadata Load Set Execution Setups</a></p>
+</li>
+</ul>
+<a id="BJEEEDBA"></a>
+<div id="LSHDG871" class="sect3">
+<h4 class="sect3">About OC Global Metadata Load Sets</h4>
+<p>An Oracle Clinical Global Metadata Load Set loads your Oracle Clinical Global Library definitions and automatically converts them to Oracle LSH definitions as follows:</p>
+<ul>
+<li>
+<p>Oracle LSH loads all Oracle Clinical Questions and converts them to Oracle LSH Variables.</p>
+</li>
+<li>
+<p>If a Question is associated with a Discrete Value Group (DVG) in Oracle Clinical, Oracle LSH converts the Question to a Parameter and converts its DVG values to a list of allowable values for the Parameter.</p>
+</li>
+<li>
+<p>Oracle LSH loads all Oracle Clinical Question Groups and converts them to Oracle LSH Table definitions with Columns based on the Variables corresponding to each Question in the Question Group.</p>
+</li>
+</ul>
+<p>The first time you run an Oracle Clinical Global Metadata Load Set, the system creates an Oracle LSH Domain called "Oracle Clinical Global Libraries" and an Application Area for the particular Oracle Clinical Global Library Domain. The first time you run a Load Set for a different OC Global Library Domain, Oracle LSH automatically creates another Application Area for the new OC Global Library Domain.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The use of the term "Domain" is confusing because Oracle LSH and Oracle Clinical use the term differently. The system creates an Oracle LSH Domain to contain all Oracle Clinical Global Library Domains. Within this Domain, Oracle LSH creates an Oracle LSH Application Area for each OC Global Library Domain.</div>
+<p>Each subsequent time you run a Load Set for a Global Library Domain, Oracle LSH add any new definitions and modifies any definitions that have been modified in Oracle Clinical. If an Oracle Clinical Question has been removed from a Question Group in Oracle Clinical, Oracle LSH removes the corresponding Column from the corresponding Table. However, Oracle LSH does not delete or retire any Oracle LSH object definitions if their corresponding Oracle Clinical object is retired.</p>
+<p>Oracle Clinical Global Metadata Load Sets never delete any metadata because the definitions may be in use in Oracle LSH. The processing is the same in either Full or Incremental mode.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BJEJDABE"></a>
+<div id="LSHDG872" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">OC Global Metadata Load Set Attributes</h4>
+<p>There are no attributes.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BJEJFFEA"></a>
+<div id="LSHDG873" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">OC Global Metadata Load Set Table Descriptors</h4>
+<p>No Table Descriptors are required or allowed.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BJEBJEED"></a>
+<div id="LSHDG874" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">OC Global Metadata Load Set Parameters</h4>
+<p>Oracle Clinical Global Metadata Load Sets include the Parameters listed below.</p>
+<ul>
+<li>
+<p><span class="bold">Remote Location</span>. The user submitting the Load Set for execution must select his or her own remote location/connection combination (or a remote location with a shared connection) at runtime to ensure the proper security for the external database. Do not enter a default value or change any of the other Parameter settings.</p>
+</li>
+<li>
+<p><span class="bold">Library Domain Name</span>. From the list of values, select the name of the Oracle Clinical Global Library Domain that you want to load. Do not change any of the other Parameter settings.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<a id="BJEIEJGF"></a>
+<div id="LSHDG875" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">OC Global Metadata Load Set Planned Outputs</h4>
+<p>The only Planned Output for an Oracle Clinical Global Metadata Load Set is a log file. See <a href="#BJEFBFFF">"About Load Set Planned Outputs"</a> for further information.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BJEIHHBH"></a>
+<div id="LSHDG876" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">OC Global Metadata Load Set Execution Setups</h4>
+<p>Do not set the Remote Location Parameter in the Execution Setup. See <a href="#BJEBJEED">"OC Global Metadata Load Set Parameters"</a>.</p>
+<p>For general information on defining Execution Setups, see <a href="deftasks.htm#BEIGAICB">"Creating, Modifying, and Submitting Execution Setups"</a></p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BJEDAEHB"></a>
+<div id="LSHDG878" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Oracle Clinical Labs</h3>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#BJEFECCI">About OC Labs Load Sets</a></p>
+</li>
+<li>
+<p><a href="#BJEFDBIH">OC Labs Load Set Attribute</a></p>
+</li>
+<li>
+<p><a href="#BJEBJCIH">OC Labs Load Set Table Descriptors</a></p>
+</li>
+<li>
+<p><a href="#BJECCAAJ">OC Labs Load Set Parameters</a></p>
+</li>
+<li>
+<p><a href="#BJEBAAHB">OC Labs Load Set Planned Outputs</a></p>
+</li>
+<li>
+<p><a href="#BJEEEAEH">OC Labs Load Set Execution Setups</a></p>
+</li>
+</ul>
+<a id="BJEFECCI"></a>
+<div id="LSHDG879" class="sect3">
+<h4 class="sect3">About OC Labs Load Sets</h4>
+<p>Oracle Clinical Labs Load Sets load lab reference ranges and associated information from Oracle Clinical Labs-related tables (see <a href="#BJEBJCIH">"OC Labs Load Set Table Descriptors"</a> for a complete list).</p>
+<p>The Lab Assignment Criteria table is not included. You can load it separately if necessary, using the Oracle tables adapter.</p>
+<p>Because Oracle Clinical Lab data tables are closely interrelated and are used in multiple studies, you must load all lab tables each time you run the Load Set. However, you can choose the Labs for which to load information.</p>
+<p>Each execution of this type of Load Set retrieves the most recent creation or modification timestamp from the Lab tables in Oracle Clinical.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BJEFDBIH"></a>
+<div id="LSHDG880" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">OC Labs Load Set Attribute</h4>
+<p>Click <span class="bold">Update</span> and enter a value for the following attribute:</p>
+<p><span class="bold">Remote Location</span>. Click the Search icon and choose a source database/connection combination from the list of values.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BJEBJCIH"></a>
+<div id="LSHDG881" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">OC Labs Load Set Table Descriptors</h4>
+<p>Do not define any Table Descriptors. The system automatically creates Table Descriptors for Lab tables. The Oracle Clinical tables loaded are:</p>
+<br />
+Labs<br />
+Lab Panels<br />
+Lab Panel Questions<br />
+Lab Range Subsets<br />
+Lab Test Question Units<br />
+Lab Units<br />
+Lab Unit Conversions<br />
+Preferred Lab Units<br />
+Preferred Lab Unit Groups<br />
+Ranges
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Do not change any of these Table Descriptors. They belong to the OC Labs adapter and any changes to them will make the adapter invalid causing Load Sets of this type to stop working.</div>
+<p>You must map the Table Descriptors to Table instances.See <a href="#BJEDGFIE">"Defining Table Descriptors"</a> for instructions.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BJECCAAJ"></a>
+<div id="LSHDG882" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">OC Labs Load Set Parameters</h4>
+<p>Oracle Clinical Labs Load Sets have the following runtime Parameters:</p>
+<ul>
+<li>
+<p><span class="bold">Remote Location</span>. The user submitting the Load Set for execution must select his or her own remote location/connection combination (or a remote location with a shared connection) at runtime to ensure the proper security for the external database. Do not enter a default value or change any of the other Parameter settings.</p>
+</li>
+<li>
+<p><span class="bold">Lab</span>. The user submitting the Load Set for execution can specify the lab for which to load data.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Because this is a predefined, required Parameter you should not change anything except the default value in the Load Set definition, or the Load Set may not function properly.</div>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<a id="BJEBAAHB"></a>
+<div id="LSHDG883" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">OC Labs Load Set Planned Outputs</h4>
+<p>The only Planned Output for any Oracle Clinical Load Set is a log file. See <a href="#BJEFBFFF">"About Load Set Planned Outputs"</a> for further information.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BJEEEAEH"></a>
+<div id="LSHDG884" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">OC Labs Load Set Execution Setups</h4>
+<p>Do not set the Remote Location Parameter in the Execution Setup. See <a href="#BJECCAAJ">"OC Labs Load Set Parameters"</a>.</p>
+<p>For general information on defining Execution Setups, see <a href="deftasks.htm#BEIGAICB">"Creating, Modifying, and Submitting Execution Setups"</a></p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BJEHADIB"></a>
+<div id="LSHDG886" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Oracle Clinical Randomization</h3>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#BJEJIBDH">About OC Randomization Load Sets</a></p>
+</li>
+<li>
+<p><a href="#BJEDHFBJ">OC Randomization Load Set Attributes</a></p>
+</li>
+<li>
+<p><a href="#CHDCBDGJ">OC Randomization Load Set Table Descriptor</a></p>
+</li>
+<li>
+<p><a href="#BJEIFHBD">OC Randomization Load Set Parameters</a></p>
+</li>
+<li>
+<p><a href="#BJEEEGGJ">OC Randomization Load Set Planned Outputs</a></p>
+</li>
+<li>
+<p><a href="#BJEEJGHJ">OC Randomization Load Set Execution Setups</a></p>
+</li>
+</ul>
+<a id="BJEJIBDH"></a>
+<div id="LSHDG887" class="sect3">
+<h4 class="sect3">About OC Randomization Load Sets</h4>
+<p>Oracle Clinical Randomization Load Sets load real or dummy treatment pattern information for Oracle Clinical studies. Randomization Load Sets load data from a single Oracle Clinical table: TREAT_ASSIGN_ALL_VIEW.</p>
+<p>This table contains two separate sets of data. One set contains the actual treatment codes that reveal which patient is receiving which treatments. This information is normally blinded in Oracle Clinical, and cannot be loaded into Oracle LSH until it has been unblinded in Oracle Clinical. The second set of data is dummy data that Oracle Clinical generates randomly.</p>
+<p>Oracle LSH automatically sets the Blinding Flag of the target Table instance to <span class="bold">Yes</span>.</p>
+<p>The same Load Set instance can load either the real treatment codes or the dummy data. To load dummy data, no special security privileges are required. To load the real codes, the user running the Load Set must satisfy security requirements in both Oracle LSH and Oracle Clinical:</p>
+<p><a id="LSHDG888"></a><span class="subhead3">Oracle Clinical Blinding Security&nbsp;</span>Security access to the real treatment codes within Oracle Clinical is controlled by the Randomization Access Status Code (RAND_ACC_STAT_TYPE_CODE). The Oracle Clinical Randomization Adapter checks the value of this code in Oracle Clinical. The value in Oracle Clinical determines whether the real data can be loaded or only the dummy data, and determines the value set for the Blinding Status of the target Table instance:</p>
+<ul>
+<li>
+<p>If the value is either Open or Release, the Load Set can load the real codes. The system sets the Blinding Status of the target Table instance to <span class="bold">Unblinded</span>.</p>
+</li>
+<li>
+<p>If the value is Access, and the RXA_ACCESS.TREAT_ACCESS_<span class="italic">STUDY</span> view exists in the user account being used to connect to Oracle Clinical, then the Load Set can load the real codes. The system sets the Blinding Status of the target Table instance to <span class="bold">Blinded</span>.</p>
+</li>
+<li>
+<p>If the user is trying to download the real codes and the RAND_ACC_STAT_TYPE_CODE value is anything other than Open, Release, or Access, the system raises an error and the load fails.</p>
+</li>
+</ul>
+<p><a id="LSHDG889"></a><span class="subhead3">Blinding Security&nbsp;</span>To run a Randomization Load Set on dummy data, an LSH user must have normal security access to the Load Set instance and to the target Table instance.</p>
+<p>In addition, to load the real treatment codes, the user must also have special blinding-related privileges on the target Table instance within the same User Group through which he or she has security access to the Table instance:</p>
+<ul>
+<li>
+<p>If the data is currently blinded, the user must have Blind Break privileges.</p>
+</li>
+<li>
+<p>If the data has been unblinded, the user must have Read Unblind or Blind Break privileges.</p>
+</li>
+</ul>
+<p>If the user has Unblind privileges, he or she can permanently unblind the data within LSH; see <a href="exec.htm#BCGIJDFH">"Unblinding Table Instances"</a>. Even after data has been permanently unblinded, users must have Read Unblind privileges to view the data.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BJEDHFBJ"></a>
+<div id="LSHDG890" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">OC Randomization Load Set Attributes</h4>
+<p>Oracle Clinical Randomization Load Sets have no attributes.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CHDCBDGJ"></a>
+<div id="LSHDG891" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">OC Randomization Load Set Table Descriptor</h4>
+<p>The system automatically creates a Table Descriptor (and its underlying Table definition) for the Oracle Clinical table TREAT_ASSIGN_ALL_VIEW.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Do not change this Table Descriptor. It belongs to the OC Randomization adapter and any changes to it will make the adapter invalid.</div>
+<p>You must map the Table Descriptors to Table instances.See <a href="#BJEDGFIE">"Defining Table Descriptors"</a> for instructions.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BJEIFHBD"></a>
+<div id="LSHDG892" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">OC Randomization Load Set Parameters</h4>
+<p>Oracle Clinical Labs Load Sets have the following runtime Parameters:</p>
+<ul>
+<li>
+<p><span class="bold">Remote Location</span>. The user submitting the Load Set for execution must select his or her own remote location/connection combination (or a remote location with a shared connection) at runtime to ensure the proper security for the external database. Do not enter a default value or change any of the other Parameter settings.</p>
+</li>
+<li>
+<p><span class="bold">Study</span>. The user submitting the Load Set for execution must specify the study for which to load real or dummy treatment codes.</p>
+</li>
+<li>
+<p><span class="bold">Treatment Data Type</span>. If set to Dummy (the default value) the system loads the dummy data. If set to Real, the system loads the real treatment codes, if all security requirements are met.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<a id="BJEEEGGJ"></a>
+<div id="LSHDG893" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">OC Randomization Load Set Planned Outputs</h4>
+<p>The only Planned Output for any Oracle Clinical Load Set is a log file. See <a href="#BJEFBFFF">"About Load Set Planned Outputs"</a> for further information.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BJEEJGHJ"></a>
+<div id="LSHDG894" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">OC Randomization Load Set Execution Setups</h4>
+<p>Do not set the Remote Location Parameter in the Execution Setup. See <a href="#BJEIFHBD">"OC Randomization Load Set Parameters"</a>.</p>
+<p>For general information on defining Execution Setups, see <a href="deftasks.htm#BEIGAICB">"Creating, Modifying, and Submitting Execution Setups"</a></p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BJEIJDGI"></a>
+<div id="LSHDG896" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Oracle Clinical Study Data</h3>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#BJECJHGA">About OC Study Data Load sets</a></p>
+</li>
+<li>
+<p><a href="#BJEEBICG">OC Study Data Load Set Attributes</a></p>
+</li>
+<li>
+<p><a href="#BJEDCHBJ">OC Study Data Load Set Table Descriptors</a></p>
+</li>
+<li>
+<p><a href="#BJEBBBAB">OC Study Data Load Set Parameters</a></p>
+</li>
+<li>
+<p><a href="#BJEEBJJA">OC Study Data Load Set Planned Outputs</a></p>
+</li>
+<li>
+<p><a href="#BJEIJCFD">OC Randomization Load Set Execution Setups</a></p>
+</li>
+</ul>
+<a id="BJECJHGA"></a>
+<div id="LSHDG897" class="sect3">
+<h4 class="sect3">About OC Study Data Load sets</h4>
+<p>Oracle Clinical Study Data Load Sets load study-specific non-patient data into LSH, including:</p>
+<ul>
+<li>
+<p>Discrepancies</p>
+</li>
+<li>
+<p>Data Clarification Forms (DCFs)</p>
+</li>
+<li>
+<p>Page tracking information</p>
+</li>
+<li>
+<p>Patient status information</p>
+</li>
+</ul>
+<p>See <a href="#BJEDCHBJ">"OC Study Data Load Set Table Descriptors"</a> for a complete list of tables that this Load Set type can load.</p>
+<p>Each execution of this type of Load Set retrieves the most recent data from the selected tables in Oracle Clinical.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BJEEBICG"></a>
+<div id="LSHDG898" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">OC Study Data Load Set Attributes</h4>
+<p>Click <span class="bold">Update</span> and enter a value for the following attribute:</p>
+<p><span class="bold">Remote Location</span>. Click the Search icon and choose a source remote location/connection combination from the list of values.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BJEDCHBJ"></a>
+<div id="LSHDG899" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">OC Study Data Load Set Table Descriptors</h4>
+<p>LSH automatically creates Table Descriptors and their underlying Table definitions from the Oracle Clinical tables you specify. LSH stores the Table definitions in the current Application Area.</p>
+<p>To specify the Oracle Clinical tables to load, do the following:</p>
+<ol>
+<li>
+<p>Click <span class="bold">Upload Table Descriptors</span> to specify the Oracle Clinical tables you want to load. The system generates a list of tables in the study in the location that you specified in the Attributes section.</p>
+</li>
+<li>
+<p>Select one or more Oracle Clinical tables to load. The choices are:</p>
+<br />
+Data Clarification Forms<br />
+DCF Discrepancies<br />
+DCF Discrepancies Hist<br />
+DCF Pages<br />
+DCF Page Entries<br />
+DCF Print Status<br />
+DCF Status Tracking<br />
+Discrepancy Entries<br />
+Discrepancy Entries T<br />
+Discrepancy Entry Review Hist<br />
+Discrepancy Entry Review Hist T<br />
+Patient Positions<br />
+Patient Positions T<br />
+Patient Positions History<br />
+Patient Statuses<br />
+Received Pages<br />
+Received Pages T<br />
+Received Page History<br />
+Received Page History T<br />
+Validation Reported Values<br />
+Validation Reported Values T<br />
+<p>Refer to the Oracle Clinical documentation for information on these tables. Functional information about Data Clarification Forms (DCFs), discrepancies, page tracking, and validated reported values is in <span class="italic">Conducting a Study</span>. Functional information on patient positions and statuses is in <span class="italic">Creating a Study</span>. Table structure information on all tables is in the <span class="italic">Oracle Clinical Stable Interface Guide</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Apply</span>. The system returns you to the Load Set screen and displays the Table Descriptors in the Table Descriptors subtab.</p>
+</li>
+<li>
+<p>Map the Table Descriptors to Table instances. See <a href="#BJEFCDGH">"Mapping Table Descriptors to Table Instances"</a> for further information.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<a id="BJEBBBAB"></a>
+<div id="LSHDG900" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">OC Study Data Load Set Parameters</h4>
+<p>Oracle Clinical Study Data Load Sets have the following runtime Parameters:</p>
+<ul>
+<li>
+<p><span class="bold">Remote Location</span>. The user submitting the Load Set for execution must select his or her own remote location/connection combination (or a remote location with a shared connection) at runtime to ensure the proper security for the external database. Do not enter a default value or change any of the other Parameter settings.</p>
+</li>
+<li>
+<p><span class="bold">Study</span>. The user submitting the Load Set for execution must specify the study from which to load data.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Because this is a predefined, required Parameter you should not change anything except the default value in the Load Set definition, or the Load Set may not function properly.</div>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<a id="BJEEBJJA"></a>
+<div id="LSHDG901" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">OC Study Data Load Set Planned Outputs</h4>
+<p>The only Planned Output for any Oracle Clinical Load Set is a log file. See <a href="#BJEFBFFF">"About Load Set Planned Outputs"</a> for further information.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BJEIJCFD"></a>
+<div id="LSHDG902" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">OC Randomization Load Set Execution Setups</h4>
+<p>Do not set the Remote Location Parameter in the Execution Setup. See <a href="#BJEBBBAB">"OC Study Data Load Set Parameters"</a>.</p>
+<p>For general information on defining Execution Setups, see <a href="deftasks.htm#BEIGAICB">"Creating, Modifying, and Submitting Execution Setups"</a></p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BJECBDGE"></a>
+<div id="LSHDG1989" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Installing Load Set Instances</h2>
+<p>You can install a Load Set instance directly from its Properties screen, using the Install button, or in its Work Area (see <a href="wa_install.htm#CHDGCFAF">"Installing a Work Area and Its Objects"</a>).</p>
+<p>When you install a Load Set instance using the <span class="bold">Install</span> button on its Properties screen:</p>
+<ul>
+<li>
+<p>The system checks in the Load Set instance and definition, and also the Table instances in the current Work Area to which the instance is mapped.</p>
+</li>
+<li>
+<p>The system checks if the Load Set is installable. If not, the system performs Automatic Mapping by Name on any unmapped Table Descriptors. If the Load Set is still not installable and there are still unmapped Table Descriptors, the system creates Table instances in the current Work Area from the Table Descriptors and maps them.</p>
+<p>In the case of Oracle Clinical DX Load Sets and Oracle Clinical SAS DX Load Sets, if the Load Set has no Table Descriptors, the system creates a target Table Descriptor for each active Data Extract View at the specified Remote Location for the specified Oracle Clinical study or study set. It also creates a matching Table instance in the current Work Area for each Table Descriptor and maps the matching Table Descriptor and Table instance.</p>
+</li>
+<li>
+<p>The system attempts to install the Load Set instance and the Table instances to which it is mapped. The system displays a success or error message. If the installation fails, the error message displays the name of any objects that were not installable.</p>
+</li>
+</ul>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If any of the mapped Table instances or the Load Set definition is not installable, the system cannot install the Load Set instance. See <a href="status.htm#BABHIEJG">Appendix A, "Installation Requirements for Each Object Type"</a> for the reasons these objects may not be installable.</div>
+<p><a id="LSHDG1990"></a><span class="subhead3">Log File&nbsp;</span>To see the log file for the installation, you must go to the Work Area Installation screen, as follows:</p>
+<ol>
+<li>
+<p>Click the <span class="bold">Applications</span> tab. The main Application Development screen opens.</p>
+</li>
+<li>
+<p>Click the name of the Work Area you are working in. The Work Area screen opens.</p>
+</li>
+<li>
+<p>From the <span class="bold">Actions</span> drop-down list, select <span class="bold">Installation History</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Go</span>. The system displays the Installation History screen with the log files in chronological order.</p>
+</li>
+<li>
+<p>Click the <span class="bold">View Log</span> link for the most recent installation attempt or for the date and time that you ran the install process. The system displays the log file.</p>
+</li>
+</ol>
+<p>For information on installation and on reading the log file, see <a href="wa_install.htm#CHDGCFAF">"Installing a Work Area and Its Objects"</a>.</p>
+</div>
+<!-- class="sect1" -->
+<a id="CIHJCFDA"></a>
+<div id="LSHDG904" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Modifying Load Sets</h2>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#CIHDHGDI">Modifying Load Set Instance Properties</a></p>
+</li>
+<li>
+<p><a href="#CIHGGBFE">Modifying Load Set Definition Properties</a></p>
+<ul>
+<li>
+<p><a href="#CHDGBFFC">Modifying Table Descriptors</a></p>
+</li>
+<li>
+<p><a href="#CIHHCHAA">Modifying Attributes and Parameters</a></p>
+</li>
+<li>
+<p><a href="#CIHFGBIB">Modifying Planned Outputs</a></p>
+</li>
+</ul>
+</li>
+</ul>
+<p>If you have the necessary privileges, you can modify a Load Set either through an instance of it in a Work Area or directly in the definition in its Domain or Application Area. In most cases it makes sense to work through an instance in a Work Area for the following reasons:</p>
+<ul>
+<li>
+<p>In order to use or test changes to the definition you must create and install an instance of it.</p>
+</li>
+<li>
+<p>If you work through an instance, the system automatically repoints the instance to the new version of the definition.</p>
+</li>
+</ul>
+<p>However, if you need to change properties of the definition, you must work directly in the definition in its Domain or Work Area.</p>
+<p>Whether you work in an instance or directly in the definition, when you check in the new version of the definition you have the opportunity to upgrade instances of the original definition to the new version; see <a href="deftasks.htm#BEIHAHEE">"Upgrading Object Instances to a New Definition Version"</a>.</p>
+<a id="CIHDHGDI"></a>
+<div id="LSHDG905" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Modifying Load Set Instance Properties</h3>
+<p>On the Load Set instance's Properties screen, click <span class="bold">Update</span> to enter changes. Oracle LSH creates a new version of the instance you are working on and applies your changes to it when you click <span class="bold">Apply</span>. Click <span class="bold">Cancel</span> to discard your changes and the new version.</p>
+<p>You can modify some properties through the <span class="bold">Actions</span> drop-down list; see <a href="deftasks.htm#CIHDAIFF">"Using the Actions Drop-Down List"</a> for further information.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You must reinstall the Load Set for the changes to take effect.</div>
+<p>You can modify the following:</p>
+<p><a id="LSHDG906"></a><span class="subhead3">Name&nbsp;</span>See <a href="deftasks.htm#CHDBIJAH">"Naming Objects"</a> for further information.</p>
+<p><a id="LSHDG907"></a><span class="subhead3">Description&nbsp;</span>See <a href="deftasks.htm#CHDIHBBC">"Creating and Using Object Descriptions"</a> for further information.</p>
+<p><a id="CIHGBHJH"></a><a id="LSHDG908"></a><span class="subhead3">Definition Source&nbsp;</span>This field applies to the instance only. It specifies the Load Set definition to which this Load Set instance points. It generally does not make sense to change the source definition for the following reasons:</p>
+<ul>
+<li>
+<p>Changing the definition may result in a new set of Table Descriptors, Parameters, and Planned Outputs.</p>
+</li>
+<li>
+<p>Any new Table Descriptors are not mapped.</p>
+</li>
+<li>
+<p>The Load Set's status changes to <span class="bold">Non Installable</span>.</p>
+</li>
+</ul>
+<p>If you want to change to a new version of the same definition, use the <span class="bold">Upgrade Instance</span> option from the <span class="bold">Actions</span> drop-down list.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CIHGGBFE"></a>
+<div id="LSHDG909" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Modifying Load Set Definition Properties</h3>
+<p>You can go to a Load Set definition's Properties screen in one of the following ways:</p>
+<ul>
+<li>
+<p><span class="bold">From the Load Set's Properties screen</span>: Click the hyperlink of the Load Set definition that appears in the Definition field. See <a href="#CIHDIGDB">"Definition"</a>.</p>
+</li>
+<li>
+<p><span class="bold">From the Domain or Application Area where you created the definition</span>: Click Manage Definitions to view all the definitions in that Domain or Application Area. Click the definition name.</p>
+</li>
+</ul>
+<p>Once on the Load Set definition screen, click <span class="bold">Update</span> to enter changes. Oracle LSH creates a new version of the definition. You can change the following properties:</p>
+<p><a id="LSHDG910"></a><span class="subhead3">Name&nbsp;</span>See <a href="deftasks.htm#CHDBIJAH">"Naming Objects"</a> for further information.</p>
+<p><a id="LSHDG911"></a><span class="subhead3">Description&nbsp;</span>See <a href="deftasks.htm#CHDIHBBC">"Creating and Using Object Descriptions"</a> for further information.</p>
+<p>You can modify some properties through the <span class="bold">Actions</span> drop-down list; see <a href="deftasks.htm#CIHDAIFF">"Using the Actions Drop-Down List"</a> for further information.</p>
+<a id="CHDGBFFC"></a>
+<div id="LSHDG912" class="sect3">
+<h4 class="sect3">Modifying Table Descriptors</h4>
+<p>You cannot modify Load Set Table Descriptors because they must be identical to the external table or data set on which they are based. However, for most Load Set types you can add or remove Table Descriptors.</p>
+<p>You can change the Table Descriptor mappings, which are part of the Load Set instance, not the definition. You do not need to check out the definition to modify the mappings. This may be useful if you want to load data into a standard Oracle LSH Table instance whose name or Column names differ from the source Table or data set.</p>
+<p>Table Descriptors belong to the Load Set definition.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CIHHCHAA"></a>
+<div id="LSHDG913" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Modifying Attributes and Parameters</h4>
+<p>You cannot add or remove Attributes or Parameters because they are predefined for each Load Set type.</p>
+<p>You can change some Parameter values in one or more Execution Setups. Select <span class="bold">Execution Setups</span> from the <span class="bold">Actions</span> drop-down list in the Load Set instance in the Work Area. See <a href="deftasks.htm#BEIGAICB">"Creating, Modifying, and Submitting Execution Setups"</a>.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CIHFGBIB"></a>
+<div id="LSHDG914" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Modifying Planned Outputs</h4>
+<p>You cannot add or remove Planned Outputs because they are predefined for each Load Set type.</p>
+<p>You can change the Planned Outputs' classifications, which affect the classifications of the actual outputs. See <a href="deftasks.htm#CHDCBGEI">"Classifying Outputs"</a> for further information.</p>
+<p>Planned Outputs belong to the Load Set definition.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment70">
+<tr>
+<td class="cellalignment77">
+<table class="cellalignment75">
+<tr>
+<td class="cellalignment74"><a href="vars.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment74"><a href="dm.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2006, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment79">
+<table class="cellalignment73">
+<tr>
+<td class="cellalignment74"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment74"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment74"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment74"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

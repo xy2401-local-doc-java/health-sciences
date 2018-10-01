@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Maintaining the Repository and Data Mart</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2017-10-04T8:20:59Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Argus Analytics User's Guide" />
+<meta name="dcterms.identifier" content="E88812-01" />
+<meta name="dcterms.isVersionOf" content="OANEP" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Prev" href="etl.htm" title="Previous" type="text/html" />
+<link rel="Next" href="perf.htm" title="Next" type="text/html" />
+<link rel="alternate" href="OANEP.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="OANEP.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="OANEP.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">10/16</span> <!-- End Header -->
+<div id="OANEP581" class="chapter"><a id="CEGBIBDE"></a>
+<h1 class="chapter"><span class="secnum">5</span> Maintaining the Repository and Data Mart</h1>
+<a id="CEGCJJAD"></a>
+<div id="OANEP582" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">5.1</span> Maintaining the Oracle Argus Analytics Repository</h2>
+<p>Each release of Oracle Argus Analytics contains a Repository (RPD) file. The Repository is the data store for the Oracle BI Server. It maintains the mapping of the physical tables comprising the data mart to the Presentation Layer, which holds the columns and tables available for use in OBIEE Requests. As shipped, the RPD corresponds to the Oracle Argus Analytics data mart, and can be used without any modification.</p>
+<p>However, you might find it desirable to modify the Oracle-supplied Oracle Argus Analytics Repository file (RPD), for any of the following reasons:</p>
+<ul>
+<li>
+<p>You want to add a column or table to the data mart, and propagate that addition into the layers of the repository.</p>
+</li>
+<li>
+<p>You want to add a calculated column in the Presentation Layer as a function of some set of physical layer columns.</p>
+</li>
+<li>
+<p>You want to modify a repository variable value, or add a new repository variable, for use in some Presentation Catalog calculation.</p>
+</li>
+<li>
+<p>You want to modify a group, an account, or a privilege maintained through the repository.</p>
+</li>
+</ul>
+<p>This section describes the procedures you must follow to carry out these types of modifications.</p>
+<p>You should be aware that, once you have modified the Oracle-supplied Repository, it is your responsibility to merge these modifications into Repositories supplied by Oracle in patches and releases of Oracle Argus Analytics. Details on how to re-apply your modifications are provided below.</p>
+<div class="infobox-note">
+<p class="notep1">Caution:</p>
+Changes to the Repository should be made with care.
+<p>Privileges to make changes in the Oracle Argus Analytics Repository should be granted only to a limited set of users who need to make such changes and also know how to make them correctly.</p>
+<p>Changes should be tested on a side copy of the Repository before being released for production use.</p>
+</div>
+<div id="OANEP583" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref61"></a>
+<h3 class="sect2"><span class="secnum">5.1.1</span> Modifying the Repository</h3>
+<p>The Oracle Argus Analytics Repository is maintained as a versioned object in a version controlling software. A copy of that Repository is deployed to the application server file system. This <span class="italic">deployed</span> Repository is the one that the Oracle BI Server uses. All changes to the Repository, however, must be made through a two-step process:</p>
+<ul>
+<li>
+<p>Modify the versioned Repository object.</p>
+</li>
+<li>
+<p>Deploy the latest version of the Repository object.</p>
+</li>
+</ul>
+<p>Therefore, Oracle requires that you do not modify the deployed Oracle Argus Analytics Repository directly.</p>
+<p>If you do need to modify the Repository, perform the following tasks:</p>
+<ol>
+<li>
+<p>Open RPD using the Administration tool and make the desired modifications.</p>
+</li>
+<li>
+<p>Launch the Oracle BI Presentation Server to verify the changes.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CEGBEFFH"></a>
+<div id="OANEP586" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">5.2</span> Maintaining the Argus Analytics Data Mart</h2>
+<p>You may need to modify the Oracle Argus Analytics data mart, typically for one of the following reasons:</p>
+<ul>
+<li>
+<p><span class="italic">Derivation</span>: Calculation of a new measure as a function of some supplied measures.</p>
+</li>
+<li>
+<p><span class="italic">Extension</span>: Adding data that was not delivered with Oracle Argus Analytics.</p>
+</li>
+<li>
+<p><span class="italic">Substitution</span>: Swapping data from a different source for a column that was delivered with Oracle Argus Analytics.</p>
+</li>
+</ul>
+<div class="infobox-note">
+<p class="notep1">Caution:</p>
+Exercise caution when you modify the data mart. Please conform to the recommendations mentioned in the subsequent sections.</div>
+<div id="OANEP587" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref62"></a>
+<h3 class="sect2"><span class="secnum">5.2.1</span> Derivations</h3>
+<p>A <span class="italic">derivation</span> is a calculation of a new measure as a function of some supplied measures. Oracle Argus Analytics displays all derivations as a column in Answers. You can use any of the following approaches to calculate derivations:</p>
+<ul>
+<li>
+<p>Calculate the derivation as part of the creation of a request.</p>
+<p>In this approach, only the Web Catalog is modified. However, you must specify the calculation for each request, and the calculation is executed every time the request is executed.</p>
+</li>
+<li>
+<p>Calculate the derivation in the physical or business layer of the RPD file; it is propagated to the presentation layer. This makes the derivation you created appear in Answers as a column.</p>
+<p>Using this approach, you can specify the calculation once and use it for multiple requests. The derived value looks the same as any other Answers column.</p>
+</li>
+<li>
+<p>Calculate the derivation in the data mart.</p>
+<p>The calculation is run at ETL execution time and not at query time. The derived value looks the same as any other Answers column. In this approach, you must add the result column to the staging and target tables, modify the ETL procedures (both Source Dependent Extract (SDE) and Source Independent Load (SIL)), and then add the column to all the layers of the RPD.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<div id="OANEP588" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref63"></a>
+<h3 class="sect2"><span class="secnum">5.2.2</span> Extensions</h3>
+<p>An <span class="italic">extension</span> is a new column added to the data mart.</p>
+<p><span class="bold">Example for Informatica ETL:</span> Adding the Agency ID as an attribute of the study dimension for each study. The following is assumed:</p>
+<ul>
+<li>
+<p>The information about agency is available in a table called LM_STUDY_SUSAR.</p>
+</li>
+</ul>
+<p>To minimize the level of effort required when implementing a release with a new repository, Oracle recommends that you add extensions to the data mart through user-defined extension tables, rather than by adding new columns directly into the relevant staging and target tables.</p>
+<p>Perform the following tasks to add the study manager to the study dimension for each study:</p>
+<ol>
+<li>
+<p>Modify staging table W_RXI_STUDY_DS, adding the AGENCY_ID column. To modify the staging table, perform the following tasks in Oracle Business Intelligence Data Mart Administration Console (DAC):</p>
+<ol>
+<li>
+<p>Duplicate the container in DAC (to ensure that the changes are not overwritten in the next Oracle Argus Analytics upgrade) or use an existing customized table definition.</p>
+</li>
+<li>
+<p>Navigate to the <span class="bold">Design</span> &gt; <span class="bold">Tables</span> subtab and add the new column under W_RXI_STUDY_DS and save it.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Modify the SDE that populates W_RXI_STUDY_DS, in two steps:</p>
+<ul>
+<li>
+<p>Copy the SDE into another folder (to ensure that the changes are not overwritten in the next Oracle Argus Analytics upgrade) or use an existing customized SDE.</p>
+</li>
+<li>
+<p>Add the LM_STUDY_SUSAR table as a source in the Informatica program.</p>
+</li>
+<li>
+<p>Add a mapping of column AGENCY_ID from LM_STUDY_SUSAR to W_RXI_STUDY_DS.</p>
+</li>
+</ul>
+<p>To modify the SDE, perform the following tasks in DAC:</p>
+<ol>
+<li>
+<p>Navigate to <span class="bold">Design</span> &gt; <span class="bold">Tasks</span> subtab.</p>
+</li>
+<li>
+<p>Navigate to SDE of Study Dimension. Right-click and select <span class="bold">Synchronize Tasks</span>.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>If it does not already exist to support some other extension, create extension table W_RXI_STUDY_DX, containing one column [STUDY_WID] to function as a foreign key that joins to the primary key in W_RXI_STUDY_D. This table is populated with one row for each row in W_RXI_STUDY_D when the Study SIL executes.</p>
+</li>
+<li>
+<p>Add column AGENCY_ID to W_RXI_STUDY_D to hold the AGENCY_ID. To add a column, perform the following tasks in DAC:</p>
+<ol>
+<li>
+<p>Duplicate the container in DAC (to ensure that the changes are not overwritten in the next Oracle Argus Analytics upgrade) or use an existing customized table definition.</p>
+</li>
+<li>
+<p>Navigate to Tables subtab Under Design Tab and add the new column under W_RXI_STUDY_DS and save it.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Modify the SIL that populates W_RXI_STUDY_D. Add instructions to create a record in W_RXI_STUDY_DX for each record in W_RXI_STUDY_D, and to copy W_RXI_STUDY_DS. AGENCY_ID into W_RXI_STUDY_DX.AGENCY_ID for each record.</p>
+<p>To modify the SIL, perform the following tasks in DAC:</p>
+<ol>
+<li>
+<p>Copy the SIL into another folder (to ensure that the changes are not overwritten in the next Oracle Argus Analytics upgrade) or use an existing customized SIL.</p>
+</li>
+<li>
+<p>Add the new column and save.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Modify the repository:</p>
+<div class="infobox-note">
+<p class="notep1">Important:</p>
+Before you modify the repository, ensure that you have copied the repository to a different location. This ensures that the changes are not overwritten automatically in the next upgrade of Oracle Argus Analytics. Alternatively, you can use an existing customized repository.</div>
+<ol>
+<li>
+<p>Import the definition of the extension table, W_RXI_STUDY_DX, into the Repository.</p>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<div id="OANEP590" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref64"></a>
+<h3 class="sect2"><span class="secnum">5.2.3</span> Substitutions</h3>
+<p>A substitution occurs if you have a preferred alternative source of data for a column that Oracle Argus Analytics populates from Oracle Argus Safety. For example, you may want to load the W_RXI_STUDY_D.STUDY_SPONSOR other than what Oracle Argus Analytics is loading. You will have to perform the following tasks:</p>
+<ol>
+<li>
+<p>Create a table at database containing the locally-sourced values of the column, and also add whatever keys are needed to join to the Oracle-supplied view.</p>
+</li>
+<li>
+<p>Create a program that joins the two tables and creates a new table, in which the locally-sourced values replace the Oracle-supplied values for the column of interest. Call this the Substitution Table.</p>
+</li>
+<li>
+<p>Modify the SDE to read from the Substitution Table, rather than the Oracle-supplied table or view.</p>
+<p>To modify the SDE, perform the following tasks in Informatica:</p>
+<ol>
+<li>
+<p>Copy the SDE into another folder (to ensure that the changes are not overwritten in the next Oracle Argus Analytics upgrade) or use an existing customized SDE.</p>
+</li>
+<li>
+<p>Modify the definitions and save.</p>
+</li>
+</ol>
+</li>
+</ol>
+<p>If you make changes to a source table, you must propagate that change forward as far as necessary. Some of the scenarios and the related necessary adjustments are described in the Table 4-1:</p>
+<div id="OANEP591" class="tblformal">
+<p class="titleintable"><a id="sthref65"></a><a id="sthref66"></a>Table 5-1 Scenarios Requiring Necessary Adjustments</p>
+<table class="cellalignment13" title="Scenarios Requiring Necessary Adjustments" summary="This table lists some of the scenarios and the related necessary adjustments." dir="ltr">
+<thead>
+<tr class="cellalignment2">
+<th class="cellalignment14" id="r1c1-t5">Scenario</th>
+<th class="cellalignment14" id="r1c2-t5">Adjustments Required</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r2c1-t5" headers="r1c1-t5">
+<p>New table has the same layout as the old table, but is passed through from a different source</p>
+</td>
+<td class="cellalignment8" headers="r2c1-t5 r1c2-t5">
+<p>Change the SDE that reads the old table to instead read the new table.</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r3c1-t5" headers="r1c1-t5">
+<p>Modified table has modified layout</p>
+</td>
+<td class="cellalignment8" headers="r3c1-t5 r1c2-t5">
+<ol>
+<li>
+<p>Modify the SDE to read the modified layout.</p>
+</li>
+<li>
+<p>Modify the staging table populated by the SDE to include the modified layout.</p>
+</li>
+<li>
+<p>Modify the SIL to read the modified layout.</p>
+</li>
+<li>
+<p>Modify the target table to include the modified layout.</p>
+</li>
+<li>
+<p>Modify the RPD to accept the changed data mart table.</p>
+</li>
+</ol>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r4c1-t5" headers="r1c1-t5">
+<p>New table</p>
+</td>
+<td class="cellalignment8" headers="r4c1-t5 r1c2-t5">
+<ol>
+<li>
+<p>Add a staging table to accept the new input.</p>
+</li>
+<li>
+<p>Add an SDE to read from the new table and write to the staging table.</p>
+</li>
+<li>
+<p>Add a data mart table to make the new data available to the BI Server.</p>
+</li>
+<li>
+<p>Add an SIL to populate the new data mart table from the new staging table.</p>
+</li>
+<li>
+<p>Modify the RPD to accept the new data mart table.</p>
+</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" --></div>
+<!-- class="sect2" -->
+<div id="OANEP592" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref67"></a>
+<h3 class="sect2"><span class="secnum">5.2.4</span> Modifying Data Mart Tables</h3>
+<p>Depending on what changes are required to the data mart, it is necessary to modify either the source table in Informatica and DAC, or the source, staging, and target tables.</p>
+<p class="subhead2"><a id="OANEP593"></a>Managing Indexes</p>
+<p>Oracle Argus Analytics is delivered with a set of indexes. If you wish, you can create additional indexes to meet your query requirements.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Oracle recommends that you Drop and re-create all indexes only for full load. This should be disabled for incremental load.</div>
+<p>It is useful to drop all indexes on the data mart tables before loading large volumes of data, and to recreate them afterward. DAC/ODI can automate this process for you.</p>
+<p>To drop indexes per table, use the procedure call opvautilcommon.p_Drop_Indexes( pTableName in varchar2 ).</p>
+<p>To create indexes per table, use the procedure call opvautilcommon.p_Create_Indexes( pTableName in varchar2 ).</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The P_DROP_INDEXES procedure stores the index metadata information in the table W_PVA_INDEX_S OR PVA_INDEX_S. This information is later used by the procedure P_CREATE_INDEXES to re-create the dropped indexes on the given table.</div>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment1">
+<tr>
+<td class="cellalignment8">
+<table class="cellalignment6">
+<tr>
+<td class="cellalignment5"><a href="etl.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment5"><a href="perf.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment10">
+<table class="cellalignment4">
+<tr>
+<td class="cellalignment5"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment5"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment5"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment5"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

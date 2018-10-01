@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Designing a Classification System for Searching and Browsing</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="description" content="This guide introduces Oracle Life Sciences Data Hub and contains information you need to design your Oracle LSH implementation to fill your company's needs." />
+<meta name="dcterms.created" content="2018-05-18T12:50:30Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Life Sciences Data Hub Implementation Guide" />
+<meta name="dcterms.identifier" content="E95828-01" />
+<meta name="dcterms.isVersionOf" content="LSHIM" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2011, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="sec.htm" title="Previous" type="text/html" />
+<link rel="Next" href="valsops.htm" title="Next" type="text/html" />
+<link rel="alternate" href="LSHIM.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="LSHIM.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="LSHIM.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">8/12</span> <!-- End Header -->
+<div id="LSHIM291" class="chapter"><a id="CHDGCFDE"></a>
+<h1 class="chapter"><span class="secnum">5</span> Designing a Classification System for Searching and Browsing</h1>
+<p>This section includes information on the following topics:</p>
+<ul>
+<li>
+<p><a href="#CHDECDJA">About Classification</a></p>
+</li>
+<li>
+<p><a href="#CHDHBIGD">Designing a Classification System</a></p>
+</li>
+<li>
+<p><a href="#CDDFDGIC">Defining Classification Hierarchies</a></p>
+</li>
+<li>
+<p><a href="#CDDBCIGC">Assigning Classification Levels to Object Subtypes</a></p>
+</li>
+<li>
+<p><a href="#CHDCBGEI">Classifying Outputs</a></p>
+</li>
+<li>
+<p><a href="#CHDGHFJI">Classification Example</a></p>
+</li>
+<li>
+<p><a href="#CHDBBIFE">Design Decision Summary</a></p>
+</li>
+</ul>
+<a id="CHDECDJA"></a>
+<div id="LSHIM292" class="sect1">
+<h2 class="sect1">About Classification</h2>
+<p>A typical clinical trial requires the development of many Programs and other defined objects, and repeated executions of each one, so that by the end of the trial there are large numbers of objects and outputs such as reports.</p>
+<p>The Oracle Life Sciences Data Hub (Oracle LSH) classification system allows you to organize these objects and outputs by classifying, or labeling, them in ways that reflect your business or clinical organization, or that identify any characteristic you choose. Oracle LSH uses classifications to help users find outputs and defined objects in two ways: <a href="#CHDEFBGI">Browsing</a> and <a href="#CHDCIDII">Searching</a>.</p>
+<p><a id="CHDEFBGI"></a><a id="LSHIM293"></a><span class="subhead3">Browsing&nbsp;</span>Oracle LSH uses the classification system you set up to create a customized user interface in the Reports tab for both the Outputs and Visualizations subtabs.</p>
+<p>You can create hierarchies of categories that are logically related to one another, so that Oracle LSH displays outputs within that hierarchical structure, like the folder structure on a PC.</p>
+<p>For example, if you have multiple projects, multiple studies in each project, and multiple sites in each study, you can create a hierarchy with three levels: Project, Study, and Site. Enter all your actual project names in the Project level, all study names in the Study level, and all site names in the Site level, noting which sites are part of which studies and which studies are part of which projects.</p>
+<p>In the Reports tab, Oracle LSH displays a folder for each project, labeled with the project name. Each project folder contains a folder for each of the studies in that project as well as all reports classified to that project as a whole. Each study folder contains a folder for each of the sites in that study, as well as all reports classified to that study as a whole. Each site folder contains all reports classified to that site.</p>
+<p>Alternatively, within each study you could have folders for reports on demography and adverse events reports, for example.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Oracle LSH executable objects can produce outputs as follows: Programs can produce reports; Report Sets generate sets of reports; Data Marts produce files in text, SAS data sets or transport files, or Oracle Export format containing large amounts of data; and SAS and text Load Sets may produce the text or SAS file loaded as an output. All executables can also produce log files, but these are not displayed in the Reports screen directly; they are available as a link from the main screen for each output.</div>
+<p><a id="CHDCIDII"></a><a id="LSHIM294"></a><span class="subhead3">Searching&nbsp;</span>Oracle LSH allows users to search for outputs and defined objects based on classifications, as well as other criteria. Definers need to search for existing object definitions they can reuse, either exactly as they are or with modifications. Consumers need to find reports and other outputs that contain information they need. They may also need to find submission forms to generate outputs on new data, or to load data into Oracle LSH.</p>
+<p>The Simple Search feature allows using a single classification value as a search criterion. Advanced Search allow using multiple classification values.</p>
+<p><a id="LSHIM295"></a><span class="subhead3">Classification Setup&nbsp;</span>To implement Oracle LSH classification, you must do the following:</p>
+<ul>
+<li>
+<p><span class="bold">Define at least one classification hierarchy</span> that contains information relevant to your business or clinical organization&mdash;any information that characterizes Oracle LSH objects in a way that might help a user find an object in Oracle LSH (see <a href="#CDDFDGIC">"Defining Classification Hierarchies"</a>).</p>
+</li>
+<li>
+<p><span class="bold">Define classification values</span> at each level of each hierarchy, with relations between values; for example, in the Project &gt; Study &gt; Site hierarchy, put all project names in the Project level, all study names in the Study level, each with a relation to its project, and all site names on the Site level, each with a relation to its study or studies (see <a href="#CHDBDEIJ">"Defining Classification Values"</a>).</p>
+</li>
+<li>
+<p><span class="bold">Assign classification hierarchy levels to object subtypes</span>, specifying whether the classification to each level is mandatory for objects of that subtype and whether classification by inheritance from the owning object is allowed (see <a href="#CDDBCIGC">"Assigning Classification Levels to Object Subtypes"</a>).</p>
+</li>
+<li>
+<p><span class="bold">Assign classification values to objects</span>, starting with Domains, Application Areas and Work Areas. These classifications can be automatically inherited by objects within these containers if you allow classification by inheritance for their object subtypes. Definers can change inherited classifications for individual objects as necessary. The new classification applies to all versions of the object and carries forward to new versions unless a new version is explicitly reclassified.</p>
+</li>
+</ul>
+<p>Instructions are included in "Setting Up the Classification System" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub System Administrator's Guide</span></span>.</p>
+</div>
+<!-- class="sect1" -->
+<a id="CHDHBIGD"></a>
+<div id="LSHIM296" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Designing a Classification System</h2>
+<p>You should design your classification system in conjunction with designing your organizational structure and security system:</p>
+<ul>
+<li>
+<p><span class="bold">Organizational Structure</span>. When you choose to use classification by inheritance, objects automatically receive classification value(s) for a particular hierarchy level from their container. Take advantage of this functionality by designing an organizational structure that reflects the way you want outputs to be displayed on screen.</p>
+<p>You may want to make classifications inherited for all object types except the organizational objects (Domains, Application Areas, and Work Areas.)</p>
+<p>Outputs can inherit classifications from the executable object instance that generates them, which in turn can inherit classifications from the Work Area, which in turn can inherit classifications from the Application Area (see <a href="obj_own.htm#CACGAJBJ">Appendix B, "Object Ownership"</a>). Therefore, if you use the Project &gt; Study &gt; Site hierarchy, classify an Application Area to Study ABC123, and allow inheritance for the Study level for all object subtypes, all reports generated within the Application Area will be classified to Study ABC123 and displayed in the Study ABC123 folder on the Reports screen.</p>
+</li>
+<li>
+<p><span class="bold">Subtypes and the Security System</span>. Each object type has one predefined subtype called Default. You can create additional subtypes if you choose to, but this is optional. For example, if you plan to store and analyze financial information in Oracle LSH, you could create a subtype called Financial. When you set up your classification system, you can allow or require that objects of a particular subtype have be classified at a particular hierarchy level. Financial object subtypes might be classified to the same or different hierarchy levels as Default or Clinical object subtypes; for example, you might have a financial hierarchy with levels called Fiscal Year &gt; Quarter.</p>
+<p>When you set up your security system, you assign roles to operations on object subtypes. If you plan to store and report on financial information in Oracle LSH, you probably want different people to see financial reports and clinical reports. If you create a Financial subtype, you can assign different roles to the View operation on Financial outputs than to the View operation on Clinical outputs. Therefore, take both your classification and security systems into consideration when deciding whether to use subtypes; see <a href="sec.htm#BCGEFBFC">"Object Subtypes"</a>.</p>
+</li>
+</ul>
+<p>As you begin the design process, focus first on the hierarchies you will use to display outputs in the Reports window. These hierarchies are also available for use in searching. Next, if you wish, develop additional hierarchies for use in searching only (see <a href="#CHDIEFJB">"Keyword Hierarchies"</a>).</p>
+<p>See <a href="#CHDGHFJI">"Classification Example"</a> and <a href="#CHDCBGEI">"Classifying Outputs"</a>.</p>
+</div>
+<!-- class="sect1" -->
+<a id="CDDFDGIC"></a>
+<div id="LSHIM297" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Defining Classification Hierarchies</h2>
+<p>You must define at least one hierarchy to create a user interface for browsing for outputs. You can define any number of additional multi- and single-level hierarchies.</p>
+<a id="CIHCCIIG"></a>
+<div id="LSHIM298" class="sect2">
+<h3 class="sect2">Multilevel Hierarchies</h3>
+<p>Multilevel classification hierarchies consist of ranked, logically related levels with a strictly ordered parent/child relationship, represented in a linear sequence such as Project &gt; Study &gt; Site &gt; Patient. A parent level can have only one child level, and a child level can have only one parent level.</p>
+<p>Oracle LSH uses multilevel hierarchies to display outputs on the Reports screen. You can also use multilevel hierarchies to search for outputs and defined objects.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CHDHBFBC"></a>
+<div id="LSHIM299" class="sect2">
+<h3 class="sect2">Single-Level "Hierarchies"</h3>
+<p>Some types of information may not be hierarchical by nature. In this case, you can still define a "hierarchy," but it can consist of a single level. In searches, single-level hierarchies function as a list of values.</p>
+<p><a id="CHDIEFJB"></a><a id="LSHIM300"></a><span class="subhead3">Keyword Hierarchies&nbsp;</span>You can designate a single-level hierarchy as a keyword hierarchy. Oracle LSH does not use keyword hierarchies to display outputs or submission forms for browsing, but does allow using them to search for outputs and defined objects. Using Advanced Search, users can search on more than one hierarchy value at a time. Use keyword hierarchies to help users add search criteria to narrow their search results and find the object definitions and outputs they need. You can create keyword hierarchies especially for a particular kind of object or output.</p>
+<p>For example, create several keyword hierarchies to use for Program definitions, such as technology types (SAS, PL/SQL, and Oracle Reports), the basic function of the Program (transforming, reporting, or both), and the tables the Program reads from (Demography, Adverse Events, Concomitant Medications, and so on). When a Definer searches for a Program definition, he or she can use any number of these keywords as search criteria. See <a href="#CHDEJDGE">"Classification Hierarchies for Use in Searching Only"</a> for more examples.</p>
+<p><a id="LSHIM301"></a><span class="subhead3">Nonkeyword Single-Level Hierarchies&nbsp;</span>You may want to put outputs and submission forms into several categories that are not hierarchical and use them for browsing on screen. In this case, define a hierarchy with a single level and do not designate it a keyword hierarchy.</p>
+</div>
+<!-- class="sect2" -->
+<div id="LSHIM302" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref39"></a>
+<h3 class="sect2">Defining Hierarchy Levels</h3>
+<p>You must define at least one hierarchy level for each classification hierarchy. If the hierarchy has more than one level, each level must be logically related so that the topmost level contains the most general values and the bottommost level contains the most specific ones.</p>
+<p>You must make the following design decisions for each hierarchy level:</p>
+<ul>
+<li>
+<p><span class="bold">Set the Allow Classification Flag</span>. If set to Yes, this level can be assigned to object subtypes, which allows objects of that subtype to be classified to values contained in this hierarchy level. (When you define object subtypes, you specify whether the hierarchy level is allowed, not allowed, or required for each particular object subtype; see <a href="#CHDCJBJB">"Assign Hierarchy Levels to Object Subtypes"</a>.) The default setting is Yes.</p>
+<p>If set to No, the hierarchy level still exists and serves to organize classification values in the levels below. For example, you might want to create a Project &gt; Study &gt; Site &gt; Patient hierarchy even if you do not generate reports that are specific to a single site. In this case, you can set the Allow Classification Flag to No for the Site level. In the Reports screen, folders for each site are displayed within each Study folder. Each site folder contains a folder for each patient. Any patient-specific reports, such as for a serious adverse event, are contained in a patient's' folder.</p>
+</li>
+<li>
+<p><span class="bold">Set Term Uniqueness</span>. This setting determines the way Oracle LSH enforces the uniqueness requirement for classification values in the level. This attribute has these possible settings:</p>
+<ul>
+<li>
+<p><span class="bold">Unique Within Level</span>. Each classification value contained in this level must be unique relative to all other classification values in the level.</p>
+<p>For example, there can be only one Site called General Hospital in the Site level. Because each child classification value can have only one parent value, General Hospital can be associated with only one study.</p>
+</li>
+<li>
+<p><span class="bold">Unique Within Parent</span>. Each classification value contained in this level must be unique relative to the other classification values in the level that are related to the same parent classification value.</p>
+<p>In this case, if the site General Hospital is participating in more than one study, the classification value General Hospital can appear multiple times in the Site level, if it is associated with a different study each time (see <a href="#CHDCJHHB">Figure 5-1, "Example of Related Classification Values within a Multilevel Hierarchy Structure"</a>).</p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="CHDBDEIJ"></a>
+<div id="LSHIM303" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Defining Classification Values</h3>
+<p>A classification value is the actual name used in your organization for a particular item in the category represented by the classification level; for example, the name of a particular project in the Project level.</p>
+<p>In a multilevel hierarchy, classification values have relations to logically related classification values in the levels above and below their level. Each classification value must have exactly one related term in the level above and may have zero or more related terms in the level below.</p>
+<p>In a single-level hierarchy, classification values do not have defined relations with any other classification values. They may or may not be logically related to each other.</p>
+<div id="LSHIM304" class="figure">
+<p class="titleinfigure"><a id="CHDCJHHB"></a>Figure 5-1 Example of Related Classification Values within a Multilevel Hierarchy Structure</p>
+<img width="601" height="265" src="img/class_hier_values.gif" alt="Description of Figure 5-1 follows" /><br />
+<a id="sthref40" href="img_text/class_hier_values.htm">Description of ''Figure 5-1 Example of Related Classification Values within a Multilevel Hierarchy Structure''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p>In the example above, the Term Uniqueness attribute of the Site level is set to Within Parent so that the same site can appear in the Site level more than once, related to more than one study. In the example, both General Hospital and Grace Hospital appear twice, for two different studies.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CDDBCIGC"></a>
+<div id="LSHIM305" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Assigning Classification Levels to Object Subtypes</h2>
+<p>This section includes the following topics:</p>
+<ul>
+<li>
+<p><a href="#CHDCIFBC">About Subtypes and Classification</a></p>
+</li>
+<li>
+<p><a href="#CHDECCGG">Making a Classification Level Mandatory</a></p>
+</li>
+<li>
+<p><a href="#CHDECAIA">Allowing Classification by Inheritance</a></p>
+</li>
+<li>
+<p><a href="#CIHFCADA">Setting a Default Classification</a></p>
+</li>
+</ul>
+<a id="CHDCIFBC"></a>
+<div id="LSHIM306" class="sect2">
+<h3 class="sect2">About Subtypes and Classification</h3>
+<p>Oracle LSH ships with predefined object types, including Program definitions, Program instances, Table definitions and instances, Report Set definitions and instances, and so on (for a complete list, see <a href="obj_types.htm#BABHIEJG">Appendix A, "Object Types with Operations"</a>).</p>
+<p>Each time a Definer creates an object, he or she must select a subtype for it. One subtype (called "Default") is predefined for every object type. If you choose to, you can create additional subtypes for any object type. You must assign at least one classification level to each object subtype, including the default subtype.</p>
+<p>You assign classification hierarchy levels&mdash;for example, Study in the Project &gt; Study &gt; Site hierarchy&mdash;to object subtypes. Definers can then classify objects of that subtype to that hierarchy level and find objects of that subtype by searching on that level's classification values. In the case of subtypes of Outputs and of Execution Setups, which become submission forms, the system displays them in the Reports screen by their classification values for that hierarchy level.</p>
+<p>You may want to define subtypes specifically for the purpose of assigning different classification hierarchy levels to objects of the same type. For example, you could create a classification hierarchy Fiscal Year &gt; Quarter and assign its levels to Outputs of subtype Financial but not Clinical. See <a href="sec.htm#BCGEFBFC">"Object Subtypes"</a>.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CHDECCGG"></a>
+<div id="LSHIM307" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Making a Classification Level Mandatory</h3>
+<p>For each classification hierarchy level you assign to an object subtype, you must set the Mandatory flag to Yes or No.</p>
+<p><a id="LSHIM308"></a><span class="subhead3">Mandatory&nbsp;</span>If you set it to Yes, then all objects created using that subtype must have at least one classification value for the hierarchy level. For example, if you assign the level Project &gt; Study to the Clinical Output subtype as Mandatory, all Clinical outputs must be classified to at least one study name.</p>
+<p>The Oracle LSH Reports tab display is arranged hierarchically by classification values. If an output is not classified at all, it does not appear in the Reports tab. Therefore you may want to make at least one classification level mandatory for outputs you want to see in the Reports screen. If you have set up an organizational structure and classification system to work together, you can set a value for Study, for example, at the Work Area level and make the Study level value inherited by all object instances and outputs, so that outputs automatically receive the Study value set for their Work Area (see <a href="#CHDECAIA">"Allowing Classification by Inheritance"</a>).</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If an output is not classified, you can still find it by searching on its name or other attributes.</div>
+<p><a id="LSHIM309"></a><span class="subhead3">Optional&nbsp;</span>If you set the Mandatory flag to No, classifications to that hierarchy level are optional for objects of that subtype. If you assign classification values of that hierarchy level to an object of that subtype, the system allows using them in searching and, if the object is an output or submission form, displays it on screen in a folder named for the classification value. For example, if a report is classified to Wonderdrug 856 &gt; WD856 Study 01, in the Outputs window the report is contained in the WD856 Study 01 folder, which is under the Wonderdrug 856 folder.</p>
+<p>If you do not assign any classification values of that hierarchy level to an object of that subtype, the only effect is that those values are not available for use in searching and browsing.</p>
+<p>In general, assigning hierarchy levels as optional gives you flexibility, does not cause problems, and may be necessary. For example, some outputs may pertain to a particular study, and others may pertain to a project as a whole. If you assign both the Project and Study levels to Output subtypes, the Definer can select the level that is appropriate for a particular output.</p>
+<p>However, if you create a hierarchy that applies only to a limited number of object types, do not assign its levels to other object types. For example, you could create a single-level hierarchy called Technology Type for Programs with SAS, PL/SQL, and Oracle Reports as values, so that you could search for Programs of a particular object type. This hierarchy has no relevance to Tables or Outputs, for example.</p>
+<p>When you assign a hierarchy level to a subtype and make it optional, the level appears as an option in a drop-down list when you are classifying a particular object of that subtype and when you are searching for one. It makes sense not to add an item to this list that does not apply to the object type. For example, it is better not to assign the Technology Type hierarchy level to Tables or Outputs.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CHDECAIA"></a>
+<div id="LSHIM310" class="sect2">
+<h3 class="sect2">Allowing Classification by Inheritance</h3>
+<p>For each classification hierarchy level you assign to an object subtype, you can set the Ref Allowed flag to either Yes or No.</p>
+<p><a id="LSHIM311"></a><span class="subhead3">Reference Allowed&nbsp;</span>If you set the flag to Yes, objects of that subtype can inherit their classification values for that hierarchy level from their container: the Domain, Application Area, Work Area, Report Set, or Workflow where they are located.</p>
+<p>To make this happen automatically when each object of this subtype is created, you must also set the default classification for the hierarchy level to Inherited (see <a href="#CIHFCADA">"Setting a Default Classification"</a>).</p>
+<p>You must also assign the same hierarchy level to the parent object subtype.</p>
+<p>Allowing classification by inheritance can save time during object definition, especially if your organizational structure and classification systems are compatible. For example, if your Application Areas contain applications for a single study, you can assign the hierarchy level Project &gt; Study to Application Areas and to Programs, Tables, Report Sets, and the other primary objects that are contained directly in Application Areas. Then when you classify a particular Application Area to a particular study, such as Project01 &gt; Study01, all the objects contained within it are automatically classified to Project01 &gt; Study01 as well.</p>
+<p>In addition, if you change the classification of the Application Area, all the objects it contains for which inheritance classification is allowed are automatically reclassified to the new value for the same hierarchy level. For example, if you copy the Application Area classified to Project01 &gt; Study01 (with all the objects it contains) to serve as the basis for the Application Area for Study02, and change the classification of the copy to Project01 &gt; Study02, the objects it contains are automatically reclassified to Project01 &gt; Study 02.</p>
+<p>You can define several levels of classification by reference. For example,</p>
+<div id="LSHIM312" class="figure">
+<p class="titleinfigure"><a id="sthref41"></a>Figure 5-2 Example of Classification by Inheritance</p>
+<img width="289" height="121" src="img/ref_class.gif" alt="Description of Figure 5-2 follows" /><br />
+<a id="sthref42" href="img_text/ref_class.htm">Description of ''Figure 5-2 Example of Classification by Inheritance''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p><a id="LSHIM313"></a><span class="subhead3">Classification by Inheritance Not Allowed&nbsp;</span>If you set the Ref Allowed flag to No, Definers can still manually classify objects of that subtype to that hierarchy level. If you define the level as Mandatory for the subtype, Definers must classify them manually to the hierarchy level.</p>
+<p><a id="LSHIM314"></a><span class="subhead3">Overriding Inherited Classifications&nbsp;</span>Even if you define an object subtype as having classification by inheritance for a particular hierarchy level, Definers can override that classification for any object of that subtype.</p>
+<p>Definers can also change the classification back to a classification by inheritance. The object then is automatically classified to its container's classification value for the hierarchy level.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Top-level Domains cannot have inherited classifications. To enforce this at the subtype level, set Reference Allowed to No for Domains. If you are using nested Domains and you want child Domains to be able to inherit classification values from their parent Domain, you may want to create an additional subtype for Domains. For example, create subtype Top-Level Domain where no referencing is allowed, and subtype Child Domain where referencing is allowed for all classification levels.</div>
+</div>
+<!-- class="sect2" -->
+<a id="CIHFCADA"></a>
+<div id="LSHIM315" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Setting a Default Classification</h3>
+<p>When you assign a classification hierarchy level to an object subtype, you can set one or more default classification values for objects of that subtype. Whatever value you set as the default classification is applied to every object created of this subtype. You can override the default classification for an object at any time.</p>
+<p>Default classifications for subtypes are not required. You can set two types of default classifications:</p>
+<ul>
+<li>
+<p>Default classification by inheritance</p>
+</li>
+<li>
+<p>Default classification to a specific value</p>
+</li>
+</ul>
+<p><a id="LSHIM316"></a><span class="subhead3">Setting the Default to Inherited&nbsp;</span>If you set the default classification to Inherited, objects of the subtype automatically receive the same classification for this hierarchy level as their container object. See <a href="#CHDECAIA">"Allowing Classification by Inheritance"</a>.</p>
+<p><a id="LSHIM317"></a><span class="subhead3">Setting the Default to a Specific Value&nbsp;</span>You can enter one or more specific values for each hierarchy level assigned to a subtype. Every object created as that subtype then is automatically classified the same way.</p>
+<p>For example, if the classification level Project &gt; Study is assigned to the subtype, you could set values such as Project01 &gt; Study01 and Project01 &gt; Study02.</p>
+<p>This approach is not recommended because the point of classifying objects is to differentiate them in an appropriate way.</p>
+<p><a id="LSHIM318"></a><span class="subhead3">Leaving the Default Setting Blank&nbsp;</span>If you do not assign a default value for a hierarchy level, objects of the subtype will be created without a value at that level. You can add a classification to a particular object at any time.</p>
+<p>If the hierarchy level is defined as Mandatory for the subtype but has no default value, you must enter a value manually when you create an object of the subtype.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CHDCBGEI"></a>
+<div id="LSHIM319" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Classifying Outputs</h2>
+<p>Outputs such as reports receive their classification from the Planned Output in the definition of the Program or other executable that generates them.</p>
+<p>If the Planned Output's classification value for a particular level is explicitly assigned, to a particular value, the actual output receives that value for that level. However, since the Planned Output is part of the Program (or other executable) definition, and you may want to reuse the definition by creating instances of it in multiple Work Areas where that value may not be appropriate, this may not be a good way to classify the output.</p>
+<p>Alternatively, you can set the Planned Output definition's classification value for a particular level to Inherited. The actual output then receives its value for that level from the Execution Setup used to submit the job that produces the output.</p>
+<p>Therefore, when you set up classification levels for object subtypes, you must be sure to include the same levels for corresponding subtypes of both Outputs and Execution Setups.</p>
+<p>Execution Setups inherit classification values from their executable instance (for example, the Program instance that owns the Execution Setup). Executable instances inherit their classification values from their Work Area.</p>
+<p>Outputs can also be classified by a parameter value entered when the job is submitted or generated by the job. You can define a Parameter with a list of values that includes the term values in a classification hierarchy level. Further information is available in the "Classifying Outputs" section in the chapter on common development tasks of the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Application Developer's Guide</span></span>.</p>
+<p>In addition, users with the necessary privileges can reclassify an output after it has been generated.</p>
+</div>
+<!-- class="sect1" -->
+<a id="CHDGHFJI"></a>
+<div id="LSHIM323" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Classification Example</h2>
+<p>If you set up your organization and security systems as described in the previous chapters, you could set up classification as described in this section.</p>
+<div id="LSHIM324" class="figure">
+<p class="titleinfigure"><a id="sthref43"></a>Figure 5-3 Example Organizational Structure</p>
+<img width="766" height="730" src="img/sec_org_struct.gif" alt="Description of Figure 5-3 follows" /><br />
+<a id="sthref44" href="img_text/sec_org_struct.htm">Description of ''Figure 5-3 Example Organizational Structure''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p>In this example, there is a Domain for every project, as well as a Domain for companywide reports and a Domain for company standard definitions. Within each project Domain there is an Application Area for every study in that project and another Application Area for projectwide reports. In every Application Area there are three Work Areas, one each for Development, Quality Control, and Production.</p>
+<div id="LSHIM325" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref45"></a>
+<h3 class="sect2">Classification Hierarchies for Use in Browsing and Searching</h3>
+<p>In this example, there are two classification hierarchies used to create the user interface for displaying outputs in the Reports window: <a href="#CHDCGFGI">Project &gt; Study &gt; Site &gt; Patient</a> and <a href="#CHDEGEED">Division &gt; Department &gt; Group</a>.</p>
+<p>In this example, each report output is classified to a single level of the Project &gt; Study &gt; Site &gt; Patient hierarchy and to the Group level in the Division &gt; Department &gt; Group hierarchy. Therefore a link to each report is displayed twice in the Reports window, and users can browse for a report either by its group classification or by its project, study, site or even patient classification.</p>
+<a id="CHDCGFGI"></a>
+<div id="LSHIM326" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Project &gt; Study &gt; Site &gt; Patient</h4>
+<p>This classification hierarchy works well with the organizational structure shown in <a href="org.htm#BHCEFEHD">"Example 1: Project Domain with Reporting on Separately Stored Study Data"</a>.</p>
+<p>The Reports window display is based on the logical hierarchical structure of projects and their studies, sites and patients. The Project level contains all the company's project names as values, and the Study and Site levels contain all the company's study and site names, respectively, each linked to their project or study. The Patient level contains the Patient IDs of all patients participating in the project, each linked to their site. Most reports will apply to a whole project, study, or site, but from time to time there may be reports run on a single patient for medical reasons, and these reports are classified to the ID of the particular patient.</p>
+<p><a id="LSHIM327"></a><span class="subhead3">Subtype Hierarchy Level Assignments&nbsp;</span>All four levels of this hierarchy are assigned to every subtype of every object type, including organizational objects, object definitions, and object instances. None of the hierarchy levels is defined as Mandatory for any subtype. The default classification value for all is set to Inherited.</p>
+<p>For Domains, a subtype called Top-Level Domain has all its classification levels set to Explicit. A subtype called Child Domains has all its classification levels set to Inherited.</p>
+<p>This is the most flexible design and the simplest to set up.</p>
+<p><a id="LSHIM328"></a><span class="subhead3">Assignments to Specific Objects&nbsp;</span>Individual objects are classified as follows:</p>
+<ul>
+<li>
+<p><span class="bold">Project</span>. The Project 123 and Project 456 <span class="bold">Domains</span> are each assigned to the Project level with a value of Project 123 and Project 456 respectively. They do not have values assigned for the Study or Site level. The Companywide Reports and Company Standard Definitions Domains do not have any values assigned for any levels in the Project &gt; Study &gt; Site hierarchy, and neither do any of the objects they contain.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+These Domains contain only definitions and definitions are not displayed in the Reports window, and they are not specific to any particular project, study, site, or patient so it is not necessary to classify this Domain to the Project &gt; Study &gt; Site &gt; Patient hierarchy. These classifications would not be useful in either searching or browsing. However, Program, Report Set, and Workflow definitions within the Domain must be classified to a Group in the Division &gt; Department &gt; Group hierarchy; see <a href="#CHDEGEED">"Division &gt; Department &gt; Group"</a>.</div>
+<p>The project-level <span class="bold">Application Areas</span> are assigned to the Project level with a value of Inherited so that they are automatically classified to the same project as their Domain.</p>
+<p>The <span class="bold">Work Areas</span> within the project-level Application Areas are also assigned to the Project level with a value of Inherited so that they are automatically classified to the same project as their Application Area.</p>
+<p>All the <span class="bold">object definitions</span> in the project-level Application Area and in the Domain library, and all the <span class="bold">object instances</span> in their Work Areas, are also assigned to the Project level with a value of Inherited so that they are automatically classified to the same project as their container.</p>
+</li>
+<li>
+<p><span class="bold">Study</span>. The study-level <span class="bold">Application Areas</span> are each assigned to the Study level with the value corresponding to their study: Study 123ABC, Study 123DEF, Study 456MNO, and Study 456PQR. The Project value they originally inherited has been explicitly removed.</p>
+<p>Each <span class="bold">Work Area</span> within each study-level Application Area is assigned to the Study level with a value of Inherited so that they are automatically classified to the same study as their Application Area.</p>
+<p>Most <span class="bold">object definitions</span> contained in the study-level Application Areas and <span class="bold">object instances</span> contained in their Work Areas are also assigned to the Study level with a value of Inherited so that they are automatically classified to the same study as their Application Area.</p>
+</li>
+<li>
+<p><span class="bold">Site</span>. Some <span class="bold">object definitions</span> and <span class="bold">instances</span> within a study-level Application Area or Work Areas generate or contain information that is specific to a site rather than to the whole study. Those particular objects are classified to the Site level, with the value of the particular site or sites whose data they contain, transform, or report. The study-level classification value they inherited has been explicitly removed.</p>
+</li>
+<li>
+<p><span class="bold">Patient</span>. Some <span class="bold">object definitions</span> and <span class="bold">instances</span> within the study-level Application Areas or Work Areas generate or contain information that is specific to a particular patient; for example, a serious adverse event report. Those objects are classified to the Patient level. When the Definer creates Program to generate a report on information about a single patient, the Definer does not know in advance which patient will require the report. Therefore the Definer must make the Patient ID an input/output Parameter of the report. The Definer can also use this Parameter to classify the report to the appropriate Patient ID.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<a id="CHDEGEED"></a>
+<div id="LSHIM329" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Division &gt; Department &gt; Group</h4>
+<p>The company organization hierarchy allows people to browse for reports that pertain to their own group in the corporate structure. It has three levels: Division &gt; Department &gt; Group.</p>
+<p>The Division level is the highest and includes as values the names of all corporate divisions that use Oracle LSH; for example, Development or Manufacturing. The Department level is the middle level and includes all departments that use Oracle LSH, related to their division. For example, the Development division value is linked to the Department values Biometrics, Clinical Science, and Project Management. The Group level is lowest and includes groups within the departments that use Oracle LSH; for example, the Biometrics department value is linked to Group values Data Management and Statistics, and the Clinical Science department is linked to Group values Clinical Pharmacology and Cardiology.</p>
+<p>In this example, reports are always classified to the Group level. The Division and Department levels serve only to organize the groups into the correct structure to make the reports easier to find in the Reports window.</p>
+<p><a id="LSHIM330"></a><span class="subhead3">Subtype Hierarchy Level Assignments&nbsp;</span>In this example, Oracle LSH is used only for clinical data, not financial or administrative or data originating in any division other than the Development Division. Therefore the Companywide Reports Domain and the Company Standard Definitions Domain are both classified to the Development division. The enrollment report is classified to the Data Management group and the investigators report is classified to the Project Management department.</p>
+<p>Definitions and instances of Programs, Report Sets, and Workflows in all Domains are all assigned to the Division &gt; Department &gt; Group level. In all cases, the level is defined as Mandatory and the default value is blank, so that the Definer must enter a specific value for each object of those subtypes.</p>
+<p>Planned Outputs and Execution Setups are also assigned to the Division &gt; Department &gt; Group as a mandatory level. The default value is Inherited. Planned Outputs automatically receive the classification value of their Program definition, and Execution Setups receive the classification value of their Program instance.</p>
+<p><a id="LSHIM331"></a><span class="subhead3">Assignments to Specific Objects&nbsp;</span>Definers must enter a specific classification value in the Group level for each definition and instance of Programs, Report Sets, and Workflows when they create those objects. Unlike the Project &gt; Study &gt; Site classification hierarchy, where a particular Program might be used for different projects, studies, or sites, a Statistics Program will probably always be a Statistics Program, and a Cardiology Program will always be a Cardiology Program.</p>
+<p>By default, outputs receive their Group classification from the Planned Output, which receives the classification value of the Program definition. Because a Statistics Program will probably always be a Statistics Program, and so on, this default behavior is almost always correct. However, it is possible for the Definer to override the default classification; See <a href="#CHDCBGEI">"Classifying Outputs"</a>.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CHDEJDGE"></a>
+<div id="LSHIM332" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Classification Hierarchies for Use in Searching Only</h3>
+<p>In this example, there are additional keyword hierarchies defined for use in searching for object definitions, instances, and outputs. Most are used only with objects of a particular type or subtype, as described in this section. Most are defined as Mandatory and have a blank default value, so that the Definer must select a classification value for each individual object. Keyword hierarchies do the following:</p>
+<p><a id="LSHIM333"></a><span class="subhead3">Label Programs by Technology Type&nbsp;</span>A keyword hierarchy called Program Technology Types has classification values SAS, PLSQL, and Oracle Reports. Definers use the classifications to search for Program definitions to reuse.</p>
+<p><a id="LSHIM334"></a><span class="subhead3">Label Load Sets by Type&nbsp;</span>A keyword hierarchy called Load Set Type has classification values for all the different Load Set types, including SAS, Text, Oracle Tables and Views, and all the Oracle Clinical Load Set types (see "Defining Load Sets" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Application Developer's Guide</span></span>). Definers use the classifications to search for Load Set definitions to reuse.</p>
+<p><a id="LSHIM335"></a><span class="subhead3">Label Data Marts by Format&nbsp;</span>A keyword hierarchy called Data Mart Formats has classification values ASCII Fixed, ASCII Delimited, SAS CPort, SAS XPort, SAS Dataset, and Oracle Export. Definers use the classifications to search for Data Mart definitions to reuse.</p>
+<p><a id="LSHIM336"></a><span class="subhead3">Label Programs by Purpose&nbsp;</span>A keyword hierarchy called Program Purpose has classification values that categorize the Program by its general purpose, such as: Combine Data and Report Data. You can include more specific values (such as Combine Demographic Data) or include different types of categories in the same list of values (such as Demography and Concommittant Meds) and assign multiple values to each Program, or use a separate hierarchy for labeling data (see below). Definers use the classifications to search for Program definitions to reuse.</p>
+<p><a id="LSHIM337"></a><span class="subhead3">Label All Primary Objects with a Data Category&nbsp;</span>A keyword hierarchy called Data Category has classification values that correspond to the data content of commonly used Tables; for example, Demography, Concommittant Medications, and Adverse Events. This hierarchy level is assigned to all definitions and instances of Programs, Workflows, Report Sets, Load Sets, Data Marts, and Tables. Tables are classified by the category of data they contain. Executable objects are classified by the type of data they operate on. Some objects are classified to multiple values.</p>
+<p><a id="LSHIM338"></a><span class="subhead3">Label Outputs and Data Marts for Submission to Regulatory Agencies&nbsp;</span>A keyword hierarchy called Submission has values Not for Submission and For Submission. Report Sets, Data Marts, and their outputs that are intended for submission are labeled as such. This value, with the appropriate study or project value and other criteria, helps in assembling all the necessary data.</p>
+<p><a id="LSHIM339"></a><span class="subhead3">Label Data Marts to be Sent to Research or Business Partners&nbsp;</span>A keyword hierarchy called Partners contains the names of organizations with which the Oracle LSH customer needs to share data; for example, a pharma company creates a list of CROs, or a CRO creates a list of pharma companies. Data Marts and their outputs are labeled with the name of the organization they must be sent to.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CHDBBIFE"></a>
+<div id="LSHIM341" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Design Decision Summary</h2>
+<p>To create a classification system for use in searching and browsing, you must do the following:</p>
+<ul>
+<li>
+<p><a href="#CHDHABBG">Design a Set of Classification Hierarchies with Levels and Values</a></p>
+</li>
+<li>
+<p><a href="#CHDCJBJB">Assign Hierarchy Levels to Object Subtypes</a></p>
+</li>
+<li>
+<p><a href="#CHDGFGJD">Assign Hierarchy Levels to Domains, Application Areas, and Work Areas</a></p>
+</li>
+</ul>
+<a id="CHDHABBG"></a>
+<div id="LSHIM342" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Design a Set of Classification Hierarchies with Levels and Values</h3>
+<p>Design a set of classification hierarchies, including at least one with multiple levels, and define values in each level. If a hierarchy has multiple levels, they must be arranged in a strict linear hierarchy, and each value in the lower levels must be related to a value in the next higher level. See <a href="#CDDFDGIC">"Defining Classification Hierarchies"</a> and <a href="#CHDGHFJI">"Classification Example"</a> for further information.</p>
+<p><a id="LSHIM343"></a><span class="subhead3">Restrictions&nbsp;</span>You must define at least one nonkeyword classification hierarchy for use in browsing, or nothing will be displayed in the Reports window of the Oracle LSH user interface.</p>
+<p><a id="LSHIM344"></a><span class="subhead3">Considerations&nbsp;</span>We recommend the following approach:</p>
+<ul>
+<li>
+<p>Design one or more classification hierarchies to serve as the basis for the Reports window user interface. Design these hierarchies first, and in conjuction with the organizational structure (see <a href="org.htm#BGBFAHGA">Chapter 3, "Designing an Organizational Structure"</a>).</p>
+</li>
+<li>
+<p>Design as many additional hierarchies as you need to help users find object definitions and reports. For examples, see <a href="#CHDEJDGE">"Classification Hierarchies for Use in Searching Only"</a>.</p>
+</li>
+<li>
+<p>If you plan to use Oracle LSH to process financial or administrative data as well as clinical data, define additional subtypes and hierarchies. You can add subtypes and hierarchies at any time.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="CHDCJBJB"></a>
+<div id="LSHIM345" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Assign Hierarchy Levels to Object Subtypes</h3>
+<p>If you want to be able to use values in a hierarchy level to label an object, you must assign the hierarchy level to the subtype of that object. For each hierarchy level assignment to an object subtype, you also define:</p>
+<ul>
+<li>
+<p>Whether a classification to that hierarchy level is mandatory for objects of that subtype</p>
+</li>
+<li>
+<p>Whether Inherited classification is allowed for objects of that subtype</p>
+</li>
+<li>
+<p>A default classification for objects of that subtype (optional, and may be Inherited or, in the case of outputs, a classification parameter value)</p>
+</li>
+</ul>
+<p><a id="LSHIM346"></a><span class="subhead3">Restrictions&nbsp;</span>If an output is not classified it does not appear in the Reports tab.</p>
+<p><a id="LSHIM347"></a><span class="subhead3">Considerations&nbsp;</span>Take the following into consideration:</p>
+<ul>
+<li>
+<p><span class="bold">For a child object to inherit a classification value, its parent must have the same classification level assigned</span>. If you define a classification level assigned to an object subtype as Inherited, be sure to assign the same classification level to the parent's object subtype. Otherwise Definers will receive an error if they try to use the inherited classification.</p>
+<p>For example, a Definer creates a Program definition using the Default subtype, which has the classification level Project &gt; Study assigned and set to Inherited. If the parent Application Area does not also have the Project &gt; Study level assigned, the Program definition cannot inherit a value from the parent Application Area. Therefore the system gives an error. The Definer must explicitly set the value for Study for the Program.</p>
+</li>
+<li>
+<p><span class="bold">The system tries to create new objects with the same subtype as their parent object</span>. When a Definer creates an object the system checks the subtype of the parent object. If the new object has the a subtype with the exact same name, the system creates the new object using that subtype by default. If not, the system uses the predefined Default subtype.</p>
+<p>For example, when a Definer creates a Program instance and definition at the same time, the system tries to give the instance the same subtype as the Work Area and the definition the same subtype as the Application Area. If Program instances do not have a subtype with the same name as the parent Work Area, the system uses the predefined Default subtype. If Program definitions do not have a subtype with the same name as the Application Area, the system uses the predefined Default subtype.</p>
+<p>Therefore, if you define a Financial and a Clinical subtype for all object types, and define one top-level Domain as Financial and another as Clinical, by default the system creates all objects in the Financial Domain as Financial and in the Clinical Domain as Clinical.</p>
+<p>The Definer can change the subtype as necessary.</p>
+</li>
+<li>
+<p><span class="bold">Coordinate your classification level assignments for Execution Setup subtypes and for Output subtypes</span>. Subtypes defined for Outputs are used by Planned Outputs.</p>
+<p>If you want an Output to inherit its classification values from its Execution Setup, which belongs to the executable instance in a Work Area, rather than its Planned Output, which belongs to the executable definition in an Application Area or Domain, set the Planned Output's classifications to Inherited. However, if the Execution Setup does not have the same classification levels assigned as the Planned Output, the actual output will inherit values for the missing levels from the Planned Output's parent; namely, the executable object definition.</p>
+</li>
+<li>
+<p><span class="bold">For maximum flexibility,</span> <span class="bold">make all classification levels optional and inherited</span> for all objects except organizational objects&mdash;Domains, Application Areas, and Work Areas&mdash;so that all primary definitional objects inherit their classifications from the Domain, Application Area, or Work Area where they are located. Do not define default classifications.</p>
+</li>
+<li>
+<p><span class="bold">Mandatory Classifications</span>. If you define a level as mandatory for Output subtypes and the Definer does not provide a default value, Oracle LSH will not execute the job to generate the output unless the person who submits the job provides a value.</p>
+</li>
+<li>
+<p><span class="bold">Multiple Displays</span>. If you assign multiple hierarchy levels to an Output subtype and an actual output is classified to them, it appears in multiple locations in the Reports screen.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="CHDGFGJD"></a>
+<div id="LSHIM348" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Assign Hierarchy Levels to Domains, Application Areas, and Work Areas</h3>
+<p>As you set up your Domains, Application Areas, and Work Areas, assign classification values to them according to your design. If you are using Inherited for any object subtypes, objects of those subtypes will automatically be assigned the same values as they are created. You may need to remove some of these inherited classifications. See <a href="#CHDECAIA">"Allowing Classification by Inheritance"</a> and <a href="#CHDGHFJI">"Classification Example"</a>.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment56">
+<tr>
+<td class="cellalignment63">
+<table class="cellalignment61">
+<tr>
+<td class="cellalignment60"><a href="sec.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment60"><a href="valsops.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2011, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment65">
+<table class="cellalignment59">
+<tr>
+<td class="cellalignment60"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment60"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment60"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment60"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Global Library Activities</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2017-08-27T15:50:57Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Oracle&reg; Clinical Creating a Study" />
+<meta name="dcterms.identifier" content="E62229-01" />
+<meta name="dcterms.isVersionOf" content="OCCRS" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;1996, 2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Index" href="index.htm" title="Index" type="text/html" />
+<link rel="Prev" href="questions.htm" title="Previous" type="text/html" />
+<link rel="Next" href="dcm.htm" title="Next" type="text/html" />
+<link rel="alternate" href="OCCRS.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="OCCRS.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="OCCRS.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">13/25</span> <!-- End Header -->
+<div id="OCCRS363" class="chapter"><a id="CHDBGHJB"></a>
+<h1 class="chapter"><span class="secnum">8</span> Global Library Activities</h1>
+<p>The Global Library is an organization-wide central repository for containing standardized data definitions. If you are using replication, you must choose one location to own the Global Library. All other locations replicate it. You can partition the Global Library into domains so to accommodate different definitions of the same data objects. This chapter describes the Oracle Clinical's utilities for managing Global Library definitions.</p>
+<p>This chapter contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#CHDDDBEH">Section 8.1, "Storing Objects in the Global Library"</a></p>
+</li>
+<li>
+<p><a href="#CHDJJCCJ">Section 8.2, "Maintaining Domains"</a></p>
+</li>
+<li>
+<p><a href="#CHDIFDAJ">Section 8.3, "Maintaining Standards Affiliations"</a></p>
+</li>
+<li>
+<p><a href="#CHDHGCHF">Section 8.4, "Maintaining Global Library Copy Groups"</a></p>
+</li>
+</ul>
+<a id="CHDDDBEH"></a>
+<div id="OCCRS364" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">8.1</span> Storing Objects in the Global Library</h2>
+<p>Global Librarian is an Oracle Clinical database role that you must have to save and activate Questions, Question Groups, DVGs, key templates, and extract macros. The creation of these definitions is described in other chapters. Designers then model these Global Library objects into study-level definitions. They create DCMs, DCIs, procedures, view definitions, view templates, and copy groups. The Global Librarian can then copy any of them into the Global Library and make them available for all studies.</p>
+<div id="OCCRS365" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref503"></a>
+<h3 class="sect2"><span class="secnum">8.1.1</span> Maintaining Global Library DCMs <a id="sthref504"></a></h3>
+<p>You can create and maintain Data Collection Modules in the Global Library, but it's more practical to refine them at the study level and then copy them to the Global Library. The maintenance tasks are the same for either module. See <a href="dcm.htm#i1002231">"Defining DCMs"</a> for all DCM maintenance topics.</p>
+<p class="subhead2"><a id="OCCRS10063"></a>Copying Study-Level DCMs to the Global Library</p>
+<p>To promote a DCM from the study level to the Global Library, you must copy it<a id="sthref505"></a>. The target DCM must be active at the study level before you can copy it. To copy a DCM, follow these instructions:</p>
+<ol>
+<li>
+<p>Navigate to <span class="bold">Glib</span>, <span class="bold">DCIs DCMs Procedures</span>, then <span class="bold">DCMs</span>.</p>
+</li>
+<li>
+<p>Select <span class="bold">Special</span>, and then <span class="bold">Copy DCMs</span>. The system starts the Locate DCMs utility. A dialog box opens where you choose between <span class="bold">Library</span> and <span class="bold">Study</span>.</p>
+</li>
+<li>
+<p>Choose the study. The <span class="bold">Study Query</span> dialog box opens.</p>
+</li>
+<li>
+<p>Locate the study that contains the target DCM.</p>
+</li>
+<li>
+<p>Execute a query and select the target DCM.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>. A dialog box opens where you can choose to copy all of the DCM's associated subsets or just the base subset. (See <a href="dcm.htm#CACCCFBE">"Configuring DCM Subsets"</a>.)</p>
+</li>
+<li>
+<p>Choose which subsets to copy. The system creates the copy in the Global Library.</p>
+</li>
+<li>
+<p>Click <span class="bold">Save</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<div id="OCCRS366" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref506"></a>
+<h3 class="sect2"><span class="secnum">8.1.2</span> Maintaining Global Library DCIs<a id="sthref507"></a></h3>
+<p>You can create and maintain Data Collection Instruments (DCIs) in the Global Library, but it's more practical to refine them at the study level and then promote them. The maintenance tasks are the same for either module. See <a href="dcm.htm#BABFCBHA">"Defining DCIs"</a> for complete all DCM maintenance topics.</p>
+<p class="subhead2"><a id="OCCRS10064"></a>Copying DCIs into the Global Library</p>
+<p>To promote a DCI from the study level to the Global Library, you copy it<a id="sthref508"></a>. The DCI must be active at the study level before you can copy it. To copy a DCI, follow these instructions:</p>
+<ol>
+<li>
+<p>Navigate to <span class="bold">Glib</span>, <span class="bold">DCIs DCMs Procedures</span>, then <span class="bold">DCIs</span>.</p>
+</li>
+<li>
+<p>Select <span class="bold">Special</span>, then choose <span class="bold">Copy Study DCI</span>. The system starts the Locate DCIs utility.</p>
+</li>
+<li>
+<p>Choose the study containing the target DCI.</p>
+</li>
+<li>
+<p>Locate the target DCI.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>. A dialog box opens where you choose to copy all the DCI Modules.</p>
+</li>
+<li>
+<p>Choose <span class="bold">Yes</span> or <span class="bold">No</span> to copying all of the DCIs DCI Modules. The system creates the copy in the Global Library.</p>
+</li>
+<li>
+<p>Rename the DCI and save your work.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<div id="OCCRS367" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref509"></a>
+<h3 class="sect2"><span class="secnum">8.1.3</span> Maintaining Global Library Procedures<a id="sthref510"></a></h3>
+<p>You cannot generate or test procedures in the Global Library. Therefore, define Procedures at the study level. See <a href="proc.htm#BEJGGJFH">Chapter 16, "Validation and Derivation Procedures"</a> for more information.</p>
+<p class="subhead2"><a id="OCCRS10065"></a>Copying Procedures to the Global Library</p>
+<p>To promote a procedure from the study level to the Global Library, you must copy it. The procedure must be active at the study level before you can copy it. To copy a procedure, follow these instructions:</p>
+<ol>
+<li>
+<p>Navigate to <span class="bold">Glib</span>, <span class="bold">DCIs DCMs Procedures</span>, then <span class="bold">Validation</span> (<span class="bold">Derivation</span>) <span class="bold">Procs</span>.</p>
+</li>
+<li>
+<p>Select <span class="bold">Special</span>, and then <span class="bold">Copy Proc - Study</span>. The system starts the Locate Validation utility.</p>
+</li>
+<li>
+<p>Choose the study containing the target procedure, if necessary.</p>
+</li>
+<li>
+<p>Locate the target procedure and click <span class="bold">OK</span>. The system creates a copy of the procedure.</p>
+</li>
+<li>
+<p>Save.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<div id="OCCRS368" class="sect2"><a id="sthref511"></a>
+<h3 class="sect2"><span class="secnum">8.1.4</span> Maintaining Global Library View Definitions<a id="sthref512"></a> <a id="sthref513"></a></h3>
+<p>You create view definitions in the Data Extract Module. See <a href="dx_create.htm#CACDAGEJ">Chapter 14, "Data Extract"</a> for more information.</p>
+<p class="subhead2"><a id="OCCRS10066"></a>Copying View Definitions to the Global Library</p>
+<p>To promote a view definition from the study level to the Global Library, you must copy it:</p>
+<ol>
+<li>
+<p>Navigate to <span class="bold">Glib</span>, <span class="bold">Data Extract View Builder</span>, and then <span class="bold">View Definitions</span>. The Maintain Library View Definitions window opens.</p>
+</li>
+<li>
+<p>Select <span class="bold">Special</span>, and then <span class="bold">Copy Vies - Study</span>. The system starts the Locate View Definition utility.</p>
+</li>
+<li>
+<p>Change to the study containing the target view definition, if necessary, by clicking the <span class="bold">Change Study</span> button.</p>
+</li>
+<li>
+<p>Locate the target definition and click <span class="bold">OK</span>. The system creates a copy of the view.</p>
+</li>
+<li>
+<p>Rename the view definition and save your work.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CHDJJCCJ"></a>
+<div id="OCCRS369" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">8.2</span> Maintaining Domains</h2>
+<p>Global Library <a id="sthref514"></a>domains provide a way to create any number of unique<a id="sthref515"></a> name spaces within Oracle Clinical. When you define Global Library domains, object names are required to be unique only within the domain, rather than across the entire Global Library. Definitions can be moved from one domain to another as long as the new domain does not contain an object with the same name.</p>
+<p>The flexibility that domains allow you is particularly useful in cases where you want separate namespaces to handle both legacy data and data from new studies.</p>
+<p>This section includes the following topics:</p>
+<ul>
+<li>
+<p><a href="#BAJBIHAF">Limiting Access to Definitions Through Domains</a></p>
+</li>
+<li>
+<p><a href="#BAJBEEHA">Domains of Parent and Child Definitions</a></p>
+</li>
+<li>
+<p><a href="#CHDCHDDB">Modifying the Domains of Library Definitions</a></p>
+</li>
+<li>
+<p><a href="#CHDFHACJ">Creating Domains</a></p>
+</li>
+<li>
+<p><a href="#CHDIJGGA">Maintaining Domains</a></p>
+</li>
+<li>
+<p><a href="#CHDDJFGA">Using Domains within the Global Library</a></p>
+</li>
+<li>
+<p><a href="#CHDIGFHA">Domain Selection for Data Objects in Studies</a></p>
+</li>
+<li>
+<p><a href="#CHDBJBCJ">Examples of Domain Use</a></p>
+</li>
+</ul>
+<p>The Global Library can store definitions that you copied into or modified in studies. Each library object belongs to a domain, and together, the library <a id="sthref516"></a>object name and <a id="sthref517"></a>domain form a unique<a id="sthref518"></a> key. Two library definitions with the same name cannot exist in one domain, but different domains can contain library definitions with the same name.</p>
+<a id="BAJBIHAF"></a>
+<div id="OCCRS370" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">8.2.1</span> Limiting Access to Definitions Through Domains</h3>
+<p>Each user and each study has a list of domains from which definitions are accessible to either the user or the study. The user <a id="sthref519"></a>domain list determines what data is accessible to someone working in the Global Library. The study domain list limits the domains in which studies may access Global Library definitions during such operations as copying a DCM into a study. Definitions in a domain that is not on a user or study domain list are not accessible to that user or study, depending upon the task.</p>
+<p>Default domain lists are created by the system administrator or Global Librarian for all users and all studies; with the appropriate privileges these lists can be modified for individual studies or users.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BAJBEEHA"></a>
+<div id="OCCRS371" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">8.2.2</span> Domains of Parent and Child Definitions</h3>
+<p>Definitions that reference other definitions, such as DCMs, can be seen as parent objects, being made up of <a id="ABC1094543"></a>child objects, such as DCM Question Groups.</p>
+<p><a id="ABC1094549"></a>Parent objects in the Global Library are:</p>
+<ul>
+<li>
+<p>Discrete value groups</p>
+</li>
+<li>
+<p>Questions</p>
+</li>
+<li>
+<p>Question Groups</p>
+</li>
+<li>
+<p>DCMs</p>
+</li>
+<li>
+<p>DCIs</p>
+</li>
+<li>
+<p>Derivation Procedures</p>
+</li>
+<li>
+<p>Validation Procedures</p>
+</li>
+<li>
+<p>Where clauses</p>
+</li>
+<li>
+<p>Queries</p>
+</li>
+</ul>
+<p>Parent definitions may reference child definitions belonging to different domains. If the domain of any child object is changed, the parent object continues to reference the same child object in its new domain.</p>
+<p>When parent definitions are composed of <a id="sthref520"></a>child definitions belonging to different domains, the user domain list needs to be modified to allow access to these domains. (See <a href="#i1001439">"Overriding Default Domain Lists"</a>.) Restrictions on using definitions from different domains are:</p>
+<ul>
+<li>
+<p>SAS names must be unique for any one Question Group, regardless of their Question's domain.</p>
+</li>
+<li>
+<p>A Question Group name must be unique within a DCM.</p>
+</li>
+<li>
+<p>Two Questions of the same name cannot appear in the same Question Group or DCM if they are in different domains.<a id="sthref521"></a></p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="CHDCHDDB"></a>
+<div id="OCCRS372" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">8.2.3</span> Modifying the Domains of Library Definitions</h3>
+<p><a id="sthref522"></a>You can modify the <a id="sthref523"></a>domain of a library object, provided an object with the same name does not exist in the new domain. When a parent object's domain is modified, the child definitions retain their domains.</p>
+<p>When a child object in the Library moves to another domain, all instances of its use continue to reference it.</p>
+<p>When a library object is copied into a study, the domain of the object at the parent level becomes the name of the study, since <a id="sthref524"></a>object names must be unique within a domain/study combination. The effective domain is therefore the study. The child definitions of the copied object continue to reference their domains as defined in the Global Library, although these domains may be changed if the domain of the child object is changed at the Library level.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You can modify an object's domain only in the parent form. For example, you can change the domain of a Question in the Maintain Questions form, but not in its instantiation as a child object in the Question Group Questions window of the Maintain Question Groups form.</div>
+</div>
+<!-- class="sect2" -->
+<a id="CHDFHACJ"></a>
+<div id="OCCRS373" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">8.2.4</span> Creating Domains</h3>
+<p><a id="ABC1094787"></a>The system administrator or Global Librarian creates domains by adding values to the<a id="ABC1094790"></a> reference codelist <a id="ABC1094792"></a>OCL_DOMAINS<a id="sthref525"></a>. This codelist is an installation codelist, and only a user with appropriate privileges can modify it. To add or modify a domain in the OCL_DOMAINS codelist, from the <span class="bold">Admin</span> menu, select <span class="bold">Reference Codelist</span>, and then <span class="bold">Installation Codelists</span>. Query and modify the codelist <a id="sthref526"></a>OCL_DOMAINS. The <a id="sthref527"></a>domains are available immediately after you save your work.<a id="sthref528"></a></p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+No Oracle Clinical validation prevents the name of a Library domain from coinciding with that of a study; company rules need to be in place to enforce this restriction.</div>
+<div id="OCCRS374" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref529"></a>
+<h4 class="sect3"><span class="secnum">8.2.4.1</span> Domains and Prioritization</h4>
+<p>The sequence of domains on the user- and study-level domain lists is significant. The first domain listed has priority over other domains. For example, while creating a Question in the Maintain Questions form, when you navigate from the <span class="bold">Question</span> field to the <span class="bold">Domain</span> field, the first domain in the user <a id="sthref530"></a>domain list automatically defaults into the field. This defaulted value can be modified, but will be defaulted into the <span class="bold">Domain</span> field when any new or copied object is created. If you are creating a number of Library definitions, it is helpful to have the domain in which they should be created appear first on your user domain list.</p>
+<p>Similarly, when you are copying definitions by name, such as adding Questions to a Question Group by typing their names, Oracle Clinical copies the first object it finds with a matching name in the order of your domain list.</p>
+</div>
+<!-- class="sect3" -->
+<div id="OCCRS375" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref531"></a>
+<h4 class="sect3"><span class="secnum">8.2.4.2</span> Domains and Object <a id="sthref532"></a>status</h4>
+<p>You can set a Retired Global Library object's status back to Active. In addition, Library domains allow for the reuse of the names of retired definitions. For example, a retired Question in one domain can be copied into another domain as an active object. Or, a retired Question can be moved to another domain, for example, OBSOLETE, thus freeing up the Question name in the original domain.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CHDIJGGA"></a>
+<div id="OCCRS376" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">8.2.5</span> Maintaining Domains</h3>
+<p>This section describes how to define domain lists for all users or all studies, then how to override a default for a particular user or study.</p>
+<div id="OCCRS377" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref533"></a>
+<h4 class="sect3"><span class="secnum">8.2.5.1</span> Creating Default Domain Lists <a id="sthref534"></a></h4>
+<p>The Maintain Default Domain Lists window allows the study administrator or Global Librarian to select the default domain or domains, either for all users or in all studies. If user- or study-level domains are set for particular users or studies, they take precedence over these default lists.</p>
+<p>Depending on your role permissions, you can change the default domain listing for a particular user or a particular study.</p>
+<p>To define default <a id="sthref535"></a>domain lists for all users or all studies, from the <span class="bold">Admin</span> menu, select <span class="bold">Glib Admin</span>, and choose <span class="bold">Default Domains</span>. Toggle between <span class="bold">User</span> and <span class="bold">Study</span> in the <span class="bold">Domain List Sub Type</span> field to set the user or study default domain lists.</p>
+<p>You can add <a id="sthref536"></a>domains to, remove domains from, or resequence the domains on the domain list by using these buttons:</p>
+<ul>
+<li>
+<p><span class="bold">All Domains</span> populates the domain list with all domains in the <a id="sthref537"></a>OCL_DOMAINS reference codelist.</p>
+</li>
+<li>
+<p><span class="bold">Up</span> moves a selected <a id="sthref538"></a>domain in the list up in prioritization.</p>
+</li>
+<li>
+<p><span class="bold">Down</span> moves a selected domain down in prioritization.</p>
+</li>
+</ul>
+<p>Any <a id="sthref539"></a>domain can be removed from the list by deleting its record from the Define Default Domain Searchlist window.</p>
+<p>The default domain lists take effect immediately for all users and studies without defined domain lists, once you save and exit the form.</p>
+</div>
+<!-- class="sect3" -->
+<a id="i1001439"></a>
+<div id="OCCRS378" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><span class="secnum">8.2.5.2</span> Overriding Default Domain Lists</h4>
+<p>If you have the proper privileges, you can override the <a id="sthref540"></a>default domain lists for a particular user or study by defining user- or study-level domain lists. The domain list determines the accessibility of data in various domains and also prioritizes activities involving domains.</p>
+<p>You may need to override the default domain list because you want to query data from domains not on a default list, or to order domains differently from the default.</p>
+</div>
+<!-- class="sect3" -->
+<div id="OCCRS379" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref541"></a>
+<h4 class="sect3"><span class="secnum">8.2.5.3</span> Maintaining User-Level Domain Lists <a id="sthref542"></a></h4>
+<p>To set a user-level domain list, from the <span class="bold">Admin</span> menu, select <span class="bold">Glib Admin</span>, and choose <span class="bold">User Domain</span>. Alternatively you can invoke the <span class="bold">Special</span> menu and choose <span class="bold">Define <a id="sthref543"></a>Domain Searchlist</span> from the Global Library forms for maintaining definitions. Whenever you invoke the domain searchlist from the <span class="bold">Special</span> menu, the system prompts you to save unsaved work.</p>
+<p>If you have the necessary privileges (access to the Oracle Clinical menu path Admin, GLIB Admin, Define User Domain Searchlist, if the Oracle-defined menu-role associations have not been modified), you can modify your domain list with these buttons:</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If you do not have the necessary privileges, you can only resequence the domains in the list when you access the Define Domain Searchlist form from the Special menu in other forms such as Maintain Questions.</div>
+<ul>
+<li>
+<p><span class="bold">Default</span> returns the list to the default listing set by the system administrator or Global Librarian.</p>
+</li>
+<li>
+<p><span class="bold">All Domains</span> populates the domain list with all domains.</p>
+</li>
+<li>
+<p><span class="bold">Up</span> moves a selected domain in the list up in prioritization.</p>
+</li>
+<li>
+<p><span class="bold">Down</span> moves a selected domain down in prioritization.</p>
+</li>
+<li>
+<p><span class="bold">Delete Record</span> removes any domain from the list.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<div id="OCCRS380" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref544"></a>
+<h4 class="sect3"><span class="secnum">8.2.5.4</span> Maintaining Study-Level Domain Lists</h4>
+<p>To set the study domain list for a particular study, from the <span class="bold">Design</span> menu, select <span class="bold">Studies</span>, then choose <span class="bold">Clinical Studies</span>. Navigate to or query the study whose domain list you want to modify, and choose <span class="bold">Define <a id="sthref545"></a>Domain Searchlist</span> from the <span class="bold">Special</span> menu. Modify your <a id="sthref546"></a>domain list, using these buttons:</p>
+<ul>
+<li>
+<p><span class="bold">Default</span> returns the list to the listing set by the system administrator.</p>
+</li>
+<li>
+<p><span class="bold">All Domains</span> populates the domain list with all domains.</p>
+</li>
+<li>
+<p><span class="bold">Up</span> moves a selected domain in the list up in prioritization.</p>
+</li>
+<li>
+<p><span class="bold">Down</span> moves a selected domain down in prioritization.</p>
+</li>
+<li>
+<p><span class="bold">Delete Record</span> removes any <a id="sthref547"></a>domain from the list.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CHDDJFGA"></a>
+<div id="OCCRS381" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">8.2.6</span> Using Domains within the Global Library</h3>
+<p>Working in the Global Library, you can view and access only definitions belonging to domains defined in your user domain list, which may be based on a default user domain list or on a customized user-level domain list. As well as limiting the domains where you can access data, the domain list sets up certain prioritization.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+A Question name and/or SAS name must be unique for any one Question Group. Also, two Questions with the same name, but in different domains, cannot appear in the same Question Group.</div>
+<div id="OCCRS382" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref548"></a>
+<h4 class="sect3"><span class="secnum">8.2.6.1</span> Querying a Library Object</h4>
+<p>Any queries you make in the Global Library are restricted to the domains on your user domain list; they bring up all <a id="sthref549"></a>objects that belong to domains in that list. When you query <a id="sthref550"></a>parent objects, only objects belonging to domains on your user <a id="sthref551"></a>domain list are returned. However, when you select a particular object, you can view all<a id="sthref552"></a> child objects of the parent, regardless of the domain of the child object. For example, if you have access only to objects in domain STANDARD and query on DCMs, all DCMs with domain STANDARD are returned. If you click the <span class="bold">DCM Question Groups</span> button, you see all the DCM Question Groups associated with that DCM, even if those Question Groups belong to domains not on your user domain list.</p>
+</div>
+<!-- class="sect3" -->
+<div id="OCCRS383" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref553"></a>
+<h4 class="sect3"><span class="secnum">8.2.6.2</span> Creating a Library Object</h4>
+<p>When you create a <a id="sthref554"></a>Global Library object, the domain of the created object must be on your user domain list. The first domain listed on the user <a id="sthref555"></a>domain list automatically defaults into the <span class="bold">Domain</span> field, so if you are working primarily in one domain, it is helpful to have that domain appear first on your user domain list.</p>
+<p>You can change the defaulted domain to another domain, provided the combination of object name and domain does not already exist. A list of values (LOV) is available to select a domain.</p>
+</div>
+<!-- class="sect3" -->
+<div id="OCCRS384" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref556"></a>
+<h4 class="sect3"><span class="secnum">8.2.6.3</span> Modifying the Domain of a Library Object</h4>
+<p>The <a id="sthref557"></a>domain of any library object can be changed, regardless of the status of the object, provided the new combination of object name and domain is unique.</p>
+</div>
+<!-- class="sect3" -->
+<div id="OCCRS385" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref558"></a>
+<h4 class="sect3"><span class="secnum">8.2.6.4</span> Copying an Object in the Global Library</h4>
+<p>When an <a id="sthref559"></a>object is copied, either from a different domain in the Global Library or from a study, the newly copied object is created in the first domain on the user domain list. After copying the new <a id="sthref560"></a>object, you can rename it to another domain, provided the <a id="sthref561"></a>object name/domain combination is unique.</p>
+<p>Certain copy functions allow you to copy an object from within the Global Library or from a study. If you are copying from the Global Library, you are limited to objects belonging to domains on your user domain list. If you choose to copy from a study, you are under no such restriction.</p>
+</div>
+<!-- class="sect3" -->
+<div id="OCCRS386" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref562"></a>
+<h4 class="sect3"><span class="secnum">8.2.6.5</span> Adding and Locating Objects</h4>
+<p>Adding and locating actions that can be invoked from the <span class="bold">Special</span> menu are bounded by the user domain list. Possible actions include <span class="bold">Add Question</span>, <span class="bold">Add Ques Grp</span> (which are copy functions on child <a id="sthref563"></a>objects), and <span class="bold">Locate DVG <a id="sthref564"></a>options</span>.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CHDIGFHA"></a>
+<div id="OCCRS387" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">8.2.7</span> Domain Selection for Data Objects in Studies</h3>
+<p>The domain of all <a id="sthref565"></a>parent-level objects in a study is the study name, since all object <a id="sthref566"></a>names must be unique within the study. The default or study-level domain list limits access to library objects from study data definition forms. Only library objects belonging to the domains on this list are accessible to the study during copy functions.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+A Question name or SAS name must be unique for any one Question Group. Also, two Questions of the same name cannot appear in the same Question Group if they are in different domains.</div>
+<div id="OCCRS388" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref567"></a>
+<h4 class="sect3"><span class="secnum">8.2.7.1</span> Domain Rules When Creating or Copying Objects</h4>
+<p>When you create an <a id="sthref568"></a>object in a study, the <a id="sthref569"></a>domain is the study name, and it cannot be modified.</p>
+<p>When you copy an <a id="sthref570"></a>object from the Global Library to a study, you are limited to accessing the domains on the <a id="sthref571"></a>domain study list. Restrictions on copying from another study are determined through <a id="sthref572"></a>security and not by domain accessibility.</p>
+<p>Objects copied from the Global Library have the study name as the domain at the parent level, and child objects retain their Global Library domain names. If the domain of a child object is changed in the Global Library, this change is reflected in any studies in which the object appears.</p>
+</div>
+<!-- class="sect3" -->
+<div id="OCCRS389" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref573"></a>
+<h4 class="sect3"><span class="secnum">8.2.7.2</span> Adding and Locating Objects</h4>
+<p><a id="sthref574"></a>Adding and<a id="sthref575"></a> locating actions that can be invoked from the <span class="bold">Special</span> menu are bounded by the study domain list. Possible actions include the <span class="bold">Add Question</span>, <span class="bold">Add Ques Grp</span> (which are simply copy functions on<a id="sthref576"></a> child objects), and <span class="bold">Locate DVG</span> options.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CHDBJBCJ"></a>
+<div id="OCCRS390" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">8.2.8</span> Examples of Domain Use</h3>
+<p>Here are some examples of the ways that<a id="ABC1095497"></a> you can use domains and manual procedures.</p>
+<div id="OCCRS391" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref577"></a>
+<h4 class="sect3"><span class="secnum">8.2.8.1</span> Support Conversion and Current Standards</h4>
+<p>Create a new domain, CONVERSION, in addition to the domain STANDARD. Create library definitions for converted studies that cannot be modified to comply with <a id="ABC1095513"></a>new standards. Enforce the standard operating procedure that converted studies can only use objects containing objects from the CONVERSION domain, while new studies may reference only STANDARD definitions. You must manually enforce that unique parent objects are created in the CONVERSION domain if any component objects are from the CONVERSION domain.</p>
+</div>
+<!-- class="sect3" -->
+<div id="OCCRS392" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref578"></a>
+<h4 class="sect3"><span class="secnum">8.2.8.2</span> Support Project-Specific Standards Exceptions and Development</h4>
+<p>In addition to the STANDARD domain, create a domain for each new project. Define in each new domain any objects specific to the project. If objects defined at the project level later become candidates for general use, they can be moved to the STANDARD domain. For any study, the project name domain would be the first on the study domain list, with STANDARD second.</p>
+<p>Manually enforce the following constraints:</p>
+<ul>
+<li>
+<p>A given project can copy objects only from its own project domain and from the STANDARD domain.</p>
+</li>
+<li>
+<p>Candidate objects&mdash;first defined at the project level so that they might later become standards&mdash;initially have unique names.</p>
+</li>
+<li>
+<p>No STANDARD objects are created with the names of candidate objects while the decision to elevate them from "candidate" to "standard" is pending. <a id="sthref579"></a></p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<div id="OCCRS393" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref580"></a>
+<h4 class="sect3"><span class="secnum">8.2.8.3</span> Remove Obsolete Objects to Allow Reuse of Names</h4>
+<p><a id="sthref581"></a>In addition <a id="sthref582"></a>to the STANDARD domain, create domains OBSOLETE, OBSOLETE1, OBSOLETE2, etc. When it is determined that a standard object must be retired from use, and that also a new object of the same name must take its place, change the domain of the retired object to OBSOLETE. If, by some rare circumstance, the successor object must itself be retired and moved out of the way, rename its domain to OBSOLETE1.</p>
+<p>You cannot move the successor object to OBSOLETE, since OBSOLETE already contains the original object with that name. Manually enforce the constraint that you cannot copy objects from an OBSOLETE domain to a new study or to be part of a new library object.</p>
+</div>
+<!-- class="sect3" -->
+<div id="OCCRS394" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref583"></a>
+<h4 class="sect3"><span class="secnum">8.2.8.4</span> Create a Special Domain for Testing</h4>
+<p>In addition to the STANDARD domain, create the domain INSTALL_TEST to hold <a id="sthref584"></a>objects for <a id="sthref585"></a>testing purposes in a new database installation. Manually enforce the constraint that two domains should not reference each other, and that only STANDARD objects be used for production <a id="sthref586"></a>work.<a id="sthref587"></a></p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CHDIFDAJ"></a>
+<div id="OCCRS395" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">8.3</span> Maintaining Standards Affiliations</h2>
+<p>A goal of Global Library management is to maximize conformity among data collecting components common to all clinical studies, or to groups of similar clinical studies, so that you can make direct comparisons. <a id="sthref588"></a>Standards affiliations standardize data collection in new clinical studies by helping classify, locate, and track the use of the Global Library <a id="sthref589"></a>objects.</p>
+<p>For example, if a standard Question Group is affiliated with the affiliations type SYSTEM, you can suggest that all studies in the Oracle Clinical system reference that Question Group. Such a reference, constituting a system-wide standard, might be a requirement of uniform collection of data about safety, which would require that all studies use a standard safety Question Group called SAFETY_QUES. The <a id="sthref590"></a>Global Librarian sets these requirements.</p>
+<p>Standards are defined by affiliations types, which are maintained through the form Maintain Standards Affiliations (from the <span class="bold">Glib</span> menu, select <span class="bold">Standards Affiliations</span>).</p>
+<p>Affiliations is the means by which Oracle Clinical reaches these ends.</p>
+<p>This section includes these topics:</p>
+<ul>
+<li>
+<p><a href="#CHDJAIID">Using Affiliations</a></p>
+</li>
+<li>
+<p><a href="#CHDHEFCD">Maintaining Affiliations</a></p>
+</li>
+</ul>
+<a id="CHDJAIID"></a>
+<div id="OCCRS396" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">8.3.1</span> Using Affiliations</h3>
+<p>This section describes the workflow for affiliations in the Global Library and the procedure for locating library Question Groups, DCIs, DCMs, and both Derivation and Validation Procedure definitions with affiliations.</p>
+<p>These are the tasks that you can accomplish by using standards affiliations:</p>
+<ol>
+<li>
+<p>You can locate library <a id="sthref591"></a>objects such as Active Questions, Question Groups and DCMs, Global Library DCIs, DCMs, and <a id="sthref592"></a>Validation and <a id="sthref593"></a>Derivation Procedures. For this task, first choose the <a id="sthref594"></a>affiliations types pertinent to the study. Then use these to locate the library objects for the new clinical study. Related reports help you identify library objects left out of the new clinical study and to monitor other uses of affiliations.</p>
+</li>
+<li>
+<p>Affiliating library objects with affiliation types, so that the objects can be located later. This activity is performed by the <a id="sthref595"></a>Global Librarian.</p>
+</li>
+<li>
+<p>The Global Librarian can create new <a id="sthref596"></a>affiliations types.</p>
+</li>
+</ol>
+<a id="i1001595"></a>
+<div id="OCCRS397" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><span class="secnum">8.3.1.1</span> Locating Library Objects</h4>
+<p>You can use the following method to locate library DCMs, DCIs, and Validation and Derivation Procedures from the corresponding study definition forms.</p>
+<p>To locate Question Groups with affiliations, select <span class="bold">Locate QG by SA</span> from the <span class="bold">Special</span> menu to open the <span class="bold">Query Library Objects by SAS</span> dialog box.</p>
+<ol>
+<li>
+<p>Move the insertion point to the <span class="bold">Standards Affil. Type</span> field. Enter the affiliation type you want, or select a value from the list of values. If you select one of the listed values, the <span class="bold">Standards Affiliation Name</span> field is filled automatically.</p>
+</li>
+<li>
+<p>Select the <span class="bold">Required?</span> field if you want only Question Groups that are REQUIRED; or, to locate all affiliated Question Groups, leave that field blank.</p>
+</li>
+<li>
+<p>Select the <span class="bold">OK</span> button or <span class="bold">Save</span> to initiate the query. The Question Groups form reappears, displaying only those Question Groups that have been associated with the affiliations you entered.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<div id="OCCRS398" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref597"></a>
+<h4 class="sect3"><span class="secnum">8.3.1.2</span> Mapping Library Objects to Affiliation Types</h4>
+<p>You can map library Question Groups, DCMs, DCIs, and procedures to affiliation types.</p>
+<p>For example, if you want to associate a Question Group with the indication of angina <span class="italic">and</span> a particular compound, enter the same set value for the two records. If the affiliation is for the indication of angina <span class="italic">or</span> a particular compound, use different set numbers to indicate that they are independent affiliations. Select the <span class="bold">Required?</span> field if this is a required affiliation, or leave it blank if the affiliation is simply recommended.</p>
+<p>To map library objects to affiliation types, follow these instructions:</p>
+<ol>
+<li>
+<p>Navigate to one of these Global Library maintenance windows, or their Provisional equivalents:</p>
+<ul>
+<li>
+<p>From the <span class="bold">Glib</span> menu, select <span class="bold">Question Groups</span>, then choose <span class="bold">Question Groups</span>.</p>
+</li>
+<li>
+<p>From the <span class="bold">Glib</span> menu, select <span class="bold">DCIs DCMs Procedures</span>, then choose <span class="bold">DCIs</span>.</p>
+</li>
+<li>
+<p>From the <span class="bold">Glib</span> menu, select <span class="bold">DCIs DCMs Procedures</span>, then choose <span class="bold">DCMs</span>.</p>
+</li>
+<li>
+<p>From the <span class="bold">Glib</span> menu, select <span class="bold">DCIs DCMs Procedures</span>, then choose <span class="bold">Validation Procedures</span>.</p>
+</li>
+<li>
+<p>From the <span class="bold">Glib</span> menu, select <span class="bold">DCIs DCMs Procedures</span>, then choose <span class="bold">Derivation Procedures</span>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Locate or create the object you want to map to an <a id="sthref598"></a>affiliation.</p>
+</li>
+<li>
+<p>Select the <span class="bold">Standards Affiliations</span> button. The <span class="bold">Standards Affiliations Set</span> dialog box opens.</p>
+</li>
+<li>
+<p>Create a new affiliation by entering values in the <span class="bold">Standards Affiliations Type</span> and <span class="bold">Standards Affiliations Name</span> fields. Use the <span class="bold">Set</span> field to group two SA records in the same affiliation.</p>
+</li>
+<li>
+<p>Click <span class="bold">Save</span> to save the affiliation, then click <span class="bold">Back</span> to return to the Question Groups window.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CHDHEFCD"></a>
+<div id="OCCRS400" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">8.3.2</span> Maintaining Affiliations</h3>
+<p>Maintaining affiliations consists of determining whether <a id="sthref599"></a>affiliations are active and whether Question Groups affiliated with specific standards are required or recommended. New <a id="sthref600"></a>standards affiliations areas are created in the Maintain Standards Affiliations form; from the <span class="bold">Glib</span> menu, select <span class="bold">Standards Affiliations</span>. The Maintain Standards Affiliations form appears, with the cursor in the <span class="bold">Standards Affiliations Type</span> field.</p>
+<ol>
+<li>
+<p>Enter a type or select a value from the list of values. (You cannot create a new standards affiliations type from this form; the types are part of a <a id="sthref601"></a>reference codelist and populated at the installation level.)</p>
+</li>
+<li>
+<p>The cursor goes to the <span class="bold">Affiliation Name</span> field, and existing values are displayed. Enter a new affiliations name by moving the cursor to the first blank field and typing in the name.</p>
+</li>
+<li>
+<p>Click <span class="bold">Save</span> to save the new entries. The entries are immediately available for association.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CHDHGCHF"></a>
+<div id="OCCRS401" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">8.4</span> Maintaining Global Library Copy Groups<a id="sthref602"></a></h2>
+<p>Copy groups simplify copying multiple data definitions between studies or between studies and the Global Library. They allow you to perform one copy operation for a group of related definitions instead of one copy operation for each definition, without violating any data model rules in the process. You can perform copy group operations between studies, or to or from the Global Library.</p>
+<p>This section describes Global Library copy group activities. For study-level activities, see <a href="copygroups.htm#BACHDBGI">Chapter 13, "Copy Groups."</a></p>
+<p>In the Global Library, you classify copy groups by domains and standards affiliations. For example, a Standard Safety copy group might consist of a standard Adverse Event DCM, a standard Blood Chemistry DCM, and several other similar DCMs, together with all the standard DCIs, Procedures, and view definitions associated with those DCMs. Copy groups have a status of <span class="bold">Provisional</span>, <span class="bold">Active</span>, or <span class="bold">Retired</span>.</p>
+<p>This section includes these topics:</p>
+<ul>
+<li>
+<p><a href="#CHDDCAFA">Copy Group Restrictions</a></p>
+</li>
+<li>
+<p><a href="#i1001641">Creating a Global Library Copy Group</a></p>
+</li>
+<li>
+<p><a href="#CHDJHJAG">Performing Copy Group Operations as Batch Jobs</a></p>
+</li>
+<li>
+<p><a href="#CHDFCDGJ">Performing Ad Hoc Copies</a></p>
+</li>
+</ul>
+<a id="CHDDCAFA"></a>
+<div id="OCCRS402" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">8.4.1</span> Copy Group Restrictions</h3>
+<p>These Oracle Clinical rules control which definitions you can add to a copy group:</p>
+<ul>
+<li>
+<p>Definitions allowed in a copy group are DCMs, DCIs, Procedures and view definitions.</p>
+</li>
+<li>
+<p>All definitions to be grouped must be related to the included DCMs. Conversely, DCMs referenced by another object in the group cannot be removed.</p>
+</li>
+<li>
+<p>For DCMs, you specify whether to copy just the base subset or all subsets.</p>
+</li>
+<li>
+<p>Definitions can come from multiple domains, but the object name and object type must be unique within the group. Specifically, a single object may be included only once in a given copy group, and you cannot include definitions from different domains with the same name.</p>
+</li>
+<li>
+<p>Provisional and active definitions can be added to a provisional copy group, but all definitions must be active before a copy group can be made active.</p>
+</li>
+<li>
+<p>Definitions are included in copy groups by reference. Changes to the underlying definitions are reflected in the results of subsequent copy operations.</p>
+</li>
+</ul>
+<div id="OCCRS403" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref603"></a>
+<h4 class="sect3"><span class="secnum">8.4.1.1</span> Validation Rules</h4>
+<p>Oracle Clinical does not modify any object names or attributes to prevent failure of a copy group action. Error messages are recorded in a log file. The system follows these rules to validate individual definitions:</p>
+</div>
+<!-- class="sect3" -->
+<div id="OCCRS404" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref604"></a>
+<h4 class="sect3"><span class="secnum">8.4.1.2</span> DCMs</h4>
+<p>If copying all subsets is specified, all subsets in the source DCM must be active or the copy procedure fails.</p>
+<p>If a DCM with the same name exists in the target domain, Oracle Clinical allows the copy to proceed only if that DCM is functionally equivalent to the DCM being copied. To be functionally equivalent, the two DCMs must meet these criteria:</p>
+<ul>
+<li>
+<p>same Qualifying Question, if any</p>
+</li>
+<li>
+<p>same named DCM Question Groups with the same repeat value</p>
+</li>
+<li>
+<p>same name, short name, and subset names</p>
+</li>
+<li>
+<p>same Question/occurrence numbers in DCM Questions for each group with the same settings for Collected_in_study_flag, Derived_flag, and DVG_ID</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<div id="OCCRS405" class="sect3"><a id="sthref605"></a>
+<h4 class="sect3"><span class="secnum">8.4.1.3</span> DCIs</h4>
+<p>The DCI name and short name must not be present in the target domain.</p>
+</div>
+<!-- class="sect3" -->
+<div id="OCCRS406" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref606"></a>
+<h4 class="sect3"><span class="secnum">8.4.1.4</span> Procedures</h4>
+<p>The Procedures name must not be present in the target domain.</p>
+</div>
+<!-- class="sect3" -->
+<div id="OCCRS407" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref607"></a>
+<h4 class="sect3"><span class="secnum">8.4.1.5</span> View Definitions</h4>
+<p>Name must not be present in the target domain. If the source domain is a study, then there must not be a view template of the same name in the target domain.</p>
+</div>
+<!-- class="sect3" -->
+<div id="OCCRS408" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref608"></a>
+<h4 class="sect3"><span class="secnum">8.4.1.6</span> Copy Rules</h4>
+<p>These rules are in effect during a copy activity:</p>
+<ul>
+<li>
+<p>All active definitions are copied; definitions that have been retired are not copied.</p>
+</li>
+<li>
+<p>Definitions are copied in this order: DCMs, DCIs, procedures, view definitions.</p>
+</li>
+</ul>
+<p>The rules for copying specific definitions are:</p>
+</div>
+<!-- class="sect3" -->
+<div id="OCCRS409" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref609"></a>
+<h4 class="sect3"><span class="secnum">8.4.1.7</span> DCM Copy Rules</h4>
+<p>All of the DCMs must be in <span class="bold">Active</span> status. Depending on the setting of the <span class="bold">Base Subset Only?</span> field, the system either just copies Subset 1 Layout 1 of a DCM, or all subsets and layouts. The system copies all child definitions.</p>
+</div>
+<!-- class="sect3" -->
+<div id="OCCRS410" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref610"></a>
+<h4 class="sect3"><span class="secnum">8.4.1.8</span> DCI Copy Rules</h4>
+<p>The system copies all DCI modules. The system treats clinical planned events as they currently exist.</p>
+</div>
+<!-- class="sect3" -->
+<div id="OCCRS411" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref611"></a>
+<h4 class="sect3"><span class="secnum">8.4.1.9</span> Procedures Copy Rules</h4>
+<p>The system copies active versions. The system ensures that the copied procedure references the equivalent DCM in the target.</p>
+</div>
+<!-- class="sect3" -->
+<div id="OCCRS412" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref612"></a>
+<h4 class="sect3"><span class="secnum">8.4.1.10</span> View Definitions Copy Rules</h4>
+<p>The system copies all view definitions and all of their components, with these limitations:</p>
+<ul>
+<li>
+<p>If the view definition references a library view template, the system only copies the view definition; the template remains a reference to the library template.</p>
+</li>
+<li>
+<p>If the source of the view definition is a study, the system also copies the view template.</p>
+</li>
+<li>
+<p>The mapping of the view definition to the DCM in the copy group ensures that the copied view definition references the equivalent DCM and DCM Questions in the target.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="i1001641"></a>
+<div id="OCCRS413" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">8.4.2</span> Creating a Global Library Copy Group</h3>
+<p>You create a copy group by assigning the group a name, a domain, and a description; selecting one or more DCMs; and, finally, picking the related definitions and adding them to the group.</p>
+<p>You can use these groups immediately to copy definitions to the library or study, and then dispose them. To create a permanent library or study object, make the copy group active before exiting the form.</p>
+<p>The following steps describe creating a copy group in the Global Library. You can also create a study-level copy group from the <span class="bold">Definition</span> menu.</p>
+<ol>
+<li>
+<p>From the <span class="bold">Glib</span> menu, select <span class="bold">Copy Groups</span>, then choose <span class="bold">Copy Groups</span>. The Maintain Library Copy Groups window opens.</p>
+</li>
+<li>
+<p>Enter values for these mandatory fields: <span class="bold">Copy Group Name</span>, <span class="bold">Domain</span>, and <span class="bold">Description</span>.</p>
+</li>
+<li>
+<p>Save the copy group name.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Copy Group Details</span> button.</p>
+</li>
+<li>
+<p>Click the <span class="bold">DCMs</span> button. Since all other copy group elements must relate to DCMs, this is the only active button at this stage. A list of candidate DCMs opens.</p>
+</li>
+<li>
+<p>Select one or more DCMs.</p>
+</li>
+<li>
+<p>Save the DCM choices.</p>
+</li>
+<li>
+<p>Click each of the other buttons to include any other types of definitions you want to include in the copy group. As you complete adding each type of object, click <span class="bold">OK</span> to return to the Details form.</p>
+</li>
+<li>
+<p>Perform one of these operations:</p>
+<ul>
+<li>
+<p>To make a reusable copy group, click <span class="bold">Save</span>. You can then immediately perform a copy operation, or you can back out of the window.</p>
+</li>
+<li>
+<p>Click <span class="bold">Exit</span> to store the copy group or choose <span class="bold">Copy to Study</span> from the <span class="bold">Special</span> menu to immediately use it.</p>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CHDJHJAG"></a>
+<div id="OCCRS414" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">8.4.3</span> Performing Copy Group Operations as Batch Jobs</h3>
+<p>Copy groups are utilized by submitting a batch job. When you submit the batch job, the expectation is that you are copying a copy group from another study or the Global Library to your current location. You have these options:</p>
+<a id="CHDEFIGD"></a>
+<div id="OCCRS415" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><span class="secnum">8.4.3.1</span> Copying from the Global Library to a Study</h4>
+<p>To perform a copy group operation from the Global Library to your current study, navigate to <span class="bold">Definition</span>, then <span class="bold">Group Copy from Library to Study</span>. Then choose a domain and a Global Library copy group.</p>
+</div>
+<!-- class="sect3" -->
+<div id="OCCRS416" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref613"></a>
+<h4 class="sect3"><span class="secnum">8.4.3.2</span> Copying from Study to Study</h4>
+<p>To copy a copy group from another study into your current study, navigate to <span class="bold">Definition</span>, then <span class="bold">Group Copy from Study to Study</span>. Then choose the other study and the target copy group.</p>
+</div>
+<!-- class="sect3" -->
+<div id="OCCRS417" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref614"></a>
+<h4 class="sect3"><span class="secnum">8.4.3.3</span> Copying from Your Current Study to the Global Library</h4>
+<p>To perform a copy group operation from a study to the Global Library, navigate to <span class="bold">Glib</span>, <span class="bold">Copy Groups</span>, and then <span class="bold">Group Copy from Study to Library</span>. Then choose the target copy group, its study, and its domain.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CHDFCDGJ"></a>
+<div id="OCCRS418" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">8.4.4</span> Performing Ad Hoc Copies</h3>
+<p>Oracle Clinical lets you create a copy group to perform an ad hoc copy of multiple database definitions. This allows you to easily copy multiple definitions without the overhead of maintaining the new copy group in the database. If you don't intend to activate the copy group: a provisional copy group is sufficient.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment26">
+<tr>
+<td class="cellalignment33">
+<table class="cellalignment31">
+<tr>
+<td class="cellalignment30"><a href="questions.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment30"><a href="dcm.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;1996, 2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment35">
+<table class="cellalignment29">
+<tr>
+<td class="cellalignment30"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment30"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment30"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment30"><a href="index.htm"><img width="24" height="24" src="../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td class="cellalignment30"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>Oracle&reg; Healthcare Foundation New Features Guide</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="description" content="This guide explains the new features added to Oracle Healthcare Foundation (OHF) release 7.2." />
+<meta name="dcterms.created" content="2018-09-11T5:54:49Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Healthcare Foundation New Features Guide" />
+<meta name="dcterms.identifier" content="E98880-01" />
+<meta name="dcterms.isVersionOf" content="OHNFG" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"   src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"   src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="alternate" href="OHNFG.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="OHNFG.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="OHNFG.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript"  src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript"  src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript"  src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript"  src="../dcommon/js/foundation.min.js"></script>
+<script type="application/javascript"  src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript"  src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript"  src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="application/javascript"  src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="application/javascript"  src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="application/javascript"  src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="application/javascript"  src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<!-- End Header -->
+<div class="letterstyle">
+<h1>Oracle&reg; Healthcare Foundation</h1>
+<p class="booktitle">New Features Guide</p>
+<p><span class="revnumber">Release 7.2</span></p>
+<p class="invpartnumber">E98880-01</p>
+<p class="date">September 2018</p>
+<p><a id="OHNFG101"></a>This guide explains the new features added to Oracle Healthcare Foundation (OHF) release 7.2.</p>
+<ul>
+<li>
+<p><a href="#A132413928">Data Model Updates</a></p>
+</li>
+<li>
+<p><a href="#A132413970">Application Toolkit Updates</a></p>
+</li>
+<li>
+<p><a href="#A132414017">Cohort Data Mart (CDM) Updates</a></p>
+</li>
+<li>
+<p><a href="#A132414067">Omics Data Bank (ODB) Updates</a></p>
+</li>
+<li>
+<p><a href="#CHDIJBHB">Where to Find the Product Documentation</a></p>
+</li>
+<li>
+<p><a href="#A132172625">Documentation Accessibility</a></p>
+</li>
+</ul>
+<a id="A132413928"></a>
+<div id="OHNFG102" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Data Model Updates</h2>
+<ul>
+<li>
+<p><a href="#BCGHDFJD">Interface Tables Added</a></p>
+</li>
+<li>
+<p><a href="#BCGHCJDA">Interface Tables Updated</a></p>
+</li>
+<li>
+<p><a href="#BCGDDIJF">Attributes Obsoleted</a></p>
+</li>
+</ul>
+<a id="BCGHDFJD"></a>
+<div id="OHNFG103" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Interface Tables Added</h3>
+<p>The following interface tables have been added to the data model:</p>
+<div id="OHNFG104" class="tblformal">
+<p class="titleintable"><a id="sthref1"></a><a id="BCGDEBBH"></a>Table 1 Interface Tables Added</p>
+<table class="cellalignment50" title="Interface Tables Added" summary="Interface tables added" dir="ltr">
+<thead>
+<tr class="cellalignment45">
+<th class="cellalignment51" id="r1c1-t2">Subject Area</th>
+<th class="cellalignment51" id="r1c2-t2">Table Name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment45">
+<td class="cellalignment52" id="r2c1-t2" headers="r1c1-t2">
+<p>Accounting and Financial Reporting</p>
+</td>
+<td class="cellalignment52" headers="r2c1-t2 r1c2-t2">
+<p>HDI_BUDG_LED_GRP</p>
+</td>
+</tr>
+<tr class="cellalignment45">
+<td class="cellalignment52" id="r3c1-t2" headers="r1c1-t2">
+<p>Accounting and Financial Reporting</p>
+</td>
+<td class="cellalignment52" headers="r3c1-t2 r1c2-t2">
+<p>HDI_LED_GRP</p>
+</td>
+</tr>
+<tr class="cellalignment45">
+<td class="cellalignment52" id="r4c1-t2" headers="r1c1-t2">
+<p>Accounting and Financial Reporting</p>
+</td>
+<td class="cellalignment52" headers="r4c1-t2 r1c2-t2">
+<p>HDI_LED_GRP_LED</p>
+</td>
+</tr>
+<tr class="cellalignment45">
+<td class="cellalignment52" id="r5c1-t2" headers="r1c1-t2">
+<p>Patient</p>
+</td>
+<td class="cellalignment52" headers="r5c1-t2 r1c2-t2">
+<p>HDI_RELTD_PT</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" --></div>
+<!-- class="sect2" -->
+<a id="BCGHCJDA"></a>
+<div id="OHNFG105" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Interface Tables Updated</h3>
+<p>The following interface tables have been modified:</p>
+<ul>
+<li>
+<p>HDI_ARC</p>
+</li>
+<li>
+<p>HDI_CHRTFLD_COMB</p>
+</li>
+<li>
+<p>HDI_FSCL_PD</p>
+</li>
+<li>
+<p>HDI_JRNL</p>
+</li>
+<li>
+<p>HDI_JRNL_LN</p>
+</li>
+<li>
+<p>HDI_LED_BAL</p>
+</li>
+<li>
+<p>HDI_RX</p>
+</li>
+<li>
+<p>HDI_VCHR</p>
+</li>
+<li>
+<p>HDI_VCHR_PAYMT</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="BCGDDIJF"></a>
+<div id="OHNFG106" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Attributes Obsoleted</h3>
+<div id="OHNFG107" class="tblformal">
+<p class="titleintable"><a id="sthref2"></a><a id="BCGDEGEB"></a>Table 2 Attributes Obsoleted</p>
+<table class="cellalignment50" title="Attributes Obsoleted" summary="Attributes obsoleted" dir="ltr">
+<thead>
+<tr class="cellalignment45">
+<th class="cellalignment51" id="r1c1-t3">Table Name</th>
+<th class="cellalignment51" id="r1c2-t3">Column Name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment45">
+<td class="cellalignment52" id="r2c1-t3" headers="r1c1-t3">
+<p>HDI_CHRTFLD_COMB</p>
+</td>
+<td class="cellalignment52" headers="r2c1-t3 r1c2-t3">
+<p>BUDG_REF</p>
+</td>
+</tr>
+<tr class="cellalignment45">
+<td class="cellalignment52" id="r3c1-t3" headers="r1c1-t3">
+<p>HDI_CHRTFLD_COMB</p>
+</td>
+<td class="cellalignment52" headers="r3c1-t3 r1c2-t3">
+<p>CLAS_FLD</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="A132413970"></a>
+<div id="OHNFG108" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Application Toolkit Updates</h2>
+<ul>
+<li>
+<p><a href="#BCGICFFA">Data Lineage</a></p>
+</li>
+<li>
+<p><a href="#BCGJIBBG">Self-Service Analytics Usage Tracking</a></p>
+</li>
+</ul>
+<a id="BCGICFFA"></a>
+<div id="OHNFG109" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Data Lineage</h3>
+<p>End-to-end data lineage report (from HDI to HDM to HCD to OBIEE Reports) in Self-Service Analytics to track the data transformation/data flow from Interface Tables to BI report.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BCGJIBBG"></a>
+<div id="OHNFG110" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Self-Service Analytics Usage Tracking</h3>
+<p>Usage tracking for Self-Service Analytics supports tracking of who, what, when and how reports/dashboards are accessed.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="A132414017"></a>
+<div id="OHNFG111" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Cohort Data Mart (CDM) Updates</h2>
+<ul>
+<li>
+<p><a href="#BCGFDIAB">Golden Patient Record</a></p>
+</li>
+<li>
+<p><a href="#BCGEJGFJ">New Relationships for Cancer Registry Data Analysis</a></p>
+</li>
+</ul>
+<a id="BCGFDIAB"></a>
+<div id="OHNFG112" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Golden Patient Record</h3>
+<p>Source systems may use different patient identifiers to refer to the same patient. The Golden Patient Record or Master Person Index (MPI) maps all identifiers that belong to the same patient to a common unique identifier. This Golden/MPI identifier is then used to track each patient's records across all the different source systems, enabling CDM to support a single patient record that represents the most accurate and current patient information and to view all the clinical data associated with that patient.</p>
+<p>This section explains how to:</p>
+<ul>
+<li>
+<p><a href="#BCGIADEI">Enable or Disable the Golden Patient Record Feature</a></p>
+</li>
+<li>
+<p><a href="#BCGGIGJD">Populate Golden Patient Mappings in HDI</a></p>
+</li>
+<li>
+<p><a href="#BCGGDJDA">Load Golden Patient Mappings to HDM</a></p>
+</li>
+<li>
+<p><a href="#BCGJAIJD">Load Golden Patient Mappings to CDM</a></p>
+</li>
+<li>
+<p><a href="#BCGFGCHJ">Cascading Soft Deletions and Mapping Updates</a></p>
+</li>
+</ul>
+<p>For additional information, refer to the <span class="italic">Administrator's Guide</span>.</p>
+<a id="BCGIADEI"></a>
+<div id="OHNFG113" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Enable or Disable the Golden Patient Record Feature</h4>
+<p>The GOLDEN_RECORD_PT_RLSHPTYP_CODE parameter has been added to the Cohort Data Mart C_LOAD_PARAM table to enable or disable the extraction of Golden Patient records into the patient dimension (W_EHA_RESEARCH_PATIENT_D). By default, the feature is disabled (the parameter is set to NULL).</p>
+<div id="OHNFG114" class="tblformal">
+<p class="titleintable"><a id="sthref3"></a><a id="sthref4"></a>Table 3 C_LOAD_PARAM Settings for Enabling and Disabling Golden Patient Record</p>
+<table class="cellalignment50" title="C_LOAD_PARAM Settings for Enabling and Disabling Golden Patient Record" summary="C_LOAD_PARAM settings for the Golden Record feature" dir="ltr">
+<thead>
+<tr class="cellalignment45">
+<th class="cellalignment51" id="r1c1-t4">Column Name</th>
+<th class="cellalignment51" id="r1c2-t4">Column Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment45">
+<td class="cellalignment52" id="r2c1-t4" headers="r1c1-t4">
+<p>ENTITY_NM</p>
+</td>
+<td class="cellalignment52" headers="r2c1-t4 r1c2-t4">
+<p>W_EHA_RESEARCH_PATIENT_D</p>
+</td>
+</tr>
+<tr class="cellalignment45">
+<td class="cellalignment52" id="r3c1-t4" headers="r1c1-t4">
+<p>PARAM_DESC</p>
+</td>
+<td class="cellalignment52" headers="r3c1-t4 r1c2-t4">
+<p>This parameter enables or disables the Golden Patient Record functionality in the application. To enable this functionality, provide a valid code value corresponding to HDM's Related Patient.Patient Relationship Type attribute (HDM_RELTD_PT.PT_RLSHPTYP_ID). To disable this functionality keep this column Null. By default the value of this parameter is Null, indicating that the functionality is disabled.</p>
+</td>
+</tr>
+<tr class="cellalignment45">
+<td class="cellalignment52" id="r4c1-t4" headers="r1c1-t4">
+<p>PARAM_NM</p>
+</td>
+<td class="cellalignment52" headers="r4c1-t4 r1c2-t4">
+<p>GOLDEN_RECORD_PT_RLSHPTYP_CODE</p>
+</td>
+</tr>
+<tr class="cellalignment45">
+<td class="cellalignment52" id="r5c1-t4" headers="r1c1-t4">
+<p>PARAM_VAL</p>
+</td>
+<td class="cellalignment52" headers="r5c1-t4 r1c2-t4">
+<p>NULL</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" -->
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The Golden Patient Record is a one-time initial configuration and must remain consistent during incremental loads. If you decide to change the Golden Patient Record configuration between data loads, reload the CDM by truncating the entire data mart.</div>
+</div>
+<!-- class="sect3" -->
+<a id="BCGGIGJD"></a>
+<div id="OHNFG115" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Populate Golden Patient Mappings in HDI</h4>
+<p>The <span class="bold">HDI_RELTD_PT</span> table has been added to the HDI schema to support data acquisition of non-golden (source) to golden (target) patient ID mappings.</p>
+<p class="subhead2"><a id="OHNFG116"></a>Invalid mappings:</p>
+<ul>
+<li>
+<p><span class="bold">One-to-many mappings</span> - If a non-golden (source) record identifier is mapped to multiple golden (target) record identifiers, the mappings will be considered invalid and logged in the C_ETL_RELATED_PT_EXCPTN exception table during CDM load.</p>
+</li>
+<li>
+<p><span class="bold">Target patient attribute contains non-golden patient identifier</span> - If a non-golden patient identifier is mapped to another non-golden patient identifier, the mapping is considered invalid and logged in the C_ETL_RELATED_PT_EXCPTN exception table during CDM load.</p>
+</li>
+<li>
+<p><span class="bold">Golden patient identifier mapped to another golden patient identifier</span> - If a golden patient identifier is mapped to another golden patient identifier, the mapping is considered invalid and logged in the C_ETL_RELATED_PT_EXCPTN exception table during CDM load.</p>
+</li>
+<li>
+<p><span class="bold">Switching a golden record to a non-golden record</span> - Switching a golden patient record to a non-golden patient record is invalid.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<a id="BCGGDJDA"></a>
+<div id="OHNFG117" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Load Golden Patient Mappings to HDM</h4>
+<p>The new HDM_RELTD_PT table has been added to the HDM schema to support non-golden to golden patient ID mappings.</p>
+<p>Use the new <span class="bold">wf_SIL_DI_HDI_RELTD_PT</span> ETL to load data from HDI_RELTD_PT to HDM_RELTD_PT.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BCGJAIJD"></a>
+<div id="OHNFG118" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Load Golden Patient Mappings to CDM</h4>
+<p>The C_ETL_RELATED_PT intermediate table has been added to the HDM schema to support processing of the mapping records in HDM_RELTD_PT, before loading the CDM dimension and bridge tables.</p>
+<p>The C_ETL_RELATED_PT_EXCPTN exception table has been added to the HDM schema to log invalid mapping records.</p>
+<p>Use the new <span class="bold">wf_SIL_CDM_C_ETL_RELATED_PT</span> ETL to load the data from HDM_RELTD_PT to C_ETL_RELATED_PT, which will then be referred in CDM datamart ETLs to resolve the non-golden to golden patient records. The C_ETL_RELATED_PT table must be loaded before the W_EHA_RESEARCH_PATIENT_D dimension, as it is a driving entity.</p>
+<p>The following CDM ETLs have been updated:</p>
+<div id="OHNFG119" class="tblformal">
+<p class="titleintable"><a id="sthref5"></a><a id="sthref6"></a>Table 4 Updated CDM ETLs</p>
+<table class="cellalignment50" title="Updated CDM ETLs" summary="Updated CDM ETLs" dir="ltr">
+<thead>
+<tr class="cellalignment45">
+<th class="cellalignment51" id="r1c1-t6">Table Name</th>
+<th class="cellalignment51" id="r1c2-t6">ETLs</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment45">
+<td class="cellalignment52" id="r2c1-t6" headers="r1c1-t6">
+<p>W_EHA_RESEARCH_PATIENT_D</p>
+</td>
+<td class="cellalignment52" headers="r2c1-t6 r1c2-t6">
+<p>wf_SIL_CDM_W_EHA_RESEARCH_PATIENT_D_FULL</p>
+<p>wf_SIL_CDM_W_EHA_RESEARCH_PATIENT_D</p>
+</td>
+</tr>
+<tr class="cellalignment45">
+<td class="cellalignment52" id="r3c1-t6" headers="r1c1-t6">
+<p>W_EHA_SUBADMN_PATIENT_H</p>
+</td>
+<td class="cellalignment52" headers="r3c1-t6 r1c2-t6">
+<p>wf_SIL_CDM_W_EHA_SUBADMN_PATIENT_H_FULL</p>
+<p>wf_SIL_CDM_W_EHA_SUBADMN_PATIENT_H</p>
+</td>
+</tr>
+<tr class="cellalignment45">
+<td class="cellalignment52" id="r4c1-t6" headers="r1c1-t6">
+<p>W_EHA_PT_GRP_PATIENT_H</p>
+</td>
+<td class="cellalignment52" headers="r4c1-t6 r1c2-t6">
+<p>wf_SIL_CDM_W_EHA_PT_GRP_PATIENT_H_FULL</p>
+<p>wf_SIL_CDM_W_EHA_PT_GRP_PATIENT_H</p>
+</td>
+</tr>
+<tr class="cellalignment45">
+<td class="cellalignment52" id="r5c1-t6" headers="r1c1-t6">
+<p>W_EHA_OBSV_PATIENT_H</p>
+</td>
+<td class="cellalignment52" headers="r5c1-t6 r1c2-t6">
+<p>wf_SIL_CDM_W_EHA_ORDER_PATIENT_H_FULL</p>
+<p>wf_SIL_CDM_W_EHA_ORDER_PATIENT_H</p>
+</td>
+</tr>
+<tr class="cellalignment45">
+<td class="cellalignment52" id="r6c1-t6" headers="r1c1-t6">
+<p>W_EHA_PT_FAM_RLSHP_DHL</p>
+</td>
+<td class="cellalignment52" headers="r6c1-t6 r1c2-t6">
+<p>wf_SIL_CDM_W_EHA_FAMBR_RLSHP_TYPE_D_FULL</p>
+<p>wf_SIL_CDM_W_EHA_FAMBR_RLSHP_TYPE_D</p>
+</td>
+</tr>
+<tr class="cellalignment45">
+<td class="cellalignment52" id="r7c1-t6" headers="r1c1-t6">
+<p>W_EHA_SPECIMEN_PATIENT_H</p>
+</td>
+<td class="cellalignment52" headers="r7c1-t6 r1c2-t6">
+<p>wf_SIL_CDM_W_EHA_SPECIMEN_PATIENT_H_FULL</p>
+<p>wf_SIL_CDM_W_EHA_SPECIMEN_PATIENT_H</p>
+</td>
+</tr>
+<tr class="cellalignment45">
+<td class="cellalignment52" id="r8c1-t6" headers="r1c1-t6">
+<p>W_EHA_PT_HISTORY_PT_H</p>
+</td>
+<td class="cellalignment52" headers="r8c1-t6 r1c2-t6">
+<p>wf_SIL_CDM_W_EHA_PT_HISTORY_PT_H_FULL</p>
+<p>wf_SIL_CDM_W_EHA_PT_HISTORY_PT_H</p>
+</td>
+</tr>
+<tr class="cellalignment45">
+<td class="cellalignment52" id="r9c1-t6" headers="r1c1-t6">
+<p>W_EHA_SUBJECT_D</p>
+</td>
+<td class="cellalignment52" headers="r9c1-t6 r1c2-t6">
+<p>wf_SIL_CDM_W_EHA_SUBJECT_D_FULL</p>
+<p>wf_SIL_CDM_W_EHA_SUBJECT_D</p>
+</td>
+</tr>
+<tr class="cellalignment45">
+<td class="cellalignment52" id="r10c1-t6" headers="r1c1-t6">
+<p>W_EHA_ORDER_PATIENT_H</p>
+</td>
+<td class="cellalignment52" headers="r10c1-t6 r1c2-t6">
+<p>wf_SIL_CDM_W_EHA_ORDER_PATIENT_H_FULL</p>
+<p>wf_SIL_CDM_W_EHA_ORDER_PATIENT_H</p>
+</td>
+</tr>
+<tr class="cellalignment45">
+<td class="cellalignment52" id="r11c1-t6" headers="r1c1-t6">
+<p>W_EHA_APPT_PATIENT_H</p>
+</td>
+<td class="cellalignment52" headers="r11c1-t6 r1c2-t6">
+<p>wf_SIL_CDM_W_EHA_APPT_PATIENT_H_FULL</p>
+<p>wf_SIL_CDM_W_EHA_APPT_PATIENT_H</p>
+</td>
+</tr>
+<tr class="cellalignment45">
+<td class="cellalignment52" id="r12c1-t6" headers="r1c1-t6">
+<p>W_EHA_CONSENT_PATIENT_H</p>
+</td>
+<td class="cellalignment52" headers="r12c1-t6 r1c2-t6">
+<p>wf_SIL_CDM_W_EHA_CONSENT_PATIENT_H_FULL</p>
+<p>wf_SIL_CDM_W_EHA_CONSENT_PATIENT_H</p>
+</td>
+</tr>
+<tr class="cellalignment45">
+<td class="cellalignment52" id="r13c1-t6" headers="r1c1-t6">
+<p>W_EHA_ENC_PATIENT_H</p>
+</td>
+<td class="cellalignment52" headers="r13c1-t6 r1c2-t6">
+<p>wf_SIL_CDM_W_EHA_ENC_PATIENT_H_FULL</p>
+<p>wf_SIL_CDM_W_EHA_ENC_PATIENT_H</p>
+</td>
+</tr>
+<tr class="cellalignment45">
+<td class="cellalignment52" id="r14c1-t6" headers="r1c1-t6">
+<p>W_EHA_DX_PATIENT_H</p>
+</td>
+<td class="cellalignment52" headers="r14c1-t6 r1c2-t6">
+<p>wf_SIL_CDM_W_EHA_DX_PATIENT_H_FULL</p>
+<p>wf_SIL_CDM_W_EHA_DX_PATIENT_H</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" -->
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Demographic attributes and entities are populated based on the values associated in HDM with the golden patient record for the following CDM entities:
+<ul>
+<li>
+<p>W_EHA_RESEARCH_PATIENT_D</p>
+</li>
+<li>
+<p>W_EHA_ETHN_PATIENT_H</p>
+</li>
+<li>
+<p>W_EHA_RACE_PATIENT_H</p>
+</li>
+</ul>
+</div>
+</div>
+<!-- class="sect3" -->
+<a id="BCGFGCHJ"></a>
+<div id="OHNFG120" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Cascading Soft Deletions and Mapping Updates</h4>
+<p class="subhead2"><a id="OHNFG121"></a>Soft Deletion of Golden Patient Record</p>
+<p>If a golden patient record in HDM_RELTD_PT is soft deleted, then the corresponding patient record in W_EHA_RESEARCH_PATIENT_D is soft deleted and all clinical records associated with the corresponding patient will be soft deleted in CDM.</p>
+<p class="subhead2"><a id="OHNFG122"></a>Soft Deletion of Mapping Record</p>
+<p>If a non-golden patient record mapping in HDM_RELTD_PT is soft deleted and not linked to any other golden record, then CDM clinical records which were earlier linked to the golden patient record will be soft deleted.</p>
+<p class="subhead2"><a id="OHNFG123"></a>Mapping Update</p>
+<p>If a non-golden patient record mapping is updated to a different golden patient record in HDM_RELTD_PT, the mapping update is cascaded to all CDM clinical records to associate clinical records to the new golden patient.</p>
+<p class="subhead2"><a id="OHNFG124"></a>Non-Golden Patient Identifier not Mapped to Golden Patient Identifier</p>
+<p>If a non-golden patient identifier is not mapped to any golden patient identifier, then clinical records associated with the non-golden patient identifier in HDM will not be loaded to CDM.</p>
+<p class="subhead2"><a id="OHNFG125"></a>ODB Linkage of Soft-Deleted and Re-Mapped Records</p>
+<p>When a patient specimen record is soft-deleted in the &lt;CDM_schema&gt;.W_EHA_SPECIMEN_PATIENT_H table, all linked ODB specimens are also soft-deleted in the &lt;ODB_schema&gt;.W_EHA_SPEC_PATIENT table. When a new specimen is created in CDM by the ETL process, the system attempts to find a corresponding ODB specimen and re-map it using the specimen number and vendor number values. The patient aggregates are updated automatically to reflect new and removed specimen data in ODB.</p>
+<p class="subhead2"><a id="OHNFG126"></a>Permanently Remove Soft-Deleted Records from CDM</p>
+<p>If golden record re-mappings occur often and the number of soft-deleted records starts to impact performance or storage capacity, you may choose to enable a purge job as follows:</p>
+<ol>
+<li>
+<p>Configure the cdm_keep_deleted_prcnt parameter in the &lt;Enterprise_schema&gt;.W_EHA_CONFIG_PARAMETER table. This parameter determines the percentage of soft-deleted rows in a bridge table the will trigger the purge job to clean up the table. For example, a value of 5 means that when more than 5 percent of the rows have delete_flg = 'Y' in any given bridge table, all those records will be permanently deleted by the purge job.</p>
+</li>
+<li>
+<p>Configure the cdm_cleanup_DOP parameter in the &lt;Enterprise_schema&gt;.W_EHA_CONFIG_PARAMETER table. This parameter determines the degree of parallelism used by the purge job. You may choose a value that is lower or equal to the max_parallel_degree parameter.</p>
+</li>
+<li>
+<p>Schedule or run the job on-demand as follows:</p>
+<p><code dir="ltr">BEGIN<br />
+&nbsp;&nbsp;CLEANUP_UTIL.cleanup_job;<br />
+END;</code></p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BCGEJGFJ"></a>
+<div id="OHNFG127" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">New Relationships for Cancer Registry Data Analysis</h3>
+<p>The following relationships have been added to the CDM data model to support cancer registry data analysis:</p>
+<ul>
+<li>
+<p><a href="#BCGHGFJC">Patient Diagnosis to Patient Observation Relationship</a></p>
+</li>
+<li>
+<p><a href="#BCGEECJD">Patient Diagnosis to Patient Procedure Relationship</a></p>
+</li>
+<li>
+<p><a href="#BCGIDHIJ">Patient Diagnosis to Patient Substance Administration Relationship</a></p>
+</li>
+<li>
+<p><a href="#BCGEGJEI">Patient Diagnosis to Patient Specimen Relationship</a></p>
+</li>
+<li>
+<p><a href="#BCGJJBDH">Patient Specimen to Patient Observation Relationship</a></p>
+</li>
+</ul>
+<a id="BCGHGFJC"></a>
+<div id="OHNFG128" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Patient Diagnosis to Patient Observation Relationship</h4>
+<p>A patient diagnosis record (W_EHA_DX_PATIENT_H) can be associated with multiple patient observation records (W_EHA_OBSV_PATIENT_H) via the new <span class="bold">W_EHA_OBSV_PATIENT_H.DX_PATIENT_WID</span> column.</p>
+<p>To select the patient diagnosis record linked to a patient observation in HDM, the CDM ETL for W_EHA_OBSV_PATIENT_H uses a parameterized filter on the Observation Concern Relationship Type attribute in the HDM Observation Concern intersection table (HDM_OBSV_CNRN.OBSV_CNRN_RLSHPTYP_ID). If this parameter is set to null (default), the ETL selects all the associations between the patient diagnosis and the patient observation in HDM.</p>
+<p>After applying the above filter, if the CDM ETL finds a patient observation that is linked to multiple patient diagnoses in HDM, it replicates the corresponding number of records in W_EHA_OBSV_PATIENT_H with different DX_PATIENT_WID values.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BCGEECJD"></a>
+<div id="OHNFG129" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Patient Diagnosis to Patient Procedure Relationship</h4>
+<p>A patient diagnosis record (W_EHA_DX_PATIENT_H) can be associated with multiple patient procedure records (W_EHA_PROC_PATIENT_H) via the new <span class="bold">W_EHA_PROC_PATIENT_H.DX_PATIENT_WID</span> column.</p>
+<p>To select the patient diagnosis record linked to a patient procedure in HDM, the CDM ETL for W_EHA_PROC_PATIENT_H uses a parameterized filter on the Intervention Concern Relationship Type attribute in the HDM Intervention Concern intersection table (HDM_INTVN_CNRN.INTVN_CNRN_RLSHPTYP_ID). If this parameter is set to null (default), the ETL selects all the associations between the patient diagnosis and the patient procedure in HDM.</p>
+<p>After applying the above filter, if the CDM ETL finds a patient procedure that is linked to multiple patient diagnoses in HDM, it replicates the corresponding number of records in W_EHA_PROC_PATIENT_H with different DX_PATIENT_WID values.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BCGIDHIJ"></a>
+<div id="OHNFG130" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Patient Diagnosis to Patient Substance Administration Relationship</h4>
+<p>A patient diagnosis record (W_EHA_DX_PATIENT_H) can be associated with multiple patient substance administration records (W_EHA_SUBADMN_PATIENT_H) via the new <span class="bold">W_EHA_SUBADMN_PATIENT_H.DX_PATIENT_WID</span> column.</p>
+<p>To select the patient diagnosis record linked to a patient substance administration in HDM, the CDM ETL for W_EHA_SUBADMN_PATIENT_H uses a parameterized filter on the Intervention Concern Relationship Type attribute in the HDM Intervention Concern intersection table (HDM_INTVN_CNRN.INTVN_CNRN_RLSHPTYP_ID). If this parameter is set to null (default), the ETL selects all the associations between the patient diagnosis and the patient substance administration in HDM.</p>
+<p>After applying the above filter, if the CDM ETL finds a patient substance administration that is linked to multiple patient diagnoses in HDM, it replicates the corresponding number of records in W_EHA_ SUBADMN _PATIENT_H with different DX_PATIENT_WID values.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BCGEGJEI"></a>
+<div id="OHNFG131" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Patient Diagnosis to Patient Specimen Relationship</h4>
+<p>A patient diagnosis record (W_EHA_DX_PATIENT_H) can be associated with multiple patient specimen records (W_EHA_SPECIMEN_PATIENT_H) via the new Patient Specimen Diagnosis association <span class="bold">W_EHA_SPECIMEN_DX_PATIENT_H</span>. This table supports associations between one patient specimen record and multiple patient diagnosis records, and vice versa.</p>
+<p>To populate W_EHA_SPECIMEN_DX_PATIENT_H, its CDM ETL sources records from the HDM Specimen Concern intersection table (HDM_SPCMN_CNRN). The ETL provides an optional parameterized filter on the HDM attribute Specimen Concern Relationship Type (HDM_SPCMN_CNRN.SPCMN_CNRN_RLSHPTYP_ID). If the parameter for this filter is set to Null (default), the ETL selects all the associations between the patient specimen and the patient diagnosis in HDM.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BCGJJBDH"></a>
+<div id="OHNFG132" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Patient Specimen to Patient Observation Relationship</h4>
+<p>A patient specimen record (W_EHA_SPECIMEN_PATIENT_H) can be associated with multiple patient observation records (W_EHA_OBSV_PATIENT_H) via the new <span class="bold">W_EHA_OBSV_PATIENT_H.SPECIMEN_PATIENT_WID</span> column.</p>
+<p>To select the patient specimen record linked to a patient observation in HDM, the CDM ETL for W_EHA_OBSV_PATIENT_H uses a parameterized filter on the Observation Specimen Relationship Type attribute in the HDM Observation Specimen intersection table (HDM_OBSV_SPCMN.OBSV_SPCMN _RLSHPTYP_ID). If this parameter is set to null (default), the ETL selects all the associations between the patient specimen and the patient observation in HDM.</p>
+<p>After applying the above filter, if the CDM ETL finds a patient observation that is linked to multiple patient specimens in HDM, it replicates the corresponding number of records in W_EHA_OBSV_PATIENT_H with different SPECIMEN_PATIENT_WID values.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="A132414067"></a>
+<div id="OHNFG133" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Omics Data Bank (ODB) Updates</h2>
+<ul>
+<li>
+<p><a href="#BCGHDCFC">RNA-seq Data Model and Loader Updates</a></p>
+</li>
+<li>
+<p><a href="#BCGGDEAH">Alias Based Linking of Omics and Clinical Specimens</a></p>
+</li>
+<li>
+<p><a href="#BCGFAEJG">Automated ODB - CDM Specimen Linkage Refresh after a Full CDM Refresh</a></p>
+</li>
+<li>
+<p><a href="#BCGJADHI">Protein Effect for Frameshift Mutations Calculation</a></p>
+</li>
+<li>
+<p><a href="#BCGGCICA">Splicing Mutations Identification</a></p>
+</li>
+</ul>
+<a id="BCGHDCFC"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">RNA-seq Data Model and Loader Updates</h3>
+<p>The RNA-seq data model and loader have been upgraded to support exon, gene and transcript based normalization. Both the model and loader also support loading RPKM/FPKM/FPKM_UQ/TPM quantification types.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BCGGDEAH"></a>
+<div id="OHNFG134" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Alias Based Linking of Omics and Clinical Specimens</h3>
+<p>Omics specimens loaded in OHF are linked by default to the clinical specimens in CDM based on their Specimen Number (loaded in Omics data files) and Specimen Vendor Number (provided as a loader input parameter).</p>
+<p>The linking process has been enhanced to also support specimen identification based on the combination between the Specimen Alias and Issuing Service Provided, both of which are loaded into the HDM interface tables:</p>
+<ol>
+<li>
+<p>The loader first attempts to use Specimen Number/Specimen Vendor Number to link Omics specimens to CDM specimens. If successful, the process stops here.</p>
+</li>
+<li>
+<p>If a matching Specimen Number/Specimen Vendor number combination is not found in CDM, the loader switches to a lookup by Specimen Alias. In this second pass, the loader tries to match the Specimen Identifier from a result file with the Specimen Alias and the input value of the Specimen Vendor Number with the Issuing Service Provider name.</p>
+</li>
+<li>
+<p>If a matching record is found in the CDM alias tables, the loader verifies if the corresponding CDM specimen has been previously linked with an Omics specimen.</p>
+<ul>
+<li>
+<p>If an Omics specimen has been linked previously, the loader reuses its record.</p>
+</li>
+<li>
+<p>If an Omics specimen hasn't been linked previously, the loader creates a new Omics specimen record.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>The association of specimen aliases to the loaded genomic files is tracked in the Omics database.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BCGFAEJG"></a>
+<div id="OHNFG135" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Automated ODB - CDM Specimen Linkage Refresh after a Full CDM Refresh</h3>
+<p>You no longer have to manually update CDM references for OMICS specimens when the CDM schema is reloaded with a full refresh ETL. The CDM references are updated automatically after each ETL to ensure the consistency of ODB - CDM specimen links.</p>
+<p>You must still update OMICS study references if the CDM is reloaded with a full load ETL. To do this, in the ODB schema, execute the following SQL statement:</p>
+<p><code dir="ltr">update w_eha_rslt_study rs set external_study_wid = (<br />
+select row_wid from cdm.w_eha_study_d sd<br />
+where rs.result_study_name = sd. study_name<br />
+);</code></p>
+</div>
+<!-- class="sect2" -->
+<a id="BCGJADHI"></a>
+<div id="OHNFG136" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Protein Effect for Frameshift Mutations Calculation</h3>
+<p>The protein effect for frameshift mutations is now calculated using the short format HGVS recommendations. For example, p.N123fs indicates: the prefix reference sequence (protein), the first amino acid changed (nitrogen), its position (123), and the type of mutation (frameshift).</p>
+</div>
+<!-- class="sect2" -->
+<a id="BCGGCICA"></a>
+<div id="OHNFG137" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Splicing Mutations Identification</h3>
+<p>You can now query mutations based on their proximity to the intron/exon boundary.</p>
+<p>The IS_SPLICING attribute has been added to the W_EHA_VARIANT_EFFECT table. The value of this attribute is set to "Y" for variants in close proximity to intron/exon border.</p>
+<p>Two system parameters define the length of the splice regions on the intron and exon sides of the border:</p>
+<ul>
+<li>
+<p>splice_region_length_intron - length of the intronic portion of the splice region (default 2).</p>
+</li>
+<li>
+<p>splice_region_length_exon - length of the exonic portion of the splice region (default 2).</p>
+</li>
+</ul>
+<p>You can control the initialization parameters using the PL/SQL API:</p>
+<p class="subhead2"><a id="OHNFG138"></a>Verify Current Settings</p>
+<p><code dir="ltr">SQL&gt; select config_util.get_config_parameter (i_name=&gt;'splice_region_length_exon') as splice_region_length_exon from dual;<br />
+<br />
+SPLICE_REGION_LENGTH_EXON<br />
+--------------------------------------------------------------------------------<br />
+2<br />
+<br />
+SQL&gt; select config_util.get_config_parameter (i_name=&gt;'splice_region_length_intron') as splice_region_length_intron from dual;<br />
+<br />
+SPLICE_REGION_LENGTH_INTRON<br />
+--------------------------------------------------------------------------------<br />
+2</code></p>
+<p class="subhead2"><a id="OHNFG139"></a>Set New Parameter Values</p>
+<p><code dir="ltr">SQL&gt; exec config_util.set_config_parameter (i_name=&gt;'splice_region_length_exon',i_value=&gt;3);<br />
+<br />
+PL/SQL procedure successfully completed.<br />
+<br />
+SQL&gt; exec config_util.set_config_parameter (i_name=&gt;'splice_region_length_intron',i_value=&gt;8);<br />
+<br />
+PL/SQL procedure successfully completed.<br />
+<br />
+SQL&gt; commit;<br />
+<br />
+Commit complete.</code></p>
+<p class="subhead2"><a id="OHNFG140"></a>Reload the Contents of the W_EHA_VARIANT_EFFECT Table</p>
+<p><code dir="ltr">BEGIN<br />
+&nbsp;&nbsp;DBMS_SCHEDULER.create_job (<br />
+&nbsp;&nbsp;&nbsp;&nbsp;job_name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&gt; 'VARIANT_EFFECT_FULL_REFRESH',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;job_type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&gt; 'PLSQL_BLOCK',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;job_action&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&gt; q'[BEGIN odb_var_effect_util.process_var_effect(i_full_refresh=&gt;'Y'); END;]',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;enabled&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&gt; true,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;comments&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&gt; 'Fully refresh variant_effect table contents');<br />
+END;<br />
+/</code></p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CHDIJBHB"></a>
+<div id="OHNFG141" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Where to Find the Product Documentation</h2>
+<p>The product documentation is available at the following locations:</p>
+<ul>
+<li>
+<p>My Oracle Support: <a href="https://support.oracle.com"><code dir="ltr">https://support.oracle.com</code></a> &mdash; What's New, What's Fixed, and Known Issues.</p>
+</li>
+<li>
+<p>Oracle Help Center: <a href="https://docs.oracle.com/en/industries/health-sciences/oracle-healthcare-foundation/index.html"><code dir="ltr">https://docs.oracle.com/en/industries/health-sciences/oracle-healthcare-foundation/index.html</code></a> &mdash; The most current documentation set.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect1" -->
+<a id="A132172625"></a>
+<div id="OHNFG142" class="sect1">
+<h2 class="sect1">Documentation Accessibility</h2>
+<p>For information about Oracle's commitment to accessibility, visit the Oracle Accessibility Program website at <code dir="ltr"><a href="http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=docacc">http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=docacc</a></code>.</p>
+<p class="subhead2"><a id="sthref7"></a>Access to Oracle Support</p>
+<p>Oracle customers that have purchased support have access to electronic support through My Oracle Support. For information, visit <code dir="ltr"><a href="http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=info">http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=info</a></code> or visit <code dir="ltr"><a href="http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=trs">http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=trs</a></code> if you are hearing impaired.</p>
+</div>
+<!-- class="sect1" -->
+<a id="sthref8"></a>
+<hr />
+<p>Oracle Healthcare Foundation New Features Guide, Release 7.2</p>
+<p>E98880-01</p>
+<p>Copyright &copy; 2018,&nbsp;Oracle and/or its affiliates. All rights reserved.</p>
+<p>This software and related documentation are provided under a license agreement containing restrictions on use and disclosure and are protected by intellectual property laws. Except as expressly permitted in your license agreement or allowed by law, you may not use, copy, reproduce, translate, broadcast, modify, license, transmit, distribute, exhibit, perform, publish, or display any part, in any form, or by any means. Reverse engineering, disassembly, or decompilation of this software, unless required by law for interoperability, is prohibited.</p>
+<p>The information contained herein is subject to change without notice and is not warranted to be error-free. If you find any errors, please report them to us in writing.</p>
+<p>If this is software or related documentation that is delivered to the U.S. Government or anyone licensing it on behalf of the U.S. Government, then the following notice is applicable:</p>
+<p>U.S. GOVERNMENT END USERS: Oracle programs, including any operating system, integrated software, any programs installed on the hardware, and/or documentation, delivered to U.S. Government end users are "commercial computer software" pursuant to the applicable Federal Acquisition Regulation and agency-specific supplemental regulations. As such, use, duplication, disclosure, modification, and adaptation of the programs, including any operating system, integrated software, any programs installed on the hardware, and/or documentation, shall be subject to license terms and license restrictions applicable to the programs. No other rights are granted to the U.S. Government.</p>
+<p>This software or hardware is developed for general use in a variety of information management applications. It is not developed or intended for use in any inherently dangerous applications, including applications that may create a risk of personal injury. If you use this software or hardware in dangerous applications, then you shall be responsible to take all appropriate fail-safe, backup, redundancy, and other measures to ensure its safe use. Oracle Corporation and its affiliates disclaim any liability for any damages caused by use of this software or hardware in dangerous applications.</p>
+<p>Oracle and Java are registered trademarks of Oracle and/or its affiliates. Other names may be trademarks of their respective owners.</p>
+<p>Intel and Intel Xeon are trademarks or registered trademarks of Intel Corporation. All SPARC trademarks are used under license and are trademarks or registered trademarks of SPARC International, Inc. AMD, Opteron, the AMD logo, and the AMD Opteron logo are trademarks or registered trademarks of Advanced Micro Devices. UNIX is a registered trademark of The Open Group.</p>
+<p>This software or hardware and documentation may provide access to or information about content, products, and services from third parties. Oracle Corporation and its affiliates are not responsible for and expressly disclaim all warranties of any kind with respect to third-party content, products, and services unless otherwise set forth in an applicable agreement between you and Oracle. Oracle Corporation and its affiliates will not be responsible for any loss, costs, or damages incurred due to your access to or use of third-party content, products, or services, except as set forth in an applicable agreement between you and Oracle.</p>
+</div>
+<!-- class="letterstyle" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment44">
+<tr>
+<td class="cellalignment52">&nbsp;</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment54">
+<table class="cellalignment47">
+<tr>
+<td class="cellalignment48"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment48"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment48"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment48"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

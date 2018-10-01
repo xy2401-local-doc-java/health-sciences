@@ -1,0 +1,1532 @@
+<html class="gr__docs_oracle_com">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Cross Product User Assistance</title>
+    <link rel="icon" type="image/png" href="http://slc14rkk:9001/resource/favicon.ico">
+    <meta name="description" content="Cross Product User Assistance">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* line 1, ../scss/main.scss */
+
+        body {
+            margin: 0px;
+            font-family: "Helvetica Neue", sans-serif;
+            min-width: 1280px;
+            min-height: 960px;
+            /* Header */
+        }
+
+        /* line 45, ../scss/main.scss */
+
+        body .header {
+	padding: 10px 16px;
+	color: #fff;
+	margin-bottom: 10px;
+	background-color: #8FD1C2;
+        }
+
+        /* line 48, ../scss/main.scss */
+
+        body .header.phase-header-1 {
+	background-color: #DEBFF7;
+        }
+body .header.phase-header-2 {
+	background-color: #71ACF4;
+}
+
+        /* line 54, ../scss/main.scss */
+
+        body .header.phase-header {
+            height: 100px;
+        }
+
+        /* line 61, ../scss/main.scss */
+
+        body .page-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: calc(100vh - 150px);
+            min-height: 600px;
+            /* margin-bottom: 20px; */
+        }
+
+        /* line 72, ../scss/main.scss */
+
+        body .page-container.studyChange .section-container {
+            border-width: 0px !important;
+            height: calc(100vh - 150px);
+        }
+
+        /* line 75, ../scss/main.scss */
+
+        body .page-container.studyChange .section-container .section-cards-container {
+            width: 100%;
+            min-width: 1260px;
+            max-width: 1260px;
+            flex-wrap: wrap;
+            display: flex;
+        }
+
+        /* line 81, ../scss/main.scss */
+
+        body .page-container.studyChange .section-container .section-cards-container component-expandable-card {
+            margin-left: 10px;
+            margin-right: 10px;
+            min-width: 390px;
+        }
+
+        /* line 85, ../scss/main.scss */
+
+        body .page-container.studyChange .section-container .section-cards-container component-expandable-card .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 350px;
+            margin: 20px auto;
+            padding: 10px 20px;
+            width: 100%;
+        }
+
+        /* line 21, ../scss/main.scss */
+
+        body .page-container.studyChange .section-container .section-cards-container component-expandable-card .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+            transition: all 0.2s ease-in;
+        }
+
+        /* line 25, ../scss/main.scss */
+
+        body .page-container.studyChange .section-container .section-cards-container component-expandable-card .card .expandIconContainer {
+            cursor: pointer;
+        }
+
+        /* line 28, ../scss/main.scss */
+
+        body .page-container.studyChange .section-container .section-cards-container component-expandable-card .card .expandIconContainer .expandIcon.collapse {
+            height: 20px;
+            width: 20px;
+            background-image: url("../../../../../images/collapse.svg");
+        }
+
+        /* line 32, ../scss/main.scss */
+
+        body .page-container.studyChange .section-container .section-cards-container component-expandable-card .card .expandIconContainer .expandIcon.expand {
+            height: 20px;
+            width: 20px;
+            background-image: url("../../../../../images/expand.svg");
+        }
+
+        /* line 88, ../scss/main.scss */
+
+        body .page-container.studyChange .section-container .section-cards-container component-expandable-card .card .expandIconContainer {
+            justify-content: center;
+            display: flex;
+        }
+
+        /* line 93, ../scss/main.scss */
+
+        body .page-container.studyChange .section-container .section-cards-container component-expandable-card .procedures-container {
+            width: 1215px;
+        }
+
+        /* line 95, ../scss/main.scss */
+
+        body .page-container.studyChange .section-container .section-cards-container component-expandable-card .procedures-container .procedures-phase-container.card {
+            display: flex;
+            width: 1100px;
+            min-width: 1100px;
+            max-width: calc(80vw - 40px);
+            min-height: 100px;
+            padding: 0;
+        }
+
+        /* line 102, ../scss/main.scss */
+
+        body .page-container.studyChange .section-container .section-cards-container component-expandable-card .procedures-container .procedures-phase-container.card .procedure {
+            min-height: 250px;
+            max-height: 400px;
+            width: 33%;
+            border: 1px solid #afacac;
+        }
+
+        /* line 107, ../scss/main.scss */
+
+        body .page-container.studyChange .section-container .section-cards-container component-expandable-card .procedures-container .procedures-phase-container.card .procedure:not(:last-of-type) {
+            width: 34%;
+            border-right-width: 0px;
+        }
+
+        /* line 110, ../scss/main.scss */
+
+        body .page-container.studyChange .section-container .section-cards-container component-expandable-card .procedures-container .procedures-phase-container.card .procedure:not(:last-of-type) .border-icon-container {
+            width: 0;
+            height: 100%;
+            left: -15px;
+            position: relative;
+        }
+
+        /* line 116, ../scss/main.scss */
+
+        body .page-container.studyChange .section-container .section-cards-container component-expandable-card .procedures-container .procedures-phase-container.card .procedure:not(:last-of-type) .border-icon-container .border-icon {
+            margin: 10px 0 0 0;
+            height: 30px;
+            width: 30px;
+            background-image: url("../../../../../images/Step.svg");
+        }
+
+        /* line 122, ../scss/main.scss */
+
+        body .page-container.studyChange .section-container .section-cards-container component-expandable-card .procedures-container .procedures-phase-container.card .procedure .procedure-title {
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* line 127, ../scss/main.scss */
+
+        body .page-container.studyChange .section-container .section-cards-container component-expandable-card .procedures-container .procedures-phase-container.card .procedure .procedure-title .upArrow {
+            height: 0;
+            width: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 20px solid black;
+            position: relative;
+            top: -20px;
+        }
+
+        /* line 130, ../scss/main.scss */
+
+        body .page-container.studyChange .section-container .section-cards-container component-expandable-card .procedures-container .procedures-phase-container.card .procedure .procedure-title .title-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+        }
+
+        /* line 136, ../scss/main.scss */
+
+        body .page-container.studyChange .section-container .section-cards-container component-expandable-card .procedures-container .procedures-phase-container.card .procedure .procedure-title .title-container .title {
+            margin: 0;
+        }
+
+        /* line 143, ../scss/main.scss */
+
+        body .page-container.studyChange .section-container .section-cards-container component-expandable-card .procedures-container .procedures-phase-container.card .procedure .procedure-cards component-procedure-card .card {
+            max-width: 300px;
+        }
+
+        /* line 155, ../scss/main.scss */
+
+        body .page-container .page-header {
+            width: 1280px;
+            padding-left: 40px;
+            max-height: 100px;
+        }
+
+        /* line 160, ../scss/main.scss */
+
+        body .page-container .sections-container {
+            display: flex;
+            justify-content: center;
+            height: calc(100vh - 250px);
+        }
+
+        /* line 164, ../scss/main.scss */
+
+        body .page-container .sections-container .section-container {
+            padding: 0 10px;
+            min-width: 380px;
+            border: 1px solid #afacac;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* line 170, ../scss/main.scss */
+
+        body .page-container .sections-container .section-container:not(:last-of-type) {
+            border-right-width: 0px;
+        }
+
+        /* line 172, ../scss/main.scss */
+
+        body .page-container .sections-container .section-container:not(:last-of-type) .border-icon-container {
+            width: 0;
+            height: 100%;
+            left: -10px;
+            position: relative;
+        }
+
+        /* line 178, ../scss/main.scss */
+
+        body .page-container .sections-container .section-container:not(:last-of-type) .border-icon-container .border-icon {
+            /* right: -10px; */
+            margin: 30px 0;
+            height: 40px;
+            width: 40px;
+            /* background-image: url("../images/Parallel.svg"); */
+        }
+
+        /* line 188, ../scss/main.scss */
+
+        body .page-container .sections-container .section-container .section-header-container {
+            height: 100px;
+            min-height: 100px;
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        /* line 195, ../scss/main.scss */
+
+        body .page-container .sections-container .section-container .section-header-container .section-header-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
+        /* line 201, ../scss/main.scss */
+
+        body .page-container .sections-container .section-container .section-header-container .section-header-text h4 {
+            margin-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        /* line 205, ../scss/main.scss */
+
+        body .page-container .sections-container .section-container .section-header-container .section-header-text a {
+            height: 25px;
+            width: 100px;
+        }
+
+        /* line 208, ../scss/main.scss */
+
+        body .page-container .sections-container .section-container .section-header-container .section-header-text a button {
+            background-color: #8fd1c2;
+            color: white;
+            border-radius: 10px;
+            border-width: 1px;
+            width: 100%;
+            height: 100%;
+            font-weight: bold;
+        }
+
+        /* line 231, ../scss/main.scss */
+
+        body .page-container .sections-container .section-container .section-cards-container {
+            overflow: auto;
+        }
+
+        /* line 234, ../scss/main.scss */
+
+        body .page-container .sections-container .section-container .section-cards-container .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 350px;
+            margin: 20px auto;
+            padding: 10px 20px;
+            max-width: 320px;
+        }
+
+        /* line 21, ../scss/main.scss */
+
+        body .page-container .sections-container .section-container .section-cards-container .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+            transition: all 0.2s ease-in;
+        }
+
+        /* line 25, ../scss/main.scss */
+
+        body .page-container .sections-container .section-container .section-cards-container .card .expandIconContainer {
+            cursor: pointer;
+        }
+
+        /* line 28, ../scss/main.scss */
+
+        body .page-container .sections-container .section-container .section-cards-container .card .expandIconContainer .expandIcon.collapse {
+            height: 20px;
+            width: 20px;
+            background-image: url("../../../../../images/collapse.svg");
+        }
+
+        /* line 32, ../scss/main.scss */
+
+        body .page-container .sections-container .section-container .section-cards-container .card .expandIconContainer .expandIcon.expand {
+            height: 20px;
+            width: 20px;
+            background-image: url("../../../../../images/expand.svg");
+        }
+
+        /* line 238, ../scss/main.scss */
+
+        body .page-container .sections-container .section-container .section-cards-container component-procedure-card {
+            min-width: 400px;
+        }
+
+        /* line 247, ../scss/main.scss */
+
+        h4 {
+            color: #3F3F3F;
+        }
+
+        /* line 251, ../scss/main.scss */
+
+        .description {
+            color: #707070;
+            font-weight: 300;
+            font-style: italic;
+            line-height: 1.25em;
+        }
+
+        /* line 258, ../scss/main.scss */
+
+        a {
+            text-decoration: none;
+            color: #0063C9;
+        }
+
+        /* line 261, ../scss/main.scss */
+
+        a:hover {
+            color: #64B9C9;
+        }
+
+        /* line 266, ../scss/main.scss */
+
+        hr {
+            display: block;
+            height: 1px;
+            border: 0;
+            border-top: 1px solid #ccc;
+            margin: 1em 0;
+            padding: 0;
+        }
+
+        /*# sourceMappingURL=main.css.map */
+    </style>
+
+    <body>
+        <!-- <div class="header phase-header" data-bind="css: `phase-header-${phaseHeaders.phaseId()}`" id="general-header">
+        <h2 data-bind="text: phaseHeaders.title"></h2>
+        <p data-bind="text: phaseHeaders.secondTitle"></p>
+    </div> -->
+        <!-- ko foreach: generalStructure -->
+        <!-- ko if: $index() === 0 -->
+        <!-- ko foreach: pages -->
+        <div class="header phase-header phase-header-0" data-bind="css: `phase-header-${$parents[1].phaseHeaders.phaseId()}`">
+            <h2 data-bind="text: $parents[1].phaseHeaders.title">Let's build a study: Tasks you  do simultaneously</h2>
+            <p data-bind="text: $parents[1].phaseHeaders.secondTitle">Here&rsquo;s what you can do at the same time in Central Designer, InForm, and DMW.</p>
+        </div>
+        <div class="page-container studyCreate">
+            <div class="page-header">
+                <h3>
+                <!-- <a id="htmlLinkOne" href="https://www.w3schools.com" style="pointer: cursor;">This is a false link.</a> --><!-- <a id="htmlLinkTwo" href="https://www.w3schools.com" style="pointer: cursor;">This is a false link, too.</a> --></h3>
+            </div>
+            <div class="sections-container">
+
+                <!-- ko foreach: sections -->
+                <div class="section-container" style="">
+                    <div class="section-header-container">
+                        <div class="section-header-text">
+                            <h4 data-bind="text: title">Central Designer</h4>
+                            <!-- <a data-bind="
+                     attr:{
+                     href: url,
+                     target: '_blank'
+                     }" href="http://www.oracle.om" target="_blank">
+                                <button>Best Practice</button>
+                            </a> -->
+                        </div>
+                        <div class="border-icon-container">
+                            <div class="border-icon">
+                                <svg viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+                                    <g id="Parallel" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <path d="M16,8 C16,12.4182741 12.4182741,16 8,16 C3.58172594,16 0,12.4182741 0,8 C0,3.58172594 3.58172594,0 8,0 C12.4182741,0 16,3.58172594 16,8 Z"
+                                            id="Combined-Shape" fill="#8FD1C2" fill-rule="nonzero"></path>
+                                        <rect id="Rectangle" fill="#FFFFFF" x="9" y="4" width="2" height="8" rx="1"></rect>
+                                        <rect id="Rectangle-Copy" fill="#FFFFFF" x="5" y="4" width="2" height="8" rx="1"></rect>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-cards-container">
+                        <!-- ko foreach: cards -->
+                        <component-procedure-card class="card-container" params="data: $data">
+                            <div class="card">
+                                <h4>
+                                    <!-- ko foreach: titles -->
+                                    <!-- ko if: $data.url === undefined -->Create special InForm 
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url === undefined -->
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                <a data-bind="attr:{
+             href: url,
+             target: '_blank'
+         },
+         text: name" href="https://docs.oracle.com/health-sciences/central-designer-62/user-guide-form-designers/216633.htm" target="_blank">visits and forms</a></h4>
+                                <hr>
+                                <p data-bind="html: description">(Study Designer) Create the visits and forms that are required in InForm, and meet the special design requirements to make sure that the formdata is handled correctly in an InForm study. </p>
+                            </div>
+                        </component-procedure-card>
+
+                        <component-procedure-card class="card-container" params="data: $data">
+                        </component-procedure-card>
+
+                        <component-procedure-card class="card-container" params="data: $data">
+                          <div class="card">
+                                <h4>
+                                    <!-- ko foreach: titles -->
+                                    <!-- ko if: $data.url === undefined -->Configure the <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url === undefined -->
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                <a data-bind="attr:{
+             href: url,
+             target: '_blank'
+         },
+         text: name" href="https://docs.oracle.com/health-sciences/central-designer-62/user-guide/218537.htm" target="_blank">query groups</a> for the study</h4>
+                                <hr>
+                              <p data-bind="html: description">(Study Administrator) Create the query groups that you can add users to in InForm. Those users are identified as the users who can act on queries created by other members of the group in  InForm.</p>
+                            </div>
+                          <div class="card">
+                              <h4>
+                                    <!-- ko foreach: titles -->
+                                    <!-- ko if: $data.url === undefined -->Select the study's 
+                                <!-- /ko -->
+                                <!-- ko if: $data.url !== undefined -->
+                                <!-- /ko -->
+                                <!-- ko if: $data.url === undefined -->
+                                <!-- /ko -->
+                                <!-- ko if: $data.url !== undefined -->
+                                <a data-bind="attr:{
+             href: url,
+             target: '_blank'
+         },
+         text: name" href="https://docs.oracle.com/health-sciences/central-designer-62/user-guide/218523.htm" target="_blank">sponsor</a></h4>
+                                <hr>
+                                <p data-bind="html: description">(Study Administrator) Select from a list of possible study sponsors to associate your study with a specific sponsor, or add a new sponsor to the study.</p>
+                          </div>
+                            <div class="card">
+                                <h4>
+                                    <!-- ko foreach: titles -->
+                                    <!-- ko if: $data.url === undefined -->Configure the
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url === undefined -->
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                    <a data-bind="attr:{
+             href: url,
+             target: '_blank'
+         },
+         text: name" href="https://docs.oracle.com/health-sciences/central-designer-62/user-guide/218526.htm" target="_blank">system settings</a> for the study</h4>
+<hr>
+                                <p data-bind="html: description">(Study Administrator) Select the InForm release you are deploying your study to, and configure the system configuration settings that you want to use for the study.</p>
+                            </div>
+                        </component-procedure-card>
+
+                        <component-procedure-card class="card-container" params="data: $data">
+                            <div class="card">
+                                <h4>
+                                    <!-- ko foreach: titles -->
+                                    <!-- ko if: $data.url === undefined -->
+                                    <span data-bind="text: name"></span>
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                    <!-- /ko -->
+
+                                    <!-- ko if: $data.url === undefined -->
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                    <a data-bind="attr:{
+             href: url,
+             target: '_blank'
+         },
+         text: name" href="https://docs.oracle.com/health-sciences/central-designer-62/user-guide/219336.htm"
+                                        target="_blank">Validate</a>
+                                    <!-- /ko -->
+
+                                    <!-- ko if: $data.url === undefined -->
+                                    <span data-bind="text: name">your study</span>
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                    <!-- /ko -->
+                                    <!-- /ko -->
+                                </h4>
+                                <hr>
+                                <p data-bind="html: description">(Study Validator) Make sure that your study is well-formed before you send it to InForm.</p>
+                            </div>
+                        </component-procedure-card>
+
+                        <component-procedure-card class="card-container" params="data: $data"></component-procedure-card>
+                        <!-- /ko -->
+                    </div>
+                </div>
+
+                <div class="section-container" style="">
+                    <div class="section-header-container">
+                        <div class="section-header-text">
+                            <h4 data-bind="text: title">InForm</h4>
+                            <!-- <a data-bind="
+                     attr:{
+                     href: url,
+                     target: '_blank'
+                     }" href="http://www.oracle.com" target="_blank">
+                                <button>Best Practice</button>
+                            </a>  -->
+                        </div>
+                        <div class="border-icon-container">
+                            <div class="border-icon">
+                                <svg viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <path d="M16,8 C16,12.4182741 12.4182741,16 8,16 C3.58172594,16 0,12.4182741 0,8 C0,3.58172594 3.58172594,0 8,0 C12.4182741,0 16,3.58172594 16,8 Z" fill="#8FD1C2" fill-rule="nonzero"></path>
+                                        <rect fill="#FFFFFF" x="9" y="4" width="2" height="8" rx="1"></rect>
+                                        <rect fill="#FFFFFF" x="5" y="4" width="2" height="8" rx="1"></rect>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-cards-container">
+                        <!-- ko foreach: cards -->
+                        <component-procedure-card class="card-container" params="data: $data">
+                          <div class="card">
+                              <h4>
+                                    <!-- ko foreach: titles -->
+                                    <!-- ko if: $data.url === undefined --><!-- /ko -->
+
+                                    <!-- ko if: $data.url === undefined -->
+                                    <!-- /ko --><!-- /ko -->
+                                    <!-- /ko -->Install and configure the
+                                <!-- /ko -->
+                                <!-- ko if: $data.url !== undefined -->
+                                <!-- /ko -->
+                                <!-- ko if: $data.url === undefined -->
+                                <!-- /ko -->
+                                <!-- ko if: $data.url !== undefined -->
+                                <a data-bind="attr:{
+             href: url,
+             target: '_blank'
+         },
+         text: name" href="https://docs.oracle.com/health-sciences/inform-62/install/213622.htm" target="_blank">skeletal study</a></h4>
+                                <hr>
+                                <p data-bind="html: description">(Installer) Before you can deploy a study, you must set up the basic framework to hold your study design and data. This framework is called a skeletal study.</p>
+                            </div>
+                          <div class="card">
+                                <h4>
+                                    <!-- ko foreach: titles -->
+                                    <!-- ko if: $data.url === undefined --><!-- /ko -->
+
+                                    <!-- ko if: $data.url === undefined -->
+                                    <!-- /ko --><!-- /ko -->
+                                    <!-- /ko -->
+                                Install the Central Designer 
+                                <!-- /ko -->
+                                <!-- ko if: $data.url !== undefined -->
+                                <!-- /ko -->
+                                <!-- ko if: $data.url === undefined -->
+                                <!-- /ko -->
+                                <!-- ko if: $data.url !== undefined -->
+                                <a data-bind="attr:{
+             href: url,
+             target: '_blank'
+         },
+         text: name" href="https://docs.oracle.com/health-sciences/inform-62/install/218116.htm" target="_blank">certificate</a></h4>
+                                <hr>
+                              <p>(Installer) You must install a certificate on the InForm application server to verify that every deployment package you receive from the Central Designer server comes from a trusted source.</p>
+                          </div>
+                          <div class="card">
+                                <h4>
+                                    <!-- ko foreach: titles -->
+                                    <!-- ko if: $data.url === undefined -->
+                                    <span data-bind="text: name">Install the Central Designe</span>r 
+                                  <!-- /ko -->
+                                <!-- ko if: $data.url !== undefined -->
+                                <!-- /ko -->
+                                <!-- ko if: $data.url === undefined -->
+                                <!-- /ko -->
+                                <!-- ko if: $data.url !== undefined -->
+                                <a data-bind="attr:{
+             href: url,
+             target: '_blank'
+         },
+         text: name" href="https://docs.oracle.com/health-sciences/inform-62/install/213622.htm" target="_blank">rule engine</a></h4>
+                                <hr>
+                              <p>(Installer) Run the InstallCentralDesignerFiles command to install and register the Central Designer rules engine, as well as other files the InForm application uses for automated deployments. </p>
+                          </div>
+                          <div class="card">
+                                <h4>
+                                    <!-- ko foreach: titles -->
+                                    <!-- ko if: $data.url === undefined --><!-- /ko -->
+
+                                    <!-- ko if: $data.url === undefined -->
+                                    <!-- /ko --><!-- /ko -->
+                                    <!-- /ko -->
+                                Create 
+                                  <!-- /ko -->
+                                  <!-- ko if: $data.url !== undefined -->
+                                  <!-- /ko -->
+                                  <!-- ko if: $data.url === undefined -->
+                                  <!-- /ko -->
+                                  <!-- ko if: $data.url !== undefined -->
+                                <a data-bind="attr:{
+             href: url,
+             target: '_blank'
+         },
+         text: name" href="https://docs.oracle.com/health-sciences/inform-62/admins/209009.htm" target="_blank">Deployment users</a></h4>
+                                <hr>
+                              <p>(Administrator) A deployment user is any sponsor user with the Study Deployment right. You create deployment users in the InForm user interface or with the MedML Installer utility.                            </p>
+                          </div>
+                        </component-procedure-card>
+                        <!-- /ko -->
+                    </div>
+                </div>
+
+                <div class="section-container" style="">
+                    <div class="section-header-container">
+                        <div class="section-header-text">
+                            <h4 data-bind="text: title">DMW</h4>
+                            <!-- <a data-bind="
+                     attr:{
+                     href: url,
+                     target: '_blank'
+                     }" href="http://www.oracle.com" target="_blank">
+                                <button>Best Practice</button>
+                            </a> -->
+                        </div>
+                        <div class="border-icon-container">
+                            <div class="border-icon">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-cards-container">
+                        <!-- ko foreach: cards -->
+                        <component-procedure-card class="card-container" params="data: $data">
+                            <div class="card">
+                                <h4>
+                                    <!-- ko foreach: titles -->
+                                    <!-- ko if: $data.url === undefined -->
+                                    <span data-bind="text: name">Select </span>
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                    <!-- /ko -->
+
+                                    <!-- ko if: $data.url === undefined -->
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                    <a data-bind="attr:{
+             href: url,
+             target: '_blank'
+         },
+         text: name" href="https://docs.oracle.com/health-sciences/dmw-248/DMWAG/x_stdy.htm#BAJDFHJC" target="_blank">internal InForm tables</a>
+                                    <!-- /ko -->
+                                    <!-- /ko -->
+                                </h4>
+                                <hr>
+                              <p data-bind="html: description">(Administrator) Select tables and views to be available in all studies by default. An administrator performs this task one time, and the tables are selected for all studies.</p>
+                            </div>
+                            <div class="card">
+                                <h4>
+                                    <!-- ko foreach: titles -->
+                                    <!-- ko if: $data.url === undefined -->
+                                    <span data-bind="text: name">Create the  
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url === undefined -->
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                    <a data-bind="attr:{
+             href: url,
+             target: '_blank'
+         },
+         text: name" href="https://docs.oracle.com/health-sciences/dmw-248/DMWAG/fw_admin.htm#CDCHHHGD" target="_blank">users</a></span>
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                    required for InForm integration
+                                    <!-- /ko -->
+                                    <!-- /ko -->
+                                </h4>
+                                <hr>
+                                <p data-bind="html: description">(Administrator) For each InForm study database, create required Oracle and InForm users to enable InForm and DMW to exchange data. </p>
+                            </div>
+                            <div class="card">
+                                <h4>
+                                    <!-- ko foreach: titles -->
+                                    <!-- ko if: $data.url === undefined -->
+                                    <span data-bind="text: name">Set up the</span>
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                    <!-- /ko -->
+
+                                    <!-- ko if: $data.url === undefined -->
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                    <a data-bind="attr:{
+             href: url,
+             target: '_blank'
+         },
+         text: name" href="https://docs.oracle.com/health-sciences/dmw-248/DMWAG/fw_admin.htm#CACIHFJF" target="_blank">Study File Watcher</a>
+                                    <!-- /ko -->
+                                    <!-- /ko -->
+                                </h4>
+                                <hr>
+                                <p data-bind="html: description">(Administrator) Specify the file system location where the system will watch for data files
+                                    to load into DMW for the study.</p>
+                            </div>
+                        </component-procedure-card>
+
+                        <component-procedure-card class="card-container" params="data: $data">
+                            <div class="card">
+                                <h4>
+                                    <!-- ko foreach: titles -->
+                                    <!-- ko if: $data.url === undefined -->
+                                    <span data-bind="text: name">Create the</span>
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                    <!-- /ko -->
+
+                                    <!-- ko if: $data.url === undefined -->
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                    <a data-bind="attr:{
+             href: url,
+             target: '_blank'
+         },
+         text: name" href="https://docs.oracle.com/health-sciences/dmw-248/DMWSC/sc_basics.htm#CBHBAHDC" target="_blank">study</a>
+                                    <!-- /ko -->
+                                    <!-- /ko -->
+                                </h4>
+                                <hr>
+                                <p data-bind="html: description">(Study Builder) Specify a name and other attributes. Apply a study template (optional) to
+                                    reuse clinical data models, transformations, and validation checks. You can delete any
+                                    you don't need.</p>
+                            </div>
+                        </component-procedure-card>
+
+                        <component-procedure-card class="card-container" params="data: $data">
+                            <div class="card">
+                                <h4>
+                                    <!-- ko foreach: titles -->
+                                    <!-- ko if: $data.url === undefined -->
+                                    <span data-bind="text: name">Create or reuse clinical data models for</span>
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                    <!-- /ko -->
+
+                                    <!-- ko if: $data.url === undefined -->
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                    <a data-bind="attr:{
+             href: url,
+             target: '_blank'
+         },
+         text: name" href="https://docs.oracle.com/health-sciences/dmw-248/DMWUG/transform.htm#DMWUG246" target="_blank">labs</a>
+                                    <!-- /ko -->
+                                    <!-- /ko -->
+                                </h4>
+                                <hr>
+                                <p data-bind="html: description">(Study Builder) Create a set of tables to contain data from each lab to be used in the study.
+                                </p>
+                            </div>
+                        </component-procedure-card>
+
+                        <component-procedure-card class="card-container" params="data: $data">
+                            <div class="card">
+                                <h4>
+                                    <!-- ko foreach: titles -->
+                                    <!-- ko if: $data.url === undefined -->
+                                    <span data-bind="text: name">Create or reuse target clinical data models for</span>
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                    <!-- /ko -->
+
+                                    <!-- ko if: $data.url === undefined -->
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                    <a data-bind="attr:{
+             href: url,
+             target: '_blank'
+         },
+         text: name" href="https://docs.oracle.com/health-sciences/dmw-248/DMWSC/datamodel.htm#BABIDIHD" target="_blank">transformed data</a>
+                                    <!-- /ko -->
+                                    <!-- /ko -->
+                                </h4>
+                                <hr>
+                                <p data-bind="html: description">(Study Builder) Add sets of tables to contain data formatted for review and analysis.</p>
+                            </div>
+                        </component-procedure-card>
+
+                        <component-procedure-card class="card-container" params="data: $data">
+                            <div class="card">
+                                <h4>
+                                    <!-- ko foreach: titles -->
+                                    <!-- ko if: $data.url === undefined -->
+                                    <span data-bind="text: name">Create or reuse</span>
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                    <!-- /ko -->
+
+                                    <!-- ko if: $data.url === undefined -->
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                    <a data-bind="attr:{
+             href: url,
+             target: '_blank'
+         },
+         text: name" href="https://docs.oracle.com/health-sciences/dmw-248/DMWSC/validation.htm#CHDHHJAF" target="_blank">validation checks</a>
+                                    <!-- /ko -->
+                                    <!-- /ko -->
+                                </h4>
+                                <hr>
+                                <p data-bind="html: description">(Study Builder) Create or copy complex edit checks on lab and clinical data.</p>
+                            </div>
+                        </component-procedure-card>
+
+                        <component-procedure-card class="card-container" params="data: $data">
+                            <div class="card">
+                                <h4>
+                                    <!-- ko foreach: titles -->
+                                    <!-- ko if: $data.url === undefined -->
+                                    <span data-bind="text: name">Create public</span>
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                    <!-- /ko -->
+
+                                    <!-- ko if: $data.url === undefined -->
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                    <a data-bind="attr:{
+             href: url,
+             target: '_blank'
+         },
+         text: name" href="https://docs.oracle.com/health-sciences/dmw-248/DMWSC/dmw_programs.htm#A3691205" target="_blank">custom listings</a>
+                                    <!-- /ko -->
+                                    <!-- /ko -->
+                                </h4>
+                                <hr>
+                                <p data-bind="html: description">(Study Builder) Custom listings make data review easier by limiting the columns and data
+                                    displayed.
+                                </p>
+                            </div>
+                        </component-procedure-card>
+
+                        <component-procedure-card class="card-container" params="data: $data">
+                            <div class="card">
+                                <h4>
+                                    <!-- ko foreach: titles -->
+                                    <!-- ko if: $data.url === undefined -->
+                                    <span data-bind="text: name">Create public</span>
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                    <!-- /ko -->
+
+                                    <!-- ko if: $data.url === undefined -->
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                    <a data-bind="attr:{
+             href: url,
+             target: '_blank'
+         },
+         text: name" href="https://docs.oracle.com/health-sciences/dmw-248/DMWSC/dmw_programs.htm#A1012444" target="_blank">filters</a>
+                                    <!-- /ko -->
+                                    <!-- /ko -->
+                                </h4>
+                                <hr>
+                                <p data-bind="html: description">(Study Builder) Create complex filter groups for data reviewers to use and modify.</p>
+                            </div>
+                        </component-procedure-card>
+                        <!-- /ko -->
+                    </div>
+                </div>
+                <!-- /ko -->
+            </div>
+        </div>
+
+        <div class="header phase-header phase-header-1" data-bind="css: `phase-header-${$parents[1].phaseHeaders.phaseId()}`">
+            <h2 data-bind="text: $parents[1].phaseHeaders.title">Let's build a study: Tasks you do sequentially</h2>
+            <p data-bind="text: $parents[1].phaseHeaders.secondTitle">Here&rsquo;s what you must do first in Central Designer,  then InForm, then DMW.</p>
+        </div>
+        <div class="page-container studyCreate">
+            <div class="page-header">
+                <h3>
+                <!-- <a href="https://www.w3schools.com" style="pointer: cursor;">This is a false link.</a> --></h3>
+</div>
+            <div class="sections-container">
+
+                <!-- ko foreach: sections -->
+                <div class="section-container" style="">
+                    <div class="section-header-container">
+                        <div class="section-header-text">
+                            <h4 data-bind="text: title">Central Designer</h4>
+                            <!-- ]                            <a data-bind="
+                     attr:{
+                     href: url,
+                     target: '_blank'
+                     }" href="http://www.oracle.com" target="_blank">
+                                <button>Best Practice</button>
+                            </a> -->
+                        </div>
+                        <div class="border-icon-container">
+                            <div class="border-icon">
+                                <svg viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+                                    <g id="Step" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <path d="M16,8 C16,12.4182741 12.4182741,16 8,16 C3.58172594,16 0,12.4182741 0,8 C0,3.58172594 3.58172594,0 8,0 C12.4182741,0 16,3.58172594 16,8 Z" fill="#8FD1C2" fill-rule="nonzero"></path>
+                                        <path d="M8.30564661,4.77880746 L8.29594597,4.78828136 C7.91393306,5.16136513 7.90669456,5.77349193 8.27977833,6.15550484 C8.28518304,6.1610389 8.29065396,6.16650789 8.29618992,6.17191064 C8.58594194,6.45469046 8.87569395,6.73747027 9.16544597,7.02025008 L3.97967701,7.01799255 C3.43909802,7.01775722 3.00068139,7.4557923 3.00044606,7.99637129 C3.000446,7.99651333 3.00044597,7.99665536 3.00044597,7.9967974 L3.00044597,7.9967974 C3.00044597,8.53768076 3.4387937,8.97621936 3.97967701,8.97645483 L9.16544597,8.97871236 L8.29550695,9.82771835 C7.91329271,10.2007355 7.905837,10.8129715 8.27885415,11.1951857 C8.28431744,11.2007837 8.28984845,11.2063152 8.29544597,11.211779 L8.30565103,11.2217403 C8.69424226,11.6010478 9.3145249,11.6009201 9.70295983,11.2214524 L13.000446,8.00009118 L9.70314467,4.77891051 C9.31463621,4.39937105 8.69421104,4.3993253 8.30564661,4.77880746 Z"
+                                            id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-cards-container">
+                        <!-- ko foreach: cards -->
+                        <component-procedure-card class="card-container" params="data: $data">
+                            <div class="card">
+                                <h4>
+                                    <!-- ko foreach: titles -->
+                                    <!-- ko if: $data.url === undefined --><!-- /ko --><!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                    <!-- /ko -->
+                                    <!-- /ko -->
+                                Finalize your study design</h4>
+                                <hr>
+                              <p data-bind="html: description">(Various users) To finalize your study and make it ready for deployment to InForm, create the remaining objects that you need for your study, including but not limited to:</p>
+                              <ul>
+                                <li><a data-bind="attr:{
+             href: url,
+             target: '_blank'
+         },
+         text: name" href="https://docs.oracle.com/health-sciences/central-designer-62/user-guide-form-designers/216683.htm" target="_blank">Visits</a></li>
+                                <li><a data-bind="attr:{
+             href: url,
+             target: '_blank'
+         },
+         text: name" href="https://docs.oracle.com/health-sciences/central-designer-62/user-guide-form-designers/215926.htm" target="_blank">Forms</a> and <a data-bind="attr:{
+             href: url,
+             target: '_blank'
+         },
+         text: name" href="https://docs.oracle.com/health-sciences/central-designer-62/user-guide-form-designers/218181.htm" target="_blank">sections</a></li>
+                                <li><a data-bind="attr:{
+             href: url,
+             target: '_blank'
+         },
+         text: name" href="https://docs.oracle.com/health-sciences/central-designer-62/user-guide-form-designers/218180.htm" target="_blank">Items</a></li>
+                                <li><a data-bind="attr:{
+             href: url,
+             target: '_blank'
+         },
+         text: name" href="https://docs.oracle.com/health-sciences/central-designer-62/user-guide/220060.htm" target="_blank">Rules</a></li>
+                                <li><a data-bind="attr:{
+             href: url,
+             target: '_blank'
+         },
+         text: name" href="https://docs.oracle.com/health-sciences/central-designer-62/user-guide/219537.htm" target="_blank">Data mappings</a></li>
+                                <li>The
+                                  <!-- /ko -->
+                                  <!-- ko if: $data.url !== undefined -->
+                                  <!-- /ko -->
+                                  <!-- ko if: $data.url === undefined -->
+                                  <!-- /ko -->
+                                  <!-- ko if: $data.url !== undefined -->
+                                  <a data-bind="attr:{
+             href: url,
+             target: '_blank'
+         },
+         text: name" href="https://docs.oracle.com/health-sciences/central-designer-62/user-guide-form-designers/217646.htm" target="_blank">study workflow</a></li>
+                                </ul>
+                            </div>
+                            <div class="card">
+                              <h4>
+                                <!-- ko foreach: titles -->
+                                <!-- ko if: $data.url === undefined -->
+                                <!-- /ko -->
+                                <!-- /ko -->
+                                <!-- ko if: $data.url !== undefined -->
+                                <!-- /ko -->
+                                <!-- /ko -->
+                                <a data-bind="attr:{
+             href: url,
+             target: '_blank'
+         },
+         text: name" href="https://docs.oracle.com/health-sciences/central-designer-62/user-guide/219336.htm"
+                                        target="_blank">Validate</a>
+                                <!-- /ko -->
+                                <!-- ko if: $data.url === undefined -->
+                                your study
+                                <!-- /ko -->
+                                <!-- ko if: $data.url !== undefined -->
+                                <!-- /ko -->
+                                <!-- /ko -->
+                              </h4>
+                              <hr>
+                              <p data-bind="html: description">(Study Validator) Make sure that your study is well-formed before you send it to InForm.</p>
+                            </div>
+                            <div class="card">
+                              <h4>
+                                <!-- ko foreach: titles -->
+                                <!-- ko if: $data.url === undefined -->
+                                <!-- /ko -->
+                                <!-- /ko -->
+                                <!-- ko if: $data.url !== undefined -->
+                                <!-- /ko -->
+                                <!-- /ko -->
+                                <a data-bind="attr:{
+             href: url,
+             target: '_blank'
+         },
+         text: name" href="https://docs.oracle.com/health-sciences/central-designer-62/user-guide/219321.htm"
+                                        target="_blank">Deploy</a>
+                                <!-- /ko -->
+                                <!-- ko if: $data.url === undefined -->
+                                your study
+                                <!-- /ko -->
+                                <!-- ko if: $data.url !== undefined -->
+                                <!-- /ko -->
+                                <!-- /ko -->
+                              </h4>
+                              <hr>
+                              <p data-bind="html: description">(Deployment User) Move the study from the design environment (Central Designer) to the production environment (InForm).</p>
+                            </div>
+                        </component-procedure-card>
+
+                        <component-procedure-card class="card-container" params="data: $data"></component-procedure-card>
+                        <!-- /ko -->
+                    </div>
+                </div>
+
+                <div class="section-container" style="">
+                    <div class="section-header-container">
+                        <div class="section-header-text">
+                            <h4 data-bind="text: title">InForm</h4>
+                            <!-- ]                            <a data-bind="
+                     attr:{
+                     href: url,
+                     target: '_blank'
+                     }" href="http://www.oracle.com" target="_blank">
+                                <button>Best Practice</button>
+                            </a> -->
+                        </div>
+                        <div class="border-icon-container">
+                            <div class="border-icon">
+                                <svg viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <path d="M16,8 C16,12.4182741 12.4182741,16 8,16 C3.58172594,16 0,12.4182741 0,8 C0,3.58172594 3.58172594,0 8,0 C12.4182741,0 16,3.58172594 16,8 Z" fill="#8FD1C2" fill-rule="nonzero"></path>
+                                        <path d="M8.30564661,4.77880746 L8.29594597,4.78828136 C7.91393306,5.16136513 7.90669456,5.77349193 8.27977833,6.15550484 C8.28518304,6.1610389 8.29065396,6.16650789 8.29618992,6.17191064 C8.58594194,6.45469046 8.87569395,6.73747027 9.16544597,7.02025008 L3.97967701,7.01799255 C3.43909802,7.01775722 3.00068139,7.4557923 3.00044606,7.99637129 C3.000446,7.99651333 3.00044597,7.99665536 3.00044597,7.9967974 L3.00044597,7.9967974 C3.00044597,8.53768076 3.4387937,8.97621936 3.97967701,8.97645483 L9.16544597,8.97871236 L8.29550695,9.82771835 C7.91329271,10.2007355 7.905837,10.8129715 8.27885415,11.1951857 C8.28431744,11.2007837 8.28984845,11.2063152 8.29544597,11.211779 L8.30565103,11.2217403 C8.69424226,11.6010478 9.3145249,11.6009201 9.70295983,11.2214524 L13.000446,8.00009118 L9.70314467,4.77891051 C9.31463621,4.39937105 8.69421104,4.3993253 8.30564661,4.77880746 Z" fill="#FFFFFF" fill-rule="nonzero"></path>
+                                    </g>
+                                </svg>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="section-cards-container">
+                        <!-- ko foreach: cards -->
+                        <!-- /ko -->
+                        <div class="card">
+                          <h4>
+                            <!-- ko foreach: titles -->
+                            <!-- ko if: $data.url === undefined -->
+                            Collect
+                            <!-- /ko -->
+                            <!-- ko if: $data.url !== undefined -->
+                            <!-- /ko -->
+                            <!-- ko if: $data.url === undefined -->
+                            <!-- /ko -->
+                            <!-- ko if: $data.url !== undefined -->
+                          <a data-bind="attr:{
+             href: url,
+             target: '_blank'
+         },
+         text: name" href="https://docs.oracle.com/health-sciences/inform-62/site-users/207085.htm" target="_blank">data</a></h4>
+                          <hr>
+                          <p data-bind="html: description">(Site User) Collect subject data on forms.</p>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="section-container" style="">
+                    <div class="section-header-container">
+                        <div class="section-header-text">
+                            <h4 data-bind="text: title">DMW</h4>
+                            <!-- <a data-bind="
+                     attr:{
+                     href: url,
+                     target: '_blank'
+                     }" href="http://www.oracle.com" target="_blank">
+                                <button>Best Practice</button>
+                            </a> -->
+                        </div>
+                        <div class="border-icon-container">
+                            <div class="border-icon">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-cards-container">
+                        <!-- ko foreach: cards -->
+                        <component-procedure-card class="card-container" params="data: $data">
+                            <div class="card">
+                                <h4>
+                                    <!-- ko foreach: titles -->
+                                    <!-- ko if: $data.url === undefined -->
+                                    <span data-bind="text: name">Define remote</span>
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                    <!-- /ko -->
+
+                                    <!-- ko if: $data.url === undefined -->
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                    <a data-bind="attr:{
+             href: url,
+             target: '_blank'
+         },
+         text: name" href="https://docs.oracle.com/health-sciences/dmw-248/DMWAG/fw_admin.htm#CDCDBDDE" target="_blank">locations</a>
+                                    <!-- /ko -->
+                                    <!-- /ko -->
+                                </h4>
+                                <hr>
+                                <p data-bind="html: description">(Administrator) Define remote locations  for the Dev, UAT, and Production
+                                    InForm environments.</p>
+                            </div>
+                            <div class="card">
+                                <h4>
+                                    <!-- ko foreach: titles -->
+                                    <!-- ko if: $data.url === undefined -->
+                                    <span data-bind="text: name">Define web service</span>
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                    <!-- /ko -->
+
+                                    <!-- ko if: $data.url === undefined -->
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                    <a data-bind="attr:{
+             href: url,
+             target: '_blank'
+         },
+         text: name" href="https://docs.oracle.com/health-sciences/dmw-248/DMWAG/x_stdy.htm#CDCECICE" target="_blank">locations</a>
+                                    <!-- /ko -->
+                                    <!-- /ko -->
+                                </h4>
+                                <hr>
+                                <p data-bind="html: description">(Administrator) Define  web service locations for the Dev, UAT, and Production
+                                    InForm environments.</p>
+                            </div>
+                        </component-procedure-card>
+
+                        <component-procedure-card class="card-container" params="data: $data">
+                            <div class="card">
+                                <h4>
+                                    <!-- ko foreach: titles -->
+                                    <!-- ko if: $data.url === undefined -->
+                                    <span data-bind="text: name">Create an </span>
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                    <!-- /ko -->
+
+                                    <!-- ko if: $data.url === undefined -->
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                    <a data-bind="attr:{
+             href: url,
+             target: '_blank'
+         },
+         text: name" href="https://docs.oracle.com/health-sciences/dmw-248/DMWSC/datamodel.htm#BABCCGFG" target="_blank">InForm clinical data model</a>
+                                    <!-- /ko -->
+                                    <!-- /ko -->
+                                </h4>
+                                <hr>
+                                <p data-bind="html: description">(Study Builder) Set up the InForm connections and import metadata from InForm.</p>
+                            </div>
+                        </component-procedure-card>
+
+                        <component-procedure-card class="card-container" params="data: $data">
+                            <div class="card">
+                                <h4>
+                                    <!-- ko foreach: titles -->
+                                    <!-- ko if: $data.url === undefined -->
+                                    <span data-bind="text: name">Load data from</span>
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                    <!-- /ko -->
+
+                                    <!-- ko if: $data.url === undefined -->
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                    <a data-bind="attr:{
+             href: url,
+             target: '_blank'
+         },
+         text: name" href="https://docs.oracle.com/health-sciences/dmw-248/DMWSC/datamodel.htm#BABJJADJ" target="_blank">InForm</a>
+                                    <!-- /ko -->
+                                    <!-- /ko -->
+                                </h4>
+                                <hr>
+                                <p data-bind="html: description">(Study Builder) Load data from the InForm Development database. Load data from the UAT and
+                                    Prod database when ready.</p>
+                            </div>
+                        </component-procedure-card>
+                        <!-- /ko -->
+                    </div>
+                </div>
+                <!-- /ko -->
+            </div>
+        </div>
+        <div class="header phase-header phase-header-2" data-bind="css: `phase-header-${$parents[1].phaseHeaders.phaseId()}`">
+            <h2 data-bind="text: $parents[1].phaseHeaders.title">Let's update a study</h2>
+            <p data-bind="text: $parents[1].phaseHeaders.secondTitle">Here&rsquo;s what you must do first Central Designer, then InForm, then DMW in order to update your study due to a change like a protocol edit.</p>
+        </div>
+        <div class="page-container studyCreate">
+            <div class="page-header">
+                <h3>
+                <!-- <a href="https://www.w3schools.com" style="pointer: cursor;">This is a false link.</a> --></h3>
+</div>
+            <div class="sections-container">
+
+                <!-- ko foreach: sections -->
+                <div class="section-container" style="">
+                    <div class="section-header-container">
+                        <div class="section-header-text">
+                            <h4 data-bind="text: title">Central Designer</h4>
+                            <!-- ]                            <a data-bind="
+                     attr:{
+                     href: url,
+                     target: '_blank'
+                     }" href="http://www.oracle.com" target="_blank">
+                                <button>Best Practice</button>
+                            </a> -->
+                        </div>
+                        <div class="border-icon-container">
+                            <div class="border-icon">
+                                <svg viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <path d="M16,8 C16,12.4182741 12.4182741,16 8,16 C3.58172594,16 0,12.4182741 0,8 C0,3.58172594 3.58172594,0 8,0 C12.4182741,0 16,3.58172594 16,8 Z" fill="#8FD1C2" fill-rule="nonzero"></path>
+                                        <path d="M8.30564661,4.77880746 L8.29594597,4.78828136 C7.91393306,5.16136513 7.90669456,5.77349193 8.27977833,6.15550484 C8.28518304,6.1610389 8.29065396,6.16650789 8.29618992,6.17191064 C8.58594194,6.45469046 8.87569395,6.73747027 9.16544597,7.02025008 L3.97967701,7.01799255 C3.43909802,7.01775722 3.00068139,7.4557923 3.00044606,7.99637129 C3.000446,7.99651333 3.00044597,7.99665536 3.00044597,7.9967974 L3.00044597,7.9967974 C3.00044597,8.53768076 3.4387937,8.97621936 3.97967701,8.97645483 L9.16544597,8.97871236 L8.29550695,9.82771835 C7.91329271,10.2007355 7.905837,10.8129715 8.27885415,11.1951857 C8.28431744,11.2007837 8.28984845,11.2063152 8.29544597,11.211779 L8.30565103,11.2217403 C8.69424226,11.6010478 9.3145249,11.6009201 9.70295983,11.2214524 L13.000446,8.00009118 L9.70314467,4.77891051 C9.31463621,4.39937105 8.69421104,4.3993253 8.30564661,4.77880746 Z" fill="#FFFFFF" fill-rule="nonzero"></path>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-cards-container">
+                        <!-- ko foreach: cards -->
+                        <component-procedure-card class="card-container" params="data: $data">
+                            <div class="card">
+                                <h4>
+                                    <!-- ko foreach: titles -->
+                                   Determine whether the required changes can be deployed as an  
+                                   <!-- /ko -->
+                                   <!-- ko if: $data.url !== undefined -->
+                                   <!-- /ko -->
+                                   <!-- ko if: $data.url === undefined -->
+                                   <!-- /ko -->
+                                   <!-- ko if: $data.url !== undefined -->
+                                   <a data-bind="attr:{
+             href: url,
+             target: '_blank'
+         },
+         text: name" href="https://docs.oracle.com/health-sciences/central-designer-62/user-guide-form-designers/220604.htm" target="_blank">in-place revision</a></h4>
+                                <hr>
+                              <p data-bind="html: description">(Study Designer) Certain changes to studies that have been deployed to a LIVE InForm instance are allowed to be made as in-place revisions, while others cause validation errors or warnings.</p>
+                            </div>
+                            <div class="card">
+                                <h4>
+                                    <!-- ko foreach: titles -->
+                                   Update your study<a data-bind="attr:{
+             href: url,
+             target: '_blank'
+         },
+         text: name" href="https://docs.oracle.com/health-sciences/central-designer-62/design-guide/213398.htm" target="_blank"></a></h4>
+                                <hr>
+                            <p data-bind="html: description">(Study Designer) Update your study objects and <a data-bind="attr:{
+             href: url,
+             target: '_blank'
+         },
+         text: name" href="https://docs.oracle.com/health-sciences/central-designer-62/user-guide-form-designers/219505.htm" target="_blank">make a study version change</a>, or <a data-bind="attr:{
+             href: url,
+             target: '_blank'
+         },
+         text: name" href="https://docs.oracle.com/health-sciences/central-designer-62/user-guide-form-designers/185412.htm" target="_blank">mark the changes as in-place revisions</a>, if required.</p>
+                            </div>
+                          <div class="card">
+                                <h4>
+                                    <!-- ko foreach: titles --><a data-bind="attr:{
+             href: url,
+             target: '_blank'
+         },
+         text: name" href="https://docs.oracle.com/health-sciences/central-designer-62/user-guide/219321.htm"
+                                        target="_blank">Deploy</a>
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url === undefined -->
+your study
+<!-- /ko -->
+<!-- ko if: $data.url !== undefined -->
+<!-- /ko -->
+<!-- /ko -->
+                                </h4>
+                                <hr>
+                                <p data-bind="html: description">(Deployment User) Move the study from the design environment (Central Designer) to the production environment (InForm).</p>
+                            </div>
+                        </component-procedure-card>
+
+                        <component-procedure-card class="card-container" params="data: $data"></component-procedure-card>
+                        <!-- /ko -->
+                    </div>
+                </div>
+
+                <div class="section-container" style="">
+                    <div class="section-header-container">
+                        <div class="section-header-text">
+                            <h4 data-bind="text: title">InForm</h4>
+                            <!-- ko if: url -->
+                            <!-- /ko -->
+                        </div>
+                        <div class="border-icon-container">
+                            <div class="border-icon">
+                                <svg viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <path d="M16,8 C16,12.4182741 12.4182741,16 8,16 C3.58172594,16 0,12.4182741 0,8 C0,3.58172594 3.58172594,0 8,0 C12.4182741,0 16,3.58172594 16,8 Z" fill="#8FD1C2" fill-rule="nonzero"></path>
+                                        <path d="M8.30564661,4.77880746 L8.29594597,4.78828136 C7.91393306,5.16136513 7.90669456,5.77349193 8.27977833,6.15550484 C8.28518304,6.1610389 8.29065396,6.16650789 8.29618992,6.17191064 C8.58594194,6.45469046 8.87569395,6.73747027 9.16544597,7.02025008 L3.97967701,7.01799255 C3.43909802,7.01775722 3.00068139,7.4557923 3.00044606,7.99637129 C3.000446,7.99651333 3.00044597,7.99665536 3.00044597,7.9967974 L3.00044597,7.9967974 C3.00044597,8.53768076 3.4387937,8.97621936 3.97967701,8.97645483 L9.16544597,8.97871236 L8.29550695,9.82771835 C7.91329271,10.2007355 7.905837,10.8129715 8.27885415,11.1951857 C8.28431744,11.2007837 8.28984845,11.2063152 8.29544597,11.211779 L8.30565103,11.2217403 C8.69424226,11.6010478 9.3145249,11.6009201 9.70295983,11.2214524 L13.000446,8.00009118 L9.70314467,4.77891051 C9.31463621,4.39937105 8.69421104,4.3993253 8.30564661,4.77880746 Z" fill="#FFFFFF" fill-rule="nonzero"></path>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-cards-container">
+                        <!-- ko foreach: cards -->
+                        <!-- /ko -->
+                        <div class="card">
+                                <h4>
+                                    <!-- ko foreach: titles -->
+                                    <!-- ko if: $data.url === undefined -->
+                                    <span data-bind="text: name">Collect  
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url === undefined -->
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                <a data-bind="attr:{
+             href: url,
+             target: '_blank'
+         },
+         text: name" href="https://docs.oracle.com/health-sciences/inform-62/site-users/207085.htm" target="_blank">data</a></span></h4>
+                                <hr>
+                                <p data-bind="html: description">(Site User) Collect subject data on forms.</p>
+                      </div>
+                          </div>
+                </div>
+
+                <div class="section-container" style="">
+                    <div class="section-header-container">
+                        <div class="section-header-text">
+                            <h4 data-bind="text: title">DMW</h4>
+                            <!-- <a data-bind="
+                     attr:{
+                     href: url,
+                     target: '_blank'
+                     }" href="http://www.oracle.com" target="_blank">
+                                <button>Best Practice</button>
+                            </a> -->
+                        </div>
+                        <div class="border-icon-container">
+                            <div class="border-icon">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-cards-container">
+                        <!-- ko foreach: cards -->
+                        <component-procedure-card class="card-container" params="data: $data">
+                            <div class="card">
+                                <h4>
+                                    <!-- ko foreach: titles -->
+                                    <!-- ko if: $data.url === undefined -->
+                                    <span data-bind="text: name">Run the  
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url === undefined -->
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                <a data-bind="attr:{
+             href: url,
+             target: '_blank'
+         },
+         text: name" href="https://docs.oracle.com/health-sciences/dmw-248/DMWSC/datamodel.htm#DMWSC153" target="_blank">DMW metadata comparison report</a></span></h4>
+                                <hr>
+                                <p data-bind="html: description">(Study Builder) You can compare the metadata&mdash;table and column structure&mdash;in  DMW and InForm for the same study. You can compare any lifecycle stage in DMW to any lifecycle stage in InForm.</p>
+                          </div>
+                        </component-procedure-card>
+
+                        <component-procedure-card class="card-container" params="data: $data">
+                            <div class="card">
+                                <h4>
+                                    <!-- ko foreach: titles -->
+                                    <!-- ko if: $data.url === undefined -->
+                                    <span data-bind="text: name">Load </span>
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                    <!-- /ko -->
+
+                                    <!-- ko if: $data.url === undefined -->
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                  <a data-bind="attr:{
+             href: url,
+             target: '_blank'
+         },
+         text: name" href="https://docs.oracle.com/health-sciences/dmw-248/DMWSC/datamodel.htm#DMWSC137" target="_blank">InForm metadata</a>
+                                    <!-- /ko -->
+                                    <!-- /ko -->
+                                </h4>
+                                <hr>
+                              <p data-bind="html: description">(Study Builder) Load the table and column structure of the InForm database for the study.</p>
+                        </div>
+                        </component-procedure-card>
+
+                        <component-procedure-card class="card-container" params="data: $data"></component-procedure-card>
+                        <!-- /ko -->
+                    </div>
+                </div>
+                <!-- /ko -->
+            </div>
+        </div>
+    <!-- /ko -->
+        <!-- /ko -->
+        <!-- ko if: $index() === 1 -->
+        <!-- /ko -->
+        <!-- /ko -->
+
+
+    <noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+
+</html><footer>
+</footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+<script>$(document).foundation();</script>
+</body>
+</html>

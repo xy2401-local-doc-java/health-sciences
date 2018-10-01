@@ -1,0 +1,97 @@
+&#xfeff;<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="EN" xmlns="http://www.w3.org/1999/xhtml" xml:lang="EN">
+<head>
+<title> Lots and expiry described </title>
+<meta name="Generator" content="Author-it" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="Keywords" content=""/>
+<script language="javascript" type="text/javascript" charset="UTF-8" src="dhtml_toc.js"></script>
+<script language="javascript" type="text/javascript" charset="UTF-8" src="open_parent.js"></script>
+<script language="javascript" type="text/javascript" charset="UTF-8" src="dhtml_load.js"></script>
+<script language="javascript" type="text/javascript" charset="UTF-8" src="dhtml_search.js"></script>
+<link rel="stylesheet" type="text/css" href="newwave.css"/>
+<link rel="stylesheet" type="text/css" href="index_stylesheet.css"/>
+<base target="CONTENT"/>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body onload="loadParent();;bodyLoad();;;if (isTOCLoaded()) {expand('171590');expand('165446');expand('165624');highlight('173707')}" text="#000000" link="#0000A0" alink="#008000" vlink="#FF0000">
+	<div id="searchResultsNone"></div>
+	<div id="content" style="padding-bottom: 50px;">
+		<table summary="" class="relatedtopics aboveheading" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td width= "18">
+<p class="bodytext"><a href="171590.htm" target="_self"><img width="34" height="34" src="125.gif" alt="Previous Topic" vspace="0" hspace="0" align="bottom" border="0" /></a></p></td>
+<td width= "18">
+<p class="bodytext"><a href="173708.htm" target="_self"><img width="33" height="34" src="124.gif" alt="Next Topic" vspace="0" hspace="0" align="bottom" border="0" /></a></p></td>
+<td width= "48">
+<p class="bodytext"><a href="javascript:expand('171590');expand('165446');expand('165624');highlight('173707')" onclick="loadTOC()" target="_self"><img width="165" height="27" src="122.gif" alt="Book Contents" vspace="0" hspace="0" align="bottom" border="0" /></a></p></td>
+</tr>
+</table>
+<h4 class="heading4">Lots and expiry described</h4>
+<p class="bodytext">A lot is a batch of drug units. Drug units are packaged in lots by the manufacturer.</p>
+<p class="bodytext">With lots and expiry (expiration), you control the creation and management of the lots that are set up in IRT. You set the expiration date for drug units by using key properties such as Do Not Ship (DNS) and Do Not Count (DNC) dates. The expiration is applied to all units in the lot, but the sponsor can modify these dates as needed in case of re-labeling.</p>
+<p class="bodytext">The expiration date is based on GMT time in IRT, and drug units expire after 23:59 of the expiration date.</p>
+<p class="bodytext">This table defines key dates in the lots and expiry process.</p>
+<p class="tablespacerwide"></p>
+<table summary="" class="tableintopic" width="624" cellpadding="2" cellspacing="0" border="0" style="border-collapse:collapse">
+<tr align="left" valign="top">
+<th style="border-bottom:1px solid #010101;" width="150"><p class="tableheadingskipnumbering">Time frame</p>
+</th>
+<th style="border-bottom:1px solid #010101;" width="474"><p class="tableheadingskipnumbering">Definition</p>
+</th>
+</tr>
+<tr align="left" valign="top">
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="150"><p class="tablebodytextskipnumbering">Do Not Ship (DNS)</p>
+</td>
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="474"><p class="tablebodytextskipnumbering">The minimum number of days before the expiration date from which a supply order can be requested from a depot.</p>
+<p class="tablebodytextskipnumbering">Calculation: Current Date &lt; Lot Expiration Date &ndash; DNS days</p>
+<p class="tablebodytextskipnumbering">Example: If the lot expires on July 12, and the DNS value is 10 days, the last possible ship date is July 2.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="150"><p class="tablebodytextskipnumbering">Do Not Count (DNC)</p>
+</td>
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="474"><p class="tablebodytextskipnumbering">The minimum number of days before the expiration date from which drug units can be counted as available by the system at a site. This is the date the lot is replaced with new drug units.</p>
+<p class="tablebodytextskipnumbering">Calculation: Current Date &lt; Lot Expiration Date &ndash; DNC days</p>
+<p class="tablebodytextskipnumbering">Example: For supplies that expire on July 12 with a DNC value of 8 days, supplies are not counted in the site inventory resupply calculation after July 3.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="150"><p class="tablebodytextskipnumbering">Do Not Dispense (DND) </p>
+</td>
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="474"><p class="tablebodytextskipnumbering">The number of days before the expiration date from which drug units can be dispensed to a subject. These numbers are specific to each study's visit schedule and are available in the study documentation.</p>
+<p class="tablebodytextskipnumbering">Calculation: Current Date &lt; Lot Expiration Date &ndash; Days from Expiry (DND)</p>
+<p class="tablebodytextskipnumbering">Example: For supplies that expire on July 12 with a DND value of 5 days, drug units are not dispensed to subjects after July 6.</p>
+<p class="tablebodytextskipnumbering"><strong class="specialbold">Notes:</strong></p>
+<ul class="tablelistbullet"><li class="tablelistbullet">The DND date is study-specific, not lot specific. However, you need to know this date to calculate other key dates.</li><li class="tablelistbullet">The DND date is defined during study design. To change this date after the study is live, contact your Oracle representative.<p class="tablespacer"></p>
+</li></ul></td>
+</tr>
+
+</table>
+
+		
+	</div>
+	<div id="feedback"><a href="mailto:inform_doc_feedback_grp@oracle.com?Subject=Comments about the IRT 5.6 User Guide - Lots and expiry described" target="_top"><img width="24" height="108" src="feedback.gif" alt="Send Feedback"></a>
+	</div>
+	
+	<div id="foot">		
+			<ul style="padding: 0;">
+				<li class="footer" style="padding: 0 7px 0 0;"><a href="217485.htm">Access to Oracle Support</a></li>
+				<li class="footer"><a href="http://www.oracle.com/pls/topic/lookup?ctx=acc&id=docacc" target="_blank">Accessibility</a></li>
+				<li class="footer" style="border-right-style: none;"><a href="217488.htm">Legal Notices</a></li>
+			</ul>
+			<p style="font-size:12px;">Copyright &copy; 2015, 2018 Oracle and/or its affiliates. All rights reserved.</p>
+	</div>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>
+<footer>
+</footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+<script>$(document).foundation();</script>
+</body>
+</html>

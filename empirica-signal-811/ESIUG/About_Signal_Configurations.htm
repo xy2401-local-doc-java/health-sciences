@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-US" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>About signal configurations</title>
+<link rel="StyleSheet" href="Empirica.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+
+                    <script>var w=window;if(w.performance||w.mozPerformance||w.msPerformance||w.webkitPerformance){var d=document;AKSB=w.AKSB||{},AKSB.q=AKSB.q||[],AKSB.mark=AKSB.mark||function(e,_){AKSB.q.push(["mark",e,_||(new Date).getTime()])},AKSB.measure=AKSB.measure||function(e,_,t){AKSB.q.push(["measure",e,_,t||(new Date).getTime()])},AKSB.done=AKSB.done||function(e){AKSB.q.push(["done",e])},AKSB.mark("firstbyte",(new Date).getTime()),AKSB.prof={custid:"322179",ustr:"",originlat:"0",clientrtt:"1",ghostip:"23.212.3.15",ipv6:false,pct:"10",clientip:"45.78.37.67",requestid:"227f3aa",region:"32996",protocol:"",blver:14,akM:"dsca",akN:"ae",akTT:"O",akTX:"1",akTI:"227f3aa",ai:"206465",ra:"false",pmgn:"",pmgi:"",pmp:"",qc:""},function(e){var _=d.createElement("script");_.async="async",_.src=e;var t=d.getElementsByTagName("script"),t=t[t.length-1];t.parentNode.insertBefore(_,t)}(("https:"===d.location.protocol?"https:":"http:")+"//ds-aksb-a.akamaihd.net/aksb.min.js")}</script>
+                    <script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Empirica Signal administration\nManaging signal configurations\nAbout signal configurations");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("About_WebVDME.htm", "", "&gt;", "Overview", "About_WebVDME_1.htm");
+document.write("<a href=\"Users_page.htm\">Empirica Signal administration<\/a> &gt; <a href=\"About_Signal_Configurations.htm\">Managing signal configurations<\/a> &gt; About signal configurations<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('About_WebVDME.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>About signal configurations</h1>
+<p>To view the <a href="About_Signal_Management.htm">Signals tab</a>, users 
+ must have a signal configuration assigned to their <a href="admLoginGroupDefaults.htm">login 
+ group</a>. The signal configuration defines the behavior and content of 
+ the Signals tab. For example, the signal configuration determines the 
+ tooltips that appear in the Drug Overviews page.</p>
+<p>There are two types of signal configurations: interactive and scripted.</p>
+<p>Interactive signal configurations are available for proprietary data 
+ maintained in the Oracle Argus Mart application. Other data sources require 
+ scripted signal configurations.</p>
+<h2>Interactive signal configurations</h2>
+<p>For interactive signal configurations, you can customize the signal 
+ configuration in the Empirica Signal application.</p>
+<p>For example, you can:</p>
+<ul style="list-style: disc;">
+	<li><p>Select the data configurations used for reports and data mining 
+	 runs.</p></li>
+	<li><p>Select drug and event variables used in data mining runs as 
+	 well as stratification and subset variables.</p></li>
+	<li><p>Validate and publish the signal configuration.</p></li>
+	<li><p style="font-size: 10.0pt;">Add and edit signal comment types.</p></li>
+	<li><p style="font-size: 10.0pt;">Enable or disable review periods.</p></li>
+	<li><p style="font-size: 10.0pt;">Edit the column headers and column 
+	 descriptions on the Drug-Event Combinations and Drug Overviews pages.</p></li>
+	<li><p><span style="font-size: 10.0pt;">Manually refresh the signal 
+	 management data.</span></p></li>
+</ul>
+<h2>Scripted signal configurations</h2>
+<p>For scripted signal configurations, Oracle defines and modifies most 
+ aspects of the signal configuration outside of the Empirica Signal application 
+ based on your organization's requirements. You can customize some aspects 
+ of the signal configuration.</p>
+<p>For example, you can:</p>
+<ul style="list-style: disc;">
+	<li><p style="font-size: 10.0pt;">Add and edit signal comment types.</p></li>
+	<li><p style="font-size: 10.0pt;">Enable or disable review periods.</p></li>
+	<li><p style="font-size: 10.0pt;">Edit the column headers and column 
+	 descriptions on the Drug-Event Combinations and Drug Overviews pages.</p></li>
+</ul>
+<p>
+
+<a href="javascript:void(0);" onclick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) &gt;=2 &amp;&amp; typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'_blank','Manage Signal Configuration page','Manage_Signal_Configuration_page.htm');return false;" title=" Related Topics"><span style="font-family:Verdana;font-size:10pt;font-weight:normal;font-style:normal;text-decoration:none"><nobr>  Related Topics </nobr></span></a>
+
+
+ </p>
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="margin-bottom: 0pt;">Copyright © 2002, 2018, Oracle and/or 
+	 its affiliates. All rights reserved. </p>
+	<p style="text-align: right; margin-top: 0pt; margin-bottom: 0pt;">Help 
+	 Build 8.1.1</p>
+</div>
+<script type="text/javascript" language="JavaScript">//<![CDATA[
+if (parseInt(navigator.appVersion) >= 3 && typeof (WritePopupMenuLayer) == "function")
+  WritePopupMenuLayer();
+//]]></script><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

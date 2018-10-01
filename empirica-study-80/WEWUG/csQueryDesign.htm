@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 2017" />
+<title>Defining a Query</title>
+<link rel="StyleSheet" href="Empirica.css" type="text/css" />
+ <link rel="StyleSheet" href="Empirica.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Subject Lists\nCreating Query-based Subject Lists\nDefining a Query");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\">");
+AddMasterBreadcrumbs("About_WebVDME.htm", "", "&gt;", "Overview", "home.htm");
+document.write("<a href=\"about_subject_lists.htm\">Subject Lists<\/a> &gt; <a href=\"About_Query-based_Subject_Lists.htm\">Creating Query-based Subject Lists<\/a> &gt; Defining a Query<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('About_WebVDME.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Defining a Query</h1>
+<p>When you create or edit a query-based subject list, the Define Query page appears. On the Define Query page, you specify conditions (variables and their values) and link them with operators. This topic describes how to specify conditions. For information on operators, see <a href="csQueryEditLogic.htm">Specifying Query Logic</a>.</p>
+<p class="Subhead">To define a query:</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">1.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>On the <a href="csCaseSeries.htm">Subject Lists page</a>, click <span class="Button">Create using Query Wizard</span>. The <span style="font-weight: bold;">Define Query</span> page appears.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">2.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Click <span class="Button">Select Variables</span>. The Select Variables window appears.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">3.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>For more information on variables, click <span class="Button">Show Variables</span>. The Configuration Variables window appears, showing a description of each variable.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">4.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="Selecting_Entries_from_a_List.htm">Select one or multiple variables</a> on which you will base conditions. A number is assigned automatically to each variable that you select. In the <a href="csQueryEditLogic.htm">query logic</a>, you use that number to refer to the condition that is based on that variable.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">5.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>When you select a variable, a field for that variable appears on the <span style="font-weight: bold;">Define Query</span> page. To specify a condition, you specify values for that variable. The way in which you specify values depends on the type of variable, as follows.</p>
+
+<p class="ListNote1"><span style="font-weight: bold;">Note:</span> You do not need to specify values immediately after adding a variable. For example, you could first select all variables on which you want to base conditions, and then specify their values.</p>
+<p class="ListContinue1" style="font-weight: bold;">Selecting values</p>
+<ul>
+<li class="NumBullet1">If the <span class="Button">Select Available Values</span> link appears for a variable, click the link to <a href="Selecting_Entries_from_a_List.htm">select entries from a list</a> of values. Only exact matches to the selected values, including the case (upper, lower, or mixed), will be found by the query.</li>
+<li class="NumBullet1">If the <span class="Button">Select &lt;hierarchy&gt; Terms</span> link appears for a variable, click the link to select terms from the <a href="hierSelectHier.htm">Hierarchy Browser</a>. (You can set a user preference to enable a hierarchy for use during query creation.) For example, if a variable is associated with a MedDRA version and your <a href="useroptions.htm" id="a1">user preference</a> <span style="font-weight: bold;">Enable adverse event hierarchy browser</span> is set to Yes, you can click <span class="Button">Select MedDRA Terms</span>.&nbsp;Only exact matches will be found.</li>
+</ul>
+<p class="ListNote1"><span style="font-weight: bold;">Note:</span> If the <span class="Button">Select Available Values</span> link or the <span class="Button">Select &lt;hierarchy&gt; Terms</span> link appears, you can also type in values separated by a comma. However, it is preferable to select values from a list. If you type in a value that contains a comma, you must enclose the entire value in double quotation marks (for example, <span style="font-weight: bold;">"Diabetes, Type II"</span>). If you type in a value that includes a backslash or double quotation mark, you must precede the backslash or double quotation mark with a backslash (for example, <span style="font-weight: bold;">Cold\\flu</span>).</p>
+<p class="ListContinue1" style="font-weight: bold;">Specifying ranges</p>
+<p class="ListContinue1">For numeric or date variables, specify a range by entering values in the From and To fields. Values equal to or greater than the From value and equal to or less than the To value will be found.</p>
+<ul>
+<li class="NumBullet1">If you leave the From field empty, there is no lower bound.</li>
+<li class="NumBullet1">If you leave the To field empty, there is no upper bound.</li>
+<li class="NumBullet1">If a date variable is stored as a date field in the source data, you must enter the date in the format MM/DD/YYYY.</li>
+<li class="NumBullet1">If you do not specify a time, the time is considered to be midnight of the specified date.</li>
+</ul>
+<p class="ListNote1"><span style="font-weight: bold;">Note:</span> If a date variable is stored as a text field in the Oracle database, you can search for it as you would search for any text string.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">6.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Optionally select Include Null values to include null (empty) values along with the other values that you specify for a variable. For more information, including how the NOT operator works if you include null values, see <a href="csQueryEditLogic.htm">Specifying Query Logic</a>.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">7.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>To select additional variables, repeat Step 4. Conditions are connected by default operators, which you can modify.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">8.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Each condition that you specify must be referenced by the query logic. Thus, if you are not going to reference a condition, you must remove the condition from the query. To remove a condition, click the delete symbol [X] in the upper right corner of the box containing the variable. (After deleting a condition, you may need to respecify values for variables in the other conditions.)</p>
+
+<p class="ListNote1"><span style="font-weight: bold;">Note:</span> You can include the same variable in the query multiple times. For example, suppose that you want subjects for which age is between 17 and 25 or above 65. You would include the AGE variable and set it to 17-25, include the AGE variable again and set it to above 65, then connect the variables with the OR operator.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">9.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>After adding all variables that you need for specifying conditions, <a href="csQueryEditLogic.htm">specify query logic</a>. If you add or delete another query variable after this step, the query logic will be reset to a default.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">10.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Click <span class="Button">Next</span>. The Preview Query page appears.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">11.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>On the <span style="font-weight: bold;">Preview Query</span> page, view the following information about the query:</p>
+
+<ol>
+<li class="NumBullet1">The data source, which is the name of the configuration on which the query is based</li>
+<li class="NumBullet1">The logic of the query and a description of each condition in the query</li>
+<li class="NumBullet1">The number of subjects to be retrieved by the query (if the <span style="font-weight: bold;">Display Subject Count in Query Preview</span> option was selected on the <a href="csQueryDesign.htm">Define Query</a> page). To preview query results, click <span style="font-weight: bold;">Preview Subjects</span>.</li>
+<li class="NumBullet1">The Oracle SQL constructed from the query and used to retrieve subjects</li>
+</ol>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">12.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Click <span class="Button">Next</span> and then <a href="csQuerySaveAs.htm">save the subject list</a>.</p>
+ <div style="width: 100%; position: relative;" id="footer">
+	<p style="margin-top: 20pt; color: #808080;">Copyright &copy; 2002, 2017, 
+	 Oracle and/or its affiliates. All rights reserved.</p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>
+<footer>
+</footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+
+</body>
+</html>
+<footer>
+</footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+<script>$(document).foundation();</script>
+</body>
+</html>

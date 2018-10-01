@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-US" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>About drug profile configurations</title>
+<link rel="StyleSheet" href="Empirica.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Empirica Signal administration\nManaging drug profile configurations\nAbout drug profile configurations");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("About_WebVDME.htm", "", "&gt;", "Overview", "About_WebVDME_1.htm");
+document.write("<a href=\"Users_page.htm\">Empirica Signal administration<\/a> &gt; <a href=\"About_Drug_Profile_Configurations.htm\">Managing drug profile configurations<\/a> &gt; About drug profile configurations<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('About_WebVDME.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>About drug profile configurations</h1>
+<p>A drug profile configuration is the specification of which data mining runs and which report outputs are the source of charts that users can add to a drug profile layout (on the Drugs tab). To access the Drugs tab, a user must set a drug profile configuration as a <a href="useroptions.htm#Drug_profile_configuration">user preference</a>.</p>
+<p>For example, a drug profile configuration specifies that for generic drugs, the MGPS 2D run is &#160;2007Q4: Generic (S + C). &#160;In a drug profile, users who have that configuration set as a user preference can add charts for a generic drug based on the results of the &#160;2007Q4: Generic (S + C) run.</p>
+<p class="Note"><span class="Button">Note:</span> Drug profile configurations are separate from drug profile layouts. Drug profile layouts, which are saved collections of charts as well as their placement and display options, can be used with various drug profile configurations. For example, if you are using the layout, Generic + trade comparators, and you change your user preference to a different drug profile configuration, the Generic + trade comparators layout is still available.</p>
+<p>Only report outputs from an&#160;<a href="All_Cases_Summary_Reports.htm">all cases summary report</a> &#160;can be used in a drug profile configuration. This is a special type of interactive report that must meet certain criteria.</p>
+<p>In the drug profile configuration, you can specify data mining runs and report outputs for generic names, trade names, and ingredients. To specify a run or report output, you can select either the run name or an <a href="About_Aliases.htm">alias</a> that has been set up for the run or report output.</p>
+<p>You might want to create multiple drug profile configurations for different purposes. For example, you can set up one drug profile configuration for AERS data and another drug profile configuration for proprietary data. For information on setting up the drug profiles feature, see <a href="Setting_Up_Drug_Profiles.htm">Setting up drug profiles</a>.</p>
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="margin-bottom: 0pt;">Copyright © 2002, 2018, Oracle and/or 
+	 its affiliates. All rights reserved. </p>
+	<p style="text-align: right; margin-top: 0pt; margin-bottom: 0pt;">Help 
+	 Build 8.1.1</p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

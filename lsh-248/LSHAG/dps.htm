@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Setting Up Services</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2018-05-25T8:2:33Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Life Sciences Data Hub System Administrator's Guide" />
+<meta name="dcterms.identifier" content="E95829-01" />
+<meta name="dcterms.isVersionOf" content="LSHAG" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2006, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="pref.htm" title="Previous" type="text/html" />
+<link rel="Next" href="adapter.htm" title="Next" type="text/html" />
+<link rel="alternate" href="LSHAG.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="LSHAG.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="LSHAG.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">4/24</span> <!-- End Header -->
+<div id="LSHAG117" class="chapter"><a id="CIHIIGFD"></a>
+<h1 class="chapter"><span class="secnum">1</span> Setting Up Services</h1>
+<p>This section includes the following topics:</p>
+<ul>
+<li>
+<p><a href="#CIHDCFIF">About Services</a></p>
+</li>
+<li>
+<p><a href="#CIHEIGHF">About the Distributed Processing Server</a></p>
+</li>
+<li>
+<p><a href="#CIHFBIGH">Setting Up the Distributed Processing Server</a></p>
+</li>
+<li>
+<p><a href="#CIHIDDGG">Defining Service Locations</a></p>
+</li>
+<li>
+<p><a href="#CIHEDBEG">Defining Services</a></p>
+</li>
+<li>
+<p><a href="#CIHFBIGH">Setting Up the Distributed Processing Server</a></p>
+</li>
+</ul>
+<p>The LSH System Admin role is required to define services and service locations.</p>
+<a id="CIHDCFIF"></a>
+<div id="LSHAG118" class="sect1">
+<h2 class="sect1">About Services</h2>
+<p>Oracle Life Sciences Data Hub (Oracle LSH) includes adapters that allow users to define and run objects in external systems for manipulating and reporting Oracle LSH data.</p>
+<p>In order to integrate Oracle LSH with these external systems in your company, you must define a <span class="italic">service location</span> for each computer where an external system you are using is installed. Within the service location definition you must define a <span class="italic">service</span> for each service type required by each external system installed there.</p>
+<p>Some external systems have more than one predefined service type; for example, one service type to integrate the system for use as an integrated development environment (IDE) and another service type to integrate the external system for use as a processing engine. See <a href="#CIHDJFGI">"Service Types"</a> for further information.</p>
+<p>For each service, you must define one or more <span class="italic">service instances</span>. The number of service instances required, and their exact function, depends on the external technology and the service type; see <a href="#BABFBDFD">"Service Instances"</a> for further information.</p>
+</div>
+<!-- class="sect1" -->
+<a id="CIHEIGHF"></a>
+<div id="LSHAG120" class="sect1">
+<h2 class="sect1">About the Distributed Processing Server</h2>
+<p>Oracle LSH uses its Distributed Processing Server (DP Server) to pass jobs to processing engines of different technologies to execute user-defined Programs, Load Sets, and Data Marts. The DP Server also passes jobs to XML Publisher to produce predefined reports and to handle Report Set post-processing.</p>
+<p>The DP Server is designed to make Oracle LSH's execution platform engine scalable. You can install one or more instances of the DP Server on one or more computers. A single DP Server instance can handle jobs for one or more processing engines. You can install the DP Server on the same computer as the Oracle LSH database or application server or on another network node.</p>
+<p>The DP Server requires access to XML Publisher for the purpose of producing coversheets for outputs and for merging outputs into single- or multi-volume PDF report sets. The DP Server also requires access to each processing engine that you install to use with Oracle LSH.</p>
+<p>Conversely, each processing engine you install for use with Oracle LSH requires access to its DP Server instance.</p>
+<p>You must also define one <span class="bold">service location</span> in the Oracle LSH user interface for each instance of the DP Server (usually one instance per computer) and define one or more <span class="bold">services</span> for each processing engine on that computer. For each service, you specify the number of <span class="bold">service instances</span> that can run simultaneously. A service instance handles one job at a time.</p>
+<p>Oracle LSH tracks the availability of each service on each location and assigns new jobs according to their priority and the availability of appropriate service instances in different locations; see <a href="#CIHGIGIE">"Job Allocation Algorithm"</a>.</p>
+<p>The DP Server runs as a standalone Java program. It includes two dedicated threads:</p>
+<ul>
+<li>
+<p><span class="bold">Listener</span>. At each location, the listener listens on a predefined Advanced Queue message queue called the DP Server job queue for jobs that have been assigned to local services. When the listener detects an XML job message request for a local service on the job queue, it dequeues the message. The message contains all the necessary details of one or more jobs.</p>
+</li>
+<li>
+<p><span class="bold">Job Processor</span>. The job processor thread uses the information in the XML message to connect back to the Oracle LSH database. Once connected, it downloads all the necessary data, including the executable program script, into a target directory identified in the XML message. The job processor then executes the job-specific script by spawning a new O/S-level process. This spawned process runs the processing engine, which in turn carries out the actual job execution using the downloaded job input data. After the spawned external process completes, the job processor connects back to Oracle LSH and uploads any output results into Oracle LSH.</p>
+</li>
+</ul>
+<p><a id="LSHAG121"></a><span class="subhead3">Log Files&nbsp;</span>The log directory in your DP Server Home directory holds DP Server log files. Each time you start the DP Server it creates one log file. The DP Server adds log information to that log file each time it runs a job.</p>
+<p><a id="CIHGIGIE"></a><a id="LSHAG122"></a><span class="subhead3">Job Allocation Algorithm&nbsp;</span>If more than one service of the same technology type and priority exists, including in different locations, Oracle LSH allocates each job using the following algorithm:</p>
+<ul>
+<li>
+<p>Oracle LSH allocates the job to the service of the correct type and priority that has been least recently used, if the least-recently-used location has an available service instance.</p>
+</li>
+<li>
+<p>If there are no available service instances, Oracle LSH checks jobs currently using the appropriate service instances on the least-recently-used service and determines whether the jobs are active. If a job is not active, Oracle LSH sets its status to Failed and allocates the new job to the service instance. If all the jobs are active, Oracle LSH checks the next-least-recently-used service, and so on until all services of the correct technology type and priority have been checked. If all services are unavailable, Oracle LSH waits for a configurable interval (see <a href="#CIHCFJCH">"Reuse Wait Time"</a>) and then checks job activity again.</p>
+</li>
+</ul>
+<p>Oracle LSH uses the following algorithm to determine which available service instance to use if a service instance of the priority requested for a particular job is not available:</p>
+<ul>
+<li>
+<p><span class="bold">If a high-priority service is requested</span> but not available, run a normal-priority service; if a normal-priority service is not available, run a low-priority service.</p>
+</li>
+<li>
+<p><span class="bold">If a normal-priority service is requested</span> but not available, run a low-priority service; if a low-priority service is not available, run a high-priority service.</p>
+</li>
+<li>
+<p><span class="bold">If a low-priority service is requested</span> but not available, run a normal-priority service; if a normal-priority service is not available, run a high-priority service.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect1" -->
+<a id="CIHFBIGH"></a>
+<div id="LSHAG123" class="sect1">
+<h2 class="sect1">Setting Up the Distributed Processing Server</h2>
+<p>You must install the Oracle LSH Distributed Processing (DP) Server on each computer where you have installed an external processing engine and also on the computer where you have installed XML Publisher. The following steps are required:</p>
+<ol>
+<li>
+<p>Installing the Distributed Processing Server. See "Install the Distributed Processing Server" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Installation Guide</span></span>.</p>
+</li>
+<li>
+<p>Copying files. See "Copy and Edit Files" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Installation Guide</span></span>.</p>
+</li>
+<li>
+<p>Defining Service Locations and Services; see <a href="#CIHIDDGG">"Defining Service Locations"</a> and <a href="#CIHEDBEG">"Defining Services"</a></p>
+</li>
+<li>
+<p>Editing the files. See "Copy and Edit Files" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Installation Guide</span></span>.</p>
+</li>
+<li>
+<p>Starting the DP Server; see <a href="svcs.htm#CJAGFEJC">"Starting the Distributed Processing Server Service"</a>.</p>
+</li>
+</ol>
+<p>When you start the DP Server code you must specify a location for DP server log files. You may need to read and analyze these log files if problems occur with jobs run on external servers. Instructions for creating appropriate directories for this purpose are included in the "Install the Distributed Processing Server" section of the installing Oracle LSH chapter of <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Installation Guide</span></span>.</p>
+</div>
+<!-- class="sect1" -->
+<a id="CIHIDDGG"></a>
+<div id="LSHAG125" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Defining Service Locations</h2>
+<p>A service location is a computer where one or more external processing engines or IDEs used by Oracle LSH are installed. You must register each service location by defining it.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Before defining a service location or services for use with Oracle Business Intelligence visualizations, read <a href="obiee_services_setup.htm#BCGFJFHG">Chapter 11, "Setting Up Oracle Business Intelligence Visualizations"</a>.</div>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The Oracle LSH installation process automatically creates one service location with one normal-priority PL/SQL service with three instances allowed, for internal use. This enables batch processing and many functions in Oracle LSH Definition.</div>
+<p>To define a Service Location:</p>
+<ol>
+<li>
+<p>In the Administration tab, click the <span class="bold">Service Locations</span> subtab.</p>
+</li>
+<li>
+<p>Click <span class="bold">Create Service Location</span>. The Service Location screen opens.</p>
+</li>
+<li>
+<p>Enter values in the following fields:</p>
+<ul>
+<li>
+<p><span class="bold">Location Name</span>. Enter a name for your service location.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+For processing engine services including XML Publisher and SAS, this name must match (including case-sensitivity) the service location name defined in the DP Server Start script that you run on the computer that corresponds to this defined service location; see <a href="svcs.htm#CJAGFEJC">"Starting the Distributed Processing Server Service"</a>. When you run the script, you pass the actual values required to identify the physical location.</div>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+For OBIEE Service Locations where the BI Server is not installed, the name is very important. See <a href="obiee_services_setup.htm#BCGFJFHG">Chapter 11, "Setting Up Oracle Business Intelligence Visualizations"</a> for details on OBIEE services.</div>
+</li>
+<li>
+<p><span class="bold">Description</span>. Enter additional information about the service location.</p>
+</li>
+<li>
+<p><span class="bold">Machine</span>. Enter the name of the computer that contains the location. This is for your own records; it has no effect.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Apply</span>. The system creates the Service Location definition and returns you to the View Service Locations screen.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+In Oracle LSH Release 2.4.8 the <span class="bold">DP Server Status</span> field always displays the status "Running."</div>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="CIHEDBEG"></a>
+<div id="LSHAG127" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Defining Services</h2>
+<p>This section includes the following topics:</p>
+<ul>
+<li>
+<p><a href="#CIHDJFGI">Service Types</a></p>
+</li>
+<li>
+<p><a href="#CHDJHBED">Service Prioritization</a></p>
+</li>
+<li>
+<p><a href="#BABFBDFD">Service Instances</a></p>
+</li>
+</ul>
+<p>For each service location, define services as follows:</p>
+<ul>
+<li>
+<p>One or more services for each XML Publisher, SAS, Informatica, Oracle Reports, Oracle Business Intelligence Presentation Services instance, and Oracle Business Intelligence Publisher (BIP) engine installed on that computer</p>
+</li>
+<li>
+<p>One and only one service for PL/SQL as a processing engine</p>
+</li>
+<li>
+<p>One and only one service for each IDE service type</p>
+</li>
+</ul>
+<p>For non-PL/SQL processing engine service types, you may want to define more than one service in order to allow jobs with different priorities to run on the same computer. For example, if you have both SAS and Oracle Reports installed on the same computer, you might define the following services for that service location:</p>
+<ul>
+<li>
+<p>One high-priority SAS service with 2 instances allowed</p>
+</li>
+<li>
+<p>One normal-priority SAS service with 7 instances allowed</p>
+</li>
+<li>
+<p>One normal-priority Oracle Reports service with 5 instances allowed</p>
+</li>
+</ul>
+<p>To define a Service on a Service Location:</p>
+<ol>
+<li>
+<p>In the Administration tab, click the <span class="bold">Service Locations</span> subtab. The Service Locations screen opens.</p>
+</li>
+<li>
+<p>Click <span class="bold">Service Location</span>. The Service Location screen opens.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Location Name</span> of the Service Location where you want to create a Service. The Maintain Service Locations screen opens.</p>
+</li>
+<li>
+<p>Click <span class="bold">Create Service</span>. The Services screen opens.</p>
+</li>
+<li>
+<p>Enter values in the following fields:</p>
+<ul>
+<li>
+<p><span class="bold">Service Type</span>. Select a value from the drop-down list. For a description of each type, see <a href="#CIHDJFGI">"Service Types"</a>.</p>
+</li>
+<li>
+<p><span class="bold">Description</span>. Enter a description of the service.</p>
+</li>
+<li>
+<p><span class="bold">Service Priority</span>. Select a value from the drop-down list. You must define each service as <span class="bold">High</span>, <span class="bold">Normal</span>, or <span class="bold">Low</span> priority. See <a href="#CHDJHBED">"Service Prioritization"</a> for further information. IDE service types do not use this attribute.</p>
+</li>
+<li>
+<p><span class="bold">Number of Instances</span>. Enter the number of jobs you want to allow to use this service at the same time. See <a href="#BABFBDFD">"Service Instances"</a> for further information.</p>
+</li>
+<li>
+<p><span class="bold">Launch Wait Time</span>. Enter the length of time (in seconds) for the program to start executing after the message to start the program is sent to the DP Server Listener. Set to a value long enough that even a busy service will have time to receive and process the message &mdash;but not too long or error recovery is adversely affected. 30 - 120 seconds is recommended.</p>
+</li>
+<li>
+<p><a id="CIHCFJCH"></a><span class="bold">Reuse Wait Time</span>. Enter the length of time (in minutes) that you want the system to wait after the start of a program's execution until it starts checking whether a program is still executing when the system is looking for available service instances. Set to an interval large enough to allow most programs of the service's technology type to complete.</p>
+</li>
+<li>
+<p><span class="bold">Default Resource Group</span>. Enter the name of an Oracle database resource group to set the Oracle database priority for jobs using this service. For more information, see the <span class="italic">Oracle&reg; Database Administrator's Guide</span> at <code dir="ltr"><a href="http://download.oracle.com/docs/cd/E11882_01/server.112/e17120.pdf">http://download.oracle.com/docs/cd/E11882_01/server.112/e17120.pdf</a><a href=""></a></code>.</p>
+</li>
+<li>
+<p><span class="bold">Execution Command</span>. Enter one of the following:</p>
+<ul>
+<li>
+<p>For services used to launch an IDE, enter the URL of the development or visualization environment.</p>
+</li>
+<li>
+<p>For services used to execute a job, enter the complete directory path and filename for the UNIX or Windows execution command script required for the service type. The service instance launches this script in order to run a job. The script must be located in the DP Server Home directory or a subdirectory of it. Instructions for copying and editing the sample execution command scripts, which are located in <code dir="ltr">$CDR_TOP/admin/template</code>, are included in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Installation Guide</span></span>'s "Install the Distributed Processing Server" section.</p>
+</li>
+</ul>
+<p>You can, if you want to, customize the script to change the OS execution priority of the program to correspond to the service's priority; see <a href="#CHDJHBED">"Service Prioritization"</a>.</p>
+<p>The sample scripts include:</p>
+<ul>
+<li>
+<p><span class="bold">cdrzip-1.sh</span> for Text Data Marts</p>
+</li>
+<li>
+<p><span class="bold">sasNormal.sh</span> for SAS Programs</p>
+</li>
+<li>
+<p><span class="bold">oraexp.sh</span> for Oracle Export Data Marts</p>
+</li>
+<li>
+<p><span class="bold">orareprunner.sh</span> for Oracle Reports Programs</p>
+</li>
+<li>
+<p><span class="bold">sqlplus</span> for PL/SQL Programs</p>
+</li>
+<li>
+<p><span class="bold">txtNormal</span> for Text Load Sets</p>
+</li>
+<li>
+<p><span class="bold">xmlprunner.sh</span> for post-processing Report Sets</p>
+</li>
+<li>
+<p><span class="bold">xmlpreprunner.sh</span> for the Oracle LSH system reports and for coversheets for outputs</p>
+</li>
+<li>
+<p><span class="bold">obieeinstall.cmd</span> for Oracle Business Intelligence Business Areas based on OBIEE 11g, or <span class="bold">obieeinstall10g.cmd</span> for Oracle Business Intelligence Business Areas based on OBIEE 10g; see <a href="obiee_services_setup.htm#BCGFJFHG">Chapter 11, "Setting Up Oracle Business Intelligence Visualizations"</a>.</p>
+</li>
+<li>
+<p><span class="bold">obieedeploy.cmd</span> for Oracle Business Intelligence Business Areas based on OBIEE 11g, or <span class="bold">obieedeployl0g.cmd</span> for Oracle Business Intelligence Business Areas based on OBIEE 10g; see <a href="obiee_services_setup.htm#BCGFJFHG">Chapter 11, "Setting Up Oracle Business Intelligence Visualizations"</a>.</p>
+</li>
+<li>
+<p><span class="bold">obieepsrestart10g.cmd</span> or <span class="bold">obieepsrestart10g.sh</span> for Oracle Business Intelligence Business Areas based on OBIEE 10g that are using a multiple-computer configuration; see <a href="obiee_services_setup.htm#BCGFJFHG">Chapter 11, "Setting Up Oracle Business Intelligence Visualizations"</a>.</p>
+</li>
+<li>
+<p><span class="bold">infarunner.sh</span> for Informatica Programs</p>
+</li>
+<li>
+<p><span class="bold">cdrunzip.sh</span> for creating Tables from a zipped file and Text Load sets</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="bold">Root Directory</span>. Enter the directory to be used as the ROOT of the directory structure where jobs will execute. The DP Server creates a subdirectory in the root directory for each job, named with the job ID; for example:</p>
+<p><code dir="ltr"><span class="codeinlineitalic">root dir</span></code><code dir="ltr">/3233210001</code></p>
+<p>where the job ID is 3233210001. This directory will hold all the files and/or additional directories needed for the job to run.</p>
+</li>
+<li>
+<p><span class="bold">Enabled</span>. If set to <span class="bold">Yes</span>, this service is available for use.</p>
+</li>
+<li>
+<p><span class="bold">Grant Connect</span>. If set to <span class="bold">Yes</span>, the service can connect to the database to retrieve and manipulate data. If the service does not need to connect to the database, set to No.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Set Grant Connect to <span class="bold">No</span> for the Workflow service.</div>
+</li>
+<li>
+<p><span class="bold">Grant Resource</span>. If set to <span class="bold">Yes</span>, the execution accounts can create tables in the Service Instance account.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Set Grant Resource to <span class="bold">No</span> for the Workflow service and to <span class="bold">Yes</span> for the Oracle Export service.</div>
+</li>
+<li>
+<p><span class="bold">Set Synonym</span>. If set to <span class="bold">Yes</span>, synonyms are created when the user connects to the database to run the job or the development environment.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Set the value of Set Synonym to <span class="bold">No</span> for the Workflow and Oracle Export services.</div>
+</li>
+<li>
+<p><span class="bold">Details</span>. This field takes different values for different adapters. Not all adapters use this field but it is mandatory for the adapters that do. The following adapters use it as follows:</p>
+<ul>
+<li>
+<p><span class="bold">Informatica</span>. Enter the Informatica domain name, repository name, and integration service name, separated by a vertical bar; for example: <code dir="ltr">Domain_infa444dom|PowerCenter_abcd|PowerCenter_abcd_Integration_Service</code>.</p>
+</li>
+<li>
+<p><span class="bold">OBIEE Business Area Install Service</span>. If the service location is a UNIX computer, enter: <code dir="ltr">os=unix</code></p>
+<p>See <a href="obiee_services_setup.htm#BCGFJFHG">Chapter 11, "Setting Up Oracle Business Intelligence Visualizations"</a> for more information.</p>
+</li>
+<li>
+<p><span class="bold">OBIEE Business Area Deploy Service</span>. Enter the values described below, delimited by commas:</p>
+<p><span class="bold">DSN</span>. Enter the DSN name if you are using an ODBC system DSN, or enter the TNS name of the source Oracle LSH database server name if you are using OCI10g.</p>
+<p><span class="bold">Call Interface</span>. Enter ODBC if you are using an ODBC system DSN, or OCI10g if you are using OCI10g.</p>
+<p><span class="bold">RPD</span>. Enter the name of the OBI repository file you defined for this computer in the NQSConfig.ini file on the BI Server. The name must be an exact match of the value there, except the value here should not include the .rpd extension. Oracle recommends using the computer name to help ensure consistency.</p>
+<p><span class="bold">Version</span>. If you are using OBIEE 11g, add the string <code dir="ltr">ver=11g</code> at the end.</p>
+<p><span class="bold">Examples</span></p>
+<p>If you are using an ODBC DSN with OBIEE 11g:</p>
+<p><code dir="ltr">dsn=</code><code dir="ltr"><span class="codeinlineitalic">name_of_DSN</span></code><code dir="ltr">,callinterface=</code><code dir="ltr">ODBC</code><code dir="ltr">,rpd=</code><code dir="ltr"><span class="codeinlineitalic">name_of_the_OBI_Repository_file_to_be_deployed_on_this_Oracle_BI_Presentation_Server</span></code><code dir="ltr">,ver=11g</code></p>
+<p>If you are using OCI10g and OBIEE 10g:</p>
+<p><code dir="ltr">dsn=</code><code dir="ltr"><span class="codeinlineitalic">tns_name_of_source_LSH_database_server</span></code> <code dir="ltr">,callinterface=</code><code dir="ltr"><span class="codeinlineitalic">OCI10G</span></code><code dir="ltr">,rpd=</code><code dir="ltr"><span class="codeinlineitalic">name_of_the_OBI_Repository_file_to_be_deployed_on_this_Oracle_BI_Presentation_Server</span></code></p>
+</li>
+<li>
+<p><span class="bold">SAS with SQL*Loader</span>. If you are running the SAS and the SQL*Loader services on the same DP server computer for the purpose of bulk loading SAS data sets, enter the absolute path of the SQL*Loader executable in this field for the SAS service.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<a id="CIHDJFGI"></a>
+<div id="LSHAG129" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Service Types</h3>
+<p>Some service types use the DP Server and others do not. Their definition requirements are different:</p>
+<ul>
+<li>
+<p><a href="#CIHFGJJH">Service Types that Do Not Use the DP Server</a></p>
+</li>
+<li>
+<p><a href="#CIHIEEJC">Service Types that Use the DP Server</a></p>
+</li>
+</ul>
+<a id="CIHFGJJH"></a>
+<div id="LSHAG130" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Service Types that Do Not Use the DP Server</h4>
+<p>Development (IDE) service types do not use the DP Server. The PL/SQL processing engine also does not use the DP Server. For each of the technologies you plan to use, you must define a single service of the corresponding service type. You cannot control where these services are used. The system does not use the service location you define to determine where to run them. However, you must define them within a service location. You can define them on the service location where they are actually installed, or you may want to define a service location specifically for the purpose of defining these services, which include:</p>
+<ul>
+<li>
+<p><span class="bold">Oracle Reports for Development</span>. Oracle LSH uses these services to support the Oracle Reports integrated development environment (IDE).</p>
+</li>
+<li>
+<p><span class="bold">PLSQL for Development</span>. Oracle LSH uses this service to support the SQL*Plus integrated development environment (IDE) for PL/SQL Programs.</p>
+</li>
+<li>
+<p><span class="bold">SAS for Development</span>. Oracle LSH uses this service to support the SAS integrated development environment (IDE).</p>
+</li>
+<li>
+<p><span class="bold">PLSQL</span>. Oracle LSH uses PLSQL services to run internal jobs and user-defined PL/SQL Programs and Text Data Marts.</p>
+</li>
+<li>
+<p><span class="bold">OBIEE Business Area IDE Service</span>. This is the service that takes the OBIEE Presentation Server's URL as input for the Execution Command field. Oracle LSH uses additional OBIEE service types to support running visualizations through the OBIEE Presentation Server; see <a href="obiee_services_setup.htm#BCGFJFHG">Chapter 11, "Setting Up Oracle Business Intelligence Visualizations"</a>. The other OBIEE Services are listed under <a href="#CIHIEEJC">"Service Types that Use the DP Server"</a>.</p>
+</li>
+<li>
+<p><span class="bold">BI Publisher Development</span>. Oracle LSH uses this service to support the BI Publisher integrated development environment (IDE).</p>
+</li>
+<li>
+<p><span class="bold">Informatica for Development</span>. Oracle LSH uses this service to support the Informatica integrated development environment (IDE).</p>
+</li>
+<li>
+<p><span class="bold">View for Development</span> Oracle LSH uses this service to support the SQL*Developer integrated development environment (IDE) for View Programs.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<a id="CIHIEEJC"></a>
+<div id="LSHAG131" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Service Types that Use the DP Server</h4>
+<p>Processing engines integrated with Oracle LSH use the DP Server. You can control the number of service locations and services for service types that use the DP Server. Service locations correspond to physical locations, and each one can have any number of services defined. Each service can have any number of service instances defined; see <a href="#BABFBDFD">"Service Instances"</a>.</p>
+<p>For each technology you plan to use, define at least one service of the following service types:</p>
+<ul>
+<li>
+<p><span class="bold">Oracle Export</span>. Oracle LSH uses Oracle Export services for creating Oracle Export-type Data Marts.</p>
+</li>
+<li>
+<p><span class="bold">Oracle Reports</span>. Oracle LSH uses these services to execute Oracle Reports Programs.</p>
+</li>
+<li>
+<p><span class="bold">SAS</span>. Oracle LSH uses SAS services to execute SAS Load Sets, SAS Programs, and SAS Data Marts on a SAS server.</p>
+</li>
+<li>
+<p><span class="bold">Text for SQLLoader</span>. Oracle LSH uses Oracle SQL Loader to execute Text Load Sets.</p>
+</li>
+<li>
+<p><span class="bold">Workflow</span>. Oracle LSH uses Workflow services to execute user-defined and internal Workflows.</p>
+</li>
+<li>
+<p><span class="bold">XML Publisher</span>. Oracle LSH uses XML Publisher services to generate PDF-format Report Sets.</p>
+</li>
+<li>
+<p><span class="bold">XML Reports</span>. Oracle LSH uses these services to produce predefined reports and the coversheets for reports and report sets.</p>
+</li>
+<li>
+<p><span class="bold">Zip Utility</span>. Oracle LSH uses Zip Utility services to produce zipped Text and SAS Data Marts. You can zip the text files if you want to.</p>
+</li>
+<li>
+<p><span class="bold">Unzip Utility</span>. Oracle LSH uses Unzip Utility services to unzip uploaded zip files while creating Tables and Text Load Sets.</p>
+</li>
+<li>
+<p><span class="bold">OBIEE Business Area Install Service</span>. This service is required to support running visualizations through the OBIEE Presentation Server, and using the OBIEE Admin Tool; see <a href="obiee_services_setup.htm#BCGFJFHG">Chapter 11, "Setting Up Oracle Business Intelligence Visualizations"</a></p>
+</li>
+<li>
+<p><span class="bold">OBIEE Business Area Deploy Service</span>. This service is required to support running visualizations through the OBIEE Presentation Server; see <a href="obiee_services_setup.htm#BCGFJFHG">Chapter 11, "Setting Up Oracle Business Intelligence Visualizations"</a>.</p>
+</li>
+<li>
+<p><span class="bold">BI Publisher</span>. Oracle LSH uses this service to execute BI Publisher Programs.</p>
+</li>
+<li>
+<p><span class="bold">Informatica</span>. Oracle LSH uses this service to execute Informatica Programs.</p>
+</li>
+</ul>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The following service types are inactive: Oracle Warehouse Builder and SQL*Plus. Do not define services of these types.</div>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CHDJHBED"></a>
+<div id="LSHAG133" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Service Prioritization</h3>
+<p>You must specify a priority for each service: High, Normal, or Low. However, to ensure that services are actually given the appropriate priority, you should also do the following:</p>
+<ul>
+<li>
+<p>Specify an <span class="bold">Oracle Database Resource Group</span> to set the Oracle database priority for jobs using this service. For more information, see the <span class="italic">Oracle&reg; Database Administrator's Guide</span> at <code dir="ltr"><a href="http://download.oracle.com/docs/cd/E11882_01/server.112/e17120.pdf">http://download.oracle.com/docs/cd/E11882_01/server.112/e17120.pdf</a><a href=""></a></code>.</p>
+</li>
+<li>
+<p>In the <span class="bold">Execution Command</span>, set the operating system priority for jobs using this service.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="BABFBDFD"></a>
+<div id="LSHAG135" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Service Instances</h3>
+<p>When you create a service, you must specify how many instances of the service are allowed to run at the same time. Since each instance can service one job (or Program or Business Area definition) at a time, this effectively defines the number of jobs that can run on a particular service at a particular time.</p>
+<p>For processing engine service types, service instances serve as the interface between the requested job and the Oracle LSH execution system. They track the association of a particular job to a particular service and manage many aspects of the job's execution.</p>
+<p>IDE service instances control the association between the use of a particular IDE for a particular Program or Business Area (which are used for visualizations) and the security and data access needed by the particular IDE. When a user launches an IDE from the Program or Business Area user interface, the system assigns a service instance to the Program or Business Area. After a service instance is allocated, it remains assigned to that Program or Business Area until it is explicitly released by a Checkin or Undo Checkout.</p>
+<p>You can modify the number of service instances for each service .</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+For the OBIEE IDE Service, specify a number of Service Instances equal to the maximum number of users you expect to query the repository at the same time, plus a buffer.
+<p>If you do not create enough service instances, users may lose access to the database in the middle of a task. For example, if you define 10 service instances and 11 people log in to the same OBIEE URL, when the last person logs in, the system looks for a session that has been running longer than the defined Reuse Wait time for the service. If there is such a session, the system recycles it even if the user is active, and the original user loses his or her connection to the database.</p>
+<p>It is better to solve this problem by defining a large number of service instances than a high reuse wait time because the same user cannot open a new session&mdash;for example, if he or she wants to select different launch settings&mdash;until his or her original session reaches the reuse wait time.</p>
+</div>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment1">
+<tr>
+<td class="cellalignment8">
+<table class="cellalignment6">
+<tr>
+<td class="cellalignment5"><a href="pref.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment5"><a href="adapter.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2006, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment10">
+<table class="cellalignment4">
+<tr>
+<td class="cellalignment5"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment5"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment5"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment5"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

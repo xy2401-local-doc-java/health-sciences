@@ -1,0 +1,414 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="MS-HKWD" content="retained properties" />
+<meta name="generator" content="Adobe RoboHelp 2017" />
+<title>Loading and checking studies and study pools for the first time</title>
+<link rel="File-List" href="wizard3_files/filelist.xml" type="" />
+<link rel="Edit-Time-Data" href="wizard3_files/editdata.mso" type="" />
+<link rel="StyleSheet" href="Empirica.css" type="text/css" />
+ <link rel="StyleSheet" href="Empirica.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body lang="EN-US" xml:lang="EN-US" style="tab-interval: .5in;"><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Setting up study data\nLoading and Checking  Data\nLoading and checking studies and study pools for the first time");
+addAvenueInfo("Loading and Checking Data","About_Loading_and_Checking.htm","generalrunoptionsforscreening.htm");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\">");
+AddMasterBreadcrumbs("About_WebVDME.htm", "", "&gt;", "Overview", "home.htm");
+document.write("<a href=\"About_study_data.htm\">Setting up study data<\/a> &gt; <a href=\"About_Loading_and_Checking.htm\">Loading and Checking  Data<\/a> &gt; Loading and checking studies and study pools for the first time<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('About_WebVDME.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Loading and checking studies and study pools for the first time</h1>
+<p>If you have the appropriate <a href="User_Permissions.htm">user permissions</a>, you can load and check studies and study pools that you registered or that were published to your login group.</p>
+<p>When you load and check a study, the following occurs:</p>
+<ul>
+<li class="Bullet1">
+<p>If the <a href="studyEdit.htm">data source type</a> is an Oracle database, study data is extracted from Oracle tables or views, and loaded into the Empirica Study database.</p>
+</li>
+<li class="Bullet1">
+<p>If the data source type is SAS transport files, study data is extracted from the SAS transport files (xpt files) in the study directory, and loaded into the Empirica Study database.</p>
+</li>
+<li class="Bullet1">
+<p>Certain variables from DM are distributed to other subject-oriented domains (AGE, ARM, ARMCD, COUNTRY, ETHNIC, INVID, RACE, SEX, SITEID, STUDYID, SUBJID)</p>
+</li>
+<li class="Bullet1">
+<p>If the load run option to distribute supplemental qualifiers was selected, then variables from SUPPxx are distributed</p>
+</li>
+<li class="Bullet1">
+<p>Certain variables are <a href="Derived_Variables.htm">derived</a> and added to the study data.</p>
+</li>
+<li class="Bullet1">
+<p>A default time frame (<span>Study Reference Period)</span> is created for the study.</p>
+</li>
+<li class="Bullet1">
+<p>The study data and metadata are checked against the define.xml file, Study Data Tabulation Model (SDTM), and <a href="About_Rules_and_Error_Messages.htm">rules</a>.</p>
+</li>
+<li class="Bullet1">
+<p>Automatic screening runs are performed for the -None- time frame, the Study Reference Period time frame, and any other time frames that exist when you load the study.</p>
+</li>
+</ul>
+<p>When you load and check a study pool, the following occurs:</p>
+<ul>
+<li class="Bullet1">
+<p>Metadata and clinical data for each domain is pooled.</p>
+</li>
+</ul>
+<p class="BulletContinue1">All domains in any of the component studies, and all variables in each domain for any of the studies, are included. For information about codelists for study pools, see <a href="codelistTable.htm">Codelists</a>.</p>
+<ul>
+<li class="Bullet1">
+<p>For the AE (Adverse Events) domain, a built-in, Within Domain rule checks whether all values of AEDECOD are found in the <span>Medical Dictionary for Regulatory Activities (</span>MedDRA) version associated with the study pool.</p>
+</li>
+</ul>
+<p class="BulletContinue1">If the component studies use different MedDRA versions, the highest among those versions is used for the study pool. A study associated with a previous version of MedDRA might contain AEDECOD values that do not exist in the more recent version.</p>
+<ul>
+<li class="Bullet1">
+<p>For domains including __TESTCD and __STRESU variables, a built-in, Within Domain rule checks that for each value of _TESTCD that occurs in multiple component studies, the value of __STRESU is the same in the studies.</p>
+</li>
+</ul>
+<p class="BulletContinue1">An analogous rule is applied to the component studies. If the rule produces no errors at the study level, it is applied to the study pool.</p>
+<ul>
+<li class="Bullet1">
+<p>For domains including __TESTCD and __STRESN variables, a built-in, Within Domain rule checks that for each value of __TESTCD that occurs in multiple component studies, the value of __TEST is the same in the studies.</p>
+</li>
+</ul>
+<p class="BulletContinue1">An analogous rule is applied to the component studies. If the rule produces no errors at the study level, it is applied to the study pool.</p>
+<ul>
+<li class="Bullet1">
+<p>The STUDYID_ variable is <a href="Derived_Variables.htm">derived</a> for the component studies.</p>
+</li>
+<li class="Bullet1">
+<p>Data from the component studies is copied to the Oracle account for the study pool.</p>
+</li>
+<li class="Bullet1">
+<p>A default time frame (<span>Study Reference Period</span>) is created for the study pool.</p>
+</li>
+<li class="Bullet1">
+<p>Automatic screening runs occur for the <span>-None-</span> time frame, the Study Reference Period time frame, and other time frames that exist when you load the study pool.</p>
+</li>
+</ul>
+<p class="Note"><span style="font-weight: bold;">Note:</span> If USUBJID values are not unique across the component studies, the load fails and an error message appears in the Run History. This failure does not result from a check of the combination of USUBJID and STUDYID values.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">1.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>If the data source is SAS transport files, place the files into the study directory.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">2.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Click the <span style="font-weight: bold;">Setup</span> tab.</p>
+
+<p class="ListContinue1">The Applications page appears.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">3.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Click <span style="font-weight: bold;">Studies/Pools</span> below the Setup tab.</p>
+
+<p class="ListContinue1">The Studies and Study Pools page appears</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">4.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>To load and check one study or study pool, do the following:</p>
+
+<p class="ListNumber2" style=" margin-left: 60px; text-indent: -30px;">A.<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Locate the study or study pool that you want to load in the table.</p>
+
+<p class="ListNumber2" style=" margin-left: 60px; text-indent: -30px;">B.<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>In the left-most column of the table, click the row-menu icon (<img width="17" height="19" src="hand.jpg" alt="" style="border: none;" border="0" />) for the study or study pool, and then click <span class="Button">Load</span><span class="Button" style="font-weight: normal;">.</span></p>
+
+<p class="ListContinue2"><span class="Button" style="font-weight: normal;">The Select Study/Pool to Load page appears.</span></p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">5.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>To load and check one or more studies or study pools, do the following:</p>
+
+<p class="ListNumber2" style=" margin-left: 60px; text-indent: -30px;">A.<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Click <span style="font-weight: bold;">Load Studies/Pools</span>.</p>
+
+<p class="ListContinue2">The Select Study/Pool to Load page appears. Only studies that have been published to your login group are displayed.</p>
+
+<p class="ListNumber2" style=" margin-left: 60px; text-indent: -30px;">B.<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>In the Include column, select the studies and pools that you want to load.</p>
+
+<p class="ListContinue2">To select or deselect every study and study pool, use the check box in the Include column header. If a check box in the Include column is disabled, you can hover the pointer over the check box for more information.</p>
+<p class="ListNote1"><span style="font-weight: bold;">Note:</span> You can alternatively load multiple studies from the Applications page using the row menu Load option.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">6.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>For studies, optionally select the <span style="font-weight: bold;">Distribute Supplemental Qualifiers</span> check box:</p>
+
+<ul style="list-style: disc;">
+<li>
+<p class="ListContinue1">If you select the check box, Empirica Study uses domain-specific supplemental qualifier datasets if one or more are available in the study directory.</p>
+</li>
+</ul>
+<p class="ListNote2"><span style="font-weight: bold;">Note:</span> The dataset must conform to the file naming conventions in the Study Data Tabulation Model (SDTM) version that the study is associated with.</p>
+<ul style="list-style: disc;">
+<li>
+<p class="ListContinue1">If you deselect the check box, Empirica Study loads supplemental qualifier datasets, but does not distribute their data to the respective parent domain.</p>
+</li>
+</ul>
+<p class="ListContinue2">To select or deselect the check box for every study, use the check box in the Distribute Supplemental Qualifiers column header.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">7.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Click <span class="Button">Next</span>.</p>
+
+<p class="ListContinue1">The Run Options page appears.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">8.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Specify your preferred run options.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">9.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Click <span style="font-weight: bold;">Next</span>.</p>
+
+<p class="ListContinue1">The Confirm Run Parameters page appears.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">10.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Click <span style="font-weight: bold;">Submit</span>.</p>
+
+<p class="ListContinue1">The run is submitted and a confirmation message appears.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">11.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Click <span style="font-weight: bold;">Continue</span> or navigate away from the page.</p>
+
+<p class="ListContinue1">The run is listed in the Run History page.</p>
+<h2>Field Descriptions</h2>
+<table summary="" summary="" class="Empirica" style="margin-left: 48px;" cellspacing="0px" width="96.216%">
+<col style="width: 14.489%;" />
+<col style="width: 85.511%;" />
+<tr class="t1st">
+<td>
+<p class="TableHeader">Column</p>
+</td>
+<td>
+<p class="TableHeader">Description</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody">ID</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Automatically assigned unique identifier of the study or study pool.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Name</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Name of the study or study pool.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Description</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Description of the study or study pool.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Type</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Possible values are:</p>
+<ul>
+<li class="Bullet1">Study</li>
+<li class="Bullet1">Pool</li>
+</ul>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody">State</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Stage of the loading and checking process. Assigned automatically as each stage of the loading and checking process is completed. Possible values are:</p>
+<ul>
+<li class="Bullet1"><span style="font-weight: bold;">Not Loaded</span><span style="font-size: 11.0pt; line-height: 115%; font-family: Calibri, sans-serif; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">&mdash;</span>The study or study pool has been registered but has not been loaded or checked.</li>
+<li class="Bullet1"><span style="font-weight: bold;">Initialized</span><span style="font-size: 11.0pt; line-height: 115%; font-family: Calibri, sans-serif; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">&mdash;</span>The loading process has started.</li>
+<li class="Bullet1"><span style="font-weight: bold;">Study Loaded</span><span style="font-size: 11.0pt; line-height: 115%; font-family: Calibri, sans-serif; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">&mdash;</span>The loading process has completed.</li>
+<li class="Bullet1"><span style="font-weight: bold;">Awaiting Reload</span><span style="font-size: 11.0pt; line-height: 115%; font-family: Calibri, sans-serif; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">&mdash;</span>The loading process has completed, but a reload is required because of subsequent changes to the study or study pool.</li>
+<li class="Bullet1"><span style="font-weight: bold;">Data Structure Checks Run</span><span style="font-size: 11.0pt; line-height: 115%; font-family: Calibri, sans-serif; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">&mdash;</span>Clinical data has been checked against the define.xml and metadata rules.</li>
+<li class="Bullet1"><span style="font-weight: bold;">Within-Domain Checks Run</span><span style="font-size: 11.0pt; line-height: 115%; font-family: Calibri, sans-serif; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">&mdash;</span>Clinical data has been checked against the define.xml and within-domain rules.</li>
+<li class="Bullet1"><span style="font-weight: bold;">Cross-Domain Checks Run</span><span style="font-size: 11.0pt; line-height: 115%; font-family: Calibri, sans-serif; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">&mdash;</span>Clinical data has been checked against the define.xml and cross-domain rules.</li>
+<li class="Bullet1"><span style="font-weight: bold;">Ready to Use</span><span style="font-size: 11.0pt; line-height: 115%; font-family: Calibri, sans-serif; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">&mdash;</span>The study or study pool is ready to use.</li>
+</ul>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Location</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Name of the study directory relative to the application directory.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Standard</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Version of the <span style="mso-bidi-font-weight: normal;">Study Data Tabulation Model</span> (SDTM) associated with the study or study pool. For example, <span style="font-weight: bold;">sdm312</span> indicates Version 3.1.2.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Created</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Date and time at which study or study pool was registered.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Screening Results</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Possible values are:</p>
+<ul>
+<li class="Bullet1"><span style="font-weight: bold;">N/A</span><span style="font-size: 11.0pt; line-height: 115%; font-family: Calibri, sans-serif; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">&mdash;</span>The study or study pool has not been loaded and checked, or the study or pool has been edited since it was last loaded and checked. The study or pool cannot be selected in the Select Study/Pool page.</li>
+<li class="Bullet1"><span style="font-weight: bold;">None</span><span style="font-size: 11.0pt; line-height: 115%; font-family: Calibri, sans-serif; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">&mdash;</span>There are no screening results for any analysis specifications for the study or pool and no saved issue clusters for the study.</li>
+<li class="Bullet1"><span style="font-weight: bold;">Screening results generated</span><span style="font-size: 11.0pt; line-height: 115%; font-family: Calibri, sans-serif; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">&mdash;</span>There are screening results for one or more analysis specifications for the study or pool. There are no saved issue clusters for the study.</li>
+<li class="Bullet1"><span style="font-weight: bold;">Issue clusters generated</span><span style="font-size: 11.0pt; line-height: 115%; font-family: Calibri, sans-serif; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">&mdash;</span>There are one or more saved issue clusters for the study or pool. There are no screening results for the study or pool.</li>
+<li class="Bullet1"><span style="font-weight: bold;">Issue clusters and screening results generated</span><span style="font-size: 11.0pt; line-height: 115%; font-family: Calibri, sans-serif; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">&mdash;</span>There are one or more saved issue clusters and screening results of one or more analysis specifications for the study or pool.</li>
+<li class="Bullet1"><span style="font-weight: bold;">Screening results generated &ndash; review required</span><span style="font-size: 11.0pt; line-height: 115%; font-family: Calibri, sans-serif; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">&mdash;</span>There are screening results for one or more analysis specifications for the study or pool, and at least one result is flagged as needing review (and may or may not have been reviewed). There may be saved issue clusters for the study or pool.</li>
+<li class="Bullet1"><span style="font-weight: bold;">Issue clusters and screening results generated-review required</span><span style="font-size: 11.0pt; line-height: 115%; font-family: Calibri, sans-serif; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">&mdash;</span>There are one or more saved issue clusters for the study or pool. Additionally, there are screening results for one or more analysis specifications for the study or pool, and at least one result is flagged as needing review (and may or may not have been reviewed).</li>
+</ul>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Distribute Supplemental Qualifiers</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Applies to studies, but not to study pools. Do one of the following:</p>
+<ul>
+<li class="Bullet1">Select <span style="font-weight: bold;">Distribute Supplemental Qualifiers</span> in the column heading to distribute supplemental qualifiers for all studies.</li>
+</ul>
+<p class="BulletContinue1">Or</p>
+<ul>
+<li class="Bullet1">Select <span style="font-weight: bold;">Distribute Supplemental Qualifiers</span> for individual studies.</li>
+</ul>
+<p class="TableBody">If you choose to distribute supplemental qualifiers, Empirica Study will use domain-specific supplemental qualifier datasets if it finds at least one of them in the study directory; otherwise, it will use a single dataset of supplemental qualifier data. In order to be recognized by Empirica Study, the datasets must conform to the CDISC SDTM file naming conventions for the SDTM version specified for the study.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Retain Properties</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Applies to studies or study pools that were loaded previously. If metadata has changed since the last load of the study or pool, Oracle recommends that you do not retain properties.</p>
+<ul>
+<li class="Bullet1"><span style="font-weight: bold;">If selected</span><span style="font-size: 11.0pt; line-height: 115%; font-family: Calibri, sans-serif; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">&mdash;</span>You must review and possibly modify the properties for the reloaded study or pool. For more information, see <a href="Editing_Retained_Properties.htm">Editing Retained Properties</a>. The following properties of the study or pool are retained during the load:</li>
+<li class="Bullet2">Category breakdowns</li>
+<li class="Bullet2">Time frames</li>
+<li class="Bullet2">Test identifiers</li>
+<li class="Bullet2">Flag variables</li>
+<li class="Bullet2">Study visit descriptions</li>
+<li class="Bullet2">Event lists</li>
+<li class="Bullet1"><span style="font-weight: bold;">If deselected</span><span style="font-size: 11.0pt; line-height: 115%; font-family: Calibri, sans-serif; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">&mdash;</span>The above properties are deleted and you will need to redefine them after the load.</li>
+</ul>
+<p class="TableBody">If you reload a study or pool with this setting checked, subsequent reloads of the study or pool will have this setting selected by default. If you reload from the Setup tab, you can change that default. However, if you reload from Run History, you cannot change the default.</p>
+</td>
+</tr>
+</table>
+<p class="ListNumber1">&nbsp;</p>
+ <div style="width: 100%; position: relative;" id="footer">
+	<p style="margin-top: 20pt; color: #808080;">Copyright &copy; 2002, 2017, 
+	 Oracle and/or its affiliates. All rights reserved.</p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>
+<footer>
+</footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+
+</body>
+</html>
+<footer>
+</footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+<script>$(document).foundation();</script>
+</body>
+</html>

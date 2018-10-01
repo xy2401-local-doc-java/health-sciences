@@ -1,0 +1,115 @@
+&#xfeff;<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="EN" xmlns="http://www.w3.org/1999/xhtml" xml:lang="EN">
+<head>
+<title> Viewing and changing global synchronization connection settings </title>
+<meta name="Generator" content="Author-it" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="Keywords" content=""/>
+<script language="javascript" type="text/javascript" charset="UTF-8" src="dhtml_toc.js"></script>
+<script language="javascript" type="text/javascript" charset="UTF-8" src="open_parent.js"></script>
+<script language="javascript" type="text/javascript" charset="UTF-8" src="dhtml_load.js"></script>
+<script language="javascript" type="text/javascript" charset="UTF-8" src="dhtml_search.js"></script>
+<link rel="stylesheet" type="text/css" href="newwave.css"/>
+<link rel="stylesheet" type="text/css" href="index_stylesheet.css"/>
+<base target="CONTENT"/>
+<script language="javascript" type="text/javascript" src="dhtml_popup.js"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+
+<body onload="loadParent();;bodyLoad();;;if (isTOCLoaded()) {expand('33877');expand('33520');highlight('121864')}" text="#000000" link="#0000A0" alink="#008000" vlink="#FF0000">
+<div id="searchResultsNone"></div>
+<div id="content">
+    <table summary="" class="relatedtopics aboveheading" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td width= "18">
+<p class="bodytext"><a href="214095.htm" target="_self"><img width="34" height="34" src="125.gif" alt="Previous Topic" vspace="0" hspace="0" align="bottom" border="0" /></a></p></td>
+<td width= "18">
+<p class="bodytext"><a href="119380.htm" target="_self"><img width="33" height="34" src="124.gif" alt="Next Topic" vspace="0" hspace="0" align="bottom" border="0" /></a></p></td>
+<td width= "48">
+<p class="bodytext"><a href="javascript:expand('33877');expand('33520');highlight('121864')" onclick="loadTOC()" target="_self"><img width="55" height="34" src="122.gif" alt="Book Contents" vspace="0" hspace="0" align="bottom" border="0" /></a></p></td>
+</tr>
+</table>
+<h3 class="heading3">Viewing and changing global synchronization connection settings</h3>
+<ol class="listnumber"><li class="listnumber">Select <strong class="buttons"><strong class="buttons">Admin </strong></strong>&gt; <strong class="buttons">CIS Sync</strong>.<p class="listcontinue">If only one adapter is configured and registered in the CIS environment, the CIS Synchronization Adapter page appears with the Sync Connections tab selected.</p>
+<p class="listcontinue">or</p>
+<p class="listcontinue">If multiple adapters are configured and registered in the CIS environment, the Adapter List page appears and displays a list of adapters.</p>
+</li><li class="listnumber">If the <strong class="buttons"><strong class="buttons">Adapter List</strong></strong> page appears, click the row of the CIS synchronization adapter whose synchronization connections you want to view.<p class="listcontinue">The CIS Synchronization Adapter page appears with the Sync Connections tab selected.</p>
+</li><li class="listnumber">Select <strong class="buttons"><strong class="buttons">Settings</strong></strong>.<p class="listcontinue">The Settings tab of the CIS Synchronization Adapter page appears.</p>
+</li><li class="listnumber">Complete the fields on the page, and click <strong class="buttons"><strong class="buttons">Save</strong></strong>.</li></ol><p class="bodytext"><a id="h121865" class="prattblock" title="Settings tab of the CIS Synchronization Adapter page&mdash;Fields" href="javascript:toggleBlock('121865')" target="_self">Settings tab of the CIS Synchronization Adapter page - Fields</a>.</p>
+<div id="d121865" class="expandingblock" style="display:none"><p class="tablespacerwide"></p>
+<table summary="" class="tableintopic" width="545" cellpadding="2" cellspacing="0" border="0" style="border-collapse:collapse">
+<tr align="left" valign="top">
+<th style="border-bottom:1px solid #010101;" width="156"><p class="tableheading">Field</p>
+</th>
+<th style="border-bottom:1px solid #010101;" width="389"><p class="tableheading">Description</p>
+</th>
+</tr>
+<tr align="left" valign="top">
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="156"><p class="tablebodytext">Number of transactions per message</p>
+</td>
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="389"><p class="tablebodytext">Number of transactions in a message.</p>
+<p class="tablebodytext">The number of transactions per message is the number of transactions per operation, including the sending and receiving of transactions between InForm Adapters and Clintrial Adapters. In general, the more transactions per message, the faster the synchronization completes because fewer requests are made to the adapters. However, when typing a value for this option, you should consider that all transactions in each operation are in memory. Therefore, if you have a number of synchronizations running, a high number of transactions per operation could result in a greater demand on memory.</p>
+<p class="tablebodytext">Oracle recommends that you accept the default value of 500 for this option. A lower value might slow down a synchronization. </p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="156"><p class="tablebodytext">Load balancing timeout (seconds)</p>
+</td>
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="389"><p class="tablebodytext">Number of seconds for CIS to wait before setting a load-balancing machine on which synchronization has stopped to offline.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="156"><p class="tablebodytext">Email server</p>
+</td>
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="389"><p class="tablebodytext">Fully-qualified domain name of the email server being used to send notifications, for example, smtp.company.com.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="156"><p class="tablebodytext">From email</p>
+</td>
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="389"><p class="tablebodytext">Email address that will be used as the <strong class="specialbold"><strong class="specialbold">From</strong></strong> address in email notifications.</p>
+<p class="tablebodytext"><strong class="specialbold"><strong class="specialbold">Note:</strong></strong> The address you specify must be a valid email address that has been defined in your email system. The CIS Administration does not prevent you from entering and saving an email address that contains spaces and might not be treated as a single entity. To specify an email address that contains spaces, enclose the email address in double quotes.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="156"><p class="tablebodytext">Email source link</p>
+</td>
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="389"><p class="tablebodytext">Web link to the CIS administration login page in the body of the email message.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="156"><p class="tablebodytext">Sync user name</p>
+</td>
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="389"><p class="tablebodytext">User name for the CIS Administration user.</p>
+<p class="tablebodytext"><strong class="specialbold">Note:</strong> The Sync user name is the Service user.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="156"><p class="tablebodytext">Sync user password</p>
+</td>
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="389"><p class="tablebodytext">Password for the CIS Administration user</p>
+<p class="tablebodytext"><strong class="specialbold"><strong class="specialbold">Important:</strong></strong> Although you can change the Sync user password in this page, you must first change the password for the Service user in the Profile tab of the Security Administration Edit User page. For more information, see <a id="h121856" class="jumptemplate-noheadingtext" title="Editing a user profile" href="119378.htm" target="_self">Editing a user profile</a>. Then you can make changes in this page. </p>
+</td>
+</tr>
+
+</table>
+<p class="tablespacerwide"></p>
+</div>
+
+
+ 
+<p class="copy">Copyright &copy; 2002, 2017 Oracle and/or its affiliates. All rights reserved.</p>
+</div>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>
+<footer>
+</footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+<script>$(document).foundation();</script>
+</body>
+</html>

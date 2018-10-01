@@ -1,0 +1,423 @@
+﻿/*Created with Adobe RoboHelp 10.*/
+body {
+	font-family: Verdana;
+	font-size: 10.0pt "background-color:" #ffffff;
+}
+h1 {
+	font-weight: bold;
+	margin-top: 10pt;
+	font-size: 12pt;
+	x-next-class: ;
+	x-next-type: p;
+}
+h2 {
+	font-weight: bold;
+	font-size: 11pt;
+	x-next-class: ;
+	x-next-type: p;
+	margin-top: 14pt;
+}
+h3 {
+	font-weight: bold;
+	margin-top: 10pt;
+	font-size: 10pt;
+	x-next-class: ;
+	x-next-type: p;
+}
+h4 {
+	font-weight: bold;
+	font-style: italic;
+	margin-top: 10pt;
+	font-size: 9pt;
+	x-next-class: ;
+	x-next-type: p;
+}
+h5 {
+	font-weight: bold;
+	font-size: 8pt;
+	x-next-class: ;
+	x-next-type: p;
+}
+p {
+	font-family: Verdana;
+	margin-left: 0pt;
+	margin-bottom: 0pt;
+	margin-top: 10pt;
+	font-size: 10pt;
+	font-weight: normal;
+}
+a {
+	color: #1923f7;
+	display: inline;
+	font-size: 10pt;
+	text-decoration: underline;
+}
+a.expandspot {
+	cursor: hand;
+	font-style: italic;
+	height: 0px;
+	width: 0px;
+	display: inline;
+	font-size: 11pt;
+	color: #1923f7;
+	text-decoration: none;
+}
+span.expandtext {
+	font-style: italic;
+	font-weight: normal;
+	color: #ff0000;
+}
+a.dropspot {
+	cursor: hand;
+	font-style: italic;
+	display: inline;
+	font-size: 11pt;
+	color: #1923f7;
+	text-decoration: none;
+}
+a.glossterm {
+	color: #800000;
+	cursor: hand;
+	font-style: italic;
+	font-size: 10pt;
+	display: inline;
+	text-decoration: none;
+}
+span.glosstext {
+	font-style: italic;
+	font-weight: normal;
+	color: #0000ff;
+}
+ol,
+ul {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+table.Empirica {
+	font-size: medium;
+	x-1st-row: 1;
+	x-1st-row-name: t1st;
+	border-bottom-style: Solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	x-row-pat-1: 1;
+	x-row-pat-1-name: t1Row;
+	x-row-pat-count: 2;
+	x-row-pat-2: 1;
+	x-row-pat-2-name: t2Row;
+	margin-left: 2pt;
+	margin-top: 0pt;
+	x-border-spacing: 0px;
+}
+li.NumBullet1 {
+	font-family: Verdana;
+	margin-top: 10pt;
+	list-style: disc;
+	text-indent: -0pt;
+	margin-left: 6px;
+	font-size: 10pt;
+}
+li.NumBullet2 {
+	font-family: Verdana;
+	list-style: disc;
+	margin-top: 10pt;
+	font-size: 10pt;
+	margin-left: 36px;
+}
+li.NumBullet3 {
+	font-family: Verdana;
+	list-style: disc;
+	text-indent: -0pt;
+	margin-top: 10pt;
+	margin-left: 68px;
+	font-size: 10pt;
+}
+p.Note {
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	border-top-style: Solid;
+	border-bottom-style: Solid;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-color: #808080;
+	border-bottom-color: #808080;
+}
+span.Button {
+	font-weight: bold;
+	color: #000000;
+	font-size: 10pt;
+}
+p.ListContinue1 {
+	color: #000000;
+	margin-left: 30px;
+	font-size: 10pt;
+}
+p.ListContinue2 {
+	color: #000000;
+	margin-left: 60px;
+}
+p.ListNote1 {
+	border-top-style: Solid;
+	border-bottom-style: Solid;
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	margin-bottom: 0pt;
+	margin-left: 30px;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-color: #808080;
+	border-bottom-color: #808080;
+}
+p.ListNote2 {
+	border-top-style: Solid;
+	border-bottom-style: Solid;
+	margin-bottom: 0pt;
+	margin-left: 60px;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-color: #808080;
+	border-bottom-color: #808080;
+}
+p.ListNote3 {
+	border-top-style: Solid;
+	border-bottom-style: Solid;
+	margin-left: 90px;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-color: #808080;
+	border-bottom-color: #808080;
+}
+p.ListNumber1 {
+	margin-left: -30px;
+	text-indent: -30px;
+}
+rh-list.Empirica {
+	x-lvl-4-type: decimal;
+	x-lvl-4-format: "&o<x>&c";
+	x-lvl-5-format: "&o<x>&c";
+	x-lvl-6-type: lower-roman;
+	x-lvl-6-format: "&o<x>&c";
+	x-lvl-8-type: lower-alpha;
+	x-lvl-7-format: "<x>.";
+	x-lvl-9-type: lower-roman;
+	x-lvl-1-format: "<x>.";
+	x-lvl-2-format: "<x>.";
+	x-lvl-1-margin: 30px;
+	x-lvl-1-text-indent: -30px;
+	x-lvl-1-p-class: ListNumber1;
+	x-lvl-1-p-tag: p;
+	x-lvl-3-format: "<x>.";
+	x-lvl-4-margin: 130px;
+	x-lvl-4-text-indent: -40px;
+	x-lvl-5-margin: 160px;
+	x-lvl-5-text-indent: -30px;
+	x-lvl-6-margin: 190px;
+	x-lvl-6-text-indent: -30px;
+	x-lvl-7-margin: 220px;
+	x-lvl-7-text-indent: -30px;
+	x-lvl-8-margin: 240px;
+	x-lvl-8-text-indent: -20px;
+	x-lvl-9-margin: 260px;
+	x-lvl-9-text-indent: -20px;
+	x-lvl-2-type: upper-alpha;
+	x-lvl-2-margin: 60px;
+	x-lvl-2-text-indent: -30px;
+	x-lvl-2-p-class: ListNumber2;
+	x-lvl-2-p-tag: p;
+	x-lvl-3-type: lower-roman;
+	x-level-count: 9;
+	x-lvl-3-margin: 90px;
+	x-lvl-3-text-indent: -30px;
+	x-lvl-3-p-class: ListNumber3;
+	x-lvl-3-p-tag: p;
+	x-lvl-1-pfx-class: rls-1-Empirica;
+}
+p.Subhead {
+	font-weight: bold;
+	color: #000000;
+	margin-bottom: 10pt;
+	font-size: 10pt;
+}
+table.Empirica tr.t1st td {
+	font-family: Verdana;
+	font-size: medium;
+	font-weight: bold;
+	border-bottom-style: Solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+}
+table.Empirica td {
+	padding-left: 10px;
+	padding-right: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+table.Empirica tr.t1Row td {
+	font-family: Verdana;
+	font-size: medium;
+	border-bottom-style: Solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+}
+table.Empirica tr.t2Row td {
+	border-bottom-style: Solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+}
+p.TableBody {
+	font-family: Verdana;
+	margin-left: 0pt;
+	margin-bottom: 5pt;
+	margin-top: 5pt;
+	font-size: 10pt;
+}
+p.ListNumber3 {
+	margin-left: 50px;
+}
+a.breadcrumbs {
+	display: inline;
+	color: #000000;
+}
+p.ListNumber2 {
+	font-weight: normal;
+	margin-left: 30px;
+}
+p.ListContinue3 {
+	color: #000000;
+	margin-left: 90px;
+}
+p.TableHeader {
+	margin-bottom: 0pt;
+	font-family: Verdana;
+	margin-left: 0pt;
+	margin-top: 2pt;
+	font-weight: bold;
+	font-size: 10pt;
+}
+p.TableNote {
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	border-top-style: Solid;
+	border-bottom-style: Solid;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-color: #808080;
+	border-bottom-color: #808080;
+	margin-top: 10pt;
+	margin-bottom: 0pt;
+}
+p.Footnote {
+	font-family: Verdana;
+	margin-left: 0pt;
+	font-size: 7pt;
+	margin-bottom: 10pt;
+	border-top-style: Solid;
+	margin-top: 40pt;
+	border-top-width: 1px;
+	border-top-color: #808080;
+}
+li.Bullet1 {
+	font-family: Verdana;
+	list-style: disc;
+	margin-left: 0px;
+	margin-top: 5pt;
+	margin-bottom: 0pt;
+	font-size: 10pt;
+}
+li.Bullet2 {
+	font-family: Verdana;
+	margin-left: 18px;
+	list-style: disc;
+	margin-top: 5pt;
+	margin-bottom: 0pt;
+	font-size: 10pt;
+}
+li.Bullet3 {
+	font-family: Verdana;
+	margin-left: 36px;
+	list-style: disc;
+	margin-top: 5pt;
+	margin-bottom: 0pt;
+	font-size: 10pt;
+}
+p.BulletContinue1 {
+	color: #000000;
+	margin-left: 40px;
+	margin-top: 5pt;
+	margin-bottom: 0pt;
+}
+p.BulletContinue2 {
+	color: #000000;
+	margin-left: 60px;
+	margin-top: 5pt;
+}
+p.BulletContinue3 {
+	color: #000000;
+	margin-left: 76px;
+	margin-top: 5pt;
+}
+p.BulletNote1 {
+	border-top-style: Solid;
+	border-bottom-style: Solid;
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	margin-left: 40px;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-color: #808080;
+	border-bottom-color: #808080;
+	margin-top: 5pt;
+	margin-bottom: 0pt;
+}
+p.BulletNote2 {
+	border-top-style: Solid;
+	border-bottom-style: Solid;
+	margin-bottom: 0pt;
+	margin-left: 60px;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-color: #808080;
+	border-bottom-color: #808080;
+	margin-top: 5pt;
+}
+p.BulletNote3 {
+	border-top-style: Solid;
+	border-bottom-style: Solid;
+	margin-left: 76px;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-color: #808080;
+	border-bottom-color: #808080;
+	margin-top: 5pt;
+}
+p.ListBulletNote1 {
+	border-top-style: Solid;
+	border-bottom-style: Solid;
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	margin-bottom: 0pt;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-color: #808080;
+	border-bottom-color: #808080;
+	margin-left: 48px;
+}
+p.ListBulletContinue1 {
+	color: #000000;
+	margin-left: 48px;
+}
+span.rls-1-Empirica {
+	font-size: 8pt;
+}
+p.Style1 {
+}

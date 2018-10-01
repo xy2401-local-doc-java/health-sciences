@@ -1,0 +1,1555 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Defining DCI Books</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2017-08-27T15:50:57Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Oracle&reg; Clinical Creating a Study" />
+<meta name="dcterms.identifier" content="E62229-01" />
+<meta name="dcterms.isVersionOf" content="OCCRS" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;1996, 2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Index" href="index.htm" title="Index" type="text/html" />
+<link rel="Prev" href="dcm.htm" title="Previous" type="text/html" />
+<link rel="Next" href="annotate_crf.htm" title="Next" type="text/html" />
+<link rel="alternate" href="OCCRS.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="OCCRS.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="OCCRS.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">15/25</span> <!-- End Header -->
+<div id="OCCRS10100" class="chapter"><a id="BABBJACC"></a>
+<h1 class="chapter"><span class="secnum">10</span> Defining DCI Books</h1>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#CIHCEIAE">Section 10.1, "Traditional and Enhanced DCI Books"</a></p>
+</li>
+<li>
+<p><a href="#CIHHEIIB">Section 10.2, "Defining an Enhanced DCI Book"</a></p>
+</li>
+<li>
+<p><a href="#CIHDEEJE">Section 10.3, "Calculating DCI and Interval Expectedness for Patients"</a></p>
+</li>
+<li>
+<p><a href="#CIHFGHFI">Section 10.4, "Data Entry and Expectedness"</a></p>
+</li>
+<li>
+<p><a href="#CIHHDIHF">Section 10.5, "Assigning Patients to a DCI Book"</a></p>
+</li>
+<li>
+<p><a href="#CIHHAJHF">Section 10.6, "Defining a Traditional DCI Book"</a></p>
+</li>
+<li>
+<p><a href="#CIHHJAHH">Section 10.7, "Using CRF Page Tracking"</a></p>
+</li>
+</ul>
+<p>See <a href="plan.htm#CHDFDGDD">"Designing a Flexible Study"</a> for more information.</p>
+<a id="CIHCEIAE"></a>
+<div id="OCCRS10101" class="sect1">
+<h2 class="sect1"><span class="secnum">10.1</span> Traditional and Enhanced DCI Books</h2>
+<p>You can organize DCIs, which generally correspond to CRFs, into a casebook and assign them to visits (Clinical Planned Events, or CPEs) by creating a DCI Book. DCI Books are required if you are using Oracle Remote Data Capture (RDC) and can be used for Oracle Clinical data entry too.</p>
+<p>Before you can define a DCI Book you must define Intervals and Clinical Planned Events (CPEs) as well as Questions, Question Groups, DCMs, and DCIs; see <a href="treatments.htm#BEIIICHG">Chapter 5, "Treatments and Schedules,"</a> <a href="questions.htm#BABCIAEC">Chapter 7, "Questions and Question Groups,"</a> and <a href="dcm.htm#BABEEHEI">Chapter 9, "DCMs and DCIs."</a></p>
+<p>Oracle Clinical provides two types of DCI Books for use in different types of clinical trials:</p>
+<ul>
+<li>
+<p><a href="#CIHIBBJI">DCI Books</a></p>
+</li>
+<li>
+<p><a href="#CIHIGJIE">Enhanced DCI Books</a></p>
+</li>
+</ul>
+<a id="CIHIBBJI"></a>
+<div id="OCCRS10102" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">10.1.1</span> DCI Books</h3>
+<p>The traditional DCI Book is suitable for paper-based clinical trials for which you want to use the Oracle Clinical Page Tracking feature. This feature helps ensure that all paper CRFs are collected and their data entered. If your study uses the Page Tracking feature, you must use the original DCI Book type. See <a href="#CIHHAJHF">"Defining a Traditional DCI Book"</a> and <a href="#CIHHJAHH">"Using CRF Page Tracking"</a> for more information.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CIHIGJIE"></a>
+<div id="OCCRS10103" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">10.1.2</span> Enhanced DCI Books</h3>
+<p>Enhanced DCI Books offer:</p>
+<ul>
+<li>
+<p><a href="#CIHJCGHG">Support for Flexible Studies</a></p>
+</li>
+<li>
+<p><a href="#CIHFIHHA">Additional Features</a> You can use enhanced DCI Books to take advantage of these features even if your study does not have a flexible design, as long as you do not use Page Tracking.</p>
+</li>
+</ul>
+<p>Page Tracking is not supported in Enhanced DCI Books.</p>
+<a id="CIHJCGHG"></a>
+<div id="OCCRS10104" class="sect3">
+<h4 class="sect3"><span class="secnum">10.1.2.1</span> Support for Flexible Studies</h4>
+<p>The enhanced DCI Book is suitable for flexible trial designs such as studies with multiple treatment arms and cohorts (groups of patients) with different assessments. In these trials, patients receive different assessments based on data collected during the trial. For example, a flexible study design for an oncological indication might require different disease states to have different schedules and assessments, with patients with more rapidly progressing disease being evaluated and dosed more frequently and patients with less rapidly progressing disease states being evaluated less frequently.</p>
+<p>Open-ended cycling trials are also supported. You must define an adequate number of CPEs and Intervals and add them to the Enhanced DCI Book. You can add more during the course of the trial if necessary.</p>
+<p>When you use an Enhanced DCI Book, the following flexible study features are supported:</p>
+<ul>
+<li>
+<p><span class="bold">Data-Triggered Rules</span>: You specify data points that determine which CRFs, CPEs, and Intervals are required, or <span class="italic">expected</span>, for each patient.</p>
+</li>
+<li>
+<p><span class="bold">Data Expectedness Calculation for Each Patient</span>: As soon as data is saved for a patient at one of these predefined points (or the system completes a batch job that may impact data expectedness for a patient), the system recalculates which CRFs and Intervals are expected for the patient, based on the defined rules.</p>
+</li>
+<li>
+<p><span class="bold">Display of CRFs in RDC Onsite</span>: For each patient, the Casebooks page displays only the CRFs that are expected, and as the user enters data and clicks Next, the next CRF expected during the CPE for that particular patient opens. Any CRFs that have been entered but are no longer expected are still displayed.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+In other manual Oracle Clinical and RDC data entry interfaces all CRFs included in the DCI Book are available for data entry, not just those expected for the patient.</div>
+</li>
+<li>
+<p><span class="bold">Validation</span>: You can define an Enhanced DCI Book in any order and then run a validation utility that checks rule definitions against DCI, CPE, and Interval definitions and identifies any invalid conditions so that you can fix them; see<a href="#CIHDIJAI">"Validating an Enhanced DCI Book"</a>.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<a id="CIHFIHHA"></a>
+<div id="OCCRS10105" class="sect3">
+<h4 class="sect3"><span class="secnum">10.1.2.2</span> Additional Features</h4>
+<p>Enhanced DCI Books include other features that are helpful whether your study is defined as flexible or not:</p>
+<ul>
+<li>
+<p><span class="bold">Navigation</span>: You can create, maintain and view the DCI Book pages for a selected CPE without navigating through all the pages for the book; see <a href="#CIHHGCAG">"Navigator: Building an Enhanced DCI Book"</a>.</p>
+</li>
+<li>
+<p><span class="bold">Copying</span>: You can copy all the DCI Book pages for a single CPE and insert them into another CPE.</p>
+</li>
+<li>
+<p><span class="bold">Deleting pages</span>: You can delete all the DCI Book pages for a single CPE at once.</p>
+</li>
+<li>
+<p><span class="bold">Renumbering pages</span>: You can run a utility to automatically renumber any range of Start Page numbers in CPE and DCI order, using prefixes and/or suffixes you specify. You can insert or delete a DCI in the middle of the study, or assign DCIs to CPEs in any order, and then run the utility to fix the Start Page numbers.; see <a href="#CIHJFGFF">"Numbering and Renumbering Pages"</a>.</p>
+</li>
+<li>
+<p><span class="bold">Validation</span>: The validation utility checks Start Page numbers and gives a warning if they are nonsequential. You can choose to continue with nonsequential page numbers or you can use the renumbering utility.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CIHHEIIB"></a>
+<div id="OCCRS10106" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">10.2</span> Defining an Enhanced DCI Book</h2>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#CIHHDIHG">Defining Book Properties</a></p>
+</li>
+<li>
+<p><a href="#CIHHGCAG">Navigator: Building an Enhanced DCI Book</a></p>
+</li>
+<li>
+<p><a href="#CIHCEIEC">DCI Book Pages: Assigning DCIs to CPEs</a></p>
+</li>
+<li>
+<p><a href="#CIHHAJJA">Copying Pages for a CPE</a></p>
+</li>
+<li>
+<p><a href="#CIHFHAHE">Deleting Pages from a CPE</a></p>
+</li>
+<li>
+<p><a href="#CIHJFGFF">Numbering and Renumbering Pages</a></p>
+</li>
+<li>
+<p><a href="#CIHIEBGA">Defining Interval Rules</a></p>
+</li>
+<li>
+<p><a href="#CIHFDFDD">Defining DCI Rules</a></p>
+</li>
+<li>
+<p><a href="#CIHDIJAI">Validating an Enhanced DCI Book</a></p>
+</li>
+<li>
+<p><a href="#CIHFJHAJ">Defining DCI Book Constraints</a></p>
+</li>
+</ul>
+<p>Oracle recommends defining a single DCI Book in flexible studies; see <a href="plan.htm#CHDBEEGE">"Using a Single DCI Book"</a>.</p>
+<p>To open the Enhanced DCI Book window, select <span class="bold">Definition</span>, then <span class="bold">DCIs</span>, and then <span class="bold">Enhanced DCI Books</span>.</p>
+<p>The Maintain Enhanced DCI Books window includes the following <span class="bold">Special</span> menu items:</p>
+<ul>
+<li>
+<p><span class="bold">Copy DCI Book</span>: You can copy only Active DCI Books. The system creates the new Book with a status of Provisional. All rules, Intervals, CPEs, and DCI Book pages are included in the copy, and the new book has the name COPYOF <span class="italic">original_Book's_name</span>. You must change the name before you save the new Book. The new Book is in the same study as the original Book; you cannot copy a Book from one study to another.</p>
+</li>
+<li>
+<p><span class="bold">Validate DCI Book</span>; see <a href="#CIHDIJAI">"Validating an Enhanced DCI Book"</a></p>
+</li>
+<li>
+<p><span class="bold">View Validation Results</span>; see <a href="#CIHCDCCB">"Viewing Validation Warnings and Errors"</a></p>
+</li>
+<li>
+<p><span class="bold">Calc Expectedness in Test</span>; see <a href="#CIHBIEJH">"When and How to Run Expectedness Calculation Manually"</a></p>
+</li>
+<li>
+<p><span class="bold">Calc Expectedness in Prod</span>; see <a href="#CIHBIEJH">"When and How to Run Expectedness Calculation Manually"</a></p>
+</li>
+<li>
+<p><span class="bold">Re-sequence DCI Book</span> reorders display numbers that are not in ascending CPE CPE Number order or have gaps. This option is available only when display numbers are out of sequence. This happens only in rare circumstances (either the Book was not created in the Enhanced DCI Book window or CPE numbers were changed after the Book was created) but if it does, the Book becomes unusable; no data can be entered against it. In addition, RDC Onsite displays (Invalid) after the book name in the Casebook column and does not include the book in the Assigned Book list of values in Patient Search.</p>
+<p>If the Book's display numbers are not sequential, you receive a warning when you try to open your DCI Book in the <span class="bold">Navigator</span> window. You cannot make any changes to the book until you run the <span class="bold">Re-sequence DCI Book</span> job from the Special menu in the main Enhanced DCI Book window. The job does not affect Start Page numbers.</p>
+</li>
+</ul>
+<a id="CIHHDIHG"></a>
+<div id="OCCRS10107" class="sect2">
+<h3 class="sect2"><span class="secnum">10.2.1</span> Defining Book Properties</h3>
+<img width="637" height="348" src="img/enh_bk_main.gif" alt="Description of enh_bk_main.gif follows" /><br />
+<a id="sthref754" href="img_text/enh_bk_main.htm">Description of the illustration ''enh_bk_main.gif''</a><br />
+<br />
+<p>To define an Enhanced DCI Book, enter values in the following fields:</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Only one person at a time can work on an Enhanced DCI Book. The Book is locked as soon as a user initiates any action that could modify the Book, and it remains locked until the user saves or cancels. You receive an error if you try to work on a Book that has been locked for another user.</div>
+<p><a id="OCCRS10108"></a><span class="subhead3">Name&nbsp;</span>Enter a name for the DCI Book; up to 30 characters.</p>
+<p><a id="OCCRS10109"></a><span class="subhead3">Status&nbsp;</span>Possible values for this field are P (Provisional), A (Active), and R (Retired):</p>
+<ul>
+<li>
+<p><span class="bold">Provisional (P)</span>: You can modify the DCI Book only if its status is Provisional. You can set the status of an Active DCI Book back to Provisional. You can enter test data using an Active DCI Book or a Provisional DCI Book with a validation status of Success or Warning.</p>
+</li>
+<li>
+<p><span class="bold">Active (A)</span>: You can use only Active DCI Books for entering production data. When you set the status to Active and save, the system runs the validation job behind the scenes and calculates the DCI Book's validation status. If it is Success, Warning, or Not Applicable (for nonflexible studies) the activation succeeds.</p>
+</li>
+<li>
+<p><span class="bold">Retired (R)</span>: Set the status to R for DCI Book definitions you no longer want to use but cannot delete because they are associated with data. You are prompted for a retirement reason.</p>
+</li>
+</ul>
+<p><a id="OCCRS10110"></a><span class="subhead3">Description&nbsp;</span>(Optional) Enter a description for the DCI Book; free-form text, 200 characters maximum.</p>
+<p><a id="OCCRS10111"></a><span class="subhead3">Default?&nbsp;</span>Check if this is the default DCI Book for use in the current study. Only one DCI Book can be the default one for a study.</p>
+<p>Oracle Clinical and RDC use this setting to determine which Book to display by default.</p>
+<p><a id="CHDDABHG"></a><a id="OCCRS10112"></a><span class="subhead3">Validation Status&nbsp;</span>(Display Only) The possible validation statuses are:</p>
+<ul>
+<li>
+<p><span class="bold">Not Applicable</span>. The system applies this status automatically to DCI Books used in nonflexible studies. You can set DCI Books with this validation status to Active.</p>
+</li>
+<li>
+<p><span class="bold">Pending</span>. The system applies this status automatically to DCI Books used for flexible studies that have never been validated or that have changed since the last validation job was run. You can set DCI Books with this validation status to Active. The system then runs the validation job and the activation succeeds if there are no errors.</p>
+</li>
+<li>
+<p><span class="bold">Success</span>. The validation job applies this status to DCI Books when the job completes with no warnings or errors. You can set DCI Books with this validation status to Active.</p>
+</li>
+<li>
+<p><span class="bold">Warning</span>. The validation job applies this status to DCI Books when the job completes with one or more warnings but no errors. You can set DCI Books with this validation status to Active.</p>
+</li>
+<li>
+<p><span class="bold">Error</span>. The validation job applies this status to DCI Books when the job completes with one or more errors. The job may have generated warnings as well. You cannot set DCI Books with this validation status to Active.</p>
+</li>
+</ul>
+<p>For information about the validation utility, see <a href="#CIHDIJAI">"Validating an Enhanced DCI Book"</a>.</p>
+<p><a id="OCCRS10113"></a><span class="subhead3">Status Comment&nbsp;</span>This is a free text field, up to 200 characters.</p>
+<p><a id="OCCRS10114"></a><span class="subhead3">Retirement Reason&nbsp;</span>When you change the status of the DCI Book to R you are prompted for a comment. This field displays the most recent comment.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CIHHGCAG"></a>
+<div id="OCCRS10115" class="sect2">
+<h3 class="sect2"><span class="secnum">10.2.2</span> Navigator: Building an Enhanced DCI Book</h3>
+<p>The DCI Book Navigator window provides summary information about every Clinical Planned Event (CPE) defined for the study, so that you can track your DCI Book definition progress. To reach it, click the Navigator button in the main Enhanced DCI Books window.</p>
+<p>Use the <span class="bold">Navigator</span> window to:</p>
+<ul>
+<li>
+<p>Check for Intervals and CPEs with no DCIs assigned yet</p>
+</li>
+<li>
+<p>Select a CPE to display its individual pages (DCIs) in the DCI Book Page Details window</p>
+</li>
+<li>
+<p>Select a CPE to add, delete, or modify individual pages in the DCI Book Page Details window</p>
+</li>
+<li>
+<p>Select a CPE to copy individual pages in the DCI Book Page Details window to another CPE in the book</p>
+</li>
+</ul>
+<p>Use the <span class="bold">Special</span> menu to:</p>
+<ul>
+<li>
+<p><span class="bold">Copy Book Pages for CPE</span>; see <a href="#CIHHAJJA">"Copying Pages for a CPE"</a></p>
+</li>
+<li>
+<p><span class="bold">Delete Book Pages for CPE</span>; see <a href="#CIHFHAHE">"Deleting Pages from a CPE"</a></p>
+</li>
+<li>
+<p><span class="bold">Renumber Book Pages</span>; see <a href="#CIHFIGGI">"Renumbering Start Pages"</a></p>
+</li>
+</ul>
+<p>You can work in any order. For example, you can define DCI Book Pages for the Termination CPE before the Screening CPE. In a flexible study, you can define DCI Book Pages before you define rules, or you can define rules first, or alternate between the two tasks. You can run the validation utility (available from the Special menu of the Maintain Enhanced DCI Books window) or the renumbering utility for a Provisional Book at any time.</p>
+<p>You can make changes only if the Book's status is Provisional.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+All CPEs are always displayed in Navigator window. However, if none of the CPEs in an Interval have any DCIs defined, the system treats the Interval as if it does not exist; validation fails if such an Interval is the target of a rule.</div>
+<img width="580" height="366" src="img/enh_bk_nav.gif" alt="Description of enh_bk_nav.gif follows" /><br />
+<a id="sthref755" href="img_text/enh_bk_nav.htm">Description of the illustration ''enh_bk_nav.gif''</a><br />
+<br />
+<p>The DCI Book Navigator window displays the following information. Records are displayed in ascending visit number order.</p>
+<p><a id="OCCRS10116"></a><span class="subhead3">CPE &nbsp;</span>The system displays all the CPEs defined in the Maintain Clinical Planned Events window for the current study, including CPEs defined as Optional, in CPE Number order. If any CPEs have been added since the DCI Book was made Active, they are also displayed.</p>
+<p><a id="OCCRS10117"></a><span class="subhead3">Interval&nbsp;</span>The system displays all Intervals&mdash;Phases, Periods, or Subperiods&mdash;defined in the Maintain Study Schedule window with one or more CPEs assigned directly to them in the current study. Intervals with no CPEs directly assigned to them are not displayed. For example, if a Phase contains several Periods that contain CPEs, but no CPEs are directly assigned to the Phase, the Phase is not displayed but the Periods are. If any Intervals with CPEs have been added since the DCI Book was made Active, they are also displayed.</p>
+<p><a id="OCCRS10118"></a><span class="subhead3">Interval Targeted by Rule?&nbsp;</span>If checked, the Interval is the target of a DCI Book rule. Intervals that are the target of a rule are <span class="italic">conditional</span>; they are expected for a patient only if the patient's data meets criteria defined in a rule; see <a href="#CIHIEBGA">"Defining Interval Rules"</a>.</p>
+<p><a id="OCCRS10119"></a><span class="subhead3">Visit No. &nbsp;</span>The system displays the Visit Number defined in the Clinical Planned Events window.</p>
+<p><a id="OCCRS10120"></a><span class="subhead3">Total # DCIs Defined in CPE&nbsp;</span>The system displays the number of DCIs currently assigned to the CPE. To see the DCIs, select the CPE and click the button DCI Book Pages for CPE.</p>
+<p><a id="OCCRS10121"></a><span class="subhead3"># DCIs Targeted by DCI Rule&nbsp;</span>The system displays the number of DCIs currently assigned to the CPE that are the target of a DCI Book rule. DCIs that are the target of a rule are <span class="italic">conditional</span>; they are expected for a patient only if the patient's data meets criteria defined in a rule; see <a href="#CIHFDFDD">"Defining DCI Rules"</a>.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CIHCEIEC"></a>
+<div id="OCCRS10122" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">10.2.3</span> DCI Book Pages: Assigning DCIs to CPEs</h3>
+<p>To make it possible to collect a DCI, or Book Page, at a CPE, you must do one of the following:</p>
+<ul>
+<li>
+<p>Assign the DCI to a CPE by adding it here.</p>
+<ul>
+<li>
+<p>If the DCI is not the target of a rule, it is <span class="italic">unconditional</span> and expected for all patients for whom the Interval in which the DCI is collected is expected.</p>
+</li>
+<li>
+<p>If the DCI is the target of a rule, it is <span class="italic">conditional</span> and expected for a patient only when his or her data fulfill the condition of the rule.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Make the DCI available as needed on an <span class="italic">unplanned</span> basis in the DCI Constraints window; this approach may be appropriate for adverse events and concomitant medications, for example. See <a href="#CIHFJHAJ">"Defining DCI Book Constraints"</a>.</p>
+</li>
+</ul>
+<p>You can view, insert, and delete DCIs in a CPE. DCIs should appear in the order in which they should be collected. Add them in this order or change their Display Numbers to change their order within the CPE. DCIs that are the target of a rule must come after the trigger DCI.</p>
+<p>You can make changes only if the DCI Book's status is Provisional. You can insert DCIs even if there is already production data entered against the Book. If the insertion and renumbering of pages will change the page number of a page against which data has already been entered, you receive a warning. The page number displayed for the collected data changes.</p>
+<img width="686" height="221" src="img/enh_bk_pgs.gif" alt="Description of enh_bk_pgs.gif follows" /><br />
+<a id="sthref756" href="img_text/enh_bk_pgs.htm">Description of the illustration ''enh_bk_pgs.gif''</a><br />
+<br />
+<div id="OCCRS10123" class="sect3"><a id="sthref757"></a>
+<h4 class="sect3"><span class="secnum">10.2.3.1</span> DCI Book Page Information</h4>
+<p>The window has the following active fields:</p>
+<p><a id="CHDBAEDJ"></a><a id="OCCRS10124"></a><span class="subhead3">Display #&nbsp;</span>Oracle RDC Onsite uses the display number to display CRFs in its user interface. Display numbers are generated according to CPE Visit Number; within a CPE you can change the display order of DCIs. DCIs should be displayed in the order in which they should be collected.</p>
+<p><a id="OCCRS10125"></a><span class="subhead3">Start Page # &nbsp;</span>This is the page number that appears in the data entry user interface and in the Patient Data Report. In non-Page Tracking studies, every DCI is considered to be one page.</p>
+<p>You can specify an alphanumeric prefix and/or suffix for Start Page numbers. You may want to use meaningful abbreviations for the Interval and CPE, for example, rather than have simple numeric page numbers, if you do not want page number gaps in the Patient Data Report; see <a href="#CIHHDAGA">"Sample Numbering Schemes"</a>. The maximum length of the field is 15 characters.</p>
+<p>The system automatically increments the first number (reading from left to right) in the Start Page number by one integer when you insert or explicitly renumber or copy pages. If a Start Page number has a whole number followed by a decimal point followed by a number (for example, 12.1) the system does not increment the decimal portion, which it treats as a static suffix. Special characters other than a period/full stop (.) are not allowed.</p>
+<p>If you do not specify prefixes or suffixes for any pages in the Book, the start page number is the same as the display number throughout the Book.</p>
+<p>See <a href="#CIHJFGFF">"Numbering and Renumbering Pages"</a> for more information.</p>
+<p><a id="OCCRS10126"></a><span class="subhead3">DCI Name&nbsp;</span>The name of the DCI&mdash;equivalent to a CRF in RDC&mdash;assigned to the CPE. To insert a DCI, select it from the list of values, which contains all Provisional and Active DCIs defined for the study. A particular DCI can be included only once in a CPE.</p>
+</div>
+<!-- class="sect3" -->
+<div id="OCCRS10127" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref758"></a>
+<h4 class="sect3"><span class="secnum">10.2.3.2</span> Rule Trigger Information</h4>
+<p>If the DCI is the target of a DCI rule, the system displays information about the rule trigger; see <a href="#CIHFBEEH">"Defining a DCI Rule Trigger"</a> for more information:</p>
+<p><a id="OCCRS10128"></a><span class="subhead3">Event&nbsp;</span>The CPE or CPEs that contain(s) the trigger DCI.</p>
+<p><a id="OCCRS10129"></a><span class="subhead3">DCI&nbsp;</span>The trigger DCI.</p>
+<p><a id="OCCRS10130"></a><span class="subhead3">DCM&nbsp;</span>The trigger DCM.</p>
+<p><a id="OCCRS10131"></a><span class="subhead3">Qual Value&nbsp;</span>The DCM Qualifying Value, if any.</p>
+<p><a id="OCCRS10132"></a><span class="subhead3">Question&nbsp;</span>The trigger Question.</p>
+<p><a id="OCCRS10133"></a><span class="subhead3">Value(s)&nbsp;</span>The Question response values that trigger the rule.</p>
+<p><a id="OCCRS10134"></a><span class="subhead3">DCI Enabled&nbsp;</span>indicates the scope of the rule's effect:</p>
+<ul>
+<li>
+<p><span class="bold">Within CPE</span> The rule triggers the target DCI only when the trigger DCI is collected at the same CPE as the trigger DCI.</p>
+</li>
+<li>
+<p><span class="bold">Across CPEs</span> The rule triggers the target DCI in every CPE where it is collected from the CPE at which the trigger DCI is collected onwards.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CIHHAJJA"></a>
+<div id="OCCRS10135" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">10.2.4</span> Copying Pages for a CPE</h3>
+<p>You can copy all the Book pages (DCIs) for a selected CPE into a target CPE in the same Book. The system automatically adjusts the Display numbers in the Book, but you may need to use the Renumber Book Pages job to fix Start Page numbers; see <a href="#CIHJFGFF">"Numbering and Renumbering Pages"</a>. You can only copy pages into a CPE that has no pages defined.</p>
+<p>To copy Book pages:</p>
+<ol>
+<li>
+<p>In the <span class="bold">DCI Book Navigator</span> window, select the CPE whose pages you want to copy and select <span class="bold">Copy Book Pages</span> for CPE from the <span class="bold">Special</span> menu. A pop-up appears.</p>
+</li>
+<li>
+<p>From the <span class="bold">Target CPE</span> drop-down, select the CPE into which you want to paste the pages. The name of the Interval that contains the target CPE is displayed in the <span class="bold">Target Interval</span> field.</p>
+</li>
+<li>
+<p>In the <span class="bold">Page Number Seed</span> field, enter the seed you want to use, if any, for the pages in the target CPE. This seed, or lack thereof, overrides any existing seed used in the source CPE. If you want to use the same seed as in the source CPE, you must specify it. This is an optional field. See <a href="#CHDCEGGJ">"Page Number Seeds"</a>.</p>
+<p>If you leave the Page Number Seed field empty, the system supplies whole numbers as page numbers, beginning with the number one (1) greater than the highest Start Page number without either a prefix or suffix already defined in the Book.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Copying pages does not change any rules defined for the Book. If any rules become invalid as a result of the copy operation, the validation job will report it.</div>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CIHFHAHE"></a>
+<div id="OCCRS10136" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">10.2.5</span> Deleting Pages from a CPE</h3>
+<p>The Delete Pages feature deletes all the Book pages (DCIs) from a selected CPE. You can delete pages only from a Provisional DCI Book. If either test or production data has been entered against any of the pages you delete, the data remains in the system. No further data can be entered against the deleted pages.</p>
+<p>If you delete a DCI Book page where the DCI is a trigger DCI or the only target of a rule, the system deletes the rule along with the DCI Book Page. If the DCI is one of many target DCIs in a rule, the system deletes it from the rule's list of targets.</p>
+<p>If you wish, you can run the Renumber Book Pages job to remove any gaps in Start Page numbers that result from the deletion.</p>
+<p>To delete Book pages: In the <span class="bold">DCI Book Navigator</span> window, select the CPE whose pages you want to delete and select <span class="bold">Delete Book Pages for CPE</span> from the <span class="bold">Special</span> menu.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CIHJFGFF"></a>
+<div id="OCCRS10137" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">10.2.6</span> Numbering and Renumbering Pages</h3>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#CIHDFJAH">How Oracle Clinical Page Numbering Works</a></p>
+</li>
+<li>
+<p><a href="#CIHFIGGI">Renumbering Start Pages</a></p>
+</li>
+<li>
+<p><a href="#CIHHDAGA">Sample Numbering Schemes</a></p>
+</li>
+</ul>
+<p>In Enhanced DCI Books you can enter DCI Book pages in any order and call a utility to renumber them at any time. The system calls the same utility when you copy CPE pages and paste them into a new CPE.</p>
+<p>In addition, the system uses the utility to check Start Page numbers at the following times:</p>
+<ul>
+<li>
+<p><span class="bold">Book Validation</span>. When you run the Validate DCI Book job, the system calls the numbering utility to check if Start Page numbers are sequential and without gaps and returns a warning if they are not sequential. You can choose to have nonsequential Start Page numbers and gaps.</p>
+</li>
+<li>
+<p><span class="bold">Book Activation</span>. When you activate a Book, if the Book does not already have a validation status of Success, the system calls the validation job, which calls the numbering utility. The activation succeeds even if Start Page numbers are not sequential, but sets a validation status of Warning. If you want sequential numbers, you can set the status back to Provisional and run the numbering utility manually (select Renumber Book Pages from the Special menu in the DCI Book Navigator).</p>
+</li>
+</ul>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The information in this section applies only to Start Page numbers. For information on Display numbers, see <a href="#CHDBAEDJ">"Display #"</a>.</div>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+When changes are made to several DCI Books that impact their rules and the Books are all activated simultaneously without prior validation, if one of the Books fails validation, then the Expectedness calculation for any of the modified books can fail with the following error:
+<pre dir="ltr">
+1212500: An error occurred while performing expectedness 1212600: ORA:20000 
+</pre>
+<p>To avoid this problem, run Validate DCI Book for each book, so that Validation Status is SUCCESS or WARNING, and then activate the Book(s).</p>
+</div>
+<a id="CIHDFJAH"></a>
+<div id="OCCRS10138" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><span class="secnum">10.2.6.1</span> How Oracle Clinical Page Numbering Works</h4>
+<p>Start Page number default functionality is the same in Enhanced DCI Books as in traditional DCI Books. The numbering utility is available only in Enhanced DCI Books and only in Books with a status of Provisional.</p>
+<a id="CHDCEGGJ"></a>
+<div id="OCCRS10139" class="sect4"><!-- infolevel="all" infotype="General" -->
+<h5 class="sect4"><span class="secnum">10.2.6.1.1</span> Page Number Seeds</h5>
+<p>DCI Book Start Page numbers can include a prefix and/or a suffix; that is, a character or string of characters before and/or after a number. The combination of the prefix (if any) and suffix (if any) and the number is called the <span class="italic">seed</span>.</p>
+<p>By default, when you add a page to the Book the system uses the same seed as the previous page and increments the first number encountered when reading from left to right. If there is a number followed by a decimal point and another number (for example, 12.1), the system treats the decimal portion as a static suffix and does not increment it.</p>
+<p>If you do not include a whole number in the seed, the system treats the letters you enter as a prefix and appends the number 1 to it, then increments by one for subsequent pages with same prefix. If you want a suffix or both a prefix and a suffix, you must include a whole number in the seed in the correct position.</p>
+<p>Examples:</p>
+<ul>
+<li>
+<p><span class="bold">1</span> &mdash; There is no prefix or suffix. Next page by default: <span class="bold">2</span>.</p>
+</li>
+<li>
+<p><span class="bold">A1</span> &mdash;"A" is the prefix and there is no suffix. Next page by default: <span class="bold">A2</span>.</p>
+</li>
+<li>
+<p><span class="bold">A1.1</span> &mdash; "A" is the prefix and ".1" is the suffix. Next page by default: <span class="bold">A2.1</span>.</p>
+</li>
+<li>
+<p><span class="bold">1.1A</span> &mdash; There is no prefix and ".1A" is the suffix. Next page by default: <span class="bold">2.1A</span>.</p>
+</li>
+</ul>
+<p>See <a href="#CIHHDAGA">"Sample Numbering Schemes"</a> and the following note for issues to take into consideration when creating Start Page numbers.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+When you generate the Patient Data Report in RDC, if any DCI/CRF does not fit on a single PDF page, the system automatically appends.<span class="italic">x</span> to the DCI's Start Page number.
+<p>For example, if a DCI's Start Page number is 600, and the DCI spans three PDF pages, the system numbers the PDR pages 600.1, 600.2, and 600.3. Or, if a DCI's Start Page number is A600.4, the system numbers the PDR pages A600.4.1, A600.4.2, A600.4.3.</p>
+</div>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Start Page numbers cannot contain a special character other than a period/full stop (.).</div>
+</div>
+<!-- class="sect4" --></div>
+<!-- class="sect3" -->
+<a id="CIHFIGGI"></a>
+<div id="OCCRS10140" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><span class="secnum">10.2.6.2</span> Renumbering Start Pages</h4>
+<p>The Renumber Book Pages utility renumbers pages within a range of Display numbers you specify. Within that range, it groups all pages with the same prefix/suffix combination and renumbers within each group sequentially by Display number, beginning with the lowest number found in the group. (Display numbers are determined by CPE number order.)</p>
+<p>You can invoke the <span class="bold">Renumber Book Pages</span> job from the <span class="bold">Special</span> menu of the <span class="bold">DCI Book Navigator</span> window. A pop-up window opens. Enter fields as follows:</p>
+<ol>
+<li>
+<p><span class="bold">Start Page Display #</span> Click in the field to bring up the list of values, then select the Display number at which you want to start renumber pages. If you want to renumber the entire DCI Book, select the first item in the list of values.</p>
+<p>The list of values displays the current Display number, Start Page number, CPE number and CPE name for each page. You can search for the Display number.</p>
+</li>
+<li>
+<p><span class="bold">End Page Display #</span> Click in the field to bring up the list of values, then select the Display number at which you want to stop renumbering pages. If you want to renumber the entire DCI Book, select the last number in the list of values.</p>
+<p>The list of values displays the current Display number, Start Page number, CPE number and CPE name for each page. You can search for the Display number.</p>
+</li>
+<li>
+<p>Click <span class="bold">Renumber</span> to invoke the utility or click <span class="bold">Cancel</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<a id="CIHHDAGA"></a>
+<div id="OCCRS10141" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><span class="secnum">10.2.6.3</span> Sample Numbering Schemes</h4>
+<p>You can design your own numbering scheme within the restrictions of <a href="#CIHDFJAH">How Oracle Clinical Page Numbering Works</a>. Two possible number schemes are described below.</p>
+<div id="OCCRS10142" class="sect4"><a id="sthref759"></a>
+<h5 class="sect4"><span class="secnum">10.2.6.3.1</span> Sequential Integers</h5>
+<p>If you use Start Page numbers that are only whole numbers, with no alphanumeric prefix or suffix, by default each DCI's Start Page number is the same as its Display number. Using simple sequential numbers can have drawbacks:</p>
+<ul>
+<li>
+<p>If you need to add a DCI in an ongoing study due to a protocol amendment, for example, you may not want the new pages to be inserted sequentially because page numbers associated with data already entered for subsequent pages will change. If you want to avoid this, use a suffix such as a, b, c for the newly inserted pages so that subsequent DCI Book pages keep the same numbers. You must insert these suffixes manually; the Renumber utility does not increment suffixes.</p>
+</li>
+<li>
+<p>If you use a sequential integer number scheme in a flexible study, where all patients normally do not complete all the DCIs defined in the DCI Book, there will be gaps in each patient's page numbers; see next section.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect4" -->
+<div id="OCCRS10143" class="sect4"><a id="sthref760"></a>
+<h5 class="sect4"><span class="secnum">10.2.6.3.2</span> Interval and CPE Prefixes</h5>
+<p>In a flexible study, when you know that all pages are not expected for any patient&mdash;for example in a study with multiple treatment arms such as the one shown in <a href="#CIHDDEAA">Figure 10-1</a>&mdash;you may prefer to use prefixes to give context to the page number.</p>
+<div id="OCCRS10144" class="figure">
+<p class="titleinfigure"><a id="CIHDDEAA"></a>Figure 10-1 Multiple Paths</p>
+<img width="626" height="174" src="img/rule_complex_paths_x.gif" alt="Description of Figure 10-1 follows" /><br />
+<a id="sthref761" href="img_text/rule_complex_paths_x.htm">Description of ''Figure 10-1 Multiple Paths''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p>In the study design shown in <a href="#CIHDDEAA">Figure 10-1, "Multiple Paths"</a>, some patients will complete Intervals X and XX and other patients will complete Intervals Y and YY, but no patient will complete all those Intervals. If you use sequential integer page numbering and if in the study schedule Interval X is defined before Interval Y and Interval XX is defined before Interval YY, you would have pages numbers such as:</p>
+<ul>
+<li>
+<p>Pages 1-50, Screening Interval</p>
+</li>
+<li>
+<p>Pages 51-100, Interval X</p>
+</li>
+<li>
+<p>Pages 101-130, Interval Y</p>
+</li>
+<li>
+<p>Pages 131-146, Rest Interval</p>
+</li>
+<li>
+<p>Pages 147-200, Interval XX</p>
+</li>
+<li>
+<p>Pages 201-250, Interval YY</p>
+</li>
+<li>
+<p>Pages 251-252, End of Study Interval</p>
+</li>
+<li>
+<p>Pages 253-260, AE Log Interval</p>
+</li>
+</ul>
+<p>Pages 101-130 and 201-250 would not be expected for patients who complete Intervals X and XX, and pages 51-100 and 147-200 would not be expected for patients who complete Intervals Y and YY. Therefore each patient's Patient Data Report would have big gaps in page numbers.</p>
+<p>You may prefer to use page numbers that represent the Intervals and CPEs by adding character prefixes to the page numbers. Do not use numbers to represent the Interval or CPE name (or at least not in the prefix) because the system will increment the Interval or CPE number instead of the page number (it increments the first number in left-to-right order). You may want to name your CPEs in the study schedule with this in mind.</p>
+<p>For example:</p>
+<ul>
+<li>
+<p>Give all CPEs a name that starts with an abbreviation of the Interval name&mdash;such as SC for Screening, X for Interval X, RST for Rest, END for End, and AE for AE Log&mdash;followed by an abbreviation for the CPE; for the purposes of this example say the first Visit in each Interval is A, the second one is B, and so on. (A meaningful abbreviation would be better in case you need to add a visit later.)</p>
+</li>
+<li>
+<p>Use these abbreviations as the prefix in the Start Page seed, so for the first CPE in the Screening Interval the Start Page seed prefix would be SC_A. You must enter this Start Page prefix manually in Book Page Details once per CPE.</p>
+</li>
+<li>
+<p>Give the first DCI in each CPE the number one. The system automatically increments the number for each successive DCI in the CPE.</p>
+</li>
+</ul>
+<p>The first DCI Start Pages for a patient following Treatment Arm X might then be SC_A1, SC_A2, SC_A3, SC_B1, SC_B2, SC_C1, SC_C2, SC_C3, X_A1, X_A2, X_A3, X_A4, X_A5, X_B1, X_B2, X_B3, X_C1, X_C2, X_C3, RST_A1, XX_A1....</p>
+</div>
+<!-- class="sect4" --></div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CIHIEBGA"></a>
+<div id="OCCRS10145" class="sect2">
+<h3 class="sect2"><span class="secnum">10.2.7</span> Defining Interval Rules</h3>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#CIHFBGBA">Defining an Interval Rule Trigger</a></p>
+</li>
+<li>
+<p><a href="#CHDDCCEC">Defining an Interval Rule Target</a></p>
+</li>
+</ul>
+<p>Interval rules can be of two types, or actions:</p>
+<ul>
+<li>
+<p><span class="bold">Enable</span> rules make the target Interval (or Intervals), all the CPEs within the Interval, and all unconditional DCIs collected at those CPEs, expected for a patient if the patient's data meets the criteria defined in the trigger.</p>
+</li>
+<li>
+<p><span class="bold">Bypass To</span> rules can have only one Interval as a target. If a patient's data meets the criteria defined in the trigger, the target Interval becomes expected for the patient and all intervening Intervals, CPEs and DCIs are not expected.</p>
+</li>
+</ul>
+<p>An Interval can be the target of multiple rules. This is necessary, for example, when you want to bypass to the Interval in some cases but also use it for patients who do not trigger the bypass. See <a href="flex_examples.htm#CHDDAIFJ">"Defining Multiple Paths Through a Trial"</a> for an example of this; the End of Study Interval is the target of a <span class="bold">Bypass To</span> rule from the Screening Interval and it is also the target of an <span class="bold">Enable</span> rule from a DCI that is in the last CPE of both treatment paths.</p>
+<p>The Book cannot be validated if there a duplicate rules. An Interval rule is considered a duplicate when the trigger DCI, trigger DCM (Qualifying Value), trigger Question (including null), target action and target Interval all have the same value as in another rule. The trigger Question values and "CPE(s) at which Trigger DCI is Defined" are not evaluated.</p>
+<p>Bypass To Interval rules take precedence over all other types of rules if there is a conflict.</p>
+<p>You are not required to define Interval rules in a flexible study. If you have no Interval rules defined in the DCI Book, all Intervals are expected for all patients who are assigned to that Book. Some DCIs in CPEs in the Interval may be conditional if you define DCI rules.</p>
+<p>You can define rules only for studies defined as flexible in Clinical Study States (under Conduct, then Security).</p>
+<div class="infobox-note">
+<p class="notep1">Tip:</p>
+To see all the rule fields at the same time, expand the window by dragging the edge to the right. This does not work the first time you open the window during your session, but if you close the window and reopen it you can then expand it.</div>
+<a id="CIHFBGBA"></a>
+<div id="OCCRS10146" class="sect3">
+<h4 class="sect3"><span class="secnum">10.2.7.1</span> Defining an Interval Rule Trigger</h4>
+<p>The trigger portion of an Interval rule specifies the data condition required to trigger the rule, making the target Interval or Intervals expected for the patient whose data satisfies the condition. Interval rules with an Action of <span class="bold">Bypass To</span> also make all Intervals, CPEs and DCIs between the trigger DCI and the target Interval <span class="italic">non-expected</span> for the patient; see <a href="#CHDDCCEC">"Defining an Interval Rule Target"</a>.</p>
+<img width="579" height="377" src="img/enh_dci_bk_int.gif" alt="Description of enh_dci_bk_int.gif follows" /><br />
+<a id="sthref762" href="img_text/enh_dci_bk_int.htm">Description of the illustration ''enh_dci_bk_int.gif''</a><br />
+<br />
+<p>To define an Interval rule trigger, enter values in the following fields:</p>
+<p><a id="OCCRS10147"></a><span class="subhead3">DCI&nbsp;</span>From the list of values, select the DCI that contains the DCM or Question whose value you want to serve as the trigger for the rule.</p>
+<p>The list of values includes the long and short names of all Provisional and Active DCIs with DCMs defined for the current study, whether they are currently defined in the DCI Book or not. If they are not yet included in the DCI Book, you must add them in the DCI Book Pages window before you can activate the Book.</p>
+<p><a id="OCCRS10148"></a><span class="subhead3">DCM/Qual Value&nbsp;</span>From the list of values, select the DCM that contains the Question whose value you want to serve as the trigger for the rule, or select [Any Data] if you want to trigger the rule when data is entered for any Question in the DCI. See <a href="plan.htm#CHDBJDBI">"Using the Any Data Trigger"</a> for further information.</p>
+<p>The list of values includes all DCMs defined for the selected DCI in the current study that meet the following conditions:</p>
+<ul>
+<li>
+<p>The DCM must include at least one non-repeating Question Group.</p>
+</li>
+<li>
+<p>The DCM cannot be defined as Optional.</p>
+</li>
+<li>
+<p>The DCM must contain at least one DCM Question that has an Internal or Thesaurus DVG attached.</p>
+</li>
+<li>
+<p>If a DCM is defined as having a Qualifying Value, this value must be defined in the DCI Module for this DCM.</p>
+</li>
+<li>
+<p><span class="bold">Use DCI Date?</span> must be selected in the DCI Modules window for the DCM.</p>
+</li>
+</ul>
+<p>If a DCM has a qualifying value, it is listed multiple times; once with each qualifying value specified in a DCI Module for the DCI.</p>
+<p><a id="OCCRS10149"></a><span class="subhead3">Question&nbsp;</span>From the list of values, select the Question whose value you want to serve as the trigger for the rule. If you selected [Any Data] in the DCM/Qual Value field, you cannot select a Question.</p>
+<p>The list of values includes all Questions defined for the selected DCM and Qualifying Value (if applicable) in the current study that meet the following conditions:</p>
+<ul>
+<li>
+<p>The Question must be of type CHAR (not NUMBER or DATE). See <a href="plan.htm#CHDHFEHI">"Using Derivation Procedures"</a> if you need to use number Questions.</p>
+</li>
+<li>
+<p>The Question must have an Internal or Thesaurus discrete value group (DVG) assigned.</p>
+</li>
+<li>
+<p>The Question must be defined as Collected in Subset.</p>
+</li>
+<li>
+<p>The Question must be included in a non-repeating Question Group.</p>
+</li>
+<li>
+<p>The Question may be enterable or derived but cannot be complex; see <a href="plan.htm#CHDHFEHI">"Using Derivation Procedures"</a> for further information.</p>
+</li>
+</ul>
+<p><a id="OCCRS10150"></a><span class="subhead3">Value(s)&nbsp;</span>From the list of values, select the value or values you want to trigger the rule. The list of values includes all the values defined in the Question's Discrete Value Group (DVG).</p>
+<p><a id="OCCRS10151"></a><span class="subhead3">CPE(s) at which Trigger DCI is Defined&nbsp;</span>This read-only field lists all the CPEs currently defined in this DCI Book as including the selected DCI. The rule you define applies to all occurrences of the DCI in the DCI Book.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CHDDCCEC"></a>
+<div id="OCCRS10152" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><span class="secnum">10.2.7.2</span> Defining an Interval Rule Target</h4>
+<p>The target portion of the rule specifies the Interval or Intervals to be enabled or bypassed to if the rule trigger condition is met.</p>
+<img width="602" height="265" src="img/enh_bk_int_targ.gif" alt="Description of enh_bk_int_targ.gif follows" /><br />
+<a id="sthref763" href="img_text/enh_bk_int_targ.htm">Description of the illustration ''enh_bk_int_targ.gif''</a><br />
+<br />
+<p>To define an Interval rule target, enter values in the following fields:</p>
+<p><a id="OCCRS10153"></a><span class="subhead3">Action&nbsp;</span>From the list of values, select one of the following:</p>
+<ul>
+<li>
+<p><span class="bold">Enable</span>: If you select <span class="bold">Enable</span>, when the data condition defined in the trigger section is met for a patient, the Intervals listed in the <span class="bold">Interval(s)</span> field, all the CPEs within the Intervals, and all unconditional DCIs collected at those CPEs, become expected for that patient.</p>
+</li>
+<li>
+<p><span class="bold">Bypass To</span>: If you select <span class="bold">Bypass To</span>, when the data condition defined in the trigger section is met for a patient, the Interval listed in the <span class="bold">Interval(s)</span> field becomes expected for the patient, and all intervening Intervals&mdash;and any remaining CPEs after, but not including, the CPE where the trigger DCI was collected, in the trigger Interval&mdash;become definitely not expected for the patient. Any remaining DCIs in the trigger CPE are still expected.</p>
+</li>
+</ul>
+<p><a id="OCCRS10154"></a><span class="subhead3">Interval(s)&nbsp;</span>From the list of values, select the name of the Interval or Intervals you want to serve as the target of the rule, or select [Next Interval].</p>
+<ul>
+<li>
+<p><span class="bold">Interval(s) by name</span>: If you have selected an Action of <span class="bold">Enable</span>, you can select any number of target Intervals. If you have selected an Action of <span class="bold">Bypass To</span>, you can select only one target Interval.</p>
+</li>
+<li>
+<p><span class="bold">[Next Interval]</span>: [Next Interval] is the next Interval in which all CPEs have a higher Visit No than the CPE containing the Trigger DCI. This enables you to enable multiple Intervals with a single rule, which may be especially helpful with cycling studies. See <a href="plan.htm#CHDCHGDA">"Next Interval"</a> for further information. This option is not available for rules with the <span class="bold">Bypass To</span> action.</p>
+</li>
+</ul>
+<p>The list of values includes [Next Interval] and all Intervals defined for the current study that meet the following criteria:</p>
+<ul>
+<li>
+<p>The Interval must have CPEs assigned to them directly; for example, a Phase is not included if there are no CPEs assigned directly to the Phase, even if the Phase contains Periods or Sub-Periods with CPEs assigned directly.</p>
+</li>
+<li>
+<p>The Interval's CPEs must all occur after the last CPE containing the trigger DCI, if the trigger DCI is already included in the DCI Book.</p>
+</li>
+<li>
+<p>The first Interval in a study cannot be the target of a rule and so is not included in the list of values.</p>
+</li>
+<li>
+<p>The predefined DEFAULT STUDY PHASE is not available as a target Interval.</p>
+</li>
+</ul>
+<p>The list of values displays Intervals in CPE order. If there are no Intervals that meet these criteria, no Intervals are displayed in the list of values.</p>
+<p><a id="OCCRS10155"></a><span class="subhead3">Rule Description&nbsp;</span>Optional, free text field, up to 200 characters.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CIHFDFDD"></a>
+<div id="OCCRS10156" class="sect2">
+<h3 class="sect2"><span class="secnum">10.2.8</span> Defining DCI Rules</h3>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#CIHFBEEH">Defining a DCI Rule Trigger</a></p>
+</li>
+<li>
+<p><a href="#CIHHCJAF">Defining a DCI Rule Target</a></p>
+</li>
+</ul>
+<p>By defining a DCI rule, you make one or more DCIs conditional, so that they are expected for a patient only if the patient's own data meets the criteria specified in the rule trigger. You are not required to define DCI rules in a flexible study. If you have no DCI rules, all DCIs are expected for all patients assigned to the Book, although entire Intervals may be conditional if you define Interval rules.</p>
+<p>To define rules for a DCI Book, the current study must be defined as flexible in Clinical Study States (under Conduct, then Security).</p>
+<p>You can define rules either before or after defining related DCI Book Pages.</p>
+<div class="infobox-note">
+<p class="notep1">Tip:</p>
+To see all the rule fields at the same time, expand the window by dragging the edge to the right. This does not work the first time you open the window during your session, but if you close the window and reopen it you can then expand it.</div>
+<a id="CIHFBEEH"></a>
+<div id="OCCRS10157" class="sect3">
+<h4 class="sect3"><span class="secnum">10.2.8.1</span> Defining a DCI Rule Trigger</h4>
+<p>The trigger portion of a DCI rule specifies the data condition required to trigger the rule, making the target DCI or DCIs expected for the patient whose data satisfies the condition.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The DCI that contains the trigger must itself be expected in order to make the target DCI expected. If a DCI that is used as a rule trigger is no longer expected, it can no longer trigger expectedness of another DCI even if a triggering data value was entered before the trigger DCI became unexpected.</div>
+<img width="604" height="393" src="img/enh_dci_bk_dci.gif" alt="Description of enh_dci_bk_dci.gif follows" /><br />
+<a id="sthref764" href="img_text/enh_dci_bk_dci.htm">Description of the illustration ''enh_dci_bk_dci.gif''</a><br />
+<br />
+<p>To define an DCI rule trigger, enter values in the following fields:</p>
+<p><a id="OCCRS10158"></a><span class="subhead3">DCI&nbsp;</span>From the list of values, select the DCI that contains the DCM or Question whose value you want to serve as the trigger for the rule. You can query on this field.</p>
+<p>The list of values includes the long and short names of all Provisional and Active DCIs with DCMs defined for the current study, whether they are currently defined in the DCI Book or not. If they are not yet included in the DCI Book, you must add them in the DCI Book Pages window before you can activate the Book.</p>
+<p><a id="OCCRS10159"></a><span class="subhead3">DCM/Qual Value&nbsp;</span>From the list of values, select the DCM that contains the Question whose value you want to serve as the trigger for the rule. You can query on this field.</p>
+<p>The list of values includes all DCMs defined for the selected DCI in the current study that meet the following conditions:</p>
+<ul>
+<li>
+<p>The DCM must include at least one non-repeating Question Group.</p>
+</li>
+<li>
+<p>The DCM cannot be defined as Optional.</p>
+</li>
+<li>
+<p>The DCM must contain at least one DCM Question that has an Internal or Thesaurus DVG attached.</p>
+</li>
+<li>
+<p>If a DCM is defined as having a Qualifying Value, this value must be defined in the DCI Module for this DCM.</p>
+</li>
+<li>
+<p><span class="bold">Use DCI Date?</span> must be selected in the DCI Modules window for the DCM.</p>
+</li>
+</ul>
+<p>If a DCM has a qualifying value, it is listed multiple times; once with each qualifying value specified in a DCI Module for the DCI.</p>
+<p><a id="OCCRS10160"></a><span class="subhead3">Question&nbsp;</span>From the list of values, select the Question whose value you want to serve as the trigger for the rule.</p>
+<p>The list of values includes all Questions defined for the selected DCM and Qualifying Value (if applicable) in the current study that meet the following conditions:</p>
+<ul>
+<li>
+<p>The Question must be of type CHAR (not NUMBER or DATE). See <a href="plan.htm#CHDHFEHI">"Using Derivation Procedures"</a> if you need to use number Questions.</p>
+</li>
+<li>
+<p>The Question must have an Internal or Thesaurus DVG assigned</p>
+</li>
+<li>
+<p>The Question must be defined as Collected in Subset</p>
+</li>
+<li>
+<p>The Question must be included in a non-repeating Question Group.</p>
+</li>
+<li>
+<p>The Question may be enterable or derived but cannot be complex; see <a href="plan.htm#CHDHFEHI">"Using Derivation Procedures"</a> for further information.</p>
+</li>
+</ul>
+<p><a id="OCCRS10161"></a><span class="subhead3">Value(s)&nbsp;</span>From the list of values, select the value or values you want to trigger the rule. The list of values includes all the values defined in the Question's Discrete Value Group (DVG). If there are many values, you may want to use the Find, Select All, or Clear All functions to speed the selection process.</p>
+<p><a id="OCCRS10162"></a><span class="subhead3">CPE(s) at which Trigger DCI is Defined&nbsp;</span>For saved rules, this read-only field lists all the CPEs currently defined in this DCI Book as including the selected DCI. The rule applies to all occurrences of the DCI.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+This field is blank if the trigger DCI is not yet used in the DCI Book.</div>
+</div>
+<!-- class="sect3" -->
+<a id="CIHHCJAF"></a>
+<div id="OCCRS10163" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><span class="secnum">10.2.8.2</span> Defining a DCI Rule Target</h4>
+<p>The target portion of a DCI rule specifies the DCI or DCIs enabled for the patient whose data satisfies the trigger condition. If a patient's data does not satisfy the trigger condition, the target DCI(s) are not expected for the patient.</p>
+<img width="603" height="282" src="img/enh_bk_dci_targ.gif" alt="Description of enh_bk_dci_targ.gif follows" /><br />
+<a id="sthref765" href="img_text/enh_bk_dci_targ.htm">Description of the illustration ''enh_bk_dci_targ.gif''</a><br />
+<br />
+<p>To define a DCI rule target, enter values in the following fields:</p>
+<p><a id="OCCRS10164"></a><span class="subhead3">Enable DCI Within CPE&nbsp;</span>Select this option if you want to enable the target DCI only within the same CPE as the trigger DCI, even if it occurs in other CPEs. Note that:</p>
+<ul>
+<li>
+<p>The trigger DCI can be included in multiple CPEs.</p>
+</li>
+<li>
+<p>The trigger DCI must have a display number less than the target DCI(s) within every CPE in which they both exist.</p>
+</li>
+<li>
+<p>The target DCI can only exist in the same CPE as its trigger DCI. However, a trigger DCI can appear in a CPE that does not include its target.</p>
+</li>
+<li>
+<p>Each target DCI does not need to be included in every CPE that includes the trigger DCI, but each target DCI must be included in at least one CPE that includes the trigger DCI.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+This is enforced only when you validate the Book, not when you are defining the rule.</div>
+</li>
+</ul>
+<p><a id="OCCRS10165"></a><span class="subhead3">Enable DCI Across CPEs&nbsp;</span>Select this option if you want to enable the target DCI in every CPE where it is defined (including in the same CPE as the trigger DCI, if it is included there).</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The trigger DCI must be included in only one CPE.</div>
+<p><a id="OCCRS10166"></a><span class="subhead3">DCI&nbsp;</span>From the list of values, select the DCI or DCIs that you want to enable if the trigger condition is met. The list of values displays the short and long name and the status of each DCI defined for the current study that satisfies the following criteria:</p>
+<ul>
+<li>
+<p>DCIs must not already be the target of another rule.</p>
+</li>
+<li>
+<p>DCIs cannot be the same as the trigger DCI.</p>
+</li>
+</ul>
+<p><a id="OCCRS10167"></a><span class="subhead3">CPE(s) at which Target DCI is Defined&nbsp;</span>This read-only field lists the CPEs that include the target DCI. If you defined multiple target DCIs, the number of target DCIs in each CPE is displayed in parentheses () following the CPE name. If you selected Across CPEs, the rule enables all occurrences of the DCI.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+This field is blank if none of the target DCIs is included yet in the DCI Book.</div>
+<p><a id="OCCRS10168"></a><span class="subhead3">Rule Description&nbsp;</span>This field is optional. You can enter up to 200 characters.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CIHDIJAI"></a>
+<div id="OCCRS10169" class="sect2">
+<h3 class="sect2"><span class="secnum">10.2.9</span> Validating an Enhanced DCI Book</h3>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#CIHJABGA">Validation Checks</a></p>
+</li>
+<li>
+<p><a href="#CIHCDCCB">Viewing Validation Warnings and Errors</a></p>
+</li>
+</ul>
+<p>See also <a href="#CHDDABHG">"Validation Status"</a>.</p>
+<p>The Maintain Enhanced DCI Book window gives you the flexibility to define rules and Book pages in any order by allowing you to temporarily put your Book into an invalid state. However, the book must be valid&mdash;have a validation status of either Success or Warning&mdash;before it can be activated and used. The validation job checks for conflicts between Interval and DCI rules and DCI Book pages, then outputs a list of problems, if any, and sets the validation status for the DCI Book.</p>
+<p>When you set a Book's status to Active and save, the system runs the validation job behind the scenes. If the Book has errors, the activation fails. If the Book has warnings but no errors, the activation succeeds.</p>
+<p>You can also run the job at any time during the Book definition process to help you find and fix problems.</p>
+<p>To run the job, select <span class="bold">Validate DCI Book</span> from the <span class="bold">Special</span> menu in the <span class="bold">Maintain Enhanced DCI Books</span> window. The option is not available if the Book is Active or if the Book's validation status is Success, Warning, or Error. (If the validation status is Warning or Error, no changes have been made to the Book since the validation job was run and you can view the results of the last validation; see <a href="#CIHCDCCB">"Viewing Validation Warnings and Errors"</a>.)</p>
+<a id="CIHJABGA"></a>
+<div id="OCCRS10170" class="sect3">
+<h4 class="sect3"><span class="secnum">10.2.9.1</span> Validation Checks</h4>
+<p>The validation utility tests for conflicts and generates an error or a warning as follows.</p>
+<div id="OCCRS10171" class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref766"></a>
+<h5 class="sect4"><span class="secnum">10.2.9.1.1</span> Error Conditions for Interval Rules</h5>
+<p>The validation tests for the following conditions and raises an error if the requirements are not met, causing a validation status of Error and preventing the Book from being activated:</p>
+<ul>
+<li>
+<p>Each rule's trigger DCI must be defined at one or more book pages.</p>
+</li>
+<li>
+<p>An Interval that is the target of an Interval rule must have at least one Book page defined for at least one of its CPEs.</p>
+</li>
+<li>
+<p>The CPEs in the Interval at which the trigger DCI is collected must all have a lower Visit Number than the first CPE in the target Interval. This does not apply to [Next Interval] rules where the target Interval is implicitly the first Interval whose first CPE follows the CPE containing the trigger DCI.</p>
+</li>
+<li>
+<p>Duplicate Interval rules are not allowed. The system compares the trigger DCI, DCM, and Question and the target action and Interval. If these are all the same in two or more rules, the rules are considered duplicates. The system does not consider the Question value or CPEs.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+This rule is enforced during rule definition, not validation.</div>
+</li>
+<li>
+<p>A <span class="bold">Bypass To</span> Interval rule can have only one Interval as a target, and that target cannot be Next Interval.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+This rule is enforced during rule definition, not validation.</div>
+</li>
+</ul>
+</div>
+<!-- class="sect4" -->
+<div id="OCCRS10172" class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref767"></a>
+<h5 class="sect4"><span class="secnum">10.2.9.1.2</span> Error Conditions for DCI Rules</h5>
+<p>The validation tests for the following conditions and raises an error if the requirements are not met, causing a validation status of Error and preventing the Book from being activated:</p>
+<ul>
+<li>
+<p>Each rule's trigger DCI must be defined at one or more book pages.</p>
+</li>
+<li>
+<p>Each DCI rule must have at least one Book page defined for each of its target DCIs.</p>
+</li>
+<li>
+<p>For an "Enable Within CPE" DCI rule, the trigger DCI must have a display number lower than all the target DCIs.</p>
+</li>
+<li>
+<p>For an "Enable Within CPE" DCI rule, each target DCI must be included in at least one CPE that includes the trigger DCI (but each target DCI does not need to be included in every CPE that includes the trigger DCI).</p>
+</li>
+<li>
+<p>For an "Enable Within CPE" DCI rule, the target DCI(s) cannot exist in a CPE without the trigger DCI.</p>
+</li>
+<li>
+<p>For an "Enable Across CPEs" DCI rule, the trigger DCI must be included in only one CPE.</p>
+</li>
+<li>
+<p>For an "Enable Across CPEs" DCI rule, each target DCI must be included only in CPEs that have a higher Display number in the DCI Book than the CPE that includes the trigger DCI.</p>
+</li>
+<li>
+<p>A DCI can be the target of only one rule.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+This rule is enforced during rule definition, not validation.</div>
+</li>
+</ul>
+</div>
+<!-- class="sect4" -->
+<div id="OCCRS10173" class="sect4"><a id="sthref768"></a>
+<h5 class="sect4"><span class="secnum">10.2.9.1.3</span> Warning Conditions</h5>
+<p>The following conditions constitute warnings. If the Book has one or more warnings but no errors, the validation job generates a validation status of Warning and the Book can be activated. However, you may want to fix these problems.</p>
+<ul>
+<li>
+<p>Start Page numbers are consistent with ascending CPE number order and there are no gaps among Start Page numbers with the same seed. Any Start Page numbers that are out of order or have gaps are reported.</p>
+<p>If you want to fix out-of-order pages or gaps, you can run the Renumber Book Pages job on a set of pages or on the whole Book; go to the <span class="bold">Special</span> menu in the <span class="bold">DCI Book Navigator</span> window.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If the current study is not defined as flexible, the DCI Book has no rules and therefore the Start Page number checks are the only ones that can generate a warning. The validation status of Books in nonflexible studies is always Not Applicable. To see if there are any Start page number-related warnings, select <span class="bold">View Validation Results</span> from the <span class="bold">Special</span> menu.</div>
+</li>
+<li>
+<p>For an "Enable Within CPE" DCI rule, a trigger DCI exists at a CPE without any of the target DCIs.</p>
+</li>
+<li>
+<p>For an "Enable Across CPEs" DCI rule, a target DCI is not included in any CPEs other than the one that includes the trigger DCI.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect4" --></div>
+<!-- class="sect3" -->
+<a id="CIHCDCCB"></a>
+<div id="OCCRS10174" class="sect3">
+<h4 class="sect3"><span class="secnum">10.2.9.2</span> Viewing Validation Warnings and Errors</h4>
+<p>The validation utility tests all rules and Book pages even after finding an error and produces a complete list of all warnings and errors, including information on the specific rules and pages involved.</p>
+<p>To see this list, which appears as a text box on screen, select <span class="bold">View Validation Results</span> from the <span class="bold">Special</span> menu in the <span class="bold">Maintain Enhanced DCI Book</span> window. You can copy the text and paste it into a file to print it. The results persist until the validation job is run again for the Book.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CIHFJHAJ"></a>
+<div id="OCCRS10175" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">10.2.10</span> Defining DCI Book Constraints</h3>
+<p>Access the DCI Book Constraints window by clicking the <span class="bold">DCI Book Constraints</span> button on the DCI Books window. (From the <span class="bold">Definition</span> menu, select <span class="bold">DCIs</span>, then choose <span class="bold">Enhanced DCI Books</span> or <span class="bold">DCI Books</span>. The functionality is the same for both types of Book.)</p>
+<img width="536" height="392" src="img/dci_bk_constr.gif" alt="Description of dci_bk_constr.gif follows" /><br />
+<a id="sthref769" href="img_text/dci_bk_constr.htm">Description of the illustration ''dci_bk_constr.gif''</a><br />
+<br />
+<p>The DCI Book Constraints window includes all DCIs assigned to the DCI Book, each marked "Planned in Book."</p>
+<p>Use the Constraints window to do the following:</p>
+<ul>
+<li>
+<p>You can make one or more DCIs already assigned to the Book available for unplanned use as well by selecting <span class="bold">Unplanned Use Allowed</span> for the DCI.</p>
+</li>
+<li>
+<p>You can specify that all Study DCIs that are not listed in the Constraints table can be used to create RDCIs for unplanned events by selecting <span class="bold">Unplanned Use Allowed if Not Listed Below</span>.</p>
+</li>
+<li>
+<p>If you have not allowed unplanned use of all unlisted Study DCIs, you can allow unplanned use for selected Study DCIs by adding them and selecting <span class="bold">Unplanned Use Allowed</span>. Click in the field to open the list of values.</p>
+<p>If the DCI Book is Active, this list of values includes only Active DCIs that do not have any Retired DCMS. If the DCI Book is Provisional, then this list of values includes both Active and Provisional DCIs that do not have any Retired DCMs.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The settings for Unplanned Use apply only to RDC data entry, and more information is available in the RDC documentation. In Oracle Clinical data entry, this concept of unplanned pages does not apply as it is not possible to enter a DCI for any visit other than those for which it is defined as a DCI page in a DCI Book. However, in Oracle Clinical you can use a subevent_number greater than zero to enter unplanned events.</div>
+</li>
+<li>
+<p>For each DCI, in the <span class="bold">Preferred Version</span> field specify which DCI Form Version to use for data entry in RDC Onsite or select CURRENT so that whatever version is current at runtime is used. This value is also used in migration.</p>
+<p>See <a href="dciforms.htm#CHDFDFDI">"Maintaining Form Layout Versions"</a> and <a href="dciforms.htm#CHDBDGAF">"Migrating Data to New Oracle Clinical DCI Form Versions"</a> for more details.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CIHDEEJE"></a>
+<div id="OCCRS10176" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">10.3</span> Calculating DCI and Interval Expectedness for Patients</h2>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#CHDCBHAA">Automatic Expectedness Calculation for Patients</a></p>
+</li>
+<li>
+<p><a href="#CIHBIEJH">When and How to Run Expectedness Calculation Manually</a></p>
+</li>
+</ul>
+<p>In order to accurately reflect which DCIs and Intervals are expected for each patient in real time in RDC Onsite data entry, Oracle Clinical automatically recalculates expectedness in almost every situation where it might change for a patient.</p>
+<p>There are just a few situations in which you should run the job manually.</p>
+<a id="CHDCBHAA"></a>
+<div id="OCCRS10177" class="sect2">
+<h3 class="sect2"><span class="secnum">10.3.1</span> Automatic Expectedness Calculation for Patients</h3>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#CIHHFEIH">Automatic Incremental Expectedness Calculation</a></p>
+</li>
+<li>
+<p><a href="#CIHEAJBF">Automatic Full Expectedness Calculation</a></p>
+</li>
+</ul>
+<a id="CIHHFEIH"></a>
+<div id="OCCRS10178" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><span class="secnum">10.3.1.1</span> Automatic Incremental Expectedness Calculation</h4>
+<p>The incremental mode of the expectedness calculation job is sufficient for updating expectedness due to changes in patient data. It begins at the patient's earliest CPE with data changes that might impact expectedness&mdash;that is, data entered for a Question or DCM that is defined as a rule trigger.</p>
+<p>The system automatically runs incremental expectedness processing during <a href="#CIHBDJEE">Manual Data Entry</a> and <a href="#CIHEAFIH">Batch Data Load and Batch Data Delete</a>.</p>
+<p><a id="CIHBDJEE"></a><a id="OCCRS10179"></a><span class="subhead3">Manual Data Entry&nbsp;</span>The system automatically runs incremental expectedness calculation during data entry in Oracle Clinical and RDC, updating the expectedness of DCIs and Intervals for the patient if required. This occurs when the user saves data.</p>
+<p>In RDC it occurs at every data entry transaction and, if the patient requires recalculation, as soon as a user opens a CRF for a patient.</p>
+<p><a id="CIHEAFIH"></a><a id="OCCRS10180"></a><span class="subhead3">Batch Data Load and Batch Data Delete&nbsp;</span>For Batch Data Load and Batch Data Delete, the system performs the expectedness calculation immediately after completing the main transactions to minimize locking time. Each patient with modified data is processed by a separate transaction.</p>
+<p><a id="OCCRS10181"></a><span class="subhead3">Other Types of Data Changes&nbsp;</span>The system also recalculates expectedness as follows:</p>
+<ul>
+<li>
+<p><span class="bold">Mass Changes</span>: Every Received DCI is a single transaction which includes the immediate expectedness calculation, if needed.</p>
+</li>
+<li>
+<p><span class="bold">Patient Transfers</span>: All changes for a single Patient transfer are performed as part of the transfer transaction, including the processing of multiple patients in an ongoing transfer.</p>
+</li>
+<li>
+<p><span class="bold">Derivation Procedures</span>: Oracle Clinical processes the changes for each Received DCI as a transaction. The expectedness calculation is performed as part of these transactions if the Derivation Procedure derives a trigger Question. This applies whether the Derivation Procedures are run in Batch Validation, Execute Single Procedures, or as Online procedures from RDC.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<a id="CIHEAJBF"></a>
+<div id="OCCRS10182" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><span class="secnum">10.3.1.2</span> Automatic Full Expectedness Calculation</h4>
+<p>Full expectedness calculation performs a complete recalculation of expectedness, beginning at the patient's first CPE and discarding all previous results. The system uses it when a patient is assigned or reassigned to a DCI_Book.</p>
+<p>Full mode is required and automatically run as follows:</p>
+<ul>
+<li>
+<p>Immediately after a user assigns or reassigns patients to a DCI Book using the user interface</p>
+</li>
+<li>
+<p>At the end of batch validation in production mode, if batch validation detects patient book assignment changes made using a Validation or Derivation procedure. In addition, any Full processing that may have been left incomplete due to a system failure is detected and processed.</p>
+</li>
+<li>
+<p>At the end of an online Procedure execution that detects patient book assignment changes</p>
+</li>
+<li>
+<p>During the first data entry transaction (including opening a CRF in the RDC Surround) for any patient marked as requiring expectedness recalculation</p>
+</li>
+</ul>
+<p>Expectedness calculation is <span class="italic">not</span> run automatically in the following situations:</p>
+<ul>
+<li>
+<p>For test mode patients after their assigned DCI Book is successfully revalidated, because this may happen many times in test mode during DCI Book definition</p>
+</li>
+<li>
+<p>Following a batch validation in test mode, even if patient book assignments have been changed</p>
+</li>
+<li>
+<p>In production mode, when an active DCI Book has been made Provisional and then reactivated</p>
+</li>
+<li>
+<p>When a patient was assigned to a different Book while "frozen" and is subsequently unfrozen</p>
+</li>
+</ul>
+<p>You may want to run expectedness calculation manually in these situations.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CIHBIEJH"></a>
+<div id="OCCRS10183" class="sect2">
+<h3 class="sect2"><span class="secnum">10.3.2</span> When and How to Run Expectedness Calculation Manually</h3>
+<p>This section includes the following topics:</p>
+<ul>
+<li>
+<p><a href="#CIHHCJGI">When to Run Expectedness Calculation Manually</a></p>
+</li>
+<li>
+<p><a href="#CIHFBDJI">How to Run Expectedness Calculation Manually</a></p>
+</li>
+</ul>
+<a id="CIHHCJGI"></a>
+<div id="OCCRS10184" class="sect3">
+<h4 class="sect3"><span class="secnum">10.3.2.1</span> When to Run Expectedness Calculation Manually</h4>
+<p>Because the system runs expectedness calculation automatically each time patient data is updated and after patient book assignment changes, there are very few situations in which you need to explicitly calculate expectedness. They are:</p>
+<ul>
+<li>
+<p>After activating an enhanced DCI Book that has patients assigned</p>
+</li>
+<li>
+<p>After "unfreezing" patients whose assigned book was activated while they were frozen</p>
+</li>
+<li>
+<p>After making an existing study flexible in the Clinical Study States window: you must then set any active books to Provisional and reactivate them, and then run Calc Expectedness in Test for all patients and all books. (If a nonflexible study has production data you cannot make the study flexible.)</p>
+</li>
+</ul>
+<p>In addition, if there is a system failure during a batch data load or batch data delete, expectedness calculation may not have completed. You may want to run the job manually. If you do not run the job manually, and if the book is valid, the system will run the job automatically for each patient during the next data entry transaction for the patient or the next batch validation.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Run Calc Expectedness in Test or Prod in the same situations for an Enhanced DCI Book with no rules defined as you would for a Book with rules to ensure that the correct CRFs are displayed for patients in RDC Onsite.</div>
+</div>
+<!-- class="sect3" -->
+<a id="CIHFBDJI"></a>
+<div id="OCCRS10185" class="sect3">
+<h4 class="sect3"><span class="secnum">10.3.2.2</span> How to Run Expectedness Calculation Manually</h4>
+<p>The test and production modes of the job are available as follows:</p>
+<ul>
+<li>
+<p>The test mode option is available if the DCI Book has a status of Active or a status of Provisional and a validation status of Warning or Success.</p>
+</li>
+<li>
+<p>The production mode option is available only if the DCI Book has a status of Active.</p>
+</li>
+</ul>
+<p>To run the job:</p>
+<ol>
+<li>
+<p>Select <span class="bold">Calc Expectedness in Test</span> or <span class="bold">Calc Expectedness in Prod</span> (to run on test or production patient data) from the <span class="bold">Special</span> menu in the <span class="bold">Maintain Enhanced DCI Books</span> window.</p>
+</li>
+<li>
+<p>In the pop-up window, select one of the following:</p>
+<ul>
+<li>
+<p><span class="bold">All Patients</span>: This option forces full expectedness recalculation for all patients. This option should never be necessary but is provided just in case.</p>
+</li>
+<li>
+<p><span class="bold">Only Patients Requiring Recalculation</span> runs full expectedness recalculation only on patients who have been identified as requiring recalculation: those who have been "unfrozen" since the DCI Books was last activated, or whose data expectedness has not been successfully calculated since the Book was last activated.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>In the pop-up window, select one of the following:</p>
+<ul>
+<li>
+<p><span class="bold">Current Book Only</span></p>
+</li>
+<li>
+<p><span class="bold">All Books in Current Study</span></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>. The job runs.</p>
+</li>
+</ol>
+<p>When the job finishes, a message appears saying whether or not the calculation job has run successfully.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CIHFGHFI"></a>
+<div id="OCCRS10187" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">10.4</span> Data Entry and Expectedness</h2>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#CHDIIAII">Data Entry in Remote Data Capture Onsite</a></p>
+</li>
+<li>
+<p><a href="#CHDIAFEI">Data Entry in Oracle Clinical</a></p>
+</li>
+</ul>
+<a id="CHDIIAII"></a>
+<div id="OCCRS10188" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">10.4.1</span> Data Entry in Remote Data Capture Onsite</h3>
+<p>Remote Data Capture (RDC) Onsite displays blank CRFs in the Casebooks page only if the corresponding DCI is <span class="italic">expected</span> for the patient. In addition, when a data entry operator clicks <span class="bold">Next</span> in the data entry window, the next CRF expected for that patient in the current CPE appears, regardless of which CRFs may be expected for other patients in the same study.</p>
+<p>DCIs that are the target of a rule are expected for a patient only when:</p>
+<ul>
+<li>
+<p>The Interval containing their CPE is expected for the patient.</p>
+</li>
+<li>
+<p>The trigger condition of the DCI rule is met for the patient.</p>
+</li>
+<li>
+<p>The status of the patient's RDCI for the trigger DCI is Batch Loaded, Pass 1 Complete, or above.</p>
+</li>
+<li>
+<p>The patient is not frozen.</p>
+</li>
+<li>
+<p>The RDCI is at subevent 0.</p>
+</li>
+<li>
+<p>The DCI that contains the trigger is expected.</p>
+</li>
+</ul>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The Blank Casebook report, including the version with header information for a particular patient, does not consider expectedness for the patient. It includes all DCIs in all Intervals, whether or not they are expected for the patient at the time the report is generated.
+<p>If sites are printing the blank casebook and using it for data entry, be sure to provide instructions for entering data for the correct DCI Book pages. You may want to provide a visual cue for trigger Questions in the graphic layout.</p>
+</div>
+</div>
+<!-- class="sect2" -->
+<a id="CHDIAFEI"></a>
+<div id="OCCRS10189" class="sect2">
+<h3 class="sect2"><span class="secnum">10.4.2</span> Data Entry in Oracle Clinical</h3>
+<p>If a DCI Book with rules is used for manual data entry in Oracle Clinical:</p>
+<ul>
+<li>
+<p><span class="bold">All DCI Book pages are available</span> for data entry whether they are expected for a patient or not. You must provide instructions to data entry operators to ensure that they enter data for the correct DCI Book pages.</p>
+</li>
+<li>
+<p><span class="bold">Interval and DCI Rules are triggered</span> if data entered through Oracle Clinical meets the defined trigger conditions. If you use a mix of data entry methods in a single study, DCIs and Intervals that become expected for a patient due to data entered in Oracle Clinical are displayed as expected for the patient in RDC.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CIHHDIHF"></a>
+<div id="OCCRS10190" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">10.5</span> Assigning Patients to a DCI Book</h2>
+<p>To assign patients to a DCI Book, in the Oracle Clinical Navigation tree select <span class="bold">Design</span>, then <span class="bold">Patient Positions</span>, then <span class="bold">Patients</span>, and then click <span class="bold">Patient Positions</span>, and then click <span class="bold">Assign DCI Book</span>; see <a href="patients.htm#BABBAHFA">"Assigning Patient Positions to DCI Books"</a> for more information.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+For flexible studies, it is <span class="bold">required</span> that all patients in the study be assigned to a DCI Book. Unassigned patients are not retrieved in RDC Onsite.
+<p>If a patient's book assignment is removed while a user is working with that patient's data in RDC Onsite, <span class="bold">errors can result</span> until the user issues another query, refreshing the set of patients retrieved.</p>
+</div>
+</div>
+<!-- class="sect1" -->
+<a id="CIHHAJHF"></a>
+<div id="OCCRS10191" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">10.6</span> Defining a Traditional DCI Book</h2>
+<p>You use a <a id="sthref770"></a>DCI Book to<a id="sthref771"></a> sequence the order of DCIs and their default keys during the data entry login process. This sequencing simplifies the process of entering CRFs, which are themselves sequenced in a predefined order. Most companies enter CRF information from a clinical record book organized in CPE <a id="sthref772"></a>sequence. You can use Oracle Clinical's DCI Book feature to create the electronic equivalent, with the DCIs, which correspond to the CRF pages, ordered as the information in the clinical record book appears. In this way, a DCI Book is like an index to the clinical record book. (When you add a DCI to the DCI Book Pages, the system automatically adds it to the DCI Book Constraints and marks it as "Planned in Book." You can specify DCI version usage for a book, and set a policy for which DCIs can or cannot be used for unplanned events. See <a href="#CIHHAJHF">"Defining a Traditional DCI Book"</a>. See also <a href="#CIHHJAHH">"Using CRF Page Tracking"</a>, for instructions on enabling DCI Book page tracking.)</p>
+<p>A study can have many<a id="sthref773"></a> DCI Books for different purposes, or just one for the whole study. You give each DCI Book a unique name. A login entry operator chooses the DCI Book appropriate for a CPE's CRFs.</p>
+<p>You can define the pages of the <a id="ABC1122885"></a>DCI Book by selecting the <span class="bold">DCI Book Pages</span> button to invoke the DCI Book Pages window.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Oracle recommends not creating non-sequential CPE numbering for pages in DCI books. Among other problems, non-sequential CPEs do not display in RDC.</div>
+<div id="OCCRS10192" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref774"></a>
+<h3 class="sect2"><span class="secnum">10.6.1</span> Creating a DCI Book</h3>
+<p>You define a <a id="sthref775"></a>DCI Book by navigating to <span class="bold">Definition</span>, then <span class="bold">DCIs</span>, and <span class="bold">DCI Book</span>. The Maintain DCI Book form opens, displaying the DCI Books window. Enter the name and a description of the DCI Book. If you define more than one DCI Book, you can select one as the default to offer when you choose a DCI Book at login.</p>
+<p>You give each DCI Book page a page number, the name of a DCI, and, optionally, the name of a CPE<a id="sthref776"></a>. Omitting the CPE might be useful when you have a set of optional<a id="sthref777"></a> DCIs not pre-allocated to particular CPEs.</p>
+<p>The<a id="sthref778"></a> page numbers are the page numbers of the first page of the CRF that corresponds to the DCI. The page numbers must be unique; if you have multi-page CRFs corresponding to a single DCI, the page numbers will not be continuous. You do not have to enter the pages sequentially, but the form sequences them in ascending page order when you re-query.<a id="sthref779"></a> See the following section for enabling CRF page tracking in a study created in Oracle Clinical 3.1 or later.</p>
+<p>When you add a DCI to DCI Book pages, the system also adds it to the DCI Book Constraints table.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CHDFJADB"></a>
+<div id="OCCRS10193" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">10.6.2</span> Defining DCI Book Constraints</h3>
+<p>This functionality is the same in traditional and enhanced DCI Books; see <a href="#CIHFJHAJ">"Defining DCI Book Constraints"</a> for information.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CIHHJAHH"></a>
+<div id="OCCRS10194" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">10.7</span> Using CRF Page Tracking</h2>
+<p>Oracle Clinical provides the capability to track each page of a paper CRF online. This capability has three primary benefits. First, it allows you to identify when only a page or two from a document is missing (rather than the entire CRF). The missing page can then either be located or explicitly identified on line as missing. Second, it allows discrepancies to be identified as being on a particular page. This would be helpful if you were discussing a discrepancy with someone by phone. Third, if you are scanning CRFs into the system, the concept of pages (versus documents) becomes very important. Scanners enter documents a page at a time, so it is the concept of a page that is central.</p>
+<p>Using this feature requires enabling options at the following Oracle Clinical levels, then the tasks required at each level are described in detail in separate sections:</p>
+<ul>
+<li>
+<p>Study Definition</p>
+</li>
+<li>
+<p>DCI Definition</p>
+</li>
+<li>
+<p>DCI Book Definition</p>
+</li>
+<li>
+<p>Patient Enrollment or Patient Maintenance</p>
+</li>
+<li>
+<p>Data Entry</p>
+</li>
+</ul>
+<a id="CIHDGAII"></a>
+<div id="OCCRS10195" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">10.7.1</span> Enabling CRF Page Tracking for a Study</h3>
+<p>Page tracking must be enabled as part of the definition of a study. You cannot enable page tracking in a study created prior to Oracle Clinical Release 3.1 if data has been entered for that study or if the study is defined as Flexible.</p>
+<p>To include page tracking as part of the study definition, you must select the <span class="bold">Enable CRF Page Tracking</span> box on the Clinical Study States form. To access the Clinical Study States form, select <span class="bold">Conduct</span>, choose <span class="bold">Security</span>, then select <span class="bold">Clinical Study States</span>.</p>
+</div>
+<!-- class="sect2" -->
+<div id="OCCRS10196" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref780"></a>
+<h3 class="sect2"><span class="secnum">10.7.2</span> Defining DCIs to Track CRF Pages</h3>
+<p>Page tracking actually happens at the DCI level, since the DCI is the equivalent of the CRF. Once CRF page tracking is enabled for the study, complete the following fields for each DCI that you want to track pages for. The fields provide Oracle Clinical with the specifications needed to recognize the information expected on a particular CRF page.</p>
+<p><a id="OCCRS10197"></a><span class="subhead3">CRF Page Tracking Enabled?&nbsp;</span>specifies whether page tracking is enabled for this DCI. If page tracking was not enabled at the study level, you cannot enable it here.</p>
+<p>Page tracking for this DCI is not enabled if this parameter is not selected. However, you may choose to complete the remaining fields in preparation for using page tracking at a future time.</p>
+<p><a id="OCCRS10198"></a><span class="subhead3">Default Page Numbering Scheme&nbsp;</span>establishes the default page numbering scheme that Oracle Clinical will use for the pages of an expected DCI&mdash;a DCI that is specified in the default DCI Book for the specific CPE. This numbering scheme describes how each page of the CRF will be designated in the DCI. This field has a list of values with the following entries:</p>
+<ul>
+<li>
+<p><span class="bold">SEQUENTIAL</span> &ndash; Designate each page by a sequential integer, for example, 1, 2, 3.</p>
+</li>
+<li>
+<p><span class="bold">ALPHANUMERIC</span> &ndash; Designate each page by an integer plus an alphabetic suffix; for example, 1a, 1b, 1c.</p>
+</li>
+<li>
+<p><span class="bold">NUMERIC</span> &ndash; Designate each page by an integer plus a numeric suffix; for example, 1.1, 1.2, 1.3.</p>
+</li>
+<li>
+<p><span class="bold">USER-DEFINED</span> &ndash; A sequence defined by a user-defined database function.</p>
+</li>
+</ul>
+<p>For the user to be able to select the user-defined numbering scheme, its value needs to have been entered in the installation reference codelist CRF PAGE NUMBERING SCHEME<a id="sthref781"></a>.</p>
+<p><a id="OCCRS10199"></a><span class="subhead3"><span class="bolditalic">Unplanned Page Numbering Scheme</span>&nbsp;</span>establishes the default page numbering scheme that Oracle Clinical will use for the pages of an unplanned DCI&mdash;a DCI that is unexpected. A DCI is regarded as expected if it is in a DCI Book, has a clinical planned event assigned and an actual event number of zero. Anything else is regarded as unexpected. This numbering scheme describes how each page of the CRF will be designated in the DCI. This field has a list of values with the following entries: <code dir="ltr">SEQUENTIAL</code>, <code dir="ltr">ALPHANUMERIC</code>, <code dir="ltr">NUMERIC</code>.</p>
+<p>It is possible to assign an event to a DCM within an unplanned DCI. In this case, the system uses the unplanned scheme for recording pages for that RDCM.</p>
+<p><a id="OCCRS10200"></a><span class="subhead3"><span class="bolditalic">Expected No. of Pages</span>&nbsp;</span>establishes how many physical pages will be in the DCI. This number cannot be changed once production data has been collected with the DCI.</p>
+<p>Oracle Clinical does not require you to invoke page tracking for every DCI used in a study with page tracking enabled. You can disable page tracking for an individual DCI. To access the Data Collection Instruments form, from the <span class="bold">Definition</span> menu, select <span class="bold">DCIs</span>, then choose <span class="bold">DCIs</span>.</p>
+<p>If your DCI consists of one DCM and is complete on a single page or multiple DCMs all complete on one page, then no further definition is required for CRF page tracking. However, if any DCMs span multiple pages, then you must complete a Page Definition form that describes what Question to expect at the end of each page of each DCM in the DCI. To learn about these definitions, read the next sections.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CIHCBJHC"></a>
+<div id="OCCRS10201" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">10.7.3</span> Defining DCMs to Track CRF Pages</h3>
+<p>If a DCI spans multiple pages, then Oracle Clinical must be able to determine which page every piece of information falls on. The first step is to specify the pages on which each DCM falls. Use the Data Collection Modules window on the DCI form. The CRF page tracking fields on this form are:</p>
+<p><a id="OCCRS10202"></a><span class="subhead3">Start Page&nbsp;</span>The DCI page on which the DCM begins. All pages are given relative to the DCI, and the value entered in this field is validated to check whether this value conforms to the numbering scheme defined for that DCI in the DCI form.</p>
+<p><a id="OCCRS10203"></a><span class="subhead3">End Page&nbsp;</span>The DCI page on which the DCM ends. All pages are given relative to the DCI.</p>
+<p>To provide the additional information Oracle Clinical requires:</p>
+<ol>
+<li>
+<p>From the <span class="bold">Definition</span> menu, select <span class="bold">DCIs</span>, then choose <span class="bold">DCIs</span>.</p>
+</li>
+<li>
+<p>Select the DCI.</p>
+</li>
+<li>
+<p>Click the <span class="bold">DCI Modules</span> button.</p>
+</li>
+<li>
+<p>Select the DCM.</p>
+</li>
+<li>
+<p>Scroll the form horizontally until you reach the fields <span class="bold">Start Page</span> and <span class="bold">End Page</span>.</p>
+</li>
+<li>
+<p>Complete these fields using the descriptions provided above.</p>
+</li>
+<li>
+<p>Save</p>
+</li>
+<li>
+<p>Click the <span class="bold">Back</span> button to return to the DCI form.</p>
+</li>
+</ol>
+<p>To expand additional DCIs, repeat Steps 2-7.</p>
+<div id="OCCRS10204" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref782"></a>
+<h4 class="sect3"><span class="secnum">10.7.3.1</span> Defining DCM Pages</h4>
+<p>When a DCM spans multiple DCI pages, Oracle Clinical must know where on the page the information splits. To do this, specify the final Question on the page on the Data Collection Module Pages window.</p>
+<p>This procedure is only required for DCMs that span multiple pages. Note that you do not provide information about the last page of the DCM. The system assumes that Questions coming after the last Question on the previous page are on the last page.</p>
+<p>The CRF page tracking fields on this form are:</p>
+<div class="inftblinformal">
+<table class="cellalignment36" title="CRF page tracking fields on the Data Collection Module Pages window" summary="The CRF page tracking fields on this form." dir="ltr">
+<thead>
+<tr class="cellalignment27">
+<th class="cellalignment37" id="r1c1-t26">Field</th>
+<th class="cellalignment37" id="r1c2-t26">Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r2c1-t26" headers="r1c1-t26">Page Relative to DCI</td>
+<td class="cellalignment33" headers="r2c1-t26 r1c2-t26">The DCI page for which you are providing information. All pages are given relative to the DCI and are defaulted by the system.</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r3c1-t26" headers="r1c1-t26">Question Name</td>
+<td class="cellalignment33" headers="r3c1-t26 r1c2-t26">The name of the Question that appears last on the page.</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r4c1-t26" headers="r1c1-t26">Question Occurrence Sn</td>
+<td class="cellalignment33" headers="r4c1-t26 r1c2-t26">The Question Group occurrence sequence number that appears last on the page.</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r5c1-t26" headers="r1c1-t26">Last Repeat on Page</td>
+<td class="cellalignment33" headers="r5c1-t26 r1c2-t26">If this Question belongs to a repeating Question Group, that is the last repeat instance that appears on the page. Leave this space blank if the Question is not repeating.</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r6c1-t26" headers="r1c1-t26">Repeat?</td>
+<td class="cellalignment33" headers="r6c1-t26 r1c2-t26">Indicates whether this Question belongs to a repeating Question Group; defaulted by the system.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" -->
+<p>To provide the additional information Oracle Clinical requires:</p>
+<ol>
+<li>
+<p>In the Data Collection Modules window of the DCI form, place the cursor in the row of the DCM you need to expand.</p>
+</li>
+<li>
+<p>Click the <span class="bold">DCM Module Pages</span> button.</p>
+</li>
+<li>
+<p>Place the cursor in the first row of the page.</p>
+</li>
+<li>
+<p>Scroll the form horizontally until you reach the final fields on the form.</p>
+</li>
+<li>
+<p>Complete these fields using the field descriptions above.</p>
+</li>
+<li>
+<p>Repeat Steps 3-5 for each page.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Back</span> button to return to the DCM form.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<div id="OCCRS10205" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref783"></a>
+<h3 class="sect2"><span class="secnum">10.7.4</span> Defining DCI Books to Track CRF Pages</h3>
+<p>The DCI Book is the vehicle for applying the page tracking features of Oracle Clinical to data entry. Once you establish the page tracking criteria for each DCI, group them in study-specific DCI Books. Each study has a default DCI Book. Each patient is also linked to a DCI Book. If you do not explicitly assign a patient to a DCI Book, Oracle Clinical assigns that patient to the default DCI Book for the study. You can change to a different DCI Book in data entry. <a href="#CIHHAJHF">"Defining a Traditional DCI Book"</a> further describes defining DCI Books without page tracking.</p>
+<div id="OCCRS10206" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref784"></a>
+<h4 class="sect3"><span class="secnum">10.7.4.1</span> Creating the DCI Book</h4>
+<p>DCI Books are flexible and allow you to truly match your physical CRF book to your online DCIs. As with the DCI definition, you must complete a series of drill-down forms to describe the configuration of the DCI Book to Oracle Clinical. Begin with the Maintain DCI Book form.</p>
+<p>To create a DCI Book definition:</p>
+<ol>
+<li>
+<p>From the <span class="bold">Definition</span> menu, select <span class="bold">DCIs</span>, then choose <span class="bold">DCI Books</span>.</p>
+</li>
+<li>
+<p>Complete the fields:</p>
+<ul>
+<li>
+<p><span class="bold">Status</span> &ndash; Database status for the DCI Book; controls the usage and attributes. Choices are P for Provisional, A for Active, or R for Retired. P is the default value for a newly created DCI Book. Since DCI Books are now definitional elements&mdash;accurate page tracking is dependent on them&mdash;you cannot delete them once you use them to enter production data.</p>
+</li>
+<li>
+<p><span class="bold">Status Comment</span> &ndash; Optional field allowing you to comment on changes made to the <span class="bold">Status</span> field.</p>
+</li>
+<li>
+<p><span class="bold">Retirement Reason</span> &ndash; Optional field allowing you to comment if you retire a DCI Book.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Save. To exit the form without specifying CRF page tracking information, select <span class="bold">Exit</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<div id="OCCRS10207" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref785"></a>
+<h4 class="sect3"><span class="secnum">10.7.4.2</span> Defining DCI Book Pages</h4>
+<p>If you plan to utilize CRF page tracking, you must now provide additional information about each DCI Book page. Use the following field descriptions to understand how the entry in each field relates to CRF page tracking:</p>
+<div class="inftblinformal">
+<table class="cellalignment36" title="Fields in the CRF page tracking window" summary="Field descriptions and relationship to CRF page tracking: Display, Start Page #, DCI Names, Clinical Planned Event." dir="ltr">
+<thead>
+<tr class="cellalignment27">
+<th class="cellalignment37" id="r1c1-t27">Field</th>
+<th class="cellalignment37" id="r1c2-t27">Relationship to CRF page tracking</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r2c1-t27" headers="r1c1-t27">Display #</td>
+<td class="cellalignment33" headers="r2c1-t27 r1c2-t27">Number that represents the DCI's place in the sequence of the DCI Book. The list does not have to be sequential; you can rearrange it so that DCI #4 precedes #2.</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r3c1-t27" headers="r1c1-t27">Start Page #</td>
+<td class="cellalignment33" headers="r3c1-t27 r1c2-t27">Page number assigned to the first page of the physical CRF. Since this number matches the actual number on the physical CRF, the format of this number can be different for each DCI in the book. It is also editable. The only restriction is that there cannot be two identical entries within the column.</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r4c1-t27" headers="r1c1-t27">DCI Name</td>
+<td class="cellalignment33" headers="r4c1-t27 r1c2-t27">Name of the DCI.</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r5c1-t27" headers="r1c1-t27">Clinical Planned Event</td>
+<td class="cellalignment33" headers="r5c1-t27 r1c2-t27">Clinical planned event with which this DCI is to be used.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" -->
+<p>To define DCI Book pages:</p>
+<ol>
+<li>
+<p>In the DCI Book form, place the cursor in the row of the DCI Book you need to expand.</p>
+</li>
+<li>
+<p>Click the <span class="bold">DCI Book Pages</span> button.</p>
+</li>
+<li>
+<p>Add a row to this form for each DCI that should be part of this book. Use the field descriptions above and field help to complete each field.</p>
+</li>
+</ol>
+<p>It is important to understand the relationship between the <span class="bold">Display #</span> and the <span class="bold">Start Page #</span> fields. The display number describes the relative position of the DCI within the book. It is always an integer, but integers in this column do not have to be sequential. The Start Page Number is specific to the DCI. It describes the actual first page of the physical CRF, and each entry in this column can be based on a unique page numbering format.</p>
+<p>When you enter a new DCI, if you are using a sequential, numeric, alphanumeric, or user-defined format, Oracle Clinical also calculates how many pages were in the previous DCI and generates an entry in the <span class="bold">Start #</span> field. You can change this entry, but you can only use the numbering scheme defined for that DCI; if the Start Page Number is in a different format from the DCI's numbering scheme, the system gives a warning message.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Do not use identical characters twice within the column. For example, do not define two DCIs that start on page 2a. This can result in missing pages in the patient data and blank casebook reports.</div>
+<p>For each DCI you add to this form, complete the steps in the next section.</p>
+</div>
+<!-- class="sect3" -->
+<div id="OCCRS10208" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref786"></a>
+<h4 class="sect3"><span class="secnum">10.7.4.3</span> Describing Each DCI Page</h4>
+<p>For each DCI described using the previous section, Oracle Clinical provides a DCI Book Physical Pages form. The previous form describes the overall parameters of each DCI within the book&mdash;how many pages and the page number of the first page. This form follows up with specific details about each physical page in the DCI. The information in this form is system generated, but you can overwrite fields, as required.</p>
+<p>The fields on this form are:</p>
+<div class="inftblinformal">
+<table class="cellalignment36" title="Fields on the DCI Book Physical Pages window" summary="The fields in this form are: Sequence within DCI, Book Page Number, and Description." dir="ltr">
+<thead>
+<tr class="cellalignment27">
+<th class="cellalignment37" id="r1c1-t29">Field</th>
+<th class="cellalignment37" id="r1c2-t29">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r2c1-t29" headers="r1c1-t29">Seq within DCI</td>
+<td class="cellalignment33" headers="r2c1-t29 r1c2-t29">Number that identifies the position of the page within the DCI.</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r3c1-t29" headers="r1c1-t29">Book Page #</td>
+<td class="cellalignment33" headers="r3c1-t29 r1c2-t29">Page number assigned to the individual page that aligns with the number displayed in the first column. This field is editable so you can explicitly match it to its physical counterpart.</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r4c1-t29" headers="r1c1-t29">Description</td>
+<td class="cellalignment33" headers="r4c1-t29 r1c2-t29">Optional field describing the individual page.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" --></div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment26">
+<tr>
+<td class="cellalignment33">
+<table class="cellalignment31">
+<tr>
+<td class="cellalignment30"><a href="dcm.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment30"><a href="annotate_crf.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;1996, 2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment35">
+<table class="cellalignment29">
+<tr>
+<td class="cellalignment30"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment30"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment30"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment30"><a href="index.htm"><img width="24" height="24" src="../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td class="cellalignment30"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

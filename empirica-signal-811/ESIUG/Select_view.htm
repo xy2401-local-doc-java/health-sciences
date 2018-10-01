@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-US" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Selecting signal views</title>
+<link rel="StyleSheet" href="Empirica.css" type="text/css" />
+<script type="text/javascript" language="JavaScript1.2" src="./ehlpdhtm.js"></script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body page-style="x-size: Letter;" page-frame-style="margin-left: 0.55in;"><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Managing signals\nManaging signal views\nSelecting signal views");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("About_WebVDME.htm", "", "&gt;", "Overview", "About_WebVDME_1.htm");
+document.write("<a href=\"About_Signal_Management.htm\">Managing signals<\/a> &gt; <a href=\"sigManageQueries.htm\">Managing signal views<\/a> &gt; Selecting signal views<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('About_WebVDME.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+
+
+
+<h1><a name="MiniTOCBookMark1"></a>Selecting signal views</h1>
+<p align="left" style="font-family:Verdana;font-size:11pt;font-weight: normal;font-style: italic;text-decoration: none;" >In&#160;this&#160;section&#160;<a class="dropspot" href="javascript:TextPopup(this)" id="MTHotSpot59319" ><span class="MTText" style="display: none;" >Show</span><span class="MTText" >Hide</span></a></p>
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+TextPopupInit('MTHotSpot59319', 'MTPOPUP59319');
+//]]></script>
+<div align="left" class="droptext" id="MTPOPUP59319" >
+ <ul style="text-align:left; list-style-type: disc;font-family:Verdana;font-size:10pt;font-weight: normal;font-style: normal;text-decoration: underline;"  >
+  <li style="margin-top: 1px;"><a href="#MiniTOCBookMark2" style="font-family:Verdana;font-size:10pt;font-weight: normal;font-style: normal;text-decoration: underline;">Default view</a>
+</li>
+  <li style="margin-top: 1px;"><a href="#MiniTOCBookMark3" style="font-family:Verdana;font-size:10pt;font-weight: normal;font-style: normal;text-decoration: underline;">Review period view</a>
+</li>
+  <li style="margin-top: 1px;"><a href="#MiniTOCBookMark4" style="font-family:Verdana;font-size:10pt;font-weight: normal;font-style: normal;text-decoration: underline;">Modified views</a>
+</li>
+ </ul>
+</div>
+<p>A signal view specifies which columns are included on the Drug-Event Combinations page, the sort order of columns, and the SQL WHERE clause (if any) that applies selection criteria to drug-event combinations. If the signal configuration uses the review period feature, each view is also associated with a review period.</p>
+<p>Typically, an organization has predefined standard views. You can select from views that are published to you and views that you have created. If you have the Manage Signal Views permission, you can also select views created by any users in your login group.<span style="mso-spacerun: yes;">&#160;</span>If you select a single drug, the application uses the view assigned as the default for that drug.</p>
+
+<p class="ListNumber1" style="text-indent: -30px; margin-left: 30px;"><span class="rls-1-Empirica">1.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Click the <span class="Button">Signals</span> tab.</p>
+
+<p class="ListContinue1">The Drug-Event Combinations page appears.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">2.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Filter the combinations by group, reviewer, drug, or SOC as desired. For more information, see <a href="Drug-Event_Combinations_page.htm">Drug-Event Combinations page</a>.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">3.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Above the table, click the <span class="Button">Select View</span> menu.</p>
+
+<ol start="1" style="margin-top: 0px; margin-bottom: 0px; list-style: rh-list;">
+<li class="NumBullet1">If views are assigned to categories, or if review periods are used, the Select View menu cascades; that is, it offers additional submenus depending on your menu choice. If a down or up arrow appears above or below the list of views, use it to scroll through the list.</li>
+<li class="NumBullet1">If no views are assigned to categories, a View field that you can use to select from a list of views appears.</li>
+</ol>
+<h2><a name="MiniTOCBookMark2"></a>Default view</h2>
+<p>When you click <b style="mso-bidi-font-weight: normal;"><span class="Button">Select View</span></b>, and then select <b style="mso-bidi-font-weight: normal;"><span class="Button">Default</span></b> from the menu or the View field, the application uses the default view for any single drug you select.&#160;If no default view for the drug exists, but there is a default view for signal management, the application uses that default view.</p>
+<p>The application also uses the default view for signal management if the Group, Reviewer, and Drug fields are set so that the application finds multiple drugs.&#160;</p>
+<h2><a name="MiniTOCBookMark3"></a>Review period view</h2>
+<p>If the signal configuration uses the review period feature and you select a view that has a different review period than the drug, a warning message appears and informs you that the SQL WHERE clause for the view was removed.</p>
+<h2><a name="MiniTOCBookMark4"></a>Modified views</h2>
+<p>If you have modified a view, an asterisk appears after the view name in the blue bar at the top of the page. Your changes remain in effect for your current session until you select a different view, group, reviewer, or drug. If you want to retain your changes to the view, you must save the view.</p>
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="margin-bottom: 0pt;">Copyright © 2002, 2018, Oracle and/or 
+	 its affiliates. All rights reserved. </p>
+	<p style="text-align: right; margin-top: 0pt; margin-bottom: 0pt;">Help 
+	 Build 8.1.1</p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,3348 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Creating Queries by Example</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2017-10-03T12:35:26Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Argus Insight Administrator's Guide" />
+<meta name="dcterms.identifier" content="E85143-01" />
+<meta name="dcterms.isVersionOf" content="AIAGX" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2011, 2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="gettinstarted.htm" title="Previous" type="text/html" />
+<link rel="Next" href="filters.htm" title="Next" type="text/html" />
+<link rel="alternate" href="AIAGX.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="AIAGX.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="AIAGX.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">6/17</span> <!-- End Header -->
+<div id="AIAGX136" class="chapter"><a id="CACFFGGF"></a>
+<h1 class="chapter"><span class="secnum">3</span> Creating Queries by Example</h1>
+<p>In Argus Insight, you use queries to search the data mart and retrieve a <span class="italic">set of cases</span> (known as a <span class="italic">case series</span>) with similar attributes. Based on your reporting requirements, your querying criteria may be as simple as a few Argus Safety case <span class="italic">form</span> fields with specific values or as complex as a SQL query that uses Boolean and Set operations between data mart fields.</p>
+<p>Argus Insight provides several tools that you can use to enter, modify, and save queries. This chapter describes how to use the <span class="italic">Query by Example (QBE)</span> tool.</p>
+<p>In addition to the QBE tool, Argus Insight provides the following query tools:</p>
+<ul>
+<li>
+<p>Filters (see <a href="filters.htm#CIHJAIJA">Chapter 4, "Using Filters to Create Queries"</a>)</p>
+</li>
+<li>
+<p>Advanced Conditions (see <a href="advconditions.htm#CJAHDGFI">Chapter 5, "Using Advanced Conditions to&nbsp;Create&nbsp;Queries on Insight Mart"</a>)</p>
+</li>
+<li>
+<p>Library (see <a href="advconditionsam.htm#CJAHDGFX">Chapter 6, "Using Advanced Conditions to&nbsp;Create&nbsp;Point-in-Time Queries on Argus Mart"</a>)</p>
+</li>
+</ul>
+<a id="CACDIGFC"></a>
+<div id="AIAGX137" class="sect1">
+<h2 class="sect1"><span class="secnum">3.1</span> Overview of the Query by Example Tool</h2>
+<p>If you are familiar with the Argus Safety case form, you may want to use <span class="italic">Query by Example</span> (QBE) to create simple queries. For a QBE, the querying criteria consists of specific values that you enter in the fields on the QUERY BY EXAMPLE page, which looks substantially like the Argus Safety case form.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Query By Example is NOT supported, if target data source is set as Argus Mart only.</div>
+<div id="AIAGX138" class="sect2"><a id="sthref18"></a>
+<h3 class="sect2"><span class="secnum">3.1.1</span> QUERY BY EXAMPLE Page&mdash;Tab Description</h3>
+<p>The QUERY BY EXAMPLE page has a tab-based interface consisting of eight multiple section tabs.</p>
+<p>Each tab on the QUERY BY EXAMPLE page lets you enter query criteria about a specific aspect of a case:</p>
+<ul>
+<li>
+<p><span class="bold">General tab</span>&mdash;Specify general, <span class="italic">study</span>, reporter, and literature information about the case.</p>
+</li>
+<li>
+<p><span class="bold">Patient tab</span>&mdash;Specify information about the patient, lab data, other relevant history, and the patient's parent.</p>
+</li>
+<li>
+<p><span class="bold">Products tab</span>&mdash;Specify product information and dosage regimens.</p>
+</li>
+<li>
+<p><span class="bold">Events tab</span>&mdash;Specify event information and its seriousness criteria.</p>
+</li>
+<li>
+<p><span class="bold">Analysis tab</span>&mdash;Specify information about case analysis and imputability.</p>
+</li>
+<li>
+<p><span class="bold">Activities tab</span>&mdash;Specify case activity information, such as contact logs, action items, and case lock/archive dates.</p>
+</li>
+<li>
+<p><span class="bold">Additional Info tab</span>&mdash;Specify additional information about the case such as reference type, ID, and notes.</p>
+</li>
+<li>
+<p><span class="bold">Advanced Conditions tab</span>&mdash;Integrate a QBE with an advanced condition stored in Argus Insight. The advanced conditions based on Insight Mart only are displayed.</p>
+<p>In addition, you can convert a QBE into an advanced condition. For more information, see <a href="advconditions.htm#CJAHDGFI">Chapter 5, "Using Advanced Conditions to&nbsp;Create&nbsp;Queries on Insight Mart."</a></p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<div id="AIAGX139" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref19"></a>
+<h3 class="sect2"><span class="secnum">3.1.2</span> Example of a QBE</h3>
+<p>For example, your QBE may consist of values in the following fields:</p>
+<div class="inftblhruleinformal">
+<table class="cellalignment103" summary="The table provides example QBE values." dir="ltr">
+<thead>
+<tr class="cellalignment93">
+<th class="cellalignment104" id="r1c1-t3">Tab Name</th>
+<th class="cellalignment104" id="r1c2-t3">Field Name</th>
+<th class="cellalignment104" id="r1c3-t3">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r2c1-t3" headers="r1c1-t3">General</td>
+<td class="cellalignment99" headers="r2c1-t3 r1c2-t3">Country of Incidence</td>
+<td class="cellalignment99" headers="r2c1-t3 r1c3-t3">United States</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r3c1-t3" headers="r1c1-t3">Products</td>
+<td class="cellalignment99" headers="r3c1-t3 r1c2-t3">Product Name</td>
+<td class="cellalignment99" headers="r3c1-t3 r1c3-t3">Algoheal Injection</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r4c1-t3" headers="r1c1-t3" rowspan="2">Events</td>
+<td class="cellalignment99" headers="r4c1-t3 r1c2-t3">Event Description to be Coded</td>
+<td class="cellalignment99" headers="r4c1-t3 r1c3-t3">Injection site rash</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r5c1-t3" headers="r4c1-t3 r1c1-t3">Seriousness Criteria</td>
+<td class="cellalignment99" headers="r4c1-t3 r5c1-t3 r1c2-t3">Hospitalized</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblhruleinformal" -->
+<p>When you execute this QBE, the system retrieves only those cases in the United States where the patient was given an algoheal injection, and then broke out in a rash due to the injection and was hospitalized.</p>
+</div>
+<!-- class="sect2" -->
+<div id="AIAGX140" class="sect2"><a id="sthref20"></a>
+<h3 class="sect2"><span class="secnum">3.1.3</span> Using the Type-Ahead Feature in Input Fields</h3>
+<p>Argus Insight provides <span class="italic">type-ahead</span> functionality for some fields in the QUERY BY EXAMPLE page.</p>
+<p>When you begin to type a value into a field that supports type-ahead functionality, Argus Insight displays a list of valid values that match your entry. You can then select one of the suggested values from the list.</p>
+<p>Alternatively, you can double-click any field that supports type-ahead functionality. In this case, Argus Insight displays a complete list of the valid values for the field. You can then select a value from the list.</p>
+<p><a href="#CACFGBDH">Table 3-1</a> lists the input fields in the QUERY BY EXAMPLE page that support the type-ahead feature.</p>
+<div id="AIAGX141" class="tblruleformalwide">
+<p class="titleintable"><a id="sthref21"></a><a id="CACFGBDH"></a>Table 3-1 Fields that Support the Type-Ahead Feature</p>
+<table class="cellalignment103" title="Fields that Support the Type-Ahead Feature" summary="This table lists the fields in the QBE page that support the Type Ahead feature that you can use when entering query criteria." dir="ltr">
+<tbody>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r1c1-t4">
+<p>Accidental Exposure</p>
+</td>
+<td class="cellalignment99">
+<p>Action Taken</p>
+</td>
+<td class="cellalignment99">
+<p>Action Type</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r2c1-t4">
+<p>Age Group</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t4">
+<p>Age Units</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t4">
+<p>Case Outcome</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r3c1-t4">
+<p>Classification</p>
+</td>
+<td class="cellalignment99" headers="r3c1-t4">
+<p>Code (Activities:&nbsp;Action&nbsp;Items)</p>
+</td>
+<td class="cellalignment99" headers="r3c1-t4">
+<p>Code (Activities:&nbsp;Contact&nbsp;Log)</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r4c1-t4">
+<p>Condition Type</p>
+</td>
+<td class="cellalignment99" headers="r4c1-t4">
+<p>Dosage Frequency</p>
+</td>
+<td class="cellalignment99" headers="r4c1-t4">
+<p>Dosage Units</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r5c1-t4">
+<p>Ethnicity</p>
+</td>
+<td class="cellalignment99" headers="r5c1-t4">
+<p>Event Frequency</p>
+</td>
+<td class="cellalignment99" headers="r5c1-t4">
+<p>Event Intensity</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r6c1-t4">
+<p>Event Outcome (Outcome&nbsp;of&nbsp;Event)</p>
+</td>
+<td class="cellalignment99" headers="r6c1-t4">
+<p>Formulation</p>
+</td>
+<td class="cellalignment99" headers="r6c1-t4">
+<p>Gender</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r7c1-t4">
+<p>Group (Activities:&nbsp;Action&nbsp;Items)</p>
+</td>
+<td class="cellalignment99" headers="r7c1-t4">
+<p>Group (Activities:&nbsp;Contact&nbsp;Log)</p>
+</td>
+<td class="cellalignment99" headers="r7c1-t4">
+<p>Intermediary</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r8c1-t4">
+<p>Locked or Closed By</p>
+</td>
+<td class="cellalignment99" headers="r8c1-t4">
+<p>Manufacturer</p>
+</td>
+<td class="cellalignment99" headers="r8c1-t4">
+<p>Occupation</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r9c1-t4">
+<p>Pack Units</p>
+</td>
+<td class="cellalignment99" headers="r9c1-t4">
+<p>Product Units</p>
+</td>
+<td class="cellalignment99" headers="r9c1-t4">
+<p>References Type</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r10c1-t4">
+<p>Report Media</p>
+</td>
+<td class="cellalignment99" headers="r10c1-t4">
+<p>Report Type</p>
+</td>
+<td class="cellalignment99" headers="r10c1-t4">
+<p>Reporter Type</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r11c1-t4">
+<p>Route of Administration (Patient&nbsp;and&nbsp;Parent)</p>
+</td>
+<td class="cellalignment99" headers="r11c1-t4">
+<p>User (Activities:&nbsp;Action&nbsp;Items)</p>
+</td>
+<td class="cellalignment99" headers="r11c1-t4">
+<p>User (Activities:&nbsp;Contact&nbsp;Log)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformalwide" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CACJGIHA"></a>
+<div id="AIAGX142" class="sect1">
+<h2 class="sect1"><span class="secnum">3.2</span> Starting a New QBE</h2>
+<p>This section describes the tasks for creating a new QBE:</p>
+<ul>
+<li>
+<p><a href="#CACFJEHD">Entering Your Search Criteria and Executing the QBE</a></p>
+</li>
+<li>
+<p><a href="#CACEBCBB">Reviewing the Results of Your QBE</a></p>
+</li>
+<li>
+<p><a href="#CACBIFIA">Reviewing and Modifying the Criteria for an Executed QBE</a></p>
+</li>
+<li>
+<p><a href="#CACBJJFC">Saving the QBE</a></p>
+</li>
+</ul>
+<a id="CACFJEHD"></a>
+<div id="AIAGX143" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">3.2.1</span> Entering Your Search Criteria and Executing the QBE</h3>
+<ol>
+<li>
+<p>Navigate to <span class="bold">Queries &gt; Query by Example,</span> and select <span class="bold">New.</span></p>
+<p>The QUERY BY EXAMPLE page appears with the <span class="bold">General</span> tab in focus.</p>
+</li>
+<li>
+<p>Specify the criteria for your query.</p>
+<p>You may enter values into any of the fields on any of the QBE tabs.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The field labels are displayed as per the field labels configured in Argus Safety.</div>
+<p>For a description of each field and for additional information about entering values into certain fields, see the following sections:</p>
+<ul>
+<li>
+<p><a href="#CACHIDJH">General Tab</a></p>
+</li>
+<li>
+<p><a href="#CACDDDBG">Patient Tab</a></p>
+</li>
+<li>
+<p><a href="#CACCGCDA">Products Tab</a></p>
+</li>
+<li>
+<p><a href="#CACDJJCA">Events Tab</a></p>
+</li>
+<li>
+<p><a href="#CACJGBHH">Analysis Tab</a></p>
+</li>
+<li>
+<p><a href="#CACBIBJC">Activities Tab</a></p>
+</li>
+<li>
+<p><a href="#CACFIEIF">Additional Info Tab</a></p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+When you are entering criteria for your query:
+<ul>
+<li>
+<p>To clear all the values you entered on the current tab only, click <span class="bold">Clear Tab.</span></p>
+</li>
+<li>
+<p>To clear all the values you entered on all the tabs, click C<span class="bold">lear All.</span></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Click <span class="bold">Execute</span> to run your query.</p>
+<p>The system searches for cases that match your query, begins to build the case series, and displays a progress message during the process.</p>
+</li>
+<li>
+<p>Wait until the system completes the search.</p>
+<p>See <a href="#CACEBCBB">"Reviewing the Results of Your QBE"</a>, for information about how to continue.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CACEBCBB"></a>
+<div id="AIAGX144" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">3.2.2</span> Reviewing the Results of Your QBE</h3>
+<p>When you click <span class="bold">Execute</span> to run a QBE, the system searches for all the cases that match your query criteria and builds a <span class="italic">case series</span>.</p>
+<ul>
+<li>
+<p>If the system finds cases that match your query criteria, the ACTIVE CASE SERIES page displays the results.</p>
+<p>Examine the results in the ACTIVE CASE SERIES page:</p>
+<ul>
+<li>
+<p>If the case series is too large, you may want to modify your query by specifying additional field values in the QBE form to narrow down the case series.</p>
+<p>For more information, see <a href="#CACBIFIA">"Reviewing and Modifying the Criteria for an Executed QBE"</a>.</p>
+</li>
+<li>
+<p>If the case series is appropriate, you may want to save your QBE. For more information, see <a href="#CACBJJFC">"Saving the QBE"</a>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>If the system does not find any cases that match your query criteria, the ACTIVE CASE SERIES page displays the following message:</p>
+<p><code dir="ltr">No Cases found!</code></p>
+<p>You probably want to modify your query and then execute the QBE again.</p>
+<p>For more information, see <a href="#CACBIFIA">"Reviewing and Modifying the Criteria for an Executed QBE"</a>.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="CACBIFIA"></a>
+<div id="AIAGX145" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">3.2.3</span> Reviewing and Modifying the Criteria for an Executed QBE</h3>
+<p>The ACTIVE CASE SERIES page displays the results of your QBE. When you review the results, you may want to modify your query and execute the QBE again.</p>
+<p>For example, perhaps the results are too limiting and you want to remove some of the query criteria.</p>
+<p>From the ACTIVE CASE SERIES page, you have several options:</p>
+<ul>
+<li>
+<p>To open a dialog box and review the criteria that you specified for the active case series, click <span class="bold">View Query Criteria.</span></p>
+</li>
+<li>
+<p>To return to the QBE form and modify your query, click <span class="bold">View Query.</span></p>
+<p>The ACTIVE QUERY BY EXAMPLE page appears.</p>
+<p>Note that the page retains all the values you entered for your query.</p>
+<p>When you execute a QBE or save modifications to a QBE, the system assigns the <span class="italic">active</span> status to the QBE. Therefore, when you click <span class="bold">View Query</span> to return to the QBE form, note that the page title changes to ACTIVE QUERY BY EXAMPLE.</p>
+<p>See <a href="#CACGFIEF">"Working with the Last Modified or Executed QBE"</a> for details on active QBEs.</p>
+</li>
+<li>
+<p>To cancel the current QBE and return to the QUERY BY EXAMPLE page, click <span class="bold">Cancel.</span></p>
+</li>
+</ul>
+<p>You can continue to modify the QBE, execute the QBE again, and review the results.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CACBJJFC"></a>
+<div id="AIAGX146" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">3.2.4</span> Saving the QBE</h3>
+<ol>
+<li>
+<p>View your QBE on the ACTIVE QUERY BY EXAMPLE page.</p>
+</li>
+<li>
+<p>Use the <span class="bold">Category</span> field to assign a category to the QBE.</p>
+<p>The category indicates the reporting aspect to which your QBE pertains.</p>
+<p>For example, Case Processing, Compliance, Configuration, General, Management, or Pharmacovigilance. Specifying the category helps you when searching for relevant QBEs from a list of all the QBEs saved in the system.</p>
+</li>
+<li>
+<p>Use the <span class="bold">Description</span> field to enter summary information about the QBE.</p>
+<p>For example, you can describe the type of cases the QBE retrieves.</p>
+</li>
+<li>
+<p>Click <span class="bold">Save As.</span></p>
+<p>The <span class="bold">Save QBE As</span> dialog box appears.</p>
+</li>
+<li>
+<p>Enter the name of the QBE.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Names cannot contain these characters: % " ' $ ^ ~ , ` / ; | #</div>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+<p>Note that:</p>
+<ul>
+<li>
+<p>The page title changes to QUERY BY EXAMPLE.</p>
+</li>
+<li>
+<p>The Active Query Name field in the upper-right corner of the page now displays the name you specified when saving the QBE.</p>
+</li>
+<li>
+<p>The Category and Description fields display the information you entered before you saved the QBE.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The QUERY BY EXAMPLE LIBRARY page lists all the QBEs saved to the system. See <a href="#CACDBAFG">"Working with Saved QBEs"</a> for more information.</div>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+If you make modifications to the field values after you saved the QBE to the system, click <span class="bold">Save</span> to save the changed field values.</div>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CACCGADD"></a>
+<div id="AIAGX147" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">3.3</span> Query By Example Page&mdash;Input Fields</h2>
+<p>When you enter criteria for a QBE, you can enter values into any of the fields in any of the tabs on the QUERY BY EXAMPLE page.</p>
+<p>This section summarizes the contents of each tab, describes each field, and provides additional information about entering values into certain fields.</p>
+<a id="CACHIDJH"></a>
+<div id="AIAGX148" class="sect2">
+<h3 class="sect2"><span class="secnum">3.3.1</span> General Tab</h3>
+<p>In the <span class="bold">General</span> tab, you can:</p>
+<ul>
+<li>
+<p>Specify only one follow-up date.</p>
+</li>
+<li>
+<p>Specify only one case classification.</p>
+</li>
+<li>
+<p>Specify information only about one reporter.</p>
+</li>
+<li>
+<p>Scroll the page to view all the fields available.</p>
+</li>
+</ul>
+<p><a href="#CACDFEEI">Table 3-2</a> describes the fields in the <span class="bold">General</span> tab. The <span class="italic">field</span> values you specify are used as the <span class="italic">query</span> criteria to retrieve matching cases.</p>
+<div id="AIAGX149" class="tblhruleformalwide">
+<p class="titleintable"><a id="sthref22"></a><a id="CACDFEEI"></a>Table 3-2 QUERY BY EXAMPLE Page &gt; General Tab &mdash; Field Description</p>
+<table class="cellalignment103" title="QUERY BY EXAMPLE Page &gt; General Tab &mdash; Field Description" summary="The table describes the fields on the General tab." dir="ltr">
+<thead>
+<tr class="cellalignment93">
+<th class="cellalignment104" id="r1c1-t10">Section</th>
+<th class="cellalignment104" id="r1c2-t10">Field or Check Box</th>
+<th class="cellalignment104" id="r1c3-t10">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r2c1-t10" headers="r1c1-t10" rowspan="10">
+<p><span class="bold">General Information</span></p>
+</td>
+<td class="cellalignment99" headers="r2c1-t10 r1c2-t10">
+<p>Report Type</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t10 r1c3-t10">
+<p>Select the case source that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r3c1-t10" headers="r2c1-t10 r1c1-t10">
+<p>Country</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t10 r3c1-t10 r1c2-t10">
+<p>Select the country of incidence that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r4c1-t10" headers="r2c1-t10 r1c1-t10">
+<p>Initial Receipt Date</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t10 r4c1-t10 r1c2-t10">
+<p>Enter the date when your company first became aware of the case.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r5c1-t10" headers="r2c1-t10 r1c1-t10">
+<p>Central Receipt Date</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t10 r5c1-t10 r1c2-t10">
+<p>Enter the date on which Central Safety received the case.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r6c1-t10" headers="r2c1-t10 r1c1-t10">
+<p>Case Status</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t10 r6c1-t10 r1c2-t10">
+<p>Select the workflow state that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r7c1-t10" headers="r2c1-t10 r1c1-t10">
+<p>Follow-up Received</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t10 r7c1-t10 r1c2-t10">
+<p>Enter the follow-up information receipt date.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r8c1-t10" headers="r2c1-t10 r1c1-t10">
+<p>Safety Received</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t10 r8c1-t10 r1c2-t10">
+<p>Enter the date on which follow-up information was received by Central Safety.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r9c1-t10" headers="r2c1-t10 r1c1-t10">
+<p>Significant</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t10 r9c1-t10 r1c2-t10">
+<p>Select this check box to retrieve cases that had a significant follow-up.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r10c1-t10" headers="r2c1-t10 r1c1-t10">
+<p>Aware Date</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t10 r10c1-t10 r1c2-t10">
+<p>Enter the most recent significant follow-up date or initial receipt date (if there are no follow-ups) that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r11c1-t10" headers="r2c1-t10 r1c1-t10">
+<p>Classification</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t10 r11c1-t10 r1c2-t10">
+<p>Select the classification that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r12c1-t10" headers="r1c1-t10" rowspan="7">
+<p><span class="bold">Study Information</span></p>
+</td>
+<td class="cellalignment99" headers="r12c1-t10 r1c2-t10">
+<p>Project ID<br />
+Study ID<br />
+Center ID</p>
+</td>
+<td class="cellalignment99" headers="r12c1-t10 r1c3-t10">
+<p>Click the <span class="bold">Select</span> button associated with these fields to select the Project ID, the Study ID, and the Center ID.</p>
+<p>See <a href="#CACFHBBB">"Selecting the Study Information"</a> for details.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r13c1-t10" headers="r12c1-t10 r1c1-t10">
+<p>Other ID</p>
+</td>
+<td class="cellalignment99" headers="r12c1-t10 r13c1-t10 r1c2-t10">
+<p>Enter any other ID that can be relevant to the study.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r14c1-t10" headers="r12c1-t10 r1c1-t10">
+<p>Study Type</p>
+</td>
+<td class="cellalignment99" headers="r12c1-t10 r14c1-t10 r1c2-t10">
+<p>Select the study type to include in the query.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r15c1-t10" headers="r12c1-t10 r1c1-t10">
+<p>Week #</p>
+</td>
+<td class="cellalignment99" headers="r12c1-t10 r15c1-t10 r1c2-t10">
+<p>Enter the week number of the study during which the adverse event occurred. The query will only look for such cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r16c1-t10" headers="r12c1-t10 r1c1-t10">
+<p>Visit #</p>
+</td>
+<td class="cellalignment99" headers="r12c1-t10 r16c1-t10 r1c2-t10">
+<p>Enter the visit number of the study during which the adverse event occurred. The query will only look for such cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r17c1-t10" headers="r12c1-t10 r1c1-t10">
+<p>Blinding Status</p>
+</td>
+<td class="cellalignment99" headers="r12c1-t10 r17c1-t10 r1c2-t10">
+<p>Select the study blinding status that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r18c1-t10" headers="r12c1-t10 r1c1-t10">
+<p>Unblinding Date</p>
+</td>
+<td class="cellalignment99" headers="r12c1-t10 r18c1-t10 r1c2-t10">
+<p>Enter the date on which the study was broken. The query will only look for cases with matching study broken date.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r19c1-t10" headers="r1c1-t10" rowspan="13">
+<p><span class="bold">Reporter Information</span></p>
+</td>
+<td class="cellalignment99" headers="r19c1-t10 r1c2-t10">
+<p>Sal.</p>
+</td>
+<td class="cellalignment99" headers="r19c1-t10 r1c3-t10">
+<p>Enter the reporter's salutation that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r20c1-t10" headers="r19c1-t10 r1c1-t10">
+<p>First Name</p>
+</td>
+<td class="cellalignment99" headers="r19c1-t10 r20c1-t10 r1c2-t10">
+<p>Enter the reporter's first name to look for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r21c1-t10" headers="r19c1-t10 r1c1-t10">
+<p>Middle Name</p>
+</td>
+<td class="cellalignment99" headers="r19c1-t10 r21c1-t10 r1c2-t10">
+<p>Enter the reporter's middle name to look for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r22c1-t10" headers="r19c1-t10 r1c1-t10">
+<p>Last Name</p>
+</td>
+<td class="cellalignment99" headers="r19c1-t10 r22c1-t10 r1c2-t10">
+<p>Enter the reporter's last name to look for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r23c1-t10" headers="r19c1-t10 r1c1-t10">
+<p>Suffix</p>
+</td>
+<td class="cellalignment99" headers="r19c1-t10 r23c1-t10 r1c2-t10">
+<p>Enter the reporter's suffix to look for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r24c1-t10" headers="r19c1-t10 r1c1-t10">
+<p>Health Care Professional</p>
+</td>
+<td class="cellalignment99" headers="r19c1-t10 r24c1-t10 r1c2-t10">
+<p>Select an option from the list to include a query criterion based on whether the reporter is a health care professional.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r25c1-t10" headers="r19c1-t10 r1c1-t10">
+<p>Occupation</p>
+</td>
+<td class="cellalignment99" headers="r19c1-t10 r25c1-t10 r1c2-t10">
+<p>Select the reporter's occupation that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r26c1-t10" headers="r19c1-t10 r1c1-t10">
+<p>Address</p>
+</td>
+<td class="cellalignment99" headers="r19c1-t10 r26c1-t10 r1c2-t10">
+<p>Enter the report address that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r27c1-t10" headers="r19c1-t10 r1c1-t10">
+<p>Institution</p>
+</td>
+<td class="cellalignment99" headers="r19c1-t10 r27c1-t10 r1c2-t10">
+<p>Enter the reporter's institution that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r28c1-t10" headers="r19c1-t10 r1c1-t10">
+<p>Department</p>
+</td>
+<td class="cellalignment99" headers="r19c1-t10 r28c1-t10 r1c2-t10">
+<p>Enter the reporter's department that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r29c1-t10" headers="r19c1-t10 r1c1-t10">
+<p>City</p>
+</td>
+<td class="cellalignment99" headers="r19c1-t10 r29c1-t10 r1c2-t10">
+<p>Enter the reporter's city that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r30c1-t10" headers="r19c1-t10 r1c1-t10">
+<p>State/Province</p>
+</td>
+<td class="cellalignment99" headers="r19c1-t10 r30c1-t10 r1c2-t10">
+<p>Enter the reporter's state that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r31c1-t10" headers="r19c1-t10 r1c1-t10">
+<p>Postal Code</p>
+</td>
+<td class="cellalignment99" headers="r19c1-t10 r31c1-t10 r1c2-t10">
+<p>Enter the reporter's postal code that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r32c1-t10" headers="r1c1-t10" rowspan="14">&nbsp;</td>
+<td class="cellalignment99" headers="r32c1-t10 r1c2-t10">
+<p>Country</p>
+</td>
+<td class="cellalignment99" headers="r32c1-t10 r1c3-t10">
+<p>Enter the reporter's country ID that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r33c1-t10" headers="r32c1-t10 r1c1-t10">
+<p>Phone Number</p>
+</td>
+<td class="cellalignment99" headers="r32c1-t10 r33c1-t10 r1c2-t10">
+<p>Enter the reporter's phone number that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r34c1-t10" headers="r32c1-t10 r1c1-t10">
+<p>Alternate Phone</p>
+</td>
+<td class="cellalignment99" headers="r32c1-t10 r34c1-t10 r1c2-t10">
+<p>Enter the reporter's alternate phone number that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r35c1-t10" headers="r32c1-t10 r1c1-t10">
+<p>FAX Number</p>
+</td>
+<td class="cellalignment99" headers="r32c1-t10 r35c1-t10 r1c2-t10">
+<p>Enter the reporter's fax number that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r36c1-t10" headers="r32c1-t10 r1c1-t10">
+<p>Reporter ID</p>
+</td>
+<td class="cellalignment99" headers="r32c1-t10 r36c1-t10 r1c2-t10">
+<p>Enter the reporter's ID that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r37c1-t10" headers="r32c1-t10 r1c1-t10">
+<p>Reporter's Reference #</p>
+</td>
+<td class="cellalignment99" headers="r32c1-t10 r37c1-t10 r1c2-t10">
+<p>Enter the reporter's reference number that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r38c1-t10" headers="r32c1-t10 r1c1-t10">
+<p>Email Address</p>
+</td>
+<td class="cellalignment99" headers="r32c1-t10 r38c1-t10 r1c2-t10">
+<p>Enter the reporter's email address that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r39c1-t10" headers="r32c1-t10 r1c1-t10">
+<p>Reporter Type</p>
+</td>
+<td class="cellalignment99" headers="r32c1-t10 r39c1-t10 r1c2-t10">
+<p>Select the reporter type that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r40c1-t10" headers="r32c1-t10 r1c1-t10">
+<p>Report Media</p>
+</td>
+<td class="cellalignment99" headers="r32c1-t10 r40c1-t10 r1c2-t10">
+<p>Select the report media that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r41c1-t10" headers="r32c1-t10 r1c1-t10">
+<p>Intermediary</p>
+</td>
+<td class="cellalignment99" headers="r32c1-t10 r41c1-t10 r1c2-t10">
+<p>Select the intermediary that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r42c1-t10" headers="r32c1-t10 r1c1-t10">
+<p>Report Sent to Regulatory Authority by Reporter?</p>
+</td>
+<td class="cellalignment99" headers="r32c1-t10 r42c1-t10 r1c2-t10">
+<p>Select the <span class="bold">Yes</span>, <span class="bold">No</span>, <span class="bold">Unknown</span>, or <span class="bold">Ignore</span> option, as appropriate, to indicate whether the query looks for cases where the reporter has already informed a regulatory authority about the event.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r43c1-t10" headers="r32c1-t10 r1c1-t10">
+<p>Protect Confidentiality</p>
+</td>
+<td class="cellalignment99" headers="r32c1-t10 r43c1-t10 r1c2-t10">
+<p>Select this check box to have the query retrieve only those cases where reporter information is specified as confidential.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r44c1-t10" headers="r32c1-t10 r1c1-t10">
+<p>Primary Reporter</p>
+</td>
+<td class="cellalignment99" headers="r32c1-t10 r44c1-t10 r1c2-t10">
+<p>Select this check box to have the query retrieve only those cases where the reporter is marked as the primary reporter.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r45c1-t10" headers="r32c1-t10 r1c1-t10">
+<p>Correspondence Contact</p>
+</td>
+<td class="cellalignment99" headers="r32c1-t10 r45c1-t10 r1c2-t10">
+<p>Select this check box to have the query retrieve only those cases where the reporter is marked as a correspondence contact.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r46c1-t10" headers="r1c1-t10" rowspan="6">
+<p><span class="bold">Literature Information</span></p>
+</td>
+<td class="cellalignment99" headers="r46c1-t10 r1c2-t10">
+<p>Author</p>
+</td>
+<td class="cellalignment99" headers="r46c1-t10 r1c3-t10">
+<p>Enter the literature author name that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r47c1-t10" headers="r46c1-t10 r1c1-t10">
+<p>Title</p>
+</td>
+<td class="cellalignment99" headers="r46c1-t10 r47c1-t10 r1c2-t10">
+<p>Enter the literature title that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r48c1-t10" headers="r46c1-t10 r1c1-t10">
+<p>Journal</p>
+</td>
+<td class="cellalignment99" headers="r46c1-t10 r48c1-t10 r1c2-t10">
+<p>Enter the literature journal name that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r49c1-t10" headers="r46c1-t10 r1c1-t10">
+<p>Vol</p>
+</td>
+<td class="cellalignment99" headers="r46c1-t10 r49c1-t10 r1c2-t10">
+<p>Enter the literature volume that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r50c1-t10" headers="r46c1-t10 r1c1-t10">
+<p>Year</p>
+</td>
+<td class="cellalignment99" headers="r46c1-t10 r50c1-t10 r1c2-t10">
+<p>Enter the literature publication year that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r51c1-t10" headers="r46c1-t10 r1c1-t10">
+<p>Pgs</p>
+</td>
+<td class="cellalignment99" headers="r46c1-t10 r51c1-t10 r1c2-t10">
+<p>Enter the journal page number in which the article appeared. The query will look for this information in cases.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<a id="CACFHBBB"></a>
+<div id="AIAGX150" class="sect3">
+<h4 class="sect3"><span class="secnum">3.3.1.1</span> Selecting the Study Information</h4>
+<p>In the Study Information section, Argus Insight populates the Project ID, Study ID, and Center ID fields when you select a study from the Clinical Study Lookup dialog box.</p>
+<p>To select a clinical study:</p>
+<ol>
+<li>
+<p>Click the <span class="bold">Select</span> button associated with the <span class="bold">Study ID</span> field.</p>
+<p>The Clinical Study Lookup dialog box appears.</p>
+</li>
+<li>
+<p>Enter the first few letters of the project name, study ID, or study center name in their respective text boxes.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+Alternatively, if you are not sure about the information you are looking for, click <span class="bold">Search</span> to list the project name, study, and center for all the clinical studies.</div>
+</li>
+<li>
+<p>Click <span class="bold">Search.</span></p>
+<p>The Clinical Study Lookup dialog box appears with the search results in tabular format.</p>
+</li>
+<li>
+<p>Select a clinical study row from the list, and click <span class="bold">Select</span>.</p>
+<p>You return to the QUERY BY EXAMPLE page, where the selected information is populated into the Project ID, Study ID, and Center ID fields in the Study Information section.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The Study ID and Center ID are optional fields.</div>
+</li>
+</ol>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CACDDDBG"></a>
+<div id="AIAGX151" class="sect2">
+<h3 class="sect2"><span class="secnum">3.3.2</span> Patient Tab</h3>
+<p>The <span class="bold">Patient</span> tab has two views: <span class="bold">Patient</span> and <span class="bold">Parent.</span></p>
+<div id="AIAGX152" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref23"></a>
+<h4 class="sect3"><span class="secnum">3.3.2.1</span> Patient View</h4>
+<p>In the <span class="bold">Patient</span> view, you can:</p>
+<ul>
+<li>
+<p>Specify information only about one lab data element</p>
+</li>
+<li>
+<p>Specify details of only one relevant history</p>
+</li>
+<li>
+<p>Scroll the page to view all the fields available.</p>
+</li>
+</ul>
+<p><a href="#BABHDGDD">Table 3-3</a> describes the fields in the <span class="bold">Patient</span> view of the <span class="bold">Patient</span> tab. The <span class="italic">field</span> values you specify are used as the <span class="italic">query</span> criteria to retrieve matching cases.</p>
+<div id="AIAGX153" class="tblhruleformalwide">
+<p class="titleintable"><a id="sthref24"></a><a id="BABHDGDD"></a>Table 3-3 QUERY BY EXAMPLE &gt; Patient Tab &gt; PAtient View &mdash; Field Description</p>
+<table class="cellalignment103" title="QUERY BY EXAMPLE &gt; Patient Tab &gt; PAtient View &mdash; Field Description" summary="The following table describes the various fields in the Patient view of the Patient tab." dir="ltr">
+<thead>
+<tr class="cellalignment93">
+<th class="cellalignment104" id="r1c1-t13">Section</th>
+<th class="cellalignment104" id="r1c2-t13">Field or Check Box</th>
+<th class="cellalignment104" id="r1c3-t13">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r2c1-t13" headers="r1c1-t13" rowspan="13">
+<p><span class="bold">Patient Information</span></p>
+</td>
+<td class="cellalignment99" headers="r2c1-t13 r1c2-t13">
+<p>Sponsor Identifier</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t13 r1c3-t13">
+<p>Enter the <span class="italic">study</span> sponsor's ID. The query will look for this information in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r3c1-t13" headers="r2c1-t13 r1c1-t13">
+<p>Pat. ID</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t13 r3c1-t13 r1c2-t13">
+<p>Enter the patient number that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r4c1-t13" headers="r2c1-t13 r1c1-t13">
+<p>Randomization #</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t13 r4c1-t13 r1c2-t13">
+<p>Enter the patient randomization number that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r5c1-t13" headers="r2c1-t13 r1c1-t13">
+<p>Initials</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t13 r5c1-t13 r1c2-t13">
+<p>Enter the patient's initials that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r6c1-t13" headers="r2c1-t13 r1c1-t13">
+<p>First Name</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t13 r6c1-t13 r1c2-t13">
+<p>Enter the patient's first name that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r7c1-t13" headers="r2c1-t13 r1c1-t13">
+<p>MI</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t13 r7c1-t13 r1c2-t13">
+<p>Enter the patient's middle initials that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r8c1-t13" headers="r2c1-t13 r1c1-t13">
+<p>Last Name</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t13 r8c1-t13 r1c2-t13">
+<p>Enter the patient's last name that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r9c1-t13" headers="r2c1-t13 r1c1-t13">
+<p>Protect Confidentiality</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t13 r9c1-t13 r1c2-t13">
+<p>Select this check box to retrieve those cases where patient information is marked as confidential.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r10c1-t13" headers="r2c1-t13 r1c1-t13">
+<p>Address</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t13 r10c1-t13 r1c2-t13">
+<p>Enter the patient's address that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r11c1-t13" headers="r2c1-t13 r1c1-t13">
+<p>City</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t13 r11c1-t13 r1c2-t13">
+<p>Enter the patient's city that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r12c1-t13" headers="r2c1-t13 r1c1-t13">
+<p>Country</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t13 r12c1-t13 r1c2-t13">
+<p>Enter the patient's country that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r13c1-t13" headers="r2c1-t13 r1c1-t13">
+<p>State/Province</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t13 r13c1-t13 r1c2-t13">
+<p>Enter the patient's state that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r14c1-t13" headers="r2c1-t13 r1c1-t13">
+<p>Postal Code</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t13 r14c1-t13 r1c2-t13">
+<p>Enter the patient's postal code that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r15c1-t13" headers="r1c1-t13" rowspan="12">
+<p><span class="bold">Patient Details</span></p>
+</td>
+<td class="cellalignment99" headers="r15c1-t13 r1c2-t13">
+<p>Date of Birth</p>
+</td>
+<td class="cellalignment99" headers="r15c1-t13 r1c3-t13">
+<p>Enter the patient's date of birth that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r16c1-t13" headers="r15c1-t13 r1c1-t13">
+<p>Age</p>
+</td>
+<td class="cellalignment99" headers="r15c1-t13 r16c1-t13 r1c2-t13">
+<p>Enter the patient's age that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r17c1-t13" headers="r15c1-t13 r1c1-t13">
+<p>Units</p>
+</td>
+<td class="cellalignment99" headers="r15c1-t13 r17c1-t13 r1c2-t13">
+<p>Select the age unit for the value you specified in the <span class="bold">Patient Age</span> field.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r18c1-t13" headers="r15c1-t13 r1c1-t13">
+<p>Age Group</p>
+</td>
+<td class="cellalignment99" headers="r15c1-t13 r18c1-t13 r1c2-t13">
+<p>Select the patient age group that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r19c1-t13" headers="r15c1-t13 r1c1-t13">
+<p>Ethnicity</p>
+</td>
+<td class="cellalignment99" headers="r15c1-t13 r19c1-t13 r1c2-t13">
+<p>Select the patient's ethnicity that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r20c1-t13" headers="r15c1-t13 r1c1-t13">
+<p>Occupation</p>
+</td>
+<td class="cellalignment99" headers="r15c1-t13 r20c1-t13 r1c2-t13">
+<p>Select the patient occupation that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r21c1-t13" headers="r15c1-t13 r1c1-t13">
+<p>Gender</p>
+</td>
+<td class="cellalignment99" headers="r15c1-t13 r21c1-t13 r1c2-t13">
+<p>Select the patient gender that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r22c1-t13" headers="r15c1-t13 r1c1-t13">
+<p>Pregnant</p>
+</td>
+<td class="cellalignment99" headers="r15c1-t13 r22c1-t13 r1c2-t13">
+<p>Select the <span class="bold">Yes</span>, <span class="bold">No</span>, <span class="bold">Unknown</span>, <span class="bold">N/A</span>, or <span class="bold">Ignore</span> option, as appropriate, to indicate whether the query looks for cases where the patient's pregnancy status is specified. This field is available only if you specify the patient gender as Female.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r23c1-t13" headers="r15c1-t13 r1c1-t13">
+<p>Date of LMP</p>
+</td>
+<td class="cellalignment99" headers="r15c1-t13 r23c1-t13 r1c2-t13">
+<p>Enter the date of the patient's last menstrual period (LMP) that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r24c1-t13" headers="r15c1-t13 r1c1-t13">
+<p>Patient Weight</p>
+</td>
+<td class="cellalignment99" headers="r15c1-t13 r24c1-t13 r1c2-t13">
+<p>Enter the patient weight that the query looks for in cases. Select the <span class="bold">lbs</span> or <span class="bold">kg</span> option, as appropriate.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r25c1-t13" headers="r15c1-t13 r1c1-t13">
+<p>Patient Height</p>
+</td>
+<td class="cellalignment99" headers="r15c1-t13 r25c1-t13 r1c2-t13">
+<p>Enter the patient's height that the query looks for in cases. Select the <span class="bold">in</span> or <span class="bold">cm</span> option, as appropriate.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r26c1-t13" headers="r15c1-t13 r1c1-t13">
+<p>Number of Patients</p>
+</td>
+<td class="cellalignment99" headers="r15c1-t13 r26c1-t13 r1c2-t13">
+<p>Enter the number of patients.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r27c1-t13" headers="r1c1-t13" rowspan="6">
+<p><span class="bold">Lab Data</span></p>
+</td>
+<td class="cellalignment99" headers="r27c1-t13 r1c2-t13">
+<p>Test Name</p>
+</td>
+<td class="cellalignment99" headers="r27c1-t13 r1c3-t13">
+<p>Click the associated <span class="bold">Select</span> button to select the lab test that the query looks for in cases. See <a href="#CACBIFBJ">"Selecting a Lab Test"</a> for more information.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r28c1-t13" headers="r27c1-t13 r1c1-t13">
+<p>Results</p>
+</td>
+<td class="cellalignment99" headers="r27c1-t13 r28c1-t13 r1c2-t13">
+<p>Enter the lab data results that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r29c1-t13" headers="r27c1-t13 r1c1-t13">
+<p>Norm Low</p>
+</td>
+<td class="cellalignment99" headers="r27c1-t13 r29c1-t13 r1c2-t13">
+<p>Enter the lab data normal low value that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r30c1-t13" headers="r27c1-t13 r1c1-t13">
+<p>Date</p>
+</td>
+<td class="cellalignment99" headers="r27c1-t13 r30c1-t13 r1c2-t13">
+<p>Enter the lab test date that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r31c1-t13" headers="r27c1-t13 r1c1-t13">
+<p>Units</p>
+</td>
+<td class="cellalignment99" headers="r27c1-t13 r31c1-t13 r1c2-t13">
+<p>Enter the unit for the value you specified in the <span class="bold">Results</span> field in the Lab Data section.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r32c1-t13" headers="r27c1-t13 r1c1-t13">
+<p>Norm High</p>
+</td>
+<td class="cellalignment99" headers="r27c1-t13 r32c1-t13 r1c2-t13">
+<p>Enter the lab data normal high value that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r33c1-t13" headers="r1c1-t13" rowspan="7">
+<p><span class="bold">Other Relevant History</span></p>
+</td>
+<td class="cellalignment99" headers="r33c1-t13 r1c2-t13">
+<p>Start</p>
+</td>
+<td class="cellalignment99" headers="r33c1-t13 r1c3-t13">
+<p>Enter the relevant history start date that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r34c1-t13" headers="r33c1-t13 r1c1-t13">
+<p>Condition Type</p>
+</td>
+<td class="cellalignment99" headers="r33c1-t13 r34c1-t13 r1c2-t13">
+<p>Select the relevant history condition type that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r35c1-t13" headers="r33c1-t13 r1c1-t13">
+<p>Notes</p>
+</td>
+<td class="cellalignment99" headers="r33c1-t13 r35c1-t13 r1c2-t13">
+<p>Enter the relevant history notes that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r36c1-t13" headers="r33c1-t13 r1c1-t13">
+<p>Stop Date</p>
+</td>
+<td class="cellalignment99" headers="r33c1-t13 r36c1-t13 r1c2-t13">
+<p>Enter the relevant history stop date that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r37c1-t13" headers="r33c1-t13 r1c1-t13">
+<p>Coded PT</p>
+</td>
+<td class="cellalignment99" headers="r33c1-t13 r37c1-t13 r1c2-t13">
+<p>Click the associated <span class="bold">Encode</span> button to select the relevant history condition by using the MedDRA Browser. The query will look for the encoded term.</p>
+<p>See <a href="#CACFDDBC">"Using the MedDRA Browser"</a> for more information.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r38c1-t13" headers="r33c1-t13 r1c1-t13">
+<p>Ongoing</p>
+</td>
+<td class="cellalignment99" headers="r33c1-t13 r38c1-t13 r1c2-t13">
+<p>Select this check box to retrieve cases where the relevant history condition is continuing/ongoing.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r39c1-t13" headers="r33c1-t13 r1c1-t13">
+<p>Patient Relevant Tests</p>
+</td>
+<td class="cellalignment99" headers="r33c1-t13 r39c1-t13 r1c2-t13">
+<p>Enter the relevant patient tests that the query looks for in cases.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" --></div>
+<!-- class="sect3" -->
+<div id="AIAGX154" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref25"></a>
+<h4 class="sect3"><span class="secnum">3.3.2.2</span> Parent View</h4>
+<p>In the <span class="bold">Parent</span> view, you can:</p>
+<ul>
+<li>
+<p>Specify details of only one relevant history.</p>
+</li>
+<li>
+<p>Specify details of only one medical history.</p>
+</li>
+</ul>
+<p><a href="#BABDFDBF">Table 3-4</a> describes the fields in the <span class="bold">Parent</span> view of the <span class="bold">Patient</span> tab. The <span class="italic">field</span> values you specify are used as the <span class="italic">query</span> criteria to retrieve matching cases.</p>
+<div id="AIAGX155" class="tblhruleformalwide">
+<p class="titleintable"><a id="sthref26"></a><a id="BABDFDBF"></a>Table 3-4 QUERY BY EXAMPLE Page &gt; Patient Tab &gt; Parent View &mdash; Field Description</p>
+<table class="cellalignment103" title="QUERY BY EXAMPLE Page &gt; Patient Tab &gt; Parent View &mdash; Field Description" summary="This table describes the various fields in the Parent view of the Patient tab." dir="ltr">
+<thead>
+<tr class="cellalignment93">
+<th class="cellalignment104" id="r1c1-t14">Section</th>
+<th class="cellalignment104" id="r1c2-t14">Field or Check Box</th>
+<th class="cellalignment104" id="r1c3-t14">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r2c1-t14" headers="r1c1-t14" rowspan="9">
+<p><span class="bold">Parent Information</span></p>
+</td>
+<td class="cellalignment99" headers="r2c1-t14 r1c2-t14">
+<p>Parent Initials</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t14 r1c3-t14">
+<p>Enter the parent's initials that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r3c1-t14" headers="r2c1-t14 r1c1-t14">
+<p>Date of Birth</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t14 r3c1-t14 r1c2-t14">
+<p>Enter the parent's data of birth that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r4c1-t14" headers="r2c1-t14 r1c1-t14">
+<p>Age</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t14 r4c1-t14 r1c2-t14">
+<p>Enter the parent's age that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r5c1-t14" headers="r2c1-t14 r1c1-t14">
+<p>Units</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t14 r5c1-t14 r1c2-t14">
+<p>Select the age unit for the value you specified in the <span class="bold">Age</span> field.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r6c1-t14" headers="r2c1-t14 r1c1-t14">
+<p>Gender</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t14 r6c1-t14 r1c2-t14">
+<p>Select the parent gender that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r7c1-t14" headers="r2c1-t14 r1c1-t14">
+<p>Date of LMP</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t14 r7c1-t14 r1c2-t14">
+<p>Enter the date of the parent's last menstrual period (LMP) that the query looks for in cases. This field is available only if the parent gender is specified as Female.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r8c1-t14" headers="r2c1-t14 r1c1-t14">
+<p>Parent Weight</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t14 r8c1-t14 r1c2-t14">
+<p>Enter the parent's weight that the query looks for in cases. Select the <span class="bold">lbs</span> or <span class="bold">kg</span> option, as appropriate.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r9c1-t14" headers="r2c1-t14 r1c1-t14">
+<p>Parent Height</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t14 r9c1-t14 r1c2-t14">
+<p>Enter the parent's height that the query looks for in cases. Select the <span class="bold">in</span> or <span class="bold">cm</span> option, as appropriate.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r10c1-t14" headers="r2c1-t14 r1c1-t14">
+<p>Parent Breastfeeding</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t14 r10c1-t14 r1c2-t14">
+<p>Select this check box to retrieve cases where parent is breast feeding.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r11c1-t14" headers="r1c1-t14" rowspan="6">
+<p><span class="bold">Other Relevant History</span></p>
+</td>
+<td class="cellalignment99" headers="r11c1-t14 r1c2-t14">
+<p>Start</p>
+</td>
+<td class="cellalignment99" headers="r11c1-t14 r1c3-t14">
+<p>Enter the relevant history start date that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r12c1-t14" headers="r11c1-t14 r1c1-t14">
+<p>Condition Type</p>
+</td>
+<td class="cellalignment99" headers="r11c1-t14 r12c1-t14 r1c2-t14">
+<p>Select the relevant history condition type that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r13c1-t14" headers="r11c1-t14 r1c1-t14">
+<p>Notes</p>
+</td>
+<td class="cellalignment99" headers="r11c1-t14 r13c1-t14 r1c2-t14">
+<p>Enter the relevant history notes that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r14c1-t14" headers="r11c1-t14 r1c1-t14">
+<p>Stop Date</p>
+</td>
+<td class="cellalignment99" headers="r11c1-t14 r14c1-t14 r1c2-t14">
+<p>Enter the relevant history stop date that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r15c1-t14" headers="r11c1-t14 r1c1-t14">
+<p>Coded PT</p>
+</td>
+<td class="cellalignment99" headers="r11c1-t14 r15c1-t14 r1c2-t14">
+<p>Click the associated <span class="bold">Encode</span> button to select the relevant history condition by using the MedDRA Browser. The query will look for the encoded term.</p>
+<p>See <a href="#CACFDDBC">"Using the MedDRA Browser"</a> for more information.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r16c1-t14" headers="r11c1-t14 r1c1-t14">
+<p>Ongoing</p>
+</td>
+<td class="cellalignment99" headers="r11c1-t14 r16c1-t14 r1c2-t14">
+<p>Select this check box to retrieve cases where the relevant history condition is continuing / ongoing.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" --></div>
+<!-- class="sect3" -->
+<a id="CACBIFBJ"></a>
+<div id="AIAGX156" class="sect3">
+<h4 class="sect3"><span class="secnum">3.3.2.3</span> Selecting a Lab Test</h4>
+<ol>
+<li>
+<p>Navigate to the QUERY BY EXAMPLE page.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Patient</span> tab.</p>
+<p>The Patient view appears, by default.</p>
+</li>
+<li>
+<p>In the Lab Data section, click <span class="bold">Select</span> associated with the <span class="bold">Test Name</span> field.</p>
+<p>The Lab Test Name dialog box appears.</p>
+</li>
+<li>
+<p>Search for a lab test:</p>
+<ul>
+<li>
+<p>To find only those lab tests that match your criteria, enter one or more letters of the test name in the <span class="bold">Description</span> field, and click <span class="bold">Search.</span></p>
+</li>
+<li>
+<p>To display all lab tests, leave the <span class="bold">Description</span> field blank, and click <span class="bold">Search.</span></p>
+</li>
+</ul>
+<p>The search results appears in the Lab Test Types section.</p>
+</li>
+<li>
+<p>Select the required test name, and click <span class="bold">Select.</span></p>
+<p>The selected test is populated in the <span class="bold">Test Name</span> field.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<a id="CACFDDBC"></a>
+<div id="AIAGX157" class="sect3">
+<h4 class="sect3"><span class="secnum">3.3.2.4</span> Using the MedDRA Browser</h4>
+<p>To use the MedDRA Browser to search and select MedDRA terms for an event:</p>
+<ol>
+<li>
+<p>Click <span class="bold">Encode</span> associated with the QBE tabs to start the MedDRA Browser.</p>
+<p>The MedDRA Browser dialog box appears.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The output returned by the MedDRA Browser for the <span class="bold">Patient</span>, <span class="bold">Product</span> and <span class="bold">Analysis</span> tabs of QBE is the <span class="bold">Preferred Term (PT).</span> The <span class="bold">Events</span> tab of QBE provides output for multiple options. You can select and search the required term(s), based on the <span class="bold">Seriousness Criteria.</span></div>
+</li>
+<li>
+<p>Enter the first few letters of the SOC, HLGT, HLT, PT, or LLT term in the respective text box.</p>
+<p>To search for the specified word in the entire event term, select the <span class="bold">Full Search</span> check box.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The Special Category drop-down list displays all the SMQs that can be selected. The selected SMQ searches across PT and LLT levels of the MedDRA dictionary.
+<p>The Special Category drop-down list is hidden in MedDRA 10. The MedDRA SMQs drop-down list is hidden in versions lesser than MedDRA 9.</p>
+</div>
+</li>
+<li>
+<p>Press Tab.</p>
+<p>The MedDRA Browser appears with the search results (for the specified word in the event terms) in a <span class="italic">column</span> below the text box in which you entered the text string.</p>
+</li>
+<li>
+<p>Select the required event term from the search results.</p>
+<p>The <span class="bold">SOC</span>, <span class="bold">HLGT</span>, <span class="bold">HLT</span>, <span class="bold">PT</span>, and <span class="bold">LLT</span> fields in the MedDRA Browser display the respective terms for the selected event.</p>
+<p>Note that:</p>
+<ul>
+<li>
+<p>Fields highlighted in yellow indicate the selected hierarchy is the primary SOC path.</p>
+</li>
+<li>
+<p>Fields highlighted in gray indicate the selected hierarchy is not the primary SOC path.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Select the <span class="bold">SOC</span>, <span class="bold">HLGT</span>, <span class="bold">HLT</span>, <span class="bold">PT</span>, and <span class="bold">LLT</span> check boxes to populate the corresponding fields in the QBE form.</p>
+</li>
+<li>
+<p>Click <span class="bold">Add &amp; Close.</span></p>
+<p>The selected codes for the selected event appears in the respective fields in the QBE form.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CACCGCDA"></a>
+<div id="AIAGX158" class="sect2">
+<h3 class="sect2"><span class="secnum">3.3.3</span> Products Tab</h3>
+<p>In the <span class="bold">Products</span> tab, you can:</p>
+<ul>
+<li>
+<p>Enter information only about one product.</p>
+</li>
+<li>
+<p>Specify details of only one dosage regimen.</p>
+</li>
+<li>
+<p>Scroll the page to view all the fields available.</p>
+</li>
+</ul>
+<div id="AIAGX159" class="tblhruleformalwide">
+<p class="titleintable"><a id="sthref27"></a><a id="BABIAGBG"></a>Table 3-5 QUERY BY EXAMPLE Page &gt; Products Tab &mdash; Field Description</p>
+<table class="cellalignment103" title="QUERY BY EXAMPLE Page &gt; Products Tab &mdash; Field Description" summary="The table describes the various fields in the Products tab." dir="ltr">
+<thead>
+<tr class="cellalignment93">
+<th class="cellalignment104" id="r1c1-t17">Section</th>
+<th class="cellalignment104" id="r1c2-t17">Field or Check Box</th>
+<th class="cellalignment104" id="r1c3-t17">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r2c1-t17" headers="r1c1-t17" rowspan="16">
+<p><span class="bold">Product Information</span></p>
+</td>
+<td class="cellalignment99" headers="r2c1-t17 r1c2-t17">
+<p>Product Name</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t17 r1c3-t17">
+<p>Click the associated <span class="bold">Select</span> button to use the Product Browser to specify product information for your query criteria.</p>
+<p>Selecting the product name populates the Product Name, Generic Name, Company Drug Code, Formulation, Concentration, and Units fields with the details of the product you selected. See <a href="#CACBJBCI">"Using the Product Browser"</a> for details.</p>
+<p>Alternatively, click the associated <span class="bold">Encode</span> button to use the Drug Coding Browser to specify the WHO drug name as the query criteria. See <a href="#CACIBJDB">"Using the WHO Drug Browser"</a> for details.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r3c1-t17" headers="r2c1-t17 r1c1-t17">
+<p>Drug Type</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t17 r3c1-t17 r1c2-t17">
+<p>Select the <span class="bold">Suspect</span>, <span class="bold">Concomitant</span>, <span class="bold">Treatment</span>, or <span class="bold">Ignore</span> option, as appropriate, to indicate whether the query looks for cases where drug type is specified.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r4c1-t17" headers="r2c1-t17 r1c1-t17">
+<p>Generic Name</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t17 r4c1-t17 r1c2-t17">
+<p>Click the <span class="bold">Select</span> button associated with the Product Name field to select a generic name that the query looks for in cases. See <a href="#CACBJBCI">"Using the Product Browser"</a> for details.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r5c1-t17" headers="r2c1-t17 r1c1-t17">
+<p>Product Indication PT</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t17 r5c1-t17 r1c2-t17">
+<p>Click the associated <span class="bold">Encode</span> button to use the MedDRA Browser to specify the drug primary indication event term as the query criteria. See <a href="#CACFDDBC">"Using the MedDRA Browser"</a> for details.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r6c1-t17" headers="r2c1-t17 r1c1-t17">
+<p>Company Product</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t17 r6c1-t17 r1c2-t17">
+<p>Click the associated <span class="bold">Select</span> button to select the company product that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r7c1-t17" headers="r2c1-t17 r1c1-t17">
+<p>Study Drug</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t17 r7c1-t17 r1c2-t17">
+<p>Click the associated <span class="bold">Select</span> button to use the Study Drug Lookup dialog box to specify the study drug name as the query criteria. Use this field to retrieve clinical trial cases with the selected study drug. See <a href="#CACEJHHH">"Using the Study Drug Lookup"</a> for details.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r8c1-t17" headers="r2c1-t17 r1c1-t17">
+<p>Company Drug Code</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t17 r8c1-t17 r1c2-t17">
+<p>Click the <span class="bold">Select</span> button associated with the Product Name field to select the company drug code that the query looks for in cases. See <a href="#CACBJBCI">"Using the Product Browser"</a> for details.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r9c1-t17" headers="r2c1-t17 r1c1-t17">
+<p>Drug Code</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t17 r9c1-t17 r1c2-t17">
+<p>Enter the drug code that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r10c1-t17" headers="r2c1-t17 r1c1-t17">
+<p>Manufacturer</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t17 r10c1-t17 r1c2-t17">
+<p>Enter the product manufacturer that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r11c1-t17" headers="r2c1-t17 r1c1-t17">
+<p>Formulation</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t17 r11c1-t17 r1c2-t17">
+<p>Click the <span class="bold">Select</span> button associated with the Product Name field to select a drug formulation that the query looks for in cases. See <a href="#CACBJBCI">"Using the Product Browser"</a> for details.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r12c1-t17" headers="r2c1-t17 r1c1-t17">
+<p>WHO DRUG ATC CODE</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t17 r12c1-t17 r1c2-t17">
+<p>Enter the Anatomical, Therapeutic, Chemical (ATC) classification code that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r13c1-t17" headers="r2c1-t17 r1c1-t17">
+<p>WHO DRUG ATC DESCRIPTION</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t17 r13c1-t17 r1c2-t17">
+<p>Enter the Anatomical, Therapeutic, Chemical (ATC) classification description that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r14c1-t17" headers="r2c1-t17 r1c1-t17">
+<p>Concentration</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t17 r14c1-t17 r1c2-t17">
+<p>Click the <span class="bold">Select</span> button associated with the Product Name field to select a drug concentration that the query looks for in cases. See <a href="#CACBJBCI">"Using the Product Browser"</a> for details.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r15c1-t17" headers="r2c1-t17 r1c1-t17">
+<p>Units</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t17 r15c1-t17 r1c2-t17">
+<p>Click the <span class="bold">Select</span> button associated with the Product Name field to select the units that the query looks for in cases. See <a href="#CACBJBCI">"Using the Product Browser"</a> for details.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r16c1-t17" headers="r2c1-t17 r1c1-t17">
+<p>Interaction?</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t17 r16c1-t17 r1c2-t17">
+<p>Select the <span class="bold">Yes,</span> <span class="bold">No,</span> <span class="bold">Unknown,</span> or <span class="bold">Ignore</span> option, as appropriate, to indicate whether the query looks for cases where drug interaction status is specified.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r17c1-t17" headers="r2c1-t17 r1c1-t17">
+<p>Contraindicated?</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t17 r17c1-t17 r1c2-t17">
+<p>Select the <span class="bold">Yes,</span> <span class="bold">No,</span> or <span class="bold">Ignore</span> option, as appropriate, to indicate whether the query looks for cases where drug contraindication status is specified.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r18c1-t17" headers="r1c1-t17" rowspan="21">
+<p><span class="bold">Dosage Regimens</span></p>
+</td>
+<td class="cellalignment99" headers="r18c1-t17 r1c2-t17">
+<p>Ongoing</p>
+</td>
+<td class="cellalignment99" headers="r18c1-t17 r1c3-t17">
+<p>Select this check box to retrieve cases where the dosage regimen is ongoing.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r19c1-t17" headers="r18c1-t17 r1c1-t17">
+<p>Outside Therapeutic Range</p>
+</td>
+<td class="cellalignment99" headers="r18c1-t17 r19c1-t17 r1c2-t17">
+<p>Select this check box to retrieve cases where the dosage regimen is outside therapeutic range.</p>
+<p>This means that the drug has not been used in accordance with the label or has been used for outside the Therapeutic Range. Consult with your administrator for further company-specific information about the use of this field.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r20c1-t17" headers="r18c1-t17 r1c1-t17">
+<p>Start Date/Time</p>
+</td>
+<td class="cellalignment99" headers="r18c1-t17 r20c1-t17 r1c2-t17">
+<p>Enter the dosage regimen start date that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r21c1-t17" headers="r18c1-t17 r1c1-t17">
+<p>Stop Date/Time</p>
+</td>
+<td class="cellalignment99" headers="r18c1-t17 r21c1-t17 r1c2-t17">
+<p>Enter the dosage regimen start date that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r22c1-t17" headers="r18c1-t17 r1c1-t17">
+<p>Duration of Regimen</p>
+</td>
+<td class="cellalignment99" headers="r18c1-t17 r22c1-t17 r1c2-t17">
+<p>Enter the dosage regimen duration (specified in minutes) as the query criteria.</p>
+<p>You can click <span class="bold">Calculate</span> to view the Duration Calculator dialog box. You can enter the time in hours, days, weeks, months, or years, and then convert the time to minutes. Alternatively, you can select a duration band and value if available. A system administrator must define the bands.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r23c1-t17" headers="r18c1-t17 r1c1-t17">
+<p>Dose Number</p>
+</td>
+<td class="cellalignment99" headers="r18c1-t17 r23c1-t17 r1c2-t17">
+<p>Enter the drug dose number as the query criteria.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r24c1-t17" headers="r18c1-t17 r1c1-t17">
+<p>Dose</p>
+</td>
+<td class="cellalignment99" headers="r18c1-t17 r24c1-t17 r1c2-t17">
+<p>Enter the drug dose received by the patient as the query criteria.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r25c1-t17" headers="r18c1-t17 r1c1-t17">
+<p>Units</p>
+</td>
+<td class="cellalignment99" headers="r18c1-t17 r25c1-t17 r1c2-t17">
+<p>Specify the units for the value you specified in the <span class="bold">Dose</span> field.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r26c1-t17" headers="r18c1-t17 r1c1-t17">
+<p>Dose Description</p>
+</td>
+<td class="cellalignment99" headers="r18c1-t17 r26c1-t17 r1c2-t17">
+<p>Enter the dose description based on the values you specified in <span class="bold">Dose</span>, <span class="bold">Dose Units</span>, and <span class="bold">Frequency</span> fields.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r27c1-t17" headers="r18c1-t17 r1c1-t17">
+<p>Daily Dosage</p>
+</td>
+<td class="cellalignment99" headers="r18c1-t17 r27c1-t17 r1c2-t17">
+<p>Enter the daily dose based on the values you specified in <span class="bold">Dose</span> and <span class="bold">Frequency</span> fields.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r28c1-t17" headers="r18c1-t17 r1c1-t17">
+<p>Regimen Daily Dosage Unit</p>
+</td>
+<td class="cellalignment99" headers="r18c1-t17 r28c1-t17 r1c2-t17">
+<p>Select the same option you selected in the <span class="bold">Dose Units</span> field.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r29c1-t17" headers="r18c1-t17 r1c1-t17">
+<p>Regimen Dosage</p>
+</td>
+<td class="cellalignment99" headers="r18c1-t17 r29c1-t17 r1c2-t17">
+<p>Daily dose, duration, and frequency.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r30c1-t17" headers="r18c1-t17 r1c1-t17">
+<p>Regimen Dosage Unit</p>
+</td>
+<td class="cellalignment99" headers="r18c1-t17 r30c1-t17 r1c2-t17">
+<p>Select the total dose regimen unit based on the values you specified in <span class="bold">Dose</span>, <span class="bold">Dosage Regimen Duration</span>, and <span class="bold">Frequency</span> fields.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r31c1-t17" headers="r18c1-t17 r1c1-t17">
+<p>Patient Route of Administration</p>
+</td>
+<td class="cellalignment99" headers="r18c1-t17 r31c1-t17 r1c2-t17">
+<p>Select the route of dosage administration as the query criteria.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r32c1-t17" headers="r18c1-t17 r1c1-t17">
+<p>Frequency</p>
+</td>
+<td class="cellalignment99" headers="r18c1-t17 r32c1-t17 r1c2-t17">
+<p>Specify the dosage frequency as the query criteria.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r33c1-t17" headers="r18c1-t17 r1c1-t17">
+<p>Expiration Date</p>
+</td>
+<td class="cellalignment99" headers="r18c1-t17 r33c1-t17 r1c2-t17">
+<p>Enter the product expiration date as the query criteria.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r34c1-t17" headers="r18c1-t17 r1c1-t17">
+<p>Accidental Exposure</p>
+</td>
+<td class="cellalignment99" headers="r18c1-t17 r34c1-t17 r1c2-t17">
+<p>Select the area of accidental exposure as the query criteria.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r35c1-t17" headers="r18c1-t17 r1c1-t17">
+<p>Package ID</p>
+</td>
+<td class="cellalignment99" headers="r18c1-t17 r35c1-t17 r1c2-t17">
+<p>Enter the package ID as the query criteria.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r36c1-t17" headers="r18c1-t17 r1c1-t17">
+<p>Pack Units</p>
+</td>
+<td class="cellalignment99" headers="r18c1-t17 r36c1-t17 r1c2-t17">
+<p>Enter the package units.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r37c1-t17" headers="r18c1-t17 r1c1-t17">
+<p>Batch/Lot #</p>
+</td>
+<td class="cellalignment99" headers="r18c1-t17 r37c1-t17 r1c2-t17">
+<p>Enter the batch/lot number as the query criteria.</p>
+<p>Alternatively, click the associated <span class="bold">Select</span> button to view the Batch/Lot #s dialog box, enter search criteria to find the batch/ lot number you need, and make your selection.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r38c1-t17" headers="r18c1-t17 r1c1-t17">
+<p>Parent Route of Administration</p>
+</td>
+<td class="cellalignment99" headers="r18c1-t17 r38c1-t17 r1c2-t17">
+<p>Select the route of dosage administration of the parent as the query criteria.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r39c1-t17" headers="r1c1-t17" rowspan="17">
+<p><span class="bold">Product Details</span></p>
+</td>
+<td class="cellalignment99" headers="r39c1-t17 r1c2-t17">
+<p>First Dose</p>
+</td>
+<td class="cellalignment99" headers="r39c1-t17 r1c3-t17">
+<p>Enter the earliest dosage regimen start date as the query criteria.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r40c1-t17" headers="r39c1-t17 r1c1-t17">
+<p>Last Dose</p>
+</td>
+<td class="cellalignment99" headers="r39c1-t17 r40c1-t17 r1c2-t17">
+<p>Enter the latest regimen stop date as the query criteria.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r41c1-t17" headers="r39c1-t17 r1c1-t17">
+<p>Duration of Administration</p>
+</td>
+<td class="cellalignment99" headers="r39c1-t17 r41c1-t17 r1c2-t17">
+<p>Enter the duration of drug administration as the query criteria.</p>
+<p>This duration is the difference between the first and last dose for all dosage regimens.</p>
+<p>You can click <span class="bold">Calculate</span> to view the Duration Calculator dialog box. You can enter the time in hours, days, weeks, months, or years, and then convert the time to minutes. Alternatively, you can select a duration band and value if available. A system administrator must define the bands.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r42c1-t17" headers="r39c1-t17 r1c1-t17">
+<p>Date</p>
+</td>
+<td class="cellalignment99" headers="r39c1-t17 r42c1-t17 r1c2-t17">
+<p>Enter the date on which the drug dechallenge was carried out. Note that this date is the same as the Drug Dechallenge Date.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r43c1-t17" headers="r39c1-t17 r1c1-t17">
+<p>Other Information</p>
+</td>
+<td class="cellalignment99" headers="r39c1-t17 r43c1-t17 r1c2-t17">
+<p>Select the <span class="bold">Abuse,</span> <span class="bold">Overdose,</span> and <span class="bold">Tampering</span> check boxes.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r44c1-t17" headers="r39c1-t17 r1c1-t17">
+<p>Time between First Dose / Primary Event</p>
+</td>
+<td class="cellalignment99" headers="r39c1-t17 r44c1-t17 r1c2-t17">
+<p>Enter the time between the event onset and the first dose.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r45c1-t17" headers="r39c1-t17 r1c1-t17">
+<p>Time between Last Dose / Primary Event</p>
+</td>
+<td class="cellalignment99" headers="r39c1-t17 r45c1-t17 r1c2-t17">
+<p>Enter the time between the event onset and the last dose.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r46c1-t17" headers="r39c1-t17 r1c1-t17">
+<p>Total Dose to Primary Event</p>
+</td>
+<td class="cellalignment99" headers="r39c1-t17 r46c1-t17 r1c2-t17">
+<p>Enter the total dose for the drug.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r47c1-t17" headers="r39c1-t17 r1c1-t17">
+<p>Action Taken</p>
+</td>
+<td class="cellalignment99" headers="r39c1-t17 r47c1-t17 r1c2-t17">
+<p>Select the action taken to mitigate the adverse event.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r48c1-t17" headers="r39c1-t17 r1c1-t17">
+<p>Dechallenge Results</p>
+</td>
+<td class="cellalignment99" headers="r39c1-t17 r48c1-t17 r1c2-t17">
+<p>Select the <span class="bold">Yes</span>, <span class="bold">No</span>, <span class="bold">Unknown,</span> <span class="bold">N/A,</span> or <span class="bold">Ignore</span> option, as appropriate, to indicate whether the query looks for cases where drug dechallenge status is specified.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r49c1-t17" headers="r39c1-t17 r1c1-t17">
+<p>Drug Dechallenge Date</p>
+</td>
+<td class="cellalignment99" headers="r39c1-t17 r49c1-t17 r1c2-t17">
+<p>Enter the date on which the drug dechallenge was carried out.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r50c1-t17" headers="r39c1-t17 r1c1-t17">
+<p>Total Dosage</p>
+</td>
+<td class="cellalignment99" headers="r39c1-t17 r50c1-t17 r1c2-t17">
+<p>Enter the total drug usage duration as the query criteria.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r51c1-t17" headers="r39c1-t17 r1c1-t17">
+<p>Units</p>
+</td>
+<td class="cellalignment99" headers="r39c1-t17 r51c1-t17 r1c2-t17">
+<p>Enter the total dosage unit as the query criteria.</p>
+<p>This is based on the daily dose, duration and frequency.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r52c1-t17" headers="r39c1-t17 r1c1-t17">
+<p>Start Date/Time</p>
+</td>
+<td class="cellalignment99" headers="r39c1-t17 r52c1-t17 r1c2-t17">
+<p>Enter the rechallenge start date as the query criteria.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r53c1-t17" headers="r39c1-t17 r1c1-t17">
+<p>Stop Date/Time</p>
+</td>
+<td class="cellalignment99" headers="r39c1-t17 r53c1-t17 r1c2-t17">
+<p>Enter the rechallenge stop date as the query criteria.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r54c1-t17" headers="r39c1-t17 r1c1-t17">
+<p>Taken Previously/Tolerated</p>
+</td>
+<td class="cellalignment99" headers="r39c1-t17 r54c1-t17 r1c2-t17">
+<p>Select the <span class="bold">Yes</span>, <span class="bold">No</span>, <span class="bold">Unknown,</span> or <span class="bold">Ignore</span> option, as appropriate, to indicate whether the query looks for cases where drug was taken previously.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r55c1-t17" headers="r39c1-t17 r1c1-t17">
+<p><span class="italic">Rechallenge</span> Results</p>
+</td>
+<td class="cellalignment99" headers="r39c1-t17 r55c1-t17 r1c2-t17">
+<p>Select the <span class="bold">Yes</span>, <span class="bold">No</span>, <span class="bold">Unknown</span>, <span class="bold">N/A</span> or <span class="bold">Ignore</span> option, as appropriate, to indicate whether the query looks for cases where drug rechallenge status is specified.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<a id="CACBJBCI"></a>
+<div id="AIAGX160" class="sect3">
+<h4 class="sect3"><span class="secnum">3.3.3.1</span> Using the Product Browser</h4>
+<p>To select a product by using the Product Browser:</p>
+<ol>
+<li>
+<p>On the QUERY BY EXAMPLE page, select the <span class="bold">Products</span> tab.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Select</span> button associated with the <span class="bold">Product Name</span> field.</p>
+<p>The Product Browser dialog box appears.</p>
+</li>
+<li>
+<p>Enter the first few letters (text string) of the product ingredient, family name, product name, or trade name in the respective field.</p>
+<ul>
+<li>
+<p>To search for the specified string in the entire product information, select the <span class="bold">Full Search</span> check box.</p>
+</li>
+<li>
+<p>To remove your search criteria and start over, click <span class="bold">Clear.</span></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Press Tab (or click another field in the dialog box) to begin the search.</p>
+<p>The Product Browser appears with the search results (for the specified text string) in the column below the field in which you entered the search string.</p>
+</li>
+<li>
+<p>Select an item from the search results list.</p>
+<p>The details for the selected item are displayed in all the Product Browser fields.</p>
+</li>
+<li>
+<p>Select the required product name or trade name, and click <span class="bold">Select.</span></p>
+<p>The Product Name, Generic Name, Company Drug Code, Formulation, Concentration, and Units fields with the details of the selected product are populated on the Products tab.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<a id="CACIBJDB"></a>
+<div id="AIAGX161" class="sect3">
+<h4 class="sect3"><span class="secnum">3.3.3.2</span> Using the WHO Drug Browser</h4>
+<p>To select a WHO drug product by using the WHO Drug Browser:</p>
+<ol>
+<li>
+<p>On the QUERY BY EXAMPLE page, select the <span class="bold">Products</span> tab.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Encode</span> button associated with the <span class="bold">Product Name</span> field.</p>
+<p>The WHO Drug Browser dialog box appears.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The WHO Drug Browser that appears depends on the configuration settings defined for your account by the administrator.
+<p>The browser categories (B or C) are not displayed in the browser window.</p>
+<p>The primary difference between the two browsers is the availability of the following fields in WHO Drug Browser:</p>
+<ul>
+<li>
+<p><span class="bold">Product Type</span></p>
+</li>
+<li>
+<p><span class="bold">MAH</span> (name of the manufacturer)</p>
+</li>
+<li>
+<p><span class="bold">Medicinal Prod ID</span></p>
+</li>
+<li>
+<p><span class="bold">Ingredients</span> (product substance name)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Use the fields at the top of the WHO Browser dialog box to define your search criteria. You may enter values in one, several, or all fields.</p>
+<ol>
+<li>
+<p>In the <span class="bold">Product Type</span> field, select the type of product.</p>
+<p>You may include all products or a single product. The default value is <span class="bold">All.</span></p>
+</li>
+<li>
+<p>In the <span class="bold">ATC Code</span> field, type all or part of the Anatomical Therapeutic Chemical (ATC) classification code.</p>
+</li>
+<li>
+<p>Select either the <span class="bold">Drug Code</span> or the <span class="bold">Medicinal Prod ID</span> option as one of the search criterion, and then enter the appropriate search string in the text box below the options.</p>
+<p>The default option is <span class="bold">Drug Code.</span></p>
+</li>
+<li>
+<p>Select either the <span class="bold">Trade Name</span> or <span class="bold">Ingredient</span> option as one of the search criterion, and then enter the appropriate search string in the text box below the options.</p>
+<p>The default selection is <span class="bold">Trade Name.</span></p>
+</li>
+<li>
+<p>Enter the <span class="bold">Formulation</span> and <span class="bold">Country</span> details for the drug to be searched.</p>
+</li>
+<li>
+<p>Select the <span class="bold">Full Search</span> check box if you want the system to search for the specified string in the entire product information.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Click <span class="bold">Search.</span></p>
+<p>The WHO Drug Browser appears with the search results (for the specified drug products) in a grid format.</p>
+</li>
+<li>
+<p>Select the required WHO drug.</p>
+<p>The WHO Drug Browser highlights the selected drug and populates the fields in the Drug Details section.</p>
+</li>
+<li>
+<p>Click <span class="bold">Select.</span></p>
+<p>The Product Name, Generic Name, Drug Code, WHO DRUG ATC CODE, and WHO DRUG ATC DESCRIPTION fields for the selected WHO drug are populated in the <span class="bold">Products</span> tab.</p>
+<p>Note that the <span class="bold">Generic Name</span> field displays all the ingredients for the selected WHO drug.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<a id="CACEJHHH"></a>
+<div id="AIAGX162" class="sect3">
+<h4 class="sect3"><span class="secnum">3.3.3.3</span> Using the Study Drug Lookup</h4>
+<p>To select a study drug:</p>
+<ol>
+<li>
+<p>On QUERY BY EXAMPLE page, select the <span class="bold">Products</span> tab.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Select</span> button next to the <span class="bold">Study Drug</span> field.</p>
+<p>The <span class="bold">Study Drugs Lookup</span> dialog box appears.</p>
+</li>
+<li>
+<p>In the <span class="bold">Study Drug</span> field, enter the first few letters of the study drug name.</p>
+</li>
+<li>
+<p>Click <span class="bold">Search.</span></p>
+<p>The search results based on the specified search string appears.</p>
+</li>
+<li>
+<p>Select the required study drug from the list, and click <span class="bold">Add &amp; Close.</span></p>
+<p>You return to the PRoducts tab and the <span class="bold">Study Drug</span> field is populated with the selected.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CACDJJCA"></a>
+<div id="AIAGX163" class="sect2">
+<h3 class="sect2"><span class="secnum">3.3.4</span> Events Tab</h3>
+<p>In the <span class="bold">Events</span> tab the details of only one event can be specified at a time.</p>
+<p><a href="#BABDGDJC">Table 3-6</a> describes the fields in the <span class="bold">Events</span> tab. The <span class="italic">field</span> values you specify are used as the <span class="italic">query</span> criteria to retrieve matching cases.</p>
+<div id="AIAGX164" class="tblhruleformalwide">
+<p class="titleintable"><a id="sthref28"></a><a id="BABDGDJC"></a>Table 3-6 QUERY BY EXAMPLE Page &gt; Events Tab &mdash; Field Description</p>
+<table class="cellalignment103" title="QUERY BY EXAMPLE Page &gt; Events Tab &mdash; Field Description" summary="The following table describes the various fields in the Events tab." dir="ltr">
+<thead>
+<tr class="cellalignment93">
+<th class="cellalignment104" id="r1c1-t19">Section</th>
+<th class="cellalignment104" id="r1c2-t19">Field or Check Box</th>
+<th class="cellalignment104" id="r1c3-t19">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r2c1-t19" headers="r1c1-t19">
+<p><span class="bold">Event Information</span></p>
+</td>
+<td class="cellalignment99" headers="r2c1-t19 r1c2-t19">
+<p>Diagnosis</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t19 r1c3-t19">
+<p>Select the <span class="bold">Yes</span>, <span class="bold">No</span>, or <span class="bold">Ignore</span> option, as appropriate, to indicate whether the query looks for cases where event diagnosis flag is set.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r3c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment99" headers="r3c1-t19 r1c2-t19">
+<p>Description as Reported</p>
+</td>
+<td class="cellalignment99" headers="r3c1-t19 r1c3-t19">
+<p>Enter the reported event description that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r4c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment99" headers="r4c1-t19 r1c2-t19">
+<p>Description to be Coded</p>
+</td>
+<td class="cellalignment99" headers="r4c1-t19 r1c3-t19">
+<p>Tab out of this field to use the MedDRA Browser to specify an event term as query criteria.</p>
+<p>See <a href="#CACFDDBC">"Using the MedDRA Browser"</a> for more information. The MedDRA event terms for the selected term are displayed in the <span class="bold">Seriousness Criteria</span> section. The query is restricted to the terms displayed.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r5c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment99" headers="r5c1-t19 r1c2-t19">
+<p>Onset Date/Time</p>
+</td>
+<td class="cellalignment99" headers="r5c1-t19 r1c3-t19">
+<p>Enter the event onset date that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r6c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment99" headers="r6c1-t19 r1c2-t19">
+<p>Duration</p>
+</td>
+<td class="cellalignment99" headers="r6c1-t19 r1c3-t19">
+<p>Enter the event duration that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r7c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment99" headers="r7c1-t19 r1c2-t19">
+<p>Onset From Last Dose</p>
+</td>
+<td class="cellalignment99" headers="r7c1-t19 r1c3-t19">
+<p>Enter the event onset duration from last dose as the query criteria.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r8c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment99" headers="r8c1-t19 r1c2-t19">
+<p>Onset Latency</p>
+</td>
+<td class="cellalignment99" headers="r8c1-t19 r1c3-t19">
+<p>Enter the event onset latency duration that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r9c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment99" headers="r9c1-t19 r1c2-t19">
+<p>Time to Onset from First Dose</p>
+</td>
+<td class="cellalignment99" headers="r9c1-t19 r1c3-t19">
+<p>Enter the duration from first dose to the event onset as the query criteria.</p>
+<p>Alternatively, click the associated <span class="bold">Calculate</span> button to view the Duration Calculator dialog box and make your selection.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r10c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment99" headers="r10c1-t19 r1c2-t19">
+<p>Receipt Date</p>
+</td>
+<td class="cellalignment99" headers="r10c1-t19 r1c3-t19">
+<p>Enter the event receipt date that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r11c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment99" headers="r11c1-t19 r1c2-t19">
+<p>Term Highlighted by Reporter</p>
+</td>
+<td class="cellalignment99" headers="r11c1-t19 r1c3-t19">
+<p>Select the <span class="bold">Yes</span>, <span class="bold">No</span>, or <span class="bold">Ignore</span> option, as appropriate, to indicate whether the query looks for cases where case seriousness status is specified.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r12c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment99" headers="r12c1-t19 r1c2-t19">
+<p>Patient Has Prior History?</p>
+</td>
+<td class="cellalignment99" headers="r12c1-t19 r1c3-t19">
+<p>Select the <span class="bold">Yes</span>, <span class="bold">No</span>, <span class="bold">Unknown</span>, or <span class="bold">Ignore</span> option, as appropriate, to indicate whether the query looks for cases where event past history is specified.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r13c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment99" headers="r13c1-t19 r1c2-t19">
+<p>Treatment Received?</p>
+</td>
+<td class="cellalignment99" headers="r13c1-t19 r1c3-t19">
+<p>Select the <span class="bold">Yes</span>, <span class="bold">No</span>, <span class="bold">Unknown</span>, or <span class="bold">Ignore</span> option, as appropriate, to indicate whether the query looks for cases where patient received treatment for the event.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r14c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment99" headers="r14c1-t19 r1c2-t19">
+<p>Time to Onset from Last Dose</p>
+</td>
+<td class="cellalignment99" headers="r14c1-t19 r1c3-t19">
+<p>Enter the duration from last dose to the event onset as the query criteria.</p>
+<p>Alternatively, click the associated <span class="bold">Calculate</span> button to view the Duration Calculator dialog box and make your selection.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r15c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment99" headers="r15c1-t19 r1c2-t19">
+<p>Progression of Disease</p>
+</td>
+<td class="cellalignment99" headers="r15c1-t19 r1c3-t19">
+<p>Select this check box to retrieve cases where Event Progression of Disease is selected.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r16c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment99" headers="r16c1-t19 r1c2-t19">
+<p>Adverse Drug Withdrawal Reaction</p>
+</td>
+<td class="cellalignment99" headers="r16c1-t19 r1c3-t19">
+<p>Select this check box to retrieve cases where Event Withdrawal Reaction is selected.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r17c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment99" headers="r17c1-t19 r1c2-t19">
+<p>Stop Date/Time</p>
+</td>
+<td class="cellalignment99" headers="r17c1-t19 r1c3-t19">
+<p>Enter the event stop date that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r18c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment99" headers="r18c1-t19 r1c2-t19">
+<p>Intensity</p>
+</td>
+<td class="cellalignment99" headers="r18c1-t19 r1c3-t19">
+<p>Select the event intensity option that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r19c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment99" headers="r19c1-t19 r1c2-t19">
+<p>Frequency</p>
+</td>
+<td class="cellalignment99" headers="r19c1-t19 r1c3-t19">
+<p>Select the event frequency option that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r20c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment99" headers="r20c1-t19 r1c2-t19">
+<p>Lack of Efficacy</p>
+</td>
+<td class="cellalignment99" headers="r20c1-t19 r1c3-t19">
+<p>Select <span class="bold">Yes</span> from the drop-down list to retrieve cases where Event Lack of Efficacy is selected, else select <span class="bold">No</span>.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r21c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment99" headers="r21c1-t19 r1c2-t19">
+<p>Related to <span class="italic">Study</span> Conduct? (As Reported)</p>
+</td>
+<td class="cellalignment99" headers="r21c1-t19 r1c3-t19">
+<p>Select the <span class="bold">Yes</span>, <span class="bold">No</span>, <span class="bold">Unknown</span>, or <span class="bold">N/A</span> from the drop-down list, to indicate whether the query looks for cases where the event is related to a study.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r22c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment99" headers="r22c1-t19 r1c2-t19">
+<p>Outcome of Event</p>
+</td>
+<td class="cellalignment99" headers="r22c1-t19 r1c3-t19">
+<p>Enter the event outcome that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r23c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment99" headers="r23c1-t19 r1c2-t19">
+<p>Nature of Event</p>
+</td>
+<td class="cellalignment99" headers="r23c1-t19 r1c3-t19">
+<p>Enter the nature of the event that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r24c1-t19" headers="r1c1-t19">
+<p><span class="bold">Event Coding</span></p>
+</td>
+<td class="cellalignment99" headers="r24c1-t19 r1c2-t19">
+<p>System Organ Class (SOC)<br />
+High Level Group Term<br />
+High Level Term<br />
+Preferred Term<br />
+Lower Level Term</p>
+</td>
+<td class="cellalignment99" headers="r24c1-t19 r1c3-t19">
+<p>Click the associated <span class="bold">Encode</span> button to use the MedDRA Browser to specify event terms as query criteria.</p>
+<p>See <a href="#CACFDDBC">"Using the MedDRA Browser"</a> for details.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r25c1-t19" headers="r1c1-t19">
+<p><span class="bold">Seriousness Criteria</span></p>
+</td>
+<td class="cellalignment99" headers="r25c1-t19 r1c2-t19">
+<p>Seriousness Criteria check&nbsp;boxes</p>
+</td>
+<td class="cellalignment99" headers="r25c1-t19 r1c3-t19">
+<p>Select one or more check boxes to specify the seriousness criteria that the query looks for in cases. The available values are:</p>
+<ul>
+<li>
+<p>Death</p>
+</li>
+<li>
+<p>Medically Significant</p>
+</li>
+<li>
+<p>Hospitalized</p>
+</li>
+<li>
+<p>Life-threatening</p>
+</li>
+<li>
+<p>Disability</p>
+</li>
+<li>
+<p>Intervention Required</p>
+</li>
+<li>
+<p>Congenital Anomaly</p>
+</li>
+<li>
+<p>Other</p>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" --></div>
+<!-- class="sect2" -->
+<a id="CACJGBHH"></a>
+<div id="AIAGX165" class="sect2">
+<h3 class="sect2"><span class="secnum">3.3.5</span> Analysis Tab</h3>
+<p>The <span class="bold">Analysis</span> tab has two views: <span class="bold">Case Analysis</span> and <span class="bold">AFSSaPS.</span></p>
+<p>Analysis information about Regulatory Information (notification log), MedWatch Information, BfArM Information, and EU devices is not available. For more sophisticated queries, use filters or advanced conditions.</p>
+<p><a href="#BABGCECG">Table 3-7</a> describes all the fields in the <span class="bold">Case Analysis</span> view. The field values you specify are used as the <span class="italic">query</span> criteria to retrieve matching cases.</p>
+<div id="AIAGX166" class="tblhruleformalwide">
+<p class="titleintable"><a id="sthref29"></a><a id="BABGCECG"></a>Table 3-7 QUERY BY EXAMPLE Page &gt; Analysis Tab &gt; Case Analysis View &mdash; Field Description</p>
+<table class="cellalignment103" title="QUERY BY EXAMPLE Page &gt; Analysis Tab &gt; Case Analysis View &mdash; Field Description" summary="The following table describes the fields in the Case Analysis view of the Analysis tab on the QUERY BY EXAMPLE page." dir="ltr">
+<thead>
+<tr class="cellalignment93">
+<th class="cellalignment104" id="r1c1-t20">Section</th>
+<th class="cellalignment104" id="r1c2-t20">Field or Check Box</th>
+<th class="cellalignment104" id="r1c3-t20">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r2c1-t20" headers="r1c1-t20" rowspan="6">
+<p><span class="bold">Narrative</span></p>
+</td>
+<td class="cellalignment99" headers="r2c1-t20 r1c2-t20">
+<p>Narrative</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t20 r1c3-t20">
+<p>Enter the case narrative that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r3c1-t20" headers="r2c1-t20 r1c1-t20">
+<p>Case Comment</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t20 r3c1-t20 r1c2-t20">
+<p>Enter the case comment that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r4c1-t20" headers="r2c1-t20 r1c1-t20">
+<p>Local Evaluator Comment</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t20 r4c1-t20 r1c2-t20">
+<p>Enter the local evaluator' comment that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r5c1-t20" headers="r2c1-t20 r1c1-t20">
+<p>Company Comment</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t20 r5c1-t20 r1c2-t20">
+<p>Enter the company's comment that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r6c1-t20" headers="r2c1-t20 r1c1-t20">
+<p>Abbreviated Narrative</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t20 r6c1-t20 r1c2-t20">
+<p>Enter the abbreviated case narrative that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r7c1-t20" headers="r2c1-t20 r1c1-t20">
+<p>Evaluation in light of similar events&nbsp;in the past</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t20 r7c1-t20 r1c2-t20">
+<p>Enter the evaluation comment that takes in to consideration similar events that have occurred in the past. The query will look for the specified text in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r8c1-t20" headers="r1c1-t20" rowspan="9">
+<p><span class="bold">Other Information</span></p>
+</td>
+<td class="cellalignment99" headers="r8c1-t20 r1c2-t20">
+<p>Case Serious</p>
+</td>
+<td class="cellalignment99" headers="r8c1-t20 r1c3-t20">
+<p>Select the <span class="bold">Yes</span>, <span class="bold">No</span>, or <span class="bold">Ignore</span> option, as appropriate, to indicate whether the query looks for cases where case seriousness status is specified.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r9c1-t20" headers="r8c1-t20 r1c1-t20">
+<p>Notes</p>
+</td>
+<td class="cellalignment99" headers="r8c1-t20 r9c1-t20 r1c2-t20">
+<p>Enter the case seriousness notes that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r10c1-t20" headers="r8c1-t20 r1c1-t20">
+<p>Company Agent Causal</p>
+</td>
+<td class="cellalignment99" headers="r8c1-t20 r10c1-t20 r1c2-t20">
+<p>Select the <span class="bold">Yes</span>, <span class="bold">No</span>, <span class="bold">Unknown</span>, or <span class="bold">Ignore</span> option, as appropriate, to indicate whether the query looks for cases where the company agent causality status is specified.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r11c1-t20" headers="r8c1-t20 r1c1-t20">
+<p>Notes</p>
+</td>
+<td class="cellalignment99" headers="r8c1-t20 r11c1-t20 r1c2-t20">
+<p>Enter the company agent causality notes that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r12c1-t20" headers="r8c1-t20 r1c1-t20">
+<p>Listedness Determination</p>
+</td>
+<td class="cellalignment99" headers="r8c1-t20 r12c1-t20 r1c2-t20">
+<p>Select the case listedness status that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r13c1-t20" headers="r8c1-t20 r1c1-t20">
+<p>Notes</p>
+</td>
+<td class="cellalignment99" headers="r8c1-t20 r13c1-t20 r1c2-t20">
+<p>Enter the case assessment listedness notes that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r14c1-t20" headers="r8c1-t20 r1c1-t20">
+<p>Case Outcome</p>
+</td>
+<td class="cellalignment99" headers="r8c1-t20 r14c1-t20 r1c2-t20">
+<p>Select the case outcome that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r15c1-t20" headers="r8c1-t20 r1c1-t20">
+<p>Company Diagnosis/Syndrome</p>
+</td>
+<td class="cellalignment99" headers="r8c1-t20 r15c1-t20 r1c2-t20">
+<p>Click the associated <span class="bold">Encode</span> button to use the MedDRA Browser to specify the company diagnosis as query criteria. See <a href="#CACFDDBC">"Using the MedDRA Browser"</a> for more information.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r16c1-t20" headers="r8c1-t20 r1c1-t20">
+<p>Notes</p>
+</td>
+<td class="cellalignment99" headers="r8c1-t20 r16c1-t20 r1c2-t20">
+<p>Enter the company diagnosis/syndrome notes that the query looks for in cases.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<p><a href="#BABJFJFA">Table 3-8</a> describes all the fields in the <span class="bold">AFSSaPS</span> view. The field values you specify are used as the query criteria to retrieve matching cases.</p>
+<div id="AIAGX167" class="tblhruleformalwide">
+<p class="titleintable"><a id="sthref30"></a><a id="BABJFJFA"></a>Table 3-8 QUERY BY EXAMPLE Page &gt; Analysis Tab &gt; AFSSaPS View &mdash; Field Description</p>
+<table class="cellalignment103" title="QUERY BY EXAMPLE Page &gt; Analysis Tab &gt; AFSSaPS View &mdash; Field Description" summary="The following table describes all the fields in the AFSSaPS page. The field values you specify are used as the query criteria to retrieve matching cases." dir="ltr">
+<thead>
+<tr class="cellalignment93">
+<th class="cellalignment104" id="r1c1-t21">Section</th>
+<th class="cellalignment104" id="r1c2-t21">Field</th>
+<th class="cellalignment104" id="r1c3-t21">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r2c1-t21" headers="r1c1-t21" rowspan="6">
+<p><span class="bold">Case Event Imputability Details</span></p>
+</td>
+<td class="cellalignment99" headers="r2c1-t21 r1c2-t21">
+<p>Preferred Term</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t21 r1c3-t21">
+<p>Click the associated <span class="bold">Select</span> button to use the MedDRA Browser to specify the Event Preferred Term as query criteria.</p>
+<p>See <a href="#CACFDDBC">"Using the MedDRA Browser"</a> for more information.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r3c1-t21" headers="r2c1-t21 r1c1-t21">
+<p>Agent</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t21 r3c1-t21 r1c2-t21">
+<p>Click the associated <span class="bold">Select</span> button to choose the <span class="italic">suspect product</span> that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r4c1-t21" headers="r2c1-t21 r1c1-t21">
+<p>Chronology</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t21 r4c1-t21 r1c2-t21">
+<p>Select the imputability chronology code that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r5c1-t21" headers="r2c1-t21 r1c1-t21">
+<p>Semiology</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t21 r5c1-t21 r1c2-t21">
+<p>Select the imputability semiology code that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r6c1-t21" headers="r2c1-t21 r1c1-t21">
+<p>Bibliography</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t21 r6c1-t21 r1c2-t21">
+<p>Select the imputability bibliography code that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r7c1-t21" headers="r2c1-t21 r1c1-t21">
+<p>Imputability</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t21 r7c1-t21 r1c2-t21">
+<p>Select the imputability score that the query looks for in cases.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" --></div>
+<!-- class="sect2" -->
+<a id="CACBIBJC"></a>
+<div id="AIAGX168" class="sect2">
+<h3 class="sect2"><span class="secnum">3.3.6</span> Activities Tab</h3>
+<p>In the <span class="bold">Activities</span> tab, you can:</p>
+<ul>
+<li>
+<p>Specify information only about one contact log.</p>
+</li>
+<li>
+<p>Specify information only about one action item.</p>
+</li>
+</ul>
+<p>Note that routing search is not applicable in Argus Insight.</p>
+<p><a href="#BABHGGDE">Table 3-9</a> describes all the fields in the <span class="bold">Activities</span> tab. The <span class="italic">field</span> values you specify are used as the <span class="italic">query</span> criteria to retrieve matching cases.</p>
+<div id="AIAGX169" class="tblhruleformalwide">
+<p class="titleintable"><a id="sthref31"></a><a id="BABHGGDE"></a>Table 3-9 QUERY BY EXAMPLE Page &gt; Activities Tab &mdash; Field Description</p>
+<table class="cellalignment103" title="QUERY BY EXAMPLE Page &gt; Activities Tab &mdash; Field Description" summary="The following table describes all the fields in the Activities tab." dir="ltr">
+<thead>
+<tr class="cellalignment93">
+<th class="cellalignment104" id="r1c1-t22">Section</th>
+<th class="cellalignment104" id="r1c2-t22">Field</th>
+<th class="cellalignment104" id="r1c3-t22">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r2c1-t22" headers="r1c1-t22" rowspan="6">
+<p><span class="bold">Contact Log</span></p>
+</td>
+<td class="cellalignment99" headers="r2c1-t22 r1c2-t22">
+<p>Date</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t22 r1c3-t22">
+<p>Enter the contact log date that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r3c1-t22" headers="r2c1-t22 r1c1-t22">
+<p>Code</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t22 r3c1-t22 r1c2-t22">
+<p>Select the contact log code that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r4c1-t22" headers="r2c1-t22 r1c1-t22">
+<p>Group</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t22 r4c1-t22 r1c2-t22">
+<p>Select the contact log group that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r5c1-t22" headers="r2c1-t22 r1c1-t22">
+<p>Date Sent</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t22 r5c1-t22 r1c2-t22">
+<p>Enter the sent date for the contact.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r6c1-t22" headers="r2c1-t22 r1c1-t22">
+<p>Description</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t22 r6c1-t22 r1c2-t22">
+<p>Enter the contact log description that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r7c1-t22" headers="r2c1-t22 r1c1-t22">
+<p>User</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t22 r7c1-t22 r1c2-t22">
+<p>Select the user responsible for the contact log. The query will look for the user name you select.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r8c1-t22" headers="r1c1-t22" rowspan="7">
+<p><span class="bold">Action Items</span></p>
+</td>
+<td class="cellalignment99" headers="r8c1-t22 r1c2-t22">
+<p>Date Open</p>
+</td>
+<td class="cellalignment99" headers="r8c1-t22 r1c3-t22">
+<p>Enter the action item opening date that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r9c1-t22" headers="r8c1-t22 r1c1-t22">
+<p>Code</p>
+</td>
+<td class="cellalignment99" headers="r8c1-t22 r9c1-t22 r1c2-t22">
+<p>Select the action type that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r10c1-t22" headers="r8c1-t22 r1c1-t22">
+<p>Group</p>
+</td>
+<td class="cellalignment99" headers="r8c1-t22 r10c1-t22 r1c2-t22">
+<p>Select the responsible group that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r11c1-t22" headers="r8c1-t22 r1c1-t22">
+<p>Due</p>
+</td>
+<td class="cellalignment99" headers="r8c1-t22 r11c1-t22 r1c2-t22">
+<p>Enter the action item due date that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r12c1-t22" headers="r8c1-t22 r1c1-t22">
+<p>Description</p>
+</td>
+<td class="cellalignment99" headers="r8c1-t22 r12c1-t22 r1c2-t22">
+<p>Enter the action item description that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r13c1-t22" headers="r8c1-t22 r1c1-t22">
+<p>User</p>
+</td>
+<td class="cellalignment99" headers="r8c1-t22 r13c1-t22 r1c2-t22">
+<p>Select the user responsible for the action item. The query looks for the specified user name.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r14c1-t22" headers="r8c1-t22 r1c1-t22">
+<p>Completed</p>
+</td>
+<td class="cellalignment99" headers="r8c1-t22 r14c1-t22 r1c2-t22">
+<p>Enter the action item completion date that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r15c1-t22" headers="r1c1-t22" rowspan="3">
+<p><span class="bold">Case Lock/Archive</span></p>
+</td>
+<td class="cellalignment99" headers="r15c1-t22 r1c2-t22">
+<p>Lock Date</p>
+</td>
+<td class="cellalignment99" headers="r15c1-t22 r1c3-t22">
+<p>Enter the case lock date that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r16c1-t22" headers="r15c1-t22 r1c1-t22">
+<p>Locked or Closed By</p>
+</td>
+<td class="cellalignment99" headers="r15c1-t22 r16c1-t22 r1c2-t22">
+<p>Enter the user who locked or closed the case.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r17c1-t22" headers="r15c1-t22 r1c1-t22">
+<p>Closure Date</p>
+</td>
+<td class="cellalignment99" headers="r15c1-t22 r17c1-t22 r1c2-t22">
+<p>Enter the date when the case was closed.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" --></div>
+<!-- class="sect2" -->
+<a id="CACFIEIF"></a>
+<div id="AIAGX170" class="sect2">
+<h3 class="sect2"><span class="secnum">3.3.7</span> Additional Info Tab</h3>
+<p>In the <span class="bold">Additional Info</span> tab:</p>
+<ul>
+<li>
+<p>You can specify information only about one note.</p>
+</li>
+<li>
+<p>Attachments are not permitted.</p>
+</li>
+<li>
+<p>You can specify information only about one reference.</p>
+</li>
+</ul>
+<p><a href="#BABGJFBD">Table 3-10</a> describes all the fields in the <span class="bold">Additional Info</span> tab. The <span class="italic">field</span> values you specify are used as the <span class="italic">query</span> criteria to retrieve matching cases.</p>
+<div id="AIAGX171" class="tblhruleformalwide">
+<p class="titleintable"><a id="sthref32"></a><a id="BABGJFBD"></a>Table 3-10 QUERY BY EXAMPLE Page &gt; Additional Information Tab &mdash; Field Description</p>
+<table class="cellalignment103" title="QUERY BY EXAMPLE Page &gt; Additional Information Tab &mdash; Field Description" summary="The following table describes all the fields in the Additional Information tab." dir="ltr">
+<thead>
+<tr class="cellalignment93">
+<th class="cellalignment104" id="r1c1-t23">Section</th>
+<th class="cellalignment104" id="r1c2-t23">Field</th>
+<th class="cellalignment104" id="r1c3-t23">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r2c1-t23" headers="r1c1-t23" rowspan="3">
+<p><span class="bold">References</span></p>
+</td>
+<td class="cellalignment99" headers="r2c1-t23 r1c2-t23">
+<p>Type</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t23 r1c3-t23">
+<p>Enter the reference type that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r3c1-t23" headers="r2c1-t23 r1c1-t23">
+<p>ID</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t23 r3c1-t23 r1c2-t23">
+<p>Enter the referenced case ID that the query looks for in cases.</p>
+</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r4c1-t23" headers="r2c1-t23 r1c1-t23">
+<p>Notes</p>
+</td>
+<td class="cellalignment99" headers="r2c1-t23 r4c1-t23 r1c2-t23">
+<p>Enter the reference notes that the query looks for in cases.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CACBGGBJ"></a>
+<div id="AIAGX172" class="sect1">
+<h2 class="sect1"><span class="secnum">3.4</span> Assigning Group-Level Permissions to a Saved QBE</h2>
+<ol>
+<li>
+<p>Click <span class="bold">Permissions.</span></p>
+<p>The <span class="bold">Permissions</span> dialog box appears with the names of all the groups (except the <span class="bold">Administrator</span> group) that the system administrator has created.</p>
+</li>
+<li>
+<p>Use the drop-down list next to a group name to assign permissions to the group members on the QBE you have created. The available options are:</p>
+<div class="inftblhruleinformal">
+<table class="cellalignment103" summary="The table describes the QBE options in the list box placed next to a group name to assign permissions to the group members." dir="ltr">
+<thead>
+<tr class="cellalignment93">
+<th class="cellalignment104" id="r1c1-t24">Permission</th>
+<th class="cellalignment104" id="r1c2-t24">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r2c1-t24" headers="r1c1-t24">R/W/D/P</td>
+<td class="cellalignment99" headers="r2c1-t24 r1c2-t24">Group members will be able to view, modify, delete, and assign permission on the QBE.</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r3c1-t24" headers="r1c1-t24">R/W/D</td>
+<td class="cellalignment99" headers="r3c1-t24 r1c2-t24">Group members will be able to view, modify, and delete the QBE.</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r4c1-t24" headers="r1c1-t24">R/W</td>
+<td class="cellalignment99" headers="r4c1-t24 r1c2-t24">Group members will be able to view and modify the QBE.</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r5c1-t24" headers="r1c1-t24">R</td>
+<td class="cellalignment99" headers="r5c1-t24 r1c2-t24">Group members will be able to only view the QBE.</td>
+</tr>
+<tr class="cellalignment93">
+<td class="cellalignment99" id="r6c1-t24" headers="r1c1-t24">No Access (Default)</td>
+<td class="cellalignment99" headers="r6c1-t24 r1c2-t24">No group members will be able to access the QBE.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblhruleinformal" --></li>
+<li>
+<p>Click <span class="bold">OK.</span></p>
+<p>The permission settings are saved.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="CACGFIEF"></a>
+<div id="AIAGX173" class="sect1">
+<h2 class="sect1"><span class="secnum">3.5</span> Working with the Last Modified or Executed QBE</h2>
+<p>This section describes how to view the QBE that you last modified or executed.</p>
+<p>The system assigns the <span class="italic">active</span> status to a QBE when you save modifications to it or execute it. Unless you save the modifications to another QBE or execute another QBE, the last QBE you modified or executed remains active. This is helpful in situations when you want to access a frequently used QBE.</p>
+<p class="subhead2"><a id="AIAGX174"></a>To view an active QBE:</p>
+<ol>
+<li>
+<p>Navigate to <span class="bold">Queries &gt; Query by Example &gt;</span> <span class="bold">Active.</span></p>
+<p>The ACTIVE QUERY BY EXAMPLE page appears with the QBE <span class="italic">form</span> for the last QBE you executed.</p>
+<ul>
+<li>
+<p>If the active QBE was saved to the system before executing, both the <span class="bold">Active Query Name</span> field and the <span class="bold">Name</span> field appears with the name of the QBE.</p>
+</li>
+<li>
+<p>If the active QBE was not saved before executing, the Active Query Name field displays the following text:</p>
+<p><code dir="ltr">&lt;Not Saved&gt;</code></p>
+<p>You may enter the name of the QBE in the <span class="bold">Name</span> field, and click <span class="bold">Save</span>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>To rename an already saved QBE, enter the new name in the <span class="bold">Name</span> field, and click <span class="bold">Save</span>.</p>
+</li>
+</ol>
+<p class="subhead2"><a id="AIAGX175"></a>Modifying the Description and Values for the Active QBE</p>
+<p>To change the description of the active QBE, add or modify the text in the <span class="bold">Description</span> field.</p>
+<p>In addition, you may modify the value of any field on any of the QBE tabs (that is, the QBE form).</p>
+<p>When you modify the values of a QBE:</p>
+<ul>
+<li>
+<p>To clear all the values for the current tab, click <span class="bold">Clear Tab</span>.</p>
+</li>
+<li>
+<p>To clear all the values specified in all the tabs for this active QBE, click <span class="bold">Clear All</span>.</p>
+</li>
+</ul>
+<p class="subhead2"><a id="AIAGX176"></a>Saving the Active QBE</p>
+<p>You have two options for saving the active QBE:</p>
+<ul>
+<li>
+<p>To save any changes or updates you make to the active QBE, click <span class="bold">Save</span>.</p>
+<p>The Save button is enabled for a saved active QBE only.</p>
+</li>
+<li>
+<p>To save the active QBE with a different name, click <span class="bold">Save As</span>.</p>
+</li>
+</ul>
+<p>The QUERY BY EXAMPLE LIBRARY page lists all the QBEs saved to the system.</p>
+<p>See <a href="#CACDBAFG">"Working with Saved QBEs"</a> for more information.</p>
+<p class="subhead2"><a id="AIAGX177"></a>Converting the Active QBE to an Advanced Condition</p>
+<p>To convert the QBE to an Advanced Condition, click <span class="bold">Convert to Advanced Condition</span>.</p>
+<p>See <a href="#CACFDAFH">"Using QBEs with Advanced Conditions"</a> for more information.</p>
+<p class="subhead2"><a id="AIAGX178"></a>Assigning Permissions</p>
+<p>To set the group-level access permissions on the QBE, click <span class="bold">Permissions</span>.</p>
+<p>The <span class="bold">Permissions</span> button is only available for saved active QBEs.</p>
+<p>See <a href="#CACBGGBJ">"Assigning Group-Level Permissions to a Saved QBE"</a> for more information.</p>
+<p class="subhead2"><a id="AIAGX179"></a>Executing the Active QBE</p>
+<p>To generate a case series by using the active QBE, click <span class="bold">Execute</span>.</p>
+<p>Modifying the field values in the QBE form for an active QBE or saving the active QBE with a different name changes the active QBE to reflect the most recent changes. The active QBE also changes if you modify the field values in the QBE form and execute the QBE without saving the QBE form modifications.</p>
+</div>
+<!-- class="sect1" -->
+<a id="CACDBAFG"></a>
+<div id="AIAGX180" class="sect1">
+<h2 class="sect1"><span class="secnum">3.6</span> Working with Saved QBEs</h2>
+<p>The QUERY BY EXAMPLE LIBRARY page lists all the QBEs saved to the system.</p>
+<p>To view the list of saved QBEs, navigate to <span class="bold">Queries &gt; Query by Example &gt;</span> <span class="bold">Library.</span></p>
+<p>The QUERY BY EXAMPLE LIBRARY page appears with the following information about the saved QBE:</p>
+<ul>
+<li>
+<p>Name of the QBE that was entered when the query was saved.</p>
+</li>
+<li>
+<p>Description of the QBE that was entered in the Description field on the QBE form.</p>
+</li>
+<li>
+<p>Date when the QBE was last modified.</p>
+</li>
+<li>
+<p>Full name of the user who created the QBE.</p>
+</li>
+<li>
+<p>Category that was selected on the QBE form and assigned to the query.</p>
+</li>
+</ul>
+<div id="AIAGX181" class="sect2"><a id="sthref33"></a>
+<h3 class="sect2"><span class="secnum">3.6.1</span> Searching for a Saved QBE</h3>
+<ol>
+<li>
+<p>Perform one of the following to specify the search criteria:</p>
+<ul>
+<li>
+<p>To search for a QBE by its name, type the QBE name in the <span class="bold">Name</span> field.</p>
+</li>
+<li>
+<p>To search for a QBE by its description, type the first few words of the description in the <span class="bold">Description</span> field.</p>
+<p>The system searches for the specified search string in all QBE descriptions.</p>
+</li>
+<li>
+<p>To search for a QBE by its date of modification, enter the modification date in the first <span class="bold">Last Modified</span> date field.</p>
+<p>You may also specify a date range by typing the start and end dates in the first and second date fields, respectively.</p>
+</li>
+<li>
+<p>To search for a QBE by its author, select the author name from the <span class="bold">User Full Name</span> drop-down list.</p>
+</li>
+<li>
+<p>To search for a QBE by its category, select the category from the <span class="bold">Category</span> drop-down list.</p>
+</li>
+</ul>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If you search for a text comprising an underscore, it is treated as a wildcard and is replaced by a letter in the displayed results. For example, If you have queries with names - CURE, CORE, and CARE and you search for C_RE, all three queries are displayed in the result.</div>
+</li>
+<li>
+<p>Click <span class="bold">Search.</span></p>
+<p>The search results appear in a list based on the search criteria.</p>
+<ul>
+<li>
+<p>To sort search results, click the sort icon next to the column headers in the list.</p>
+</li>
+<li>
+<p>To clear the search results and display all the saved QBEs in the list, click <span class="bold">Clear.</span></p>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<div id="AIAGX182" class="sect2"><a id="sthref34"></a>
+<h3 class="sect2"><span class="secnum">3.6.2</span> Creating a New QBE</h3>
+<p>To create a new QBE, navigate to <span class="bold">Queries &gt; Query By Example &gt; New.</span></p>
+<p>Alternatively, click <span class="bold">New</span> in the QUERY BY EXAMPLE LIBRARY page to open a new QBE form directly.</p>
+</div>
+<!-- class="sect2" -->
+<div id="AIAGX183" class="sect2"><a id="sthref35"></a>
+<h3 class="sect2"><span class="secnum">3.6.3</span> Modifying a Saved QBE</h3>
+<ol>
+<li>
+<p>On the QUERY BY EXAMPLE LIBRARY page, select a QBE from the list of QBEs.</p>
+</li>
+<li>
+<p>Click <span class="bold">Modify.</span></p>
+<p>The QBE form for the selected QBE appears.</p>
+</li>
+<li>
+<p>Modify the field values in the QBE form, and save the changes.</p>
+<ul>
+<li>
+<p>To save the current query, click <span class="bold">Save</span>.</p>
+</li>
+<li>
+<p>To save the current query by another name, click <span class="bold">Save As</span>.</p>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<div id="AIAGX184" class="sect2"><a id="sthref36"></a>
+<h3 class="sect2"><span class="secnum">3.6.4</span> Deleting a Saved QBE</h3>
+<ol>
+<li>
+<p>On the QUERY BY EXAMPLE LIBRARY page, select a QBE from the list of QBEs.</p>
+</li>
+<li>
+<p>Click <span class="bold">Delete.</span></p>
+<p>A confirmation dialog box appears.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK.</span></p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CACGCFDE"></a>
+<div id="AIAGX185" class="sect2">
+<h3 class="sect2"><span class="secnum">3.6.5</span> Executing a Saved QBE</h3>
+<ol>
+<li>
+<p>Navigate to <span class="bold">Queries &gt; Query by Example &gt;</span> <span class="bold">Library.</span></p>
+<p>The QUERY BY EXAMPLE LIBRARY page appears.</p>
+</li>
+<li>
+<p>Select a QBE from the list.</p>
+</li>
+<li>
+<p>Click <span class="bold">Execute.</span></p>
+<p>When execution is complete, the ACTIVE CASE SERIES page appears.</p>
+</li>
+</ol>
+<p>After generating the case series, you may add cases to or delete cases from the series, freeze the case series, or export the case series results into a Microsoft Excel file.</p>
+<p>For more information, see <a href="caseseries.htm#CHDHCGEA">Chapter 7, "Working with Case Series."</a></p>
+</div>
+<!-- class="sect2" -->
+<div id="AIAGX186" class="sect2"><a id="sthref37"></a>
+<h3 class="sect2"><span class="secnum">3.6.6</span> Executing a Saved QBE on the Active Case Series</h3>
+<p>Just as the system assigns the <span class="italic">active</span> status to a QBE when you save modifications to it or execute it, the last saved or generated case series becomes the <span class="italic">active</span> case series.</p>
+<p>You may want to run an existing QBE on an active case series instead of creating and running a new QBE on the entire data mart and generating a new case series.</p>
+<p>To narrow down the list of cases in the active case series:</p>
+<ol>
+<li>
+<p>Generate the case series on which you want to run another QBE as follows:</p>
+<ul>
+<li>
+<p>If the case series on which you want to run another QBE is not yet generated or active, you can either create a new QBE and execute it, or execute a saved QBE as explained in <a href="#CACGCFDE">"Executing a Saved QBE"</a>.</p>
+<p>This case series becomes the active case series and remains so until you execute another query to generate a different case series.</p>
+</li>
+<li>
+<p>Alternatively, if the case series on which you want to run another QBE is already saved in the system, navigate to <span class="bold">Case Series &gt; Open Case Series &gt;</span> <span class="bold">Library</span>.</p>
+<p>When the CASE SERIES LIBRARY page opens, select the case series, and click <span class="bold">Make Active.</span></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Navigate to <span class="bold">Queries &gt; Query by Example &gt;</span> <span class="bold">Library.</span></p>
+<p>The QUERY BY EXAMPLE LIBRARY page appears.</p>
+</li>
+<li>
+<p>Select a query to run on the active case series that was generated in Step 1.</p>
+</li>
+<li>
+<p>Select the <span class="bold">Limit Query to Active Case Series</span> check box.</p>
+</li>
+<li>
+<p>Click <span class="bold">Execute.</span></p>
+<p>The selected QBE is executed on the active case series and the ACTIVE CASE SERIES appears.</p>
+<p>Note that the case series you just generated becomes the active case series.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CACFDAFH"></a>
+<div id="AIAGX187" class="sect1">
+<h2 class="sect1"><span class="secnum">3.7</span> Using QBEs with Advanced Conditions</h2>
+<p><span class="italic">Advanced conditions</span> let you create complex queries that involve Boolean and set operations among fields.</p>
+<p>To create advanced conditions, use the Advanced Conditions Editor, which uses a spreadsheet-like approach for adding <span class="italic">query</span> conditions (fields and their values) and conditional operators (Boolean or set).</p>
+<p>In Argus Insight, QBEs are integrated with advanced conditions to let you perform the following tasks:</p>
+<ul>
+<li>
+<p><a href="#CACFGJGD">Converting a QBE to an Advanced Condition</a></p>
+</li>
+<li>
+<p><a href="#CACHDEGI">Integrating a QBE with an Advanced Condition</a></p>
+</li>
+</ul>
+<a id="CACFGJGD"></a>
+<div id="AIAGX188" class="sect2">
+<h3 class="sect2"><span class="secnum">3.7.1</span> Converting a QBE to an Advanced Condition</h3>
+<p>You can use an existing QBE to start to build an advanced condition that uses Boolean or set operations between QBE form fields that have specific values. When you convert a QBE to an advanced condition, all the QBE form fields in which you entered values are listed on the ACTIVE ADVANCED CONDITIONS EDITOR page as <span class="italic">advanced condition attributes.</span></p>
+<p>To convert a QBE to an advanced condition:</p>
+<ol>
+<li>
+<p>Open a QBE form by either starting a new QBE, opening the active QBE, or opening a saved QBE.</p>
+</li>
+<li>
+<p>Verify the <span class="italic">field</span> values you specified in the tab pages in the QBE form.</p>
+</li>
+<li>
+<p>Click <span class="bold">Convert to Advanced Condition.</span></p>
+<p>The ACTIVE ADVANCED CONDITIONS EDITOR page appears.</p>
+<p>All the fields in which you specified values in the QBE form are listed as advanced condition attributes.</p>
+</li>
+<li>
+<p>Build your <span class="italic">query</span> further by:</p>
+<ul>
+<li>
+<p>Adding additional attributes (fields) and specifying their values.</p>
+</li>
+<li>
+<p>Adding another advanced condition as an attribute.</p>
+</li>
+<li>
+<p>Placing runtime parameters in attributes.</p>
+</li>
+<li>
+<p>Placing parentheses to determine the query execution order.</p>
+</li>
+<li>
+<p>Specifying conditions for attributes values.</p>
+</li>
+<li>
+<p>Specifying Boolean and set operators to join the attributes.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>See <a href="advconditions.htm#CJAHDGFI">Chapter 5, "Using Advanced Conditions to&nbsp;Create&nbsp;Queries on Insight Mart"</a> for detailed information about using the Advanced Conditions Editor.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CACHDEGI"></a>
+<div id="AIAGX189" class="sect2">
+<h3 class="sect2"><span class="secnum">3.7.2</span> Integrating a QBE with an Advanced Condition</h3>
+<p>You can integrate a new, active, or saved QBE with an existing advanced condition through these set operators:</p>
+<ul>
+<li>
+<p>INTERSECT</p>
+</li>
+<li>
+<p>MINUS</p>
+</li>
+<li>
+<p>UNION</p>
+</li>
+</ul>
+<p>If required, you can integrate your QBE with multiple advanced conditions that can have Boolean or set operations between them.</p>
+<p><span class="bold">To integrate a QBE with existing advanced conditions</span>:</p>
+<ol>
+<li>
+<p>Open a QBE form by either starting a new QBE, opening the active QBE, or opening a saved QBE.</p>
+</li>
+<li>
+<p>Verify the <span class="italic">field</span> values you specified in the tab pages in the QBE form.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Advanced Conditions</span> tab.</p>
+</li>
+<li>
+<p>In the <span class="bold">Operator</span> field, select a set operator to integrate the QBE and the advanced condition.</p>
+<p>You may select <span class="bold">INTERSECT,</span> <span class="bold">MINUS</span>, or <span class="bold">UNION.</span></p>
+</li>
+<li>
+<p>Select the advanced condition to integrate with the QBE as follows:</p>
+<ol>
+<li>
+<p>Click the <span class="bold">Add Advanced Condition Above</span> icon on the left bar to open the Advanced Conditions menu.</p>
+<p>This menu lists all the advanced conditions (based on Insight Mart only) that are stored in the system and accessible to you. The conditions are organized by categories.</p>
+<img width="626" height="221" src="img/adv1.gif" alt="Surrounding text describes adv1.gif." /><br /></li>
+<li>
+<p>Browse to the appropriate category, and select the required advanced condition.</p>
+<p>The selected row is added in the Advanced Conditions Editor.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Add Advanced Condition Above</span> icon, or the <span class="bold">Add Advanced Condition Below</span> icon to insert another advanced condition above or below the existing advanced condition.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+To change the structure of the <span class="italic">query</span> by changing the order of the rows, select a row and then click the arrow icons to move the row up or down.</div>
+</li>
+</ol>
+</li>
+<li>
+<p>Enter parentheses in the <span class="bold">(</span> and <span class="bold">)</span> columns to determine the order of execution for the selected advanced conditions.</p>
+</li>
+<li>
+<p>In the <span class="bold">Operator</span> column, specify the set operation to perform between the selected advanced conditions.</p>
+</li>
+<li>
+<p>Click <span class="bold">Save As</span> to save your integrated query.</p>
+<ul>
+<li>
+<p>To run the integrated QBE and generate the case series, click <span class="bold">Execute.</span></p>
+<p>The ACTIVE CASE SERIES page appears with the case series.</p>
+<p>See <a href="caseseries.htm#CHDHCGEA">Chapter 7, "Working with Case Series"</a> for more information.</p>
+</li>
+<li>
+<p>To convert the integrated QBE and advanced condition into a single advanced condition, click <span class="bold">Convert to Advanced</span> <span class="bold">Condition.</span></p>
+<p>See <a href="#CACFGJGD">"Converting a QBE to an Advanced Condition"</a> for more information.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>For detailed information about using the Advanced Conditions Editor, see <a href="advconditions.htm#CJAHDGFI">Chapter 5, "Using Advanced Conditions to&nbsp;Create&nbsp;Queries on Insight Mart."</a></p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment92">
+<tr>
+<td class="cellalignment99">
+<table class="cellalignment97">
+<tr>
+<td class="cellalignment96"><a href="gettinstarted.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment96"><a href="filters.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2011, 2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment101">
+<table class="cellalignment95">
+<tr>
+<td class="cellalignment96"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment96"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment96"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment96"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

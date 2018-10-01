@@ -1,0 +1,1648 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Use filters to find data and discrepancies</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2018-05-23T12:36:18Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Health Sciences Data Management Workbench Data Review Guide" />
+<meta name="dcterms.identifier" content="E96069-01" />
+<meta name="dcterms.isVersionOf" content="DMWDR" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2017, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="discrepancies.htm" title="Previous" type="text/html" />
+<link rel="Next" href="run_jobs.htm" title="Next" type="text/html" />
+<link rel="alternate" href="DMWDR.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="DMWDR.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="DMWDR.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">7/9</span> <!-- End Header -->
+<div id="DMWDR1296" class="chapter"><a id="CIHIHECJ"></a>
+<h1 class="chapter"><span class="secnum">4</span> Use filters to find data and discrepancies</h1>
+<p class="subhead1"><a id="CIHBEBFG"></a><a id="DMWDR275"></a>What do you want to do?</p>
+<ul>
+<li>
+<p><a href="#CIHBJAGG">Create a new filter</a></p>
+</li>
+<li>
+<p><a href="#CIHEFICD">Use or modify existing filters</a></p>
+</li>
+<li>
+<p><a href="#CIHFAGFA">Create a public filter</a></p>
+</li>
+<li>
+<p><a href="#A3694968">Use filter groups</a></p>
+</li>
+<li>
+<p>See instructions for particular <a href="#CIHBABHI">Filter Types</a></p>
+</li>
+</ul>
+<p class="subhead1"><a id="DMWDR276"></a>What do you want to know?</p>
+<ul>
+<li>
+<p><a href="#A133917316">How do I find...?</a> (what kind of filter to use for what)</p>
+</li>
+<li>
+<p><a href="#BABJGHAE">How do data filters work on the Discrepancies page?</a></p>
+</li>
+<li>
+<p><a href="#BCFGGHDE">How do I know if any filters are applied?</a></p>
+</li>
+<li>
+<p><a href="#BCFGFEGF">How can I tell which filters are applied?</a></p>
+</li>
+<li>
+<p><a href="#BCFGECEJ">How do I turn filters off?</a></p>
+</li>
+<li>
+<p><a href="#BCFDEAJC">Why can't I make my filters public?</a></p>
+</li>
+</ul>
+<p><a href="#CIHIEHDD">FAQs</a></p>
+<p><img width="54" height="22" src="img/icon_video.gif" alt="Text Show me How! is a video link." /> <code dir="ltr"><a href="https://apexapps.oracle.com/pls/apex/f?p=44785:265:0:::265:P265_CONTENT_ID:18972">Show me how!</a><a href=""></a></code></p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+By default, no cancelled or closed discrepancies are displayed when you apply any discrepancy filter. To see cancelled or closed discrepancies, use a <a href="#A3695414">Discrepancy States and Tags filter</a>.</div>
+<p>This section has information on the complex filters available in the Listings pages and in the old Discrepancies page under Data Review. Simple filters are available in the new Discrepancies page that you reach by going directly to Discrepancies from the <img width="23" height="27" src="img/data_mgmt_icon.gif" alt="Icon shows sheets of paper" /> Data Management icon.</p>
+<a id="CIHBJAGG"></a>
+<div id="DMWDR99892" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Create a new filter</h2>
+<ol>
+<li>
+<p>Click the <img width="23" height="27" src="img/data_mgmt_icon.gif" alt="Icon shows sheets of paper" /> <span class="bold">Data Management</span> icon at the top of any page.</p>
+</li>
+<li>
+<p>Click <span class="bold">Data Review</span>.</p>
+</li>
+<li>
+<p>Do one:</p>
+<ul>
+<li>
+<p>Stay in the <span class="bold">Listings</span> page to view data and create discrepancies.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Discrepancies</span> tab to view and act on discrepancies.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Select the <img width="19" height="19" src="img/filter_icon.gif" alt="Icon shows a funnel." /><span class="bold">Filter</span> option:</p>
+<ul>
+<li>
+<p>On the Discrepancies page, click the <img width="19" height="19" src="img/filter_icon.gif" alt="Icon shows a funnel." /><span class="bold">Filter</span> icon.</p>
+</li>
+<li>
+<p>On the Listings page, select <img width="19" height="19" src="img/filter_icon.gif" alt="Icon shows a funnel." /><span class="bold">Filter</span> from the <img width="19" height="19" src="img/filter_icon.gif" alt="Icon shows a funnel." /><span class="bold">Filter</span> drop-down list.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Look for the type of filter you want to use. Use the scroll bar.</p>
+</li>
+<li>
+<p>Click the <img width="16" height="17" src="img/icon_add.gif" alt="Icon is a plus sign." /><span class="bold">Add</span> icon for the filter type.</p>
+</li>
+<li>
+<p>Fill in the fields. Use online help for information about the different filter types or see <a href="#CIHBABHI">"Filter Types"</a>.</p>
+</li>
+<li>
+<p>To save the filter for future use, enter a name.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>Select <span class="bold">Keep Active</span> to keep the filter in effect if you navigate between the Listings and Discrepancies pages or change clinical data models.</p>
+</li>
+<li>
+<p>To allow other people to use a saved filter, select <span class="bold">Shared</span> from the drop-down to the right of the filter name.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+You can use multiple filters at the same time by creating or selecting them here. You can also save them as a Filter Group.</div>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="CIHEFICD"></a>
+<div id="DMWDR99893" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Use or modify existing filters</h2>
+<ol>
+<li>
+<p>Click the <img width="23" height="27" src="img/data_mgmt_icon.gif" alt="Icon shows sheets of paper" /> <span class="bold">Data Management</span> icon at the top of any page.</p>
+</li>
+<li>
+<p>Click <span class="bold">Data Review</span>.</p>
+</li>
+<li>
+<p>Do one:</p>
+<ul>
+<li>
+<p>Stay in the <span class="bold">Listings</span> page to view data and create discrepancies.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Discrepancies</span> tab to view and act on discrepancies.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Select the <img width="19" height="19" src="img/filter_icon.gif" alt="Icon shows a funnel." /><span class="bold">Filter</span> option:</p>
+<ul>
+<li>
+<p>On the Discrepancies page, click the <img width="19" height="19" src="img/filter_icon.gif" alt="Icon shows a funnel." /><span class="bold">Filter</span> icon.</p>
+</li>
+<li>
+<p>On the Listings page, select <img width="19" height="19" src="img/filter_icon.gif" alt="Icon shows a funnel." /><span class="bold">Filter</span> from the <img width="19" height="19" src="img/filter_icon.gif" alt="Icon shows a funnel." /><span class="bold">Filter</span> drop-down list.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Look for the type of filter you want to use. Use the scroll bar.</p>
+</li>
+<li>
+<p>Select an existing filter from the drop-down list for the filter type.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+To see more filters, select <span class="bold">Show Filters Shared by Others</span> at the top of the window.</div>
+</li>
+<li>
+<p>To modify or view the filter values, click the <img width="15" height="17" src="img/icon_modify.gif" alt="Icon shows a pencil." /><span class="bold">Modify</span> icon.</p>
+<p>Edit the values as needed. Use online help for information about the different filter types or see <a href="#CIHBABHI">"Filter Types"</a>.</p>
+</li>
+<li>
+<p>To save your edits for future use, enter a different name.</p>
+<p>Filter names must be unique across all private, shared, and public filters that you can see in a particular study or, for Discrepancies filters, across all studies.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>Select <span class="bold">Keep Active</span> to keep the filter in effect if you navigate between the Listings and Discrepancies pages or change clinical data models.</p>
+</li>
+<li>
+<p>To allow other people to use a saved filter, select <span class="bold">Shared</span> from the drop-down to the right of the filter name.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>. The system applies the filter.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+You can use multiple filters at the same time by creating or selecting them here. You can also save them as a Filter Group.</div>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<div id="DMWDR99894" class="sect1"><!-- infolevel="all" infotype="General" --><a id="sthref13"></a>
+<h2 class="sect1">Delete a filter</h2>
+<p>To delete a filter, select it from the drop-down list and click the <img width="21" height="20" src="img/icon_filter_delete.gif" alt="Icon shows an X." /><span class="bold">Delete</span> icon.</p>
+<p>You can delete filters you created. You cannot delete a filter if it is part of a filter group. Delete it from the group first.</p>
+</div>
+<!-- class="sect1" -->
+<a id="CIHFAGFA"></a>
+<div id="DMWDR99895" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Create a public filter</h2>
+<p>If you have special privileges, you can make a filter public. Data reviewers can:</p>
+<ul>
+<li>
+<p>Use any public filter.</p>
+</li>
+<li>
+<p>Change public filter values temporarily.</p>
+</li>
+<li>
+<p>Change public filter values and save them using a different name.</p>
+</li>
+</ul>
+<ol>
+<li>
+<p><a href="#CIHBJAGG">Create a new filter</a>. Give the filter a name and save by clicking <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>In the main Filter window, select <span class="bold">Public</span> from the drop-down to the right of the filter name.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="A3694968"></a>
+<div id="DMWDR10393" class="sect1">
+<h2 class="sect1">Use filter groups</h2>
+<p>Filter groups apply multiple filters at the same time.</p>
+<ul>
+<li>
+<p><a href="#CIHCACFF">Create or modify a filter group</a></p>
+</li>
+<li>
+<p><a href="#CIHFBIGD">Apply an existing filter group</a></p>
+</li>
+<li>
+<p><a href="#CIHBJDBI">Filter group example</a></p>
+</li>
+</ul>
+<a id="CIHCACFF"></a>
+<div id="DMWDR10395" class="sect2">
+<h3 class="sect2">Create or modify a filter group</h3>
+<ol>
+<li>
+<p>Click the <img width="23" height="27" src="img/data_mgmt_icon.gif" alt="Icon shows sheets of paper" /> <span class="bold">Data Management</span> icon at the top of any page.</p>
+</li>
+<li>
+<p>Click <span class="bold">Data Review</span>.</p>
+</li>
+<li>
+<p>Do one:</p>
+<ul>
+<li>
+<p>Stay in the <span class="bold">Listings</span> page to view data and create discrepancies.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Discrepancies</span> tab to view and act on discrepancies.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Select the <img width="19" height="19" src="img/filter_icon.gif" alt="Icon shows a funnel." /><span class="bold">Filter</span> option:</p>
+<ul>
+<li>
+<p>On the Discrepancies page, click the <img width="19" height="19" src="img/filter_icon.gif" alt="Icon shows a funnel." /><span class="bold">Filter</span> icon.</p>
+</li>
+<li>
+<p>On the Listings page, select <img width="19" height="19" src="img/filter_icon.gif" alt="Icon shows a funnel." /><span class="bold">Filter</span> from the <img width="19" height="19" src="img/filter_icon.gif" alt="Icon shows a funnel." /><span class="bold">Filter</span> drop-down list.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>In the Filter Group area:</p>
+<ul>
+<li>
+<p>To create a new filter group, click the Filter Group <img width="16" height="17" src="img/icon_add.gif" alt="Icon is a plus sign." /><span class="bold">Add</span> icon.</p>
+</li>
+<li>
+<p>To create a new group based on an existing group, select the group from the list and click the Filter Group <img width="15" height="17" src="img/icon_modify.gif" alt="Icon shows a pencil." /><span class="bold">Modify</span> icon.</p>
+</li>
+<li>
+<p>To modify an existing group, select the group from the list and click the Filter Group <img width="15" height="17" src="img/icon_modify.gif" alt="Icon shows a pencil." /><span class="bold">Modify</span> icon.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+To find a filter group, select <span class="bold">Search</span> at the bottom of the Filter Group list. Enter part or all of the name with the wild card <code dir="ltr">%</code> and/or enter the class (Public, Private, or Shared). Click <span class="bold">Search</span>.
+<p>The select the filter group from the list and click <span class="bold">OK</span>.</p>
+</div>
+</li>
+</ul>
+</li>
+<li>
+<p>Select filters from the drop-down list of their filter type.</p>
+</li>
+<li>
+<p>Select <span class="bold">Keep Active</span> for the filters that you want to remain active if you leave the page or change clinical data models.</p>
+</li>
+<li>
+<p>Enter a <span class="bold">Name</span> and <span class="bold">Description</span> to create a new group. Leave as is to modify a group.</p>
+</li>
+<li>
+<p>If you are creating a new group based on an existing group, select <span class="bold">Save As Copy</span>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+Leave <span class="bold">Save As Copy</span> unselected if you are modifying an existing group.</div>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>To allow other people to use the filter group, select <span class="bold">Shared</span> from the drop-down to the right of the filter group name.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span> to apply the filters.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CIHFBIGD"></a>
+<div id="DMWDR10394" class="sect2">
+<h3 class="sect2">Apply an existing filter group</h3>
+<ol>
+<li>
+<p>Click the <img width="23" height="27" src="img/data_mgmt_icon.gif" alt="Icon shows sheets of paper" /> <span class="bold">Data Management</span> icon at the top of any page.</p>
+</li>
+<li>
+<p>Click <span class="bold">Data Review</span>.</p>
+</li>
+<li>
+<p>Do one:</p>
+<ul>
+<li>
+<p>Stay in the <span class="bold">Listings</span> page to view data and create discrepancies.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Discrepancies</span> tab to view and act on discrepancies.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Select the <img width="19" height="19" src="img/filter_icon.gif" alt="Icon shows a funnel." /><span class="bold">Filter</span> option:</p>
+<ul>
+<li>
+<p>On the Discrepancies page, click the <img width="19" height="19" src="img/filter_icon.gif" alt="Icon shows a funnel." /><span class="bold">Filter</span> icon.</p>
+</li>
+<li>
+<p>On the Listings page, select <img width="19" height="19" src="img/filter_icon.gif" alt="Icon shows a funnel." /><span class="bold">Filter</span> from the <img width="19" height="19" src="img/filter_icon.gif" alt="Icon shows a funnel." /><span class="bold">Filter</span> drop-down list.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Select the group from the <span class="bold">Filter Group</span> list at the bottom of the Filter window.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CIHBJDBI"></a>
+<div id="DMWDR10397" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Filter group example</h3>
+<p>A filter group could contain the following four filters:</p>
+<ul>
+<li>
+<p>A shared Subjects filter named BOSTON HOSPITAL that filters for subjects at the Boston Hospital site.</p>
+</li>
+<li>
+<p>A private Visits filter named CYCLE A that filters for records collected in visits that are part of Cycle A.</p>
+</li>
+<li>
+<p>A public Discrepancy Categories filter called INFORM that filters for discrepancies on data that originated in InForm.</p>
+</li>
+<li>
+<p>A private Discrepancy State Dates filter called LATEST that filters for records whose discrepancy state changed between specific dates. You need to update the dates each time you use the filter.</p>
+</li>
+</ul>
+<p>These filters are applied to the data at the same time, so that the system displays only data that satisfies the criteria for all filters.</p>
+<p>If all filters are set to Keep Active, as long as you stay in the current study and lifecycle stage, the filters apply, if possible. If you view data in a table that does not have a column required for the filter&mdash;such as a Visit column or Site column in this example&mdash;the system ignores that filter.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CIHBABHI"></a>
+<div id="DMWDR99896" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Filter Types</h2>
+<ul>
+<li>
+<p><a href="#A3695084">Subject filter</a></p>
+</li>
+<li>
+<p><a href="#A3695118">Visit filter</a></p>
+</li>
+<li>
+<p><a href="#A3695152">Subject Visit Flags filter</a></p>
+</li>
+<li>
+<p><a href="#A3695187">Visit Day filter</a></p>
+</li>
+<li>
+<p><a href="#A3695219">Visit Date filter</a></p>
+</li>
+<li>
+<p><a href="#A3695251">Record Flags filter</a></p>
+</li>
+<li>
+<p><a href="#A3695285">Data Change Date filter</a></p>
+</li>
+<li>
+<p><a href="#A3695316">Discrepancy Category filter</a></p>
+</li>
+<li>
+<p><a href="#A3695352">Discrepancy Change Dates filter</a></p>
+</li>
+<li>
+<p><a href="#A3695383">Discrepancy State Dates filter</a></p>
+</li>
+<li>
+<p><a href="#A3695414">Discrepancy States and Tags filter</a></p>
+</li>
+<li>
+<p><a href="#A3695452">Discrepancy User filter</a></p>
+</li>
+<li>
+<p><a href="#A3756091">Discrepancy Origin filter</a></p>
+</li>
+<li>
+<p><a href="#BABCIFHI">Models and Tables filter</a></p>
+</li>
+<li>
+<p><a href="#A3303722">Data Source filter</a></p>
+</li>
+</ul>
+</div>
+<!-- class="sect1" -->
+<a id="A3695084"></a>
+<div id="DMWDR1297" class="sect1">
+<h2 class="sect1">Subject filter</h2>
+<p>Filter records based on characteristics of subjects, including their <span class="bold">country</span>, <span class="bold">site</span>, <span class="bold">investigator</span>, or <span class="bold">ID</span>.</p>
+<ol>
+<li>
+<p>Select the <img width="19" height="19" src="img/filter_icon.gif" alt="Icon shows a funnel." /><span class="bold">Filter</span> option on the Listings or Discrepancies page under <img width="23" height="27" src="img/data_mgmt_icon.gif" alt="Icon shows sheets of paper with text." /> Data Management.</p>
+</li>
+<li>
+<p>In the <span class="bold">Subjects</span> row, click the <img width="16" height="17" src="img/icon_add.gif" alt="Icon is a plus sign." /> <span class="bold">Add</span> icon or select a filter from the drop-down list and click the <img width="15" height="17" src="img/icon_modify.gif" alt="Icon shows a pencil" /><span class="bold">Modify</span> icon.</p>
+</li>
+<li>
+<p><span class="bold">Filter Driver Data Model</span>: Select a model from the list.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+Use the same model as the filter driver in all filters for the same study.
+<p>Filters using different driver models cannot work at the same time.</p>
+</div>
+</li>
+<li>
+<p><span class="bold">Filter Type</span>: Select one:</p>
+<ul>
+<li>
+<p>Countries</p>
+</li>
+<li>
+<p>Sites</p>
+</li>
+<li>
+<p>Site IDs</p>
+</li>
+<li>
+<p>Investigator Names</p>
+</li>
+<li>
+<p>Investigator IDs</p>
+</li>
+<li>
+<p>Subject IDs</p>
+</li>
+<li>
+<p>Unique Subject IDs (ID unique across studies)</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+Enter a value above any column to filter the rows displayed.</div>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If the Subject Visit table in the filter driver data model does not have a column mapped to the SDTM identifier for Country, Site, Site ID, Investigator Name, Investigator ID, Subject ID, or Unique Subject ID, the column is not displayed.</div>
+</li>
+<li>
+<p>Select one or more rows to be the filter criteria.</p>
+</li>
+<li>
+<p>Check <span class="bold">Exclude Based On Criteria</span> to filter <span class="bold">out</span> records that satisfy the criteria. Leave unchecked to display the records that satisfy the criteria.</p>
+</li>
+<li>
+<p><span class="bold">Filter Availability</span>:</p>
+<ul>
+<li>
+<p><span class="bold">Study Level</span> makes the filter available in all data models in the current study and lifecycle.</p>
+</li>
+<li>
+<p><span class="bold">Data Model Level</span> makes the filter available only in the current data model and lifecycle.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="bold">Filter Name</span>: To save the filter for use in another session, that is, after you log out or change to a different study, enter a name.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+Filter names must be unique across all the private, shared, and public filters that you can see in the current study and lifecycle.</div>
+</li>
+<li>
+<p><span class="bold">Description</span>: Enter additional text to help you and other users know what this filter does.</p>
+</li>
+<li>
+<p><span class="bold">Save As Copy</span>. If you are modifying an existing filter, select this box to save your filter with a different name, leaving the original unchanged.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>Select <span class="bold">Keep Active</span> to keep the filter in effect if you navigate between the Listings and Discrepancies pages or change clinical data models.</p>
+</li>
+<li>
+<p>To allow other people to use a saved filter, select <span class="bold">Shared</span> from the drop-down to the right of the filter name.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span> in the main Filters window.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="A3695118"></a>
+<div id="DMWDR1298" class="sect1">
+<h2 class="sect1">Visit filter</h2>
+<p>To filter for a single visit:</p>
+<ol>
+<li>
+<p>Select the <img width="19" height="19" src="img/filter_icon.gif" alt="Icon shows a funnel." /><span class="bold">Filter</span> option on the Listings or Discrepancies page under <img width="23" height="27" src="img/data_mgmt_icon.gif" alt="Icon shows sheets of paper with text." /> Data Management.</p>
+</li>
+<li>
+<p>In the <span class="bold">Visits</span> row, click the <img width="16" height="17" src="img/icon_add.gif" alt="Icon is a plus sign." /> <span class="bold">Add</span> icon or select a filter from the drop-down list and click the <img width="15" height="17" src="img/icon_modify.gif" alt="Icon shows a pencil" /><span class="bold">Modify</span> icon.</p>
+</li>
+<li>
+<p><span class="bold">Filter Driver Data Model</span>: Select a model from the list.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+Use the same model as the filter driver in all filters for the same study.
+<p>Filters using different driver models cannot work at the same time.</p>
+</div>
+</li>
+<li>
+<p><span class="bold">Filter Type</span>: Select one of the following:</p>
+<ul>
+<li>
+<p>Visit Cycle</p>
+</li>
+<li>
+<p>Visit Number</p>
+</li>
+<li>
+<p>Visit Name</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Select a row to be the filter value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+Enter part of a value above any of the columns to filter the choices displayed. For example, type the name of a visit cycle to see only visits in that cycle.</div>
+</li>
+<li>
+<p>Select <span class="bold">Exclude Based On Criteria</span> to filter <span class="bold">out</span> records that satisfy the criteria. Leave unchecked to display records that do satisfy the criteria.</p>
+</li>
+<li>
+<p><span class="bold">Filter Availability</span>:</p>
+<ul>
+<li>
+<p><span class="bold">Study Level</span> makes the filter available in all data models in the current study and lifecycle.</p>
+</li>
+<li>
+<p><span class="bold">Data Model Level</span> makes the filter available only in the current data model and lifecycle.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="bold">Filter Name</span>: To save the filter for use in another session, that is, after you log out or change to a different study, enter a name.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+Filter names must be unique across all the private, shared, and public filters that you can see in the current study and lifecycle.</div>
+</li>
+<li>
+<p><span class="bold">Description</span>: Enter additional text to help you and other users know if this filter meets their needs.</p>
+</li>
+<li>
+<p><span class="bold">Save As Copy</span>. If you are modifying an existing filter, select this box to save your filter with a different name, leaving the original unchanged.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>Select <span class="bold">Keep Active</span> to keep the filter in effect if you navigate between the Listings and Discrepancies pages or change clinical data models.</p>
+</li>
+<li>
+<p>To allow other people to use a saved filter, select <span class="bold">Shared</span> from the drop-down to the right of the filter name.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span> in the main Filters window.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="A3695152"></a>
+<div id="DMWDR10041" class="sect1">
+<h2 class="sect1">Subject Visit Flags filter</h2>
+<p><span class="bold">On the Listings page</span>, use this filter to find records with particular Subject Visit flag values assigned. As you browse data in different models and tables, if the current table does not have a Visit column, the system ignores this filter.</p>
+<p><span class="bold">On the Discrepancies page</span>, use this filter to find discrepancies whose underlying data have particular Subject Visit flag values assigned.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If the data is in a table that is not a Subject Visit table, use the <a href="#A3695251">Record Flags filter</a> under Data.</div>
+<ol>
+<li>
+<p>Select the <img width="19" height="19" src="img/filter_icon.gif" alt="Icon shows a funnel." /><span class="bold">Filter</span> option on the Listings or Discrepancies page under <img width="23" height="27" src="img/data_mgmt_icon.gif" alt="Icon shows sheets of paper with text." /> Data Management.</p>
+</li>
+<li>
+<p>In the <span class="bold">Flags</span> row, click the <img width="16" height="17" src="img/icon_add.gif" alt="Icon is a plus sign." /> <span class="bold">Add</span> icon or select a filter from the drop-down list and click the <img width="15" height="17" src="img/icon_modify.gif" alt="Icon shows a pencil" /><span class="bold">Modify</span> icon.</p>
+</li>
+<li>
+<p><span class="bold">Filter Driver Data Model</span>: Select a model from the list.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+Use the same model as the filter driver in all filters for the same study.
+<p>Filters using different driver models cannot work at the same time.</p>
+</div>
+</li>
+<li>
+<p>Select whether you want to retrieve data that meet <span class="bold">Any</span> or <span class="bold">All</span> conditions.</p>
+</li>
+<li>
+<p>The system lists all flags and flag states. You can enter part or all of a flag or flag state name above the column to filter. For each flag state:</p>
+<ul>
+<li>
+<p>Select <span class="bold">Include</span> to find records with the flag state applied.</p>
+</li>
+<li>
+<p>Select <span class="bold">Exclude</span> to find records that do not have the flag state applied.</p>
+</li>
+<li>
+<p>If you select <span class="bold">neither Include nor Exclude</span>, the flag state is not included in the filter criteria at all.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="bold">Filter Availability</span> is <span class="bold">Study</span>. Saved filters of this type are available for use only in the current study and lifecycle.</p>
+</li>
+<li>
+<p><span class="bold">Filter Name</span>: Enter a descriptive name for the filter to save it to use in another session; that is, after you log out or work in a different study.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+Filter names must be unique across all the private, shared, and public filters that you can see in the current study and lifecycle.</div>
+</li>
+<li>
+<p><span class="bold">Description</span>: Enter additional text to help you and other users know if this filter meets their needs.</p>
+</li>
+<li>
+<p><span class="bold">Save As Copy</span>. If you are modifying an existing filter, select this box to save your filter with a different name, leaving the original unchanged.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>Select <span class="bold">Keep Active</span> to keep the filter in effect if you navigate between the Listings and Discrepancies pages or change clinical data models.</p>
+</li>
+<li>
+<p>To allow other people to use a saved filter, select <span class="bold">Shared</span> from the drop-down to the right of the filter name.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span> in the main Filters window.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="A3695187"></a>
+<div id="DMWDR1299" class="sect1">
+<h2 class="sect1">Visit Day filter</h2>
+<p>To create a filter based on the visit day number in the study design:</p>
+<ol>
+<li>
+<p>Select the <img width="19" height="19" src="img/filter_icon.gif" alt="Icon shows a funnel." /><span class="bold">Filter</span> option on the Listings or Discrepancies page under <img width="23" height="27" src="img/data_mgmt_icon.gif" alt="Icon shows sheets of paper with text." /> Data Management.</p>
+</li>
+<li>
+<p>In the <span class="bold">Visit Day</span> row, click the <img width="16" height="17" src="img/icon_add.gif" alt="Icon is a plus sign." /> <span class="bold">Add</span> icon or select a filter from the drop-down list and click the <img width="15" height="17" src="img/icon_modify.gif" alt="Icon shows a pencil" /><span class="bold">Modify</span> icon.</p>
+</li>
+<li>
+<p>In the <span class="bold">Condition</span> drop-down, select an operator: &lt;, &lt;=, &lt;&gt;, =, &gt;, &gt;=, Between, Is Not Null (has any value), and Is Null (has no value).</p>
+<p>The system displays 0, 1, or 2 fields depending on which operator you select. Enter visit day numbers as required.</p>
+</li>
+<li>
+<p><span class="bold">Filter Driver Data Model</span>: Select the clinical data model that contains the Subject Visit table that you want the filtering logic to use. This does not restrict you to using the filter only in that model.</p>
+<p>As you browse data in different models and tables, if the current table does not have a Visit column, the system ignores this filter.</p>
+</li>
+<li>
+<p>Select <span class="bold">Exclude Based On Criteria</span> to filter <span class="bold">out</span> records that satisfy the criteria. Leave unchecked to display records that do satisfy the criteria.</p>
+</li>
+<li>
+<p><span class="bold">Filter Availability</span> is <span class="bold">Study Level</span>; filters of this type are available in all data models in the current study and lifecycle.</p>
+</li>
+<li>
+<p><span class="bold">Filter Name</span>: Enter a descriptive name for the filter to save it to use in another session; that is, after you log out or work in a different study.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+Filter names must be unique across all the private, shared, and public filters that you can see in the current study and lifecycle.</div>
+</li>
+<li>
+<p><span class="bold">Description</span>: Enter additional text to help you and other users know if this filter meets their needs.</p>
+</li>
+<li>
+<p><span class="bold">Save As Copy</span>. If you are modifying an existing filter, select this box to save your filter with a different name, leaving the original unchanged.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>Select <span class="bold">Keep Active</span> to keep the filter in effect if you navigate between the Listings and Discrepancies pages or change clinical data models.</p>
+</li>
+<li>
+<p>To allow other people to use a saved filter, select <span class="bold">Shared</span> from the drop-down to the right of the filter name.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span> in the main Filters window.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="A3695219"></a>
+<div id="DMWDR1300" class="sect1">
+<h2 class="sect1">Visit Date filter</h2>
+<p>To create a filter based on the actual visit date:</p>
+<ol>
+<li>
+<p>Select the <img width="19" height="19" src="img/filter_icon.gif" alt="Icon shows a funnel." /><span class="bold">Filter</span> option on the Listings or Discrepancies page under <img width="23" height="27" src="img/data_mgmt_icon.gif" alt="Icon shows sheets of paper with text." /> Data Management.</p>
+</li>
+<li>
+<p>In the <span class="bold">Visit Date</span> row, click the <img width="16" height="17" src="img/icon_add.gif" alt="Icon is a plus sign." /> <span class="bold">Add</span> icon or select a filter from the drop-down list and click the <img width="15" height="17" src="img/icon_modify.gif" alt="Icon shows a pencil" /><span class="bold">Modify</span> icon.</p>
+</li>
+<li>
+<p>In the <span class="bold">Condition</span> drop-down, select an operator : &lt;, &lt;=, &lt;&gt;, =, &gt;, &gt;=, Between, Is Not Null (has any value), and Is Null (has no value).</p>
+<p>The system displays 0, 1, or 2 date fields depending on which operator you select. Enter values as required.</p>
+</li>
+<li>
+<p><span class="bold">Filter Driver Data Model</span>: Select the clinical data model that contains the Subject Visit table that you want the filtering logic to use. This does not restrict you to using the filter only in that model.</p>
+<p>As you browse data in different models and tables, if the current table does not have a Visit column, the system ignores this filter.</p>
+</li>
+<li>
+<p>Select <span class="bold">Exclude Based On Criteria</span> to filter <span class="bold">out</span> records that satisfy the criteria. Leave unchecked to display records that do satisfy the criteria.</p>
+</li>
+<li>
+<p><span class="bold">Filter Availability</span> is <span class="bold">Study Level</span>; filters of this type are available in all data models in the current study and lifecycle.</p>
+</li>
+<li>
+<p><span class="bold">Filter Name</span>: Enter a descriptive name for the filter to save it to use in another session; that is, after you log out or work in a different study.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+Filter names must be unique across all the private, shared, and public filters that you can see in the current study and lifecycle.</div>
+</li>
+<li>
+<p><span class="bold">Description</span>: Enter additional text to help you and other users know if this filter meets their needs.</p>
+</li>
+<li>
+<p><span class="bold">Save As Copy</span>. If you are modifying an existing filter, select this box to save your filter with a different name, leaving the original unchanged.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>Select <span class="bold">Keep Active</span> to keep the filter in effect if you navigate between the Listings and Discrepancies pages or change clinical data models.</p>
+</li>
+<li>
+<p>To allow other people to use a saved filter, select <span class="bold">Shared</span> from the drop-down to the right of the filter name.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span> in the main Filters window.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="A3695251"></a>
+<div id="DMWDR10042" class="sect1">
+<h2 class="sect1">Record Flags filter</h2>
+<p><span class="bold">On the Listings page</span>, use this filter to find records with particular Record flag states, or values, assigned.</p>
+<p><span class="bold">On the Discrepancies page</span>, use this filter to find discrepancies whose underlying data have particular Record flag states assigned.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If the data is in a Subject Visit table, use the <a href="#A3695152">Subject Visit Flags filter</a> filter under Visits.</div>
+<ol>
+<li>
+<p>Select the <img width="19" height="19" src="img/filter_icon.gif" alt="Icon shows a funnel." /><span class="bold">Filter</span> option on the Listings or Discrepancies page under <img width="23" height="27" src="img/data_mgmt_icon.gif" alt="Icon shows sheets of paper with text." /> Data Management.</p>
+</li>
+<li>
+<p>In the <span class="bold">Record Flags</span> row, click the <img width="16" height="17" src="img/icon_add.gif" alt="Icon is a plus sign." /> <span class="bold">Add</span> icon or select a filter from the drop-down list and click the <img width="15" height="17" src="img/icon_modify.gif" alt="Icon shows a pencil" /><span class="bold">Modify</span> icon.</p>
+</li>
+<li>
+<p>Select whether you want to retrieve data that meet <span class="bold">Any</span> or <span class="bold">All</span> conditions.</p>
+</li>
+<li>
+<p>The system lists all flags and flag states, or values. You can enter part or all of a flag or flag state name above the column to filter. For each flag state:</p>
+<ul>
+<li>
+<p>Select <span class="bold">Include</span> to find records with the flag state applied.</p>
+</li>
+<li>
+<p>Select <span class="bold">Exclude</span> to find records that do not have the flag state applied.</p>
+</li>
+<li>
+<p>If you select <span class="bold">neither Include nor Exclude</span>, the flag state is not included in the filter criteria at all.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="bold">Filter Availability</span> is <span class="bold">All Studies</span>. Saved filters of this type are available for use in all studies in the current lifecycle.</p>
+</li>
+<li>
+<p><span class="bold">Filter Name</span>: Enter a descriptive name for the filter to save it to use in another session; that is, after you log out or work in a different study.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+Filter names must be unique across all the private, shared, and public filters that you can see in the current study and lifecycle.</div>
+</li>
+<li>
+<p><span class="bold">Description</span>: Enter additional text to help you and other users know if this filter meets their needs.</p>
+</li>
+<li>
+<p><span class="bold">Save As Copy</span>. If you are modifying an existing filter, select this box to save your filter with a different name, leaving the original unchanged.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>Select <span class="bold">Keep Active</span> to keep the filter in effect if you navigate between the Listings and Discrepancies pages or change clinical data models.</p>
+</li>
+<li>
+<p>To allow other people to use a saved filter, select <span class="bold">Shared</span> from the drop-down to the right of the filter name.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span> in the main Filters window.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="A3695285"></a>
+<div id="DMWDR1301" class="sect1">
+<h2 class="sect1">Data Change Date filter</h2>
+<p>The Data Change Date filter displays records whose most recent update occurred during the time period specified.</p>
+<ol>
+<li>
+<p>Select the <img width="19" height="19" src="img/filter_icon.gif" alt="Icon shows a funnel." /><span class="bold">Filter</span> option on the Listings or Discrepancies page under <img width="23" height="27" src="img/data_mgmt_icon.gif" alt="Icon shows sheets of paper with text." /> Data Management.</p>
+</li>
+<li>
+<p>Scroll to the <span class="bold">Data/Change Dates</span> row and click the <img width="16" height="17" src="img/icon_add.gif" alt="Icon is a plus sign." /> <span class="bold">Add</span> icon or select a filter from the drop-down list and click the <img width="15" height="17" src="img/icon_modify.gif" alt="Icon shows a pencil" /><span class="bold">Modify</span> icon.</p>
+</li>
+<li>
+<p>In the <span class="bold">Condition</span> drop-down, select an operator to be used to select the dates. The options are: &lt;, &lt;=, &lt;&gt;, =, &gt;, &gt;=, Between, Is Not Null (has any value), and Is Null (has no value).</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Selecting Is Not Null retrieves all records; there is always a value for last-changed-date. If the record has not been updated, it is the same as the creation date.</div>
+<p>The system displays 0, 1, or 2 date fields depending on which operator you select. Enter values as required.</p>
+</li>
+<li>
+<p>Select <span class="bold">Exclude Based On Criteria</span> to filter <span class="bold">out</span> records that satisfy the criteria. Leave unchecked to display records that do satisfy the criteria.</p>
+</li>
+<li>
+<p><span class="bold">Filter Availability</span> is <span class="bold">Study Level</span>; filters of this type are available in all data models in the current study and lifecycle.</p>
+</li>
+<li>
+<p><span class="bold">Filter Name</span>: Enter a descriptive name for the filter to save it to use in another session; that is, after you log out or work in a different study.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+Filter names must be unique across all the private, shared, and public filters that you can see in the current study and lifecycle.</div>
+</li>
+<li>
+<p><span class="bold">Description</span>: Enter additional text to help you and other users know if this filter meets their needs.</p>
+</li>
+<li>
+<p><span class="bold">Save As Copy</span>. If you are modifying an existing filter, select this box to save your filter with a different name, leaving the original unchanged.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>Select <span class="bold">Keep Active</span> to keep the filter in effect if you navigate between the Listings and Discrepancies pages or change clinical data models.</p>
+</li>
+<li>
+<p>To allow other people to use a saved filter, select <span class="bold">Shared</span> from the drop-down to the right of the filter name.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span> in the main Filters window.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="A3695316"></a>
+<div id="DMWDR1302" class="sect1">
+<h2 class="sect1">Discrepancy Category filter</h2>
+<p>The Discrepancy Category filter displays only records that have one or more discrepancies of the categories specified.</p>
+<ol>
+<li>
+<p>Select the <img width="19" height="19" src="img/filter_icon.gif" alt="Icon shows a funnel." /><span class="bold">Filter</span> option on the Listings or Discrepancies page under <img width="23" height="27" src="img/data_mgmt_icon.gif" alt="Icon shows sheets of paper with text." /> Data Management.</p>
+</li>
+<li>
+<p>Scroll to the <span class="bold">Category</span> row and click the <img width="16" height="17" src="img/icon_add.gif" alt="Icon is a plus sign." /> <span class="bold">Add</span> icon or select a filter from the drop-down list and click the <img width="15" height="17" src="img/icon_modify.gif" alt="Icon shows a pencil" /><span class="bold">Modify</span> icon.</p>
+</li>
+<li>
+<p>In the <span class="bold">Discrepancy Categories</span> drop-down, select one or more categories to be used to filter, or click <span class="bold">All</span> and then deselect categories.</p>
+</li>
+<li>
+<p>Check <span class="bold">Include *(No Category)*</span> include or exclude discrepancies with no assigned category.</p>
+</li>
+<li>
+<p>Select <span class="bold">Exclude Based On Criteria</span> to filter <span class="bold">out</span> records that satisfy the criteria. Leave unchecked to display records that do satisfy the criteria.</p>
+</li>
+<li>
+<p><span class="bold">Filter Availability</span> is <span class="bold">All Studies</span>. Saved filters of this type are available for use in all studies in the current lifecycle.</p>
+</li>
+<li>
+<p><span class="bold">Filter Name</span>: Enter a descriptive name for the filter to save it to use in another session; that is, after you log out or work in a different study.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+Filter names must be unique across all the private, shared, and public filters that you can see in the current study and lifecycle.</div>
+</li>
+<li>
+<p><span class="bold">Description</span>: Enter additional text to help you and other users know if this filter meets their needs.</p>
+</li>
+<li>
+<p><span class="bold">Save As Copy</span>. If you are modifying an existing filter, select this box to save your filter with a different name, leaving the original unchanged.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>Select <span class="bold">Keep Active</span> to keep the filter in effect if you navigate between the Listings and Discrepancies pages or change clinical data models.</p>
+</li>
+<li>
+<p>To allow other people to use a saved filter, select <span class="bold">Shared</span> from the drop-down to the right of the filter name.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span> in the main Filters window.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="A3695352"></a>
+<div id="DMWDR1303" class="sect1">
+<h2 class="sect1">Discrepancy Change Dates filter</h2>
+<p>The Discrepancy Change Dates filter displays records that have one or more discrepancies whose most recent update occurred during the time period specified. To create a Discrepancy Change Dates filter:</p>
+<ol>
+<li>
+<p>Select the <img width="19" height="19" src="img/filter_icon.gif" alt="Icon shows a funnel." /><span class="bold">Filter</span> option on the Listings or Discrepancies page under <img width="23" height="27" src="img/data_mgmt_icon.gif" alt="Icon shows sheets of paper with text." /> Data Management.</p>
+</li>
+<li>
+<p>Scroll to the <span class="bold">Discrepancies/Change Dates</span> row and click the <img width="16" height="17" src="img/icon_add.gif" alt="Icon is a plus sign." /> <span class="bold">Add</span> icon or select a filter from the drop-down list and click the <img width="15" height="17" src="img/icon_modify.gif" alt="Icon shows a pencil" /><span class="bold">Modify</span> icon.</p>
+</li>
+<li>
+<p>In the <span class="bold">Condition</span> drop-down, select an operator: &lt;, &lt;=, &lt;&gt;, =, &gt;, &gt;=, Between, Is Not Null (has any value), and Is Null (has no value).</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Selecting Is Not Null retrieves all records; there is always a value for last-changed-date. If the record has not been updated, it is the same as the creation date.</div>
+<p>The system displays 0, 1, or 2 date fields depending on which operator you select. Enter values as required.</p>
+</li>
+<li>
+<p>Select <span class="bold">Exclude Based On Criteria</span> to filter <span class="bold">out</span> records that satisfy the criteria. Leave unchecked to display records that do satisfy the criteria.</p>
+</li>
+<li>
+<p><span class="bold">Filter Availability</span> is <span class="bold">All Studies</span>. Saved filters of this type are available for use in all studies in the current lifecycle.</p>
+</li>
+<li>
+<p><span class="bold">Filter Name</span>: Enter a descriptive name for the filter to save it to use in another session; that is, after you log out or work in a different study.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+Filter names must be unique across all the private, shared, and public filters that you can see in the current study and lifecycle.</div>
+</li>
+<li>
+<p><span class="bold">Description</span>: Enter additional text to help you and other users know if this filter meets their needs.</p>
+</li>
+<li>
+<p><span class="bold">Save As Copy</span>. If you are modifying an existing filter, select this box to save your filter with a different name, leaving the original unchanged.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>Select <span class="bold">Keep Active</span> to keep the filter in effect if you navigate between the Listings and Discrepancies pages or change clinical data models.</p>
+</li>
+<li>
+<p>To allow other people to use a saved filter, select <span class="bold">Shared</span> from the drop-down to the right of the filter name.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span> in the main Filters window.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="A3695383"></a>
+<div id="DMWDR1304" class="sect1">
+<h2 class="sect1">Discrepancy State Dates filter</h2>
+<p>The Discrepancy State Date filter displays only records that have one or more discrepancies whose most recent state change occurred during the time period specified.</p>
+<ol>
+<li>
+<p>Select the <img width="19" height="19" src="img/filter_icon.gif" alt="Icon shows a funnel." /><span class="bold">Filter</span> option on the Listings or Discrepancies page under <img width="23" height="27" src="img/data_mgmt_icon.gif" alt="Icon shows sheets of paper with text." /> Data Management.</p>
+</li>
+<li>
+<p>Scroll to the <span class="bold">Discrepancies/State Dates</span> row and click the <img width="16" height="17" src="img/icon_add.gif" alt="Icon is a plus sign." /> <span class="bold">Add</span> icon or select a filter from the drop-down list and click the <img width="15" height="17" src="img/icon_modify.gif" alt="Icon shows a pencil" /><span class="bold">Modify</span> icon.</p>
+</li>
+<li>
+<p>In the <span class="bold">Condition</span> drop-down, select an operator : &lt;, &lt;=, &lt;&gt;, =, &gt;, &gt;=, Between, Is Not Null (has any value), and Is Null (has no value).</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Selecting Is Not Null retrieves all records; there is always a value for last-changed-date. If the record has not been updated, it is the same as the creation date.</div>
+<p>The system displays 0, 1, or 2 date fields depending on which operator you select. Enter values as required.</p>
+</li>
+<li>
+<p>Select <span class="bold">Exclude Based On Criteria</span> to filter <span class="bold">out</span> records that satisfy the criteria. Leave unchecked to display records that do satisfy the criteria.</p>
+</li>
+<li>
+<p><span class="bold">Filter Availability</span> is <span class="bold">All Studies</span>. Saved filters of this type are available for use in all studies in the current lifecycle.</p>
+</li>
+<li>
+<p><span class="bold">Filter Name</span>: Enter a descriptive name for the filter to save it to use in another session; that is, after you log out or work in a different study.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+Filter names must be unique across all the private, shared, and public filters that you can see in the current study and lifecycle.</div>
+</li>
+<li>
+<p><span class="bold">Description</span>: Enter additional text to help you and other users know if this filter meets their needs.</p>
+</li>
+<li>
+<p><span class="bold">Save As Copy</span>. If you are modifying an existing filter, select this box to save your filter with a different name, leaving the original unchanged.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>Select <span class="bold">Keep Active</span> to keep the filter in effect if you navigate between the Listings and Discrepancies pages or change clinical data models.</p>
+</li>
+<li>
+<p>To allow other people to use a saved filter, select <span class="bold">Shared</span> from the drop-down to the right of the filter name.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span> in the main Filters window.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="A3695414"></a>
+<div id="DMWDR10039" class="sect1">
+<h2 class="sect1">Discrepancy States and Tags filter</h2>
+<p>Use this filter to find discrepancies in a particular state, with or without a substate (tag).</p>
+<ul>
+<li>
+<p>In the Listings page, the filter finds records with discrepancies that meet the criteria.</p>
+</li>
+<li>
+<p>In the Discrepancies page, the filter finds discrepancies that meet the criteria.</p>
+</li>
+</ul>
+<ol>
+<li>
+<p>Select the <img width="19" height="19" src="img/filter_icon.gif" alt="Icon shows a funnel." /><span class="bold">Filter</span> option on the Listings or Discrepancies page under <img width="23" height="27" src="img/data_mgmt_icon.gif" alt="Icon shows sheets of paper with text." /> Data Management.</p>
+</li>
+<li>
+<p>Scroll to the <span class="bold">Discrepancies/States and Tags</span> row and click the <img width="16" height="17" src="img/icon_add.gif" alt="Icon is a plus sign." /> <span class="bold">Add</span> icon or select a filter from the drop-down list and click the <img width="15" height="17" src="img/icon_modify.gif" alt="Icon shows a pencil" /><span class="bold">Modify</span> icon.</p>
+</li>
+<li>
+<p><span class="bold">Discrepancy State and Tag</span>. The list includes all discrepancy states followed by all possible substates, or tags, for each state. Each state&mdash;for example, Open or Candidate&mdash;is also displayed without any tags. Selecting that option finds discrepancies with that state and no tags. To filter for all discrepancies in a state, regardless of tag, select all state/tag combinations for the state.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+By default, no cancelled or closed discrepancies are displayed when you apply any discrepancy filter. To see cancelled or closed discrepancies, select the state explicitly.</div>
+</li>
+<li>
+<p><span class="bold">Reopened</span>. Select <span class="bold">Yes</span> to view reopened discrepancies only; <span class="bold">No</span> to view discrepancies that are not currently reopened; or <span class="bold">All</span> to see discrepancies without regard to whether they are reopened or not.</p>
+</li>
+<li>
+<p><span class="bold">Data Changed</span>. Select <span class="bold">Yes</span> to view discrepancies whose underlying data has been updated since the discrepancy was created; <span class="bold">No</span> to view discrepancies whose data has not changed since the discrepancy were created; or <span class="bold">All</span> to see discrepancies without regard to whether their data has changed.</p>
+</li>
+<li>
+<p>Select <span class="bold">Exclude Based On Criteria</span> to filter <span class="bold">out</span> records that satisfy the criteria. Leave unchecked to display records that do satisfy the criteria.</p>
+</li>
+<li>
+<p><span class="bold">Filter Availability</span> is <span class="bold">All Studies</span>. Saved filters of this type are available for use in all studies in the current lifecycle.</p>
+</li>
+<li>
+<p><span class="bold">Filter Name</span>: Enter a descriptive name for the filter to save it to use in another session; that is, after you log out or work in a different study.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+Filter names must be unique across all the private, shared, and public filters that you can see in the current study and lifecycle.</div>
+</li>
+<li>
+<p><span class="bold">Description</span>: Enter additional text to help you and other users know if this filter meets their needs.</p>
+</li>
+<li>
+<p><span class="bold">Save As Copy</span>. If you are modifying an existing filter, select this box to save your filter with a different name, leaving the original unchanged.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>Select <span class="bold">Keep Active</span> to keep the filter in effect if you navigate between the Listings and Discrepancies pages or change clinical data models.</p>
+</li>
+<li>
+<p>To allow other people to use a saved filter, select <span class="bold">Shared</span> from the drop-down to the right of the filter name.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span> in the main Filters window.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="A3695452"></a>
+<div id="DMWDR10186" class="sect1">
+<h2 class="sect1">Discrepancy User filter</h2>
+<p>Use this filter to retrieve discrepancies by the person who created or most recently modified a discrepancy.</p>
+<ol>
+<li>
+<p>Select the <img width="19" height="19" src="img/filter_icon.gif" alt="Icon shows a funnel." /><span class="bold">Filter</span> option on the Listings or Discrepancies page under <img width="23" height="27" src="img/data_mgmt_icon.gif" alt="Icon shows sheets of paper with text." /> Data Management.</p>
+</li>
+<li>
+<p>Scroll to the <span class="bold">Discrepancies/User</span> row and click the <img width="16" height="17" src="img/icon_add.gif" alt="Icon is a plus sign." /> <span class="bold">Add</span> icon or select a filter from the drop-down list and click the <img width="15" height="17" src="img/icon_modify.gif" alt="Icon shows a pencil" /><span class="bold">Modify</span> icon.</p>
+</li>
+<li>
+<p><span class="bold">Filter Type</span>. Select the way you want to search:</p>
+<ul>
+<li>
+<p>Created By</p>
+</li>
+<li>
+<p>Modified By</p>
+</li>
+</ul>
+</li>
+<li>
+<p>The system displays all DMW users, with their user name, full name as entered in the system, and any external systems such as InForm or TMS that they also use. You can enter part or all of any of these values above the column to filter.</p>
+</li>
+<li>
+<p>Select <span class="bold">Exclude Based On Criteria</span> to filter <span class="bold">out</span> records that satisfy the criteria. Leave unchecked to display records that do satisfy the criteria.</p>
+</li>
+<li>
+<p><span class="bold">Filter Availability</span> is <span class="bold">All Studies</span>. Saved filters of this type are available for use in all studies in the current lifecycle.</p>
+</li>
+<li>
+<p><span class="bold">Filter Name</span>: Enter a descriptive name for the filter to save it to use in another session; that is, after you log out or work in a different study.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+Filter names must be unique across all the private, shared, and public filters that you can see in the current study and lifecycle.</div>
+</li>
+<li>
+<p><span class="bold">Description</span>: Enter additional text to help you and other users know if this filter meets their needs.</p>
+</li>
+<li>
+<p><span class="bold">Save As Copy</span>. If you are modifying an existing filter, select this box to save your filter with a different name, leaving the original unchanged.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>Select <span class="bold">Keep Active</span> to keep the filter in effect if you navigate between the Listings and Discrepancies pages or change clinical data models.</p>
+</li>
+<li>
+<p>To allow other people to use a saved filter, select <span class="bold">Shared</span> from the drop-down to the right of the filter name.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span> in the main Filters window.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="A3756091"></a>
+<div id="DMWDR10200" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Discrepancy Origin filter</h2>
+<p>Use this filter to retrieve discrepancies by the way they were created.</p>
+<ol>
+<li>
+<p>Select the <img width="19" height="19" src="img/filter_icon.gif" alt="Icon shows a funnel." /><span class="bold">Filter</span> option on the Listings or Discrepancies page under <img width="23" height="27" src="img/data_mgmt_icon.gif" alt="Icon shows sheets of paper with text." /> Data Management.</p>
+</li>
+<li>
+<p>Scroll to the <span class="bold">Discrepancies/Origin</span> row and click the <img width="16" height="17" src="img/icon_add.gif" alt="Icon is a plus sign." /> <span class="bold">Add</span> icon or select a filter from the drop-down list and click the <img width="15" height="17" src="img/icon_modify.gif" alt="Icon shows a pencil" /><span class="bold">Modify</span> icon.</p>
+</li>
+<li>
+<p><span class="bold">Discrepancy Origins</span>. Select one or more to search for:</p>
+<ul>
+<li>
+<p><span class="bold">All</span> returns all discrepancies, regardless of origin.</p>
+</li>
+<li>
+<p><span class="bold">InForm</span> returns discrepancies created as queries in InForm.</p>
+</li>
+<li>
+<p><span class="bold">Manual</span> returns discrepancies created manually in DMW.</p>
+</li>
+<li>
+<p><span class="bold">TMS</span> returns discrepancies created as omissions in coding system Oracle Thesaurus Management System (TMS).</p>
+</li>
+<li>
+<p><span class="bold">Validation Check</span> returns discrepancies created by validation checks in DMW.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Select <span class="bold">Exclude Based On Criteria</span> to filter <span class="bold">out</span> records that satisfy the criteria. Leave unchecked to display records that do satisfy the criteria.</p>
+</li>
+<li>
+<p><span class="bold">Filter Availability</span> is <span class="bold">All Studies</span>. Saved filters of this type are available for use in all studies in the current lifecycle.</p>
+</li>
+<li>
+<p><span class="bold">Filter Name</span>: Enter a descriptive name for the filter to save it to use in another session; that is, after you log out or work in a different study.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+Filter names must be unique across all the private, shared, and public filters that you can see in the current study and lifecycle.</div>
+</li>
+<li>
+<p><span class="bold">Description</span>: Enter additional text to help you and other users know if this filter meets their needs.</p>
+</li>
+<li>
+<p><span class="bold">Save As Copy</span>. If you are modifying an existing filter, select this box to save your filter with a different name, leaving the original unchanged.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>Select <span class="bold">Keep Active</span> to keep the filter in effect if you navigate between the Listings and Discrepancies pages or change clinical data models.</p>
+</li>
+<li>
+<p>To allow other people to use a saved filter, select <span class="bold">Shared</span> from the drop-down to the right of the filter name.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span> in the main Filters window.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="BABCIFHI"></a>
+<div id="DMWDR10103" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Models and Tables filter</h2>
+<p>Use this filter to retrieve discrepancies by the table or data model against which they were originally raised.</p>
+<ol>
+<li>
+<p>Select the <img width="19" height="19" src="img/filter_icon.gif" alt="Icon shows a funnel." /><span class="bold">Filter</span> option on the Listings or Discrepancies page under <img width="23" height="27" src="img/data_mgmt_icon.gif" alt="Icon shows sheets of paper with text." /> Data Management.</p>
+</li>
+<li>
+<p>Scroll to the <span class="bold">Models and Tables</span> row and click the <img width="16" height="17" src="img/icon_add.gif" alt="Icon is a plus sign." /> <span class="bold">Add</span> icon or select a filter from the drop-down list and click the <img width="15" height="17" src="img/icon_modify.gif" alt="Icon shows a pencil" /><span class="bold">Modify</span> icon.</p>
+</li>
+<li>
+<p><span class="bold">Filter Type</span>. Select the structure you want to search:</p>
+<ul>
+<li>
+<p><span class="bold">Model</span> The system lists the models in the current study.</p>
+</li>
+<li>
+<p><span class="bold">Table</span> The system lists the models and tables in the current study.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Select one or more models or tables. You can enter part or all of a model or table name above the column to filter.</p>
+</li>
+<li>
+<p>Select <span class="bold">Exclude Based On Criteria</span> to filter <span class="bold">out</span> records that satisfy the criteria. Leave unchecked to display records that do satisfy the criteria.</p>
+</li>
+<li>
+<p><span class="bold">Filter Availability</span> is <span class="bold">Study</span>. Saved filters of this type are available for use only in the current study.</p>
+</li>
+<li>
+<p><span class="bold">Filter Name</span>: Enter a descriptive name for the filter to save it to use in another session; that is, after you log out or work in a different study.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+Filter names must be unique across all the private, shared, and public filters that you can see in the current study and lifecycle.</div>
+</li>
+<li>
+<p><span class="bold">Description</span>: Enter additional text to help you and other users know if this filter meets their needs.</p>
+</li>
+<li>
+<p><span class="bold">Save As Copy</span>. If you are modifying an existing filter, select this box to save your filter with a different name, leaving the original unchanged.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>Select <span class="bold">Keep Active</span> to keep the filter in effect if you navigate between the Listings and Discrepancies pages or change clinical data models.</p>
+</li>
+<li>
+<p>To allow other people to use a saved filter, select <span class="bold">Shared</span> from the drop-down to the right of the filter name.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span> in the main Filters window.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="A3303722"></a>
+<div id="DMWDR10038" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Data Source filter</h2>
+<p>Use this filter to retrieve discrepancies by their original data source or data source type&mdash;for example, a lab or InForm.</p>
+<ol>
+<li>
+<p>Select the <img width="19" height="19" src="img/filter_icon.gif" alt="Icon shows a funnel." /><span class="bold">Filter</span> option on the Listings or Discrepancies page under <img width="23" height="27" src="img/data_mgmt_icon.gif" alt="Icon shows sheets of paper with text." /> Data Management.</p>
+</li>
+<li>
+<p>Scroll to the <span class="bold">Data Sources</span> row and click the <img width="16" height="17" src="img/icon_add.gif" alt="Icon is a plus sign." /> <span class="bold">Add</span> icon or select a filter from the drop-down list and click the <img width="15" height="17" src="img/icon_modify.gif" alt="Icon shows a pencil" /><span class="bold">Modify</span> icon.</p>
+</li>
+<li>
+<p><span class="bold">Filter Type</span>. Select the way you want to search:</p>
+<ul>
+<li>
+<p><span class="bold">Datasource</span> The system lists InForm and all labs used in the current study.</p>
+</li>
+<li>
+<p><span class="bold">Datasource Type</span> The system lists Labs (for all labs used in the current study), InForm, and Unknown.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Select the data source or type to search. You can enter part or all of a model or table name above the column to filter.</p>
+</li>
+<li>
+<p>Select <span class="bold">Exclude Based On Criteria</span> to filter <span class="bold">out</span> records that satisfy the criteria. Leave unchecked to display records that do satisfy the criteria.</p>
+</li>
+<li>
+<p><span class="bold">Filter Availability</span> is <span class="bold">All Studies</span>. Saved filters of this type are available for use in all studies in the current lifecycle.</p>
+</li>
+<li>
+<p><span class="bold">Filter Name</span>: Enter a descriptive name for the filter to save it to use in another session; that is, after you log out or work in a different study.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+Filter names must be unique across all the private, shared, and public filters that you can see in the current study and lifecycle.</div>
+</li>
+<li>
+<p><span class="bold">Description</span>: Enter additional text to help you and other users know if this filter meets their needs.</p>
+</li>
+<li>
+<p><span class="bold">Save As Copy</span>. If you are modifying an existing filter, select this box to save your filter with a different name, leaving the original unchanged.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>Select <span class="bold">Keep Active</span> to keep the filter in effect if you navigate between the Listings and Discrepancies pages or change clinical data models.</p>
+</li>
+<li>
+<p>To allow other people to use a saved filter, select <span class="bold">Shared</span> from the drop-down to the right of the filter name.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span> in the main Filters window.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="BACEBAJD"></a>
+<div id="DMWDR1075" class="sect1">
+<h2 class="sect1">Copy a custom listing</h2>
+<ol>
+<li>
+<p>Click the Data Management icon <img width="23" height="27" src="img/data_mgmt_icon.gif" alt="Icon shows sheets of paper" /> at the top of any page.</p>
+</li>
+<li>
+<p>Make sure the <span class="bold">Discrepancies</span> tab is open.</p>
+</li>
+<li>
+<p>Select <span class="bold">Custom Listings</span> at the bottom of the left pane.</p>
+</li>
+<li>
+<p>Click the <img width="18" height="19" src="img/icon_more_actions.gif" alt="The icons represents a gear." /><span class="bold">More Actions</span> icon, then click <img width="17" height="19" src="img/icon_copy.gif" alt="Icon shows two sheets of paper." /><span class="bold">Copy Custom Listings</span>.</p>
+</li>
+<li>
+<p>Select a project (or other study grouping).</p>
+</li>
+<li>
+<p>Select a model.</p>
+</li>
+<li>
+<p>Select one or more custom listings within the model.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>. The system searches the current model for the tables and columns that the selected custom listings read from.</p>
+<ul>
+<li>
+<p>If the tables or columns do not exist, the Copy operation fails with an error message.</p>
+</li>
+<li>
+<p>If they exist but are marked Not Used in the transformation that writes to the model, the system copies the listings as disabled.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p><span class="italic">Back to</span> <a href="#CIHBEBFG"><span class="xreftitleitalic">What do you want to do?</span></a></p>
+</div>
+<!-- class="sect1" -->
+<a id="CIHIEHDD"></a>
+<div id="DMWDR278" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">FAQs</h2>
+<ul>
+<li>
+<p><a href="#A133917316">How do I find...?</a></p>
+</li>
+<li>
+<p><a href="#BABJGHAE">How do data filters work on the Discrepancies page?</a></p>
+</li>
+<li>
+<p><a href="#CIHJBBHE">What does the star mean?</a></p>
+</li>
+<li>
+<p><a href="#BCFGGHDE">How do I know if any filters are applied?</a></p>
+</li>
+<li>
+<p><a href="#BCFGFEGF">How can I tell which filters are applied?</a></p>
+</li>
+<li>
+<p><a href="#BCFGECEJ">How do I turn filters off?</a></p>
+</li>
+<li>
+<p><a href="#BCFDEAJC">Why can't I make my filters public?</a></p>
+</li>
+</ul>
+<a id="A133917316"></a>
+<div id="DMWDR10388" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">How do I find...?</h3>
+<ul>
+<li>
+<p><span class="bold">Discrepancies created or modified before or after a particular date?</span> Create a <a href="#A3695383">Discrepancy State Dates filter</a>.</p>
+</li>
+<li>
+<p><span class="bold">All Open or Candidate discrepancies?</span> Create a <a href="#A3695414">Discrepancy States and Tags filter</a>.</p>
+</li>
+<li>
+<p><span class="bold">Discrepancies on the same subject, site, investigator, or country?</span> Create a <a href="#A3695084">Subject filter</a>.</p>
+</li>
+<li>
+<p><span class="bold">Discrepancies on data from the same lab?</span> Create a <a href="#A3303722">Data Source filter</a>.</p>
+</li>
+<li>
+<p><span class="bold">Discrepancies assigned to my role for review?</span> Create a <a href="#A3695414">Discrepancy States and Tags filter</a>.</p>
+</li>
+<li>
+<p><span class="bold">Discrepancies created by the same validation check?</span> Create a <a href="#A3756091">Discrepancy Origin filter</a> or go to Validation Check Listings in the Listings page.</p>
+</li>
+<li>
+<p><span class="bold">Discrepancies from the same visit?</span> Create a <a href="#A3695118">Visit filter</a>.</p>
+</li>
+<li>
+<p><span class="bold">Closed and cancelled discrepancies?</span> Create a <a href="#A3695414">Discrepancy States and Tags filter</a>.</p>
+</li>
+<li>
+<p><span class="bold">Discrepancies I created?</span> Create a <a href="#A3695452">Discrepancy User filter</a>.</p>
+</li>
+</ul>
+<p><span class="bold">Other types of filters:</span> <a href="#A3695152">Subject Visit Flags filter</a>, <a href="#A3695187">Visit Day filter</a>, <a href="#A3695219">Visit Date filter</a>, <a href="#A3695251">Record Flags filter</a>, <a href="#A3695285">Data Change Date filter</a>, <a href="#A3695352">Discrepancy Change Dates filter</a>,<a href="#BABCIFHI">Models and Tables filter</a>, <a href="#A3695316">Discrepancy Category filter</a>.</p>
+<p>When a filter is applied, the message "Filters On" appears. To see which filters are currently applied, click the <span class="bold">Current Filters</span> icon. To remove all current filters, click the <span class="bold">Filter Off</span> icon. To selectively turn off, turn on, or modify filters, click the <span class="bold">Filter</span> icon. See <a href="#CIHIHECJ">"Use filters to find data and discrepancies."</a></p>
+</div>
+<!-- class="sect2" -->
+<a id="BABJGHAE"></a>
+<div id="DMWDR10102" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">How do data filters work on the Discrepancies page?</h3>
+<p>When you go to the Discrepancies page from the Listings page with Keep Active selected for your filters, the system continues to apply the same filters, except:</p>
+<ul>
+<li>
+<p>Data Change Dates filters are ignored.</p>
+</li>
+<li>
+<p>If any of the current Subject or Visit filters applies only to a specific data model, the system displays only discrepancies in that model.</p>
+</li>
+<li>
+<p>If different Subject and Visit filters have different driver data models and they are applied at the same time, the system ignores all Subject and Visit filters.</p>
+</li>
+</ul>
+<p>A message appears when any of these situations occur.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CIHJBBHE"></a>
+<div id="DMWDR279" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">What does the star mean?</h3>
+<p>If you apply a discrepancy filter in a Listings page, records with discrepancies that meet the filter criteria have a <img width="19" height="17" src="img/icon_star.gif" alt="Icon is a star." /><span class="bold">star</span> icon.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BCFGGHDE"></a>
+<div id="DMWDR280" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">How do I know if any filters are applied?</h3>
+<ul>
+<li>
+<p>In the <span class="bold">Listings</span> page, the Filter drop-down is displayed as blue and says "Filter On": <img width="101" height="33" src="img/filters_on_blue_block.gif" alt="Drop-down says Filter:ON." /></p>
+</li>
+<li>
+<p>In the <span class="bold">Discrepancies</span> page, "Filters On" is displayed in blue: <img width="62" height="17" src="img/filters_on_text.gif" alt="Drop-down says Filter:ON." /></p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="BCFGFEGF"></a>
+<div id="DMWDR10072" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">How can I tell which filters are applied?</h3>
+<ul>
+<li>
+<p>In the <span class="bold">Listings</span> page, select <img width="20" height="20" src="img/filters_current_icon.gif" alt="Icon shows a funnel and an eye." /> <span class="bold">Current Filters</span> from the Filter: ON drop-down.</p>
+</li>
+<li>
+<p>In the <span class="bold">Discrepancies</span> page, click the <img width="20" height="20" src="img/filters_current_icon.gif" alt="Icon shows a funnel and an eye." /><span class="bold">Current Filters</span> icon.</p>
+</li>
+</ul>
+<p>The Current Filters window lists the filters currently applied, with the following information:</p>
+<ul>
+<li>
+<p><span class="bold">Filter</span> The name or, if it has no name, TEMPORARY_FILTER.</p>
+</li>
+<li>
+<p><span class="bold">Filter Type</span></p>
+</li>
+<li>
+<p><span class="bold">Class</span></p>
+<ul>
+<li>
+<p>Private: You created the filter.</p>
+</li>
+<li>
+<p>Shared: Someone created the filter and shared it.</p>
+</li>
+<li>
+<p>Public: Official filter that is always available.</p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="BCFGECEJ"></a>
+<div id="DMWDR281" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">How do I turn filters off?</h3>
+<ul>
+<li>
+<p>In the <span class="bold">Listings</span> page:</p>
+<ul>
+<li>
+<p>To turn all filters off, select <img width="20" height="20" src="img/filters_off.gif" alt="Icon shows a funnel and an X." /><span class="bold">Clear Filters</span> from the <span class="bold">Filter: ON</span> drop-down.</p>
+</li>
+<li>
+<p>To clear selected filters, select the <img width="19" height="19" src="img/filter_icon.gif" alt="Icon shows a funnel." /><span class="bold">Filters</span> icon from the <span class="bold">Filter: ON</span> drop-down.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>In the <span class="bold">Discrepancies</span> page:</p>
+<ul>
+<li>
+<p>To turn all filters off, click the <img width="20" height="20" src="img/filters_off.gif" alt="Icon shows a funnel and an X." /><span class="bold">Clear Filters</span> icon.</p>
+</li>
+<li>
+<p>To clear selected filters, click the <img width="19" height="19" src="img/filter_icon.gif" alt="Icon shows a funnel." /><span class="bold">Filters</span> icon</p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="BCFDEAJC"></a>
+<div id="DMWDR282" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Why can't I make my filters public?</h3>
+<p>Special privileges are required.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment27">
+<tr>
+<td class="cellalignment34">
+<table class="cellalignment32">
+<tr>
+<td class="cellalignment31"><a href="discrepancies.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment31"><a href="run_jobs.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2017, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment36">
+<table class="cellalignment30">
+<tr>
+<td class="cellalignment31"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment31"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment31"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment31"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

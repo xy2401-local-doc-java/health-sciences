@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Data Lineage Extensibility</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="description" content="This chapter explains how to set up the Data Lineage Dashboard to work with customized reports or BI metadata RPD files:" />
+<meta name="dcterms.created" content="2018-09-10T9:4:8Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Healthcare Foundation Dashboards User's Guide" />
+<meta name="dcterms.identifier" content="E94537-01" />
+<meta name="dcterms.isVersionOf" content="OHFSD" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Prev" href="audit.htm" title="Previous" type="text/html" />
+<link rel="alternate" href="OHFSD.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="OHFSD.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="OHFSD.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">6/6</span> <!-- End Header -->
+<div id="OHFSD162" class="chapter"><a id="CIHBBHBH"></a>
+<h1 class="chapter"><span class="secnum">3</span> Data Lineage Extensibility</h1>
+<p><a id="OHFSD163"></a>This chapter explains how to set up the <a href="boards.htm#CHDGIEEF">Data Lineage Dashboard</a> to work with customized reports or BI metadata RPD files:</p>
+<ul>
+<li>
+<p><a href="#BABHIAFD">Refresh the RPD Lineage Metadata</a></p>
+</li>
+<li>
+<p><a href="#BABDJHJD">Refresh the Catalog Lineage Metadata</a></p>
+</li>
+<li>
+<p><a href="#BABFGAAG">Refresh the OBIEE Dashboards</a></p>
+</li>
+</ul>
+<a id="BABHIAFD"></a>
+<div id="OHFSD164" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Refresh the RPD Lineage Metadata</h2>
+<p>If the OHF SSA RPD files has been extended, follow the instructions below to refresh the RPD lineage metadata:</p>
+<ol>
+<li>
+<p>Open the extended RPD file in the Oracle BI Administration Tool.</p>
+</li>
+<li>
+<p>Go to Tools and select <span class="bold">Utilities</span>.</p>
+</li>
+<li>
+<p>Select <span class="bold">Repository Documentation</span> and click <span class="bold">Execute</span>.</p>
+<div id="OHFSD165" class="figure">
+<p class="titleinfigure"><a id="sthref31"></a>Figure 3-1 Utilities Window</p>
+<img width="519" height="261" src="img/utilities_window.png" alt="Surrounding text describes Figure 3-1 ." /><br /></div>
+<!-- class="figure" --></li>
+<li>
+<p>Navigate to a directory where you want to save the repository metadata.</p>
+</li>
+<li>
+<p>In the <span class="bold">Save as type:</span> selection box, choose <span class="bold">Tab Separated Values (*.txt)</span>.</p>
+</li>
+<li>
+<p>Enter a name for the file and click <span class="bold">Save</span>.</p>
+<div id="OHFSD166" class="figure">
+<p class="titleinfigure"><a id="sthref32"></a>Figure 3-2 Saving the RPD Data Lineage</p>
+<img width="834" height="685" src="img/save_metadata.png" alt="Saving the RPD metadata" /><br /></div>
+<!-- class="figure" --></li>
+<li>
+<p>After the export completes, change the file's extension from .txt to .tsv.</p>
+</li>
+<li>
+<p>Open <span class="bold">SQL Developer</span>.</p>
+</li>
+<li>
+<p>Connect to the <span class="bold">OHF Exterprise Schema</span> where the OHF_RPD_LINEAGE table is installed.</p>
+</li>
+<li>
+<p>Expand the <span class="bold">Tables Section</span>.</p>
+</li>
+<li>
+<p>Right click on the <span class="bold">OHF_RPD_LINEAGE</span> table and select <span class="bold">Import Data</span>.</p>
+</li>
+<li>
+<p>In the file browser, navigate to the location where you exported the RPD metadata file.</p>
+</li>
+<li>
+<p>Choose the <span class="bold">*.tsv</span> file type and select the exported RPD metadata file.</p>
+</li>
+<li>
+<p>Click <span class="bold">Open</span>.</p>
+</li>
+<li>
+<p>When prompted to Import Data Record Terminator, click <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>When prompted to Import Data Field Format, click <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>In the Data Preview screen of the Data Import Wizard, set the Left Enclosure to <span class="bold">none</span>.</p>
+<div id="OHFSD167" class="figure">
+<p class="titleinfigure"><a id="sthref33"></a>Figure 3-3 Data Preview</p>
+<img width="738" height="561" src="img/data_preview.jpg" alt="Data Preview" /><br /></div>
+<!-- class="figure" --></li>
+<li>
+<p>In the Import Data Field Format screen, click <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Next</span>.</p>
+</li>
+<li>
+<p>In the Import Method screen, click <span class="bold">Next</span>.</p>
+</li>
+<li>
+<p>In the Selected Columns panel, make sure all columns are listed and click <span class="bold">Next</span>.</p>
+</li>
+<li>
+<p>In the Column Definition screen, map all the source data columns to the target table columns. The source and target columns have similar names and can be matched either by name or by order.</p>
+<div id="OHFSD168" class="figure">
+<p class="titleinfigure"><a id="sthref34"></a>Figure 3-4 Column Definition</p>
+<img width="761" height="572" src="img/column_definition.jpg" alt="Column Definition" /><br /></div>
+<!-- class="figure" --></li>
+<li>
+<p>After you map all the columns, click <span class="bold">Next</span>.</p>
+</li>
+<li>
+<p>Clisk <span class="bold">Finish</span>.</p>
+</li>
+<li>
+<p>A data import progress screen is displayed.</p>
+</li>
+<li>
+<p>After the import is complete, a success message is displayed. Click <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>Query the <code dir="ltr">OHF_RPD_LINEAGE</code> table to retrieve the record count and compare it with the row count in the RPD Metadata file:</p>
+<p><code dir="ltr">Select count(*) from OHF_RPD_LINEAGE;</code></p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="BABDJHJD"></a>
+<div id="OHFSD169" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Refresh the Catalog Lineage Metadata</h2>
+<p>If the OHF SSA Dashboards have been extended, follow the instructions below to refresh the RPD lineage metadata:</p>
+<ol>
+<li>
+<p>Open the Command Prompt.</p>
+</li>
+<li>
+<p>Navigate to the to <code dir="ltr">bi\bitools\bin</code> subdirectory in the Oracle BI Client Tool installation directory. For example:</p>
+<p><code dir="ltr">cd C:\Install\middleware\BI_Home\bi\bitools\bin</code></p>
+</li>
+<li>
+<p>Create a .txt file with the WebLogic credentials in the following format:</p>
+<p><code dir="ltr">login=&lt;username&gt;<br />
+pwd=&lt;password&gt;</code></p>
+</li>
+<li>
+<p>Execute the following command:</p>
+<p><code dir="ltr">runcat.cmd -cmd report -online &lt;BI Analytics URL where the dashboard catalog contents reside&gt; -credentials &lt;Path to the credentials file containing the weblogic user name and password&gt; -outputFile &lt;Path to the output file with extension .csv where the catalog metadata contents have to be stored&gt; -folder &lt;Location of the OBI Catalog Folder&gt; -delimiter "|~" -type "Analysis" -fields "Owner:Folder:Name:Path:Subject Area:Table:Column:Formula"</code></p>
+<p>For example:</p>
+<p><code dir="ltr">runcat.cmd -cmd report -online http://obixxx.mycompany.com:9504/analytics/saw.dll? -credentials D:/login.txt -outputFile D:/ohf_hcd_catalog.csv -folder "/shared/Oracle Healthcare Foundation" -delimiter "|~" -type "Analysis" -fields "Owner:Folder:Name:Path:Subject Area:Table:Column:Formula"</code></p>
+</li>
+<li>
+<p>After completion, a success message is displayed:</p>
+<p><code dir="ltr">Making SOAP connection to http://obixxx.mycompany.com:9504/analytics/saw.dll?<br />
+Running Report..4..3..2..1..0..Done!</code></p>
+</li>
+<li>
+<p>Open SQL Developer.</p>
+</li>
+<li>
+<p>Connect to the OHF Enterprise Schema where the <code dir="ltr">OHF_CATALOG_LINEAGE</code> table is installed.</p>
+</li>
+<li>
+<p>Expand the <span class="bold">Tables</span> section.</p>
+</li>
+<li>
+<p>Right click on the <code dir="ltr">OHF_CATALOG_LINEAGE</code> table and select <span class="bold">Import Data</span>.</p>
+</li>
+<li>
+<p>In the File browser, navigate to the location where the <span class="bold">Catalog Metadata</span> File is saved.</p>
+</li>
+<li>
+<p>Choose the <span class="bold">.csv</span> file type and select the <span class="bold">Catalog Metadata</span> file.</p>
+</li>
+<li>
+<p>Click <span class="bold">Open</span>.</p>
+</li>
+<li>
+<p>When prompted to Import Data Record Terminator, click <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>When prompted to Import Data Field Format, click <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>In the Data Import Wizard, select the <span class="bold">delimited</span> format.</p>
+</li>
+<li>
+<p>Set the Delimiter to <span class="bold">|~</span>.</p>
+</li>
+<li>
+<p>Set the Left Enclosure to <span class="bold">none</span>.</p>
+<div id="OHFSD170" class="figure">
+<p class="titleinfigure"><a id="sthref35"></a>Figure 3-5 Data Preview</p>
+<img width="626" height="473" src="img/data_preview_2.png" alt="Data Preview" /><br /></div>
+<!-- class="figure" --></li>
+<li>
+<p>When prompted to Import Data Field Format, click <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Next</span>.</p>
+</li>
+<li>
+<p>In the Import Method screen, click <span class="bold">Next</span>.</p>
+</li>
+<li>
+<p>In the Selected Columns pane, make sure all columns are listed and click <span class="bold">Next</span>.</p>
+</li>
+<li>
+<p>In the Column Definition screen, map all the source data columns to the target table columns. The source and target columns have similar names and can be matched either by name or by order.</p>
+<div id="OHFSD171" class="figure">
+<p class="titleinfigure"><a id="sthref36"></a>Figure 3-6 Column Definition</p>
+<img width="633" height="481" src="img/column_definition_2.png" alt="Column Definition" /><br /></div>
+<!-- class="figure" --></li>
+<li>
+<p>After you map all the columns, click <span class="bold">Next</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Finish</span>.</p>
+</li>
+<li>
+<p>A data import progress screen is displayed.</p>
+</li>
+<li>
+<p>After the import is complete, a success message is displayed. Click <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>Query the <code dir="ltr">OHF_CATALOG_LINEAGE</code> table to retrieve the record count and compare it with the row count in the Catalog Metadata file:</p>
+<p><code dir="ltr">Select count(*) from OHF_CATALOG_LINEAGE;</code></p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="BABFGAAG"></a>
+<div id="OHFSD172" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Refresh the OBIEE Dashboards</h2>
+<p>To view the updated data lineage information in the <a href="boards.htm#CHDGIEEF">Data Lineage Dashboard</a>, purge the OBIEE cache by following the instructions below:</p>
+<ol>
+<li>
+<p>Log in to the Oracle BI Analytics page. For example: <code dir="ltr">http://obixxx.mycompany.com:9704/analytics</code></p>
+</li>
+<li>
+<p>Go to <span class="bold">Administration</span>.</p>
+</li>
+<li>
+<p>In the Session Management section, select <span class="bold">Manage Sessions</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Close All Cursors</span>.</p>
+</li>
+<li>
+<p>Go to <span class="bold">Administration</span>.</p>
+</li>
+<li>
+<p>In the Maintenance and Troubleshooting section, select <span class="bold">Issue SQL</span>.</p>
+</li>
+<li>
+<p>In the Issue SQL screen, type the following command in the text box:</p>
+<p><code dir="ltr">Call sapurgeallcache()</code></p>
+</li>
+<li>
+<p>Click <span class="bold">Issue SQL</span>.</p>
+</li>
+<li>
+<p>After purging the cache, the following success message is displayed.</p>
+<p><code dir="ltr">[59118] Operation SAPurgeAllCache succeeded!</code></p>
+</li>
+</ol>
+<p>Now, the custom reports will be visible in the <a href="boards.htm#CHDGIEEF">Data Lineage Dashboard</a>.</p>
+</div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment10">
+<tr>
+<td class="cellalignment17">
+<table class="cellalignment15">
+<tr>
+<td class="cellalignment14"><a href="audit.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment19">
+<table class="cellalignment20">
+<tr>
+<td class="cellalignment14"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment14"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment14"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment14"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

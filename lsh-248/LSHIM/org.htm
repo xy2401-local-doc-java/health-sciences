@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Designing an Organizational Structure</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="description" content="This guide introduces Oracle Life Sciences Data Hub and contains information you need to design your Oracle LSH implementation to fill your company's needs." />
+<meta name="dcterms.created" content="2018-05-18T12:50:30Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Life Sciences Data Hub Implementation Guide" />
+<meta name="dcterms.identifier" content="E95828-01" />
+<meta name="dcterms.isVersionOf" content="LSHIM" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2011, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="impl_intro.htm" title="Previous" type="text/html" />
+<link rel="Next" href="sec.htm" title="Next" type="text/html" />
+<link rel="alternate" href="LSHIM.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="LSHIM.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="LSHIM.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">6/12</span> <!-- End Header -->
+<div id="LSHIM173" class="chapter"><a id="BGBFAHGA"></a>
+<h1 class="chapter"><span class="secnum">3</span> Designing an Organizational Structure</h1>
+<p>This section includes information on the following topics:</p>
+<ul>
+<li>
+<p><a href="#BHCCACGA">What is the Organizational Structure?</a></p>
+</li>
+<li>
+<p><a href="#BHCBJFAG">Domains</a></p>
+</li>
+<li>
+<p><a href="#BHCCBIAG">Application Areas</a></p>
+</li>
+<li>
+<p><a href="#BHCICDEA">Work Areas</a></p>
+</li>
+<li>
+<p><a href="#BHCFCAEF">Examples of Organization Design</a></p>
+</li>
+<li>
+<p><a href="#BABBFJJG">Design Considerations</a></p>
+</li>
+<li>
+<p><a href="#BHCBGJAF">Design Decision Summary</a></p>
+</li>
+</ul>
+<a id="BHCCACGA"></a>
+<div id="LSHIM174" class="sect1">
+<h2 class="sect1">What is the Organizational Structure?</h2>
+<p>The Oracle Life Sciences Data Hub (Oracle LSH) provides three nested containers with which you can create an organizational structure that reflects your business and clinical organization. The containers are <a href="#BHCBJFAG">Domains</a>, <a href="#BHCCBIAG">Application Areas</a>, and <a href="#BHCICDEA">Work Areas</a>. Within these three containers you define and store metadata objects to create your Oracle LSH applications. Through Work Areas you install applications to the database to interact with data.</p>
+<p>You must design a logically organized set of these containers Your design should include:</p>
+<ul>
+<li>
+<p><span class="bold">Any number of Oracle LSH Domains</span>, each with a specific purpose and each containing a library of validated, reusable object definitions and/or one or more logically related child Domains and/or Application Areas. See <a href="#BHCBJFAG">"Domains"</a> for further information.</p>
+</li>
+<li>
+<p><span class="bold">Any number of Application Areas</span>, each contained in a logically related Domain and each having a specific purpose; for example, to generate a particular set of reports and/or to contain all the data for a single study or project. See <a href="#BHCCBIAG">"Application Areas"</a> for further information.</p>
+</li>
+<li>
+<p><span class="bold">One primary Work Area in each Application Area</span> for use in application development. You may decide to let individual Definers have their own Work Areas in addition, but in the primary Work Area you install all the objects required for the application together. You clone this primary Work Area to create a test environment, and clone the validated test Work Area to create a production environment. See <a href="#BHCICDEA">"Work Areas"</a> for further information.</p>
+</li>
+</ul>
+<p>Both the security and classification systems make use of this organizational structure. Objects can inherit both their security User Group assignments and their classifications from their parent container. Therefore you can control security access to object definitions and instances by setting up inheritance and assigning user groups to Domains, Application Areas, and Work Areas. You can follow a similar procedure to setup classification for object definitions and instances. You can exclude a particular object at any level from the security access or classification, but if you design a logical structure that works for both security and classification, your Oracle LSH implementation will be much simpler to set up and to use. You should design all three systems at the same time. See <a href="sec.htm#CIHJIIBI">Chapter 4, "Designing a Security System"</a> and <a href="class.htm#CHDGCFDE">Chapter 5, "Designing a Classification System for Searching and Browsing"</a>.</p>
+<p>Domains, Application Areas and Work Areas are themselves objects that you must define. You can add Domains, Application Areas, and Work Areas at any time. The instructions for creating Domains, Application Areas, and Work Areas are contained in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Application Developer's Guide</span></span>.</p>
+<div class="infobox-note">
+<p class="notep1">Notes:</p>
+Oracle LSH can display a maximum of 200 rows at a time by default, so if you define more than 200 Domains within a Domain, or Application Areas within a Domain, or Work Areas within an Application Area, or objects within either an Application Area or Work Area, you get an error. Therefore Oracle recommends that you design your organizational structure to avoid this problem. Alternatively, it is possible to reset an Oracle Applications profile to display more than 200 rows at a time; however this affects all your Oracle Applications.
+<p>Also, keep container and Program names short if you are using an integrated development environment (IDE) such as SAS. Oracle LSH identifies objects in the IDE by their full pathname and the maximum length allowed for the full pathname is 256 characters. For further information see "Naming Objects" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Application Developer's Guide</span></span>.</p>
+</div>
+<p>The relationship among the containers is described in the following sections and shown in <a href="#BHCECEFA">Figure 3-1, "Oracle LSH Organizational Structure"</a> below. The libraries in both Domains and Application Areas are shown with dotted lines because a Library is not a container that must be defined. A library simply consists of all the object definitions contained directly in either the Domain or the Application Area.</p>
+<p>The Domain container inside the Domain container is shown in a different type of dotted line because you can choose to have no child Domains or up to nine (9) levels of nested Domains. See <a href="#BHCBJFAG">"Domains"</a> for further information.</p>
+<div id="LSHIM175" class="figure">
+<p class="titleinfigure"><a id="BHCECEFA"></a>Figure 3-1 Oracle LSH Organizational Structure</p>
+<img width="726" height="310" src="img/org_struct.gif" alt="Description of Figure 3-1 follows" /><br />
+<a id="sthref7" href="img_text/org_struct.htm">Description of ''Figure 3-1 Oracle LSH Organizational Structure ''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p>For ideas on how to use this structure, see <a href="#BHCFCAEF">"Examples of Organization Design"</a>.</p>
+<p>Many of the concepts used in this chapter were introduced in <a href="cdr_intro.htm#CHDHIDHG">Chapter 1, "Overview"</a>. <a href="obj_own.htm#CACGAJBJ">Appendix B, "Object Ownership"</a> shows the container relationships among Domains, Application Areas, Work Areas, and all types of object definitions and instances.</p>
+</div>
+<!-- class="sect1" -->
+<a id="BHCBJFAG"></a>
+<div id="LSHIM176" class="sect1">
+<h2 class="sect1">Domains</h2>
+<p>A Domain is the top-level container in Oracle LSH. Domains have two purposes, and any one Domain can be used for one or both of these purposes:</p>
+<ul>
+<li>
+<p><span class="bold">Organizer</span>. A Domain can contain child Domains and/or Application Areas. You can use a Domain to organize these other containers&mdash;child Domains and Application Areas&mdash;into logical groups. For example, you might create a Domain for a particular drug project and one Application Area within it for each clinical trial in the project. Alternatively you could create a Domain for a project, create a child Domain within the project Domain for each trial in the project, and create an Application Area for each report set. See <a href="#BHCFCAEF">"Examples of Organization Design"</a> for other examples.</p>
+</li>
+<li>
+<p><span class="bold">Library</span>. A Domain can contain a library of object definitions. See <a href="#BHCEDJBI">"Domain Libraries"</a>.</p>
+<p>Even if the Domain's only purpose is to store library definitions, you may want to include an Application Area containing a Work Area in order to install and test the definitions within the Domain before promoting them to the Domain library.</p>
+</li>
+</ul>
+<p>You can define any number of Domains and any number of Application Areas within a Domain.</p>
+<p><a id="BHCFJEAC"></a><a id="LSHIM177"></a><span class="subhead3">Nested Domains&nbsp;</span>Whether or not you can define Domains within Domains, and if so, how many levels of Domains, depends on your setting for the Domain Nest Value profile; see "Setting Profile Values" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub System Administrator's Guide</span></span> for further information. The allowed values range from zero (no nested Domains; a single level of Domains that can contain Application Areas and object definitions only) and nine (9 levels of nested Domains). The default value is two (2).</p>
+<p>The Domain Nest Value setting does not affect the number of Domains you can define at the same level within a parent Domain. You can define any number of sibling Domains at a given level.</p>
+<p>In the Oracle LSH user interface, you can browse and search for objects in only one Domain at a time.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+When you load Oracle Clinical Global library definitions into Oracle LSH, the system automatically creates a Domain in Oracle LSH for Oracle Clinical Global Library objects and an Application Area for each Oracle Clinical Global Library Domain loaded into Oracle LSH. Each Application Area has the same name as the Oracle Clinical Domain whose Global library it contains. The Oracle LSH Tables, Variables, and Parameters created from the Oracle Clinical Question Sets, Questions, and DVGs become the library of that Domain.</div>
+<p><a id="BHCEDJBI"></a><a id="LSHIM178"></a><span class="subhead3">Domain Libraries&nbsp;</span>A library is not a defined object; object definitions belong to a Domain's library when they are stored directly in the Domain. Therefore you cannot have more than one library in a Domain.</p>
+<p>Domains are intended to store only tested, validated, production-quality object definitions. Some Domains may contain production-quality objects that are suitable for reuse in many applications. Other Domains may contain object definitions currently used in production for a particular trial or project. Oracle LSH does not enforce this usage in any way; you must develop a validation policy to determine which object definitions are eligible for inclusion in a library and, if you choose, set up Oracle LSH security so that only a few people can move definitions into a Domain library and modify them there. For an example, see <a href="sec.htm#BCGBIHCF">"Project 123 Domain User Group"</a>.</p>
+<p>Maintaining object definitions in a Domain library is not required. When a Definer creates an object in a Work Area, Oracle LSH automatically stores the definition in the Application Area that contains the Work Area. You can simply leave all object definitions in their Application Area library and still allow users with the necessary privileges to create instances of them in any Work Area or copy the definitions into any other Application Area library.</p>
+<p>However, storing validated object definitions in a particular Domain library facilitates reusing these definitions by making it clear that these are intended for reuse. You can develop standard operating procedures requiring Definers to search first in Domain Libraries to find an existing definition that serves their purpose before searching in Application Area Libraries or creating a new definition. Reusing valid object definitions reduces your definition workload and ensures the consistency and quality of object definitions (see <a href="cdr_intro.htm#CHDGABGH">"Reusing Object Definitions"</a>).</p>
+<p>In general, if a Domain contains logically related Application Areas, it makes sense to use that Domain library for storing validated object definitions that have been developed or adapted specifically for that logical group of applications. If you have developed definitions that are suitable for use in many projects, trials, or applications, such as Enrollment or Demography Tables, Programs or Report Sets, you may want to create a Domain specifically for the purpose of maintaining a central library of standard reusable definitions, and call it the Standards Domain, for example.</p>
+<p>You can make it easier to find object definitions in a library by labeling them with a classification. See <a href="class.htm#CHDGCFDE">Chapter 5, "Designing a Classification System for Searching and Browsing"</a>.</p>
+</div>
+<!-- class="sect1" -->
+<a id="BHCCBIAG"></a>
+<div id="LSHIM179" class="sect1">
+<h2 class="sect1">Application Areas</h2>
+<p>This section contains information on the standard and alternative usage of Application Areas.</p>
+<p class="subhead2"><a id="LSHIM180"></a>Standard Usage of Application Areas</p>
+<p>An Application Area is designed to contain a single business application that you want to validate, release, and maintain as a unit. For example, an Application Area's business purpose might be to manage a single study, including all the programs for transforming and reporting data in that study. Or an Application Area might be used to generate a set of projectwide reports, or to merge data for all studies in a project. An Application Area supports a business application in two ways:</p>
+<ul>
+<li>
+<p><span class="bold">Library</span>. An Application Area library contains the object definitions&mdash;Tables, Load Sets, Programs, Workflows, Report Sets, Data Marts, Business Areas and their component parts&mdash;created (or copied and modified) specifically to accomplish the business purpose of the Application Area. When you create a new object in a Work Area, Oracle LSH automatically creates the new object definition in the library of the owning Application Area. You can validate these definitions and move them to the Domain library if that is your policy. As in a Domain, the library is not a separate container but a collection of object definitions stored directly in the Application Area.</p>
+</li>
+<li>
+<p><span class="bold">Work Area Container</span>. An Application Area contains all the Work Areas necessary to develop, test, and put into production all the object instances necessary to accomplish the business purpose of the Application Area over time. A Work Area may contain instances of object definitions that are stored in any Domain or Application Area library.</p>
+</li>
+</ul>
+<p>For further information on Work Areas, see <a href="#BHCBACAI">"Using Work Areas"</a>.</p>
+<p class="subhead2"><a id="BHCECCIA"></a><a id="LSHIM181"></a>Alternative Usage of Application Areas or Child Domains</p>
+<p>You can create Application Areas or child Domains whose sole purpose is to store library definitions. For example, in a Domain whose sole purpose is to store standard definitions, you could create Application Areas to store different categories of definitions to make the definitions easier to find by browsing. For example, you could create one Application Area for Demography-related Tables, Load Sets, Programs, Report Sets, and Workflows, and another Application Area for Adverse Events-related definitions.</p>
+<p>The user interface separates objects within a library by object type, so there is no need to use Application Areas or child Domains to do that. You can use classification to label definitions by categories such as Demography and Adverse Events, but you can use definitions' classifications only during searching, not browsing.</p>
+</div>
+<!-- class="sect1" -->
+<a id="BHCICDEA"></a>
+<div id="LSHIM182" class="sect1">
+<h2 class="sect1">Work Areas</h2>
+<p>A Work Area is designed to maintain a specific, installable, executable version of a particular life cycle stage of the whole business application supported by the Application Area. That is, a Work Area is intended to contain all the object instances required for the Application Area's business application. These may be instances of object definitions contained in the parent Application Area's library, in a Domain library, or even in another Application Area's library (though this is not recommended). See <a href="#BHCBACAI">"Using Work Areas"</a>.</p>
+<p>Work Areas are the link between the LSH definitional subsystem, which consists solely of meta-data, and the actual database schemas that comprise the data repository. Definitional objects' tables, views, and packages are instantiated in the database by installing a Work Area; see <a href="#BHCCJBIG">"Installing Work Areas"</a>. All data loading, storage and manipulation in Oracle LSH are done through installed Work Areas.</p>
+<p>When a Definer creates a new object in a Work Area, he or she can either create an instance of an existing definition or create a new definition and instance at the same time. In this case, Oracle LSH simultaneously creates the new definition in the containing Application Area and an instance of it in the Work Area.</p>
+<p>Work Areas have a special operation called <a href="glossary.htm#BABIIEGG">cloning</a> that allows you to duplicate a Work Area and all its object instances and install them to a new set of schemas for the next stage in the application's life cycle. Use this functionality to create separate development, test, and production environments. See <a href="#BHCDBHED">"Cloning Work Areas"</a>.</p>
+<p>The life cycle stages are represented in Work Areas' Usage Intent attribute, whose allowed values are the same as object validation statuses (except Retired): Development, Quality Control, and Production. Oracle LSH enforces certain rules based on the Work Area's Usage Intent value, its validation status, and the validation status of all its object instances. For a detailed explanation of how to use Work Areas for different application life cycle stages, see <a href="valsops.htm#BACDDGIF">"Work Area Usage Intent and Validation Status"</a>.</p>
+<div id="LSHIM183" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref8"></a>
+<h3 class="sect2">Data Flow</h3>
+<p>After a Work Area is installed, you can populate its underlying database schema with data in two basic ways:</p>
+<ul>
+<li>
+<p>To load data from an external system, define, install, and run a Load Set (see <a href="cdr_intro.htm#BABJCEJB">"Loading Data"</a>) in the Work Area.</p>
+</li>
+<li>
+<p>To operate on data already stored in Oracle LSH, define a Program in the Work Area and map each of its source Table Descriptors to a Table instance in any Work Area in Oracle LSH (see <a href="cdr_intro.htm#BABEIFCF">"Operating on Data"</a>). Then install and run the Program.</p>
+</li>
+</ul>
+<p>Therefore it is not necessary to load data into the same Work Area where it will be processed. You can load a set of data to one Work Area and read it from a Program in any Work Area afterward. <a href="#BHCJJAIA">Figure 3-2</a> represents data flow options graphically.</p>
+<div id="LSHIM184" class="figure">
+<p class="titleinfigure"><a id="BHCJJAIA"></a>Figure 3-2 Data Flow</p>
+<img width="469" height="337" src="img/data_flow.gif" alt="Description of Figure 3-2 follows" /><br />
+<a id="sthref9" href="img_text/data_flow.htm">Description of ''Figure 3-2 Data Flow''</a><br />
+<br /></div>
+<!-- class="figure" --></div>
+<!-- class="sect2" -->
+<a id="BHCCJBIG"></a>
+<div id="LSHIM185" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Installing Work Areas</h3>
+<p>When you install a Work Area for the first time, the system creates a new set of database schemas (called an Oracle LSH Schema). The installation process also instantiates object definitions in the database through the Work Area's defined object instances. There are three installation modes:</p>
+<ul>
+<li>
+<p><span class="bold">Full installation</span> drops and replaces all objects. Any data already loaded into the schema is lost. It may be useful during development and testing to replace all objects and delete data that may be corrupted.</p>
+</li>
+<li>
+<p><span class="bold">Upgrade installation</span> changes only objects whose version numbers have incremented since the previous installation, and preserves data by upgrading Tables instead of dropping and replacing. You can explicitly omit objects from an upgrade installation. Upgrade is the only installation mode allowed in Work Areas with a Usage Intent of Production.</p>
+</li>
+<li>
+<p><span class="bold">Partial installation</span> enables multiple Definers to work in the same Work Area. Partial installation includes only objects that are not explicitly omitted and whose version number has incremented since the previous installation. The person who runs the installation can choose whether to upgrade or drop and replace Tables.</p>
+</li>
+</ul>
+<p>Newly created objects are automatically excluded from installation until their Omitted flag is explicitly unchecked. When a Definer is ready to install and test an object, he or she unchecks the flag. The object is included in the next Work Area installation, which may be started by the same Definer or someone else with the necessary privileges.</p>
+<p>For further information, see "Using, Installing, and Cloning Work Areas" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Application Developer's Guide</span></span>.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BHCDBHED"></a>
+<div id="LSHIM186" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Cloning Work Areas</h3>
+<p>You can use the cloning operation together with the Usage Intent Work Area attribute and object validation statuses (Development, Quality Control, Production, and Retired) to create clean, controlled, distinct environments for application development, testing, and production. See <a href="valsops.htm#BACDDGIF">"Work Area Usage Intent and Validation Status"</a>.</p>
+<p>The cloning operation is similar to the copy operation except that it is possible to clone a Work Area onto an existing Work Area, so that the clone overwrites the existing Work Area. For example, if you already have a Quality Control usage intent Work Area, and several objects fail quality control testing, you can fix the objects in the Development Work Area and then clone the whole Development Work Area onto the QC Work Area, creating a new version of the QC Work Area.</p>
+<p>When you clone a Work Area, you add the same label to the source and target Work Area. The label is proof that the two Work Areas are identical. In addition, all the object instances in the Work Area are duplicated exactly in the target Work Area. Their validation statuses remain the same.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BHCBACAI"></a>
+<div id="LSHIM187" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Using Work Areas</h3>
+<p>This section contains information on the standard and alternative ways to use Work Areas.</p>
+<p class="subhead2"><a id="LSHIM188"></a>Standard Usage of Work Areas</p>
+<p>Work Areas are designed to contain the entire application required for the business purpose of the Application Area, at a particular stage of its development. Oracle LSH uses an attribute (Usage Intent) and an operation (cloning) unique to Work Areas, to support controlled, validated passage from one life cycle stage to another: Development, Quality Control, and Production.</p>
+<p>When you set up an organizational structure, you create one Work Area for each Application Area. Its Usage Intent and validation status are both set to Development. In standard usage, your team creates and tests objects in the development Work Area. When the objects in the Development Work Area are ready for formal testing, you clone the Work Area and all its object instances to create a duplicate Work Area with a Usage Intent of Quality Control (QC). You then install the QC Work Area, load fresh data, and test. When all objects are tested and validated, you can clone the Quality Control Work Area to create a duplicate Work Area with a Usage Intent of Production.</p>
+<p>For details, see <a href="valsops.htm#BACDDGIF">"Work Area Usage Intent and Validation Status"</a>.</p>
+<p class="subhead2"><a id="BHCGHEEG"></a><a id="LSHIM189"></a>Alternative Usage of Work Areas</p>
+<p>Oracle LSH was designed to allow multiple Definers to work in a single Work Area that contains an entire logical application, using the Partial installation mode to install their own work.</p>
+<p>However, it is possible to use different Work Areas for different portions of the business application. For example, you can create a separate Work Area for each Definer. If you create multiple Work Areas for different portions of the application, we recommend that you also maintain a primary Work Area to contain the entire application to validate and clone as a whole. Definers can then develop new object instances and definitions in their own Work Areas and move the instances into the main Work Area when they are ready.</p>
+<p>This approach has the following advantages:</p>
+<ul>
+<li>
+<p>You can develop and validate different parts of the business application at different times. For example, if the business purpose of the Application Area is to analyze all the data for a particular study, you might need to develop and validate adverse events reports before efficacy reports for the study.</p>
+</li>
+<li>
+<p>Definers can install their Work Area at any time, never having to wait for another Definer's partial installation to complete. However, installation should not be a lengthy process. This issue is primarily of concern for large groups of Definers working on the same business application.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You can remove the individual Definers' Work Areas after you have copied their object instances into the main Work Area. Unused object instances are eliminated, making more space available. However, object instances do not require very much space.
+<p>You can remove only Work Areas whose Usage Intent is Development, or Work Areas whose Usage Intent is Quality Control or Production but which do not contain any installed objects.</p>
+</div>
+</li>
+</ul>
+<p>The approach has the following disadvantages:</p>
+<ul>
+<li>
+<p>When Definers move objects from one Work Area to another they may need to remap Table instances to executables. If they copy and paste mapped executable instances and Table instance together, Oracle LSH maintains the mapping.</p>
+<p>Because only one executable can write to any given Table instance, normally target mappings would be in the Definer's Work Area and Oracle LSH would maintain the mapping if the Definer moves the two object instances together. However, source Tables would often not be located in an individual Definer's Work Area, so the Definer would need to remap to source Table instances and test the new mappings. Also, if a Definer copies the object instances instead of moving them, he or she must redo all the mapping.</p>
+</li>
+<li>
+<p>Definers should retest object instances after pasting them to the main Work Area.</p>
+</li>
+<li>
+<p>If Definers have used the same name for the same type of object instance in two separate Work Areas, one of them must be renamed when they are pasted into the same Work Area. Oracle LSH renames them automatically by appending an underscore and the number one (<code dir="ltr">_1</code>), or the next higher number, to the name.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BHCFCAEF"></a>
+<div id="LSHIM190" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Examples of Organization Design</h2>
+<p>Following are several examples of ways to organize Domains, child Domains, Application Areas and libraries. You can use a combination of these approaches or design your own approach.</p>
+<p>Examples 1 and 2 are alternative ways to organize data handling for a project that contains multiple studies and for which you need to report on each study separately as well as the project as a whole. The main advantage of <a href="#BHCBFJDF">Example 2: Project Domain with Reporting on Pooled Data</a> is that you can report on the same data snapshot for all studies and for the project. The main advantage of <a href="#BHCEFEHD">Example 1: Project Domain with Reporting on Separately Stored Study Data</a> is that you do not need a separate container for unblinded data at the end of the trial, saving space in the database.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You could follow the same procedures without using child Domains. The child Domains serve to organize the Application Areas, making it easier to browse.</div>
+<a id="BHCEFEHD"></a>
+<div id="LSHIM191" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Example 1: Project Domain with Reporting on Separately Stored Study Data</h3>
+<p>Alternatively, you can keep each study's data separate throughout the process except to report on the project as a whole. Within each project Domain, create the following child Domains:</p>
+<ul>
+<li>
+<p><span class="bold">A Domain for Each Study</span>. Load data for each study in the project into an Application Area in its own Domain. Create a Load Set from the source tables or data sets. Oracle LSH stores the Load Set definition in the Application Area library.</p>
+<p>If you collect data for different studies using slightly different formats, define a Program to copy raw data into Table instances with a standard data type and length for the project. Create an instance of the Program for each study, mapping its source table descriptors to the appropriate raw data table instances.</p>
+<p>Create Report Sets and run each of them on the standardized study data. If necessary, create a different version of the Report Sets for each study.</p>
+<p>When you are ready to unblind study data, run the Report Sets in Unblind mode or unblind each Table instance.</p>
+</li>
+<li>
+<p><span class="bold">A Domain for Projectwide Data and Reports</span>. Define a Program to copy data from the standardized table instances for each study into a single set of table instances for the project.</p>
+<p>Run the Report Sets for the project as whole. If necessary, create a new version of each Report Set for the projectwide data.</p>
+<p>When all studies are unblinded, run the Report Sets in unblinded mode or unblind each Table instance and then run the Report Sets.</p>
+</li>
+</ul>
+<div id="LSHIM192" class="figure">
+<p class="titleinfigure"><a id="sthref10"></a>Figure 3-3 Organizational Structure for Example 2, with Data Flow</p>
+<img width="520" height="664" src="img/org_ex2_stdy.gif" alt="Organizational Structure for Example 2, with Data Flow" /><br /></div>
+<!-- class="figure" --></div>
+<!-- class="sect2" -->
+<a id="BHCBFJDF"></a>
+<div id="LSHIM193" class="sect2">
+<h3 class="sect2">Example 2: Project Domain with Reporting on Pooled Data</h3>
+<p>In this example, you create a Domain for every project. In this Domain, you load the data from all of the project's studies into Oracle LSH, transform data to a standard format for the project, merge the standard data from all studies into a single set of table instances for the project, and report on the merged, standardized data.</p>
+<p>Within each project Domain, you create the following child Domains:</p>
+<ul>
+<li>
+<p><span class="bold">Load and Transform Data</span>. Load data for each study in the project into its own Application Area. Create a Load Set from the source tables or data sets. Oracle LSH stores the Load Set definition in the Application Area library.</p>
+<p>If you collect data for different studies using slightly different formats, define a Program to copy raw data into Table instances with a standard data type and length for the project. Create an instance of the Program for each study, mapping its source table descriptors to the appropriate raw data table instances.</p>
+</li>
+<li>
+<p><span class="bold">Merge and Report Data</span>. Define a Program to copy data from the standardized table instances for a study into a single set of table instances for the project, adding a column for Study ID to each table if it is not already there.</p>
+<p>Create Report Sets and run each of them on the pooled standardized data. Use Parameters to specify which study to report on and create a different Execution Setup for each study. By accepting all values for the Study ID Parameter you can create a Report Set on the project as a whole.</p>
+<p>You can create data snapshots and run each Report Set for each study and the project as a whole on the same data snapshot.</p>
+</li>
+<li>
+<p><span class="bold">Unblind and Report Data</span>. If you need to unblind data for each study at a different time, create another Domain to hold the unblinded data. Define a Program to copy data with a particular study ID from the Merge and Pool Data Domain to the Report Unblinded Data Domain. To unblind a study, run this Program setting the Study ID Parameter to the correct value for the study, and run it in Unblind mode.</p>
+<p>As each study becomes ready for unblinding, repeat the procedure. You can run the same or different report sets on the unblinded study data for each study and, when all studies in the project are unblinded, run the same Report Sets on projectwide data.</p>
+</li>
+</ul>
+<div id="LSHIM194" class="figure">
+<p class="titleinfigure"><a id="sthref11"></a>Figure 3-4 Organizational Structure for Example 1, with Data Flow</p>
+<img width="606" height="664" src="img/org_ex1_pool.gif" alt="Organizational Structure for Example 1, with Data Flow" /><br /></div>
+<!-- class="figure" --></div>
+<!-- class="sect2" -->
+<div id="LSHIM195" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref12"></a>
+<h3 class="sect2">Example 3: Domain for Companywide Reports</h3>
+<p>The companywide Domain holds Application Areas for companywide reports such as a list of all investigators updated monthly for submission to the FDA, and patient enrollment charts.</p>
+</div>
+<!-- class="sect2" -->
+<div id="LSHIM196" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref13"></a>
+<h3 class="sect2">Example 4: Domain for Standard Definitions</h3>
+<p>Use standard definitions of Tables, Programs, Data Marts, and so on to make it easier to reuse definitions and reduce the amount of work required for validation. Put standard definitions in a Domain only when you have thoroughly tested and validated them so that they are approved for reuse.</p>
+<p>You may want to use CDISC data formats for standard Table definitions and create Programs that read from and write to those tables, for example.</p>
+<p>You can use child Domains to organize definitions by type. For example, create a child Demography Domain to store demography-related Tables, Programs, Report Sets, and Data Marts. Create an Adverse Events Domain and an Efficacy Domain, and so on.</p>
+<div id="LSHIM197" class="figure">
+<p class="titleinfigure"><a id="sthref14"></a>Figure 3-5 Standard Definitions Domain</p>
+<img width="481" height="117" src="img/org_ex4_std_def.gif" alt="Standard Domain Definitions" /><br /></div>
+<!-- class="figure" -->
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You can create these definitions as needed in other Domains and move them to the standard definition Domain when they are ready, or you can create Application Areas and Work Areas inside these Domains for the purpose of creating and testing standard definitions.</div>
+</div>
+<!-- class="sect2" -->
+<div id="LSHIM198" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref15"></a>
+<h3 class="sect2">Example 5: Oracle Clinical Definitions</h3>
+<p>When you define and run a Load Set for the Oracle Clinical Global Library, the adapter automatically creates an Oracle LSH Domain into which it puts Oracle LSH Variables, lists of values, and Tables that it converts from user-defined Oracle Clinical Questions, DVGs, and Question Groups. For further information, see "Defining Load Sets" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Application Developer's Guide</span></span>.</p>
+</div>
+<!-- class="sect2" -->
+<div id="LSHIM199" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref16"></a>
+<h3 class="sect2">Example 6: Domain for Cross-Project Analysis</h3>
+<p>In combination with any of the other examples, you can create one or more Domains to use for cross-project analysis. For example, you could create one Domain for one group of projects, and another Domain for a different set of projects.</p>
+</div>
+<!-- class="sect2" -->
+<div id="LSHIM200" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref17"></a>
+<h3 class="sect2">Example 7: Study or Project Template Domain</h3>
+<p>Develop standard definitions for use in all studies, validate them, and put them in one or more Domains of standard definitions. Create a Study Template Domain with at least one Application Area and copy into it the standard definitions that you know need to be modified for each study. Create a Work Area in the Application Area that contains instances of the definitions in the Study Domain and also instances of definitions in the Standard Domain that do not need modification. In the Work Area, map all executables to Table instances as necessary.</p>
+<p>When you begin a new study, copy the entire Study Template Domain, including its Application Areas Work Areas. The object instances in the copied Work Area point to the correct definitions, either in the copied Application Area or in the original Domain. All mappings remain intact.</p>
+<p>Through the instances in the copied Work Area, modify the definitions in the Application Area as necessary for the new study.</p>
+<p>This model works with <a href="#BHCEFEHD">Example 1: Project Domain with Reporting on Separately Stored Study Data</a>. You could work out a similar process for the entire Domain, or for the Domain in <a href="#BHCBFJDF">Example 2: Project Domain with Reporting on Pooled Data</a>.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BABBFJJG"></a>
+<div id="LSHIM201" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Design Considerations</h2>
+<p>As you design an organizational structure for your company, take the following points into consideration:</p>
+<p><a id="LSHIM202"></a><span class="subhead3">Security System&nbsp;</span>Users are allowed to perform an operation on an object when they:</p>
+<ul>
+<li>
+<p>belong to a User Group that is assigned to that object, either directly or indirectly by inheritance</p>
+</li>
+<li>
+<p>are assigned to a Role within the User Group that allows the requested operation on the requested object subtype</p>
+</li>
+</ul>
+<p>Objects inherit the User Group assignments of their containing objects, unless the User Group is explicitly unassigned from a particular object. If you assign a User Group to a Domain, that User Group also has access to everyDomain and Application Area in the Domain and every object definition in every Domain and Application Area, including every Work Area, and every object instance in every Work Area. However, users can perform only the operations defined by their Role(s) in the User Group.</p>
+<p>You can unassign a User Group from an object at any level, in which case any objects it contains are also no longer assigned that User Group.</p>
+<p>Outputs&mdash;reports, report sets, data marts, and visualizations&mdash;inherit their User Group assignments from the object instance that generates them (Programs, Report Sets, Data Marts, and Business Areas, respectively). Object instances inherit their User Group assignments from their containing Work Area. Therefore you can grant Consumers (end users) access to outputs by assigning them to a User Group that is assigned to the Production Work Area of the appropriate Application Area.</p>
+<p>See <a href="sec.htm#CIHJIIBI">Chapter 4, "Designing a Security System"</a> for further information.</p>
+<p><a id="LSHIM203"></a><span class="subhead3">Classification System&nbsp;</span>Classifications are used to label objects and outputs so that they are more easily found both by browsing the user interface and by advanced searches.</p>
+<p>Objects can inherit the classifications of their container objects. Therefore, if you set up Domains and Application Areas in the same logical pattern you need for classification, you can effectively assign classifications to all the objects within a Domain or Application Area simply by assigning the classifications to the Domain or Application Area.</p>
+<p>For example, if a Domain supports all of Project A and its Application Areas each support one study within Project A, you can assign an appropriate classification to each Application Area, such as Project A/Study 01 or Project A/Study 02. Then all Reports and other outputs produced from within each Application Area are automatically labeled as Project A/Study 01 or Project A/Study 02, and users can search for them in that context.</p>
+<p><a id="LSHIM204"></a><span class="subhead3">User Interface&nbsp;</span>In the Oracle LSH user interface you can view only one top-level Domain at a time, with all the Domains and Application Areas it contains. To browse object definitions and Work Areas in other Domains, you must change Domains. Similarly, if you are viewing outputs, you can browse the outputs of only one Domain at a time.</p>
+<p>You can search for objects across all Domains.</p>
+<p><a id="LSHIM205"></a><span class="subhead3">Business Areas&nbsp;</span>Business Areas are the bridge between the Oracle LSH database and data visualization tools such as Oracle Business Intelligence Enterprise Edition. A Business Area contains Table Descriptors that are mapped to Table instances. A data visualization can include only data mapped to a single Business Area.</p>
+<p>When you create a Business Area, you can map to all Table instances in the Work Area at once if you choose to, simplifying Business Area definition. You can also map Business Area Table Descriptors to Table instances in other Work Areas, and/or to selected Table instances in the same Work Area. Therefore your data visualizations are not restricted to data contained in a single Work Area.</p>
+</div>
+<!-- class="sect1" -->
+<a id="BHCBGJAF"></a>
+<div id="LSHIM206" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Design Decision Summary</h2>
+<p>This section lists the basic design decisions you must make, with information on restrictions, if any. To work on your design, it may be helpful to sketch a diagram similar to those in the section <a href="#BHCFCAEF">"Examples of Organization Design"</a>.</p>
+<div id="LSHIM207" class="sect2"><a id="sthref18"></a>
+<h3 class="sect2">Domains</h3>
+<p>You must make the following decisions about Domains:</p>
+<ul>
+<li>
+<p>Decide the number and purpose of each Domain.</p>
+</li>
+<li>
+<p>Decide whether or not the Domain will contain a library of object definitions. If it will, decide the purpose of the library.</p>
+</li>
+<li>
+<p>Decide whether or not the Domain will contain child Domains and if so, whether the child Domains will contain their own child Domains (and so on up to a total of 9 levels of Domain). If there will be child Domains, decide the purpose of each one.</p>
+</li>
+<li>
+<p>Decide whether or not the Domain will contain Application Areas (see <a href="#BHCBAFJD">"Application Areas"</a>).</p>
+<p>Even if the Domain's only purpose is to store library definitions, you may want to include an Application Area containing a Work Area in order to install and test the definitions within the Domain before promoting them to the Domain library.</p>
+</li>
+</ul>
+<p>If the Domain will include a library, you should also plan:</p>
+<ul>
+<li>
+<p>validation requirements for objects in the library, including a minimum validation status and what supporting information is required, if any (see <a href="valsops.htm#BACBBABC">Chapter 6, "Validating Objects and Outputs"</a>)</p>
+</li>
+<li>
+<p>security requirements for objects in the library, including one or more roles with privileges allowing moving object definitions into the library and modifying them there (for an example, see <a href="sec.htm#BCGBIHCF">"Project 123 Domain User Group"</a>).</p>
+</li>
+</ul>
+<p><a id="LSHIM208"></a><span class="subhead3">Restrictions&nbsp;</span>None.</p>
+<p>You can define any number of Domains, and each Domain can contain a library of object definitions of any validation status and/or any number of Application Areas. The number of levels of child Domains allowed is determined by your setting of the Domain Nest Value profile; see <a href="#BHCFJEAC">"Nested Domains"</a> and "Setting the Maximum Number of Nested Domains" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub System Administrator's Guide</span></span> for further information.</p>
+<p><a id="LSHIM209"></a><span class="subhead3">Considerations&nbsp;</span>Take the following into consideration:</p>
+<ul>
+<li>
+<p>Domains are an important part of the security and classification systems; read <a href="sec.htm#CIHJIIBI">Chapter 4, "Designing a Security System"</a> and <a href="class.htm#CHDGCFDE">Chapter 5, "Designing a Classification System for Searching and Browsing"</a> before you reach a decision on Domain usage.</p>
+</li>
+<li>
+<p>You can browse objects in only one Domain at a time in the Oracle LSH user interface. However, you can search for objects in any Domain at any time.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="BHCBAFJD"></a>
+<div id="LSHIM210" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Application Areas</h3>
+<p>You must decide the number and purpose of Application Areas in each Domain.</p>
+<p><a id="LSHIM211"></a><span class="subhead3">Restrictions&nbsp;</span>None.</p>
+<p>You can define any number of Application Areas in a Domain.</p>
+<p><a id="LSHIM212"></a><span class="subhead3">Considerations&nbsp;</span> The business purpose of each Application Areas contained in a Domain should be a part of the business purpose of the Domain.</p>
+<p>For example, if the purpose of the Domain is to contain all the data for a drug project, the purpose of each Application Area might be to contain all the data for a particular study that is part of that project.</p>
+<p>If the purpose of the Domain is to contain standard Report Sets, the purpose of each Application Area might be to contain a particular Report Set.</p>
+<p>See also <a href="#BHCECCIA">"Alternative Usage of Application Areas or Child Domains"</a>.</p>
+</div>
+<!-- class="sect2" -->
+<div id="LSHIM213" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref19"></a>
+<h3 class="sect2">Work Areas</h3>
+<p>For normal usage, you need to create one Work Area in each Application Area.</p>
+<p><a id="LSHIM214"></a><span class="subhead3">Restrictions&nbsp;</span>None.</p>
+<p><a id="LSHIM215"></a><span class="subhead3">Considerations&nbsp;</span>In standard Application Area usage, as time goes on you will clone this Work Area to create a Quality Control Work Area, and then clone the QC Work Area to create a Production Work Area.</p>
+<p>It is possible to use an Application Area for object definition storage without a Work Area. However, even if you are using the Application Area for definition storage, you may want a Work Area to install and test the definitions. See <a href="#BHCGHEEG">"Alternative Usage of Work Areas"</a>.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment56">
+<tr>
+<td class="cellalignment63">
+<table class="cellalignment61">
+<tr>
+<td class="cellalignment60"><a href="impl_intro.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment60"><a href="sec.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2011, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment65">
+<table class="cellalignment59">
+<tr>
+<td class="cellalignment60"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment60"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment60"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment60"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

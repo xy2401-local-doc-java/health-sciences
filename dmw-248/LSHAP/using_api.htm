@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Using Application Programming Interfaces</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="description" content="This guide provides information on using the Application Programming Interface for Oracle Life Sciences Data Hub and Oracle Health Sciences Data Management Workbench." />
+<meta name="dcterms.created" content="2018-05-25T8:15:4Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Health Sciences Life Sciences Warehouse API Guide" />
+<meta name="dcterms.identifier" content="E87987-01" />
+<meta name="dcterms.isVersionOf" content="LSHAP" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2013, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Prev" href="part1_api.htm" title="Previous" type="text/html" />
+<link rel="Next" href="reference_info_api.htm" title="Next" type="text/html" />
+<link rel="alternate" href="LSHAP.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="LSHAP.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="LSHAP.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">5/42</span> <!-- End Header -->
+<div id="LSHAP1615" class="chapter"><a id="BGBIIFJD"></a>
+<h1 class="chapter"><span class="secnum">1</span> Using Application Programming Interfaces</h1>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#BGBEIFAF">About APIs</a></p>
+</li>
+<li>
+<p><a href="#A1170774">Tips</a></p>
+</li>
+<li>
+<p><a href="#BGBIJGCI">Calling APIs from Outside the Oracle Life Sciences Data Hub</a></p>
+</li>
+<li>
+<p><a href="#BGBHDJGC">Calling APIs from Defined Programs</a></p>
+</li>
+<li>
+<p><a href="#BGBDHACE">Code Example Using Security and Error Message APIs</a></p>
+</li>
+</ul>
+<p><a id="LSHAP1616"></a><span class="subhead3">Views&nbsp;</span>All Oracle Life Sciences Data Hub (Oracle LSH) views are public and have names that begin with "cdr_". You can see them in SQL Developer or a similar tool, or query for them using the string <code dir="ltr">cdr_</code></p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+During its initial development, Oracle LSH was known as CDR. Therefore many internal names contain the string <code dir="ltr">cdr</code>. Please think of CDR as a synonym for LSH.</div>
+<a id="BGBEIFAF"></a>
+<div id="LSHAP1572" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">About APIs</h2>
+<p>Oracle LSH includes a set of APIs that enable you to do most of the things you can do through the user interface, including creating, modifying, and installing objects.</p>
+<p>You can call Oracle LSH APIs from source code in a defined Program in Oracle LSH. In this case, no additional security or setup is required.</p>
+<p>If you have an Oracle LSH database account with certain privileges, you can also develop programs that call APIs in a tool outside of Oracle LSH; such as SAS, Oracle SQL Developer, or SQL*Plus. You can then see views of all the Oracle LSH data you need, including data from both the LSH (CDR) schema and, for classification data, the TMS schema. You can make the programs you write available to other people from the external tool. See <a href="#BGBIJGCI">"Calling APIs from Outside the Oracle Life Sciences Data Hub"</a>.</p>
+<p><a id="LSHAP1573"></a><span class="subhead3">Example 1: Using APIs to Perform Multiple Tasks at Once&nbsp;</span>You can write a package that calls multiple APIs to do with one execution what it would take many tasks in the user interface (UI) to do; for example, create a Domain, an Application Area inside the Domain, a Work Area inside the Application Area, and multiple Load Sets, Tables, and Programs, each with a definition in the Application Area and an instance in the Work Area, and install the Work Area. If you have a standard structure for Project/Therapeutic Area Domains, for example, you may want to work this way. However, remember that you can also copy a Domain and all its contents at once in the user interface.</p>
+<p>Using APIs is even more attractive when you want to create, for example, multiple objects with variations or large complex objects such as Report Sets. You can create a spreadsheet to store all the variable information and load its data into an Oracle LSH Table instance using a Text Load Set. In your program, use a loop to read all the spreadsheet data and call the relevant Oracle LSH APIs to create the objects.</p>
+<p><a id="LSHAP1574"></a><span class="subhead3">Example 2: Calling APIs from an External System's UI&nbsp;</span>You may want to allow people in your company to perform actions on Oracle LSH objects from an external system.</p>
+<p>For example, instead of requiring that SAS developers check out Source Code in Oracle LSH before opening the SAS IDE from an Oracle LSH Program, you may want to add a button to the SAS user interface that calls the API for checking out the Source Code object when clicked. Then, if the program is located in a schema with Execute privileges on the security API, any user with SAS, a database account in Oracle LSH, and normal Oracle LSH object security privileges on the Source Code definition, can check out the Source Code definition directly from SAS.</p>
+<p><a id="LSHAP1575"></a><span class="subhead3">Understand Oracle LSH Functionality&nbsp;</span>To use Oracle LSH APIs, you must understand basic Oracle LSH functionality including:</p>
+<ul>
+<li>
+<p><span class="bold">Object Ownership</span>. You must create container objects before creating the objects they contain, because to create any object you must identify its namespace (parent or container) object. For example, begin by defining a Domain, then an Application Area, then a Work Area, and then create a Table definition in the Application Area and an instance of it in the Work Area. You can use a single API to create both the Table definition and an instance of it. For details, see "Object Ownership" in the <span class="italic">Oracle Life Sciences Data Hub Application Developer's Guide</span>.</p>
+</li>
+<li>
+<p><span class="bold">Installation</span>. You must create an instance of an object definition and install it before you can execute or store data in the object.</p>
+</li>
+<li>
+<p><span class="bold">Mapping</span>. All executable objects must contain one Table Descriptor for each Table instance they read from and write to, and the Table Descriptors and Table instances must be mapped. For details, see "Defining and Mapping Table Descriptors" in the <span class="italic">Oracle Life Sciences Data Hub Application Developer's Guide</span>.</p>
+</li>
+<li>
+<p><span class="bold">Checking Objects In and Out</span>. You must check objects out to modify them and check them in before you install and use them. For details, see "Understanding Object Versions and Checkin/Checkout" in the <span class="italic">Oracle Life Sciences Data Hub Application Developer's Guide</span>.</p>
+</li>
+<li>
+<p><span class="bold">Security</span>. All objects require user group assignments to control user access. For details, see "Applying Security to Objects and Outputs" in the <span class="italic">Oracle Life Sciences Data Hub Application Developer's Guide</span>.</p>
+</li>
+<li>
+<p><span class="bold">Classification</span>. To enable objects to appear in the Reports tab of the user interface for end users to run them and view their outputs, you must classify them. Classifications can also be used in searching for objects. For details, see "Classifying Objects and Outputs" in the <span class="italic">Oracle Life Sciences Data Hub Application Developer's Guide</span>.</p>
+</li>
+<li>
+<p><span class="bold">Validation</span>. Objects should be validated according to your company policy whether they are created in the user interface or with APIs. For details, see "Validating Objects and Outputs" in the <span class="italic">Oracle Life Sciences Data Hub Application Developer's Guide</span>.</p>
+</li>
+<li>
+<p><span class="bold">Object-Specific Information</span>. Further information on each object type is included in other chapters of the <span class="italic">Oracle Life Sciences Data Hub Application Developer's Guide</span>.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect1" -->
+<a id="A1170774"></a>
+<div id="LSHAP104" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Tips</h2>
+<pre dir="ltr">
+</pre>
+<div id="LSHAP105" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref5"></a>
+<h3 class="sect2">Committing APIs</h3>
+<p>The standard parameter P_COMMIT is found in every API; see <a href="reference_info_api.htm#CDEHDBAI">Standard Parameters.</a> Its default value is FALSE, which prevents the API from committing. This is useful if you are creating multiple objects in a single program execution, to enable you to do a rollback. However, if you want the API to commit, pass the value <code dir="ltr">FND_API.G_TRUE</code>.</p>
+</div>
+<!-- class="sect2" -->
+<div id="LSHAP106" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref6"></a>
+<h3 class="sect2">Get Attribute Values for Namespace Objects</h3>
+<p>Many APIs require internal IDs for the namespace object of the object you are creating. Use <a href="setup_utility_api.htm#BGBHFCJC">Get a Naming Version Object.</a> to get these details. However, you must first determine what the namespace object is, using the object ownership diagram and explanation in the <span class="italic">Oracle Life Sciences Data Hub Application Developer's Guide</span> or <span class="italic">Oracle Health Sciences Data Management Workbench Study Setup Guide</span>, then query for the namespace object ID and object version using its name and its namespace's name and object type, in CDR_DF_NAMING_V.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BGBIJGCI"></a>
+<div id="LSHAP1579" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Calling APIs from Outside the Oracle Life Sciences Data Hub</h2>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#BGBJBHDI">Security Setup Required</a></p>
+</li>
+<li>
+<p><a href="#BGBFBJHI">Calling the Security API Package</a></p>
+</li>
+<li>
+<p><a href="#BGBHEECB">Calling APIs from SAS</a></p>
+</li>
+<li>
+<p><a href="#BGBHFJDD">Using a Permanent Schema for Deploying Programs that Call APIs</a></p>
+</li>
+</ul>
+<a id="BGBJBHDI"></a>
+<div id="LSHAP1580" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Security Setup Required</h3>
+<p>To run any API package from a tool outside of Oracle LSH, such as SAS, SQL Developer, or SQL*Plus, your system administrator needs to do the following:</p>
+<ol>
+<li>
+<p>Set up an Oracle LSH database account linked to your LSH user account; see "Creating Database Accounts" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub System Administrator's Guide</span></span>.</p>
+</li>
+<li>
+<p>Grant your Oracle LSH database account Execute privileges on the API security package CDR_PUB_API_INITIALIZATION.</p>
+</li>
+<li>
+<p>To run APIs that insert, delete, or modify Oracle LSH classification hierarchy terms, you need security access to the Oracle Thesaurus Management System (TMS) instance that is installed as part of Oracle LSH. The Oracle LSH classification system is based on TMS.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+This step is not required for Oracle DMW custom programs. DMW does not use the LSH classification system.</div>
+<p>Ask your system administrator to run the script <code dir="ltr">tmsadduser.sql</code> to do the following:</p>
+<ul>
+<li>
+<p>Create a TMS user account with the same name as your Oracle LSH database account so that your account is entered in the TMS_ACCOUNTS and OPA_ACCOUNTS tables.</p>
+</li>
+<li>
+<p>Give your TMS user account superuser privileges in the TMS_ACCOUNTS table.</p>
+</li>
+<li>
+<p>Grant your TMS user account the TMS_MAINTAIN_PRIV database role.</p>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BGBFBJHI"></a>
+<div id="LSHAP1581" class="sect2">
+<h3 class="sect2">Calling the Security API Package</h3>
+<p>For every program that you run from outside Oracle LSH to call an Oracle LSH API, you must first call a special security API: CDR_PUB_API_INITIALIZATION. This API contains three functions:</p>
+<ul>
+<li>
+<p>EnableApis</p>
+</li>
+<li>
+<p>DisableApis</p>
+</li>
+<li>
+<p>AreApisEnabled</p>
+</li>
+</ul>
+<p>When you initialize any API, the AreApisEnabled function of the security API, CDR_PUB_API_INITIALIZATION, is called to check the calling program. If the program does not have the EnableAPIs flag set to True, the initialization fails.</p>
+<p>To set the EnableApis flag to True, call the EnableApis function from your program. To call the EnableApis function, you need a schema/user account with an Execute privilege on the CDR_PUB_API_INITIALIZATION API granted by a system administrator.</p>
+<p>Therefore, when you write a program that calls an API and is intended for use outside Oracle LSH, set the EnableApis flag to True in your program and then set it to False at the end to force the security check on the schema the next time the program is run:</p>
+<ol>
+<li>
+<p>Begin the body with the following code to call the function to enable APIs:</p>
+<p><code dir="ltr">call CDR_PUB_API_INITIALIZATION.enableApis (</code><code dir="ltr"><span class="codeinlineitalic">arguments</span></code><code dir="ltr">);</code></p>
+<p>The arguments are described in CDR_PUB_API_INITIALIZATION itself.</p>
+</li>
+<li>
+<p>At the end of the body, disable APIs with the following code:</p>
+<p><code dir="ltr">CDR_PUB_API_INTIALIZATION.disableApis (</code><code dir="ltr"><span class="codeinlineitalic">arguments</span></code><code dir="ltr">);</code></p>
+</li>
+</ol>
+<p>See <a href="#BGBBDCEA">Example 1-1, "Program that Calls the API to Define a Work Area and Calls the Security and Error Message APIs"</a>.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BGBHEECB"></a>
+<div id="LSHAP1582" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Calling APIs from SAS</h3>
+<p>If you need to call multiple APIs from SAS, you may want to use a PL/SQL wrapper around the API calls so that you only call PL/SQL once. The <span class="italic">Oracle Life Sciences Data Hub Application Developer's Guide</span> has two examples. In the Report Sets chapter, see "Passing Values from a Program Instance to the Report Set for Post-Processing" and in the Programs chapter see "Calling an API to Capture Output Parameter Values."</p>
+</div>
+<!-- class="sect2" -->
+<a id="BGBHFJDD"></a>
+<div id="LSHAP1583" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Using a Permanent Schema for Deploying Programs that Call APIs</h3>
+<p>When you develop a program outside Oracle LSH that will call Oracle LSH APIs, you can use your own schema in the external tool (such as SQL*Plus, SQL Developer, or SAS) to run and test the program, if you have Execute privileges on CDR_PUB_API_INITIALIZATION. When you are ready to allow other people to run it, copy it into a different location.</p>
+<p>Oracle recommends setting up one or more permanent, publicly available schemas in the Oracle LSH database for the purpose of compiling and storing programs that call Oracle LSH APIs. Grant each schema Execute privileges on CDR_PUB_API_INITIALIZATION. This approach has the following advantages:</p>
+<ul>
+<li>
+<p>If a user manually runs your program, he or she must enter the program location and name explicitly. This will be much easier if the user knows which schema contains such programs.</p>
+</li>
+<li>
+<p>If you set up the program to run automatically when a user clicks a button in the external system's user interface, for example, you must hardcode the program's name and location into the code.</p>
+</li>
+<li>
+<p>You can grant Execute on CDR_PUB_API_INITIALIZATION to a controlled number of schemas.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BGBHDJGC"></a>
+<div id="LSHAP1584" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Calling APIs from Defined Programs</h2>
+<p>If you develop and run a Program that calls an API within Oracle LSH&mdash;that is, in the defined Source Code of a defined Program object&mdash;no security is required beyond normal Oracle LSH object security. You do not need Execute privileges on the CDR_PUB_API_INITIALIZATION API, and you do not need to enable APIs in your Program code.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Within Oracle LSH, the calls to CDR_PUB_API_INITIALIZATION are unnecessary and in fact a program that includes such a call will not compile because the Work Area schema does not have Execute privileges on CDR_PUB_API_INITIALIZATION.</div>
+<p>You do need to install the Program before you can run it, as you do any defined Program in Oracle LSH.</p>
+<p>You can write packages in an Oracle LSH Program that do anything with APIs that you could do in a package outside Oracle LSH. For example, you could create an instance of a Program definition whose Source Code created a Work Area, several Load Sets, and a Program to merge the data, instead of defining the Work Area, Load Sets and Program through the Oracle LSH user interface.</p>
+</div>
+<!-- class="sect1" -->
+<a id="BGBDHACE"></a>
+<div id="LSHAP1594" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Code Example Using Security and Error Message APIs</h2>
+<p>There are two utility Oracle LSH APIs that you call in conjunction with other Oracle LSH APIs:</p>
+<ul>
+<li>
+<p><span class="bold">CDR_PUB_API_INITIALIZATION</span>. This API is required for developing and running programs that call any Oracle LSH API from outside Oracle LSH. See <a href="#BGBFBJHI">Calling the Security API Package</a> for further information.</p>
+</li>
+<li>
+<p><span class="bold">CDR_PUB_MSG_PUB</span>. This API returns error messages from other Oracle LSH APIs called in the same package.</p>
+</li>
+</ul>
+<p>The following code provides an example of calling the API to define a Work Area and each of the utility APIs.</p>
+<div id="LSHAP1595" class="example">
+<p class="titleinexample"><a id="BGBBDCEA"></a>Example 1-1 Program that Calls the API to Define a Work Area and Calls the Security and Error Message APIs</p>
+<pre dir="ltr">
+CDR_PUB_DF_WORKAREA.CREATEWORKAREA (
+                   P_API_VERSION=&gt;1,
+                   P_INIT_MSG_LIST=&gt;CDR_PUB_DEF_CONSTANTS.G_FALSE,
+P_COMMIT=&gt;CDR_PUB_DEF_CONSTANTS.G_FALSE,
+                   P_VALIDATION_LEVEL=&gt;CDR_PUB_DEF_CONSTANTS.G_VALID_LEVEL_FULL,
+X_RETURN_STATUS  =&gt; X_RETURN_STATUS,
+X_MSG_COUNT    =&gt; X_MSG_COUNT,
+X_MSG_DATA    =&gt; X_MSG_DATA,
+PIO_SOURCECDRNAMING =&gt;VARWANSOBJ,
+PIO_WORKAREAOBJTYPE =&gt;VARWAOBJ,
+PI_DEFCLASSIFICATIONCOLL =&gt; NULL);
+      IF X_RETURN_STATUS &lt;&gt; 'S' THEN
+       DBMS_OUTPUT.PUT_LINE('ERROR FOUND IN CREATEPROGRAM');
+     END IF ;
+     X_MSG_COUNT := CDR_PUB_MSG_PUB.COUNT_MSG(                                  
+                   P_API_VERSION=&gt;1,                   P_INIT_MSG_LIST=&gt;CDR_PUB_DEF_CONSTANTS.G_FALSE,
+P_COMMIT=&gt;CDR_PUB_DEF_CONSTANTS.G_FALSE,
+                   P_VALIDATION_LEVEL=&gt;CDR_PUB_DEF_CONSTANTS.G_VALID_LEVEL_FULL
+                   );
+     IF X_MSG_COUNT &gt;= 1 THEN
+     FOR I IN 1..X_MSG_COUNT LOOP
+        IF I =1 THEN
+          X_MSG_DATA := CDR_PUB_MSG_PUB.GET(
+                    P_API_VERSION=&gt;1,
+                   P_INIT_MSG_LIST=&gt;CDR_PUB_DEF_CONSTANTS.G_FALSE,
+P_COMMIT=&gt;CDR_PUB_DEF_CONSTANTS.G_FALSE,
+                   P_VALIDATION_LEVEL=&gt;CDR_PUB_DEF_CONSTANTS.G_VALID_LEVEL_FULL,
+P_MSG_INDEX =&gt;CDR_PUB_MSG_PUB.G_FIRST,
+P_ENCODED =&gt;CDR_PUB_DEF_CONSTANTS.G_FALSE);
+        ELSIF I = X_MSG_COUNT THEN
+          X_MSG_DATA := CDR_PUB_MSG_PUB.GET(
+                    P_API_VERSION=&gt;1,
+                   P_INIT_MSG_LIST=&gt;CDR_PUB_DEF_CONSTANTS.G_FALSE,
+P_COMMIT=&gt;CDR_PUB_DEF_CONSTANTS.G_FALSE,
+                   P_VALIDATION_LEVEL=&gt;CDR_PUB_DEF_CONSTANTS.G_VALID_LEVEL_FULL,
+P_MSG_INDEX =&gt;CDR_PUB_MSG_PUB.G_LAST,
+P_ENCODED =&gt;CDR_PUB_DEF_CONSTANTS.G_FALSE);
+        ELSE
+          X_MSG_DATA := CDR_PUB_MSG_PUB.GET(
+                   P_API_VERSION=&gt;1,
+                   P_INIT_MSG_LIST=&gt;CDR_PUB_DEF_CONSTANTS.G_FALSE,
+P_COMMIT=&gt;CDR_PUB_DEF_CONSTANTS.G_FALSE,
+                   P_VALIDATION_LEVEL=&gt;CDR_PUB_DEF_CONSTANTS.G_VALID_LEVEL_FULL,
+P_MSG_INDEX =&gt;CDR_PUB_MSG_PUB.G_NEXT,
+P_ENCODED =&gt;CDR_PUB_DEF_CONSTANTS.G_FALSE);
+        END IF ;
+        DBMS_OUTPUT.PUT_LINE('MESSAGE:'||I ||' : '|| X_MSG_DATA);
+     END LOOP;
+    END IF;
+    CDR_PUB_API_INITIALIZATION.DISABLEAPIS(
+                   P_API_VERSION=&gt;1,
+                   P_INIT_MSG_LIST=&gt;CDR_PUB_DEF_CONSTANTS.G_FALSE,
+P_COMMIT=&gt;CDR_PUB_DEF_CONSTANTS.G_FALSE,
+                   P_VALIDATION_LEVEL=&gt;CDR_PUB_DEF_CONSTANTS.G_VALID_LEVEL_FULL,
+X_RETURN_STATUS  =&gt; X_RETURN_STATUS,
+X_MSG_COUNT    =&gt; X_MSG_COUNT,
+X_MSG_DATA    =&gt; X_MSG_DATA);
+EXCEPTION
+WHEN OTHERS THEN
+  CDR_PUB_API_INITIALIZATION.DISABLEAPIS(
+                   P_API_VERSION=&gt;1,
+                   P_INIT_MSG_LIST=&gt;CDR_PUB_DEF_CONSTANTS.G_FALSE,
+P_COMMIT=&gt;CDR_PUB_DEF_CONSTANTS.G_FALSE,
+                   P_VALIDATION_LEVEL=&gt;CDR_PUB_DEF_CONSTANTS.G_VALID_LEVEL_FULL,
+X_RETURN_STATUS  =&gt; X_RETURN_STATUS,
+X_MSG_COUNT    =&gt; X_MSG_COUNT,
+X_MSG_DATA    =&gt; X_MSG_DATA);
+END MY_PROCEDURE;
+ 
+BEGIN -- PACKAGE INIT BLOCK
+CDR_PUB_API_INITIALIZATION.ENABLEAPIS(
+                   P_API_VERSION=&gt;1,
+                   P_INIT_MSG_LIST=&gt;CDR_PUB_DEF_CONSTANTS.G_FALSE,
+P_COMMIT=&gt;CDR_PUB_DEF_CONSTANTS.G_FALSE,
+                   P_VALIDATION_LEVEL=&gt;CDR_PUB_DEF_CONSTANTS.G_VALID_LEVEL_FULL,
+X_RETURN_STATUS  =&gt; X_RETURN_STATUS,
+X_MSG_COUNT    =&gt; X_MSG_COUNT,
+X_MSG_DATA    =&gt; X_MSG_DATA);
+END MY_PACKAGE;
+</pre></div>
+<!-- class="example" --></div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment15">
+<tr>
+<td class="cellalignment22">
+<table class="cellalignment20">
+<tr>
+<td class="cellalignment19"><a href="part1_api.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment19"><a href="reference_info_api.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2013, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment24">
+<table class="cellalignment18">
+<tr>
+<td class="cellalignment19"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment19"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment19"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment19"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

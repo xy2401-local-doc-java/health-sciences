@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Managing Access to Specimen Aliases</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2017-09-06T4:8:20Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Healthcare Translational Research Administrator's Guide" />
+<meta name="dcterms.identifier" content="E86015-04" />
+<meta name="dcterms.isVersionOf" content="HTRAG" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Prev" href="vpd.htm" title="Previous" type="text/html" />
+<link rel="Next" href="statistic.htm" title="Next" type="text/html" />
+<link rel="alternate" href="HTRAG.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="HTRAG.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="HTRAG.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">6/7</span> <!-- End Header -->
+<div id="HTRAG747" class="chapter"><a id="sthref9"></a>
+<h1 class="chapter"><span class="secnum">2</span> Managing Access to Specimen Aliases</h1>
+<p>A laboratory that receives a specimen for processing may assign a barcode and use it for specimen identification purposes. In the CDM schema, these barcode identifiers are tracked as specimen aliases in addition to the primary lab specimen identifier (SPECIMEN_NUMBER/SPECIMEN_VENDOR_NUMBER).</p>
+<p>The permissions to see specimen aliases are calculated based on the service provider (lab) that issued the alias and study or patient group that includes the specimen donor (patient or subject).</p>
+<ul>
+<li>
+<p><a href="#A1083791">Authorizing Specimen Alias Access</a></p>
+</li>
+<li>
+<p><a href="#A1121858">Revoking Specimen Alias Access for a User</a></p>
+</li>
+</ul>
+<a id="A1083791"></a>
+<div id="HTRAG750" class="sect1">
+<h2 class="sect1"><span class="secnum">2.1</span> Authorizing Specimen Alias Access</h2>
+<p>For each user who needs access to specimen aliases, specify either a specific service provider (such as a lab) or all providers and either a specific study or patient group or all studies or all patient groups. If a user needs access to specimen aliases from more than one provider but not all, or to specimen aliases used in more than one study or patient group but not all, run this procedure once for each combination required.</p>
+<ol>
+<li>
+<p>On the database server, log in to SQL*Plus as CDM.</p>
+</li>
+<li>
+<p>Run stored procedure VPD_UTIL.GRANT_SVCPRV_USER, entering values as follows:</p>
+<ul>
+<li>
+<p>The user's user name.</p>
+</li>
+<li>
+<p>Service provider scope. Set one of the following parameters:</p>
+<ul>
+<li>
+<p>I_ISSNG_SVCPRV_ID. To limit access to aliases used by a single service provider, enter the service provider's ID.</p>
+</li>
+<li>
+<p>I_ANY_ISSNG_SVCPRVS. To allow access to aliases created by any service provides, set this parameter s to <code dir="ltr">1</code>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Subject and/or patient scope. Set one of the following parameters, or set one study parameter and one patient group parameter:</p>
+<ul>
+<li>
+<p>I_STUDY_NAME. To allow access to aliases used in a single study, enter the name of the study.</p>
+</li>
+<li>
+<p>I_ANY_STUDY. To allow access to aliases used in all studies, set this parameter to <code dir="ltr">1</code>.</p>
+</li>
+<li>
+<p>I_PT_GROUP_NAME. To allow access to aliases used for a single patient group, enter the name of the patient group.</p>
+</li>
+<li>
+<p>I_ANY_PT_GROUP. To allow access to aliases used in all patient groups, set this parameter to <code dir="ltr">1</code>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>(Optional) An expiration date for the user assignment. On this date the privileges given to the user will be automatically revoked. The date can be formatted in any valid date-type expression. For example:</p>
+<pre dir="ltr">
+ sysdate+<span class="codeinlineitalic">x_days</span> 
+date '2020-12-31'
+trunc(sysdate +1217
+to_date('2020-12-31','YYYY-MM-DD')
+</pre></li>
+</ul>
+</li>
+</ol>
+<p class="subhead2"><a id="HTRAG751"></a>Example 1 - Access to a single provider's aliases for a single patient group</p>
+<p>Authorize a user to access aliases for a specific service provider in the context of a single patient group.</p>
+<pre dir="ltr">
+begin
+ vpd_util.grant_svcprv_user (
+  i_user_name =&gt;' LABUSER1',
+  i_pt_group_name =&gt;'GROUP_1',
+  i_issng_svcprv_id =&gt;'SVCPRV1',
+  i_expiration_date =&gt;sysdate+100
+) ;
+end;
+/
+</pre>
+<p class="subhead2"><a id="HTRAG752"></a>Example 2 - Access to a single provider's aliases for a single study</p>
+<p>Authorize a user to access aliases for a specific service provider in the context of a single study.</p>
+<pre dir="ltr">
+begin
+ vpd_util.grant_svcprv_user (
+  i_user_name =&gt;' LABUSER2',
+  i_study_name =&gt;'STUDY3',
+  i_issng_svcprv_id =&gt;'18_SVCPRV_NBR',
+  i_expiration_date =&gt;sysdate+100
+) ;
+end;
+/
+</pre>
+<p class="subhead2"><a id="HTRAG753"></a>Example 3 - Access to any provider's aliases for any study or patient group</p>
+<p>Authorize a user to access any specimen alias in the context of any patient group or study.</p>
+<pre dir="ltr">
+begin
+ vpd_util.grant_svcprv_user (
+  i_user_name =&gt;' LABSUPEVISOR1',
+  i_any_study =&gt;1,
+  i_any_pt_group =&gt;1,
+  i_any_issng_svcprvs =&gt;1,
+  i_expiration_date =&gt;sysdate+100
+) ;
+end;
+/
+</pre></div>
+<!-- class="sect1" -->
+<a id="A1121858"></a>
+<div id="HTRAG754" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">2.2</span> Revoking Specimen Alias Access for a User</h2>
+<p>To revoke specimen alias access from a user, use numeric identifiers (row_wids) of the specific study or patient group.</p>
+<ol>
+<li>
+<p>On the database server, log in to SQL*Plus as CDM.</p>
+</li>
+<li>
+<p>Run stored procedure VPD_UTILrevoke_svcprv_user, entering values as follows:</p>
+<ul>
+<li>
+<p>The user's user name.</p>
+</li>
+<li>
+<p>Service provider scope. Set one of the following parameters:</p>
+<ul>
+<li>
+<p>I_ISSNG_SVCPRV_ID. To revoke access from aliases used by a single service provider, enter the service provider's ID.</p>
+</li>
+<li>
+<p>I_ANY_ISSNG_SVCPRVS. To revoke access from aliases created by any service provides, set this parameter s to <code dir="ltr">1</code>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Subject and/or patient scope. Set one of the following parameters, or set one study parameter and one patient group parameter:</p>
+<ul>
+<li>
+<p>I_STUDY_NAME. To revoke access from aliases used in a single study, enter the name of the study.</p>
+</li>
+<li>
+<p>I_ANY_STUDY. To revoke access from aliases used in all studies, set this parameter to <code dir="ltr">1</code>.</p>
+</li>
+<li>
+<p>I_PT_GROUP_NAME. To revoke access from aliases used for a single patient group, enter the name of the patient group.</p>
+</li>
+<li>
+<p>I_ANY_PT_GROUP. To revoke access from aliases used in all patient groups, set this parameter to <code dir="ltr">1</code>.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+For the purpose of revoking access, the parameters for <span class="italic">any study</span>, <span class="italic">any pt group</span>, and <span class="italic">any provider</span> do not include any separately granted named study, patient, or provider scope. You must revoke these separately if needed.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p class="subhead2"><a id="HTRAG755"></a>Example 1 - Revoke access to one study/provider combination</p>
+<p>Revoke access to study_wid=99 and Service Provider (row_wid=105) from user TSTUSER1.</p>
+<pre dir="ltr">
+begin
+vpd_util.revoke_svcprv_user (
+    i_user_name =&gt;'TSTUSER1',
+  i_study_wid =&gt;99,
+  i_issng_svcprv_wid =&gt;105
+) ;
+end;
+/
+</pre>
+<p class="subhead2"><a id="HTRAG756"></a>Example 2 - Revoke access to one patient group/provider combination</p>
+<p>Revoke access to patient_group_wid=10 and Service Provider (row_wid=105) from user TSTUSER2.</p>
+<pre dir="ltr">
+begin
+vpd_util.revoke_svcprv_user (
+    i_user_name =&gt;'TSTUSER2',
+i_pt_group_wid =&gt;10,
+  i_issng_svcprv_wid =&gt;105
+) ;
+end;
+/
+</pre>
+<p class="subhead2"><a id="HTRAG757"></a>Example 3 - Revoke access to any study, patient group, and provider granted using parameter I_ANY_STUDY, I_ANY_PT_GROUP, and I_ANY_ISSNG_SVCPRVS</p>
+<p>Revoke access from a user to any study or patient group or service provider that was granted through an "any" parameter.</p>
+<pre dir="ltr">
+begin
+vpd_util.revoke_svcprv_user (
+    i_user_name =&gt;'TSTUSER3',
+  i_any_study =&gt;1,
+  i_any_pt_group =&gt;1,
+  i_any_issng_svcprvs =&gt;1
+) ;
+end;
+/
+</pre></div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment1">
+<tr>
+<td class="cellalignment8">
+<table class="cellalignment12">
+<tr>
+<td class="cellalignment5"><a href="vpd.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment5"><a href="statistic.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment10">
+<table class="cellalignment11">
+<tr>
+<td class="cellalignment5"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment5"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment5"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment5"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Adding and Modifying Lookup Values</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2018-05-25T8:2:33Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Life Sciences Data Hub System Administrator's Guide" />
+<meta name="dcterms.identifier" content="E95829-01" />
+<meta name="dcterms.isVersionOf" content="LSHAG" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2006, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="pwd.htm" title="Previous" type="text/html" />
+<link rel="Next" href="remote.htm" title="Next" type="text/html" />
+<link rel="alternate" href="LSHAG.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="LSHAG.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="LSHAG.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">7/24</span> <!-- End Header -->
+<div id="LSHAG177" class="chapter"><a id="CHDCAAAI"></a>
+<h1 class="chapter"><span class="secnum">4</span> Adding and Modifying Lookup Values</h1>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#CHDEBAGE">About Lookups</a></p>
+</li>
+<li>
+<p><a href="#CHDDABAH">Modifiable Lookups</a></p>
+</li>
+<li>
+<p><a href="#CHDDDCGB">Logging In</a></p>
+</li>
+<li>
+<p><a href="#CHDHEEHH">Querying and Viewing Lookups</a></p>
+</li>
+<li>
+<p><a href="#CHDDADBC">Adding, Modifying, or Discontinuing a Lookup Value</a></p>
+</li>
+</ul>
+<a id="CHDEBAGE"></a>
+<div id="LSHAG178" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">About Lookups</h2>
+<p>The Oracle Life Science Data Hub (Oracle LSH) uses predefined lists of values for many items such as drop-down lists in the user interface. These are based on lookups in the seed data shipped with Oracle LSH. You can modify some of these lists of values.</p>
+<p>Many database object type attributes used in Oracle LSH public APIs have lists of values based on these lookups (also called reference codelists); the naming convention is to end these attributes' names with <code dir="ltr">_rc</code>. You can use the procedures in this section to look up the allowed values for these attributes.</p>
+<p>To view or modify Oracle LSH lookups, you must have the LSH Setup Admin privilege.</p>
+<p>The changes you can make depend on the access level defined for each lookup:</p>
+<ul>
+<li>
+<p><span class="bold">System</span>. You cannot change anything.</p>
+</li>
+<li>
+<p><span class="bold">Extensible</span>. You can create additional values and modify them but you cannot modify predefined ones.</p>
+</li>
+<li>
+<p><span class="bold">User</span>. You can create additional values and change the text displayed in the user interface for existing values (the "meaning"), and discontinue the use of predefined and user-defined values.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If you change the text displayed in the user interface for existing values, the Oracle LSH documentation and online help will not reflect what is in the user interface, which may cause confusion.</div>
+</li>
+</ul>
+</div>
+<!-- class="sect1" -->
+<a id="CHDDABAH"></a>
+<div id="LSHAG179" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Modifiable Lookups</h2>
+<p>You can modify the following lookups in Oracle LSH:</p>
+<div id="LSHAG1796" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref9"></a>
+<h3 class="sect2">File Types</h3>
+<p>(<code dir="ltr">CDR_FILE_TYPES)</code> The access level is <span class="bold">Extensible</span>. This lookup is used in defining Source Code types; see "Defining Programs" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Application Developer's Guide</span></span>. The predefined values are Macro, Program, Oracle Reports, and SQL.</p>
+</div>
+<!-- class="sect2" -->
+<div id="LSHAG1797" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref10"></a>
+<h3 class="sect2">Font Name</h3>
+<p>(<code dir="ltr">CDR_FONT_NAME</code>) The access level is <span class="bold">User</span>. This lookup is used in Report Set post-processing; see "Defining Report Sets" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Application Developer's Guide</span></span>. The predefined values are Arial and Courier. If you prefer to use different fonts in your PDF Report Sets, you can add those fonts as values.</p>
+</div>
+<!-- class="sect2" -->
+<div id="LSHAG1798" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref11"></a>
+<h3 class="sect2">OTD Default Papersize</h3>
+<p>(<code dir="ltr">CDR_OTD_DEFAULT_PAPERSIZES</code>) The access level is <span class="bold">User</span>. This lookup is used in Report Set post-processing; see "Defining Report Sets" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Application Developer's Guide</span></span>. The predefined values are A4 and US Letter.</p>
+</div>
+<!-- class="sect2" -->
+<div id="LSHAG1799" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref12"></a>
+<h3 class="sect2">Report Type</h3>
+<p>(<code dir="ltr">CDR_REPORT_TYPE</code>) The access level is <span class="bold">User</span>. This lookup is used in Report Set definition; see "Defining Report Sets" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Application Developer's Guide</span></span>. The predefined values are Figure, Listing, and Table.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABGJGCA"></a>
+<div id="LSHAG1800" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">SAS IDE Client</h3>
+<p>(<code dir="ltr">CDR$SAS_IDE_CLIENT</code>) The access level is <span class="bold">User</span>. This lookup allows users to set a preference for which SAS client to use. There is one predefined value: SAS PC, which allows users to use PC SAS for Windows. If you want users to be able to use SAS Enterprise Guide, for example, add another meaning value of SAS EG with a code value of <code dir="ltr">$SAS_IDE_CLIENT$SAS_EG</code>.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If you do not want your users to use PC SAS and do not want the SAS IDE Client option to appear in User Preferences, delete the SAS PC value. If you want to add it again later, you must enter its code value as: <code dir="ltr">$SAS_IDE_CLIENT$SAS_PC</code>.
+<p>To delete the value, select it and select <span class="bold">Delete</span> from the <span class="bold">Edit</span> menu. Do not delete the lookup itself.</p>
+</div>
+</div>
+<!-- class="sect2" -->
+<div id="LSHAG1801" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref13"></a>
+<h3 class="sect2">Service Type</h3>
+<p>(<code dir="ltr">CDR_SERVICE_TYPES</code>) The access level is <span class="bold">Extensible</span>. This lookup is used in defining services; see <a href="dps.htm#CIHIIGFD">Chapter 1, "Setting Up Services"</a>. The predefined values are: BI Publisher, BI Publisher Development, Zip Utility, Informatica, Informatica for Development, OBIEE Business Area Deploy Service, OBIEE Deployment Service, OBIEE Business Area IDE Service, OBIEE Business Area Install Service, Oracle Export, Oracle Warehouse Builder, PLSQL, PLSQL for Development, Oracle Reports for Development, Oracle Reports, SAS, SAS for Development, SQLPLUS, Text for SqlLoader, Workflow, XML Publisher, and XML Reports.</p>
+</div>
+<!-- class="sect2" -->
+<div id="LSHAG1802" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref14"></a>
+<h3 class="sect2">Summary Output Validation Status</h3>
+<p>(<code dir="ltr">CDR_SOVS</code>) The access level is <span class="bold">User</span>. This lookup is used in Report Set validation; see "Defining Report Sets" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Application Developer's Guide</span></span>. The predefined values are Development, Quality Control, Production, Unassigned, and Not Applicable. You can change the displayed text for the existing values (in the Meaning column) but do not add values.</p>
+</div>
+<!-- class="sect2" -->
+<div id="LSHAG1803" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref15"></a>
+<h3 class="sect2">System Validation Steps</h3>
+<p>(<code dir="ltr">CDR_SYS_VALIDATION_STEPS</code>) The access level is <span class="bold">User</span>. This lookup is used in object validation; see "Common Development Tasks" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Application Developer's Guide</span></span>. The predefined values are Development, Quality Control, Production, and Retired. You can change the displayed text for the existing values (in the Meaning column) but do not add values.</p>
+</div>
+<!-- class="sect2" -->
+<div id="LSHAG1804" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref16"></a>
+<h3 class="sect2">Tablespace Names</h3>
+<p>(<code dir="ltr">CDR_TABLESPACE_NAMES</code>) The access level is <span class="bold">Extensible</span>. When users define a Table instance, they can select a tablespace for it; see "Defining Tables" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Application Developer's Guide</span></span>. The predefined values are APPS_TS_ARCHIVE, APPS_TS_MEDIA, and APPS_TS_TX_DATA.</p>
+</div>
+<!-- class="sect2" -->
+<div id="LSHAG1805" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref17"></a>
+<h3 class="sect2">Technology Types</h3>
+<p>(<code dir="ltr">CDR_TECH_TYPES</code>) The access level is <span class="bold">Extensible</span>. This lookup is used in Load Set, Data Mart, Business Area, Program, Report Set, and Workflow definition and execution. The predefined values are Oracle Clinical Design Definition, Oracle Clinical DX Views, Oracle Clinical DX SAS Views, Oracle Clinical General, Oracle Clinical Global Meta, Oracle Clinical Labs, Oracle Clinical Study, Oracle, Oracle Export Data Mart, PLSQL, Oracle Reports, Report Set, SAS Program, SAS Macro Catalog, SAS Data Mart, SAS Development, SAS Format Catalog, SAS Load Set, SAS tmp, SQLP, Text, Text Data Mart, Workflow, XML Publisher.</p>
+<p>If you add an adapter to an external system you need to add the new technology type to this lookup.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CHDDDCGB"></a>
+<div id="LSHAG190" class="sect1">
+<h2 class="sect1">Logging In</h2>
+<p>To modify lookup values, do the following:</p>
+<ol>
+<li>
+<p>Open your Oracle LSH URL and log in as a user with the LSH Administrator application role.</p>
+</li>
+<li>
+<p>From the Navigator drop-down, select <span class="bold">LSH Setup Admin</span>, then <span class="bold">Setups</span>, then <span class="bold">Lookups</span>. An Oracle Applications window opens with the Oracle Life Sciences Data Hub Lookups window displayed.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="CHDHEEHH"></a>
+<div id="LSHAG191" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Querying and Viewing Lookups</h2>
+<p>To view a lookup, or reference codelist, query for it as follows. Further information is available in the online help. See <a href="#CHDDABAH">"Modifiable Lookups"</a> for a list of Oracle LSH lookups you can modify.</p>
+<ol>
+<li>
+<p>Press the <span class="bold">F11</span> key. The window enters Query mode and changes the background color of some of the fields.</p>
+</li>
+<li>
+<p>In the <span class="bold">Type</span> field, enter the name of the lookup you want to see. You can enter part of the name and use the % wildcard. You can enter <code dir="ltr">cdr%</code> to retrieve all Oracle LSH lookups or dme% to retrieve all DMW lookups&mdash;then use the down arrow on the keyboard to view them in alphabetical order.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+During its initial development, Oracle LSH was known as CDR. Therefore many internal names contain the string <code dir="ltr">cdr</code>. Please think of CDR as a synonym for LSH.
+<p>Please think of DME as a synonym for DMW for the same reason.</p>
+</div>
+</li>
+<li>
+<p>Press <span class="bold">Ctrl+F11</span> to enter the query. The system displays the lookup and all its current values, including predefined values and those your company has previously added (if any). If your query retrieved more than one lookup, use the Down arrow on your keyboard to view each lookup in turn.</p>
+</li>
+</ol>
+<p>The following information is displayed for each value:</p>
+<ul>
+<li>
+<p><span class="bold">Code</span> is the internal name for the value.</p>
+</li>
+<li>
+<p><span class="bold">Meaning</span> is the text that appears on the user interface, exactly as it appears here.</p>
+</li>
+<li>
+<p><span class="bold">Description</span> is an explanation of the value.</p>
+</li>
+<li>
+<p><span class="bold">Tag</span> is an optional descriptor.</p>
+</li>
+<li>
+<p><span class="bold">Effective Dates</span>. The <span class="bold">From</span> column contains the date the value was created in your location. The <span class="bold">To</span> column may contain a date; if so, this is the date on which the value became or will become unavailable for use. If there is not a date in either column, the value is in effect.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect1" -->
+<a id="CHDDADBC"></a>
+<div id="LSHAG192" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Adding, Modifying, or Discontinuing a Lookup Value</h2>
+<p>Depending on the access level assigned to a lookup, you may be able to change its displayed text (the "Meaning") and add, modify, and discontinue existing values; see <a href="#CHDDABAH">"Modifiable Lookups"</a>.</p>
+<p>The Lookups user interface is part of Oracle Applications functionality not specific to Oracle LSH. Additional information is available in the online help.</p>
+</div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment1">
+<tr>
+<td class="cellalignment8">
+<table class="cellalignment6">
+<tr>
+<td class="cellalignment5"><a href="pwd.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment5"><a href="remote.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2006, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment10">
+<table class="cellalignment4">
+<tr>
+<td class="cellalignment5"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment5"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment5"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment5"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

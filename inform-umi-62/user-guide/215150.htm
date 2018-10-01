@@ -1,0 +1,63 @@
+&#xfeff;<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="EN" xmlns="http://www.w3.org/1999/xhtml" xml:lang="EN">
+<head>
+<title> How requests are processed </title>
+<meta name="Generator" content="Author-it" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="Keywords" content=""/>
+<script language="javascript" type="text/javascript" charset="UTF-8" src="dhtml_toc.js"></script>
+<script language="javascript" type="text/javascript" charset="UTF-8" src="open_parent.js"></script>
+<script language="javascript" type="text/javascript" charset="UTF-8" src="dhtml_load.js"></script>
+<script language="javascript" type="text/javascript" charset="UTF-8" src="dhtml_search.js"></script>
+<link rel="stylesheet" type="text/css" href="newwave.css"/>
+<link rel="stylesheet" type="text/css" href="index_stylesheet.css"/>
+<base target="CONTENT"/>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body onload="loadParent();;bodyLoad();;;if (isTOCLoaded()) {expand('122903');highlight('215150')}" text="#000000" link="#0000A0" alink="#008000" vlink="#FF0000">
+	<div id="searchResultsNone"></div>
+	<div id="content" style="padding-bottom: 50px;">
+		<table summary="" class="relatedtopics aboveheading" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td width= "18">
+<p class="bodytext"><a href="122903.htm" target="_self"><img width="34" height="34" src="125.gif" alt="Previous Topic" vspace="0" hspace="0" align="bottom" border="0" /></a></p></td>
+<td width= "18">
+<p class="bodytext"><a href="215159.htm" target="_self"><img width="33" height="34" src="124.gif" alt="Next Topic" vspace="0" hspace="0" align="bottom" border="0" /></a></p></td>
+<td width= "48">
+<p class="bodytext"><a href="javascript:expand('122903');highlight('215150')" onclick="loadTOC()" target="_self"><img width="165" height="27" src="122.gif" alt="Book Contents" vspace="0" hspace="0" align="bottom" border="0" /></a></p></td>
+</tr>
+</table>
+<h2 class="heading2">How requests are processed</h2>
+<p class="bodytext">By default, the User Management Interface software processes every MedML element in a call independently and every change is applied immediately after the element is processed. If an element contains an error, only the changes before that element are applied. For example, if you attempt to add five users and you specify a disallowed character for the third user name, the first two users are added, and then processing stops at the third element. For information about how to change the processing mode, see <a id="h215605" class="jumptemplate-noheadingtext" title="Changing the processing mode" href="215159.htm" target="_self">Changing the processing mode</a>.</p>
+<p class="bodytext">Requests are subject to the following constraints:</p>
+<ul class="listbullet"><li class="listbullet"><strong class="specialbold">Processing time</strong>&mdash;The maximum allowed time for a single request is five minutes. Processing that exceeds the maximum time results in an error.</li><li class="listbullet"><strong class="specialbold">Size of requests&mdash;</strong>Requests must be smaller than 5 MB. </li><li class="listbullet"><strong class="specialbold">Case-sensitivity</strong>&mdash;The User Management Interface software requires the same case-sensitivity rule as the InForm application. Object references by name are case-sensitive. Objects whose names contain different cases (for example, &quot;cra&quot; and &quot;CRA&quot;) are different objects. </li><li class="listbullet"><strong class="specialbold">Sequence of operations</strong>&mdash;The caller is responsible for sequencing operations as required for semantic correctness (for example, users must exist before you can add them to a rights group).</li></ul><p class="bodytext">Before the request is processed, the following operations are performed:</p>
+<ul class="listbullet"><li class="listbullet">The server logs the request (operation and user name only) to the event log for historical analysis.</li><li class="listbullet">If you use a load balanced deployment method, the study name parameter is validated against the study name in the URL. If the two do not match, an error is returned.<p class="listcontinue">For more information, see <a id="h134081" class="jumptemplate-noheadingtext" title="Load balanced deployment" href="214977.htm" target="_self">Load balanced deployment</a>.</p>
+</li><li class="listbullet">The user name and password are extracted from the SOAP header and are validated against the InForm database. Only requests with valid credentials for active accounts are accepted and processed. <p class="listcontinue">Multiple repeat requests with invalid passwords will disable the account and require administrative action according to existing InForm business logic. The allowed number of failed log-on attempts is set in the InForm application on the System Configuration page.</p>
+</li><li class="listbullet">Parameters are validated. If the request contains invalid content, an error is returned. For example, schema validation and InForm character restrictions are enforced.</li></ul><p class="bodytext">The API uses a subset of the InForm MedML schema to describe provisioning data.</p>
+
+		
+	</div>
+	<div id="feedback"><a href="mailto:inform_doc_feedback_grp@oracle.com?Subject=Comments about the User Management Interface 6.2 User Guide - How requests are processed" target="_top"><img width="24" height="108" src="feedback.gif" alt="Send Feedback"></a>
+	</div>
+	
+	<div id="foot">		
+			<ul style="padding: 0;">
+				<li class="footer" style="padding: 0 7px 0 0;"><a href="217485.htm">Access to Oracle Support</a></li>
+				<li class="footer"><a href="http://www.oracle.com/pls/topic/lookup?ctx=acc&id=docacc" target="_blank">Accessibility</a></li>
+				<li class="footer" style="border-right-style: none;"><a href="217488.htm">Legal Notices</a></li>
+			</ul>
+			<p style="font-size:12px;">Copyright &copy; 2018 Oracle and/or its affiliates. All rights reserved.</p>
+	</div>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>
+<footer>
+</footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+<script>$(document).foundation();</script>
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 2017" />
+<title>Viewing Metadata for a Domain</title>
+<link rel="File-List" href="wizard3_files/filelist.xml" type="" />
+<link rel="Edit-Time-Data" href="wizard3_files/editdata.mso" type="" />
+<link rel="StyleSheet" href="Empirica.css" type="text/css" />
+ <link rel="StyleSheet" href="Empirica.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body lang="EN-US" xml:lang="EN-US" style="tab-interval: .5in;"><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Domain Data\nViewing Metadata for a Domain");
+addAvenueInfo("Working with Domain Data","domainDataTableDisplay.htm","codelistTable.htm");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\">");
+AddMasterBreadcrumbs("About_WebVDME.htm", "", "&gt;", "Overview", "home.htm");
+document.write("<a href=\"Domain_Data_Workflow.htm\">Domain Data<\/a> &gt; Viewing Metadata for a Domain<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('About_WebVDME.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+
+<h1>Viewing Metadata for a Domain</h1>
+<p>On the <a href="domain_tab.htm">Study Data Domains page</a>, click the hyperlinked value in the Description column for the domain.</p>
+<p>The <span style="font-weight: bold;">Metadata</span> page provides the following information for each variable in the domain. To view a tooltip for each column, hover your mouse over a column heading.</p>
+<br />
+<table summary="" summary="" class="Empirica" cellspacing="0px">
+<col style="width: 18.585%;" />
+<col width="612" />
+<tr class="t1st">
+<td>
+<p class="TableHeader">Column</p>
+</td>
+<td>
+<p class="TableHeader">Description</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody">VARIABLE</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Name of the variable. Variable names ending with an underscore (_) are <a href="Derived_Variables.htm">derived variables</a>.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;">
+<p class="TableBody">DESCRIPTION</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Description of the variable.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody">DATATYPE</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Character, Number, or Date.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;">
+<p class="TableBody">TERMINOLOGY</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Name of the <a href="codelistTable.htm">codelist</a>, if any, associated with the variable. You can click the codelist name to view the contents of the codelist.</p>
+<p class="TableBody">This could be the name of a data-driven codelist generated when the study was <a href="studyEdit.htm">registered</a>, or the name of a codelist from a customer-provided define.xml file.</p>
+<p class="TableBody">The value <span style="font-weight: bold;">ISO 8601</span> appears in this column when the value complies with the International Organization for Standardization (ISO) published standards for representation of dates and times.</p>
+<p class="TableBody">When you click the name of an external codelist, a message indicating that no definition is found appears.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody">DEPRECATED</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody"><span style="font-weight: bold;">Y&mdash;</span> The variable was deprecated but is supported for the purpose of backward compatibility.</p>
+<p class="TableBody">Otherwise, blank.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;">
+<p class="TableBody">ORIGIN</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Source of the variable (for example: CRF, Derived, Sponsor Defined).</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody">ROLE</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Type of information that the variable provides about the observation (for example, Identifier, Timing, Topic), which determines how the variable is used.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;">
+<p class="TableBody">COMMENTS</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Comments associated with the variable. Empirica Study truncates comments to 200 characters when you load the study.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody">MANDATORY</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody"><span style="font-weight: bold;">Y&mdash;</span> The variable is required by the CDISC SDTM.</p>
+<p class="TableBody"><span style="font-weight: bold;">N&mdash;</span> The variable is not required by the CDISC SDTM.</p>
+<p class="TableBody">Blank for derived variables.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;">
+<p class="TableBody">ORDER_NUMBER</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Used for sorting the list of variables consistent with the order in CDISC models.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody">ADDED_BY_SYSTEM_FLAG</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody"><span style="font-weight: bold;">1</span> if one of the following is true:</p>
+<ul>
+<li class="Bullet1">The variable was not in the original study data for that domain, but was added to the domain metadata by Empirica Study.</li>
+<li class="Bullet1">The variable is one that Empirica Study adds from the DM domain to other domains, such as AGE, SEX, and RACE.</li>
+<li class="Bullet1">The variable is derived.</li>
+<li class="Bullet1">The variable is a supplemental qualifier.</li>
+</ul>
+<p class="TableBody">Otherwise, empty.</p>
+</td>
+</tr>
+</table>
+<p>For information on viewing, printing, or downloading tables or changing the way data displays in the table, see <a href="About_Tables.htm">About Tables</a>.</p>
+<h2>View the Define.xml file</h2>
+<p>The <a href="javascript:TextPopup(this)" id="HotSpot39150" class="glossterm">define.xml</a><script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+TextPopupInit('HotSpot39150', 'POPUP39150');
+//]]></script><span class="glosstext" id="POPUP39150" style="display: none;"> CDISC Case Report Tabulation Data Definition Specification for a study.</span> file contains study metadata in XML (eXtensible Markup Language). To view the define.xml file, it must be in the directory indicated when the study was registered. You can view the define.xml in three different formats.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">1.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Hover your mouse over the <span class="Button">View Define.xml</span> link. A sub-menu appears.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">2.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Select one of the following:</p>
+
+<ol style="list-style: rh-list;">
+<li class="NumBullet1"><span style="font-weight: bold;">Using standard stylesheet</span> &mdash;Always available. Presents the metadata using a standard built-in style sheet.</li>
+<li class="NumBullet1"><span style="font-weight: bold;">Using sponsor-provided stylesheet</span> &mdash;Available only if you loaded the study with a define.xml file that your organization provided (that is, it was not generated by Empirica Study), and the define.xml referenced a style sheet. The style sheet reference can be to a file location in the study data directory or a subdirectory in the study data directory.</li>
+<li class="NumBullet1"><span style="font-weight: bold;">RAW XML</span>&mdash;Always available. Presents the metadata without using a style sheet.</li>
+</ol>
+<p>You cannot view this information for a study pool.</p>
+<p class="Subhead">Notes:</p>
+<ul>
+<li class="Bullet1">References to SAS transport files and an annotated CRF file (if any) must be to the study directory or to a subdirectory within the study directory.</li>
+<li class="Bullet1">To view the annotated CRF, you must have Adobe Acrobat Reader installed.</li>
+<li class="Bullet1">To view SAS transport files, you must have the SAS Universal Viewer or Base SAS installed. For more information, see <a href="Prerequisites_and_Usage_Notes.htm">Prerequisites and Usage Notes</a>.</li>
+<li class="Bullet1">To access referenced files, the case of file names on the disk must match the case of file names in the metadata.</li>
+</ul>
+ <div style="width: 100%; position: relative;" id="footer">
+	<p style="margin-top: 20pt; color: #808080;">Copyright &copy; 2002, 2017, 
+	 Oracle and/or its affiliates. All rights reserved.</p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>
+<footer>
+</footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+
+</body>
+</html>
+<footer>
+</footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+<script>$(document).foundation();</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//
+//																xHtml Template 2016 StyleSheet
+//																			index
+//
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+html {
+	margin: 0;
+    height: 100%;
+}
+
+body {
+	margin:0;
+	padding:25px 15% 3.849% 9.396%;
+	
+	font-family:Helvetica, Arial, sans-serif;
+	
+	background-position: top;
+	background-repeat: repeat-x;
+	background-color:#ffffff;	
+}
+
+#mainBody {
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	overflow:hidden;
+}
+
+#header {
+	height: 65px;
+	width: 100%;
+	
+	background-color: #009BD8;
+}
+
+#toc {
+	display: inline-block;
+	height: calc(100% - 65px);
+	width: 29%;
+	overflow: hidden; 
+	border:none;
+}
+
+#contentContainer {
+	display: inline-block;
+	height: calc(100% - 65px);
+	width: 70%;
+}
+
+#feedback {
+	position: absolute; 
+	top: 72px; 
+	right: 0;
+}
+#foot {
+	padding-top: 0; 
+	border-top: 1px solid #cbcbcb;
+}

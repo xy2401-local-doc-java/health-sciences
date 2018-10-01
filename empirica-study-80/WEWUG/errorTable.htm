@@ -1,0 +1,285 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 2017" />
+<title>Viewing Checking Results</title>
+<link rel="StyleSheet" href="Empirica.css" type="text/css" />
+ <link rel="StyleSheet" href="Empirica.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Domain Data\nWorking with Checking Results\nViewing Checking Results");
+addAvenueInfo("Working with Errors","About_Checking_Results.htm","errorDetail.htm");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\">");
+AddMasterBreadcrumbs("About_WebVDME.htm", "", "&gt;", "Overview", "home.htm");
+document.write("<a href=\"Domain_Data_Workflow.htm\">Domain Data<\/a> &gt; <a href=\"About_Checking_Results.htm\">Working with Checking Results<\/a> &gt; Viewing Checking Results<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('About_WebVDME.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Viewing Checking Results</h1>
+<p>The Checking Results page lists checks that failed when the study was <a href="About_Loading_and_Checking.htm">loaded and checked</a>.</p>
+<p>When viewing checking results, keep in mind that the following variables from the DM domain are added to other subject-based domains when study data is loaded: AGE, ARM, ARMCD, COUNTRY, ETHNIC, INVID, RACE, SEX, SITEID, STUDYID, SUBJID, and USUBJID. If a checking result related to these variables occurs for the DM domain, it is not repeated for the other domains. (If your organization defines additional checks, there may be exceptions to this.)</p>
+<p class="Subhead">To view checking results:</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">1.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Make sure your <a href="useroptions.htm" id="a1">user preference</a> "Display error-checking results" is checked.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">2.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>On the <a href="domain_tab.htm">Study Data Domains page</a>:</p>
+
+<ol style="list-style: rh-list;">
+<li class="NumBullet1">To view checking results for a specific domain, click the hyperlinked count in the Structure Checks column or Consistency Checks column. The Checking Results page appears and shows checks that failed for the domain.</li>
+<li class="NumBullet1">To view checking results for all domains, click <span class="Button">View Checking Results Log</span>. The Checking Results page appears and shows checks that failed for all domains.</li>
+</ol>
+<p class="ListContinue1">For the specified domain (or for all domains), the Checking Results page provides a table of the following information about each failed check. Both <a href="errorDetail.htm">resolved</a> and unresolved checks are listed.</p>
+<br />
+<table summary="" summary="" class="Empirica" style="margin-left: 36px;" cellspacing="0px">
+<col style="width: 11.764%;" />
+<col width="642" />
+<tr class="t1st">
+<td>
+<p class="TableHeader">Column</p>
+</td>
+<td>
+<p class="TableHeader">Description</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody">E_ID</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Automatically assigned unique identifier of the check. (This is not the same as the rule ID or message ID.) You can click the hyperlinked E_ID to view rule details and <a href="errorDetail.htm">resolve failed checks</a>.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;">
+<p class="TableBody">TABLENAME</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Name of the domain for which the check failed.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody">CHECKTYPE</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Possible values are:</p>
+<ul>
+<li class="Bullet1"><span style="font-weight: bold;">Within-Domain &ndash;</span> The check failure was caused by a "Within-Domain" rule, that is, a rule that applies to clinical data in one domain. This type of check is either built in or customer-defined.</li>
+<li class="Bullet1"><span style="font-weight: bold;">Cross-Domain &ndash;</span> The check failure was caused by a "Cross-Domain" rule, that is, a rule that applies to clinical data in multiple domains. This type of check is built in and cannot be customer-defined.</li>
+<li class="Bullet1"><span style="font-weight: bold;">Structure &ndash;</span> The check failure was caused by a "Metadata" rule that checks such issues as the presence or absence of columns or expected data types. This type of check is built in and cannot be customer-defined. (In the Rules Report, the STAGE column shows "Metadata".)</li>
+</ul>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;">
+<p class="TableBody">SEVERITY</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Severity of the check failure. This column is color coded as follows:</p>
+<ul>
+<li class="Bullet1"><span style="font-weight: bold;">Low &ndash;</span> Yellow</li>
+<li class="Bullet1"><span style="font-weight: bold;">Medium</span> &ndash; Orange</li>
+<li class="Bullet1"><span style="font-weight: bold;">High &ndash;</span> Pink</li>
+</ul>
+<p class="TableNote"><span style="font-weight: bold;">Note:</span> For the message "Too many rule failures", the severity is that of the check that failed.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody">MESSAGE</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Message generated by the check failure. For example, "AESER and AETOXGR cannot both be non-null".</p>
+<p class="TableBody">Each check has a maximum number of times that it can fail. Check failures that occur more than the maximum appear on the Checking Results page only a limited number of times. In addition, the Checking Results page includes a row showing "Too many rule failures". The total number of times that the check failed for the domain appears in parentheses at the end of the message (inclusive of the check failures that are listed explicitly).</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;">
+<p class="TableBody">R_ID</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Unique identifier of the rule that caused the check failure. If the rule ID starts with R or CR, it is a hyperlink that you can click to <a href="ruleDetailReport.htm">view rule detail</a>. Rule IDs starting with CR are customer-defined rules. Rule IDs starting with R or IR are built-in rules.</p>
+<p class="TableBody">If a customer-defined rule has been deleted since the study was last loaded and checked, a message informs you of this.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody">ESUBJECT</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Subject ID for which the check failed. If the CHECKTYPE column is Within-Domain or Cross-Domain, ESUBJECT is a hyperlink that you can click to view subject details.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;">
+<p class="TableBody">VISIT</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Visit number for which the check failed.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody">ECOLUMN</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Column(s) tested by the check.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;">
+<p class="TableBody">EXPECTED,<br />
+ACTUAL</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">For certain checks, Empirica Study reports the actual and/or expected values of the target variable or variables as a way of clarifying the nature of the failed check.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody">REVIEW_STATUS</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">One of the following values (if any):</p>
+<ul>
+<li class="Bullet1"><span style="font-weight: bold;">annotated &ndash;</span> The reviewer of the check marked it as "Annotated" and added the annotation that appears in the NOTE column.</li>
+<li class="Bullet1"><span style="font-weight: bold;">consequence &ndash;</span> The reviewer of the check marked it as "Consequence of other errors".</li>
+<li class="Bullet1"><span style="font-weight: bold;">noterror &ndash;</span> The reviewer of the check marked it as "Not an error".</li>
+</ul>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;">
+<p class="TableBody">NOTE</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Note, if any, added by the reviewer of the check.</p>
+</td>
+</tr>
+</table>
+<p class="ListContinue1">See <a href="About_Tables.htm" style="font-style: normal;">About Tables</a> for information about viewing, printing, or downloading tables or changing the way data displays in the table.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">3.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Check failures are caused by rules that are applied to the study data. You can click <span class="Button">Generate Rules Report</span> to view a list of all rules (not just those that failed). From the Rules Report, you can access details of specific rules or the messages associated with them.</p>
+
+<p class="ListNote1"><span style="font-weight: bold;">Note:</span> The Rules Report is not available for study pools.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">4.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>If you are viewing checking results for a specified domain, you can click <a href="domainDataTableDisplay.htm" style="color: #000000;"><span class="Button" style="text-decoration: none;">View Clinical Data</span></a> to <a href="domainDataTableDisplay.htm">view clinical data</a> for the domain. (This option is not present if clinical data was not loaded for the domain.)</p>
+ <div style="width: 100%; position: relative;" id="footer">
+	<p style="margin-top: 20pt; color: #808080;">Copyright &copy; 2002, 2017, 
+	 Oracle and/or its affiliates. All rights reserved.</p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>
+<footer>
+</footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+
+</body>
+</html>
+<footer>
+</footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+<script>$(document).foundation();</script>
+</body>
+</html>

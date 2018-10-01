@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Importing ICSR Reports</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2018-02-13T11:0:59Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Argus Interchange User's Guide" />
+<meta name="dcterms.identifier" content="E93463-01" />
+<meta name="dcterms.isVersionOf" content="AEOBA" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Prev" href="viewer.htm" title="Previous" type="text/html" />
+<link rel="alternate" href="AEOBA.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="AEOBA.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="AEOBA.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">10/10</span> <!-- End Header -->
+<div id="AEOBA179" class="chapter"><a id="sthref45"></a>
+<h1 class="chapter"><span class="secnum">7</span> Importing ICSR Reports</h1>
+<div id="AEOBA180" class="sect1"><a id="sthref46"></a>
+<h2 class="sect1">Incoming ICSR Reports</h2>
+<p>Incoming ICSR Reports can be viewed from the Incoming ICSR Report screen.</p>
+<p>This release does not support import of eVAERS.</p>
+<p>This section includes discussions on the following:</p>
+<ul>
+<li>
+<p>Importing both E2B (R2) and E2B (R3) Messages</p>
+</li>
+<li>
+<p>Interchange Accept Process for E2B (R3) Reports</p>
+</li>
+<li>
+<p>Searching for Duplicate Cases</p>
+</li>
+<li>
+<p>Using the View Differences Report</p>
+</li>
+<li>
+<p>Viewing the E2B Report</p>
+</li>
+<li>
+<p>Accepting Single/Multiple E2B Reports</p>
+</li>
+</ul>
+<div id="AEOBA181" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref47"></a>
+<h3 class="sect2">Importing both E2B (R2) and E2B (R3) Messages</h3>
+<p>The ICSR Import functionality supports the import of both the E2B (R2) and E2B (R3) reports without any data loss of data conversions. To determine if the Sender agency is sending an (R2) or (R3) message, the application relies on the configured E2B profile for the receiving Agency in the Argus Console.</p>
+<p>Once the application identifies the message type, the incoming message is processed in accordance with message type and the profile so that the respective data element mappings are executed to extract the data without any data loss.</p>
+<p>The application provides the OOTB profile to import ICH, PMDA, EMA &amp; FDA E2B (R2) message, and the EMA &amp; PMDA E2B (R3) message.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If the incoming message is identified as ICH E2B (R3) message, application downgrades it to ICH E2B (R2) before importing it into the system.</div>
+</div>
+<!-- class="sect2" -->
+<div id="AEOBA182" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref48"></a>
+<h3 class="sect2">ICSR Import Framework</h3>
+<p>ICSR Import framework for (R3) import has been designed to provide greater flexibility with respect to (R2) import. It facilitates the user in extending, configuring and customizing the Import profile in such a way that broader use cases for importing data leveraging the ICSR import framework can be met.</p>
+<p>The Import framework has been designed to achieve more flexibility by extending, configuring and customization the profile for the following:</p>
+<ol>
+<li>
+<p><span class="bold">Extensible ICSR Profile framework</span>: With the current ICSR (R2) framework, E2B+ allows the user to extend the profile elements. However, extending a profile using the existing Framework has certain limitations:</p>
+<ul>
+<li>
+<p><span class="bold">Linking of extended child with the Parent</span>: If the element is added to the node which is lower in the report hierarchy, linking of the extended node becomes difficult with the higher level node.</p>
+<p>For example:</p>
+<p>Level 1: SAFETYREPORT</p>
+<p>Level 2: PATIENT</p>
+<p>Level 3: Drug</p>
+<p>Level 4: Dosage</p>
+<p>Now, if the user wants to extend an element at Dosage level using E2B+, then the linking of that attribute with the Drug becomes complex and at times could error prone.</p>
+</li>
+<li>
+<p><span class="bold">Cannot add a new Parent/repeater</span>: Using the current E2B+ framework it is not feasible to add a new repeater section that is not part of the standard E2B report.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="bold">Minimum Case creation validations on Incoming ICSR</span>: MAH uses Argus Safety for capturing data from different sources to meet their regulatory and non-regulatory reporting needs. ICSR Import is a big platform for data capturing from various sources. MAH are expected to use Argus as an importing platform to pull the information from various sources in their Safety database and then further process it using Argus for coping with regulatory and non-regulatory purposes.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+All the compliance validation is maintained in the error/warning log for user to review the regulatory gaps with the incoming ICSR file.</div>
+</li>
+<li>
+<p><span class="bold">Import F/U on non-E2B compliant Case</span>: The usage of the ICSR Import framework in not confined to regulatory purposes only - the purpose of the incoming ICSR file can be just the data exchange. Therefore, there can be a scenario where the case on which the ICSR is being imported may not be regulatory complaint but the user would like to import the update from the incoming ICSR. Therefore, the application will not execute the ICSR conformance validation check before importing the data from Follow-up ICSR.</p>
+</li>
+<li>
+<p><span class="bold">Provide flexibility to user to map Incoming ICSR as Follow-up to the existing case</span>: As the usage of the ICSR Import framework in not confined to regulatory purposes, the logic to link an incoming report to the report with an existing case is configurable at the profile level.</p>
+</li>
+<li>
+<p><span class="bold">Comparison and data evaluation/update for an incoming Follow-up report</span>: As per the current implementation for comparing the Incoming ICSR file, the application provides the user a three view difference in the ICSR format:</p>
+<ul>
+<li>
+<p>Newly imported ICSR message</p>
+</li>
+<li>
+<p>ICSR message generated using the current case data against the ICSR profile for the importing agency</p>
+</li>
+<li>
+<p>Last imported ICSR file to the case</p>
+</li>
+</ul>
+<p>This comparison logic performs a record matching based on the metadata of the internal table by performing the key based comparison of the elements in the above three ICSR files. The comparison logic can be configured by modifying the internal metadata to a certain extent with several limitations. The existing comparison and data updation logic has been enhanced for the following:</p>
+<p><span class="bold">a</span> Support deletion of unwanted data after F/U</p>
+<p><span class="bold">b</span> Flexibility in Primary key identification for F/U records</p>
+<p><span class="bold">c</span> Special use case to support comparison based on External applications entity Identifier</p>
+<p><span class="bold">d</span> Customizable comparison and updation for handling exceptional use scenarios (User Exits)</p>
+</li>
+</ol>
+<p>For more details, refer to the Argus Safety ICSR Extensibility Document available on the Technical Reference Manuals page.</p>
+</div>
+<!-- class="sect2" -->
+<div id="AEOBA183" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref49"></a>
+<h3 class="sect2">Interchange Accept Process</h3>
+<p>This section is specific to the E2B (R3) Import.</p>
+<p>The application function flow for importing (R3) based ICSR messages in the Interchange accept process is similar to that of the (R2) except for the updates specified in this section.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Any xsd/xslt/dtd validations that may apply to any of the internal processing/ massaging/ transformations of the xml message are configurable at profile level.</div>
+<ul>
+<li>
+<p>The application supports importing of batch (R3) messages consisting of more than one report.</p>
+</li>
+<li>
+<p>The maximum file size allowed to be imported into Argus respects the value configured in Argus Console -&gt; Reporting Destination -&gt; EDI -&gt; Allowed report size (in MB) for the receiving Agency.</p>
+</li>
+<li>
+<p>The Interchange Accept process performs the following validations on the incoming (R3) message:</p>
+<p><span class="bold">Hard Validation</span>: In case of a validation error under this category, the Interchange Accept process rejects the incoming message and generates a negative ACK with the required error message. For more information on ACK mapping details, refer to the ACK element level mappings. The following are the categories of hard validations:</p>
+<ol>
+<li>
+<p>Length validation</p>
+</li>
+<li>
+<p>Code list data validations</p>
+</li>
+<li>
+<p>Minimum case creation validation</p>
+</li>
+</ol>
+<p><span class="bold">Soft Validation</span>: In case of a validation error under this category, the Interchange Accept process does not reject the incoming message. Instead, the process maintains a log of errors under this category for future reference in the ICSR Pending screen (for more details, refer to the ICSR Pending screen) and in the Case Attachment (for more details, refer Case creation/updation section). The following are the categories of soft validations:</p>
+<ol>
+<li>
+<p>Element Conformance validation</p>
+</li>
+<li>
+<p>Mandatory along with validation</p>
+</li>
+<li>
+<p>Additional validation</p>
+</li>
+</ol>
+<p>The logic to identify the case over which the Incoming (R3) ICSR message is imported as a Follow-up is configurable at the profile level.</p>
+</li>
+<li>
+<p>The accept process loads all the data from the incoming (R3) based ICSR message to staging schema without any data loss.</p>
+</li>
+<li>
+<p>The application logic to identify the Agency whose profile configuration is used during the import of the (R3) based ICSR message is as follows:</p>
+<ol>
+<li>
+<p>Reporting Destination'EDI'Agency Identifier: N.1.3-BATCHMESSAGESENDERIDENTIFIER / N.2.r.2 - MESSAGESENDERIDENTIFIER</p>
+</li>
+<li>
+<p>Reporting Destination'EDI'Company Identifier: N.1.4-BATCHMESSAGERECEIVERIDENTIFIER / N.2.r.3 - MESSAGERECEIVERIDENTIFIER</p>
+</li>
+<li>
+<p>Reporting Destination'EDI' Primary Receive Agency: Checked</p>
+</li>
+</ol>
+</li>
+<li>
+<p>All the respective statuses that are applicable for the existing (R2) message have been updated for the (R3) message in a similar manner. These statuses can be tracked in various screen in Argus UI such as Reports &gt; ICSR Pending (Pending &amp; processed tabs) &amp; Utilities &gt; ICSR &gt; ICSR Receive Status).</p>
+</li>
+<li>
+<p>Duplicate (R3) message identification is governed based on the value in the N.1.2 -BATCHMESSAGENUMB tag.</p>
+</li>
+<li>
+<p>The existing application to identify the Initial/Follow-up/Downgrade/Nullification has been enhanced to identify the Amendment report based on the C.1.11.1- CASENULLIFICATION. The amendment identification is only applicable for (R3) message as the concept of amendment report is specific to (R3) reports only.</p>
+</li>
+<li>
+<p>The acceptance process every stage of import evaluates the various import stages and generates the ACK in the (R3) format.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<div id="AEOBA184" class="sect2"><a id="sthref50"></a>
+<h3 class="sect2">Searching for Duplicate Cases</h3>
+<p>The Duplicate Search Dialog for E2B report allows you to search for possible duplicate cases in the Argus Safety system. You can select different combinations of search criteria. When more than one criterion is selected, only cases that satisfy all criteria are listed. By default, only the fields that are present in the E2B Report are checked for the Duplicate Search.</p>
+<p>Use the following procedure to perform a duplicate search.</p>
+<ol>
+<li>
+<p>Select Reports -&gt; ICSR Pending Report.</p>
+</li>
+<li>
+<p>When the system opens the Incoming ICSR Reports Dialog, right-click a case to perform a duplicate search.</p>
+</li>
+<li>
+<p>The system displays the search results at the bottom of the Dialog box.</p>
+</li>
+</ol>
+<div id="AEOBA185" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref51"></a>
+<h4 class="sect3">Duplicate Search Dialog Box Fields</h4>
+<p>The following table describes the fields present in the Duplicate Search Dialog.</p>
+<div class="inftblinformal">
+<table class="cellalignment17" summary="The following table describes the fields present in the Duplicate Search dialog." dir="ltr">
+<thead>
+<tr class="cellalignment11">
+<th class="cellalignment18" id="r1c1-t5">Field</th>
+<th class="cellalignment18" id="r1c2-t5">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r2c1-t5" headers="r1c1-t5">Agency</td>
+<td class="cellalignment19" headers="r2c1-t5 r1c2-t5">The name of the primary agency.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r3c1-t5" headers="r1c1-t5">Original Case Number</td>
+<td class="cellalignment19" headers="r3c1-t5 r1c2-t5">The submitter's original case number.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r4c1-t5" headers="r1c1-t5">Message Number</td>
+<td class="cellalignment19" headers="r4c1-t5 r1c2-t5">The case message number.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r5c1-t5" headers="r1c1-t5">Product Name</td>
+<td class="cellalignment19" headers="r5c1-t5 r1c2-t5">The name of any product on XML.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r6c1-t5" headers="r1c1-t5">Generic Name</td>
+<td class="cellalignment19" headers="r6c1-t5 r1c2-t5">The active substance on XML.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r7c1-t5" headers="r1c1-t5">Report Type</td>
+<td class="cellalignment19" headers="r7c1-t5 r1c2-t5">The type of report.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r8c1-t5" headers="r1c1-t5">Study ID</td>
+<td class="cellalignment19" headers="r8c1-t5 r1c2-t5">The unique value that identifies the study.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r9c1-t5" headers="r1c1-t5">Receipt Date</td>
+<td class="cellalignment19" headers="r9c1-t5 r1c2-t5">The date Argus received the report and saved it in the system.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r10c1-t5" headers="r1c1-t5">Center ID</td>
+<td class="cellalignment19" headers="r10c1-t5 r1c2-t5">The ID of the center.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r11c1-t5" headers="r1c1-t5">Sal.</td>
+<td class="cellalignment19" headers="r11c1-t5 r1c2-t5">The salutation, such as Mr. or Mrs.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r12c1-t5" headers="r1c1-t5">Suffix</td>
+<td class="cellalignment19" headers="r12c1-t5 r1c2-t5">The suffix, if applicable, that follows the name (e.g., Jr., Sr.,III, etc.)</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r13c1-t5" headers="r1c1-t5">First Name</td>
+<td class="cellalignment19" headers="r13c1-t5 r1c2-t5">The first name of the patient.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r14c1-t5" headers="r1c1-t5">Last Name</td>
+<td class="cellalignment19" headers="r14c1-t5 r1c2-t5">The last name of the patient.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r15c1-t5" headers="r1c1-t5">Country of Incidence</td>
+<td class="cellalignment19" headers="r15c1-t5 r1c2-t5">The country where the incident occurred.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r16c1-t5" headers="r1c1-t5">State</td>
+<td class="cellalignment19" headers="r16c1-t5 r1c2-t5">The state where the incident occurred.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r17c1-t5" headers="r1c1-t5">Postal Code</td>
+<td class="cellalignment19" headers="r17c1-t5 r1c2-t5">The postal code of the area where the incident occurred.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r18c1-t5" headers="r1c1-t5">Patient Name</td>
+<td class="cellalignment19" headers="r18c1-t5 r1c2-t5">The name of the patient.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r19c1-t5" headers="r1c1-t5">Event Desc.</td>
+<td class="cellalignment19" headers="r19c1-t5 r1c2-t5">A description of the adverse event.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r20c1-t5" headers="r1c1-t5">Initials</td>
+<td class="cellalignment19" headers="r20c1-t5 r1c2-t5">The initials of the patient.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r21c1-t5" headers="r1c1-t5">Onset Date</td>
+<td class="cellalignment19" headers="r21c1-t5 r1c2-t5">The date from the first reaction or adverse event occurred.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r22c1-t5" headers="r1c1-t5">Pat. ID</td>
+<td class="cellalignment19" headers="r22c1-t5 r1c2-t5">The unique value that identifies the patient.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r23c1-t5" headers="r1c1-t5">Age/Units</td>
+<td class="cellalignment19" headers="r23c1-t5 r1c2-t5">The age of the patient.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r24c1-t5" headers="r1c1-t5">Pat. DOB</td>
+<td class="cellalignment19" headers="r24c1-t5 r1c2-t5">The patient's date of birth.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r25c1-t5" headers="r1c1-t5">Gender</td>
+<td class="cellalignment19" headers="r25c1-t5 r1c2-t5">The gender of the patient.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r26c1-t5" headers="r1c1-t5">Reference #</td>
+<td class="cellalignment19" headers="r26c1-t5 r1c2-t5">National Regulatory Authority's Report Number, used as a Reference Number.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r27c1-t5" headers="r1c1-t5">Journal</td>
+<td class="cellalignment19" headers="r27c1-t5 r1c2-t5">The journal name of the literature reference.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r28c1-t5" headers="r1c1-t5">Keyword</td>
+<td class="cellalignment19" headers="r28c1-t5 r1c2-t5">Select the check box and enter a keyword to be searched, if required.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r29c1-t5" headers="r1c1-t5">Title</td>
+<td class="cellalignment19" headers="r29c1-t5 r1c2-t5">Select the check box and enter a title to be searched, if required.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r30c1-t5" headers="r1c1-t5">Nullification Reason</td>
+<td class="cellalignment19" headers="r30c1-t5 r1c2-t5">The reason the case was nullified.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r31c1-t5" headers="r1c1-t5">Accept Initial E2B as Follow-Up</td>
+<td class="cellalignment19" headers="r31c1-t5 r1c2-t5">Enables you to accept initial E2B as a follow-up to an existing case.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r32c1-t5" headers="r1c1-t5">Search</td>
+<td class="cellalignment19" headers="r32c1-t5 r1c2-t5">Finds results matching the specified search criteria.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r33c1-t5" headers="r1c1-t5">View E2B</td>
+<td class="cellalignment19" headers="r33c1-t5 r1c2-t5">Enables you to view the E2B report.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r34c1-t5" headers="r1c1-t5">Accept E2B Case</td>
+<td class="cellalignment19" headers="r34c1-t5 r1c2-t5">Enables you to accept an E2B case.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r35c1-t5" headers="r1c1-t5">Reject E2B Case</td>
+<td class="cellalignment19" headers="r35c1-t5 r1c2-t5">Enables you to reject an E2B case.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r36c1-t5" headers="r1c1-t5">View Warning</td>
+<td class="cellalignment19" headers="r36c1-t5 r1c2-t5">Enables you to view warnings associated with the case.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r37c1-t5" headers="r1c1-t5">View Differences</td>
+<td class="cellalignment19" headers="r37c1-t5 r1c2-t5">Enables you to view the differences between the XML to be imported (a message that is not yet imported into the database), the current case data in the database, and the last imported case.
+<p>Note: This button is available only for follow-up and nullification reports.</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r38c1-t5" headers="r1c1-t5">Case Number</td>
+<td class="cellalignment19" headers="r38c1-t5 r1c2-t5">The case number of the case matching the search criteria.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r39c1-t5" headers="r1c1-t5">Pat. Initials</td>
+<td class="cellalignment19" headers="r39c1-t5 r1c2-t5">Displays the initials of the patient in the case matching the search criteria.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r40c1-t5" headers="r1c1-t5">Action</td>
+<td class="cellalignment19" headers="r40c1-t5 r1c2-t5">Enables you to view the Case Summary Dialog.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r41c1-t5" headers="r1c1-t5">Project ID</td>
+<td class="cellalignment19" headers="r41c1-t5 r1c2-t5">Displays the Project ID of the case matching the search criteria.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r42c1-t5" headers="r1c1-t5">Study ID</td>
+<td class="cellalignment19" headers="r42c1-t5 r1c2-t5">Displays the Study ID of the case matching the search criteria.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r43c1-t5" headers="r1c1-t5">Date</td>
+<td class="cellalignment19" headers="r43c1-t5 r1c2-t5">Displays the date of the case matching the search criteria.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r44c1-t5" headers="r1c1-t5">Country</td>
+<td class="cellalignment19" headers="r44c1-t5 r1c2-t5">Displays the country name of the case matching the search criteria.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r45c1-t5" headers="r1c1-t5">Product</td>
+<td class="cellalignment19" headers="r45c1-t5 r1c2-t5">Displays the product name involved with the case matching the search criteria.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r46c1-t5" headers="r1c1-t5">Event</td>
+<td class="cellalignment19" headers="r46c1-t5 r1c2-t5">Displays the event involved with the case matching the search criteria.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r47c1-t5" headers="r1c1-t5">Report Type</td>
+<td class="cellalignment19" headers="r47c1-t5 r1c2-t5">Displays the report type of the case matching the search criteria.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r48c1-t5" headers="r1c1-t5">Reporter</td>
+<td class="cellalignment19" headers="r48c1-t5 r1c2-t5">Displays the reporter involved with the case matching the search criteria.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" -->
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The search output is displayed in the Total Number of Rows section. You can click the Action icon to view the Case Summary Dialog.</div>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<div id="AEOBA186" class="sect2"><a id="sthref52"></a>
+<h3 class="sect2">Using the View Differences Report</h3>
+<p>The View Differences Report enables you to view differences between the following:</p>
+<ul>
+<li>
+<p>The current XML being imported (a message not yet imported into the database)</p>
+</li>
+<li>
+<p>The current case data in the database</p>
+</li>
+<li>
+<p>The last imported case</p>
+</li>
+</ul>
+<p>Click View Differences from the Duplicate Search screen to view the View Differences report. View Differences is available only for follow-up and nullification reports only.</p>
+<p>The following table lists and describes the fields in the View Differences report:</p>
+<div class="inftblinformal">
+<table class="cellalignment17" summary="The following table lists and describes the fields in the View Differences report." dir="ltr">
+<thead>
+<tr class="cellalignment11">
+<th class="cellalignment18" id="r1c1-t7">Field</th>
+<th class="cellalignment18" id="r1c2-t7">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r2c1-t7" headers="r1c1-t7">Trading Partner</td>
+<td class="cellalignment19" headers="r2c1-t7 r1c2-t7">Enables you to view the name of the Trading Partner sending the E2B report.
+<p>Note: The Lock/Archive icon displayed with this field indicates the status of the case.</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r3c1-t7" headers="r1c1-t7">DTD Version</td>
+<td class="cellalignment19" headers="r3c1-t7 r1c2-t7">Enables you to view the DTD version of the follow-up E2B report.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r4c1-t7" headers="r1c1-t7">Case Number</td>
+<td class="cellalignment19" headers="r4c1-t7 r1c2-t7">Displays the sender's original case number for the E2B report.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r5c1-t7" headers="r1c1-t7">Follow Up #</td>
+<td class="cellalignment19" headers="r5c1-t7 r1c2-t7">Displays the sequence number of the follow-up for the E2B report.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r6c1-t7" headers="r1c1-t7">Total Number of Rows</td>
+<td class="cellalignment19" headers="r6c1-t7 r1c2-t7">Allows you to select the type of E2B Difference to view from:
+<p>Current E2B vs. Current Case in Database</p>
+<p>Current E2B vs. Last Imported E2B</p>
+<p>Current Case in Database vs. Last Imported E2B</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r7c1-t7" headers="r1c1-t7">Import</td>
+<td class="cellalignment19" headers="r7c1-t7 r1c2-t7">This check box highlights import differences.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r8c1-t7" headers="r1c1-t7">E2B Element</td>
+<td class="cellalignment19" headers="r8c1-t7 r1c2-t7">Refers to the data elements in the Incoming ICSR report or in the existing report.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r9c1-t7" headers="r1c1-t7">Current E2B</td>
+<td class="cellalignment19" headers="r9c1-t7 r1c2-t7">Refers to the data in the incoming XML that has not yet been accepted in the current E2B.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r10c1-t7" headers="r1c1-t7">Current Case in Database</td>
+<td class="cellalignment19" headers="r10c1-t7 r1c2-t7">Refers to the data in the current case in the database.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r11c1-t7" headers="r1c1-t7">Last Imported E2B</td>
+<td class="cellalignment19" headers="r11c1-t7 r1c2-t7">Refers to the data showing the last imported E2B.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r12c1-t7" headers="r1c1-t7">Accept Follow-up</td>
+<td class="cellalignment19" headers="r12c1-t7 r1c2-t7">Allows you to accept follow-up reports with the corresponding fields selected for import.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r13c1-t7" headers="r1c1-t7">Reject Follow-up</td>
+<td class="cellalignment19" headers="r13c1-t7 r1c2-t7">Enables you to reject follow-up reports for import.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r14c1-t7" headers="r1c1-t7">Print List</td>
+<td class="cellalignment19" headers="r14c1-t7 r1c2-t7">Provides the difference report in a PDF format.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r15c1-t7" headers="r1c1-t7">Close</td>
+<td class="cellalignment19" headers="r15c1-t7 r1c2-t7">Enables you to close the window.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" -->
+<div id="AEOBA187" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref53"></a>
+<h4 class="sect3">Displaying Differences</h4>
+<p>The differences in the E2B reports are displayed in the following manner:</p>
+<ul>
+<li>
+<p>Addition - New elements on incoming XML are highlighted in grey.</p>
+</li>
+<li>
+<p>Deletion - Deleted elements are highlighted in red.</p>
+</li>
+<li>
+<p>Modification - Modified elements are highlighted in yellow.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<div id="AEOBA188" class="sect2"><a id="sthref54"></a>
+<h3 class="sect2">Viewing the E2B Report</h3>
+<p>Use the following procedure to view the E2B Report:</p>
+<ol>
+<li>
+<p>Select Reports -&gt; Duplicate Search and right-click to the Duplicate Search Dialog box.</p>
+</li>
+<li>
+<p>Click View E2B to view the E2B report in the ICSR Viewer. You can also view an E2B report from the ICSR Pending screen by right-clicking on a row and selecting ICSR Viewer.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<div id="AEOBA189" class="sect2"><a id="sthref55"></a>
+<h3 class="sect2">Accepting Single/Multiple E2B Reports</h3>
+<p>Use the following procedure to accept single and multiple E2B reports:</p>
+<ol>
+<li>
+<p>Select Reports -&gt; ICSR Pending to open the Incoming ICSR Report Dialog box.</p>
+</li>
+<li>
+<p>When the system opens the ICSR Pending screen:</p>
+<p>To accept a single report, right-click on it and select Accept E2B</p>
+<p>OR</p>
+<p>To accept multiple reports, select the check boxes for each report and click Accept E2B.</p>
+</li>
+<li>
+<p>When the system opens the Acceptance of Initial Report Confirmation Dialog box, enter the password and any relevant notes.</p>
+</li>
+<li>
+<p>Click OK to accept the case.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The acceptance of multiple E2Bs can be performed only when the system numbering is set to Automatic.</div>
+</li>
+<li>
+<p>If the system is configured to automatically number cases, the system opens the case accepted Dialog appears with the generated case number.</p>
+</li>
+<li>
+<p>Click OK to close this Dialog.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If the system is configured to manually number cases, you will be prompted to enter a case number for the case that is being accepted.</div>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<div id="AEOBA190" class="sect2"><a id="sthref56"></a>
+<h3 class="sect2">E2B Initial/Follow-up Intake</h3>
+<p>During case acceptance, you can access selective acceptance fields in the report.</p>
+<ul>
+<li>
+<p>The Selective Acceptance feature is enabled only for single initial ICSRs and is a right-click option.</p>
+</li>
+<li>
+<p>If you select multiple ICSRs, the system disables this button.</p>
+</li>
+<li>
+<p>If you select a single follow-up or nullification ICSR, the system disables this button.</p>
+</li>
+<li>
+<p>When the system displays the E2B Difference Report Dialog, you can select the elements required to create or update a case without the system displaying the Case Number and Follow-up Number in the difference report Dialog for initial reports.</p>
+</li>
+<li>
+<p>The following changes have been made to the Initial Intake and the Follow-up Difference Report Dialogs:</p>
+<ul>
+<li>
+<p>The system displays the decoded view to enable you to select the elements (e.g., US [United States]).</p>
+</li>
+<li>
+<p>The system prints the check box options for the Initial Intake and Follow-up Difference Report Dialogs.</p>
+</li>
+<li>
+<p>The label is updated to Select when selecting elements for the Initial Intake and the Follow-up Difference report Dialog.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>You must select the following fields before the system will permit you to accept the Initial case. By default, all the fields are selected.</p>
+<ul>
+<li>
+<p>Country of Incidence (default and grayed out)</p>
+</li>
+<li>
+<p>Report Type (default and grayed out)</p>
+</li>
+<li>
+<p>Initial Receipt Date (default and grayed out)</p>
+</li>
+<li>
+<p>Any one Product</p>
+</li>
+<li>
+<p>Any one Event Term</p>
+</li>
+</ul>
+</li>
+<li>
+<p>If you fail to select these fields, the system displays the following message:</p>
+<p><span class="italic">E2B cannot be imported as it does not meet minimum Argus requirements.</span></p>
+</li>
+<li>
+<p>The system permits you to print the Initial ICSR report.</p>
+</li>
+<li>
+<p>When you click Accept Initial, the system displays the Accept E2B Case Dialog. When you complete the data elements and click OK, the system displays the Error/Warning message Dialog for any elements you have selected.</p>
+</li>
+<li>
+<p>Once you accept the case as an initial or follow-up case, the system attaches the Source XML (ICSR) and the Initial Selection PDF to the case in the Additional Info tab.</p>
+</li>
+<li>
+<p>For Auto Accepted ICSRs, the system does not attach the source PDF in the case because the source XML is attached.</p>
+</li>
+<li>
+<p>Initial/Follow-up Source XML</p>
+<ul>
+<li>
+<p>Attachment Classification. As specified in the Reporting Destination for the XML source classification.</p>
+</li>
+<li>
+<p>Date. The system date when the case you accepted XML for the case.</p>
+</li>
+<li>
+<p>Description. The acceptance notes you entered for XML.</p>
+</li>
+<li>
+<p>When you click the Source ICSR, you can see the ICSR when opening the ICSR View (ICSR Viewer).</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Initial Selection PDF</p>
+<ul>
+<li>
+<p>Attachment Classification: As specified in the Reporting Destination for the Selection Source Classification.</p>
+</li>
+<li>
+<p>Date: The system date when you accepted XML for the case.</p>
+</li>
+<li>
+<p>Description: The date you entered acceptance notes for XML.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Follow-up Source XML</p>
+<ul>
+<li>
+<p>When you click the Source ICSR PDF or the E2B Difference Report, you can view the Initial Selection PDF or the E2B Difference Report in a different IE window.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Once you accept a case as an initial or a follow-up ICSR, the system prefixes the Business Level Acknowledgement Notes with the case number in the following format:</p>
+<p>Imported Case #: XXXXX</p>
+<p>where:</p>
+<p>XXXXX is the case number</p>
+</li>
+<li>
+<p>The system attaches the current notes sent in the Business Level Acknowledgement.</p>
+</li>
+<li>
+<p>If the system receives the ICSR via the physical gateway (configured at the reporting destination level), the system sends a low level ACK to indicate the file was received by the Argus Interchange Service.</p>
+</li>
+<li>
+<p>The system places this file in the Physical Out folders as configured for the reporting destination in the E2B Mapping Configuration.</p>
+</li>
+<li>
+<p>For EDI received files, the system continues to let the EDI Gateway send the low level ACK as it does currently.</p>
+</li>
+<li>
+<p>The Interchange Services does not process the low level ACK received in the Physical In destination folder, but enters any errors in the log file since the file will always be rejected by the Interchange Service.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<div id="AEOBA191" class="sect2"><a id="sthref57"></a>
+<h3 class="sect2">E2B Follow-up Acceptance for Closed/Locked Cases</h3>
+<ul>
+<li>
+<p>If you try to accept follow-up information for a closed or locked case, the system prompts you to unarchive or unlock the case for processing after entering the password and acceptance notes.</p>
+</li>
+<li>
+<p>If the case is in archived state while you are accepting the report, the system displays the Case Re-open Dialog to enable you to open the case.</p>
+</li>
+<li>
+<p>If the case is in locked state while you are accepting a report, the system displays the Case Unlock Dialog to enable you to unlock the case.</p>
+</li>
+<li>
+<p>After you reopen the case, the system accepts all updates as defined in the follow-up information you selected.</p>
+</li>
+<li>
+<p>If you do not have permission to reopen an archived or locked case, the system displays the following message:</p>
+</li>
+<li>
+<p>You do not have permission to Re-open an Archived/Closed case or Locked Case.</p>
+</li>
+<li>
+<p>If you select multiple open, locked, or archived cases or if you do not have permission to open the case, the system skips the cases.</p>
+</li>
+<li>
+<p>The system does not create follow-up actions for cases that it accepts automatically.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<div id="AEOBA192" class="sect1"><a id="sthref58"></a>
+<h2 class="sect1">Processed ICSR Reports</h2>
+<p>The Processed ICSR Reports screen contains a list all Processed ICSR Reports. Click the Processed ICSR Reports tab on the Incoming Reports screen to view the Processed ICSR Reports screen.</p>
+<img width="1152" height="661" src="img/procsdreps.gif" alt="Surrounding text describes procsdreps.gif." /><br />
+<p>The Processed ICSR screen contains the following:</p>
+<ul>
+<li>
+<p>Search Criteria</p>
+</li>
+<li>
+<p>Total Number of Rows</p>
+</li>
+</ul>
+<p>The following table lists and describes the fields in the Total Number of Rows section on the Processed ICSR screen.</p>
+<div class="inftblinformal">
+<table class="cellalignment17" summary="The following table lists and describes the fields in the Total Number of Rows section on the Processed E2B screen." dir="ltr">
+<thead>
+<tr class="cellalignment11">
+<th class="cellalignment18" id="r1c1-t10">Field</th>
+<th class="cellalignment18" id="r1c2-t10">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r2c1-t10" headers="r1c1-t10">Originated Case#</td>
+<td class="cellalignment19" headers="r2c1-t10 r1c2-t10">Displays the Originated Case Number of the case.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r3c1-t10" headers="r1c1-t10">Initial/F-U/Nullification</td>
+<td class="cellalignment19" headers="r3c1-t10 r1c2-t10">Displays the Initial/F-U/Nullification status.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r4c1-t10" headers="r1c1-t10">Trading Partner</td>
+<td class="cellalignment19" headers="r4c1-t10 r1c2-t10">The name of the trading partner.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r5c1-t10" headers="r1c1-t10">World Wide Unique#</td>
+<td class="cellalignment19" headers="r5c1-t10 r1c2-t10">The World Wide Unique # for the case.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r6c1-t10" headers="r1c1-t10">Import Status - Warnings/Errors</td>
+<td class="cellalignment19" headers="r6c1-t10 r1c2-t10">The import status of the case and any associated warnings/errors.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r7c1-t10" headers="r1c1-t10">Case # Imported As</td>
+<td class="cellalignment19" headers="r7c1-t10 r1c2-t10">The Case Number used when importing the case.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r8c1-t10" headers="r1c1-t10">Accepted / Rejected By</td>
+<td class="cellalignment19" headers="r8c1-t10 r1c2-t10">Identifies who accepted or rejected the case.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r9c1-t10" headers="r1c1-t10">Notes</td>
+<td class="cellalignment19" headers="r9c1-t10 r1c2-t10">The case notes.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r10c1-t10" headers="r1c1-t10">Interchange Date</td>
+<td class="cellalignment19" headers="r10c1-t10 r1c2-t10">The Interchange Date.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r11c1-t10" headers="r1c1-t10">Date Imported/Rejected</td>
+<td class="cellalignment19" headers="r11c1-t10 r1c2-t10">The date the case was imported/rejected.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r12c1-t10" headers="r1c1-t10">ACK Gen</td>
+<td class="cellalignment19" headers="r12c1-t10 r1c2-t10">Yellow indicates the case is still pending
+<p>Orange indicates the case is accepted with warnings / errors</p>
+<p>Red indicates the user or system rejected the case.</p>
+<p>Green indicates the case has been successfully imported.</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r13c1-t10" headers="r1c1-t10">EDI Out</td>
+<td class="cellalignment19" headers="r13c1-t10 r1c2-t10">Yellow indicates the system is waiting to send the report out of the EDI / XML or PHY out folders
+<p>Green indicates the report is already sent out of the EDI / XML or PHY out folders</p>
+<p>Red indicates that the EDI gateway failed to send the report out of the EDI / XML or PHY out folders.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" --></div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment10">
+<tr>
+<td class="cellalignment19">
+<table class="cellalignment24">
+<tr>
+<td class="cellalignment14"><a href="viewer.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment22">
+<table class="cellalignment13">
+<tr>
+<td class="cellalignment14"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment14"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment14"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment14"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

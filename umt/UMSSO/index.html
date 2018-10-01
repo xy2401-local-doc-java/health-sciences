@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Giving Users Access to Hosted InForm SSO Trials</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="How to create users for customers whose trials are hosted by Oracle"/>   
+
+        <script src="common/js/lib/jquery.min.js"></script>
+        <script src="common/js/lib/jquery-ui.min.js"></script>
+
+        <script src="common/js/lib/TweenMax.min.js"></script>
+        <script src="common/js/lib/jquery.gsap.min.js"></script>
+        <script src="common/js/lib/CSSPlugin.min.js"></script> 
+        <script src="common/js/lib/ScrollMagic.min.js"></script>
+        <script src="common/js/lib/jquery.ScrollMagic.js"></script>
+        <script src="common/js/lib/debug.addIndicators.min.js"></script>
+
+        <link href="common/js/lib/jquery-ui.css" rel="stylesheet" type="text/css">
+
+        <link href="common/css/scrolling_gs.css" rel="stylesheet" type="text/css" id="StyleSheet">
+        <link href="common/css/popup.css" rel="stylesheet" type="text/css">
+
+        <script src="common/js/scrolling.js"></script>
+
+        <style type="text/css" media="print">
+            BODY {display:none;visibility:hidden;}
+        </style>
+
+        <script>
+            var mode = "";
+            $(window).on("resize", function () {
+                if ($(window).width() > 1000) {
+                    //Desktop mode
+                    mode = setMode(mode, "DESKTOP", function () {
+                        $("#StyleSheet").attr("href", "common/css/scrolling_gs.css");
+                        $(".phone").hide();
+                        $(".tablet").hide();
+                        $(".desktop").show();
+                    });
+                } else if ($(window).width() > 700) {
+                    //portrait mode
+                    mode = setMode(mode, "TAB", function () {
+                        $("#StyleSheet").attr("href", "common/css/scrolling-tab_gs.css");
+                        $(".phone").hide();
+                        $(".desktop").hide();
+                        $(".tablet").show();
+                    });
+                } else {
+                    //Phone mode
+                    mode = setMode(mode, "PHONE", function () {
+                        $("#StyleSheet").attr("href", "common/css/scrolling-phone_gs.css");
+                        $(".tablet").hide();
+                        $(".desktop").hide();
+                        $(".phone").show();
+                    });
+                }
+            });
+            $(window).trigger("resize");
+            function setMode(m1, m2, callback) {
+                if (m1 !== m2) {
+                    callback();
+                }
+                return m2;
+            }
+        </script>
+
+        <!-- Version: April 2018 -->
+
+    <script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+    <body>
+
+    <logo>
+        <a href="https://docs.oracle.com/health-sciences/umt/index.html" target="_blank"><img src="common/images/o-redbadge-digital-master_HS.png" style="max-width: 175px;"></a>
+    </logo>
+
+    <header id="side-header">
+        <div class="h0" id="bigTitle">InForm</div>
+        <h1 id="title-trigger">Giving Users Access to Hosted InForm SSO Trials</h1>
+    </header>
+
+<div class="sidebargrey"></div>
+        
+    <nav>
+        <div class="displayPopup" style= "max-width:150px; height:auto;" title="Overview" data-popup="overview">
+            <p><a href="#overview" style="text-decoration: none; color: white;">Overview</a></p>
+        </div>
+    </nav>
+
+		<nav2>
+	<div class="displayPopup" style= "max-width:150px; height:auto;" title="Download PDF" data-popup="Download PDF">
+            <p><a href="GiveUsersAccess.pdf" style="text-decoration: none; color: white;" target="_blank">Download PDF</a></p>
+        </div>
+	</nav2>
+    <article>
+		
+        <section>
+			
+			<div class="getstarted">
+				<p style="padding-left: 25px;"><a href="https://docs.oracle.com/health-sciences/umt/index.html" alt="Click to return to the Oracle Help Center" title="Click to return to the Oracle Help Center" style="text-decoration: none; color: #1f92ac;" target="_blank"><img src="common/images/check.png" alt="check mark" style="vertical-align: text-top; transform: scaleX(-1); max-height: 20px;"> Back to Oracle Help Center</a></p>
+				<br>
+				<p style="margin-left: 50px;"> You just signed a contract for InForm - congratulations and welcome! Oracle is excited to go on this journey with you. You're going to work in a few new tools, but don't worry. We're with you every step of the way.</p><br>
+				
+				<ol style="margin-left: 100px;">
+					<li><p style="margin-left: 0px;">The first row of tasks explains how to get your trial team trained on UMT so they can start adding InForm users. And then if you need to get any more users trained on UMT, you should follow the steps in the second row.</p></li><br>
+					<li><p style="margin-left: 0px;"> The third row of tasks explains how the trained UMT users can create InForm users and make the trial live.</p></li><br>
+					<li><p style="margin-left: 0px;"> Finally, the fourth row explains what the trial team and site users need to do so they can start working in the trial.</p></li>
+				</ul>
+				
+				<br>
+				<strong><p style="margin-left: -40px;"> So let's get started!</p></strong>
+				
+				<br>
+			</div>
+			 <!--
+				Overview section: The titles in the following div must be an exact match to the titles in the div with class="popup" that appears towards the end of the html.
+			-->
+            <div class="overview">
+                <h3>Set up administrative users (for initial users only)</h3>
+                <ul class="breadcrumb">
+					<li><a href="#step1"><b>1. </b>Create an Oracle Account</a></li>
+					<li><a href="#step2"><b>2. </b>Request training for UMT users</a></li>
+					<li><a href="#step3"><b>3. </b>Complete UMT training</a></li>
+					<li><a href="#step4"><b>4. </b>Request accounts for UMT users</a></li>
+                </ul>
+                <br>
+				<h3>Set up administrative users (for all subsequent users)</h3>
+                <ul class="breadcrumb">
+					<li><a href="#step5"><b>5. </b>Provision users to assign UMT training 1</a></li>
+                    <li><a href="#step6"><b>6. </b>Provision users to assign UMT training 2</a></li>
+                    <li><a href="#step7"><b>7. </b>Assign UMT training</a></li>
+					<li><a href="#step8"><b>8. </b>Complete UMT training</a></li>
+					<li><a href="#step9"><b>9. </b>Give users access to UMT</a></li>
+                </ul>
+                <br>
+                <h3>Set up InForm trial users</h3>
+                <ul class="breadcrumb">
+                    <li><a href="#step10"><b>10. </b>Request an InForm trial</a></li>
+					<li><a href="#step11"><b>11. </b>Create sites, users, and roles</a></li>
+                    <li><a href="#step12"><b>12. </b>Assign InForm training</a></li>
+					<li><a href="#step13"><b>13. </b>Verify training & make the trial live</a></li>
+                </ul>
+                <br>
+				<h3>Steps for InForm trial users</h3>
+                <ul class="breadcrumb">
+                    <li><a href="#step14"><b>14. </b>Set up your SSO account (for new users)</a></li>
+					<li><a href="#step15"><b>15. </b>Create an Oracle Account</a></li>
+                    <li><a href="#step16"><b>16. </b>Complete assigned training</a></li>
+					<li><a href="#step17"><b>17. </b>Sign in to your trial</a></li>
+                </ul>
+            </div>
+             
+        </section>
+
+	    <section id="navTrigger" class="anim">
+            <h2 data-overview="step1Overview">Set up administrative users (for initial users only)</h2>
+
+            <div class="white_box" id="step1">
+                <h4><span class="lrg_number_circle">1</span>Create an Oracle Account</h4><br>
+				<p id="left_align"><strong>Who does this?</strong> A delegated administrator.</p><br>
+				<p id="left_align"><strong>Why should I do this?</strong> So you can create tickets for Oracle on <a href="http://www.oracle.com/us/support/contact/health-sciences-cloud-support/index.html" target="_blank" alt="Health Sciences Cloud Support" title="Health Sciences Cloud Support">Health Sciences Cloud Support</a> and take training on <a href="https://oracle.learn.taleo.net/healthsciences" target="_blank" alt="Health Sciences Learn" title="Health Sciences Learn">Health Sciences Learn</a>.</p><br>
+				<p id="left_align"><strong>When do I do this?</strong> At any time.</p><br>
+				<p id="left_align"><strong>Where do I work?</strong> <a href="http://www.oracle.com/us/support/contact/health-sciences-cloud-support/index.html" target="_blank" alt="Health Sciences Cloud Support" title="Health Sciences Cloud Support">Health Sciences Cloud Support</a>.</p><br>
+				<div class="check_circle">1.</div>
+				<p>Create an Oracle account. Work with your project manager to get your account set up.</p><br>
+				
+				<p><a href="https://www.oracle.com/corporate/contact/help.html" target="_blank">Having trouble creating an account?</a></p>
+				 <p class="training"><a href="https://hsgbu.custhelp.com/euf/assets/images/User%20Registration%20Final/User%20Registration/User%20Registration.html" target="_blank"><img src="common/images/youtube_blue.png" alt="YouTube logo" style="vertical-align: baseline;"> Watch training.</a></p><br>
+				 
+            </div>
+			
+			<div class="white_box" id="step2">
+                <h4><span class="lrg_number_circle">2</span>Request training for UMT users</h4><br>
+				
+                <p id="left_align"><strong>Who does this?</strong> A delegated administrator.</p><br>
+				<p id="left_align"><strong>Why should I do this?</strong> So that users can complete training on how to create InForm trial sites and users in UMT. Users must complete training before they can start working. You can ask Oracle to assign UMT training to your initial users so they can get trained and start working right away.</p><br>
+				<p id="left_align"><strong>When do I do this?</strong> As soon as you can.</p><br>
+				<p id="left_align"><strong>Where do I work?</strong> <a href="http://www.oracle.com/us/support/contact/health-sciences-cloud-support/index.html" target="_blank" alt="Health Sciences Cloud Support" title="Health Sciences Cloud Support">Health Sciences Cloud Support</a>.</p><br>
+				<div class="check_circle">1.</div>
+                <p>Request training for all UMT users:</p><br>
+				<p><strong>Note:</strong> If you already have an Oracle account set up, you can follow these steps. If you don't, work with your project manager to request training.</p>
+					<div class="check_circle2">a.</div>	
+					<p>Go to <a href="http://www.oracle.com/us/support/contact/health-sciences-cloud-support/index.html" target="_blank" alt="Health Sciences Cloud Support" title="Health Sciences Cloud Support">Health Sciences Cloud Support</a></p>
+					<div class="check_circle2">b.</div>
+					<p style="margin-left: 110px;">Create a ticket to have UMT training assigned to you and anyone else at your organization who will work in UMT.</p>
+					<p style="margin-left: 110px;">UMT users <a href="#step3">can complete training at any time after it is assigned.</a></p><br>
+            </div>		
+			
+			
+			<div class="white_box" id="step3">
+                <h4><span class="lrg_number_circle">3</span>Complete UMT training</h4><br>
+                
+			 <p id="left_align"><strong>Who does this?</strong> UMT users.</p><br>
+			 <p id="left_align"><strong>Why should I do this?</strong> So that you can learn how to provision InForm users in UMT.</p><br>
+			 <p id="left_align"><strong>When do I do this?</strong> After you receive emails about being assigned UMT training.</p><br>
+		     <p id="left_align"><strong>Where do I work?</strong> <a href="https://oracle.learn.taleo.net/healthsciences" target="_blank" alt="Health Sciences Cloud Learn" title="Health Sciences Learn">Health Sciences Learn</a>.</p><br>
+				<div class="check_circle">1.</div>
+                <p>Check your email for messages about being assigned to UMT training.</p><br>    
+				<div class="check_circle">2.</div>
+				<p>Follow the instructions in the email to complete the training.</p>
+				<p><a href="https://docs.oracle.com/health-sciences/hs-learn/index.html" target="_blank">Trouble completing your training?</a></p><br>	
+            </div>
+			
+			<div class="white_box" id="step4" style="min-height: 675px;">
+                <h4><span class="lrg_number_circle">4</span>Request accounts for UMT users</h4><br>
+
+				<p id="left_align"><strong>Who does this?</strong> A delegated administrator.</p><br>
+				<p id="left_align"><strong>Why should I do this?</strong> So trained users can start working in UMT.</p><br>
+				<p id="left_align"><strong>When do I do this?</strong> After all UMT users complete their training.</p><br>
+				<p id="left_align"><strong>Where do I work?</strong> <a href="http://www.oracle.com/us/support/contact/health-sciences-cloud-support/index.html" target="_blank" alt="Health Sciences Cloud Support" title="Health Sciences Cloud Support">Health Sciences Cloud Support</a>.</p><br>
+				<div class="check_circle" style="height: 15px;">1.</div>
+                <p>Request access for anyone who needs to work in UMT: </p><br>
+				<p><strong>Note:</strong> If you already have an Oracle account set up, you can follow these steps. If you don't, work with your project manager to request access.</p>
+					<div class="check_circle2">a.</div>	
+					<p>Go to <a href="http://www.oracle.com/us/support/contact/health-sciences-cloud-support/index.html" target="_blank" alt="Health Sciences Cloud Support" title="Health Sciences Cloud Support">Health Sciences Cloud Support</a>.</p>
+					<div class="check_circle2">b.</div>
+					<p>Sign in with the Oracle Account that you just created.</p>
+					<div class="check_circle2">c.</div>
+					<p>Create a new ticket for getting access. Cloud Support will give you a form to complete.</p>
+					<p style="margin-left: 110px"><a href="https://hsgbu.custhelp.com/" target="_blank">Read step-by-step instructions for creating a ticket</a> (note that this link won't work unless you have an Oracle Account).</p><br>
+				<div class="check_circle" style="height: 15px;">2.</div>
+				<p><strong>How to access UMT:</strong></p>
+				<p>You'll receive 2 email messages from Oracle:</p>
+				<ul style="margin-left: 100px;">
+					<li><p style="margin-left: 0px;">One message has the URL for accessing UMT, as well as the user name.</p>
+					<p style="margin-left: 0px;">Your account for UMT is different from the account you use for OHSIAMS Oracle Identity Self Service, InForm, and Clinical One.</p></li>
+					<li><p style="margin-left: 0px;">Another message has a temporary password.</p></li>
+				</ul>	
+			
+			</section>
+			
+			
+			<section id="navTrigger" class="anim">
+            <h2 data-overview="step2Overview">Set up administrative users (for all subsequent users)</h2> 	
+			
+			<div class="white_box" id="step5" style="min-height: 675px;">
+                <h4><span class="lrg_number_circle">5</span>Provision users who assign UMT training, part 1</h4><br>
+
+				<p id="left_align"><strong>Who does this?</strong> A delegated administrator.</p><br>
+				<p id="left_align"><strong>Why should I do this?</strong> So that users in your organization can assign UMT training, without creating a ticket. 
+				<a href="https://docs.oracle.com/health-sciences/clinical-one/quick-training-setup/index.html#step1" target="_blank">Learn more about the responsibilities of users who work in Clinical One</a></p>.<br>
+				<p id="left_align"><strong>When do I do this?</strong> After you receive emails about your single sign-on account being created for OHSIAMS Oracle Identity Self Service.</p><br>
+				<p id="left_align"><strong>Where do I work?</strong> OHSIAMS Oracle Identity Self Service and Clinical One.</p><br>
+				
+				<div class="check_circle" style="height: 15px;">1.</div>
+                <p>Sign in to OHSIAMS Oracle Identity Self Service for the first time:</p>
+				<p><a href="https://docs.oracle.com/health-sciences/clinical-one/quick-training-setup/index.html#step2" target="_blank">How do I get the URL for OHSIAMS Oracle Identity Self Service?</a></p><br>
+					<div class="check_circle2">a.</div>				
+					<p style="margin-left: 110px;">Check your email. You should have received 2 email messages about your OHSIAMS Oracle Identity Self Service account:</p>
+					
+						<ul style="margin-left: 120px;">
+					<li><p style="margin-left: 0px;">One message contains your user name for your single sign-on (SSO) account.</p></li>
+					<li><p style="margin-left: 0px;">Another message contains your temporary password and a link for resetting your password and activating your SSO account.</p></li>
+					<p style="margin-left: 0px;"><strong>Reminder</strong>: You'll use this user name and password for signing in to OHSIAMS Oracle Identity Self Service, Clinical One, and InForm.</p>
+					</ul>
+						
+					<div class="check_circle2">b.</div>
+					<p>In the email message containing your password, click the link.</p>
+					<div class="check_circle2">c.</div>
+					<p>Enter a new password, and sign in.</p>
+					<p><a href="https://docs.oracle.com/health-sciences/ohs-iams/quick-start-guide/index.html#step2" target="_blank">Read step-by-step instructions for signing in for the first time.</a></p><br>
+				
+                <div class="check_circle">2.</div>
+                <p>Make the Clinical One roles available to Oracle in OHSIAMS Identity Self Service.</p>
+				<p><a href="https://docs.oracle.com/health-sciences/clinical-one/quick-training-setup/index.html#step3" target="_blank">Read step-by-step instructions.</a></p><br>
+                <div class="check_circle">3.</div>
+                <p>Provision all Clinical One users (that is, training administrators and training managers) in OHSIAMS Oracle Identity Self Service.</p>
+				<p><a href="https://docs.oracle.com/health-sciences/clinical-one/quick-training-setup/index.html#step4" target="_blank">Read step-by-step instructions.</a></p><br>
+				          
+            </div>
+			 			
+			<div class="white_box" id="step6" >
+                <h4><span class="lrg_number_circle">6</span>Provision users who assign UMT training, part 2</h4><br>
+                
+				
+				<p id="left_align"><strong>Who does this?</strong> A training administrator. This might be the same person as the delegated administrator.</p><br>
+				<p id="left_align"><strong>Why should I do this?</strong> So that users in your organization can assign UMT training, without creating a ticket. </p><br>
+				<p id="left_align"><strong>When do I do this?</strong> After Clinical One users are provisioned in OHSIAMS Oracle Identity Self Service.</p><br>
+				<p id="left_align"><strong>Where do I work?</strong> Clinical One.</p><br>
+				
+				<div class="check_circle">1.</div>
+                <p>Sign in to Clinical One.</p>
+				<p>Your Clinical One environment is already available, and you can sign in as soon as your account is provisioned in OHSIAMS Oracle Identity Self Service.</p>
+				<p><a href="https://docs.oracle.com/health-sciences/clinical-one/quick-training-setup/index.html#step2" target="_blank">How do I get the URL for Clinical One?</a></p><br>
+				
+                <div class="check_circle">2.</div>
+                <p>Create all training administrators and training managers (the same users that were just provisioned in OHSIAMS Oracle Identity Self Service).</p>
+				
+				<p><a href="https://docs.oracle.com/health-sciences/clinical-one/quick-training-setup/index.html#step5" target="_blank">Read step-by-step instructions.</a></p>              
+            </div>
+			
+            <div class="white_box" id="step7" >
+                <h4><span class="lrg_number_circle">7</span>Assign UMT training</h4><br>
+                
+				
+				<p id="left_align"><strong>Who does this?</strong> A training administrator and a training manager. One person might have both of these roles. </p><br>
+				<p id="left_align"><strong>Why should I do this?</strong> So that users in your organization can assign UMT training, without creating a ticket. </p><br>
+				<p id="left_align"><strong>When do I do this?</strong> After you have been provisioned to work in Clinical One.</p><br>
+				<p id="left_align"><strong>Where do I work?</strong> Clinical One.</p><br>
+				
+				<div class="check_circle">1.</div>
+                <p>(Training administrator) Create a training trial.</p>
+				<p><a href="https://docs.oracle.com/health-sciences/clinical-one/quick-training-setup/index.html#step6" target="_blank">Read step-by-step instructions.</a></p><br>
+				
+                <div class="check_circle">2.</div>
+                <p>(Training administrator) Assign the training trial to one or more training managers.</p>
+				<p><a href="https://docs.oracle.com/health-sciences/clinical-one/quick-training-setup/index.html#step7" target="_blank">Read step-by-step instructions.</a></p><br>
+				
+                <div class="check_circle">3.</div>
+                <p>(Training manager) Add trainees to the trial, and assign UMT training to them.</p>
+				<p><a href="https://docs.oracle.com/health-sciences/clinical-one/quick-training-setup/index.html#step8" target="_blank">Read step-by-step instructions.</a></p><br>
+				            
+            </div>
+			
+			<div class="white_box" id="step8" >
+                <h4><span class="lrg_number_circle">8</span>Complete UMT training</h4><br>
+
+				
+			<!--TEXT FROM BIG 3 APPLIES HERE, AS WELL. ONCE YOU UPDATE BIG 3, UPDATE BIG 7!-->
+				
+		    <p id="left_align"><strong>Who does this?</strong> UMT users.</p><br>
+			 <p id="left_align"><strong>Why should I do this?</strong> So that you can learn how to provision InForm users in UMT.</p><br>
+			 <p id="left_align"><strong>When do I do this?</strong> After you receive emails about being assigned UMT training.</p><br>
+		     <p id="left_align"><strong>Where do I work?</strong> <a href="https://oracle.learn.taleo.net/healthsciences" target="_blank" alt="Health Sciences Cloud Learn" title="Health Sciences Learn">Health Sciences Learn</a>.</p><br>
+				<div class="check_circle">1.</div>
+                <p>Check your email for messages about being assigned to UMT training.</p><br>    
+				<div class="check_circle">2.</div>
+				<p>Follow the instructions in the email to complete the training.</p>
+				<p><a href="https://docs.oracle.com/health-sciences/hs-learn/index.html" target="_blank">Trouble completing your training?</a></p><br>	
+            </div>
+        
+            <div class="white_box" id="step9" >
+                <h4><span class="lrg_number_circle">9</span>Give users access to UMT</h4><br>
+                
+				
+				<p id="left_align"><strong>Who does this?</strong> UMT user.</p><br>
+				<p id="left_align"><strong>Why should I do this?</strong> So that all users who have completed UMT training can start working in UMT.</p><br>
+				<p id="left_align"><strong>When do I do this?</strong> After you assign UMT training and users start completing it.</p><br>
+				<p id="left_align"><strong>Where do I work?</strong> Clinical One and UMT.</p><br>
+				
+				<div class="check_circle" style="height: 15px;">1.</div>
+                <p>Verify that each user has completed their assigned training. You have a few ways to verify this information:</p>
+				
+					<div class="check_circle2"><img src="images/check.png" alt="check mark"></div>
+					<p style="margin-left: 110px;"><strong>Check your inbox</strong>: You should receive a twice-daily training completion report from Clinical One containing the users who completed training in the past 12 hours.</p>
+					<div class="check_circle2"><img src="images/check.png" alt="check mark"></div>
+					<p style="margin-left: 110px;"><strong>Run a report</strong>: You can run a report in Clinical One for all users who completed training during a specified time period.</p>
+					<p style="margin-left: 110px;"><a href="https://docs.oracle.com/health-sciences/clinical-one/quick-training-setup/index.html#step11" target="_blank">Read step-by-step instructions.</a></p>
+					<div class="check_circle2"><img src="images/check.png" alt="check mark"></div>
+					<p style="margin-left: 110px;"><strong>Check on one user</strong>: You can sign in to Clinical One to check users' training status individually.</p>
+					<p style="margin-left: 110px;"><a href="https://docs.oracle.com/health-sciences/clinical-one/quick-training-setup/index.html#step13" target="_blank">Read step-by-step instructions.</a></p>
+					<p style="margin-left: 110px;"><strong>Note</strong>: You cannot check a user's training status in UMT, only in Clinical One.</p><br>
+					
+					
+                <div class="check_circle">2.</div>
+                <p>In UMT, activate each UMT user that has completed training.</p>
+				<p><a href="https://docs.oracle.com/health-sciences/umt/UMTUG/index.htm?toc.htm?210972.htm" target="_blank">Read step-by-step instructions.</a></p><br>
+				<p id="left_align"><strong>What happens next?</strong>: An activated user can now sign in to UMT and <a href="#step10">create and manage InForm trial users</a>, including assigning InForm training to them.</p>          
+            </div>
+			
+			</section>
+			
+			<section id="navTrigger" class="anim">
+            <h2 data-overview="step2Overview">Set up InForm trial users</h2>
+
+            <div class="white_box" id="step10" >
+                <h4><span class="lrg_number_circle">10</span>Request an InForm trial</h4><br>
+				
+				<p id="left_align"><strong>Why should I do this?</strong> So that an environment can be created for your InForm trial.</p><br>
+				<p id="left_align"><strong>When do I do this?</strong> Any time after you have access to UMT.</p><br>
+				<p id="left_align"><strong>Where do I work?</strong><a href="http://www.oracle.com/us/support/contact/health-sciences-cloud-support/index.html" target="_blank"> Health Sciences Support.</a></p><br>
+				
+				<div class="check_circle">1.</div>
+                <p>If you haven't already, request a trial on <a href="http://www.oracle.com/us/support/contact/health-sciences-cloud-support/index.html" target="_blank">Health Sciences Cloud Support.</a></p><br>              
+            </div>
+			
+			<div class="white_box" id="step11" >
+                <h4><span class="lrg_number_circle">11</span>Create sites, users, and roles</h4><br>
+
+				 <p id="left_align"><strong>Why should I do this?</strong> To create the sites that will participate in the trial, and to make sure that all users can sign in and receive the appropriate access rights.</p><br>
+				 <p id="left_align"><strong>When do I do this?</strong> After you request a trial, and the environment is set up for you.</p><br>
+		         <p id="left_align"><strong>Where do I work?</strong> UMT.</p><br>    
+				<div class="check_circle">1.</div>
+				<p>Review the roles that Oracle created, and if required, approve them.</p>
+				<p><a href="https://docs.oracle.com/health-sciences/umt/UMTUG/211015.htm" target="_blank">Read step-by-step instructions</a>.</p><br>
+				<div class="check_circle">2.</div>
+				<p>Create each site that is participating in the trial.</p>
+				<p><a href="https://docs.oracle.com/health-sciences/umt/UMTUG/211051.htm" target="_blank">Read step-by-step instructions</a>.</p><br>
+				<div class="check_circle">3.</div>
+				<p>Create InForm user accounts and assign roles:</p><br>
+				<div class="check_circle2" style="height: 15px;">a.</div>
+				<p>Create a single sign-on account for each InForm user who doesn't have one.</p>
+				
+				<div class="check_circle2" style="height: 15px;">b.</div>
+				<p>Assign the appropriate roles to every trial user.</p><br>
+				<p><a href=" https://docs.oracle.com/health-sciences/umt/UMTUG/215882.htm" target="_blank">Read step-by-step instructions.</a></p>
+				<p>Newly provisioned users receive 2 emails about their SSO account:</p>
+				<ul style="margin-left: 100px;">
+					<li><p style="margin-left: 0px;">One email contains their SSO user name.</p>
+					<li><p style="margin-left: 0px;">Another email contains a temporary password and a link to reset it and set up the challenge questions that you'll need to reset a forgotten password. All users must reset this password within 90 days.</p>
+						<p style="margin-left: 0px;">If users don't reset their passwords in time, a <a href="https://docs.oracle.com/health-sciences/ohs-iams/admin-guide/toc.htm#IAMSA112" target="_blank">delegated administrator must reset the password.</a></p></li>
+				</ul>
+				<p><strong>Tip:</strong> For future trials, you can copy users from existing trials using <a href="https://docs.oracle.com/health-sciences/umt/UMTUG/210999.htm" target="_blank">the copy functionality.</a></p><br>
+				
+				
+            </div>
+
+			<div class="white_box" id="step12" >
+                <h4><span class="lrg_number_circle">12</span>Assign InForm training</h4><br>
+                
+				
+				<p id="left_align"><strong>Why should I do this?</strong>  All InForm users must complete training before they can start working in the trial.</p><br>
+				<p id="left_align"><strong>When do I do this?</strong> After creating the InForm users in UMT.</p><br>
+				<p id="left_align"><strong>Where do I work?</strong> UMT.</p><br>
+				
+				<div class="check_circle">1.</div>
+                <p>Assign each InForm user to the appropriate training for their role.</p>
+				<p><a href="https://docs.oracle.com/health-sciences/umt/UMTUG/220175.htm" target="_blank">Read step-by-step instructions.</a></p>        
+            </div>
+			
+			<div class="white_box" id="step13" >
+                <h4><span class="lrg_number_circle">13</span>Verify training and make the trial live</h4><br>
+
+				
+				<p id="left_align"><strong>Why should I do this?</strong>  So users can start working in the InForm trial. </p><br>
+				<p id="left_align"><strong>When do I do this?</strong> After all users have completed training.</p><br>
+				<p id="left_align"><strong>Where do I work?</strong> UMT and Clinical One.</p><br>
+				
+				<div class="check_circle">1.</div>
+                <p>(Required only if the trial has an Approval process; if the trial doesn't have an Approval process, users are approved as they are created.) In UMT, review the users you have created, including their assigned roles, and mark each user as approved.</p>
+				<p><a href="https://docs.oracle.com/health-sciences/umt/UMTUG/210957.htm" target="_blank">Read step-by-step instructions.</a></p><br>
+				
+				<div class="check_circle">2.</div>
+                <p>Verify that each user has completed their assigned training. You have a few ways to verify this information:</p><br>
+				
+				<div class="check_circle2" style="height: 15px;"><img src="images/check.png" alt="check mark"></div>
+					<p>UMT:</p>
+						<ul style="margin-left: 120px;">
+					<li><p style="margin-left: 0px;"><strong>Check on users</strong>: You can sign in to UMT to check the users training statuses.</p></li>
+					<p style="margin-left: 0px;"><a href="https://docs.oracle.com/health-sciences/umt/UMTUG/index.htm?toc.htm?220490.htm" target="_blank">Read step-by-step instructions.</a></p>
+				</ul>
+				
+				<div class="check_circle2" style="height: 15px;"><img src="images/check.png" alt="check mark"></div>
+					<p>Clinical One:</p>
+						<ul style="margin-left: 120px;">
+					<li><p style="margin-left: 0px;"><strong>Check your inbox</strong>: You should receive a twice-daily training completion report from Clinical One containing the users who completed training in the past 12 hours.</p></li>
+					<li><p style="margin-left: 0px;"><strong>Run a report</strong>: You can run a report in Clinical One for all users who completed training during a specified time period.</p></li>
+					<p style="margin-left: 0px;"><a href="https://docs.oracle.com/health-sciences/clinical-one/quick-training-setup/index.html#step11" target="_blank">Read step-by-step instructions.</a></p>
+					<li><p style="margin-left: 0px;"><strong>Check on one user</strong>: You can sign in to Clinical One to check users' training status individually.</p>
+					<p style="margin-left: 0px;"><a href="https://docs.oracle.com/health-sciences/clinical-one/quick-training-setup/index.html#step13" target="_blank">Read step-by-step instructions.</a></p>
+				</ul><br>
+				
+				<div class="check_circle">3.</div>
+                <p>In UMT, authorize each trial user to access the InForm trial. Users must complete training and be approved before you can authorize them.</p><br>
+					<div class="check_circle2">a.</div>
+				<p><strong>To authorize multiple users</strong>: On the <strong>Users</strong> page, use the Action menu.</p>
+				
+					<div class="check_circle2">b.</div>
+					<p><strong>To authorize users individually</strong>: On the <strong>User Details</strong> page, select the <strong>Authorize</strong> option in the <strong>User Misc</strong> section.</p>
+					
+				<p style="margin-left: 110px;"><a href="https://docs.oracle.com/health-sciences/umt/UMTUG/218508.htm" target="_blank">Read step-by-step instructions.</a></p><br>
+				
+                <div class="check_circle">4.</div>
+                <p>Work with your Oracle project manager to determine the appropriate timing for the following tasks:</p><br>
+				
+				<div class="check_circle2" style="height: 15px;"><img src="images/check.png" alt="check mark"></div>
+				<p>Locking the trial in UMT to prevent changes, including changes to sites, roles, and users.</p>
+				
+				<div class="check_circle2" style="height: 15px;"><img src="images/check.png" alt="check mark"></div>
+				<p>Generating a list of all InForm users so the user information can be uploaded to InForm.</p>
+				
+				<div class="check_circle2" style="height: 15px;"><img src="images/check.png" alt="check mark"></div>
+				<p>Marking the trial as live.</p><br>
+				
+				<div class="check_circle">5.</div>
+                <p>In UMT, send users the URL for the InForm trial so users can sign in and start working.</p><br>
+					<div class="check_circle2">a.</div>
+				<p>On the Users page, select <strong>Send Authorization Email</strong> from the drop-down list.</p>
+				
+				<p style="margin-left: 110px;"><a href="https://docs.oracle.com/health-sciences/umt/UMTUG/215886.htm" target="_blank">Read step-by-step instructions.</a></p>
+            </div>
+			
+		         
+        </section>
+		
+		<section id="navTrigger" class="anim">
+            <h2 data-overview="step2Overview">Steps for InForm trial users</h2>
+			
+			<div class="white_box" id="step14">
+                <h4><span class="lrg_number_circle">14</span>Set up your single sign-on account (new InForm users only)</h4><br>
+                
+				
+				<p id="left_align"><strong>Who does this?</strong> All InForm site and sponsor users with new single sign-on accounts. Single sign-on accounts are sponsor-specific, so any user who already participated in an InForm trial with the sponsor doesn't need to perform this step again.</p><br>
+				<p id="left_align"><strong>Why should I do this?</strong> So you can create a new password and provide answers to password-reset questions in case you forget your password in the future. You received an email with your temporary password as well as an email with your user name after your single sign-on (SSO) account was created. You'll use this user name and your new password to sign in to the InForm trial after you complete InForm training.</p><br>
+				<p id="left_align"><strong>When do I do this?</strong> As soon as you receive the emails. If you don't reset your password within 90 days, your temporary password will expire, and you'll need to reach out to an administrator so your password can be reset.</p><br>
+				
+				<div class="check_circle">1.</div>
+                <p>Sign in using your temporary password. Then choose a new password and provide answers to password reset questions.</p><br>  
+				<p><a href="https://docs.oracle.com/health-sciences/inform-62/site-users/220790.htm" target="_blank">Read step-by-step instructions.</a></p><br>
+
+            </div>
+			
+			<div class="white_box" id="step15" >
+                <h4><span class="lrg_number_circle">15</span>Create an Oracle Account</h4><br>
+                
+				
+				<p id="left_align"><strong>Who does this?</strong> Everyone who takes training in HS Learn.</p><br>
+				<p id="left_align"><strong>Why should I do this?</strong> To access HS Learn. An Oracle Account is a separate account from the credentials that you received over email for signing in to your InForm trial. </p><br>
+				<p id="left_align"><strong>When do I do this?</strong> The first time you need to take training in HS Learn.</p><br>
+				<p id="left_align"><strong>Where do I work?</strong> HS Learn.</p><br>
+				
+				<div class="check_circle">1.</div>
+                <p>Create an Oracle Account.</p>
+				<p><a href="https://docs.oracle.com/health-sciences/hs-learn/220857.htm" target="_blank">Read step-by-step instructions.</a></p>               
+            </div>
+			
+			<div class="white_box" id="step16" >
+                <h4><span class="lrg_number_circle">16</span>Complete assigned training</h4><br>
+				
+				<p id="left_align"><strong>Who does this?</strong> All InForm trial users.</p><br>
+				<p id="left_align"><strong>Why should I do this?</strong> You must complete InForm training before you can access your live trial.</p><br>
+				
+				<div class="check_circle">1.</div>
+                <p>Click the link in your training email to access your Assigned Training page in HS Learn.</p><br>
+                <div class="check_circle">2.</div>
+                <p>Sign into HS Learn using your Oracle Account.</p><br>
+                <div class="check_circle">3.</div>
+                <p>Complete your assigned training.</p><br>
+				<p><a href="https://docs.oracle.com/health-sciences/hs-learn/index.html" target="_blank">Trouble completing your training?</a></p>
+				<p><a href="https://docs.oracle.com/health-sciences/hs-learn/220969.htm" target="_blank">What if I already passed the training?</a></p>
+             
+            </div>
+			
+			<div class="white_box" id="step17" >
+                <h4><span class="lrg_number_circle">17</span>Sign in to your trial</h4><br>
+                				
+				<p id="left_align"><strong>Who does this?</strong> All InForm trial users.</p><br>
+				<p id="left_align"><strong>When do I do this?</strong> After you receive an email with the InForm trial URL. You receive the email after you complete all assigned training and the sponsor authorizes your access to the trial.</p><br>
+				
+				<div class="check_circle">1.</div>
+                <p>Sign in using your user name and the password you specified when you set up your single sign-on account.</p><br>
+
+				<p><a href="https://docs.oracle.com/health-sciences/inform-62/site-users/220788.htm" target="_blank">Read step-by-step instructions.</a></p>            
+            </div>
+			
+			</section>
+
+        <section class="anim2">
+            <div class="white_box2">
+                <h4><img src="common/images/green_check.png" valign="center" alt="green checkmark">&nbsp;You're done!</h4>
+            </div>
+        </section>
+
+        <p  style="page-break-before:always;"></p> 
+
+        <section class="anim">        
+            <h6>Find out more about UMT!</h6>
+            <div class="info_box" >
+
+                <!--
+                Links table - left column: Update the links below with service-specific versions. Note that this column is displayed 
+                over the right column defined below when the viewport size <1000px.
+                -->
+                <div class="bottomTableLeft">
+					<span class="h7" data-highlight="6">Get more information</span>
+                    <p><span data-highlight="4"> See the <a href="https://docs.oracle.com/health-sciences/umt/index.html" target="_blank"> Oracle Health Sciences User Management Tool</a> documentation library on the Oracle Help Center.<br>
+					See the <a href="https://support.oracle.com/epmos/main/downloadattachmentprocessor?attachid=2350448.1%3AUMT1204_RNKI" target="_blank">Release Notes</a> on My Oracle Support (available for registered users).</span></p>
+                    
+                    <span class="h7" data-highlight="5">Other resources</span>
+                    <p>Watch <a href="https://docs.oracle.com/health-sciences/umt/umt-videos.html" target="_blank">a short training video</a> on the Oracle Help Center.</p>
+                </div>
+
+                <!--
+                Links table - right column: Update the links below with service-specific versions. Note that this column is displayed 
+                under the left column defined above when the viewport size <1000px.
+                -->
+                <div class="bottomTableRight">
+                    <span class="h7" data-highlight="5">Contact Support</span>
+                    <p><span data-highlight="4">For assistance, contact <a href="https://www.oracle.com/us/support/contact/health-sciences-cloud-support/index.html" target="_blank">Health Sciences Cloud Support</a>.</span></p>
+                </div>
+				<div class="bottomTableRight">
+					<span class="h7" data-highlight="5">Can't find what you need?</span>
+					<p><span data-highlight="4">Write to us at <a href="mailto:inform_doc_feedback_grp@oracle.com?subject=Comments about the guide &quot;Giving Users Access to Hosted InForm SSO Trials&quot;">inform_doc_feedback_grp@oracle.com</a>.</span></p>
+				</div>
+            </div>
+            <p>&nbsp;</p>
+
+            <!--
+            Footer: Leave the footer section as-is - do not update any links.
+            -->
+            <footer>
+                <div class="footlink"><a href="http://www.oracle.com/corporate/index.html" target="_blank">About Oracle</a> </div>
+                <div class="footlink"><a href="http://www.oracle.com/us/corporate/contact/index.html" target="_blank">Contact Us</a> </div>
+                <div class="footlink"><a href="http://www.oracle.com/us/legal/index.html" target="_blank">Legal Notices</a> </div>
+                <div class="footlink"><a href="http://www.oracle.com/us/legal/terms/index.html" target="_blank">Terms of Use</a> </div>
+                <div class="footlink"><a href="http://www.oracle.com/us/legal/privacy/index.html" target="_blank">Your Privacy Rights</a> </div>
+                <br>
+                <div class="footlink"><a href="http://www.oracle.com/pls/topic/lookup?ctx=cpyr&id=en">Copyright © 2018, Oracle and/or its affiliates. All rights reserved.</a></div>
+            </footer>
+
+        </section>
+
+    </article>
+
+
+    <!--
+    Overview popup: The titles in the following div must be an exact match to the titles in the div with class="overview" that appears earlier in the html.
+    -->
+    <div class="overview" class="popup" id="overview">
+		<h3>Set up administrative users (for initial users only)</h3>
+                <ul class="breadcrumb">
+					<li><a href="#step1"><b>1. </b>Create an Oracle Account</a></li>
+					<li><a href="#step2"><b>2. </b>Request training for UMT users</a></li>
+					<li><a href="#step3"><b>3. </b>Complete UMT training</a></li>
+					<li><a href="#step4"><b>4. </b>Request accounts for UMT users</a></li>
+                </ul>
+                <br>
+				<h3>Set up administrative users (for all subsequent users)</h3>
+                <ul class="breadcrumb">
+					<li><a href="#step5"><b>5. </b>Provision users to assign UMT training 1</a></li>
+                    <li><a href="#step6"><b>6. </b>Provision users to assign UMT training 2</a></li>
+                    <li><a href="#step7"><b>7. </b>Assign UMT training</a></li>
+					<li><a href="#step8"><b>8. </b>Complete UMT training</a></li>
+					<li><a href="#step9"><b>9. </b>Give users access to UMT</a></li>
+                </ul>
+                <br>
+                <h3>Set up InForm trial users</h3>
+                <ul class="breadcrumb">
+                    <li><a href="#step10"><b>10. </b>Request an InForm trial</a></li>
+					<li><a href="#step11"><b>11. </b>Create sites, users, and roles</a></li>
+                    <li><a href="#step12"><b>12. </b>Assign InForm training</a></li>
+					<li><a href="#step13"><b>13. </b>Verify training & make the trial live</a></li>
+                </ul>
+                <br>
+				<h3>Steps for InForm trial users</h3>
+                <ul class="breadcrumb">
+                    <li><a href="#step14"><b>14. </b>Set up your SSO account (for new users)</a></li>
+					<li><a href="#step15"><b>15. </b>Create an Oracle Account</a></li>
+                    <li><a href="#step16"><b>16. </b>Complete assigned training</a></li>
+					<li><a href="#step17"><b>17. </b>Sign in to your trial</a></li>
+                </ul>
+	</div>
+
+    <!--
+    Thumbnail popups: The following divs define the popup images displayed when the corresponding thumbnail images are clicked. Ensure
+    the id is the same as the one defined for the thumbnail in the steps above, and the image references and alt tags are updated.
+    -->
+
+    <script language="javascript">
+        var s_prefix = "Infographic";
+        if (typeof (document.title) != "undefined") {
+            var s_pageName = s_prefix + ":" + document.title};
+    </script>
+    <script type="text/javascript" src="https://www.oracleimg.com/us/assets/metrics/ora_docs.js"></script>
+</body>
+</html>

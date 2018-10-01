@@ -1,0 +1,582 @@
+
+{
+    "swagger":"2.0",
+    "info":{
+        "version":"2017.06.20",
+        "title":"REST API for Oracle Health Sciences IRT",
+        "description":"Web service API that allows integration of user and site management with other HSGBU products and Services solutions.",
+        "x-summary":"Web service API that allows integration of user and site management with other HSGBU products and Services solutions."
+    },
+    "basePath":"/<irt_study>",
+    "schemes":[
+        "https"
+    ],
+    "paths":{
+        "/api/sites":{
+            "post":{
+                "tags":[
+                    "Sites"
+                ],
+                "summary":"Create or update one or more site.",
+                "operationId":"site_post",
+                "consumes":[
+                    "application/json",
+                    "text/json",
+                    "application/xml",
+                    "text/xml"
+                ],
+                "produces":[
+                    "application/json",
+                    "text/json",
+                    "application/xml",
+                    "text/xml"
+                ],
+                "parameters":[
+                    {
+                        "name":"sites",
+                        "in":"body",
+                        "description":"List of sites.",
+                        "required":true,
+                        "schema":{
+                            "type":"array",
+                            "items":{
+                                "$ref":"#/definitions/SiteDto"
+                            }
+                        }
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "description":"The sites have been created/updated successfully.",
+                        "schema":{
+                            "$ref":"#/definitions/ResponseModel[UserDto]"
+                        }
+                    },
+                    "201":{
+                        "description":"The sites have been created successfully.",
+                        "schema":{
+                            "$ref":"#/definitions/ResponseModel[UserDto]"
+                        }
+                    },
+                    "204":{
+                        "description":"The response has no content.",
+                        "schema":{
+                            "type":"string"
+                        }
+                    },
+                    "207":{
+                        "description":"The request ran successfully, but some records had errors.",
+                        "schema":{
+                            "$ref":"#/definitions/ResponseModel[UserDto]"
+                        }
+                    },
+                    "400":{
+                        "description":"The request could not be understood by the server due to malformed syntax.",
+                        "schema":{
+                            "type":"string"
+                        }
+                    },
+                    "401":{
+                        "description":"User authentication or authorization failed.",
+                        "schema":{
+                            "type":"string"
+                        }
+                    },
+                    "404":{
+                        "description":"The requested resource was not found.",
+                        "schema":{
+                            "type":"string"
+                        }
+                    },
+                    "417":{
+                        "description":"User creation/update failed because the records have errors.",
+                        "schema":{
+                            "$ref":"#/definitions/ResponseModel[SiteDto]"
+                        }
+                    },
+                    "500":{
+                        "description":"The server encountered an unexpected error.",
+                        "schema":{
+                            "type":"string"
+                        }
+                    }
+                },
+                "x-internal-id":"api-sites-post"
+            }
+        },
+        "/api/users":{
+            "post":{
+                "tags":[
+                    "Users"
+                ],
+                "summary":"Create or update one or more user.",
+                "operationId":"users_post",
+                "consumes":[
+                    "application/json",
+                    "text/json",
+                    "application/xml",
+                    "text/xml"
+                ],
+                "produces":[
+                    "application/json",
+                    "text/json",
+                    "application/xml",
+                    "text/xml"
+                ],
+                "parameters":[
+                    {
+                        "name":"users",
+                        "in":"body",
+                        "description":"List of sites.",
+                        "required":true,
+                        "schema":{
+                            "type":"array",
+                            "items":{
+                                "$ref":"#/definitions/UserDto"
+                            }
+                        }
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "description":"The users have been created/updated successfully.",
+                        "schema":{
+                            "$ref":"#/definitions/ResponseModel[UserDto]"
+                        }
+                    },
+                    "201":{
+                        "description":"The users have been created successfully.",
+                        "schema":{
+                            "$ref":"#/definitions/ResponseModel[UserDto]"
+                        }
+                    },
+                    "204":{
+                        "description":"The response has no content.",
+                        "schema":{
+                            "type":"string"
+                        }
+                    },
+                    "207":{
+                        "description":"The request ran successfully, but some records had errors.",
+                        "schema":{
+                            "$ref":"#/definitions/ResponseModel[UserDto]"
+                        }
+                    },
+                    "400":{
+                        "description":"The request could not be understood by the server due to malformed syntax.",
+                        "schema":{
+                            "type":"string"
+                        }
+                    },
+                    "401":{
+                        "description":"User authentication or authorization failed.",
+                        "schema":{
+                            "type":"string"
+                        }
+                    },
+                    "404":{
+                        "description":"The requested resource was not found.",
+                        "schema":{
+                            "type":"string"
+                        }
+                    },
+                    "417":{
+                        "description":"The user creation/update failed because the records have errors.",
+                        "schema":{
+                            "$ref":"#/definitions/ResponseModel[SiteDto]"
+                        }
+                    },
+                    "500":{
+                        "description":"The server encountered an unexpected error.",
+                        "schema":{
+                            "type":"string"
+                        }
+                    }
+                },
+                "x-internal-id":"api-users-post"
+            }
+        }
+    },
+    "definitions":{
+        "SiteDto":{
+            "type":"object",
+            "properties":{
+                "Key":{
+                    "description":"Generated GUID to identify the site record. Referenced by the error object to identify the corresponding record.",
+                    "format":"uuid",
+                    "type":"string"
+                },
+                "ErrorCount":{
+                    "description":"The count of errors for this record.",
+                    "format":"int32",
+                    "type":"integer"
+                },
+                "ErrorMessages":{
+                    "description":"Error list.",
+                    "type":"array",
+                    "items":{
+                        "$ref":"#/definitions/ErrorDto"
+                    }
+                },
+                "IsSuccessful":{
+                    "description":"Flag indicating if the record creation/update was successful.",
+                    "type":"boolean"
+                },
+                "SiteId":{
+                    "description":"The site ID number. REQUIRED to create the site.",
+                    "type":"string"
+                },
+                "InvestigatorId":{
+                    "description":"The Investigator ID number. REQUIRED if configured for the study.",
+                    "type":"string"
+                },
+                "InvestigatorFirstName":{
+                    "description":"Last Name of the Site Investigator. REQUIRED",
+                    "type":"string"
+                },
+                "InvestigatorLastName":{
+                    "description":"First Name of the Site Investigator. REQUIRED",
+                    "type":"string"
+                },
+                "Address1":{
+                    "description":"The address of the ship location: Street address. At least one of the three address fields must be provided.",
+                    "type":"string"
+                },
+                "Address2":{
+                    "description":"The address of the ship location: Suite or office number.",
+                    "type":"string"
+                },
+                "Address3":{
+                    "description":"Line 3 of the site address.",
+                    "type":"string"
+                },
+                "City":{
+                    "description":"The address of the ship location: City. REQUIRED.",
+                    "type":"string"
+                },
+                "State":{
+                    "description":"The address of the ship location: State. REQUIRED.",
+                    "type":"string"
+                },
+                "Zip":{
+                    "description":"The address of the ship location: Zip code. REQUIRED.",
+                    "type":"string"
+                },
+                "CountryId":{
+                    "description":"The three digit ISO Code of country where the site is located. The country must already be configured for the study to allow sites in IRT. REQUIRED.",
+                    "type":"string"
+                },
+                "ShipPhone":{
+                    "description":"The phone number of the ship location. OPTIONAL.",
+                    "type":"string"
+                },
+                "ShipFax":{
+                    "description":"The fax number of the ship location. OPTIONAL.",
+                    "type":"string"
+                },
+                "ShipName":{
+                    "description":"The name of the location where the drugs should be shipped. REQUIRED.",
+                    "type":"string"
+                },
+                "ShipEmail":{
+                    "description":"The email address of the contact at the ship location. REQUIRED",
+                    "type":"string"
+                },
+                "ShipNote":{
+                    "description":"A note for the ship location. OPTIONAL.",
+                    "type":"string"
+                },
+                "TimeZone":{
+                    "description":"The time zone in which the site is located. The Valid Time Zone Name as per https://support.microsoft.com/en-us/kb/973627. REQUIRED.",
+                    "type":"string"
+                },
+                "ExternalId":{
+                    "description":"The site identifier in the client system. OPTIONAL.",
+                    "type":"string"
+                },
+                "DEARegistrationNumber":{
+                    "description":"REQUIRED only if the study has a controlled substance.",
+                    "type":"string"
+                },
+                "DEAExpiration":{
+                    "description":"REQUIRED only if the study has a controlled substance.",
+                    "format":"date-time",
+                    "type":"string"
+                }
+            }
+        },
+        "ErrorDto":{
+            "type":"object",
+            "properties":{
+                "Key":{
+                    "description":"The internal GUID to identify the corresponding site record.",
+                    "format":"uuid",
+                    "type":"string"
+                },
+                "Code":{
+                    "description":"Numeric error code.",
+                    "type":"string"
+                },
+                "description":{
+                    "description":"Error description.",
+                    "type":"string"
+                },
+                "ExceptionField":{
+                    "description":"The field corresponding to the error. For example, if the error is for the zip code, its value will be Zip.",
+                    "enum":[
+                        "NULL",
+                        "SiteId",
+                        "CountryId",
+                        "InvestigatorId",
+                        "InvestigatorFirstName",
+                        "InvestigatorLastName",
+                        "ShipName",
+                        "Phone",
+                        "Fax",
+                        "Email",
+                        "Address",
+                        "Address1",
+                        "Address2",
+                        "Address3",
+                        "City",
+                        "State",
+                        "Zip",
+                        "TimeZone",
+                        "ExternalId",
+                        "ShipNote",
+                        "DeaRegistrationNumber",
+                        "DeaExpiration",
+                        "DrugResupplyTypeId",
+                        "Approved",
+                        "InitiallyApproved",
+                        "ReapprovedDate",
+                        "DeactivationDate",
+                        "RandOpen",
+                        "ScreeningOpen",
+                        "DrugOrderingOpen",
+                        "RandLimit",
+                        "LastScreeningNumber",
+                        "ScreeningLimit",
+                        "UserDepotId",
+                        "UserFirstName",
+                        "UserLastName",
+                        "UserInitial",
+                        "UserTitle",
+                        "UserCompany",
+                        "UserExternalId",
+                        "UserRoleId",
+                        "UserLanguage",
+                        "UserDateFormat",
+                        "SendUserId"
+                    ],
+                    "type":"string"
+                },
+                "SeverityLevel":{
+                    "description":"The severity level of the error.",
+                    "enum":[
+                        "Warning",
+                        "Critical",
+                        "Fatal"
+                    ],
+                    "type":"string"
+                }
+            }
+        },
+        "ResponseModel[UserDto]":{
+            "description":"The class process Users/Sites and creates response to send back",
+            "type":"object",
+            "properties":{
+                "Transaction":{
+                    "description":"The internal transacation id captured in the logs.",
+                    "type":"string"
+                },
+                "Records":{
+                    "description":"The total number of records processed in the request.",
+                    "type":"array",
+                    "items":{
+                        "$ref":"#/definitions/UserDto"
+                    }
+                },
+                "CommonExceptions":{
+                    "description":"The list of errors that occurred while transforming the payload that fails the entire transaction.",
+                    "type":"array",
+                    "items":{
+                        "$ref":"#/definitions/ErrorDto"
+                    },
+                    "readOnly":true
+                },
+                "SuccessfulRecords":{
+                    "description":"The number of records processed successfully.",
+                    "format":"int32",
+                    "type":"integer"
+                },
+                "HasExceptions":{
+                    "description":"True, if there any errors.",
+                    "type":"boolean"
+                }
+            }
+        },
+        "UserDto":{
+            "type":"object",
+            "properties":{
+                "Key":{
+                    "description":"The generated GUID to identify the site record. Referenced by the error object to identify the corresponding record.",
+                    "format":"uuid",
+                    "type":"string"
+                },
+                "ErrorCount":{
+                    "description":"The count of errors for this record.",
+                    "format":"int32",
+                    "type":"integer"
+                },
+                "ErrorMessages":{
+                    "description":"The error details.",
+                    "type":"array",
+                    "items":{
+                        "$ref":"#/definitions/ErrorDto"
+                    }
+                },
+                "IsSuccessful":{
+                    "description":"A flag indicating if the record creation/update was successful.",
+                    "type":"boolean"
+                },
+                "Role":{
+                    "description":"The user’s role in IRT. REQUIRED.",
+                    "type":"string"
+                },
+                "Site":{
+                    "description":"The site associated with the user. REQUIRED for the site user role.",
+                    "type":"string"
+                },
+                "Depot":{
+                    "description":"The depot associated with the user. REQUIRED for the depot user role.",
+                    "type":"string"
+                },
+                "ExternalUserId":{
+                    "description":"The site identifier in the client system. OPTIONAL.",
+                    "type":"string"
+                },
+                "FirstName":{
+                    "description":"The first name of the user. REQUIRED.",
+                    "type":"string"
+                },
+                "Initial":{
+                    "description":"The middle initial of the user. OPTIONAL.",
+                    "type":"string"
+                },
+                "LastName":{
+                    "description":"The last name of the user. REQUIRED.",
+                    "type":"string"
+                },
+                "Title":{
+                    "description":"The title of the user. OPTIONAL.",
+                    "type":"string"
+                },
+                "Company":{
+                    "description":"The company that the user works for. OPTIONAL.",
+                    "type":"string"
+                },
+                "Email":{
+                    "description":"The email address of the user. Must be a valid email address. REQUIRED.",
+                    "type":"string"
+                },
+                "Phone":{
+                    "description":"The phone number of the user. Must be a valid phone number. OPTIONAL.",
+                    "type":"string"
+                },
+                "Fax":{
+                    "description":"The fax number of the user. Must be a valid fax number. OPTIONAL.",
+                    "type":"string"
+                },
+                "Address":{
+                    "description":"The address of the user. OPTIONAL.",
+                    "type":"string"
+                },
+                "City":{
+                    "description":"The address of the user: City. OPTIONAL.",
+                    "type":"string"
+                },
+                "State":{
+                    "description":"The address of the user: State. OPTIONAL.",
+                    "type":"string"
+                },
+                "Zip":{
+                    "description":"The address of the user: Zip code. OPTIONAL.",
+                    "type":"string"
+                },
+                "Country":{
+                    "description":"The address of the user: Country. This must exist in the list of countries specified in the IRT Configuration Settings Document for the study. The value will be the three letter ISO Code for the Country. REQUIRED.",
+                    "type":"string"
+                },
+                "DateFormat":{
+                    "description":"The format for entering the date on the phone. OPTIONAL.",
+                    "type":"string"
+                },
+                "TimeZone":{
+                    "description":"The time zone of user's location. The Valid Time Zone Name as explained on https://support.microsoft.com/en-us/kb/973627. OPTIONAL.",
+                    "type":"string"
+                },
+                "Language":{
+                    "description":"The preferred language of the user. OPTIONAL.",
+                    "type":"string"
+                },
+                "SendUserId":{
+                    "description":"A flag indicating whether to create a new user id. OPTIONAL.",
+                    "type":"boolean"
+                },
+                "InFormUserId":{
+                    "description":"Only for InForm integrated studies. User identifer in InForm for the user. OPTIONAL",
+                    "type":"string"
+                },
+                "KeyId":{
+                    "description":"Response parameter. GUID of the record for internal reference. Not REQUIRED.",
+                    "type":"string"
+                }
+            }
+        },
+        "ResponseModel[SiteDto]":{
+            "description":"The class process Users/Sites and creates response to send back",
+            "type":"object",
+            "properties":{
+                "Transaction":{
+                    "description":"The internal transacation id captured in the logs.",
+                    "type":"string"
+                },
+                "Records":{
+                    "description":" The total number of records processed in the request.",
+                    "type":"array",
+                    "items":{
+                        "$ref":"#/definitions/SiteDto"
+                    }
+                },
+                "CommonExceptions":{
+                    "description":"The list of errors that occurred while transforming the payload that fails the entire transaction.",
+                    "type":"array",
+                    "items":{
+                        "$ref":"#/definitions/ErrorDto"
+                    },
+                    "readOnly":true
+                },
+                "SuccessfulRecords":{
+                    "description":"The number of records processed successfully.",
+                    "format":"int32",
+                    "type":"integer"
+                },
+                "HasExceptions":{
+                    "description":"True, if there are any errors.",
+                    "type":"boolean"
+                }
+            }
+        }
+    },
+    "tags":[
+        {
+            "name":"Sites",
+            "description":"The operations from the Sites category."
+        },
+        {
+            "name":"Users",
+            "description":"The operations from the Users category."
+        }
+    ]
+}

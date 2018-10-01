@@ -1,0 +1,437 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 2017" />
+<title>Viewing Run Details</title>
+<link rel="StyleSheet" href="Empirica.css" type="text/css" />
+ <link rel="StyleSheet" href="Empirica.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Run History\nViewing Run Details");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\">");
+AddMasterBreadcrumbs("About_WebVDME.htm", "", "&gt;", "Overview", "home.htm");
+document.write("<a href=\"runs.htm\">Run History<\/a> &gt; Viewing Run Details<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('About_WebVDME.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Viewing Run Details</h1>
+<p>Do one of the following:</p>
+<ul>
+<li class="Bullet1">On the <a href="runs.htm">Run History page</a>, click <img width="17" height="19" src="hand.jpg" alt="" style="border: none;" border="0" /> &nbsp;for a run and then click <span class="Button">Details</span>.</li>
+<li class="Bullet1">On the <a href="jobdetail.htm">Job Details page</a>, click <span class="Button">Details</span>.</li>
+</ul>
+<p>The run details depend on the type of run, as described below.</p>
+<h2>Screening analysis specification run</h2>
+<table summary="" summary="" class="Empirica" cellspacing="0px">
+<col style="width: 24.082%;" />
+<col style="width: 75.918%;" />
+<tr class="t1st">
+<td>
+<p class="TableHeader">Field</p>
+</td>
+<td>
+<p class="TableHeader">Description</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody">ID</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Automatically assigned identifier of the run.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Description</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Description of the run.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Created By</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Name of the user who submitted the run.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Created On</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Date and time at which the run was submitted.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Application</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Name of the application for which the run was submitted.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Study</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Name of the study for which the run was submitted.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Dosing category breakdowns</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Name of the dosing category breakdowns for which the screening analysis specification was run.</p>
+<p class="TableBody">If a dosing category breakdown was deleted since screening analysis was performed, its ID is listed and followed by "(deleted)".</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Time frames</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Names of the time frames for which the screening analysis specification was run.</p>
+<p class="TableBody">If a time frame was deleted since screening analysis was performed, its ID is listed and followed by "(deleted)".</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Generate result set with no time frame in effect</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Yes if the screening analysis specification was run for the absence of a time frame. Otherwise, No.</p>
+</td>
+</tr>
+</table>
+<h2>Automatic screening run</h2>
+<table summary="" summary="" class="Empirica" cellspacing="0px">
+<col style="width: 23.936%;" />
+<col style="width: 76.064%;" />
+<tr class="t1st">
+<td>
+<p class="TableHeader">Field</p>
+</td>
+<td>
+<p class="TableHeader">Description</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td>
+<p class="TableBody">ID</p>
+</td>
+<td>
+<p class="TableBody">Automatically assigned identifier of the run.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td>
+<p class="TableBody">Description</p>
+</td>
+<td>
+<p class="TableBody">Description of the run.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td>
+<p class="TableBody">Created By</p>
+</td>
+<td>
+<p class="TableBody">Name of the user who submitted the run.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td>
+<p class="TableBody">Created On</p>
+</td>
+<td>
+<p class="TableBody">Date and time at which the run was submitted.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td>
+<p class="TableBody">Application</p>
+</td>
+<td>
+<p class="TableBody">Name of the application for which the run was submitted.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td>
+<p class="TableBody">Study</p>
+</td>
+<td>
+<p class="TableBody">Name of the study for which the run was submitted.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td>
+<p class="TableBody">Time frame</p>
+</td>
+<td>
+<p class="TableBody">Names of the time frames for which automatic screening was run.</p>
+<p class="TableBody">If a time frame was deleted since screening analysis was performed, its ID is listed and followed by "(deleted)".</p>
+</td>
+</tr>
+</table>
+<h2>Load and check run for study</h2>
+<table summary="" summary="" class="Empirica" cellspacing="0px">
+<col style="width: 23.936%;" />
+<col style="width: 76.064%;" />
+<tr class="t1st">
+<td>
+<p class="TableHeader">Field</p>
+</td>
+<td>
+<p class="TableHeader">Description</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td>
+<p class="TableBody">ID</p>
+</td>
+<td>
+<p class="TableBody">Automatically assigned identifier of the run.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td>
+<p class="TableBody">Description</p>
+</td>
+<td>
+<p class="TableBody">Description of the run.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td>
+<p class="TableBody">Created By</p>
+</td>
+<td>
+<p class="TableBody">Name of the user who submitted the run.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td>
+<p class="TableBody">Created On</p>
+</td>
+<td>
+<p class="TableBody">Date and time at which the run was submitted.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td>
+<p class="TableBody">Application</p>
+</td>
+<td>
+<p class="TableBody">Name of the application containing the study that was loaded.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td>
+<p class="TableBody">Study</p>
+</td>
+<td>
+<p class="TableBody">Name of the study that was loaded.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td>
+<p class="TableBody">Supplemental Qualifier Processing</p>
+</td>
+<td>
+<p class="TableBody">One of the following, depending on whether the option to <a href="createruna2.htm">distribute supplemental qualifiers</a> was checked for the load and check run:</p>
+<ul>
+<li class="Bullet1">
+<p class="TableBody">Distribute supplemental qualifier data to target domains</p>
+</li>
+<li class="Bullet1">
+<p class="TableBody">Do not distribute supplemental qualifier data to target domains</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="t1Row">
+<td>
+<p class="TableBody">Properties retained</p>
+</td>
+<td>
+<p class="TableBody">Y if the option to <a href="createruna2.htm">retain properties</a> of the previously loaded study was checked for the load and check run. Otherwise, N.</p>
+</td>
+</tr>
+</table>
+<h2>Study Pool loading run</h2>
+<table summary="" summary="" class="Empirica" cellspacing="0px">
+<col style="width: 23.849%;" />
+<col style="width: 76.151%;" />
+<tr class="t1st">
+<td>
+<p class="TableHeader">Field</p>
+</td>
+<td>
+<p class="TableHeader">Description</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td>
+<p class="TableBody">ID</p>
+</td>
+<td>
+<p class="TableBody">Automatically assigned identifier of the run.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td>
+<p class="TableBody">Description</p>
+</td>
+<td>
+<p class="TableBody">Description of the run.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td>
+<p class="TableBody">Created By</p>
+</td>
+<td>
+<p class="TableBody">Name of the user who submitted the run.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td>
+<p class="TableBody">Created On</p>
+</td>
+<td>
+<p class="TableBody">Date and time at which the run was submitted.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td>
+<p class="TableBody">Properties retained</p>
+</td>
+<td>
+<p class="TableBody">Y if the option to <a href="createruna2.htm">retain properties</a> of the previously loaded pool was checked for the pool loading run. Otherwise, N.</p>
+</td>
+</tr>
+</table>
+ <div style="width: 100%; position: relative;" id="footer">
+	<p style="margin-top: 20pt; color: #808080;">Copyright &copy; 2002, 2017, 
+	 Oracle and/or its affiliates. All rights reserved.</p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>
+<footer>
+</footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+
+</body>
+</html>
+<footer>
+</footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+<script>$(document).foundation();</script>
+</body>
+</html>

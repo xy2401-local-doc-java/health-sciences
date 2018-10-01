@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Generating and Scheduling Standard&nbsp;Reports - BIP</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2017-10-03T12:35:27Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Argus Insight Administrator's Guide" />
+<meta name="dcterms.identifier" content="E85143-01" />
+<meta name="dcterms.isVersionOf" content="AIAGX" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2011, 2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="caseseries.htm" title="Previous" type="text/html" />
+<link rel="Next" href="custreportsbip.htm" title="Next" type="text/html" />
+<link rel="alternate" href="AIAGX.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="AIAGX.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="AIAGX.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">11/17</span> <!-- End Header -->
+<div id="AIAGX276" class="chapter"><a id="sthref71"></a>
+<h1 class="chapter"><span class="secnum">8</span> Generating and Scheduling Standard&nbsp;Reports - BIP</h1>
+<p>Argus Insight provides built-in Reports that you can run on active case series to analyze your company's safety, workflow, and product data.</p>
+<p>In addition to the preformatted and predefined BIP standard reports, you can create custom reports using the BI Publisher tool. For more information, see <a href="custreportsbip.htm#CIHFEIJG">Chapter 9, "Creating Custom Reports - BIP."</a></p>
+<a id="CEGBDEEC"></a>
+<div id="AIAGX277" class="sect1">
+<h2 class="sect1"><span class="secnum">8.1</span> About BIP Standard Reports</h2>
+<p>Although BIP standard reports are predefined reports, you can define pre-filters before generating a BIP standard report to have the report output display information only about specific types of cases. Pre-filters let you narrow down the case series further so that the system runs the report only on those cases that conform to the pre-filter criteria.</p>
+<p>For example, suppose your case series consists of cases that were reported in <span class="italic">all countries</span> for a particular product. However, you only want information about cases reported in the <span class="italic">United States.</span> In this case, you can specify a pre-filter such that the report output includes only those cases that were reported in the United States.</p>
+<div id="AIAGX278" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref72"></a>
+<h3 class="sect2"><span class="secnum">8.1.1</span> Case Series, ETL, and Association</h3>
+<p>Because a case series might become obsolete each time the data mart is refreshed by running an ETL, you may need to generate the case series again before generating a BIP standard report.</p>
+<p>Alternatively, you can directly associate a <span class="italic">query</span> (QBE, filter, or advanced condition) to a BIP standard report to avoid manual generation of the case series.</p>
+</div>
+<!-- class="sect2" -->
+<div id="AIAGX279" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref73"></a>
+<h3 class="sect2"><span class="secnum">8.1.2</span> Browser Configuration</h3>
+<p>Before using Argus Insight to generate reports, configure the browser as defined in the <span class="italic">Oracle Argus Insight Installation Guide</span>.</p>
+</div>
+<!-- class="sect2" -->
+<div id="AIAGX280" class="sect2"><a id="sthref74"></a>
+<h3 class="sect2"><span class="secnum">8.1.3</span> Report Cover Page</h3>
+<p>The report cover page has three main sections:</p>
+<ul>
+<li>
+<p>Page header</p>
+</li>
+<li>
+<p>Page contents</p>
+</li>
+<li>
+<p>Page footer</p>
+</li>
+</ul>
+<p>You can customize some of the information on the report cover page. The sections that follow provide more information about each component of the cover page.</p>
+<div id="AIAGX281" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref75"></a>
+<h4 class="sect3"><span class="secnum">8.1.3.1</span> Page Header</h4>
+<p>The page header of the report cover page includes the following information:</p>
+<ul>
+<li>
+<p>Company logo. The upper-left box is a placeholder for a logo. You can configure your company logo to print in this space.</p>
+</li>
+<li>
+<p>Name of the category to which the selected report belongs. For example, Compliance, Management, or Pharmacovigilance.</p>
+</li>
+<li>
+<p>Date and time (Greenwich Mean Time [GMT]) that the report was run.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<div id="AIAGX282" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref76"></a>
+<h4 class="sect3"><span class="secnum">8.1.3.2</span> Page Contents</h4>
+<p>The page contents of the report cover page includes the following information:</p>
+<ul>
+<li>
+<p>Title of the selected report.</p>
+</li>
+<li>
+<p>Report subtitle. You configure the subtitle when you run the report. Subtitles are useful in further defining the contents of the report. For example, 01-JAN-2000 to 31-DEC-2012.</p>
+</li>
+<li>
+<p>Filters defined for the selected report.</p>
+</li>
+<li>
+<p>Start date and time (GMT) of the last successful ETL run.</p>
+</li>
+<li>
+<p>Count of the total number of unique cases in the case series.</p>
+</li>
+<li>
+<p>Name of the saved case series on which the report has been executed.</p>
+<ul>
+<li>
+<p>Reports that are run on frozen case series data include the following text next to the case series name on the report:</p>
+<p><code dir="ltr">The data in this report was frozen as of</code> <code dir="ltr"><span class="codeinlineitalic">date_and_time.</span></code></p>
+<p>Time is the database system time with the GMT offset.</p>
+</li>
+<li>
+<p>Reports that are run on normal case series data include the following text next to the case series name on the report:</p>
+<p>The case series was last modified on <code dir="ltr"><span class="codeinlineitalic">date_and_time</span></code>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Query criteria to get case series on which the report has been executed.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<div id="AIAGX283" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref77"></a>
+<h4 class="sect3"><span class="secnum">8.1.3.3</span> Page Footer</h4>
+<p>The page footer of the report cover page includes the following information:</p>
+<ul>
+<li>
+<p>Name of the user who executed the report.</p>
+</li>
+<li>
+<p>Confidential text. You can configure the text that prints in the center of the page footer.</p>
+</li>
+<li>
+<p>Page number (Page <span class="italic">x</span> of <span class="italic">y</span>).</p>
+</li>
+</ul>
+<p>In addition, some reports include a placeholder in the footer for another logo. You can configure the image for the logo.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CEGDDFHD"></a>
+<div id="AIAGX284" class="sect1">
+<h2 class="sect1"><span class="secnum">8.2</span> Working in the Reports Page</h2>
+<p>The Reports page, lists all the BI Publisher reports built in to Argus Insight.</p>
+<p>To display the Reports page:</p>
+<ol>
+<li>
+<p>Select <span class="bold">Reporting &gt;</span> <span class="bold">BI Publisher</span>.</p>
+<p>The BIP login page appears in new window.</p>
+</li>
+<li>
+<p>Log on to the BI Publisher tool.</p>
+<p>The BIP Home page appears.</p>
+</li>
+<li>
+<p>Click <span class="bold">Catalog</span>.</p>
+</li>
+<li>
+<p>In the <span class="bold">Folders</span> section, navigate to <span class="bold">Shared Folders</span> &gt; <span class="bold">Argus Insight</span> &gt; <span class="bold">General</span> &gt; <span class="bold">Reports</span>.</p>
+<p>The <span class="bold">Generic Line Listing Report</span> in <span class="bold">LE</span> and <span class="bold">RTF</span> formats appears in the right pane.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="CEGIDCBA"></a>
+<div id="AIAGX285" class="sect1">
+<h2 class="sect1"><span class="secnum">8.3</span> Generating Reports</h2>
+<ol>
+<li>
+<p>Click the <span class="bold">Report link</span> or <span class="bold">Open</span> on the <span class="bold">Reports</span> page.</p>
+<p>The Generic Line Listing Report-LE page appears.</p>
+</li>
+<li>
+<p>Enter the values for all the fields and select the Output Type.</p>
+</li>
+<li>
+<p>Click <span class="bold">Apply</span>.</p>
+<p>The values entered are displayed in the generated report.</p>
+<p>For more information on Viewing Reports using the BI Publisher tool, refer to the <span class="bold">Viewing a Report</span> section of the <span class="italic">Oracle Fusion Middleware User's Guide for Oracle Business Intelligence Publisher</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="CEGJEFDG"></a>
+<div id="AIAGX286" class="sect1">
+<h2 class="sect1"><span class="secnum">8.4</span> Scheduling and Associating Reports Against a Query or Case Series</h2>
+<p>You may refer to the <span class="bold">Creating Report Jobs</span> and <span class="bold">Viewing and Managing Report Jobs</span> sections of the <span class="italic">Oracle Fusion Middleware User's Guide for Oracle Business Intelligence Publisher</span> for information on Scheduling and Associating Reports against a query or a case series.</p>
+</div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment92">
+<tr>
+<td class="cellalignment99">
+<table class="cellalignment97">
+<tr>
+<td class="cellalignment96"><a href="caseseries.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment96"><a href="custreportsbip.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2011, 2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment101">
+<table class="cellalignment95">
+<tr>
+<td class="cellalignment96"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment96"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment96"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment96"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

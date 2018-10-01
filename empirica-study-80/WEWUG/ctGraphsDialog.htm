@@ -1,0 +1,200 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="ProgId" content="Word.Document" />
+<meta name="Originator" content="Microsoft Word 10" />
+<meta name="generator" content="Adobe RoboHelp 2017" />
+<title>Choosing a Report Graph</title>
+<link rel="File-List" href="ctGraphsDialog_files/filelist.xml" />
+<link rel="Stylesheet" type="text/css" media="all" href="Empirica.css" />
+ <link rel="StyleSheet" href="Empirica.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body lang="EN-US" xml:lang="EN-US" style="tab-interval: .5in;"><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Reports\nViewing Report Graphs\nChoosing a Graph");
+addAvenueInfo("Viewing Graphs of Report Data","","");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\">");
+AddMasterBreadcrumbs("About_WebVDME.htm", "", "&gt;", "Overview", "home.htm");
+document.write("<a href=\"About_Reports.htm\">Reports<\/a> &gt; <a href=\"ctGraphsDialog.htm\">Viewing Report Graphs<\/a> &gt; Choosing a Graph<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('About_WebVDME.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Choosing a Report Graph</h1>
+<p>When displaying a report or saved report output that includes multiple column variables, you have the option to view a graphical representation of the report data. When you click <span class="Button">Choose Graph</span> on the Display Report or the Display Output page, the Choose Graph page appears. Different graphs are available depending on the type of variables in the report, as follows:</p>
+<br />
+<table summary="" summary="" class="Empirica" style="left: 0px; top: 121px;" cellspacing="0px" width="987">
+<col style="width: 16.832%;" />
+<col style="width: 83.168%;" />
+<tr class="t1st">
+<td>
+<p class="TableHeader">Graph Type</p>
+</td>
+<td>
+<p class="TableHeader">Report Variables</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody"><a href="ctAggBarGraph.htm">Aggregate bar graph</a></p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">All column variables or all column variables except one are numeric. The subject ID does not need to be in the report.</p>
+<p class="TableBody">Link name: <span class="Button">Bar graph (where rows are aggregate values)</span></p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;">
+<p class="TableBody"><a href="ctBarGraph.htm">Detail bar graph</a></p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">The row variable in the report is the subject ID.</p>
+<p class="TableBody">Link name: <span class="Button">Bar graph (where rows are detail records)</span></p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody"><a href="ctBoxPlot.htm">Box plot</a></p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">The row variable in the report is the subject ID. At least one column variable is numeric.</p>
+<p class="TableBody">Link name: <span class="Button">Box plot (where rows are detail records)</span></p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;">
+<p class="TableBody"><a href="ctScatterPlot.htm">Scatter plot</a></p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">The row variable in the report is the subject ID. At least two column variables are numeric.</p>
+<p class="TableBody">Link name: <span class="Button">Scatter plot (where rows are detail records)</span></p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody"><a href="ctHistogram.htm">Histogram</a></p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">The row variable in the report is the subject ID. At least one column variable is numeric.</p>
+<p class="TableBody">Link name: <span class="Button">Histogram (where rows are detail records)</span></p>
+</td>
+</tr>
+</table>
+<p class="Note"><span style="font-weight: bold;">Note:</span> A numeric variable is one for which source data is numeric or a numeric value such as count or percentage is specified as content detail.</p>
+ <div style="width: 100%; position: relative;" id="footer">
+	<p style="margin-top: 20pt; color: #808080;">Copyright &copy; 2002, 2017, 
+	 Oracle and/or its affiliates. All rights reserved.</p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>
+<footer>
+</footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+
+</body>
+</html>
+<footer>
+</footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+<script>$(document).foundation();</script>
+</body>
+</html>

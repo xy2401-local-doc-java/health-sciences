@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Integrating TMS with Oracle Clinical</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2018-02-27T10:10:48Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Thesaurus Management System User's Guide" />
+<meta name="dcterms.identifier" content="E61918-02" />
+<meta name="dcterms.isVersionOf" content="TMSUG" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;1999, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Index" href="index.htm" title="Index" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="admin.htm" title="Previous" type="text/html" />
+<link rel="Next" href="integ.htm" title="Next" type="text/html" />
+<link rel="alternate" href="TMSUG.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="TMSUG.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="TMSUG.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">8/25</span> <!-- End Header -->
+<div id="TMSUG11318" class="chapter"><a id="BABBBFEB"></a>
+<h1 class="chapter"><span class="secnum">4</span> Integrating TMS with Oracle Clinical<a id="sthref209"></a><a id="sthref210"></a></h1>
+<p>This section includes:</p>
+<ul>
+<li>
+<p><a href="#i1002229">Managing the TMS/Oracle Clinical Workflow</a></p>
+</li>
+<li>
+<p><a href="#CEGEGFIB">Batch Validation in an Integrated OC/TMS Environment</a></p>
+</li>
+<li>
+<p><a href="#i1002061">Setting Up Data Collection in Oracle Clinical</a></p>
+</li>
+<li>
+<p><a href="#i1002181">Linking an Oracle Clinical Study to TMS</a></p>
+</li>
+<li>
+<p><a href="#i1002290">Accessing Oracle Clinical Data in TMS</a></p>
+</li>
+<li>
+<p><a href="#i1002301">Setting Integration Reference Codelist Values</a></p>
+</li>
+</ul>
+<p>When Oracle Clinical and Oracle Thesaurus Management System (TMS) are fully integrated, you can classify the raw patient data entered in Oracle Clinical to standard terms from dictionaries such as MedDRA and WHO-Drug.</p>
+<p>After a response is collected to a question that is marked for processing by TMS, during the next Batch Validation the response is sent to TMS as a verbatim term. TMS tries to classify the verbatim term using Autoclassification. If that is not possible, TMS creates an omission that must be handled manually and, during the next Batch Validation, Oracle Clinical creates a discrepancy for the response.</p>
+<p>After the verbatim term is classified, during the next Batch Validation TMS returns the classification and any other information you have defined (such as term ID, alternate code, or user-defined details) to Oracle Clinical as derived question response values in the same RDCM as the original collected question response. If a discrepancy had been associated with the response, it is automatically resolved.</p>
+<p>In addition, Oracle Clinical passes information about the context of each collected question response to TMS, where you can use it to help with manual classification and other tasks. This key information&mdash;Patient, Study, Project, DCM, Investigator, Visit, Document Number and Discrepancy ID&mdash;remains stored in TMS (see <a href="integ.htm#CHDFBBED">"Defining External System Information in TMS"</a> for more information). If you reclassify a verbatim term in TMS, during the next Batch Validation the system uses the key information to update the derived responses for each occurrence of the term/question response in Oracle Clinical.</p>
+<p>To set up Oracle Clinical for integration with TMS, you must define <span class="bold">parent questions</span><a id="sthref211"></a> to collect the response in Oracle Clinical, <span class="bold">derived questions</span><a id="sthref212"></a> to receive values from TMS, and <span class="bold">question sets</span> to link the two and specify the information to be retrieved from TMS. You must also associate TMS domains with Oracle Clinical studies or projects.</p>
+<p>To define these objects, you must have access to Oracle Clinical windows that appear only when TMS is installed with Oracle Clinical. The following table shows the privilege required to view each window.</p>
+<div id="TMSUG11319" class="tblformal">
+<p class="titleintable"><a id="sthref213"></a><a id="sthref214"></a>Table 4-1 TMS-Related Windows in Oracle Clinical</p>
+<table class="cellalignment32" title="TMS-Related Windows in Oracle Clinical " summary="List of TMS-related windows in OC" dir="ltr">
+<thead>
+<tr class="cellalignment26">
+<th class="cellalignment33" id="r1c1-t2">Window</th>
+<th class="cellalignment33" id="r1c2-t2">Oracle Clinical Navigation Path</th>
+<th class="cellalignment33" id="r1c3-t2">Privilege Required</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment26">
+<td class="cellalignment34" id="r2c1-t2" headers="r1c1-t2">
+<p>Question Sets</p>
+</td>
+<td class="cellalignment34" headers="r2c1-t2 r1c2-t2">
+<p>From the <span class="bold">Glib</span> menu, select <span class="bold">Question Sets</span>, then choose <span class="bold">Question Sets</span></p>
+</td>
+<td class="cellalignment34" headers="r2c1-t2 r1c3-t2">
+<p>rxc_gl_full</p>
+</td>
+</tr>
+<tr class="cellalignment26">
+<td class="cellalignment34" id="r3c1-t2" headers="r1c1-t2">
+<p>Qry Question Sets</p>
+</td>
+<td class="cellalignment34" headers="r3c1-t2 r1c2-t2">
+<p>From the <span class="bold">Glib</span> menu, select <span class="bold">Question Sets</span>, then choose <span class="bold">Qry Question Sets</span></p>
+</td>
+<td class="cellalignment34" headers="r3c1-t2 r1c3-t2">
+<p>rxc_any</p>
+</td>
+</tr>
+<tr class="cellalignment26">
+<td class="cellalignment34" id="r4c1-t2" headers="r1c1-t2">
+<p>TMS Domain Elements</p>
+</td>
+<td class="cellalignment34" headers="r4c1-t2 r1c2-t2">
+<p>From the <span class="bold">Plan</span> menu, select <span class="bold">TMS Domains</span></p>
+</td>
+<td class="cellalignment34" headers="r4c1-t2 r1c3-t2">
+<p>tms_define_priv</p>
+</td>
+</tr>
+<tr class="cellalignment26">
+<td class="cellalignment34" id="r5c1-t2" headers="r1c1-t2">
+<p>Qry TMS Domains</p>
+</td>
+<td class="cellalignment34" headers="r5c1-t2 r1c2-t2">
+<p>From the <span class="bold">Plan</span> menu, select <span class="bold">Qry TMS Domains</span></p>
+</td>
+<td class="cellalignment34" headers="r5c1-t2 r1c3-t2">
+<p>rxc_any</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" -->
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You must also have TMS superuser privileges or the drop-down list to select a dictionary in the TMS Domain Elements window will be empty; see <a href="admin.htm#CHDIAJJC">"Defining a New User"</a> for information on granting superuser privileges.</div>
+<a id="i1002229"></a>
+<div id="TMSUG11320" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Managing the TMS/Oracle Clinical Workflow<a id="sthref215"></a></h2>
+<p>This section includes:</p>
+<ul>
+<li>
+<p><a href="#CEGFHJIB">First Review in TMS</a></p>
+</li>
+<li>
+<p><a href="#CEGBCHDC">First Review in Oracle Clinical</a></p>
+</li>
+<li>
+<p><a href="#CEGCCIGE">Setting First Review</a></p>
+</li>
+</ul>
+<p>You can choose to review discrepancies/omissions first in either Oracle Clinical or TMS.</p>
+<p>Regardless of whether you set First Review to Oracle Clinical or TMS, during Batch Validation all Oracle Clinical question responses collected since the last Batch Validation and marked for processing by TMS (see <a href="#CEGCEFGF">"Defining a Parent Question"</a>) are sent to TMS and inserted into the TMS SOURCE_TERMS TABLE with all their associated key data. Batch validation triggers TMS Synchronization and Autoclassification.</p>
+<p>During Autoclassification, TMS searches for an exact match to a dictionary term or an existing VTA linking the same Oracle Clinical response/TMS verbatim term to a dictionary term.</p>
+<p>For each term that is automatically classified:</p>
+<ul>
+<li>
+<p>In TMS, the verbatim term is associated with a VTA linking it to a dictionary term.</p>
+</li>
+<li>
+<p>During the next Batch Validation, TMS sends to Oracle Clinical all the derived data defined in the question set variables.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If TMS is unable to derive a related term in one of the requested dictionary levels, it creates a high-level omission within TMS and sends all the derived values possible back to Oracle Clinical. When the high-level omission is resolved in TMS, TMS sends the remaining derived value(s) to Oracle Clinical. See <a href="dictmnt.htm#i1002421">"Resolving High-Level Omissions"</a>.</div>
+</li>
+</ul>
+<p>For each term that cannot be automatically classified:</p>
+<ul>
+<li>
+<p>TMS creates an omission.</p>
+</li>
+<li>
+<p>During the next Batch Validation, Oracle Clinical creates a discrepancy.</p>
+</li>
+<li>
+<p>Manual intervention is required; the workflow depends on whether First Review is set to TMS or Oracle Clinical. (See <a href="#CEGCCIGE">"Setting First Review"</a>.)</p>
+</li>
+</ul>
+<p>Normally you will want to handle omissions in TMS, because there you can specify how to handle the same verbatim term automatically in the future. However, you may prefer to check the data in Oracle Clinical first to correct any errors and send the data back to TMS for Autoclassification after it has been corrected.</p>
+<p>A description of the workflow for First Review in TMS and First Review in Oracle Clinical follows.</p>
+<a id="CEGFHJIB"></a>
+<div id="TMSUG11321" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">First Review in TMS<a id="sthref216"></a></h3>
+<p>If a term cannot be automatically classified and First Review is set to TMS, Batch Validation creates the Oracle Clinical discrepancy of category type Missing_PT with a status of TMS IN PROGRESS, which cannot be changed within Oracle Clinical.</p>
+<p>You must handle the omission in TMS. You have two options: Manual Classification and Applying an Action.</p>
+<a id="CEGGJJHA"></a>
+<div id="TMSUG11322" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Manual Classification</h4>
+<p>To classify a term manually after it fails Autoclassification, you must do one of the following:</p>
+<ul>
+<li>
+<p>Create a new VTA to link the verbatim term to a dictionary term. I</p>
+</li>
+<li>
+<p>Add a new company term to the dictionary and create a VTA linking the verbatim term to the new term.</p>
+</li>
+</ul>
+<p>After you have manually classified a verbatim term, the next Batch Validation:</p>
+<ul>
+<li>
+<p>Sends to Oracle Clinical all the derived data defined in the question set variables.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If TMS is unable to derive all the data requested, it creates a high-level omission within TMS and sends all the derived values possible back to Oracle Clinical. When the high-level omission is resolved in TMS, TMS sends the remaining derived value(s) to Oracle Clinical. See <a href="dictmnt.htm#i1002421">"Resolving High-Level Omissions"</a>.</div>
+</li>
+<li>
+<p>Gives the discrepancy a review status of CLOSED and a resolution status of:</p>
+<ul>
+<li>
+<p>VTA CREATED if the omission was resolved in TMS by creating a new VTA.</p>
+</li>
+<li>
+<p>DT CREATED if the omission was resolved by creating a new dictionary term.</p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<a id="CEGJEJCG"></a>
+<div id="TMSUG11323" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Applying an Action</h4>
+<p>If you cannot classify a verbatim term because of a flaw in the term, you can assign an Action to the term to send a message back to Oracle Clinical requesting a modification to the verbatim term. For example, Oracle Clinical may send a question response/verbatim term to TMS that includes two terms, such as "headache and nausea." Because TMS does not support combined verbatim terms, you might want to apply an Action to this verbatim term with the text "please split this term." During the next TMS Synchronization, the system sends this message back to Oracle Clinical as a comment associated with the discrepancy for the question response.</p>
+<p>When the you apply an Action to an omission, the next Batch Validation:</p>
+<ul>
+<li>
+<p>Changes the status of the discrepancy according to the status specified in the definition of the TMS Action. Normally this is INV REVIEW (Investigator Review) to indicate that the investigator must take the next step in resolving the discrepancy, but it could be any valid status.</p>
+</li>
+<li>
+<p>Inserts a message in the discrepancy's <span class="bold">Comment</span> field requesting clarification or other modification of the verbatim term.</p>
+</li>
+</ul>
+<p>In Oracle Clinical, the person responsible for resolving the discrepancy must make the requested change, if appropriate, and change the discrepancy's review status to TMS EVALUATION. During the next Batch Validation, the updated term is sent back to TMS for Autoclassification and the discrepancy's status is changed to TMS IN PROGRESS.</p>
+<p>See <a href="defmisc.htm#i1001382">"Defining and Using Actions"</a> for more information.</p>
+</div>
+<!-- class="sect3" -->
+<div id="TMSUG11324" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref217"></a>
+<h4 class="sect3">Sending a Discrepancy Message</h4>
+<p>You can send a message to Oracle Clinical regarding a single source term in the Classify VT Omissions window. A Discrepancy Message is not predefined; you enter text specifically for a particular source term. See <a href="mngomiss.htm#BEIDFIIJ">"Applying a Discrepancy Message"</a>.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CEGBCHDC"></a>
+<div id="TMSUG11325" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">First Review in Oracle Clinical<a id="sthref218"></a><a id="sthref219"></a></h3>
+<p>If a term cannot be automatically classified and First Review is set to Oracle Clinical, Batch Validation creates Oracle Clinical TMS discrepancies with a status of UNREVIEWED. You can then review each discrepancy and correct any errors. After correction (or at any time), set the discrepancy status to TMS EVALUATION. The next Batch Validation will change its status to TMS IN PROGRESS and pass it to TMS for Autoclassification. Corrected terms may be successfully auto. If not, an omission is created and you must handle it in TMS (see <a href="#CEGFHJIB">"First Review in TMS"</a>).</p>
+</div>
+<!-- class="sect2" -->
+<a id="CEGCCIGE"></a>
+<div id="TMSUG11326" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Setting First Review</h3>
+<p>Two settings determine which system handles the First Review, both set in Oracle Clinical: the <span class="bold">Review Before TMS?</span> setting in the Question Sets window and the FIRST_REVIEW short value in the TMS_OPTION reference codelist. The interaction between the two settings is as follows:</p>
+<ul>
+<li>
+<p>If the reference codelist value is NO (so TMS manages omissions), the value set in the Question Set window is ignored.</p>
+</li>
+<li>
+<p>If the reference codelist value is YES (so Oracle Clinical manages omissions), clearing the <span class="bold">Review Before TMS?</span> box overrides the database setting and directs omissions to TMS.</p>
+</li>
+</ul>
+<p>In other words, to have Oracle Clinical do the first review of omissions, you must set both the reference codelist value to YES and select <span class="bold">Review Before TMS?</span> in the Question Set window. All other setting combinations result in a first review by TMS.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CEGEGFIB"></a>
+<div id="TMSUG11327" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Batch Validation in an Integrated OC/TMS Environment<a id="sthref220"></a> <a id="sthref221"></a></h2>
+<p>This section includes:</p>
+<ul>
+<li>
+<p><a href="#CEGBJHEI">OC and TMS Data Exchanged During Batch Validation</a></p>
+</li>
+<li>
+<p><a href="#CEGEIEJC">Running Only the TMS Portion of Batch Validation</a></p>
+</li>
+<li>
+<p><a href="#CEGICIFD">Batch Validation Execution Order</a></p>
+</li>
+<li>
+<p><a href="#CEGCGGEB">Effect of TMS Errors on Batch Validation</a></p>
+</li>
+</ul>
+<a id="CEGBJHEI"></a>
+<div id="TMSUG11328" class="sect2">
+<h3 class="sect2">OC and TMS Data Exchanged During Batch Validation</h3>
+<p>Oracle Clinical Batch Validation runs on a single study, usually on a regular schedule such as nightly.</p>
+<p>When Oracle Clinical and TMS are integrated, the Batch Validation job finds data that is new or changed in each system since the last Batch Validation and sends the relevant data to the other system. During the same Batch Validation job, TMS Autoclassification and Synchronization run in TMS on new Oracle Clinical data, and derived information, omissions, and Actions associated with that same data are sent back to Oracle Clinical.</p>
+<p>During Batch Validation:</p>
+<ul>
+<li>
+<p>Oracle Clinical sends new parent question responses, plus their key information, to TMS. If responses have been deleted in Oracle Clinical, the deletions are sent to TMS.</p>
+</li>
+<li>
+<p>Oracle Clinical sends responses whose question set definition has been changed.</p>
+</li>
+<li>
+<p>Oracle Clinical sends discrepancies newly given a status of TMS EVALUATION.</p>
+</li>
+<li>
+<p>TMS sends the derived values specified in the parent question's question set to questions whose parent question response has been classified, reclassified, or declassified in TMS.</p>
+</li>
+<li>
+<p>TMS sends derived values to questions corresponding to high-level TMS omissions that have been resolved in TMS.</p>
+</li>
+<li>
+<p>In the Oracle Clinical Discrepancy Database, Batch Validation resolves any discrepancies associated with question responses/verbatim terms that have been manually in TMS.</p>
+</li>
+<li>
+<p>In the Oracle Clinical Discrepancy Database, Batch Validation applies any Actions that have been assigned to omissions in TMS to the discrepancy associated with the original question response. The Action Text is displayed in Oracle Clinical as the Internal Comment for the discrepancy.</p>
+</li>
+<li>
+<p>Batch validation creates Oracle Clinical discrepancies for any terms TMS was unable to classify automatically (omissions). If First Review is set to TMS, these discrepancies have a status of TMS IN PROGRESS; if First Review is set to Oracle Clinical, they have a status of UNREVIEWED.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="CEGEIEJC"></a>
+<div id="TMSUG11329" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Running Only the TMS Portion of Batch Validation</h3>
+<p>Running only the TMS portion of Batch Validation may be useful when you are recoding a large amount of data but do not want to run other components of Batch Validation (such as Oracle Clinical Procedures). For example, if you have upgraded your dictionary version and anticipate a large number of terms to be processed.</p>
+<p>To run only the TMS portion of Batch Validation, open Oracle Clinical. From the <span class="bold">Conduct</span> menu, select <span class="bold">Data Validation</span>, then <span class="bold">TMS Derivation</span>.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The TMS Derivation job runs the TMS portion of Batch Validation once, not twice as in the full Batch Validation job.</div>
+</div>
+<!-- class="sect2" -->
+<a id="CEGICIFD"></a>
+<div id="TMSUG11330" class="sect2">
+<h3 class="sect2">Batch Validation Execution Order</h3>
+<p>Batch Validation runs TMS processing twice, before and after running all validation and derivation procedures defined in Oracle Clinical for the study.</p>
+<p>See <a href="#CEGJHDAF">"Using a Derived Question as a Parent Question"</a> for information on how to use this feature.</p>
+<p>Batch validation includes the following processes in the following order, for a single study:</p>
+<ol>
+<li>
+<p>Sends data from Oracle Clinical to TMS for processing, including Synchronization and Autoclassification. (See <a href="admin.htm#CDCFIFJI">"Synchronization"</a> and <a href="admin.htm#BABHJBGD">"Autoclassification"</a> for more information.)</p>
+</li>
+<li>
+<p>Returns data from TMS to Oracle Clinical, creating and resolving TMS-related discrepancies in Oracle Clinical.</p>
+</li>
+<li>
+<p>Runs all Oracle Clinical validation procedures, creating and resolving discrepancies.</p>
+</li>
+<li>
+<p>Runs all Oracle Clinical derivation procedures, generating values for derived question responses.</p>
+</li>
+<li>
+<p>Sends a limited set of data&mdash;parent question values derived during the current Batch Validation (if any)&mdash;to TMS for processing.</p>
+</li>
+<li>
+<p>Returns data specified in the derived parent questions' question sets to Oracle Clinical.</p>
+</li>
+</ol>
+<p>See <a href="#CEGBJHEI">"OC and TMS Data Exchanged During Batch Validation"</a> for an explanation of which data is exchanged.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CEGCGGEB"></a>
+<div id="TMSUG11331" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Effect of TMS Errors on Batch Validation</h3>
+<p>You can control whether Batch Validation fails altogether or just displays a warning if it encounters a serious problem during TMS processing by setting a reference codelist value in Oracle Clinical; see <a href="#CEGIEEIE">"OCL_STATE"</a>.</p>
+<p>If the long value is active and set to Warn for the short value TMS_FAIL_BV_ACT in the OCL_STATE local reference codelist in Oracle Clinical, then if Batch Validation encounters a serious error during its TMS processing, it will give a warning but it will not cause the entire Batch Validation job to fail. Serious errors include:</p>
+<ul>
+<li>
+<p>a SQL error</p>
+</li>
+<li>
+<p>data corruption</p>
+</li>
+<li>
+<p>serious setup issue</p>
+</li>
+</ul>
+<p>If the long value is inactive or set to anything other than Warn, Batch Validation will fail if it encounters a serious error during TMS processing.</p>
+<p>If Batch Validation encounters a less serious error during TMS processing, it will issue a warning but not fail, regardless of the long value set for TMS_FAIL_BV_ACT. For example, less serious errors include:</p>
+<ul>
+<li>
+<p>No value set for the local reference codelist TMS_OPTIONS.</p>
+<p>Batch validation displays the following error message: "Reference codelist for First Review Flag not found."</p>
+</li>
+<li>
+<p>The dictionary specified for a question set used in the study is not included in any TMS domain element for the study in Oracle Clinical.</p>
+<p>Batch validation displays the following error message: "No dict. for Question Set: <span class="italic">question_set_name</span>."</p>
+</li>
+<li>
+<p>The domain specified in the study's TMS domain element is not part of a valid dictionary/domain combination (as defined in the TMS Define Domains window) for one of the following: the dictionary specified in the domain element, or the dictionary specified for a question set used in the study.</p>
+<p>Batch validation displays the following error message: "No Domain for Question Set: <span class="italic">question_set_name</span>."</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="i1002061"></a>
+<div id="TMSUG11332" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Setting Up Data Collection in Oracle Clinical<a id="sthref222"></a></h2>
+<p>This section includes:</p>
+<ul>
+<li>
+<p><a href="#i1002071">Defining and Using Question Sets</a></p>
+</li>
+<li>
+<p><a href="#i1002123">Defining Questions</a></p>
+</li>
+<li>
+<p><a href="#CEGJHDAF">Using a Derived Question as a Parent Question</a></p>
+</li>
+<li>
+<p><a href="#i1002163">Associating Child Questions with Question Set Variables</a></p>
+</li>
+<li>
+<p><a href="#CEGGBIDB">Associating Questions with Question Groups and DCMs</a></p>
+</li>
+</ul>
+<p>To use TMS with Oracle Clinical, you must define two types of questions and associate them with DCM question groups:</p>
+<ul>
+<li>
+<p>A parent question to collect data (called source terms in TMS) at an Oracle Clinical patient visit</p>
+</li>
+<li>
+<p>A derived question to receive each piece of information you want to retrieve from TMS</p>
+</li>
+</ul>
+<p>In addition, you must define one or more <span class="bold">question set</span>s. A question set is a reusable structure that:</p>
+<ul>
+<li>
+<p>Specifies the TMS dictionary against which to classify the parent question response (TMS verbatim term)</p>
+</li>
+<li>
+<p>Includes variables that specify the information you want to retrieve from TMS</p>
+</li>
+</ul>
+<p>During definition of the parent question you:</p>
+<ul>
+<li>
+<p>Link the parent question to a question set</p>
+</li>
+<li>
+<p>Link a derived question to each question set variable</p>
+</li>
+</ul>
+<p>The diagram in <a href="#CEGCDEIB">Figure 4-1</a> shows the definitional links between Oracle Clinical and TMS. In the Oracle Clinical Global Library, you define parent and derived questions and questions sets, which specify questions' relation to dictionary data, and link parent and derived questions. In Oracle Clinical studies, you include parent and derived questions in the study definition and link the study to TMS domain/dictionary combinations. In TMS, you define valid dictionary/TMS domain combinations.</p>
+<div id="TMSUG11333" class="figure">
+<p class="titleinfigure"><a id="CEGCDEIB"></a>Figure 4-1 Relations Between TMS and Oracle Clinical Defined Objects</p>
+<img width="542" height="302" src="img/ocinteg.gif" alt="Description of Figure 4-1 follows" /><br />
+<a id="sthref223" href="img_text/ocinteg.htm">Description of ''Figure 4-1 Relations Between TMS and Oracle Clinical Defined Objects''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<a id="i1002071"></a>
+<div id="TMSUG11334" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Defining and Using Question Sets<a id="sthref224"></a></h3>
+<p>A question set defines the TMS information to be sent to Oracle Clinical in relation to a question response collected in Oracle Clinical. A question set definition has two parts:</p>
+<ul>
+<li>
+<p>Defining a Question Set. General information about the question set: its name, description, and TMS dictionary against which question responses are to be classified.</p>
+</li>
+<li>
+<p>Defining Question Set Variables. Variables that specify the dictionary level and data to be derived (such as term, ID, or code; see <a href="#CEGIDIGG">"Parameter Name 2"</a> for a complete list of derivable data).</p>
+<p>Alternatively, question set variables can derive Informative Notes from TMS to Oracle Clinical derived questions.</p>
+</li>
+</ul>
+<p>When you define a parent question (a question whose response is to be to a TMS dictionary term) you assign a question set to the parent question. Then, in the Details section of the parent question definition, you assign a derived question to each question set variable. Thus, the question set is the link between the parent question that collects Oracle Clinical data at a patient visit and the derived questions that contain information from TMS related to the response/verbatim term's classification in TMS.</p>
+<p>You can assign the same question set to many different parent questions to collect the same TMS information for each parent question.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Define the question set completely before assigning it to a parent question. You cannot make changes to the question set after it is assigned to a parent question.</div>
+<a id="CEGIGBHA"></a>
+<div id="TMSUG11335" class="sect3">
+<h4 class="sect3">Defining a Question Set</h4>
+<p>To define the question set:</p>
+<ol>
+<li>
+<p>In Oracle Clinical, from the <span class="bold">Glib</span> menu, select <span class="bold">Question Sets</span>, then choose <span class="bold">Question Sets</span>.</p>
+</li>
+<li>
+<p>In the <span class="bold">QS Name</span> field, enter a unique name assigned to this question set. It can be up to 20 alphanumeric characters.</p>
+</li>
+<li>
+<p>In the <span class="bold">Description</span> field, enter a description for the question set of up to 60 alphanumeric characters.</p>
+</li>
+<li>
+<p>In the <span class="bold">QS Type Code</span> field, choose <span class="bold">TMS Q SET</span> from the list of values. The code entered in this field determines which of the <span class="bold">Parameter 1</span>&hellip;<span class="bold">5</span> fields must be completed. None are required for TMS.</p>
+</li>
+<li>
+<p>In the <span class="bold">TMS Dictionary</span> field, from the list of values choose the TMS dictionary to be accessed by this question set. You can use only strong dictionaries.</p>
+</li>
+<li>
+<p>Leave the <span class="bold">Parameter 1</span>&hellip;<span class="bold">5</span> fields blank. These fields are not used in this context.</p>
+</li>
+<li>
+<p>Set the <span class="bold">Review before TMS?</span> box. Leave deselected to handle the initial review of thesaurus omissions in TMS.</p>
+<p>To handle the initial review in Oracle Clinical you must select this option and also set the short value FIRST_REVIEW in the local reference codelist TMS_OPTIONS to Yes (see <a href="#i1002229">"Managing the TMS/Oracle Clinical Workflow"</a>).</p>
+</li>
+<li>
+<p>Proceed to Defining Question Set Variables to complete the question set.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<a id="CEGEHFJA"></a>
+<div id="TMSUG11336" class="sect3">
+<h4 class="sect3">Defining Question Set Variables</h4>
+<p>Question set variables link child questions to the parent question and specify the information to be sent to and retrieved from TMS.</p>
+<p>When you define a parent question to collect a drug name or medical condition to be classified in TMS, you associate it with a question set. The system populates the parent question's Details window with the question set variables. You must associate each variable with a child question that either sends additional information to TMS or holds information derived from TMS.</p>
+<p>You define question set variables in the lower part of the Question Sets window. Each row defines one variable.</p>
+<ol>
+<li>
+<p>Under <span class="bold">Question Set Questions</span>, click in the first available row.</p>
+</li>
+<li>
+<p>Specify a <span class="bold">Sequence Number</span> for the variable. This number represents the display order you want to appear in parent question's Details window, relative to the other variables in the question set. Sequence numbers can be up to three digits.</p>
+</li>
+<li>
+<p>Enter any value you want, from 1 to 30 alphanumeric characters, in the <span class="bold">Parameter Name</span> field. This field must be completed and each Parameter Name must be unique within the Question Set, but is not used by the system.</p>
+</li>
+<li>
+<p>In the <span class="bold">Display Prompt</span> field, enter the text that you want to appear as the variable name in the Details window of the parent question. This field will be mapped to a derived question. Consider using a naming convention to make it easy to decide which question you should associate with which variable; for example, <code dir="ltr"><span class="codeinlineitalic">dictionary level_type of information</span></code>. See the possible types of information at Step 8 below. Up to 15 alphanumeric characters.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The reportable levels of the dictionary specified for this question set are listed in the <span class="bold">Parameter Name 1</span> list of values.</div>
+</li>
+<li>
+<p>Choose a <span class="bold">Data Type</span> of CHAR.</p>
+</li>
+<li>
+<p><span class="bold">Len</span>. Enter a length for the question set variable. It must be long enough to handle the data that will be returned from TMS. The largest amount allowed is 200. This is the recommended size.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You set the display length for the Data Entry form in the <span class="bold">Len</span> field in the DCM Questions window.</div>
+</li>
+<li>
+<p><span class="bold">Questi<a id="sthref225"></a>on<a id="sthref226"></a> Type</span>. Select one:</p>
+<ul>
+<li>
+<p><span class="bold">OUTPUT</span> if the variable is for information derived from TMS, such as a Preferred Term or ATC. Questions defined for this purpose must be defined as derived.</p>
+</li>
+<li>
+<p><span class="bold">INPUT</span> if the variable is to send auxiliary information to TMS in a dictionary with nonunique terms in the coding level, such as WHO-Drug Format C. You can use questions to collect auxiliary information such as Country, Pharmaceutical Form, and Strength in order to classify terms to nonunique dictionary terms.</p>
+</li>
+<li>
+<p><span class="bold">INDICATION</span> if the variable is to send information to TMS about the indication for which a drug was taken. For example, WHO-Drug supports classifying different occurrences of the same source term to different ATC terms depending on the indication. See <a href="mngomiss.htm#BEICDGFH">"Classifying Indication Omissions."</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="bold">Parameter Name 1</span>. The list of values varies depending on the question type:</p>
+<ul>
+<li>
+<p>For INPUT question types, all auxiliary information sublevels defined for the dictionary are listed.</p>
+</li>
+<li>
+<p>For INDICATION question types, there is no list of values. Leave blank.</p>
+</li>
+<li>
+<p>For OUTPUT question types, the list of values includes all dictionary levels and <span class="italic">Info Note</span>. Select one dictionary level from which to derive the term related to the parent question term. Alternatively, use Informative Notes to send additional information from TMS to Oracle Clinical. See <a href="defmisc.htm#i1004701">"Defining Informative Note Attributes"</a> for information about Informative Notes.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Do not enter the name of a group level here. To derive information from a dictionary level that is contained in a group level, you must enter the sublevel here, not the group level.
+<p>If you have a Primary Link required to a group level, but a particular term's Primary Link is to any of the sublevels in the group level, you must create a variable for each sublevel.</p>
+</div>
+</li>
+</ul>
+</li>
+<li>
+<p><a id="i1002111"></a><a id="CEGIDIGG"></a><span class="bold">Parameter Name 2</span>. The information you enter here depends on whether you chose a dictionary level or Informative Note in the <span class="bold">Parameter Name 1</span> field and applies only to OUTPUT question types.</p>
+<p><span class="bold">Dictionary Level</span>. If you specify a dictionary level in the <span class="bold">Parameter Name 1</span> field, TMS returns information about the parent term's related term in that level. In the <span class="bold">Parameter Name 2</span> field you must specify the type of data you want to derive from TMS.</p>
+<p>For example, if the verbatim term "Headache" is classified to Preferred Term "Head Discomfort," whose related High Level Term is "Neurological Signs and Symptoms NEC," and you specify High Level Term for the dictionary level in <span class="bold">Parameter Name 1</span> and Term Upper for <span class="bold">Parameter Name 2</span>; if the question response value was "Headache," TMS would return the value "NEUROLOGICAL SIGNS AND SYMPTOMS NEC" as the value for the derived question specified in the parent question Details window for this variable.</p>
+<p>The list of values displays the following derivable data:</p>
+<ul>
+<li>
+<p><span class="bold">CATEGORY</span>. Optional field used to by some dictionaries to further categorize terms; MedDRA supplies Diagnose, Adverse Event, or Undefined as categories for its terms.</p>
+</li>
+<li>
+<p><span class="bold">COMMENT_TEXT</span>. User-defined comment entered by the term's creator about the term.</p>
+</li>
+<li>
+<p><span class="bold">DICTIONARY VERSION</span>. The version of the dictionary, as defined by an Informative Note (see <a href="defmisc.htm#i1004701">"Defining Informative Note Attributes"</a>).</p>
+</li>
+<li>
+<p><span class="bold">DICT_CONTENT_ALT_CODE</span>. Optional, user-defined, indexed, unique ID for a term. Designed to provide a link to another thesaurus system.</p>
+</li>
+<li>
+<p><span class="bold">DICT_CONTENT_CODE</span>. Optional field designed to serve as the primary key within a dictionary. TMS does not require that the dict content code be unique.</p>
+</li>
+<li>
+<p><span class="bold">DICT_CONTENT_ID</span>. Unique ID across TMS for this term; the primary key in TMS.</p>
+</li>
+<li>
+<p><span class="bold">TERM</span>. A term as entered or loaded (uppercase, lowercase, or mixed case).</p>
+</li>
+<li>
+<p><span class="bold">TERM_UPPER</span>. A term, all uppercase.</p>
+</li>
+<li>
+<p><span class="bold">VALUE_1</span>&hellip;<span class="bold">4</span>. Optional. Data defined by the user for a dictionary level. See <a href="defdict.htm#i1001695">"Defining Level Details"</a>.</p>
+</li>
+</ul>
+<p><span class="bold">Dictionary Informative Notes</span>. If you entered "Dictionary Informative Notes" in the <span class="bold">Parameter Name 1</span> field, in the <span class="bold">Parameter Name 2</span> field the list of values displays all the derivable Informative Note Attributes defined in this installation.</p>
+<p>For example, you can derive an Informative Note of type URL containing a link to information about the dictionary term.</p>
+<p>See <a href="defmisc.htm#i1004701">"Defining Informative Note Attributes"</a> for information about Informative Notes. For information about the particular Informative Note Attributes that have been defined for this TMS installation, from the <span class="bold">Definition</span> menu, select <span class="bold">Define Informative Notes Attributes in TMS</span>.</p>
+</li>
+<li>
+<p><span class="bold">Info Note?</span> The system populates this field depending on the setting of the Parameter Name 2.</p>
+</li>
+<li>
+<p>Save.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="i1002123"></a>
+<div id="TMSUG11337" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Defining Questions<a id="sthref227"></a></h3>
+<p>This section includes:</p>
+<ul>
+<li>
+<p><a href="#CEGCEFGF">Defining a Parent Question</a></p>
+</li>
+<li>
+<p><a href="#CEGBBBAE">Defining a Child Question</a></p>
+</li>
+</ul>
+<p>Two types of questions are used by TMS: <span class="bold">parent</span> questions<a id="sthref228"></a> are used to collect responses at patient visits; and <span class="bold">child</span> questions<a id="sthref229"></a>, derived questions that receive the information specified by question set variables from TMS. Use the standard Oracle Clinical question definition process for both parent and child questions, with the TMS-specific settings below.</p>
+<p>Parent questions can also be derived questions in special cases; see <a href="#CEGJHDAF">"Using a Derived Question as a Parent Question"</a>.</p>
+<p>You cannot convert an active, non-TMS question set question for processing in TMS. You must define a new question with a question type of Question Set and the name of its question set as part of the definition. You may want to model your TMS parent questions on your standard Glib questions, changing their names using a convention such as suffix <code dir="ltr"><span class="codeinlineitalic">_TMS</span></code>.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+A particular derived or parent question can be used only once within a question group: a particular question cannot be used in more than one question set, and can be used only once in a single question set.</div>
+<a id="CEGCEFGF"></a>
+<div id="TMSUG11338" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Defining a Parent Question</h4>
+<p>The parent question collects the verbatim term (clinical data, question response) during an Oracle Clinical visit.</p>
+<p>To define a parent question and link it to a question set:</p>
+<ol>
+<li>
+<p>In Oracle Clinical, from the <span class="bold">Glib</span> menu, select <span class="bold">Questions</span>, then choose <span class="bold">Questions</span>.</p>
+</li>
+<li>
+<p>Complete the definition fields as usual in Oracle Clinical (see <span class="italic"><span class="italic">Oracle Clinical Creating a Study</span></span> in the Oracle Clinical documentation set), completing these fields as follows:</p>
+<ul>
+<li>
+<p><span class="bold">Question Type</span>. You must set this field to QUESTION_SET. This value activates the <span class="bold">Question Set Name</span> field.</p>
+</li>
+<li>
+<p><span class="bold">Question Data Type</span>. You must set this field to CHAR.</p>
+</li>
+<li>
+<p><span class="bold">Question Set Name</span>. Enter the name of the question set to which you want to link this parent question.</p>
+</li>
+<li>
+<p><span class="bold">Derived?</span> Normally you should leave this box deselected. However, there are some cases where you may want a derived parent question; see <a href="#CEGJHDAF">"Using a Derived Question as a Parent Question"</a>.</p>
+</li>
+<li>
+<p><span class="bold">Display Prompt</span>. This text becomes the display prompt in the Data Entry form.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Save.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You can either activate the question now by setting the status to A, or leave it provisional so you can change it if necessary. You must activate it and save your work before you can link the question to a question group and use it in a study.</div>
+</li>
+<li>
+<p>Click the <span class="bold">Details</span> button to associate derived questions with question set variables. You must define the derived questions before you can do this step. See <a href="#CEGBBBAE">"Defining a Child Question"</a> and <a href="#i1002163">"Associating Child Questions with Question Set Variables"</a> for instructions.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<a id="CEGBBBAE"></a>
+<div id="TMSUG11339" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Defining a Child Question</h4>
+<p>Create a child derived question for each variable of the question set. Consider using a naming convention to make it easy to remember which question you should associate with which variable; for example, <code dir="ltr"><span class="codeinlineitalic">dictionary level_type of information</span></code>.</p>
+<p>To define a child derived question:</p>
+<ol>
+<li>
+<p>In the Oracle Clinical <span class="bold">Glib</span> menu, select <span class="bold">Questions</span>, then choose <span class="bold">Questions</span>.</p>
+</li>
+<li>
+<p>Complete the definition fields as usual in Oracle Clinical (see <span class="italic"><span class="italic">Oracle Clinical Creating a Study</span></span> in the Oracle Clinical documentation set), completing these fields as follows:</p>
+<ul>
+<li>
+<p><span class="bold">Question Type</span>. Set this field to THES VALIDATED.</p>
+</li>
+<li>
+<p><span class="bold">Data Type</span>. Set this field to CHAR.</p>
+</li>
+<li>
+<p><span class="bold">Len</span> (length) Enter a length at least as long as the question set variable it is being associated with (see below); the maximum setting, 200 characters, is recommended.</p>
+</li>
+<li>
+<p><span class="bold">Derived</span>. Select this box.</p>
+</li>
+<li>
+<p><span class="bold">Default Prompt</span>. Enter text to become the label for the derived question in the Data Entry form.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Save.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You can either activate the question now by setting the status to A, or leave it provisional so you can change it if necessary. You can associate a provisional derived question with a parent question, but you must activate it and save your work before you can link the question to a question group and use it in a study.</div>
+</li>
+</ol>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CEGJHDAF"></a>
+<div id="TMSUG11340" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Using a Derived Question as a Parent Question</h3>
+<p>Batch Validation can run its TMS process twice, once before and once after deriving question responses with Oracle Clinical derivation procedures (see <a href="#CEGICIFD">"Batch Validation Execution Order"</a>), and allows parent questions to be defined as derived, making it possible to do either of the following during a single Batch Validation job:</p>
+<ul>
+<li>
+<p>Derive a value to an Oracle Clinical question in TMS, run an Oracle Clinical derivation procedure to take that value and use it to populate the value of a (derived) parent question, and send the derived parent question value to TMS to derive additional Oracle Clinical question set question values.</p>
+</li>
+<li>
+<p>Run an Oracle Clinical derivation procedure to populate the value of a (derived) parent question as necessary, and send the derived parent question value to TMS to derive additional Oracle Clinical question set question values.</p>
+</li>
+</ul>
+<div class="infobox-note">
+<p class="notep1">Notes:</p>
+Oracle supports only the amount of derivation that can be accomplished within a single Batch Validation. Oracle does not support using an Oracle Clinical derivation procedure to populate the value of another derived parent question with the value of the original derived parent question.
+<p>Also, Batch Validation runs the TMS portion twice only if a derived parent question exists and requires processing.</p>
+</div>
+<p class="subhead2"><a id="TMSUG11341"></a>Examples</p>
+<p>Deriving a parent question may be useful in the following situations:</p>
+<ul>
+<li>
+<p><a href="#CEGFGHHE">Deriving Data from Two Dictionaries for One Verbatim Term</a></p>
+</li>
+<li>
+<p><a href="#CEGHGCJG">Classifying a Term Substituted for the Original Question Response</a></p>
+</li>
+<li>
+<p><a href="#CEGJCHJJ">Classifying Previously Unclassified Terms</a></p>
+</li>
+</ul>
+<p><a id="CEGFGHHE"></a><a id="TMSUG11342"></a><span class="subhead3">Deriving Data from Two Dictionaries for One Verbatim Term&nbsp;</span>To classify a single verbatim term to two different dictionaries, and derive information from both dictionaries into Oracle Clinical, you can do so by defining two question sets, as follows:</p>
+<ul>
+<li>
+<p>The first question set references the first dictionary and includes a (non-derived) parent question to collect a response during data entry and derived child questions to receive TMS values from the first dictionary as specified by the question set variables (a standard Oracle Clinical TMS question set).</p>
+</li>
+<li>
+<p>The second question set references the second dictionary and includes a parent question defined as a derived question and derived child questions to receive TMS values from the second dictionary as specified by the question set variables.</p>
+</li>
+</ul>
+<p>To populate the value of the derived parent question, you must write a derivation procedure in Oracle Clinical that propagates the value collected for the first parent question to the second (derived) parent question.</p>
+<p>During Batch Validation, the system first derives values from TMS (from the first dictionary) for the first set of derived questions, then processes the derivation procedure that populates the second parent question value, and finally derives values from TMS (from the second dictionary) for the second set of derived questions.</p>
+<p><a id="CEGHGCJG"></a><a id="TMSUG11343"></a><span class="subhead3">Classifying a Term Substituted for the Original Question Response&nbsp;</span>If many of the originally collected question responses are inconsistent with current terminology&mdash;for example, in a historic study or a study conducted by a company your company has acquired&mdash;you can leave the original data and thesaurus derivations, if any, intact but add current information by doing the following:</p>
+<ol>
+<li>
+<p>Define a new question for each original question whose responses may be outdated.</p>
+</li>
+<li>
+<p>Examine each response to the original question and manually enter an appropriate value in current terminology for each corresponding new question.</p>
+</li>
+<li>
+<p>Define a new derived parent question also corresponding to each original question whose responses may be outdated. Associate the parent question with a question set and child derived questions to define and receive the related information you want to derive from TMS.</p>
+</li>
+<li>
+<p>Write a derivation procedure that compares the values of the original question and the new non-derived question, and populates the new derived parent question with the value of the new non-derived question if it has a value; otherwise with the original response.</p>
+</li>
+<li>
+<p>Run Batch Validation. TMS processes the value of the new derived parent question and returns the data specified in its question set.</p>
+</li>
+</ol>
+<p><a id="CEGJCHJJ"></a><a id="TMSUG11344"></a><span class="subhead3">Classifying Previously Unclassified Terms&nbsp;</span>Add derived parent terms to legacy studies to derive TMS information for question responses that previously had no derived thesaurus information.</p>
+<ol>
+<li>
+<p>Define a new derived parent question for each original question for which you want to derive thesaurus values. Associate the parent question with a question set and child questions to define and receive the related information you want to derive from TMS.</p>
+</li>
+<li>
+<p>Write a derivation procedure to populate the value of the new derived parent question with the original question's value.</p>
+</li>
+<li>
+<p>Run Batch Validation. Oracle Clinical runs the derivation procedure to populate the value of the new derived parent question, and TMS returns the data specified in the question set.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="i1002163"></a>
+<div id="TMSUG11345" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Associating Child Questions with Question Set Variables</h3>
+<p>After you have created a question set, a parent question to collect data, and all the child questions you need for the parent question, you must assign one child question to each variable of the question set associated with the parent question. If it is unclear what information should be associated with each variable, look up the question set definition from the <span class="bold">Glib</span> menu, by selecting <span class="bold">Question Sets</span>, and then <span class="bold">Question Sets</span>.</p>
+<ol>
+<li>
+<p>In Oracle Clinical, from the <span class="bold">Glib</span> menu select <span class="bold">Questions</span>, then choose <span class="bold">Questions</span>.</p>
+</li>
+<li>
+<p>Execute a query for the parent question.</p>
+</li>
+<li>
+<p>Highlight the parent question name. This activates the Details button.</p>
+</li>
+<li>
+<p>Press the Details button. The Details window displays the prompts for the variables of the question set linked to this parent question (see <a href="#i1002071">"Defining and Using Question Sets"</a>).</p>
+</li>
+<li>
+<p>In the row for each variable, use the LOV to enter the name of the question you created to collect it.</p>
+</li>
+<li>
+<p>Save.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CEGGBIDB"></a>
+<div id="TMSUG11346" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Associating Questions with Question Groups and DCMs<a id="sthref230"></a></h3>
+<p>This section includes these special topics:</p>
+<ul>
+<li>
+<p><a href="#CEGCHIIG">Planning Question Groups and DCMs for RDC Special Listings</a></p>
+</li>
+<li>
+<p><a href="#CEGEGDEI">Adding Derived Questions to an Ongoing Study</a></p>
+</li>
+</ul>
+<p>Before you can use parent or derived questions in a study you must associate them with a question group, DCM, DCI, and study as usual in Oracle Clinical (see the <span class="italic">Oracle Clinical Creating a Study</span> manual).</p>
+<p>You do not have to use all the derived questions associated with a parent question in the Global Library. If you choose not to derive all the information defined in the question set, in the DCM question group you can simply not include the derived question mapped to the variable you do not need.</p>
+<p>However, the parent question and all its derived questions you do need must be in the same question group.</p>
+<p>All questions are visible in the data entry form, but only the parent question is enterable. When values are derived for the derived questions during Batch Validation, they are displayed in the data entry form. You can reference their values as you can any other question response values, in Oracle Clinical data extract and validation procedures.</p>
+<p>You can associate the same question set with multiple parent questions in the same DCM.</p>
+<a id="CEGCHIIG"></a>
+<div id="TMSUG11347" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Planning Question Groups and DCMs for RDC Special Listings</h4>
+<p>If you are using Oracle Remote Data Capture (RDC) Release 4.5.3.10 or above, you can use Special Listings to display concomitant medications and adverse events by patient. (If you are using TMS to code any other type of data, you can display Special Listings for it too.)</p>
+<p>If RDC detects that any question in a DCM is a mapped to a TMS dictionary (is a parent question) it displays an additional item in the drop-down list of actions a user can take in the Home and Casebooks pages. By default, this item's text is: <code dir="ltr">Review</code> <code dir="ltr"><span class="codeinlineitalic">TMS_dictionary_name/DCM_name</span></code>. You can substitute other text (such as Adverse Events or ConMeds) for the dictionary name by defining a special type of Informative Note. This text appears on the Special Listings page as well; see <a href="defmisc.htm#CHDCHIAB">"RDC Action Informative Notes"</a>.</p>
+<p>When a user selects a patient and selects a dictionary/DCM combination, the Special Listings page displays the patient's responses to all questions that are mapped to that dictionary in that DCM, in every visit and CRF where the DCM has been collected. In addition, the Auxiliary Information field displays the question name and the patient's response for every other question in the question group that is defined as Displayed and not as Derived.</p>
+<p>In <a href="#CEGIBGEF">Figure 4-2, "RDC Special Listings Page"</a> the response to the parent question is displayed in the Verbatim Term column. In the Auxiliary Information column, the system displays all other nonderived, displayed questions in the same question group as the parent question; in this case, Start Date, End Date, and SAE (Yes/No).</p>
+<p>To optimize Special Listings behavior, plan Question Groups and DCMs as follows:</p>
+<ul>
+<li>
+<p><span class="bold">Question Groups</span>. Include any questions related to the parent question that you would like to have displayed with it in RDC Special Listings, and do not include any questions you do not want displayed.</p>
+</li>
+<li>
+<p><span class="bold">DCMs</span>. To enable viewing all adverse event or all concomitant medication data for a patient at the same time, use the same DCM to collect adverse event or conmed data in any DCI/CRF where you need to collect it.</p>
+</li>
+</ul>
+<div id="TMSUG11348" class="figure">
+<p class="titleinfigure"><a id="CEGIBGEF"></a>Figure 4-2 RDC Special Listings Page</p>
+<img width="601" height="168" src="img/rdc_spec_list.gif" alt="Description of Figure 4-2 follows" /><br />
+<a id="sthref231" href="img_text/rdc_spec_list.htm">Description of ''Figure 4-2 RDC Special Listings Page''</a><br />
+<br /></div>
+<!-- class="figure" --></div>
+<!-- class="sect3" -->
+<a id="CEGEGDEI"></a>
+<div id="TMSUG11349" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Adding Derived <a id="sthref232"></a>Questions to an Ongoing Study</h4>
+<p>If you initially do not include all the derived questions associated with a parent question and then decide midway through a study that you do want to derive that information, do the following:</p>
+<ol>
+<li>
+<p>Add the derived question to the DCM in the DCM's Question Group Questions window.</p>
+</li>
+<li>
+<p>In Oracle Clinical, from the <span class="bold">Plan</span> menu, select <span class="bold">TMS Domains</span>. The Maintain Domain Elements window opens.</p>
+</li>
+<li>
+<p>Select the project to which the DCM's study belongs, and click <span class="bold">Studies</span>. The Studies window opens.</p>
+</li>
+<li>
+<p>Select the study to which the DCM belongs.</p>
+</li>
+<li>
+<p>Click <span class="bold">Domain Elements</span>. The Domain Elements window opens.</p>
+</li>
+<li>
+<p>Select the dictionary referenced by the parent question's question set.</p>
+</li>
+<li>
+<p>Click <span class="bold">Force Rederivation</span>. During the next Batch Validation run, all the parent questions associated with the study will be reprocessed and the associated derived questions repopulated or, in the case of the new question, populated for the first time.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="i1002181"></a>
+<div id="TMSUG11350" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Linking an Oracle Clinical Study to TMS<a id="sthref233"></a></h2>
+<p>This section includes:</p>
+<ul>
+<li>
+<p><a href="#CEGHFBFJ">Linking a Project with a TMS Dictionary and Domain</a></p>
+</li>
+<li>
+<p><a href="#CEGBJIJI">Linking a Study to a TMS Dictionary and Domain</a></p>
+</li>
+<li>
+<p><a href="#CEGIDEAE">Using a New Version of a Dictionary for an Ongoing Study</a></p>
+</li>
+</ul>
+<p>In TMS, you access dictionaries through a domain. Many domains can have access to the same dictionary. Each domain can have a different combination of dictionaries, different classifications, different company terms, and different rules; see <a href="defdict.htm#i1009237">"Creating Domains and Assigning Dictionaries to Domains"</a>. You can specify a virtual dictionary&mdash;a dictionary at a specified point in time&mdash;for a domain; see <a href="defdict.htm#i1004785">"Virtual Dictionaries."</a></p>
+<p>In Oracle Clinical, you must define a TMS Domain Element. A TMS domain element<a id="sthref234"></a> specifies a TMS dictionary/domain combination and links that combination to an Oracle Clinical project or study. You must define a domain element for each dictionary/TMS domain combination used by a particular study or project.</p>
+<p>If all studies within a project use the same TMS domain for a particular dictionary, you can assign a domain element to the whole project. If a project's studies use different TMS domains for a particular dictionary, you must assign a domain element to each study separately.</p>
+<p>You can assign a domain element for one dictionary to the project, and domain elements for other dictionaries to the project's studies individually.</p>
+<p>You can link a single study to more than one TMS domain and/or more than one TMS dictionary. For example, the following is a valid configuration:</p>
+<ul>
+<li>
+<p>Study A&mdash;Domain A&mdash;Dictionary A</p>
+</li>
+<li>
+<p>Study A&mdash;Domain A&mdash;Dictionary B</p>
+</li>
+<li>
+<p>Study A&mdash;Domain B&mdash;Dictionary C</p>
+</li>
+</ul>
+<p>In addition, you can change the rendition of a particular TMS dictionary you are using for a study. For example, if you are coding against a MedDRA base dictionary, you can switch to any virtual dictionary that uses the same base dictionary. Using a virtual dictionary for coding enables you to continue using the same terms and relations even as the base dictionary in your installation upon which it is based is modified or updated.</p>
+<p class="subhead1"><a id="TMSUG11351"></a>Translation Derivation<a id="sthref235"></a></p>
+<p>If you have set up two versions of the same dictionary, each using a different language, you can derive a dictionary term from one and the corresponding translated term (with the same dictionary code) from the other dictionary. The dictionaries you use must both be active, and have exactly the same structure, including the same level short names.</p>
+<p>To do this, you define TMS domain elements that reference two domain/dictionary combinations: one for each language. In the domain element definition, you must call one dictionary the "Global Language" dictionary and the other the "Local Language" dictionary. Your choice for Global Language Dictionary must match the dictionary specified in question sets used in the study or project.</p>
+<p>If you are not setting up translation derivation, enter a Global dictionary and domain only. Leave the Local dictionary and domain information blank.</p>
+<p class="subhead2"><a id="TMSUG11352"></a>Rules</p>
+<p>The dictionaries you choose must satisfy these criteria:</p>
+<ul>
+<li>
+<p>Before you establish translation derivation for a TMS domain element, you must link the dictionaries you plan to use. See <a href="defdict.htm#BABGEBFF">"Defining a Translation Derivation Link"</a>.</p>
+</li>
+<li>
+<p>You can choose two base dictionaries or two virtual dictionaries in a TMS domain element, but not one of each.</p>
+</li>
+<li>
+<p>You can choose either the global or local dictionary as the coding dictionary. TMS will derive the translation values from the non-coding dictionary, and rederive these values if they change.</p>
+</li>
+</ul>
+<a id="CEGHFBFJ"></a>
+<div id="TMSUG11353" class="sect2">
+<h3 class="sect2">Linking a Project with a TMS Dictionary and Domain<a id="sthref236"></a></h3>
+<p>To link a project with a Global Language TMS dictionary and domain, and if necessary, a Local Language TMS dictionary and domain:</p>
+<ol>
+<li>
+<p>In Oracle Clinical, from the <span class="bold">Plan</span> menu, select <span class="bold">TMS Domains</span>.</p>
+</li>
+<li>
+<p>Highlight the project code you want.</p>
+</li>
+<li>
+<p>Click the <span class="bold">TMS Domain Elements</span> button.</p>
+</li>
+<li>
+<p>Under the <span class="bold">Global</span> heading:</p>
+<ul>
+<li>
+<p>Select the short name of the Global Language TMS dictionary from the list of values.</p>
+</li>
+<li>
+<p>Select the name of the Global Language TMS domain from the list of values.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Save.</p>
+</li>
+</ol>
+<p>If you need to use more than one dictionary or TMS domain in this project, define additional domain elements on the following lines.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You can delete a domain element for a project only if there are no classifications or omissions associated with it.</div>
+</div>
+<!-- class="sect2" -->
+<a id="CEGBJIJI"></a>
+<div id="TMSUG11354" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Linking a Study to a TMS Dictionary and Domain<a id="sthref237"></a></h3>
+<p>To link a study with a Global Language TMS dictionary and domain, and if necessary, a Local Language TMS dictionary and domain:</p>
+<ol>
+<li>
+<p>In Oracle Clinical, from the <span class="bold">Plan</span> menu, select <span class="bold">TMS Domains</span>.</p>
+</li>
+<li>
+<p>Highlight the project containing the study you want.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Studies</span> button.</p>
+</li>
+<li>
+<p>Highlight the study you want and click the <span class="bold">TMS Domain Elements</span> button.</p>
+</li>
+<li>
+<p>Under the <span class="bold">Global</span> heading:</p>
+<ul>
+<li>
+<p>Select the short name of the Global Language TMS dictionary from the list of values.</p>
+</li>
+<li>
+<p>Select the name of the Global Language TMS domain from the list of values.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>If you are not setting up translation derivation for this study at this site, skip this step.</p>
+<p>Under the <span class="bold">Local</span> heading:</p>
+<ul>
+<li>
+<p>Select the short name of the Local Language TMS dictionary from the list of values, which includes only dictionaries that have Translation Derivation Links to your selected Global Language Dictionary.</p>
+</li>
+<li>
+<p>Select the short name of the Local Language TMS domain from the list of values.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>To use the Global Language domain/dictionary combination as the coding dictionary for this study at this site, or if you are not setting up translation derivation, leave the <span class="bold">Coding Dictionary?</span> box selected. If you prefer to use the Local dictionary/domain combination as the coding dictionary, clear this box.</p>
+</li>
+<li>
+<p>Save.</p>
+</li>
+</ol>
+<p>If you need to use more than one dictionary or TMS domain in this study, define additional domain elements on the following lines.</p>
+<p>You can also remove a TMS domain element from a study by deleting its row from the TMS Domain Elements for Studies window. When you remove its domain element, the study inherits the domain element for the same dictionary assigned to its project.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You can delete a domain element for a study only if there are no classifications or omissions associated with it.</div>
+<p><a id="TMSUG11355"></a><span class="subhead3">Force <a id="sthref238"></a>Rederivation&nbsp;</span>The Force Rederivation button invokes a job that tags all records (parent question responses) in the study associated with the selected dictionary for rederivation during the next Batch Validation job. Normally the batch validation job processes only records that are new or changed. Use the Force Rederivation job when you have made structural changes related to TMS in an ongoing study, including:</p>
+<ul>
+<li>
+<p>Adding derived questions to a question set; see <a href="#CEGEGDEI">"Adding Derived Questions to an Ongoing Study"</a></p>
+</li>
+<li>
+<p>Using a new dictionary version that has a different level structure from the old version; see <a href="#CEGGCFBA">"Upgrading to a New Dictionary Version with a New Structure"</a></p>
+</li>
+<li>
+<p>Changing settings in the TMS_CONFIGURATION reference codelist, including CREATEGLOBALVTA, GLOVTAAPPRREQD, DOMVTAAPPRREQD, NONAPPRVTAUSED, ALLOWGLOVTAS, and AUTOGLOVTAS; see <a href="admin.htm#BAJCHBFJ">"Changing TMS_CONFIGURATION Settings After Data Has Been Processed"</a></p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="CEGIDEAE"></a>
+<div id="TMSUG11356" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Using a New Version of a Dictionary for an Ongoing Study</h3>
+<p>After you link a project or study to an external dictionary, the dictionary vendor may issue a new version of the dictionary; see <a href="dict_upg.htm#BABGFFBD">Chapter 8, "Upgrading to a New Dictionary Version"</a> for information on TMS upgrade features.</p>
+<a id="CEGHHIID"></a>
+<div id="TMSUG11357" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Upgrading to a New Dictionary Version with the Same Structure</h4>
+<p>If the new dictionary version does not involve any changes to the dictionary's structure, you do not need to make any changes to your project or study definitions in Oracle Clinical.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CEGGCFBA"></a>
+<div id="TMSUG11358" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Upgrading to a <a id="sthref239"></a>New Dictionary Version with a New Structure</h4>
+<p>If the new version does include changes to the dictionary structure&mdash;such as adding or removing a level, changing a level's name, or changing the relations between the levels&mdash;and you want to use the new version in an ongoing study, you must redefine the new dictionary version as if it were a different dictionary (see <a href="defdict.htm#BABEIAHC">Chapter 6, "Defining and Loading Dictionaries"</a>), relink your project or study, and redefine the questions and question sets used:</p>
+<ol>
+<li>
+<p>For each question set used in each study, define a new question set referencing the dictionary version with the new structure.</p>
+</li>
+<li>
+<p>For each parent and derived question used in each study, create a new question. Add a question set referencing the new dictionary version to each parent question and associate new derived questions with the question set variables.</p>
+</li>
+<li>
+<p>Create a new TMS Domain Element with the new dictionary version.</p>
+</li>
+<li>
+<p>Add each new question to the same study question group(s) as the question it is replacing and mark the old questions as not collected.</p>
+</li>
+<li>
+<p>For the old questions, deselect <span class="bold">Collect in Study</span> and <span class="bold">Collect in Subset</span>. For new questions, select <span class="bold">Collect in Study</span> and, if you want the question to be displayed in data entry screens, select <span class="bold">Collect in Subset</span>.</p>
+</li>
+<li>
+<p>Edit the DCM layout and move the layout to production.</p>
+</li>
+<li>
+<p>Use Mass Changes to copy existing responses for the old parent question to the new parent question.</p>
+</li>
+<li>
+<p>From the TMS Domain Elements window, select the study, navigate to the TMS Domain Elements for Study window, and click <span class="bold">Force Rederivation</span>.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If you prefer, you can perform this step from the TMS API instead. The procedure ocl_tms_pack.SetLastTMSDerivTS checks for changes in a study's responses since a date that you specify, then marks those changed responses for rederivation. See the <span class="italic">Oracle Thesaurus Management System Technical Reference Manual</span> for specific parameters and instructions.</div>
+</li>
+<li>
+<p>Run Batch Validation for the study.</p>
+</li>
+</ol>
+<p>After you complete these steps, the Autoclassification process uses the new dictionary when trying to classify verbatim terms.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="i1002290"></a>
+<div id="TMSUG11359" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Accessing Oracle Clinical Data in TMS<a id="sthref240"></a></h2>
+<p>Oracle Clinical sends information to TMS about the origin of each verbatim term occurrence. This information is stored in the TMS database, allowing you to query on Oracle Clinical-specific information within TMS. This external system information is available in the following TMS windows:</p>
+<ul>
+<li>
+<p>Classify VT Omissions</p>
+</li>
+<li>
+<p>Approve VTAs</p>
+</li>
+<li>
+<p>Approve Action Assignments</p>
+</li>
+<li>
+<p>Browse VT Classification Data</p>
+</li>
+<li>
+<p>High-Level Reclassification</p>
+</li>
+<li>
+<p>Reclassify Verbatim Terms</p>
+</li>
+</ul>
+<p>The information includes the following database columns: <span class="bold">Project</span>, <span class="bold">Study</span>, <span class="bold">DCM</span>, <span class="bold">Document Number</span>, <span class="bold">Visit</span>, <span class="bold">Patient</span>, <span class="bold">Discrepancy ID</span>, and <span class="bold">Investigator</span>. In addition, you can choose to make details available for any of the above columns. This requires building an Oracle Clinical view and granting TMS users access privileges to the view. See <a href="integ.htm#CHDCBEBE">"Define Column Details"</a> for more information.</p>
+</div>
+<!-- class="sect1" -->
+<a id="i1002301"></a>
+<div id="TMSUG11360" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Setting Integration Reference Codelist Values<a id="sthref241"></a></h2>
+<p>You must set values in four reference codelists in Oracle Clinical that determine aspects of the TMS-Oracle Clinical interaction:</p>
+<ul>
+<li>
+<p><a href="#CEGFFBHI">OCL_OPTIONS_TYPE_CODE</a></p>
+</li>
+<li>
+<p><a href="#CEGDFEEB">TMS_OPTIONS</a></p>
+</li>
+<li>
+<p><a href="#CEGCBGBE">DISCREPANCY REV STATUS CODE</a></p>
+</li>
+<li>
+<p><a href="#CEGIEEIE">OCL_STATE</a></p>
+</li>
+</ul>
+<a id="CEGFFBHI"></a>
+<div id="TMSUG11361" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">OCL_OPTIONS_TYPE_CODE<a id="sthref242"></a><a id="sthref243"></a></h3>
+<p>The OCL_OPTIONS_TYPE_CODE installation reference codelist contains entries for optional subsystems that may be available to Oracle Clinical. To use TMS with Oracle Clinical, the short value TMS_INSTALLED must be set to Y. This value is set by a script during installation.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CEGDFEEB"></a>
+<div id="TMSUG11362" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">TMS_OPTIONS<a id="sthref244"></a><a id="sthref245"></a></h3>
+<p>This local reference codelist contains TMS-specific options. Currently the only option defined is FIRST_REVIEW. If the Long Value for this option is set to Y, and the <span class="bold">Review Before TMS</span> setting is also set to Y in the question set, then the First Review for a thesaurus omission happens in the Oracle Clinical Discrepancy Management System, rather than in TMS. For more information on the interaction between the Oracle Clinical Discrepancy Management System and TMS, see <a href="#CEGCCIGE">"Setting First Review"</a>.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CEGCBGBE"></a>
+<div id="TMSUG11363" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">DISCREPANCY REV STATUS CODE<a id="sthref246"></a> <a id="sthref247"></a></h3>
+<p>This installation reference codelist provides the codes used by the Oracle Clinical Discrepancy Management System. Three are used in processing TMS omissions:</p>
+<ul>
+<li>
+<p>TMS EVALUATION</p>
+</li>
+<li>
+<p>UNREVIEWED</p>
+</li>
+<li>
+<p>TMS IN PROGRESS</p>
+</li>
+</ul>
+<p>UNREVIEWED is active by default, but you must activate the two TMS-specific values before you begin using TMS.</p>
+<p>For more information on the interaction between the Oracle Clinical Discrepancy Management System and TMS, see <a href="#i1002229">"Managing the TMS/Oracle Clinical Workflow"</a>.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CEGIEEIE"></a>
+<div id="TMSUG11364" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><a id="sthref248"></a>OCL_STATE<a id="sthref249"></a></h3>
+<p>This local reference codelist includes one TMS-related short value: TMS_FAIL_BV_ACT. If it is active and its Long Value is set to Warn, then if Batch Validation encounters a serious error during its TMS processing, it will give a warning but will not cause the entire Batch Validation job to fail.</p>
+<p>If the Long Value is inactive or set to anything other than Warn, Batch Validation will fail if it encounters a serious error during TMS processing.</p>
+<p>If Batch Validation encounters a less serious error during TMS processing, it will issue a warning but not fail, regardless of the long value set for TMS_FAIL_BV_ACT.</p>
+<p>See <a href="#CEGCGGEB">"Effect of TMS Errors on Batch Validation"</a> for more information.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment25">
+<tr>
+<td class="cellalignment34">
+<table class="cellalignment30">
+<tr>
+<td class="cellalignment29"><a href="admin.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment29"><a href="integ.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;1999, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment36">
+<table class="cellalignment28">
+<tr>
+<td class="cellalignment29"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment29"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment29"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment29"><a href="index.htm"><img width="24" height="24" src="../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td class="cellalignment29"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

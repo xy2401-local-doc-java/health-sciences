@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Working with Reports</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2017-10-04T8:20:59Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Argus Analytics User's Guide" />
+<meta name="dcterms.identifier" content="E88812-01" />
+<meta name="dcterms.isVersionOf" content="OANEP" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Prev" href="report.htm" title="Previous" type="text/html" />
+<link rel="Next" href="part2.htm" title="Next" type="text/html" />
+<link rel="alternate" href="OANEP.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="OANEP.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="OANEP.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">7/16</span> <!-- End Header -->
+<div id="OANEP547" class="chapter"><a id="BCGJEGJF"></a>
+<h1 class="chapter"><span class="secnum">3</span> Working with Reports</h1>
+<p>Using Oracle BI Analysis, you can run or display predefined reports (delivered with Oracle Argus Analytics), and you can also create or modify custom reports.</p>
+<a id="CIHDGFAJ"></a>
+<div id="OANEP548" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">3.1</span> Pre-defined Reports</h2>
+<p>Oracle Argus Analytics is delivered with a bunch of pre-defined reports. A subset of these reports is displayed on your dashboard pages, based on the user group you are assigned to.</p>
+<p>A report can contain data in a tabular format, pivot table, or graph. You can filter the data visible on the report based on certain criteria such as Program, Study, Users, User Group, etc. These filters are called <span class="italic">prompts</span>. Some reports let you drill down to a more detailed report.</p>
+<p>The following is a list of some report-related tasks that you can perform:</p>
+<ul>
+<li>
+<p>Create and modify reports</p>
+</li>
+<li>
+<p>Refresh the results</p>
+</li>
+<li>
+<p>Print and Save reports</p>
+</li>
+<li>
+<p>Add reports to the briefing book</p>
+</li>
+<li>
+<p>Copy reports</p>
+</li>
+</ul>
+<p><span class="bold">See Also:</span></p>
+<ul>
+<li>
+<p><a href="report.htm#CIHDEDEH">Chapter 2, "Using Oracle Argus Analytics"</a> for more information about report-related tasks.</p>
+</li>
+<li>
+<p><a href="dash_reps.htm#CIHDDIBD">Appendix A, "Dashboards and Reports"</a> for more information about predefined reports.</p>
+</li>
+<li>
+<p><span class="italic">Oracle Argus Analytics Installation Guide</span> for instructions on installing Oracle Argus Analytics.</p>
+</li>
+</ul>
+<div id="OANEP549" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref44"></a>
+<h3 class="sect2"><span class="secnum">3.1.1</span> Opening and Using Dashboards</h3>
+<p>Perform the following steps to open and use dashboards:</p>
+<ol>
+<li>
+<p>In the global header, click <span class="bold">Catalog</span> to view the Catalog page.</p>
+</li>
+<li>
+<p>Navigate to the dashboard and click the <span class="bold">Open</span> link. The dashboard is opened to the first Dashboard Page. If no content has been added, an Empty Dashboard Page notification message is displayed.</p>
+</li>
+<li>
+<p>This is an optional step - You may choose to perform any of the following tasks:</p>
+<ol>
+<li>
+<p>Display the dashboard in the Dashboard Builder for editing.</p>
+</li>
+<li>
+<p>Navigate among dashboard page by clicking the page tabs.</p>
+</li>
+<li>
+<p>Print a page.</p>
+</li>
+<li>
+<p>Refresh a page.</p>
+</li>
+</ol>
+</li>
+</ol>
+<p>Perform this to ensure that the refresh operation bypasses saved information in the Oracle BI Presentation Services cache and is issued to the Oracle BI Server for processing.</p>
+<p>When you select a specific dashboard or analysis, Presentation Services checks its cache to determine if the identical results have recently been requested. If so, Presentation Services returns the most recent results, thereby avoiding unnecessary processing by the BI Server and the back-end database. If not, the analysis is issued to the BI Server for processing. You cannot force the analysis past the BI Server's cache.</p>
+<p>Administrators can configure cache settings that control what is cached and for how long. For information, refer to <span class="italic">Managing Performance Tuning and Query Caching</span> in the <span class="italic">Oracle Fusion Middleware System Administrator's Guide for Oracle Business Intelligence Enterprise Edition</span>.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BABHEIAC"></a>
+<div id="OANEP552" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">3.2</span> Custom Reports</h2>
+<p>You can create a custom report if you have been assigned the required permissions and responsibilities. If you prefer, you can copy a pre-defined report and use it as a template for the new report.</p>
+<p>Use the Oracle BI Answers user interface to create your own report. But before you proceed, consider the following points:</p>
+<ul>
+<li>
+<p>Do not modify a pre-defined report. If you do, your changes will be overwritten when a new release of Oracle Argus Analytics is installed. Alternatively, you can make a copy, and modify the copy.</p>
+</li>
+<li>
+<p>Define a Catalog Folder hierarchy that gives each Answers user, a unique folder tree. Limit the right to move requests into public folders to members of the Oracle Argus Analytics Administrators group.</p>
+</li>
+<li>
+<p>Limit the right to place requests onto shared dashboards to members of the Oracle Argus Analytics Administrators group.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect1" -->
+<a id="BABEABFF"></a>
+<div id="OANEP554" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">3.3</span> Viewing Reports With Your Apple iPhone</h2>
+<p>To download Oracle Business Intelligence Mobile, tap the App Store icon on the Home screen of your iPad or iPhone.</p>
+<p>Alternatively, you can download the application from your computer through iTunes and then synchronize your iPad or iPhone.</p>
+<p>Performs the following steps to download and install Oracle Business Intelligence Mobile:</p>
+<ul>
+<li>
+<p>On your device, go to iTunes, and search the App Store for 'Oracle'.</p>
+</li>
+<li>
+<p>From the displayed search results, select the Oracle Business Intelligence Mobile application, and tap the Install button.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment1">
+<tr>
+<td class="cellalignment8">
+<table class="cellalignment6">
+<tr>
+<td class="cellalignment5"><a href="report.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment5"><a href="part2.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment10">
+<table class="cellalignment4">
+<tr>
+<td class="cellalignment5"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment5"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment5"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment5"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

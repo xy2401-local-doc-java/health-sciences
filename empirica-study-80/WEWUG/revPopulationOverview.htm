@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 2017" />
+<title>Viewing a Study Population Overview</title>
+<link rel="StyleSheet" href="Empirica.css" type="text/css" />
+ <link rel="StyleSheet" href="Empirica.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Safety Review\nViewing a Study Population Overview");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\">");
+AddMasterBreadcrumbs("About_WebVDME.htm", "", "&gt;", "Overview", "home.htm");
+document.write("<a href=\"About_the_Safety_Review_Tab.htm\">Safety Review<\/a> &gt; Viewing a Study Population Overview<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('About_WebVDME.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Viewing a Study Population Overview</h1>
+<p>The Overview page presents a table of statistics and four graphs for the dosing categories (or ARM values) and time frame that you select as <a href="revSafetyReviewDialog.htm">safety review options</a>.</p>
+<p style="font-style: normal;">If no time frame is in effect, the table on the page includes the following rows for each dosing category:</p>
+<ul>
+<li class="Bullet1">Subjects &ndash; Total count of subjects in the study or study pool.</li>
+<li class="Bullet1">Subjects with adverse events &ndash; Total count of subjects in the study or pool who experienced an adverse event.</li>
+<li class="Bullet1">Subjects with serious adverse events &ndash; If there is an AE.AESER variable, subjects with adverse events for which its value is "Y" are counted in this row. If there is no AE.AESER variable in the study data, "NA" appears for all columns.</li>
+<li class="Bullet1">Subjects who dropped out &ndash; Subjects whose last disposition event is one for which: 1) the disposition event category DS.DSCAT does not contain the case-insensitive text string "MILESTONE" or "OTHER" and 2) the disposition event DS.DSDECOD is not the case-insensitive text string "COMPLETED" and it is not null. If there are multiple such disposition events with the same datetime, and none of them has the value "COMPLETED", the subject is considered to have dropped out.</li>
+</ul>
+<p class="BulletContinue1">If any subjects have multiple disposition events, a note appears below the table.</p>
+<p>If a <a href="About_Time_Frames.htm">time frame</a> is in effect, the table on the page includes the following rows for each dosing category:</p>
+<ul>
+<li class="Bullet1">Subjects in study/pool &ndash; Total count of subjects in the study or study pool (regardless of time frame).</li>
+<li class="Bullet1">Subjects participating at start of time frame &ndash; If the time frame does not have a well-defined start, this is the same as the "Subjects in study" count. If the time frame has a well-defined start, this count excludes subjects who <a href="Study_Dropouts.htm">dropped out</a> of the study before the start of the time frame.</li>
+<li class="Bullet1">Subjects with adverse events during time frame &ndash; Among the subjects participating at the time frame start, these are subjects who experienced adverse events during the time frame.</li>
+<li class="Bullet1">Subjects with serious adverse events during time frame &ndash; Among the subjects participating at the time frame start, these are subjects who experienced serious adverse events during the time frame. If there is an AE.AESER variable, subjects with adverse events for which its value is "Y" are counted in this row. If there is no AE.AESER variable in the data, "NA" appears for all columns.</li>
+<li class="Bullet1">Subjects who dropped out during time frame &ndash; Among the subjects participating at the time frame start, those whose last disposition event within the time frame is one for which: 1) the disposition event category DS.DSCAT does not contain the case-insensitive text string "MILESTONE" or "OTHER" and 2) the disposition event DS.DSDECOD does not contain the case-insensitive text string "COMPLETED" and is not null. If there are multiple such disposition events with the same datetime, and none of them contains "COMPLETED", the subject is considered to have dropped out.</li>
+</ul>
+<p class="BulletContinue1">If any subjects have multiple disposition events within the time frame, a note appears below the table.</p>
+<h2>Graphs</h2>
+<p>The four graphs show counts of subjects for each sex, race, age, and country. Only values that exist in the study data appear in a graph. If the time frame has a well-defined start, subjects who <a href="Study_Dropouts.htm">dropped out</a> of the study prior to the start of the time frame are not included in these graphs.</p>
+<p>Note the following:</p>
+<ul>
+<li class="Bullet1">The band of color representing a dosing category that has very few members (relative to the total number of subjects) may not be visible in the graph.</li>
+<li class="Bullet1">If a default category breakdown for Age or Race has been defined for the study, it is used for the Age or Race graph. Otherwise, age or race values from the study data are used. In this case, a box plot for Age appears rather than a bar graph because, typically, there are too many age values in the study data to present in a bar graph. See <a href="Box_Plots.htm">Box Plots</a> for information about interpreting box plots.</li>
+</ul>
+<p class="Subhead">To view a study population overview:</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">1.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>When you go to the Safety Review tab, the Overview page appears by default. If you are on another page of the Safety Review tab, you can click <span class="Button">Overview</span> to display the Overview page.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">2.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>To <a href="revSafetyReviewDialog.htm">configure safety review</a>, click <span class="Button">Configure</span>.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">3.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>In the graphs, you can point to a segment of a bar (in a bar graph) or a region (in a box plot) to view information about what the segment or region represents.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">4.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>You can click a count in the table to <a href="About_Drilldown.htm">drill down</a> to a list of subjects included in the count. You can click a bar (in a bar graph) or a region (in a box plot) to drill down to a list of subjects represented by the bar or region.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">5.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>You can click <span class="Button">Print</span> to print the table or <span class="Button">Download</span> to <a href="tblDownload.htm">download the table</a>.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">6.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>To <a href="revDispositionSummary.htm">view a Disposition Summary</a>, click <span class="Button">Disposition Summary</span>.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">7.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>To <a href="exposurePlotDisplay.htm">view an Exposure Summary</a>, click <span class="Button">Exposure Summary</span>.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">8.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Click <span class="Button">AEs</span>, <span class="Button">Labs</span>, <span class="Button">ECGs</span>, or <span class="Button">Vitals</span> at the top of the page to go to those pages.</p>
+
+<p class="ListNote1"><span style="font-weight: bold;">Note:</span> If you click <span class="Button">ECGs</span>, an up-to-date <a href="Automatic_Screening_and_Issue_List.htm">issue list</a> must exist for the time frame that is selected as a safety review configuration option. If the issue list needs to be created or updated, a message informs you and provides the opportunity to create or update the issue list for that time frame and any other time frames.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">9.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>If a preparatory analysis specification (named <a href="BASIC_SCREENING_Analysis_Specification.htm">$$$BASIC$$$SCREENING$$$</a>) has been run and you have configured safety review to use a dosing category breakdown and time frame for which screening results exist, you can click <span class="Button">Screening Results</span> to <a href="scrResultsTable_screening.htm">view screening results</a><span style="font-style: italic;"><i>.</i></span></p>
+
+<p class="ListNote1"><span style="font-weight: bold;">Note:</span> If the configuration option for maximum or most recent change from baseline is set differently than the setting that was used to generate screening results, a message warns you of this.</p>
+ <div style="width: 100%; position: relative;" id="footer">
+	<p style="margin-top: 20pt; color: #808080;">Copyright &copy; 2002, 2017, 
+	 Oracle and/or its affiliates. All rights reserved.</p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>
+<footer>
+</footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+
+</body>
+</html>
+<footer>
+</footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+<script>$(document).foundation();</script>
+</body>
+</html>

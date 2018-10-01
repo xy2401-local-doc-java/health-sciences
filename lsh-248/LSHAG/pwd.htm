@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Setting Profile Values</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2018-05-25T8:2:33Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Life Sciences Data Hub System Administrator's Guide" />
+<meta name="dcterms.identifier" content="E95829-01" />
+<meta name="dcterms.isVersionOf" content="LSHAG" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2006, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="adapter.htm" title="Previous" type="text/html" />
+<link rel="Next" href="lookup.htm" title="Next" type="text/html" />
+<link rel="alternate" href="LSHAG.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="LSHAG.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="LSHAG.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">6/24</span> <!-- End Header -->
+<div id="LSHAG163" class="chapter"><a id="CIHDGAJG"></a>
+<h1 class="chapter"><span class="secnum">3</span> Setting Profile Values</h1>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#CIHCCCHE">How to Log In to Oracle Applications Profile Forms</a></p>
+</li>
+<li>
+<p><a href="#CIHICHEE">Setting Native Client Encoding</a></p>
+</li>
+<li>
+<p><a href="#CIHCDBCA">Using Character Semantics for Work Area Table Installation</a></p>
+</li>
+<li>
+<p><a href="#CIHJAHBC">Gathering Work Area Schema Statistics</a></p>
+</li>
+<li>
+<p><a href="#CIHHFHJD">Creating a New Tablespace for Work Area Schema Objects</a></p>
+</li>
+<li>
+<p><a href="#CIHDECBB">Setting the Default Value for: Force Output Validation Status to Development</a></p>
+</li>
+<li>
+<p><a href="#CIHIGHDF">Setting the Maximum Number of Nested Domains</a></p>
+</li>
+<li>
+<p><a href="#CIHHBHHG">Adding the Direct SQL Option to SAS Libraries</a></p>
+</li>
+<li>
+<p><a href="#CIHFFFAH">Allowing User Preferences for SAS Clients</a></p>
+</li>
+<li>
+<p><a href="#BHBCBJDI">Set Processing Type for OC Data Extract Incremental Adapter</a></p>
+</li>
+<li>
+<p><a href="#BHBEHBAE">Turn debugging on or off</a></p>
+</li>
+<li>
+<p><a href="#CIHEEJCF">Setting Password Requirements</a></p>
+</li>
+<li>
+<p><a href="#BHBFCJCB">Oracle LSH: BIP Endpoint</a></p>
+</li>
+<li>
+<p><a href="#CIHDCDCD">Attachment File Upload Restriction Default</a></p>
+</li>
+</ul>
+<p>Oracle Applications includes a set of profiles whose settings affect the way your application looks and behaves. You must have the System Administrator responsibility to set profile values at the site level.</p>
+<p>For further information, see the <span class="italic">Oracle E-Business Suite System Administrator's Guide - Maintenance</span> at <code dir="ltr"><a href="http://download.oracle.com/docs/cd/B53825_08/current/acrobat/121samg.pdf">http://download.oracle.com/docs/cd/B53825_08/current/acrobat/121samg.pdf</a><a href=""></a></code>.</p>
+<a id="CIHCCCHE"></a>
+<div id="LSHAG165" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">How to Log In to Oracle Applications Profile Forms</h2>
+<ol>
+<li>
+<p>Open your Oracle LSH URL.</p>
+</li>
+<li>
+<p>Log on with the system administrator account. An E-Business Suite screen opens.</p>
+</li>
+<li>
+<p>In the Main Menu pane, expand the <span class="bold">System Administrator</span> (not System Administration) node, then the <span class="bold">Profile</span> node, and then click <span class="bold">System</span>.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+This user interface requires Java 6 Update 7 (1.6.0.0.7). If you do not have it installed, you can download it from <code dir="ltr"><a href="http://www.oracle.com/technetwork/java/javase/archive-139210.html">http://www.oracle.com/technetwork/java/javase/archive-139210.html</a><a href=""></a></code>. To use this feature, you must accept all warnings.</div>
+<p>A new browser screen opens with several windows open and the Find System Profile Values window on top.</p>
+<div class="infobox-note">
+<p class="notep1">Tip:</p>
+If you lose the Find System Profiles window at any point, click the Search icon in the toolbar or click System Profiles in the Top Ten list.</div>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="CIHICHEE"></a>
+<div id="LSHAG1788" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Setting Native Client Encoding</h2>
+<p>The value for this profile determines the encoding used when uploading and downloading files from the client. It must be set to UTF-8. The system administrator can set it at the site level. Individual users (or the system administrator) can set it at the user level in the Oracle LSH User Preferences user interface. The user setting overrides the site setting.</p>
+<p>The shipped default value is WE8MSWIN1252.</p>
+<p>To change the default value, do the following:</p>
+<ol>
+<li>
+<p>Log in. See <a href="#CIHCCCHE">"How to Log In to Oracle Applications Profile Forms"</a>.</p>
+</li>
+<li>
+<p>In the <span class="bold">Profile</span> field, enter <code dir="ltr">FND: Native Client Encoding</code> or some part of that string followed by the wild card: <code dir="ltr">%</code></p>
+</li>
+<li>
+<p>Click <span class="bold">Find</span>. The System Profiles pop-up window appears with the profile displayed.</p>
+</li>
+<li>
+<p>Click in the <span class="bold">Site</span> column. An ellipsis (<span class="bold">...</span>) appears on the right-hand side of the field.</p>
+</li>
+<li>
+<p>Click the ellipsis (<span class="bold">...</span>). A pop-up box appears.</p>
+</li>
+<li>
+<p>Click <span class="bold">UTF-8</span> and then <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>In the File menu, select <span class="bold">Save and Proceed</span>. The system displays a message that the transaction is complete.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>. The transaction message pop-up disappears.</p>
+</li>
+<li>
+<p>Close the window.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="CIHCDBCA"></a>
+<div id="LSHAG1789" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Using Character Semantics for Work Area Table Installation</h2>
+<p>If your data includes multibyte unicode characters, your data may sometimes not fit into character columns in the Oracle LSH Table instances you create because you are using byte semantics (which is the default behavior). You can set this profile to Yes to use character semantics instead of byte semantics across your Oracle LSH installation.</p>
+<p>Using byte semantics, a character column's length is the same as the number of bytes the column can contain. For example, a character column with a length of 2 can contain either two 1-byte characters or one 2-byte character, but it cannot contain one 2-byte character and one 1-byte character together. If you try to write more bytes of data into a column than it can hold, you get an error like <code dir="ltr">ORA-12899: value too large for column ??? (actual: 3, maximum: 2)</code>.</p>
+<p>Using character semantics, the column length is the same as the number of characters&mdash;including multibyte characters&mdash;the column can contain. For example, a character column with a length of 2 can store two 1-byte characters, two 2-byte characters, or one of each. Oracle Applications always uses byte semantics, but Oracle Warehouse Builder supports character semantics as well.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The maximum size of Oracle character columns is 4000 bytes regardless of whether you use byte or character semantics. A character column with a length of 4000 can store 4000 bytes&mdash;for example, 4000 1-byte characters or 2000 2-byte characters&mdash;but the total number of bytes cannot exceed 4000 using either byte or character semantics.</div>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The type of semantics in effect at the time a Table instance is first installed or reinstalled during a Full Work Area installation determines the type of semantics the Table instance uses.
+<p>A Table instance first installed using byte semantics (when Use Character Semantics is set to No) continues to use byte semantics even if you change the profile value to Yes and even if you reinstall the Work Area using an Upgrade installation. To apply character semantics to the Table instance you must do an installation of type Full. <span class="bold">Full installation deletes the data in the Table instance.</span></p>
+<p>Similarly, if you first install a Table instance when Use Character Semantics is set to Yes, it continues to use character semantics even if you set the profile value back to No&mdash;until you do a Full installation.</p>
+</div>
+<p>To use character semantics, do the following:</p>
+<ol>
+<li>
+<p>Log in. See <a href="#CIHCCCHE">"How to Log In to Oracle Applications Profile Forms"</a>.</p>
+</li>
+<li>
+<p>In the <span class="bold">Profile</span> field, enter <code dir="ltr">LSH: Use Character Semantics for Workarea Installation</code></p>
+</li>
+<li>
+<p>Click <span class="bold">Find</span>.</p>
+</li>
+<li>
+<p>In the <span class="bold">Site</span> column:</p>
+<ul>
+<li>
+<p>Select <code dir="ltr">YES</code> to use character semantics.</p>
+</li>
+<li>
+<p>Select <code dir="ltr">NO</code> to use byte semantics (the default value).</p>
+</li>
+</ul>
+</li>
+<li>
+<p>In the File menu, select <span class="bold">Save and Proceed</span>. The system displays a message that the transaction is complete.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>. The transaction message pop-up disappears.</p>
+</li>
+<li>
+<p>Click the <span class="bold">X</span> in the upper right corner of the System Profile Values window to close the window.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="CIHJAHBC"></a>
+<div id="LSHAG168" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Gathering Work Area Schema Statistics</h2>
+<p>You can set a profile to gather statistics on user-defined tables in a Work Area during the post-processing phase of job executions writing to tables. By default, Oracle LSH does not gather table statistics during job execution.</p>
+<p>If you set the profile value to <code dir="ltr">YES</code>, the system gathers statistics on any user-defined table that has no statistics or stale statistics.</p>
+<p>A table is considered to have stale statistics when it has been modified by more than 10% since statistics were last gathered. For example, if a table has 100 records and a job modifies (inserts, updates, or deletes) a total of 8 records, the system does not gather statistics during post-processing of the job. However, if the next job modifies 3 rows in the table, the cumulative number of rows modified since the last time statistics were gathered is 11, which is more than 10% of the original number of rows, and the system gathers the statistics during the post-processing phase of the second job.</p>
+<p>To set this value, do the following:</p>
+<ol>
+<li>
+<p>Log in. See <a href="#CIHCCCHE">"How to Log In to Oracle Applications Profile Forms"</a>.</p>
+</li>
+<li>
+<p>In the <span class="bold">Profile</span> field, enter <code dir="ltr">LSH: Gather Work Area Schema Statistics</code></p>
+</li>
+<li>
+<p>Click <span class="bold">Find</span>.</p>
+</li>
+<li>
+<p>In the <span class="bold">Site</span> column:</p>
+<ul>
+<li>
+<p>Select <code dir="ltr">YES</code> to gather statistics as described above</p>
+</li>
+<li>
+<p>Select <code dir="ltr">NO</code> if you do not want to gather statistics as described above</p>
+</li>
+</ul>
+</li>
+<li>
+<p>In the File menu, select <span class="bold">Save and Proceed</span>. The system displays a message that the transaction is complete.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>. The transaction message pop-up disappears.</p>
+</li>
+<li>
+<p>Click the <span class="bold">X</span> in the upper right corner of the System Profile Values window to close the window.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="CIHHFHJD"></a>
+<div id="LSHAG1790" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Creating a New Tablespace for Work Area Schema Objects</h2>
+<p>By default, Oracle LSH internal application tables and user-defined Work Area tables are all contained in the same 8K block size tablespace. As data grows or when there are huge data loads in progress, there is cache contention between the DMLs coming from LSH user interface and the DMLs from backend jobs, and user interface performance may be impacted.</p>
+<p>To resolve this, create a new tablespace with a different block size and use that tablespace for all Work Area schemas and objects. Tablespaces with different block sizes do not use the same buffer cache, so the cache contention is eliminated.</p>
+<p>For information on moving existing tables into the new tablespace, see My Oracle Support article ID 1518355.1.</p>
+<p>To set this value, do the following:</p>
+<ol>
+<li>
+<p>Create a new tablespace with a 16K block size (or another size that is different from 8K).</p>
+</li>
+<li>
+<p>Log in. See <a href="#CIHCCCHE">"How to Log In to Oracle Applications Profile Forms"</a>.</p>
+</li>
+<li>
+<p>In the <span class="bold">Profile</span> field, enter <code dir="ltr">LSH: Tablespace for Workarea schema objects</code></p>
+</li>
+<li>
+<p>Click <span class="bold">Find</span>.</p>
+</li>
+<li>
+<p>In the <span class="bold">Site Level</span> box, enter the name of the tablespace you created for this purpose. Be sure to use uppercase letters.</p>
+</li>
+<li>
+<p>In the File menu, select <span class="bold">Save and Proceed</span>. The system displays a message that the transaction is complete.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>. The transaction message pop-up disappears.</p>
+</li>
+<li>
+<p>Click the <span class="bold">X</span> in the upper right corner of the System Profile Values window to close the window.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="CIHDECBB"></a>
+<div id="LSHAG166" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Setting the Default Value for: Force Output Validation Status to Development</h2>
+<p>Oracle LSH Program definitions have an attribute that determines how all outputs of all instances of that Program definition receive their initial validation status. You can set the default value in a profile.</p>
+<p>In a Program definition, if this attribute is set to <span class="bold">Yes</span>, outputs of instances of the Program definition are always created with a validation status of Development. If set to <span class="bold">No</span>, the outputs inherit the validation status of the Execution Setup that produced them, which in turn can inherit its validation status from the Program instance.</p>
+<p>The shipped default value is <span class="bold">No</span>.</p>
+<p>To change the default value, do the following:</p>
+<ol>
+<li>
+<p>Log in. See <a href="#CIHCCCHE">"How to Log In to Oracle Applications Profile Forms"</a>.</p>
+</li>
+<li>
+<p>In the <span class="bold">Profile</span> field, enter <code dir="ltr">LSH: Force Output Validation Status to Development</code> or some part of that string followed by the wild card: <code dir="ltr">%</code></p>
+</li>
+<li>
+<p>Click <span class="bold">Find</span>. The System Profiles pop-up window appears with the profile displayed.</p>
+</li>
+<li>
+<p>Click in the <span class="bold">Site</span> column. An ellipsis (<span class="bold">...</span>) appears on the right-hand side of the field.</p>
+</li>
+<li>
+<p>Click the ellipsis (<span class="bold">...</span>). A pop-up box appears.</p>
+</li>
+<li>
+<p>Click <span class="bold">Yes</span> or <span class="bold">No</span> and then <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>In the File menu, select <span class="bold">Save and Proceed</span>. The system displays a message that the transaction is complete.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>. The transaction message pop-up disappears.</p>
+</li>
+<li>
+<p>Close the window.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="CIHIGHDF"></a>
+<div id="LSHAG167" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Setting the Maximum Number of Nested Domains</h2>
+<p>In Oracle LSH you define Library Domains to contain object definitions, Application Areas and, if you allow Domain nesting, other Domains. See "Designing an Organizational Structure" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Implementation Guide</span></span> for further information. Use the Domain Nest Value profile to determine whether Domain nesting is allowed in your implementation and, if it is, how many levels of Domain nesting are allowed:</p>
+<ul>
+<li>
+<p>If the domain nest value is set to 1, no nesting of Domains is allowed. Your implementation cannot have Domains contained in other Domains.</p>
+</li>
+<li>
+<p>If the value is set to 2, which is the default, a top-level Domain can contain a child Domain, but the child Domain cannot contain a Domain.</p>
+</li>
+<li>
+<p>If the value is set to 3, child Domains can contain Domains, but those Domains cannot contain other Domains. The maximum setting is 9.</p>
+</li>
+</ul>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The setting of the domain nest value profile does not affect the total number of Domains allowed, only the number of nested levels allowed. For example, if the value is set to 2, child Domains cannot contain Domains. However, parent Domains can contain any number of child Domains.</div>
+<p>To change the maximum number of nested Domains allowed in your Oracle LSH implementation from the default value of 2, do the following:</p>
+<ol>
+<li>
+<p>Log in. See <a href="#CIHCCCHE">"How to Log In to Oracle Applications Profile Forms"</a>.</p>
+</li>
+<li>
+<p>Click in the <span class="bold">Profile</span> enter <code dir="ltr">LSH: Domain Nesting Levels</code> or some part of that string followed by the wild card: <code dir="ltr">%</code></p>
+</li>
+<li>
+<p>Click <span class="bold">Find</span>. The System Profiles pop-up window appears with the profile displayed.</p>
+</li>
+<li>
+<p>In the <span class="bold">Site</span> column, enter any value between 1 and 9, inclusive.</p>
+</li>
+<li>
+<p>In the File menu, select <span class="bold">Save and Proceed</span>. The system displays a message that the transaction is complete.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>. The transaction message pop-up disappears.</p>
+</li>
+<li>
+<p>Close the window.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="CIHHBHHG"></a>
+<div id="LSHAG169" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Adding the Direct SQL Option to SAS Libraries</h2>
+<p>This profile allows you to add the SAS option DIRECT_SQL=NOWHERE to your SAS libraries. This SAS option prevents SAS WHERE clauses and PROC SQL-generated or -specified WHERE clauses from being passed to the DBMS for processing.</p>
+<p>The default value is null, which has the same effect as a setting of <code dir="ltr">NO</code>: the DIRECT_SQL=NOWHERE is not included in your SAS libraries.</p>
+<p>To add the option to your SAS libraries, do the following:</p>
+<ol>
+<li>
+<p>Log in. See <a href="#CIHCCCHE">"How to Log In to Oracle Applications Profile Forms"</a>.</p>
+</li>
+<li>
+<p>In the <span class="bold">Profile</span> field, enter <code dir="ltr">LSH: Include Direct SQL option to SAS library</code></p>
+</li>
+<li>
+<p>Click <span class="bold">Find</span>.</p>
+</li>
+<li>
+<p>In the <span class="bold">Site</span> column:</p>
+<ul>
+<li>
+<p>Select <code dir="ltr">YES</code> to add the SAS option DIRECT_SQL=NOWHERE to your SAS libraries</p>
+</li>
+<li>
+<p>Select <code dir="ltr">NO</code> if you do not want to add the option to your SAS libraries</p>
+</li>
+</ul>
+</li>
+<li>
+<p>In the File menu, select <span class="bold">Save and Proceed</span>. The system displays a message that the transaction is complete.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>. The transaction message pop-up disappears.</p>
+</li>
+<li>
+<p>Click the <span class="bold">X</span> in the upper right corner of the System Profile Values window to close the window.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="CIHFFFAH"></a>
+<div id="LSHAG1791" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Allowing User Preferences for SAS Clients</h2>
+<p>This profile allows you to set the default User Preference for SAS client across your site and stores individual users' preferences.</p>
+<p>Oracle LSH ships with a single value for the SAS IDE Client user preference: SAS PC, which supports PC SAS for Windows. If your users need to use a different SAS client, for example, SAS EG, you can extend the lookup <a href="lookup.htm#BABGJGCA">SAS IDE Client</a> to display additional clients on the Life Sciences Data Hub User Preferences screen. Users can then select the client they prefer.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If you do not set a default value, users are required to set a value in the User Preferences screen in order to launch any SAS client.</div>
+<p>To set the default SAS Integrated Development Environment (IDE) Client for your site, do the following:</p>
+<ol>
+<li>
+<p>Log in. See <a href="#CIHCCCHE">"How to Log In to Oracle Applications Profile Forms"</a>.</p>
+</li>
+<li>
+<p>In the <span class="bold">Profile</span> field, enter <code dir="ltr">LSH: SAS IDE Client</code></p>
+</li>
+<li>
+<p>Click <span class="bold">Find</span>.</p>
+</li>
+<li>
+<p>In the <span class="bold">Site</span> column:</p>
+<ul>
+<li>
+<p>Select <code dir="ltr">SAS_PC</code> to make PC SAS for Windows the default preference across your site.</p>
+</li>
+<li>
+<p>Select a different value&mdash;one you have entered through the <a href="lookup.htm#BABGJGCA">SAS IDE Client</a> lookup&mdash; to make that client the default.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>In the File menu, select <span class="bold">Save and Proceed</span>. The system displays a message that the transaction is complete.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>. The transaction message pop-up disappears.</p>
+</li>
+<li>
+<p>Click the <span class="bold">X</span> in the upper right corner of the System Profile Values window to close the window.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<div class="sect1"><!-- infolevel="all" infotype="General" --><a id="sthref8"></a>
+<h2 class="sect1">Set Default SAS Number Format</h2>
+<p>The default value in Oracle LSH for SAS number format is 8, which does not support precision. To change the default value to BEST, change the value of this profile to Yes.</p>
+<ol>
+<li>
+<p>Log in. See <a href="#CIHCCCHE">"How to Log In to Oracle Applications Profile Forms"</a>.</p>
+</li>
+<li>
+<p>In the <span class="bold">Profile</span> field, enter <code dir="ltr">LSH: Default SAS Number Format BEST</code>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Find</span>.</p>
+</li>
+<li>
+<p>In the <span class="bold">Site</span> column:</p>
+<ul>
+<li>
+<p>Select <code dir="ltr">No</code> to make the default SAS number format value equal to <span class="bold">8</span>. This is the default value.</p>
+</li>
+<li>
+<p>Select <code dir="ltr">Yes</code> to make the default SAS number format value equal to <span class="bold">BEST</span>, which supports precision in numbers and is the best value if you load files that do not have a SAS number format specified.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If you change this setting, running any existing Load Sets having target Table instances with Number columns that have the old default value of 8 will end with a warning if you load files that do not have a SAS number format specified. This is because the metadata comparison will show a difference between the source and target.</div>
+</li>
+</ul>
+</li>
+<li>
+<p>In the File menu, select <span class="bold">Save and Proceed</span>. The system displays a message that the transaction is complete.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>. The transaction message pop-up disappears.</p>
+</li>
+<li>
+<p>Click the <span class="bold">X</span> in the upper right corner of the System Profile Values window to close the window.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="BHBCBJDI"></a>
+<div id="LSHAG1792" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Set Processing Type for OC Data Extract Incremental Adapter</h2>
+<p>This profile allows you to set the default processing type for the incremental Oracle Clinical data extract adapter, which uses incremental-mode processing and is therefore faster than the regular OC data extract adapter, which uses full-mode processing. You can specify transactional processing with or without audit.</p>
+<ol>
+<li>
+<p>Log in. See <a href="#CIHCCCHE">"How to Log In to Oracle Applications Profile Forms"</a>.</p>
+</li>
+<li>
+<p>In the <span class="bold">Profile</span> field, enter <code dir="ltr">LSH: OC Incremental Adapter Default Processing Type</code></p>
+</li>
+<li>
+<p>Click <span class="bold">Find</span>.</p>
+</li>
+<li>
+<p>In the <span class="bold">Site</span> column:</p>
+<ul>
+<li>
+<p>Select <code dir="ltr">$PROCESSTYPES$TRANSWAUDIT</code> to use transactional processing with audit.</p>
+</li>
+<li>
+<p>Select <code dir="ltr">$PROCESSTYPES$TRANSWOAUDIT</code> to use transactional processing without audit.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>In the File menu, select <span class="bold">Save and Proceed</span>. The system displays a message that the transaction is complete.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>. The transaction message pop-up disappears.</p>
+</li>
+<li>
+<p>Click the <span class="bold">X</span> in the upper right corner of the System Profile Values window to close the window.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="BHBEHBAE"></a>
+<div id="LSHAG1793" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Turn debugging on or off</h2>
+<p>Enable or disable the recording of debugging statements for database processes. The setting applies to all users. The system reads the value of the profile once per user session, so you may need to restart the application tier for a changed setting to take effect.</p>
+<ol>
+<li>
+<p>Log in. See <a href="#CIHCCCHE">"How to Log In to Oracle Applications Profile Forms"</a>.</p>
+</li>
+<li>
+<p>In the <span class="bold">Profile</span> field, enter <code dir="ltr">LSH:ENABLE_DEBUGGING</code></p>
+</li>
+<li>
+<p>Click <span class="bold">Find</span>.</p>
+</li>
+<li>
+<p>In the <span class="bold">Site</span> column, enter:</p>
+<ul>
+<li>
+<p><code dir="ltr">Y</code> to enable debugging.</p>
+</li>
+<li>
+<p><code dir="ltr">N</code> to disable debugging.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>In the File menu, select <span class="bold">Save and Proceed</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="CIHEEJCF"></a>
+<div id="LSHAG170" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Setting Password Requirements</h2>
+<p>Oracle recommends that you use the profile settings described in this section to provide optimal security in login password usage, including:</p>
+<ul>
+<li>
+<p><a href="#CIHFEJCG">Setting Password Case Sensitivity (Required for Business Intelligence Publisher)</a></p>
+</li>
+<li>
+<p><a href="#CIHCDDFI">Setting Password Length Requirement</a></p>
+</li>
+<li>
+<p><a href="#CIHBEFHB">Setting "Hard to Guess" Requirement</a></p>
+</li>
+<li>
+<p><a href="#CIHCGBDB">Enabling "Forgot Your Password?" Functionality</a></p>
+</li>
+<li>
+<p><a href="#CIHBCFHF">Setting a Limit on Log-In Attempts</a></p>
+</li>
+<li>
+<p><a href="#CIHHBCBC">Setting a Time Limit on Password Reuse after Resetting Password</a></p>
+</li>
+</ul>
+<p>A password expiration utility is available if the System Administrator requires that all users convert to case sensitive passwords upon the next login. This utility expires all passwords in FND_USER, including that of SYSADMIN and default Vision accounts, and can be run as a SQL Script ($FND_TOP/sql/AFCPEXPIRE.sql) or as a Concurrent Program (FNDCPEXPIRE_SQLPLUS).</p>
+<p>For more information see the <span class="italic">Oracle E-Business Suite System Administrator's Guide - Maintenance</span> at <code dir="ltr"><a href="http://docs.oracle.com/cd/E18727_01/doc.121/e12894/T202991T202995.htm">http://docs.oracle.com/cd/E18727_01/doc.121/e12894/T202991T202995.htm</a><a href=""></a></code>.</p>
+<a id="CIHFEJCG"></a>
+<div id="LSHAG1794" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Setting Password Case Sensitivity (Required for Business Intelligence Publisher)</h3>
+<p>This profile must be set to Insensitive if you are using Oracle LSH Programs of type Business Intelligence Publisher to enable users to log in to BI Publisher using their single sign-on credentials.</p>
+<ol>
+<li>
+<p>Log in. See <a href="#CIHCCCHE">"How to Log In to Oracle Applications Profile Forms"</a>.</p>
+</li>
+<li>
+<p>In the <span class="bold">Profile</span> field, enter <code dir="ltr">Signon Password Case</code></p>
+</li>
+<li>
+<p>Click <span class="bold">Find</span>.</p>
+</li>
+<li>
+<p>In the <span class="bold">Site</span> column, use the drop-down list to replace the default value, Sensitive, with Insensitive.</p>
+</li>
+<li>
+<p>In the File menu, select <span class="bold">Save and Proceed</span>. The system displays a message that the transaction is complete.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>. The transaction message pop-up disappears.</p>
+</li>
+<li>
+<p>Click the <span class="bold">X</span> in the upper right corner of the System Profile Values window to close the window.</p>
+</li>
+</ol>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Passwords for existing user accounts must be reset after you change this setting.</div>
+</div>
+<!-- class="sect2" -->
+<a id="CIHCDDFI"></a>
+<div id="LSHAG171" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Setting Password Length Requirement</h3>
+<p>This profile determines the minimum number of characters required in a user's Oracle LSH login password. The default setting is 5. Oracle recommends a setting of 8 or more for use with Oracle LSH.</p>
+<p>To set the password length requirement, do the following:</p>
+<ol>
+<li>
+<p>Log in. See <a href="#CIHCCCHE">"How to Log In to Oracle Applications Profile Forms"</a>.</p>
+</li>
+<li>
+<p>In the <span class="bold">Profile</span> field, enter <code dir="ltr">Signon Password Length</code></p>
+</li>
+<li>
+<p>Click <span class="bold">Find</span>.</p>
+</li>
+<li>
+<p>In the <span class="bold">Site</span> column, replace the default value, 5, with <code dir="ltr">8</code> (or a higher number, if you choose).</p>
+</li>
+<li>
+<p>In the File menu, select <span class="bold">Save and Proceed</span>. The system displays a message that the transaction is complete.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>. The transaction message pop-up disappears.</p>
+</li>
+<li>
+<p>Click the <span class="bold">X</span> in the upper right corner of the System Profile Values window to close the window.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CIHBEFHB"></a>
+<div id="LSHAG172" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Setting "Hard to Guess" Requirement</h3>
+<p>This profile enforces requirements that make it more difficult to guess what another user's password might be. These requirements come as a package; you must either accept or reject the whole. Oracle recommends a setting of Yes (to accept the package) for use with Oracle LSH.</p>
+<p>To set the "Hard to Guess" requirement, do the following:</p>
+<ol>
+<li>
+<p>Log in. See <a href="#CIHCCCHE">"How to Log In to Oracle Applications Profile Forms"</a>.</p>
+</li>
+<li>
+<p>In the <span class="bold">Profile</span> field, enter <code dir="ltr">Signon Password Hard To Guess</code></p>
+</li>
+<li>
+<p>Click <span class="bold">Find</span>.</p>
+</li>
+<li>
+<p>Click in the <span class="bold">Site</span> column. An ellipsis (...) appears on the right-hand side of the field.</p>
+</li>
+<li>
+<p>Click the ellipsis (<span class="bold">...</span>). A pop-up box appears.</p>
+</li>
+<li>
+<p>Click <span class="bold">Yes</span> and then <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>In the File menu, select <span class="bold">Save and Proceed</span>. The system displays a message that the transaction is complete.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>. The transaction message pop-up disappears.</p>
+</li>
+<li>
+<p>Click the <span class="bold">X</span> in the upper right corner of the System Profile Values window to close the window.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CIHCGBDB"></a>
+<div id="LSHAG173" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Enabling "Forgot Your Password?" Functionality</h3>
+<p>For Oracle LSH, Oracle recommends a setting of 40 for the Local Login Mask profile. This setting displays a "Forgot your password?" link on the Login page. If the user clicks this link, the system loads a page where the user can enter his or her username.</p>
+<p>The user then receives an email stating, "Password reset requires approval." The user needs to click one of the choices "Approve" or "Reject" that automatically generate an email response. If the user ignores the notification, the request expires in four hours.</p>
+<p>To create the local login mask, do the following:</p>
+<ol>
+<li>
+<p>Log in. See <a href="#CIHCCCHE">"How to Log In to Oracle Applications Profile Forms"</a>.</p>
+</li>
+<li>
+<p>In the <span class="bold">Profile</span> field, enter <code dir="ltr">Local Login Mask</code></p>
+</li>
+<li>
+<p>Click <span class="bold">Find</span>.</p>
+</li>
+<li>
+<p>In the <span class="bold">Site</span> column, replace the default value, 32, with <code dir="ltr">40</code>.</p>
+</li>
+<li>
+<p>In the File menu, select <span class="bold">Save and Proceed</span>. The system displays a message that the transaction is complete.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>. The transaction message pop-up disappears.</p>
+</li>
+<li>
+<p>Click the <span class="bold">X</span> in the upper right corner of the System Profile Values window to close the window.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CIHBCFHF"></a>
+<div id="LSHAG174" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Setting a Limit on Log-In Attempts</h3>
+<p>This profile option determines the maximum number of logins a user can attempt before the user's account is disabled. To reinstate the account a system administrator must unlock the account and reset the password. For example, if the value set is 3, it will lock the account if the user enters incorrect password 3 times.</p>
+<p>To set a limit on login attempts, do the following:</p>
+<ol>
+<li>
+<p>Log in. See <a href="#CIHCCCHE">"How to Log In to Oracle Applications Profile Forms"</a>.</p>
+</li>
+<li>
+<p>In the <span class="bold">Profile</span> field, enter <code dir="ltr">Signon Password Failure Limit</code></p>
+</li>
+<li>
+<p>Click <span class="bold">Find</span>.</p>
+</li>
+<li>
+<p>In the <span class="bold">Site</span> column, enter the limit you choose; for example: <code dir="ltr">3</code></p>
+</li>
+<li>
+<p>In the File menu, select <span class="bold">Save and Proceed</span>. The system displays a message that the transaction is complete.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>. The transaction message pop-up disappears.</p>
+</li>
+<li>
+<p>Click the <span class="bold">X</span> in the upper right corner of the System Profile Values window to close the window.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CIHHBCBC"></a>
+<div id="LSHAG175" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Setting a Time Limit on Password Reuse after Resetting Password</h3>
+<p>This profile will set the minimum number of days that a user must wait after changing his or her password before being allowed to reuse a password. The user can use the new password once and then must wait the number of days you set before he or she can reuse the password.</p>
+<p>For example, if the value of this profile is set to 5, a user who changes his or her password cannot reuse the password until 5 days after they reset.</p>
+<p>If the profile value is set to the number 0, then there is no restriction on password reuse.</p>
+<p>To set a limit on login attempts, do the following:</p>
+<ol>
+<li>
+<p>Log in. See <a href="#CIHCCCHE">"How to Log In to Oracle Applications Profile Forms"</a>.</p>
+</li>
+<li>
+<p>In the <span class="bold">Profile</span> field, enter <code dir="ltr">Signon Password No Reuse</code></p>
+</li>
+<li>
+<p>Click <span class="bold">Find</span>.</p>
+</li>
+<li>
+<p>In the <span class="bold">Site</span> column, enter the non-negative integer you choose; for example, <code dir="ltr">5</code> or <code dir="ltr">0</code></p>
+</li>
+<li>
+<p>In the File menu, select <span class="bold">Save and Proceed</span>. The system displays a message that the transaction is complete.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>. The transaction message pop-up disappears.</p>
+</li>
+<li>
+<p>Click the <span class="bold">X</span> in the upper right corner of the System Profile Values window to close the window.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BHBFCJCB"></a>
+<div id="LSHAG176" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Oracle LSH: BIP Endpoint</h2>
+<p>This profile stores the namespace value of Oracle BI Publisher webservices:</p>
+<p><code dir="ltr">services/PublicReportService_v11</code></p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Do not change this profile in any way. Oracle LSH uses this profile for Oracle LSH BI Publisher Programs.</div>
+</div>
+<!-- class="sect1" -->
+<a id="CIHDCDCD"></a>
+<div id="LSHAG1795" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Attachment File Upload Restriction Default</h2>
+<p>This profile allows more file types to be uploaded than are allowed under E-Business Suite recommended security settings. Changing the setting is required to support submitting Load Sets and creating Table Descriptors from some types of files, including sasb7dat files.</p>
+</div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment1">
+<tr>
+<td class="cellalignment8">
+<table class="cellalignment6">
+<tr>
+<td class="cellalignment5"><a href="adapter.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment5"><a href="lookup.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2006, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment10">
+<table class="cellalignment4">
+<tr>
+<td class="cellalignment5"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment5"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment5"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment5"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

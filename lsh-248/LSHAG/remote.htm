@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Registering Locations and Connections</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2018-05-25T8:2:33Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Life Sciences Data Hub System Administrator's Guide" />
+<meta name="dcterms.identifier" content="E95829-01" />
+<meta name="dcterms.isVersionOf" content="LSHAG" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2006, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="lookup.htm" title="Previous" type="text/html" />
+<link rel="Next" href="audit.htm" title="Next" type="text/html" />
+<link rel="alternate" href="LSHAG.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="LSHAG.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="LSHAG.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">8/24</span> <!-- End Header -->
+<div id="LSHAG193" class="chapter"><a id="BABCECCI"></a>
+<h1 class="chapter"><span class="secnum">5</span> Registering Locations and Connections</h1>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#BABHFBBJ">About Remote Locations and Connections</a></p>
+</li>
+<li>
+<p><a href="#BABBCEFJ">Defining Remote Locations</a></p>
+</li>
+<li>
+<p><a href="#BABIFDAG">Defining Connections</a></p>
+</li>
+<li>
+<p><a href="#BABJDIEH">Searching for Remote Locations and Connections</a></p>
+</li>
+</ul>
+<a id="BABHFBBJ"></a>
+<div id="LSHAG194" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">About Remote Locations and Connections</h2>
+<p>To use an Oracle-technology source data system adapter (the general Oracle Tables and Views adapter and the Oracle Clinical adapters) you must create a database link and define one or more Remote Locations in the Oracle Life Sciences Data Hub (Oracle LSH) user interface for each actual remote location, and define one or more Connections giving a valid username and password for each Remote Location. All passwords are encrypted in Oracle LSH.</p>
+<p>A user must select both a Remote Location and Connection to define and to run an Oracle-technology Load Set.</p>
+<p>There are two types of Connections:</p>
+<ul>
+<li>
+<p><span class="bold">User Connections</span> are created by users to external databases for which they have a valid username and password. Users can see and use only the User Connections they have created.</p>
+</li>
+<li>
+<p><span class="bold">Shared Connections</span> are created by an administrator. They also require a valid username and password to the external database, but are available for use to any user who belongs to a user group assigned to the Adapter Area for which the Remote Location is defined.</p>
+</li>
+</ul>
+<p>All the users in a user group assigned to an Adapter Area have access to any Remote Locations defined for that adapter. They can then define their own User Connection based on their personal username and password on the external database, or use a Shared Connection that the administrator has defined; see <a href="#BABIFDAG">"Defining Connections"</a>.</p>
+<p>For example, if a user is a member of a user group assigned to the general Oracle Tables and Views Adapter Area and the user has Read privileges on a particular Oracle database, then the user can create a Connection to the Remote Location defined for that database. The user can also use any shared Connections the administrator has defined for the same Remote Location.</p>
+<p>The CDR_SYS_ADMIN function role is required to define Remote Locations and Connections.</p>
+<p>You can add Remote Locations and Connections at any time.</p>
+<p><a id="LSHAG195"></a><span class="subhead3">Security&nbsp;</span>Remote Locations and Connections are defined objects with the same security requirements as other defined objects. To see a Remote Location and Connection during Load Set definition or execution, a user must be a member of a user group with access to the Remote Location and the Connections defined for it.</p>
+<p>By default, Remote Locations and Connections inherit the user group assignments of their Adapter Area; see <a href="adapter.htm#CHDICIEB">"Setting Up Security for Adapters"</a>.</p>
+<p>In addition, Oracle LSH displays user-specific Connections only to the user who created the Connection.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The tnsnames.ora file in your Oracle LSH database tier must include each remote location.</div>
+</div>
+<!-- class="sect1" -->
+<a id="BABBCEFJ"></a>
+<div id="LSHAG197" class="sect1">
+<h2 class="sect1">Defining Remote Locations</h2>
+<p>If you need to load data into Oracle LSH from another system, you must define a Remote Location.</p>
+<p>A Remote Location links the following as a pair:</p>
+<ul>
+<li>
+<p>One of the Oracle-technology adapters used for loading data into Oracle LSH (Oracle Tables and Views, or one of the set of Oracle Clinical adapters)</p>
+</li>
+<li>
+<p>One database from which the adapter can load data into Oracle LSH</p>
+</li>
+</ul>
+<p>Oracle LSH also uses Remote Locations and Connections for storing user credentials for external systems with adapters. See:</p>
+<ul>
+<li>
+<p><a href="bipsec.htm#CIHJAJCJ">"Storing the BI Publisher Local Superuser Credentials in Oracle Life Sciences Data Hub"</a></p>
+</li>
+<li>
+<p><a href="infa_integ_users.htm#BCFDCBGD">"Creating an Informatica Remote Location and Connection"</a></p>
+</li>
+<li>
+<p><a href="#BABJDIEH">"Searching for Remote Locations and Connections"</a></p>
+</li>
+</ul>
+<p>To define a Remote Location:</p>
+<ol>
+<li>
+<p>Click the <span class="bold">Remote Location</span> subtab under the Administration tab. The Maintain Remote Locations screen opens.</p>
+</li>
+<li>
+<p>Click <span class="bold">Add Remote Location</span>. The Create Remote Location screen appears.</p>
+</li>
+<li>
+<p>Enter values in the following fields:</p>
+<ul>
+<li>
+<p><span class="bold">Name</span>. Enter a name for the Remote Location. It does not necessarily need to be the same as the name of the database.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Do not use spaces, slashes, or special characters such as single quotes ('). If you use these characters the Remote Location you define does not appear in the list of values where it is needed.</div>
+</li>
+<li>
+<p><span class="bold">Description</span>. Enter a description of the Remote Location.</p>
+</li>
+<li>
+<p><span class="bold">DBLINK Prefix</span>. The name of the database link. If another DBLINK Prefix with the same name exists in the database, the system adds an additional string to make it unique. The DBLINK_NAME is usually the global name or the TNS name of the remote database.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+To create a database link to a database whose name is different from the Oracle LSH database, you must set the global_names parameter of both databases to FALSE. To set the parameter, do one of the following:
+<ul>
+<li>
+<p>Edit the init.ora file to change the parameter value to:</p>
+<p><code dir="ltr">global_names=FALSE</code>.</p>
+</li>
+<li>
+<p>From a SQL prompt, enter:</p>
+<p><code dir="ltr">SQL&gt; alter system set global_names=false;</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><span class="bold">Connect String</span>. The name of the string that Oracle LSH must use in the USING clause of the create database link SQL statement.</p>
+</li>
+<li>
+<p><span class="bold">Adapter</span>. Select the Adapter type from the drop-down list.</p>
+</li>
+<li>
+<p><span class="bold">Conversion Multiplier</span>. (Optional) If you are defining a remote location for a database that uses a character set other than UTF8, you may need to enter a number such as 1.2. Oracle LSH uses this multiplier to adjust the length of VARCHAR2 data type columns in Load Set Table Descriptors.</p>
+<p>This may be necessary because when you transfer VARCHAR2 data from a non-UTF8 character set database to Oracle LSH, which is a UTF8 character set database, the data can be longer in the UTF8 database. For example, 60 characters of data from a Western European (WE) database might convert to 62 characters in UTF8. If you have row values equal to or near the defined column length, loading data into Oracle LSH may fail if you do not specify a conversion multiplier greater than 1.</p>
+<p>If you enter a multiplier of 1.2, Oracle LSH creates Table Descriptors as follows:</p>
+<div id="LSHAG198" class="tblformal">
+<p class="titleintable"><a id="sthref18"></a><a id="sthref19"></a>Table 5-1 Example of Column Length Conversion Using a Conversion Multiplier of 1.2</p>
+<table class="cellalignment12" title="Example of Column Length Conversion Using a Conversion Multiplier of 1.2" summary="A 60 char column becomes 72. Number columns stay the same." dir="ltr">
+<thead>
+<tr class="cellalignment2">
+<th class="cellalignment13" id="r1c1-t5">Table Columns in Non-UTF8 Database Table X</th>
+<th class="cellalignment13" id="r1c2-t5">Table Columns in Table Descriptor X</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r2c1-t5" headers="r1c1-t5">
+<p>VARCHAR2(60)</p>
+</td>
+<td class="cellalignment8" headers="r2c1-t5 r1c2-t5">
+<p>VARCHAR2(72)</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r3c1-t5" headers="r1c1-t5">
+<p>VARCHAR2(10)</p>
+</td>
+<td class="cellalignment8" headers="r3c1-t5 r1c2-t5">
+<p>VARCHAR2(12)</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r4c1-t5" headers="r1c1-t5">
+<p>NUMBER(10)</p>
+</td>
+<td class="cellalignment8" headers="r4c1-t5 r1c2-t5">
+<p>NUMBER(10)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" -->
+<p>The multiplier can be any number between 1.00 and 3.00, with a maximum of 2 decimal places. Columns of the Number and Date data types are not affected. If you do not enter a value, the system interprets it as a 1.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If the value of the Conversion Multiplier causes an uploaded Table Column to have a length greater than 4000, which is the maximum length for Oracle columns of data type VARCHAR2, Oracle LSH automatically creates the column with a length of 4000. If the actual data written to the column in any job exceeds 4000 characters, the job fails and the log file gives the reason.</div>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Your database NLS Length Semantics parameter must be set to BYTE. If it is set to CHAR it may automatically perform conversions of 3x. To check the setting of the parameter, do the following query in SQL*Plus:
+<p><code dir="ltr">select * from V$NLS_PARAMETERS where parameter ='NLS_LENGTH_SEMANTICS';</code></p>
+<p>However, it is required to use character semantics. To do so, set a profile value; see <a href="pwd.htm#CIHCDBCA">"Using Character Semantics for Work Area Table Installation"</a>.</p>
+</div>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The following types of Load Sets do not use conversion multipliers: SAS, Text, Oracle Clinical Labs, and Oracle Clinical Randomization. The length of VARCHAR2 columns in OC Labs and Randomization Load Set Table Descriptors is automatically increased.</div>
+</li>
+</ul>
+</li>
+<li>
+<p>In the <span class="bold">Classification</span> section, select the following for both the definition and the instance:</p>
+<ul>
+<li>
+<p><span class="bold">Subtype</span>. Select a subtype according to your company's policies.</p>
+</li>
+<li>
+<p><span class="bold">Classification Values</span>. Specify classifications according to your company's policies, to enable users to search for the Remote Location by classification. For instructions, see "Classifying Objects" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Application Developer's Guide</span></span>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Apply</span> to save your work. The system opens the main screen for the new Remote Location.</p>
+<p>You can change the security and classifications of the Remote Location through the items in the Actions drop-down list. By default, the Remote Location inherits the user group assignments of the Adapter Area.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="BABIFDAG"></a>
+<div id="LSHAG200" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Defining Connections</h2>
+<p>A Connection provides a username and password that Oracle LSH uses to access a remote database. Oracle LSH encrypts the passwords.</p>
+<p>To use a Remote Location, there must be at least one Connection defined for it. You, the administrator, can define shared Connections available to all users with normal security access to the defined Remote Location. In addition, any Oracle LSH user with an account and password on the remote location can define his or her own Connection through the Preferences link (see "Setting Preferences" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub User's Guide</span></span> for instructions). User-defined Connections are available only to the user who defined them.</p>
+<p>To define a Connection:</p>
+<ol>
+<li>
+<p>In the main screen for the Remote Location for which you want to create a Connection, click <span class="bold">Create Connection</span>. The Create Connection screen opens.</p>
+</li>
+<li>
+<p>Enter values in the following fields:</p>
+<ul>
+<li>
+<p><span class="bold">Name</span>. Enter a name for the Connection.</p>
+</li>
+<li>
+<p><span class="bold">Description</span>. Enter a description of the Connection.</p>
+</li>
+<li>
+<p><span class="bold">User Name</span>. Enter a valid user name for an account on the remote location. Oracle LSH will use this user name to connect to the remote location.</p>
+</li>
+<li>
+<p><span class="bold">Password</span>. Enter the password required for the same user account. Oracle LSH encrypts the password for security.</p>
+</li>
+<li>
+<p><span class="bold">Connection Type</span>. Select the Connection Type from the drop-down list.</p>
+<ul>
+<li>
+<p><span class="bold">User</span>. The User option allows only the person who creates the Connection to use it.</p>
+</li>
+<li>
+<p><span class="bold">Shared</span>. The Shared option allows multiple users to use the Connection. Security is determined by user group assignment to the Connection.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="bold">Remote Location</span>. The system populates the field with the name of the Remote Location for which you are defining this Connection. See <a href="#BABBCEFJ">"Defining Remote Locations"</a> .</p>
+</li>
+</ul>
+</li>
+<li>
+<p>In the <span class="bold">Classification</span> section, select the following for both the definition and the instance:</p>
+<ul>
+<li>
+<p><span class="bold">Subtype</span>. Select a subtype according to your company's policies.</p>
+</li>
+<li>
+<p><span class="bold">Classification Values</span>. Specify classifications according to your company's policies, to enable users to search for the Connection by classification. For instructions, see "Classifying Objects" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Application Developer's Guide</span></span>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Apply</span> to save your work. The system displays the main screen for the new Connection.</p>
+</li>
+</ol>
+<p>You can change the security and classifications of the Connection through the items in the Actions drop-down list. By default, the Connection inherits the user group assignments of the Remote Location. If the user group assignments for the Remote Location and Connection are different, the user must have access to both in order to use the Remote Location/Connection combination.</p>
+</div>
+<!-- class="sect1" -->
+<a id="BABJDIEH"></a>
+<div id="LSHAG202" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Searching for Remote Locations and Connections</h2>
+<p>To find existing Connections, you must go to the Remote Location for which they are defined. To find existing Remote Locations, do the following:</p>
+<ol>
+<li>
+<p>Go to the <span class="bold">Remote Location</span> subtab under the <span class="bold">Administration</span> tab.</p>
+</li>
+<li>
+<p>Enter a value in one or both of the following fields:</p>
+<ul>
+<li>
+<p><span class="bold">Adapter Type</span>. From the drop-down list, select the Remote Location's adapter type.</p>
+</li>
+<li>
+<p><span class="bold">Remote Location Name</span> (Optional). Enter the Remote Location's name or part of its name plus the % wildcard.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Go</span>. The system displays all Remote Locations that match these criteria in the lower part of the screen.</p>
+</li>
+</ol>
+<p>To see the Connections defined for the Remote Location or to define additional Connections, click the Remote Location's hyperlink in the <span class="bold">Name</span> column.</p>
+</div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment1">
+<tr>
+<td class="cellalignment8">
+<table class="cellalignment6">
+<tr>
+<td class="cellalignment5"><a href="lookup.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment5"><a href="audit.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2006, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment10">
+<table class="cellalignment4">
+<tr>
+<td class="cellalignment5"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment5"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment5"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment5"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 2017" />
+<title>Viewing a QT Prolongation Summary</title>
+<link rel="StyleSheet" href="Empirica.css" type="text/css" />
+ <link rel="StyleSheet" href="Empirica.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Safety Review\nECG Results\nViewing a QT Prolongation Summary");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\">");
+AddMasterBreadcrumbs("About_WebVDME.htm", "", "&gt;", "Overview", "home.htm");
+document.write("<a href=\"About_the_Safety_Review_Tab.htm\">Safety Review<\/a> &gt; <a href=\"revEGQTProlongationSummary.htm\">ECG Results<\/a> &gt; Viewing a QT Prolongation Summary<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('About_WebVDME.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Viewing a QT Prolongation Summary</h1>
+<p>The QT Prolongation Summary provides counts and percentages for findings about ECG tests. Rows in the summary are one of the following:</p>
+<ul>
+<li class="Bullet1"><span style="font-style: italic;"><i>&lt;correction-method&gt;</i></span> QTc Interval &gt; 450</li>
+<li class="Bullet1"><span style="font-style: italic;"><i>&lt;correction-method&gt;</i></span> QTc Interval &gt; 480</li>
+<li class="Bullet1"><span style="font-style: italic;"><i>&lt;correction-method&gt;</i></span> QTc Interval &gt; 500</li>
+<li class="Bullet1"><span style="font-style: italic;"><i>&lt;correction-method&gt;</i></span> QTc Interval Increase &gt;= 30</li>
+<li class="Bullet1"><span style="font-style: italic;"><i>&lt;correction-method&gt;</i></span> QTc Interval Increase &gt;= 60</li>
+</ul>
+<p>where <span style="font-style: italic;"><i>&lt;correction-method&gt;</i></span> is Reported, Bazett, FDA Neuro, or Fridericia.</p>
+<p>The QTc intervals are either as reported in the study data, or are computed using the following correction methods:</p>
+<ul>
+<li class="Bullet1">Bazett's formula = QTmsec / (RR sec)<span style="vertical-align: Super;">0.5</span></li>
+<li class="Bullet1">FDA Neuropharmacological Division's formula = QTmsec / (RR sec)<span style="vertical-align: Super;">0.37</span></li>
+<li class="Bullet1">Fridericia's formula = QTmsec / (RR sec)<span style="vertical-align: Super;">0.33</span></li>
+</ul>
+<p class="Note"><span style="font-weight: bold;">Note:</span> For the above computations, the QT and RR test must have the same date.</p>
+<p>If a <a href="About_Test_Identifiers.htm">test identifier</a> for QTC INTERVAL (the reported, corrected QT interval) has been defined, the report includes checks for "Reported QTc Interval". If test identifiers for QT INTERVAL and RR INTERVAL have been defined, the report includes checks for "Bazett QTc Interval", "FDA Neuro QTc Interval", and "Fridericia QTc Interval".</p>
+<p class="Subhead">Notes</p>
+<ul>
+<li class="Bullet1">For evaluations based on actual values (that is, QTc Interval &gt; 450, QTc Interval &gt; 480, QTc Interval &gt; 500), the display includes only subjects who had at least one QTc result.</li>
+<li class="Bullet1">For evaluations based on increase from baseline (QTc Interval Increase &gt;= 30 and QTc Interval Increase &gt;= 60), the display includes only subjects who had a baseline QTc result and a post-baseline QTc result. See <a href="Baseline_Results.htm">Baseline Results</a> for information about how baseline is determined. Also note that the display does not use the safety review configuration option for "Use maximum (instead of most recent) change from baseline". All post-baseline results (within the time frame, if a time frame is in effect) are evaluated and counted.</li>
+<li class="Bullet1">For evaluations that use QT INTERVAL and RR INTERVAL, the results must have occurred at the same visit. For evaluations that use baseline results, the later of the baseline values for QT or RR are used.</li>
+<li class="Bullet1">It is assumed that RR is stored in milliseconds; thus, the RR value is divided by 1000 to obtain seconds.</li>
+<li class="Bullet1">Computations rely on the value reported for RR to be non-negative. Records with a negative value for RR are excluded from the display.</li>
+</ul>
+<p class="Subhead">To view a QT Prolongation Summary:</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">1.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Keep in mind that dosing categories and the time frame are determined by <a href="revSafetyReviewDialog.htm">safety review configuration options</a>.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">2.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>On the Safety Review tab, click <span class="Button">ECGs</span>.</p>
+
+<p class="ListNote1"><span style="font-weight: bold;">Note</span><span style="font-weight: bold; font-style: italic;"><i>:</i></span> An up-to-date <a href="Automatic_Screening_and_Issue_List.htm" style="font-style: italic;">issue list</a> must exist for the time frame that is selected as a safety review configuration option. To keep the list current, Empirica Study silently <a href="Automatic_Screening_and_Issue_List.htm" style="font-style: italic;">submits an automatic screening run</a> when you perform certain actions that would cause the list to become out-of-date. However, if the issue list needs to be created or updated, for example, because a user cancelled the last autoscreening run, a message informs you and provides the opportunity to create or update the issue list for the selected time frame and any other time frames.</p>
+<p class="ListContinue1">If you choose to update the issue list when Empirica Study prompts you and you do not have the Load and Check Studies permission, an error occurs. You must contact your system administrator to refresh the issue list.</p>
+<p class="ListContinue1">The column heading for each dosing category shows N. If the time frame has a well-defined start, N is the total count of subjects for the dosing category who did not <a href="Study_Dropouts.htm">drop out</a> before the time frame start. Otherwise, N is the total count of subjects for the dosing category. Other statistics in the table are for subjects included in N.</p>
+<p class="ListContinue1">For each dosing category, the table shows the following information for each ECG result:</p>
+<br />
+<table summary="" summary="" class="Empirica" style="margin-left: 36px; left: 0px; top: 1083px;" cellspacing="0px" width="971">
+<col style="width: 12.126%;" />
+<col style="width: 87.874%;" />
+<tr class="t1st">
+<td>
+<p class="TableHeader">Column</p>
+</td>
+<td>
+<p class="TableHeader">Description</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td>
+<p class="TableBody">#</p>
+</td>
+<td>
+<p class="TableBody">Count of subjects with at least one occurrence of the finding during the time frame. You can click this value to <a href="About_Drilldown.htm">drill down</a> to subjects included in the count.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td>
+<p class="TableBody">%</p>
+</td>
+<td>
+<p class="TableBody">Percentage of subjects with at least one occurrence of the finding during the time frame. Computed as: (#/N) x 100</p>
+</td>
+</tr>
+</table>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">3.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>To view the displayed information graphically, click <span style="font-weight: bold; text-decoration: underline;"><u>Graph</u></span>. The x-axis in the dot plot represents percentages of subjects, and the y-axis represents each finding.</p>
+
+<p class="ListContinue1">You can point to a dot in the graph to display details about what the dot represents.</p>
+<p class="ListContinue1">You can click a dot and then <a href="About_Drilldown.htm" style="margin-left: 0px;">drill down</a> to subjects represented by the dot.</p>
+<p class="ListContinue1"><span style="margin-left: 0px;">T</span>o print or copy the graph, see <a href="Working_with_Graphs.htm" style="margin-left: 0px;">Working with Graphs</a>.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">4.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>If a preparatory analysis specification (named <a href="BASIC_SCREENING_Analysis_Specification.htm">$$$BASIC$$$SCREENING$$$</a>) has been run and you have configured safety review to use a dosing category breakdown and time frame for which screening results exist, you can click <span class="Button">ECG Screening Results</span> to <a href="scrResultsTable_screening.htm">view screening results</a>.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">5.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>To view a QTc Change over Time graph, click <span class="Button">Distribution of QTc Change over Time</span>.</p>
+ <div style="width: 100%; position: relative;" id="footer">
+	<p style="margin-top: 20pt; color: #808080;">Copyright &copy; 2002, 2017, 
+	 Oracle and/or its affiliates. All rights reserved.</p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>
+<footer>
+</footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+
+</body>
+</html>
+<footer>
+</footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+<script>$(document).foundation();</script>
+</body>
+</html>

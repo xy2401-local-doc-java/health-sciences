@@ -1,0 +1,2211 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>DCMs and DCIs</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2017-08-27T15:50:57Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Oracle&reg; Clinical Creating a Study" />
+<meta name="dcterms.identifier" content="E62229-01" />
+<meta name="dcterms.isVersionOf" content="OCCRS" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;1996, 2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Index" href="index.htm" title="Index" type="text/html" />
+<link rel="Prev" href="glib.htm" title="Previous" type="text/html" />
+<link rel="Next" href="books.htm" title="Next" type="text/html" />
+<link rel="alternate" href="OCCRS.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="OCCRS.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="OCCRS.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">14/25</span> <!-- End Header -->
+<div id="OCCRS496" class="chapter"><a id="BABEEHEI"></a>
+<h1 class="chapter"><span class="secnum">9</span> DCMs and DCIs</h1>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#i1002231">Section 9.1, "Defining DCMs"</a></p>
+</li>
+<li>
+<p><a href="#i1001406">Section 9.2, "Creating Character-Based Layouts"</a></p>
+</li>
+<li>
+<p><a href="#BABFCBHA">Section 9.3, "Defining DCIs"</a></p>
+</li>
+</ul>
+<p>Data Collection Modules (DCMs), Data Collection Instruments (DCIs), and DCI Books are data collection containers. A DCM contains Question Groups, a DCI contains DCMs, and a DCI Book contains DCIs. Each can be reused in the next larger container either in the same study or a different study.</p>
+<a id="i1002231"></a>
+<div id="OCCRS497" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">9.1</span> Defining DCMs</h2>
+<p>This section includes the following topics:</p>
+<ul>
+<li>
+<p><a href="#CACEIEAD">Creating a New DCM</a></p>
+</li>
+<li>
+<p><a href="#CACBDFBD">Copying a DCM</a></p>
+</li>
+<li>
+<p><a href="#CACBHCJG">Adding Question Groups to a DCM</a></p>
+</li>
+<li>
+<p><a href="#CACDCGAC">Configuring Question Groups in a DCM</a></p>
+</li>
+<li>
+<p><a href="#CACHAJAC">Adding or Modifying DCM Question</a></p>
+</li>
+<li>
+<p><a href="#CACCCFBE">Configuring DCM Subsets</a></p>
+</li>
+<li>
+<p><a href="#CACHJIJA">Configuring Qualifying Questions</a></p>
+</li>
+<li>
+<p><a href="#CACHFHIA">Using Repeating Question Groups</a></p>
+</li>
+<li>
+<p><a href="#BABFEGIJ">Defining Conditional Branching</a></p>
+</li>
+<li>
+<p><a href="#CACHBGEG">Using Normalized Lab Data</a></p>
+</li>
+<li>
+<p><a href="#CACBIDFG">Defining Date Formats</a></p>
+</li>
+<li>
+<p><a href="#CACCEDAC">Scheduling DCMs</a></p>
+</li>
+</ul>
+<p>A Data Collection Module (DCM) contains Question Groups, which you define in the Global Library. In either case, all Questions contained in a DCM must be completed in a single visit.</p>
+<p>You define a new DCM for a particular study. See <a href="#CACEIEAD">"Creating a New DCM,"</a> for more information. You can then copy it either to the Global Library or to a different study. See <a href="#CACBDFBD">"Copying a DCM,"</a> for more information. A DCM may correspond to a <a id="sthref615"></a>whole CRF or to a section of a CRF.</p>
+<p>For example, a DCM might contain a DCM Question Group of physical examination and demography questions for a patient's first visit. Another kind of DCM might contain a set of related laboratory measurements from a later clinical visit. The lab data could be electronically gathered and destined for batch loading into Oracle Clinical using the lab DCM.</p>
+<p><a id="OCCRS10067"></a><span class="subhead3">Generating Layouts from DCMs&nbsp;</span>You can generate a character-based layout from a DCM that becomes the form used for data entry in Oracle Clinical. Alternatively, you can associate the DCM with a Data Collection Instrument (DCI) and generate a graphic layout that becomes the HTML form used for data entry in RDC Onsite and the PDF form used to generate the Patient Data Report.</p>
+<p>The order in which you add Question Groups determines the default layout of the data entry form. Although you can edit the default layout, you can reduce layout work if you are aware of how the DCM's definition affects the layout, especially since regenerating the layout overrides your edits. In the layout:</p>
+<ul>
+<li>
+<p>DCM Questions become fields</p>
+</li>
+<li>
+<p>DCM Question Groups become blocks</p>
+</li>
+</ul>
+<p><a id="OCCRS10068"></a><span class="subhead3">Using Variations of the Same DCM&nbsp;</span>Oracle Clinical does not permit you to create multiple identical study <a id="sthref616"></a>DCMs in one clinical study because identical DCMs would be indistinguishable during data analysis. However, it is likely that your study design calls for you to collect certain kinds of data repeatedly throughout the study. You handle this requirement with <a id="sthref617"></a>base DCMs.</p>
+<p>You can define a <span class="italic">base DCM</span> that includes all related Question Groups and then create <span class="italic">DCM subsets</span> that collect only a portion of the base DCM Questions.</p>
+<p>You can also differentiate occurrences of the same DCM by defining Qualifying Questions; for example, Questions about eyes might begin with a Qualifying Question asking if it is the right or left eye.</p>
+<p><a id="OCCRS10069"></a><span class="subhead3">Using Provisional and Active DCMs&nbsp;</span>You can modify <a id="sthref618"></a>DCMs with a status of Provisional without constraints. You can use provisional DCMs in <a id="sthref619"></a>test mode to enter test data and identify required modifications to the DCM definition. When you are ready to use the DCM to collect production data, set its status to Active. If you have defined the DCM in the Global Library, copy it to your study.</p>
+<a id="CACEIEAD"></a>
+<div id="OCCRS10070" class="sect2">
+<h3 class="sect2"><span class="secnum">9.1.1</span> Creating a New DCM <a id="sthref620"></a></h3>
+<p>To create a new DCM:</p>
+<ol>
+<li>
+<p>From the <span class="bold">Definition</span> menu, select <span class="bold">DCMs</span>, and choose <span class="bold">DCMs</span> for the Data Collection Modules window of the Maintain Study DCMs form.</p>
+<p>If you have not already selected a study during this Oracle Clinical session, the system prompts you to choose a study.</p>
+</li>
+<li>
+<p>Insert a new record and enter a name for the new DCM. The name can be up to 16 characters, but limiting it to eight can make it easier to identify after it is added to a DCI.</p>
+</li>
+<li>
+<p>The <span class="bold">Name</span> field is the subset name. This value becomes the default subset name when you add it to a DCI. The default subset starting number is one. It increments each time you make a new subset.</p>
+</li>
+<li>
+<p>Give the DCM a short name of up to four characters.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+Avoid using "CON" as a DCM short name. In a Data Extract SAS view, the SAS view creation file con.sas fails because "CON" is a reserved device name.</div>
+</li>
+<li>
+<p>Choose a <span class="bold">Type</span> from the list of values. The values are set in the DCM DCI QG TYPE CODE installation reference codelist.</p>
+</li>
+<li>
+<p>Add a description. It can be specific to the subset.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+Avoid including the colon (:) character in the description field. They considerably reduce performance when you edit the graphic layout. A layout that would take a few seconds to open can take several minutes if there is a colon in the description.</div>
+</li>
+<li>
+<p>Click <span class="bold">Save</span>.</p>
+</li>
+<li>
+<p>Add Question Groups; see <a href="#CACBHCJG">"Adding Question Groups to a DCM"</a>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CACBDFBD"></a>
+<div id="OCCRS10071" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">9.1.2</span> Copying<a id="sthref621"></a> a DCM</h3>
+<p>The most common procedure for creating a DCM is to copy an existing DCM and modifying it to suit the needs of the study.</p>
+<p>To copy a DCM:</p>
+<ol>
+<li>
+<p>From the <span class="bold">Definition</span> menu, select <span class="bold">DCMs</span>, then choose <span class="bold">DCMs</span>.</p>
+</li>
+<li>
+<p>From the <span class="bold">Special</span> menu, select <span class="bold">Copy DCM</span>. A dialog box appears.</p>
+</li>
+<li>
+<p>Select one of the two buttons in the <a id="sthref622"></a>dialog box: <a id="sthref623"></a><span class="bold">Library</span> or<a id="sthref624"></a> <span class="bold">Study</span>. If you select <span class="bold">Study</span> the system prompts you to select the study from which you want to copy a DCM.</p>
+<p>The Data Collection Modules window opens in Query mode. You can query DCMs by entering the DCM name, qualifying value, or another attribute value and executing the query. You can perform multiple queries.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The Study <a id="sthref625"></a>Domain Search List controls what you see when you search the Library from the study level.</div>
+</li>
+<li>
+<p>Select the DCM you want to copy and click <span class="bold">OK</span>.</p>
+<p>The system creates a copy of the selected DCM. If a DCM of this name already exists in the target study, the system copies the DCM with the name <code dir="ltr">COPYOF</code> <code dir="ltr">DCM</code>. The system prompts you to change the name before saving because you cannot save a study DCM with a name beginning with <code dir="ltr"><a id="sthref626"></a>COPYOF</code>. Furthermore, you may not copy another DCM until you have removed the COPYOF name and the short name beginning <code dir="ltr">C</code>- from the one you just copied.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CACBHCJG"></a>
+<div id="OCCRS10072" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">9.1.3</span> Adding Question Groups to a DCM<a id="sthref627"></a></h3>
+<p>After saving a DCM to your study, populate it with DCM Question Groups. From the Maintain Study DCMs window, select your DCM and click the <span class="bold">DCM Question Groups</span> button. You cannot create a new Question Group from any of the forms in the Definition subsystem. You can create new Questions and Question Groups only in the Global Library.</p>
+<p>You can only add a Question Group that has a status of Active. When you add a Question Group to a DCM, it becomes local to that DCM. Some of its library attributes are copied into the local copy, some are not, and some new ones are available.</p>
+<ol>
+<li>
+<p>From the <span class="bold">Definition</span> menu, select <span class="bold">DCMs</span>, then <span class="bold">DCMs</span>. The Data Collection Modules window opens.</p>
+</li>
+<li>
+<p>Click the <span class="bold">DCM Question Groups</span> button. The DCM Question Groups window opens.</p>
+</li>
+<li>
+<p>Either select a Question Group from the list of values in the DCM Question Group Name field or, from the <span class="bold">Special</span> menu, select <span class="bold">Add Ques Group</span>. You can then query for Question Groups by various attributes.</p>
+</li>
+<li>
+<p>Select the DCM Question Group to copy.</p>
+</li>
+<li>
+<p>Save. The system returns you to the DCM Question Groups window and displays a message that the copy either succeeded or failed.</p>
+</li>
+</ol>
+<p>You can modify Question Groups for use in this DCM; see <a href="#CACDCGAC">"Configuring Question Groups in a DCM"</a></p>
+</div>
+<!-- class="sect2" -->
+<a id="CACDCGAC"></a>
+<div id="OCCRS10073" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">9.1.4</span> Configuring Question Groups in a DCM</h3>
+<p>In the context of a DCM, Question Groups are called DCM Question Groups. Some of their Global Library attributes cannot be changed and others can. They also have additional attributes that apply only in the context of the current DCM. DCM Question Group attributes include:</p>
+<ul>
+<li>
+<p><span class="syntaxinlinebold">DCM Question Group Name</span> You can give this local copy a different name.</p>
+</li>
+<li>
+<p><span class="syntaxinlinebold">Library Question Group Name</span> The system copies this name from the library version. You cannot change it.</p>
+</li>
+<li>
+<p><span class="syntaxinlinebold">Question Group Domain</span> The system copies this name from the library version. You cannot change it.</p>
+</li>
+<li>
+<p><span class="syntaxinlinebold">Short Name</span> An abbreviated name used for naming data extract views.</p>
+</li>
+<li>
+<p><span class="syntaxinlinebold">Collect in Subset</span> If this field is checked, responses to the Questions in the DCM Question Group of this DCM subset are collected. You can change the Collect in Subset? field only for Provisional and Active DCMs. You can exclude a Question group from this DCM subset without removing it from its record by deselecting this box.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+Avoid unchecking this field once data has been collected for the DCM. If you must uncheck the field, you must immediately regenerate the form.
+<p>Otherwise, in HTML data entry (RDC Onsite), the form opens and the field is still displayed. However, the field is no longer updateable. Discrepancies, Investigator comments and audit history for the field are still displayed. Discrepancies and Investigator comments appear to be updateable, but they are not.</p>
+<p>Once the form is regenerated, the field does not appear, nor do associated discrepancies, Investigator comments and audit history. However, note that the data remains in the database and cannot be deleted.</p>
+</div>
+</li>
+<li>
+<p><span class="syntaxinlinebold">Display Seq#</span>: Sets the default cursor tab sequence among all of the Question Groups you add to the DCM. As a data entry operator enters data and tabs, this number determines the default tab sequence in which the operator's insertion point moves through the form. You can change this value later when you lay out the DCM, but this default sequence remains with the DCM if you use it in another study.</p>
+</li>
+<li>
+<p><span class="syntaxinlinebold">Repeating Group?</span> Select this box if this Question Group needs to be collected multiple times in this DCM; for example, if you are loading normalized lab data using this Question Group; see <a href="#CACHFHIA">"Using Repeating Question Groups"</a> and <a href="#CACHBGEG">"Using Normalized Lab Data"</a>.</p>
+</li>
+<li>
+<p><span class="syntaxinlinebold">Max Reps Expected</span> Graphic layouts, which are used in RDC Onsite, always display the number of repeats specified here. Character-based layouts, which are used in Oracle Clinical, allow dynamically adding scrollable displays of repeating Question Groups up to this value. The default value is one. You can change the Max Reps Expected field only for Provisional and Active DCMs. For non-repeating Question Groups, this field is display-only.</p>
+</li>
+<li>
+<p><span class="syntaxinlinebold">Reps to Display</span> (Applies to character-based layouts only.) This setting determines the size of the scroll area in terms of the number of repeats displayed at one time; if set to 2, the user can see two repeats in the layout without scrolling. For non-repeating Question Groups, this field is display-only.</p>
+</li>
+<li>
+<p><span class="syntaxinlinebold">Enforce Max Reps?</span> (Applies to character-based layouts only.) This box prevents more than the set value of <span class="bold">Max Reps Expected</span> from being collected, except for users with privileged update. For a repeating Question Group, you can change this field only for Provisional and Active DCMs. For a non-repeating Question Group, this field is display-only, with a value of unchecked.</p>
+</li>
+<li>
+<p><span class="syntaxinlinebold">Has Border?</span> Selecting this causes the default layout generator to add a rectangular border around the Question Group. You can change this field for both Provisional and Active DCMs.</p>
+</li>
+<li>
+<p><span class="syntaxinlinebold">Prompt Position</span> This value determines the location of the response field's label, or prompt text, in the layout. Select <span class="bold">Left</span> or <span class="bold">Above</span>.</p>
+</li>
+<li>
+<p><span class="syntaxinlinebold">Protect Repeating Defaults?</span> Select this box to protect the displayed default values serving as prompts from being changed in the Layout Editor or during data entry; see <a href="#CACHJFHE">"Using Default Repeat Values"</a>. You can change this field only for Provisional and Active DCMs. For a non-repeating Question Group, this field is display-only, with a value of unchecked.</p>
+</li>
+<li>
+<p><span class="syntaxinlinebold">Save Repeat Defaults?</span> Select this box to create a set of rows with repeating defaults, even if the repeats are blank after data collection.</p>
+<p>If checked, this DCM definition overrides the automatic deletion of any empty rows so that these rows are saved. This override allows the use of empty repeating default Question Groups as targets of derivation.</p>
+<p>You cannot check this if there are no repeating defaults defined for any of the Questions in the Question Group.</p>
+</li>
+<li>
+<p><span class="syntaxinlinebold">Help Text</span> Add extra information, up to 200 characters, about the Question Group. The text you enter here is available for display during data entry. You can change this field only for Provisional and Active DCMs.</p>
+</li>
+<li>
+<p><span class="syntaxinlinebold">Normalized?</span> Check this flag if you are planning to batch load normalized lab data and want the input formats of the Batch Data Loader to accommodate normalized lab data modeled as lab test name/lab test result value pairs in the data files by automatically generating, for both inserts and updates, two response records for each incoming data record; see <a href="#CACHBGEG">"Using Normalized Lab Data"</a>.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The <span class="bold">Normalized?</span> flag is available only for repeating Question Groups.
+<p>You may need to Save before checking <span class="bold">Normalized?</span> to enable the lists of values for the First and Second Repeat fields.</p>
+</div>
+</li>
+</ul>
+<p>Enter values for the following fields only if you checked the <span class="bold">Normalized?</span> flag. You must first define the Questions in the Question Group.</p>
+<ul>
+<li>
+<p><span class="syntaxinlinebold">First Repeat Descriptor Question</span> From the list of values, which displays all Questions in the Question Group that are collected in the DCM Subset, select the first Question in the normalized pair (the lab test name Question).</p>
+</li>
+<li>
+<p><span class="syntaxinlinebold">Occ Sn</span> (Question occurrence sequence number) The system enters this value when you select the first repeat descriptor Question. You cannot change it.</p>
+</li>
+<li>
+<p><span class="syntaxinlinebold">First Repeat Descriptor Label</span> The system enters the Default Prompt defined for the Question you selected as the First Repeat Descriptor Question. You can change it. This value is stored in dcm_question_groups.repeat_descr1_label and is available to use as a variable (\DESCRIPTOR1\) in Standard Text in a discrepancy comment wherever discrepancies are displayed.</p>
+</li>
+<li>
+<p><span class="syntaxinlinebold">Second Repeat Descriptor Question</span> From the list of values, which displays all Questions in the Question Group that are collected in the DCM Subset, select the second Question in the normalized pair (the lab test result Question).</p>
+</li>
+<li>
+<p><span class="syntaxinlinebold">Occ Sn</span> (Question occurrence sequence number) The system enters this value when you select the second repeat descriptor Question. You cannot change it.</p>
+</li>
+<li>
+<p><span class="syntaxinlinebold">Second Repeat Descriptor Label</span> The system enters the Default Prompt defined for the Question you selected as the Second Repeat Descriptor Question. You can change it.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="CACHAJAC"></a>
+<div id="OCCRS10074" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">9.1.5</span> Adding or Modifying DCM Question</h3>
+<p>After creating a new study DCM or having copied a DCM from another study, you can add more<a id="ABC1118708"></a> Questions to the<a id="ABC1118710"></a> Question Groups or modify the existing Questions. To add or modify a DCM Question:</p>
+<ol>
+<li>
+<p>From the <span class="bold">Definition</span> menu, select <span class="bold">DCMs</span>, then choose <span class="bold">DCMs</span>. The system displays the DCM Questions window.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You can only copy or add new Questions into a Question Group if the<a id="sthref628"></a> Question Group is flagged as expandable. (Expandability is an attribute set at the Global Library level.) Oracle Clinical prevents you from copying Questions into a non-expandable Question Group.</div>
+</li>
+<li>
+<p>Click the <span class="bold">DCM Question Groups</span> button. The DCM Question Groups window opens.</p>
+</li>
+<li>
+<p>Choose a DCM Question Group name and click the <span class="bold">DCM Questions</span> button.</p>
+</li>
+<li>
+<p>Select <span class="bold">Add Question</span> from the <span class="bold">Special</span> menu. The system displays the <a id="sthref629"></a>Locate Active Questions form.</p>
+</li>
+<li>
+<p>Enter, or select from the list of values, the name of the Question you want to copy.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Commit</span> button. The system returns you to the DCM Questions window and displays a message that the copy succeeded or failed.</p>
+</li>
+</ol>
+<p>Alternatively, you can add Questions to a Question Group:</p>
+<ol>
+<li>
+<p>From the <span class="bold">Definition</span> menu, select <span class="bold">DCMs</span>, then choose <span class="bold">DCMs</span>.</p>
+</li>
+<li>
+<p>Enter or select from the list of values, into the first blank record, the name of the object to copy.</p>
+</li>
+<li>
+<p>Save.</p>
+</li>
+</ol>
+<p>You cannot create a new Question in the Definition subsystem. You can create new<a id="sthref630"></a> Questions and<a id="sthref631"></a> Question Groups only in the Global Library.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CACCCFBE"></a>
+<div id="OCCRS10075" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">9.1.6</span> Configuring DCM Subsets</h3>
+<p>Using DCM subsets, you can have multiple occurrences of a DCM in a single DCI, but collect some DCM Questions in one subset and other DCM Questions in another subset.</p>
+<p>All subsets contain the same Questions and Question Groups, and when you add a Question to one subset, the system automatically adds it to all the other subsets. The difference is that the Question's <span class="bold">Collected?</span> box can be selected in one or more subsets but not in others. A Question appears in data entry and in a layout only if it is marked as collected.</p>
+<p>You can also associate different DVGs, or lists of allowable values, with the same Question in different DCM subsets.</p>
+<p>Each subset can have one or more layouts.</p>
+<p class="subhead1"><a id="OCCRS10076"></a>To Create a New DCM Subset</p>
+<p>To create a new subset of a DCM, from the Data Collection Modules window, do the following:</p>
+<ol>
+<li>
+<p>Put your cursor on an existing DCM that you want to create a subset for. If the DCM has more than one layout, select the one you want to use for the new subset.</p>
+</li>
+<li>
+<p>In the <span class="bold">Special</span> menu, choose <span class="bold">Create DCM Subset</span>. The system creates a new subset with the subset name (labeled "Name") given a default value of "Copy <span class="italic">original_name</span>."</p>
+</li>
+<li>
+<p>Give the new subset a better name and, in the <span class="bold">Description</span> field, explain its purpose.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Question Groups</span> button. If there is a whole Question Group that you do not want to collect in the subset, deselect its <span class="bold">Collect in Subset?</span> box.</p>
+<p>If there are individual Questions you do not want to collect in the DCM, but you do want to collect other Questions in the same Question Group, select the Question Group in the Question Groups window and click the <span class="bold">Questions</span> button. Then deselect the <span class="bold">Collect in Subset?</span> box of the Questions you do not want to collect.</p>
+</li>
+<li>
+<p>(Optional) In the Questions window you can select a DVG, or list of allowable values, for a Question that is different in this subset than in other subsets of the same DCM.</p>
+</li>
+<li>
+<p>Save your changes.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CACHJIJA"></a>
+<div id="OCCRS10077" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">9.1.7</span> Configuring Qualifying Questions<a id="sthref632"></a></h3>
+<p>If you need to collect responses to the same set of Questions more than once in the same DCI, you can group the Questions into a DCM and define a Qualifying Question for the DCM, the response to which identifies the set of responses. You then create the number of DCMs you need for the DCI.</p>
+<p>For example, you may want to record a patient's blood pressure and other vitals in both the standing and the sitting position. You create a DCM called Vitals with a Qualifying Question named Vitals Position, for example, associated with a DVG that includes two values: Standing and Sitting.</p>
+<p>You can define a Question especially for this purpose, or use an existing Question. If you create a new Question for the purpose, you may want to give it the same name as the DCM and, in the <span class="bold">Description</span>, note that it is used as the Qualifying Question for the DCM. Qualifying Questions must be associated with a DVG, or static list of allowable values.</p>
+<p>Do one of the following to create two of the same DCMs within the DCI:</p>
+<ul>
+<li>
+<p>In the DCM window, copy the DCM (see <a href="#CACBDFBD">"Copying a DCM"</a>) and give it a different name and a different qualifying value in the DCMs Qualifying Question tab; for example, create DCM VITALS_SIT and DCM VITALS_STAND and give VITALS_SIT the default value Sitting and VITALS_STAND the default value Standing.</p>
+</li>
+<li>
+<p>In the DCI window, click the <span class="bold">DCI Modules</span> button. Here you can enter the same DCM multiple times, each with a different qualifying value. For example, enter the DCM called VITALS twice, once with the qualifying value Sitting and once with the qualifying value Standing.</p>
+</li>
+</ul>
+<p>The Qualifying Question prompt (defined as part of the Question) appears in the DCM header during data entry. If you define a qualifying value (in this case, either Standing or Sitting) for each occurrence of the DCM, that value appears in the DCM header after the prompt. If you do not define a default value, the field is blank in the DCM Header and the data entry operator must enter the appropriate qualifying value.</p>
+<p><a id="OCCRS10078"></a><span class="subhead3">To Associate a Qualifying Question with a DCM<a id="sthref633"></a>&nbsp;</span>You associate a Qualifying Question with a DCM in the Qualifying Questions tab of the Maintain DCMs window:</p>
+<ol>
+<li>
+<p>Put your cursor in the <span class="bold">Qualifying Question Name</span> field for the DCM for which you want to define a Qualifying Question.</p>
+</li>
+<li>
+<p>From the list of values, which displays only DVG Questions, choose the Question you want to use.</p>
+</li>
+<li>
+<p>Put your cursor in the <span class="bold">Qualifying DVG Name</span> field. The field enters the DVG that is defined for the Question. You can choose a different DVG from the list of values if you want to.</p>
+</li>
+<li>
+<p>(Optional) Enter one of the DVG values in the <span class="bold">Qualifying Value</span> field. This value appears as the default value for the Qualifying Question in the DCM Header.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CACHFHIA"></a>
+<div id="OCCRS10079" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">9.1.8</span> Using Repeating Question Groups<a id="sthref634"></a></h3>
+<p>Sometimes you need to collect the same group of Questions multiple times at the same visit. Depending on your requirements, you can handle this different ways in Oracle Clinical:</p>
+<ul>
+<li>
+<p><span class="bold">DCM Qualifying Questions</span>: If there is a key difference in each collection&mdash;for example, you need to collect one set of Questions about the right eye and the same set of Questions again for the left eye; see <a href="#CACHJIJA">"Configuring Qualifying Questions"</a>.</p>
+</li>
+<li>
+<p><span class="bold">Repeating Question Groups</span>: If you need to collect the same set of Questions repeatedly within the same DCM, use a repeating Question Group.</p>
+<p>For example, if you need to collect vitals at predefined time Intervals after a dose, make the Vitals Question Group a repeating Question Group within in the DCM.</p>
+</li>
+</ul>
+<a id="CACHJFHE"></a>
+<div id="OCCRS10080" class="sect3">
+<h4 class="sect3"><span class="secnum">9.1.8.1</span> Using <a id="sthref635"></a>Default <a id="sthref636"></a>Re<a id="sthref637"></a>peat <a id="sthref638"></a>Values</h4>
+<p>To simplify Question definition and to make Question prompts available in data extract views, you can define a repeating Question Group where the first question is used to display a label or prompt for the remaining questions in the row (or repeat). You specify the number of repeats expected for the Question Group in a particular DCM, and then specify the label to be displayed for each repeat (Occurrence Sequence Number, or Occ SN) of the first Question as a "default repeating value" and protect the value of that Question from update.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Because you are using the same Question definition for each repeat of the response value Question, all responses must be collected as the same data type. If you want to use the repeating Question Group for both text and numeric Questions, you can collect all Questions as text and then use a derivation procedure to derive each numeric response value entered as text (based on the occurrence SN) into a Question with a data type of NUMBER.</div>
+<p>Prompts defined as default responses are available in data extract views, unlike <span class="italic">boilerplate text</span> (text the layout generator derives from the Default Prompt values of Questions in a DCM) or text objects added in the DCM Layout Editor.</p>
+<p><a id="OCCRS10081"></a><span class="subhead3">Example 1&nbsp;</span>As a variation on the interval example above, specify the expected intervals with default values for a question 'Interval'.</p>
+<p><a id="OCCRS10082"></a><span class="subhead3">Example 2&nbsp;</span>Use default repeating values in batch loading normalized lab data; see <a href="#CACHBGEG">"Using Normalized Lab Data"</a>.</p>
+<p><a id="OCCRS10083"></a><span class="subhead3">Example 3&nbsp;</span>If you want to collect a finding about various organs, such as the brain, the liver, and the heart, you can define an <code dir="ltr">ORGAN</code> Question to have default values of <code dir="ltr">BRAIN</code>, <code dir="ltr">LIVER</code>, and <code dir="ltr">HEART</code> for Repeats 1, 2, and 3 of the Question. Then define the next Question as FINDING. In this case, the values for the Question <code dir="ltr">ORGAN</code> would not be user-collected, but would simply serve as prompts for the Question <code dir="ltr">FINDING</code>. The data entry form would look like this:</p>
+<div class="inftblhruleinformal">
+<table class="cellalignment36" title="DE form fields example" summary="The organ column has three rows for brain, liver, and heart. The finding column says &quot;field for user-entered response&quot; on each row." dir="ltr">
+<thead>
+<tr class="cellalignment27">
+<th class="cellalignment37" id="r1c1-t9">Organ</th>
+<th class="cellalignment37" id="r1c2-t9">Finding</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r2c1-t9" headers="r1c1-t9">BRAIN</td>
+<td class="cellalignment33" headers="r2c1-t9 r1c2-t9"><span class="italic">field for user-entered response</span></td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r3c1-t9" headers="r1c1-t9">LIVER</td>
+<td class="cellalignment33" headers="r3c1-t9 r1c2-t9"><span class="italic">field for user-entered response</span></td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r4c1-t9" headers="r1c1-t9">HEART</td>
+<td class="cellalignment33" headers="r4c1-t9 r1c2-t9"><span class="italic">field for user-entered response</span></td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblhruleinformal" -->
+<p>resulting from the following Repeating Default Value definition:</p>
+<div class="inftblinformal">
+<table class="cellalignment36" title="An example of prompts for the question FINDING" summary="An example of prompts for the question FINDING" dir="ltr">
+<thead>
+<tr class="cellalignment27">
+<th class="cellalignment37" id="r1c1-t10">Occurrence SN</th>
+<th class="cellalignment37" id="r1c2-t10">Organ Question Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r2c1-t10" headers="r1c1-t10">1</td>
+<td class="cellalignment33" headers="r2c1-t10 r1c2-t10">BRAIN</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r3c1-t10" headers="r1c1-t10">2</td>
+<td class="cellalignment33" headers="r3c1-t10 r1c2-t10">LIVER</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r4c1-t10" headers="r1c1-t10">3</td>
+<td class="cellalignment33" headers="r4c1-t10 r1c2-t10">HEART</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" -->
+<p>To create default repeat values:</p>
+<ol>
+<li>
+<p>From the <span class="bold">Definition</span> menu, select <span class="bold">DCMs</span>, then choose <span class="bold">DCMs</span>.</p>
+</li>
+<li>
+<p>Click the <span class="bold">DCM Question Groups</span> button and select a repeating Question Group.</p>
+</li>
+<li>
+<p>Select the Question to which to assign default repeat values.</p>
+</li>
+<li>
+<p>Click the <a id="sthref639"></a><span class="bold">Default Repeat Values</span> button.</p>
+</li>
+<li>
+<p>Enter the number of the repeat and the value to display for that occurrence of the Question.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+If you are using default repeating values as question prompts, select <span class="bold">Protect Repeating Defaults</span> and <span class="bold">Save Repeating Defaults</span> for the Question Group and in the <span class="bold">Status Comment</span> field of the DCM enter this string: <code dir="ltr">ADDREPDEF</code>.
+<p>This ensures that, if a user enters data in a CRF that then has a status of Saved Complete or Pass 1 Complete, and additional repeats are later added (Max Repeats is increased) to the form and additional repeating default values are specified for the new repeats&mdash;and a new form version generated and the document migrated to it&mdash;when the user opens the document again, the new repeating default values (prompts) are displayed in RDC Onsite. The user must open and save the document to save the repeating default values.</p>
+</div>
+</li>
+</ol>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BABFEGIJ"></a>
+<div id="OCCRS10084" class="sect2">
+<h3 class="sect2"><span class="secnum">9.1.9</span> Defining Conditional <a id="sthref640"></a>Branching</h3>
+<p>Branching occurs when a data entry interface directs a user to a different set of questions on a CRF, depending on the response entered for a question. There are several types of branching, including Indicator branching, conditional branching, and flexible study design; see <a href="plan.htm#BAJFCIGC">"Designing Response-Dependent Branching"</a> for a comparison of these types.</p>
+<p>In conditional branching, you specify a <span class="italic">source</span> Question and a response value or range of values that, when entered as patient data, triggers the activation of a <span class="italic">target</span> Question in the same DCM. You can specify multiple responses or ranges of responses for the same source Question, and different target Questions for each response or range of responses.</p>
+<p>For example, define a Question "Are you pregnant?" with a DVG containing three values: Yes, No, and I Don't Know. For the response Yes, define a target of the first Question in a Question Group about the pregnancy. For I Don't Know, define a Question "Is lab test scheduled?" as the target, with the Question "Date scheduled" nested. For No, either define a target of "Verification that lab test confirms" or do not define a target at all, in which case the cursor goes to the next sequential Question during data entry.</p>
+<p>You can define conditional branching on numeric, time, and date Questions. You can specify ranges using greater than (&gt;) or less than (&lt;) operations in combination with each other or with the equal to (=) operation. For example, use a numeric range for a Question <span class="bold">Year of Birth</span> to bypass age-specific Questions that are inappropriate for a particular patient.</p>
+<p>To define a <a id="sthref641"></a>conditional branch:</p>
+<ol>
+<li>
+<p>From the <span class="bold">Definition</span> menu, select <span class="bold">DCMs</span>, then choose <span class="bold">DCMs</span>. The system displays the Maintain DCMs window. You can also define conditional branching directly in the Global Library: From the <span class="bold">Glib</span> menu, select <span class="bold">DCMs</span>, then choose <span class="bold">DCMs</span>.</p>
+</li>
+<li>
+<p>Query for or create the DCM.</p>
+</li>
+<li>
+<p>Click the <span class="bold">DCM Question Groups</span> button. The DCM Question Group window opens.</p>
+</li>
+<li>
+<p>Select the DCM Question Group containing the Question that initiates the branching.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If you are using graphic layouts (for RDC Onsite), do not define conditional branching within a repeating Question Group.
+<p>If you are using character-based layouts (for Oracle Clinical) you can define conditional branching within a repeating Question Group. If the target Question is before the source Question in the Question Group, entering the trigger response value during data entry moves the cursor to the target Question in the next repeat of the Question Group.</p>
+</div>
+</li>
+<li>
+<p>Click the <span class="bold">DCM Questions</span> button.</p>
+</li>
+<li>
+<p>Select the initiating, or <span class="italic">source</span> DCM Question. You may want to use a Question with a DVG; see <a href="questions.htm#CIHDJGEI">"Creating and Using DVGs"</a>, especially if the source Question is a character Question.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Conditional Branch</span> button. The system displays the Conditional Branches for (Question Group, Question) form.</p>
+</li>
+<li>
+<p>For each response that should result in a branch, specify the target Question for that branch:</p>
+<ol>
+<li>
+<p>In the Value column, enter the response value that will serve as the trigger for the conditional branch you are defining.</p>
+<ul>
+<li>
+<p>If the Question has a DVG, select a value from the list.</p>
+</li>
+<li>
+<p>If the Question is of data type CHAR but does not have a DVG, only NULL or NOT NULL are allowed.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If the source Question is of data type CHAR, and you want a particular response (such as Y, WHITE, or SEVERE) to trigger a branch, create a Discrete Value Group (DVG) containing all possible responses to the source Question; see <a href="questions.htm#CIHDJGEI">"Creating and Using DVGs"</a>. You may also want to use a DVG for some numerical Questions.
+<p>If you want to trigger the branch if any response is entered, do not assign a DVG to the Question and enter NOT NULL here.</p>
+<p>If you want to trigger the branch if a response is not entered, enter NULL here. In this case, tabbing into the field and out again triggers the branching.</p>
+</div>
+</li>
+<li>
+<p>If the Question is of data type NUMBER any numerical value is allowed.</p>
+</li>
+<li>
+<p>If the Question is of data type DATE the value must be in a date format.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>In the target Question Group Name column, select the Question Group that you want to branch to if the specified response value is entered. This can be the same Question Group that contains the source Question.</p>
+</li>
+<li>
+<p>In the target Question Name column, select the Question in the Question Group that you want to collect next, based on the response to the source Question.</p>
+</li>
+<li>
+<p>In the Occ Sn (Occurrence Sequence) column, enter 0 (zero) if the Question is included in the Question Group only once. If the Question occurs more than once in the Question Group, enter the number for the occurrence of the Question that you want to use, starting with 1.</p>
+</li>
+<li>
+<p>Select a Branch Oper (ation) value:</p>
+<ul>
+<li>
+<p>Select <span class="bold">EQ</span> (Equals, =) if the branch should be triggered if the patient response value entered is the same as the specified response value.</p>
+</li>
+<li>
+<p>Select <span class="bold">GT</span> (Greater Than, &gt;) the branch should be triggered if the patient response value entered is greater than the specified response value.</p>
+</li>
+<li>
+<p>Select <span class="bold">LT</span> (Less Than, &lt;) the branch should be triggered if the patient response value entered is less than the specified response value.</p>
+</li>
+</ul>
+<p>You can create combined conditions <span class="italic">greater than or equal to (&gt;=)</span> or <span class="italic">less than or equal to (&lt;=)</span> by defining multiple branches with the same source and target Questions, one with the operation GT or LT and the other with EQ.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Repeat the last task for each source Question value that you want to serve as a trigger for a conditional branch.</p>
+</li>
+<li>
+<p>Save.</p>
+<p>The system automatically sets the <span class="bold">Has Conditional Branch?</span> value for the DCM Question upon saving.</p>
+</li>
+</ol>
+<p>If you are using graphic layouts, the conditional branch definition is incomplete until you define conditional blocks in the DCM graphic layout editor; see below and <a href="dciforms.htm#CHDEDHGA">"Creating and Maintaining Conditional Blocks"</a>.</p>
+<div id="OCCRS10085" class="sect3"><a id="sthref642"></a>
+<h4 class="sect3"><span class="secnum">9.1.9.1</span> Conditional Branching and Character-Based Layouts</h4>
+<p>For character-based layouts, which Oracle Clinical uses, conditional branching has no visual impact and is immediately in effect in the data entry form if there is a layout in use. The conditional Questions are always visible and displayed the same way as other Questions. The branching logic makes the cursor jump to the target Question when the user enters the response trigger value, but the user can navigate back and enter or update intervening fields.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CACGHHDJ"></a>
+<div id="OCCRS10086" class="sect3">
+<h4 class="sect3"><span class="secnum">9.1.9.2</span> Conditional Branching and Graphic Layouts</h4>
+<p>To complete the definition for graphic layouts, which RDC Onsite uses for data entry, you have to do more work in the layout editor. The default layout identifies all source and associated target Questions you have defined. For each source Question, you create target blocks for each target Question. Then, you can move other Questions&mdash;except the target Question&mdash;in and out of the block(s). These Questions do not necessarily have to be part of the same Question Group as the target Question. In addition, you can reposition Questions such that the target Question is not necessarily the Question that the cursor automatically goes to first when the trigger response is entered; see <a href="dciforms.htm#CHDEDHGA">"Creating and Maintaining Conditional Blocks"</a>.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You control whether diabled blocks are displayed as hidden or greyed in the DCI Forms Local Study Settings window at the database or study level, in the Represent Disabled Block setting; see <a href="dciforms.htm#CHDHHEGJ">"Configuring Study-Level DCI Form Settings"</a>.</div>
+<p>If you have existing conditional or indicator branching definitions used in Oracle Clinical data entry, you can make use of them in your graphic layouts by adding the graphic conditional blocks to your layouts.</p>
+<div id="OCCRS10087" class="sect4"><a id="sthref643"></a>
+<h5 class="sect4"><span class="secnum">9.1.9.2.1</span> Tracking Conditional Block Status at the DCM Level</h5>
+<p>The display-only field <span class="bold">CB Graphic Blocks Defined?</span> in the DCM Conditional Branches window and the DCM Questions window indicates whether the target conditional blocks for the current source Question have been defined in the graphic layout:</p>
+<ul>
+<li>
+<p>The checkbox is checked once target conditional blocks are defined in the Layout Editor.</p>
+</li>
+<li>
+<p>The checkbox becomes unchecked and the target conditional blocks are deleted when:</p>
+<ul>
+<li>
+<p>The DCM layout is regenerated.</p>
+</li>
+<li>
+<p>The conditional blocks for the current source Question are explicitly deleted by the user in the Layout Editor.</p>
+</li>
+<li>
+<p>Certain types of updates are made to the conditional branch definition. See <a href="#BABGGIJI">"How Updating Conditional Branching Definitions Affects DCM/DCI Graphic Layout Flags"</a> for more information.</p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<!-- class="sect4" -->
+<a id="BABGGIJI"></a>
+<div id="OCCRS10088" class="sect4">
+<h5 class="sect4"><span class="secnum">9.1.9.2.2</span> How Updating Conditional Branching Definitions Affects DCM/DCI Graphic Layout Flags</h5>
+<p>After the set of target conditional blocks for a source Question are defined in the Layout Editor, updates made to the base conditional branch definitions can affect the DCM and DCI graphic layout settings. The following table provides details:</p>
+<div id="OCCRS10089" class="tblformalwide">
+<p class="titleintable"><a id="sthref644"></a><a id="sthref645"></a>Table 9-1 Impact of Updating Conditional Branching Definitions</p>
+<table class="cellalignment36" title="Impact of Updating Conditional Branching Definitions" summary="describes graphic block settings changes with definitional updates to source questions after graphic blocks were created" dir="ltr">
+<thead>
+<tr class="cellalignment27">
+<th class="cellalignment37" id="r1c1-t15"><span class="bold">Update</span></th>
+<th class="cellalignment37" id="r1c2-t15">Indicator/ CB Graphic Block(s) Defined?</th>
+<th class="cellalignment37" id="r1c3-t15"><span class="bold">Avail- able</span>?</th>
+<th class="cellalignment37" id="r1c4-t15"><span class="bold">Needs Edit / Verifi- cation?</span></th>
+<th class="cellalignment37" id="r1c5-t15"><span class="bold">Post- Edit Up- dates</span>?</th>
+<th class="cellalignment37" id="r1c6-t15"><span class="bold">Immediate Effect in RDC Onsite Data Entry</span></th>
+<th class="cellalignment37" id="r1c7-t15"><span class="bold">User Action Needed in Layout Editor</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r2c1-t15" headers="r1c1-t15">
+<p>a. Update Value or operator for an existing branch. Block already exists.</p>
+<p>b. Add a new branch or update target for an existing branch where target is already used in an existing branch for this source Question. Block already exists.</p>
+<p>c. Delete a branch.</p>
+<p>Block/target Question is referenced by another branch for this source Question and should not be deleted in the LE.</p>
+</td>
+<td class="cellalignment33" headers="r2c1-t15 r1c2-t15">
+<p>No effect until you open the layout editor. Then the blocks are deleted with a confirmation message. When you return to DCM Questions, the check box is unchecked.</p>
+</td>
+<td class="cellalignment33" headers="r2c1-t15 r1c3-t15">
+<p>No effect</p>
+</td>
+<td class="cellalignment33" headers="r2c1-t15 r1c4-t15">
+<p>No effect</p>
+</td>
+<td class="cellalignment33" headers="r2c1-t15 r1c5-t15">
+<p>No effect</p>
+</td>
+<td class="cellalignment33" headers="r2c1-t15 r1c6-t15">
+<p>New branching behavior is observed</p>
+<p>Any of these changes may result in conditional branch violations.</p>
+</td>
+<td class="cellalignment33" headers="r2c1-t15 r1c7-t15">
+<p>None</p>
+</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r3c1-t15" headers="r1c1-t15">
+<p>d. Add a new branch.</p>
+<p>(Target is NOT already referenced in a defined block. New block is needed.)</p>
+<p>e. Update Target in an existing branch. (Target is NOT already referenced in a defined block. New block is needed.)</p>
+<p>f. Delete a branch. (Block is not referenced by another branch, so should be deleted.)</p>
+</td>
+<td class="cellalignment33" headers="r3c1-t15 r1c2-t15">
+<p>No immediate effect; becomes unchecked when you open the Layout Editor and blocks are deleted.</p>
+</td>
+<td class="cellalignment33" headers="r3c1-t15 r1c3-t15">
+<p>Unchecked</p>
+</td>
+<td class="cellalignment33" headers="r3c1-t15 r1c4-t15">
+<p>Checked</p>
+</td>
+<td class="cellalignment33" headers="r3c1-t15 r1c5-t15">
+<p>Checked</p>
+</td>
+<td class="cellalignment33" headers="r3c1-t15 r1c6-t15">
+<p>Branch has no target block. Branch goes to first enabled Question in the form following the Question with the conditional branch.</p>
+</td>
+<td class="cellalignment33" headers="r3c1-t15 r1c7-t15">
+<p>When you open the DCM Layout Editor, all conditional blocks are automatically deleted. The user must recreate the remaining conditional blocks.</p>
+</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r4c1-t15" headers="r1c1-t15">
+<p>g. Turn a Question into a branching source Question (by defining conditional branches).</p>
+</td>
+<td class="cellalignment33" headers="r4c1-t15 r1c2-t15">
+<p>No effect (initialized to unchecked)</p>
+</td>
+<td class="cellalignment33" headers="r4c1-t15 r1c3-t15">
+<p>No effect</p>
+</td>
+<td class="cellalignment33" headers="r4c1-t15 r1c4-t15">
+<p>No effect</p>
+</td>
+<td class="cellalignment33" headers="r4c1-t15 r1c5-t15">
+<p>No effect</p>
+</td>
+<td class="cellalignment33" headers="r4c1-t15 r1c6-t15">
+<p>No effect. No blocks, no hiding, no branching.</p>
+</td>
+<td class="cellalignment33" headers="r4c1-t15 r1c7-t15">
+<p>Create conditional blocks.</p>
+</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r5c1-t15" headers="r1c1-t15">
+<p>h. Check as mandatory a Question which appears in a conditional block.</p>
+</td>
+<td class="cellalignment33" headers="r5c1-t15 r1c2-t15">
+<p>No effect</p>
+</td>
+<td class="cellalignment33" headers="r5c1-t15 r1c3-t15">
+<p>Unchecked No effect</p>
+</td>
+<td class="cellalignment33" headers="r5c1-t15 r1c4-t15">
+<p>Checked No effect</p>
+</td>
+<td class="cellalignment33" headers="r5c1-t15 r1c5-t15">
+<p>Checked No effect</p>
+</td>
+<td class="cellalignment33" headers="r5c1-t15 r1c6-t15">
+<p>A mandatory discrepancy will be raised. If the block is disabled, the user is unable to resolve the discrepancy.</p>
+</td>
+<td class="cellalignment33" headers="r5c1-t15 r1c7-t15">
+<p>If mandatory Question is in a conditional block and does NOT have a default value, it must be moved.</p>
+</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r6c1-t15" headers="r1c1-t15">
+<p>i. Uncheck Collect in subset for a source Question or a Question in a target block. (Note this action is disallowed for a Question that is definitionally identified as a target on the Conditional Branches form.)</p>
+</td>
+<td class="cellalignment33" headers="r6c1-t15 r1c2-t15">
+<p>No effect</p>
+</td>
+<td class="cellalignment33" headers="r6c1-t15 r1c3-t15">
+<p>Unchecked</p>
+</td>
+<td class="cellalignment33" headers="r6c1-t15 r1c4-t15">
+<p>Checked</p>
+</td>
+<td class="cellalignment33" headers="r6c1-t15 r1c5-t15">
+<p>Checked</p>
+</td>
+<td class="cellalignment33" headers="r6c1-t15 r1c6-t15">
+<p>Label and response fields are still displayed. Response can no longer be entered. However, a pre-existing response can be updated.</p>
+</td>
+<td class="cellalignment33" headers="r6c1-t15 r1c7-t15">
+<p>Edit the layout and save. Create new form version.*</p>
+</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r7c1-t15" headers="r1c1-t15">
+<p>j. Uncheck Displayed. (Can only do this for a non-enterable Question.)</p>
+</td>
+<td class="cellalignment33" headers="r7c1-t15 r1c2-t15">
+<p>No effect</p>
+</td>
+<td class="cellalignment33" headers="r7c1-t15 r1c3-t15">
+<p>Unchecked</p>
+</td>
+<td class="cellalignment33" headers="r7c1-t15 r1c4-t15">
+<p>Checked</p>
+</td>
+<td class="cellalignment33" headers="r7c1-t15 r1c5-t15">
+<p>Checked</p>
+</td>
+<td class="cellalignment33" headers="r7c1-t15 r1c6-t15">
+<p>Question continues to be displayed (still not enterable), Branching is as before.</p>
+</td>
+<td class="cellalignment33" headers="r7c1-t15 r1c7-t15">
+<p>Same as for item j, above.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformalwide" -->
+<p>*Upon edit, the Question is automatically removed from the layout. If this is a source Question with conditional blocks, the Layout editor should also automatically delete conditional blocks for this Question. If this is a target Question, the system removes the Question from the layout.</p>
+</div>
+<!-- class="sect4" --></div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CACHBGEG"></a>
+<div id="OCCRS10090" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">9.1.10</span> Using Normalized Lab Data</h3>
+<p>To use normalized lab data, you must define a pair of Questions in a repeating Question Group to collect the lab test name and lab test result, respectively, for multiple lab tests. Make the number of occurrences of the Question Group equal to or greater than the number of lab tests required.</p>
+<p>When you batch load lab data in a normalized format, the system automatically creates two records from each normalized lab data record. The lab test name is then stored as a Question response and you can use it in data extract and in validation Procedures to identify the test name for each test result.</p>
+<p>For example, from records with a normalized input file format as follows:</p>
+<pre dir="ltr">
+,,2,,VISIT1,0,20110101,,HEMA,HEMA,HEMA,LAB,HCT,0,1,43 
+,,2,,VISIT1,0,20110101,,HEMA,HEMA,HEMA,LAB,HGB,0,2,17 
+</pre>
+<p>where the lab test names are HCT and HGB and the respective lab test values for the patient are 43 and 17: a DCM question, LTEST, has been defined to collect the lab test Question name and another DCM question, LVALUE, has been defined to collect the lab test result, the Batch Data Load process converts the preceding two input records to the following four records:</p>
+<pre dir="ltr">
+,,2,,VISIT1,0,20110101,,HEMA,HEMA,HEMA,LAB,LTEST,0,1,HCT 
+,,2,,VISIT1,0,20110101,,HEMA,HEMA,HEMA,LAB,LVALUE,0,1,43 
+,,2,,VISIT1,0,20110101,,HEMA,HEMA,HEMA,LAB,LTEST,0,2,HGB 
+,,2,,VISIT1,0,20110101,,HEMA,HEMA,HEMA,LAB,LVALUE,0,2,17 
+</pre>
+<p>The system stores "HCT" as the response value for REPEAT_SN 1 of Question LTEST and "HGB" for REPEAT_SN 2 of LTEST.</p>
+<p>To use normalized lab data, define the following Questions and include them in a repeating Question Group in a DCM:</p>
+<ul>
+<li>
+<p><span class="syntaxinlinebold">Lab Test Name</span> You must define a Question to collect the name of the lab test. It must have a data type of CHAR, and it must not be derived.</p>
+</li>
+<li>
+<p><span class="syntaxinlinebold">Lab Test Result</span> You must define a Question to collect the lab test result. It must have a Question type of CHAR and a data type of CHAR, even if the lab data is expected in numerical format. This accommodates responses to numeric Questions with text such as "TRACE" and the use of special characters such as less than (&lt;) and greater than (&gt;), and allows you to use the same Question for all lab tests.</p>
+<p>The lab test result Question must not be derived, but you may want to define an additional Question that is derived and numeric to hold the value of numeric tests, and a derivation Procedure to populate its value; see <a href="proc.htm#BEJGGJFH">Chapter 16, "Validation and Derivation Procedures"</a>.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Since these same two Questions are used for all lab tests that are loaded in a normalized format, it is difficult to understand discrepancies based on lab test Questions. However, you can use the repeat sequence number as a variable (\REPEAT_SN\) in a Standard Text definition to identify which lab test result is discrepant wherever discrepancies are displayed. For information on Standard Text, see the <span class="italic">Oracle Clinical Administrator's Guide</span>.</div>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="CACBIDFG"></a>
+<div id="OCCRS10091" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">9.1.11</span> Defining Date Formats</h3>
+<p>You can specify the order in which the system displays a Question's date components (day, month, and year). Set the date format at the DCM level.</p>
+<p>During <a id="sthref646"></a>Log-In, by selecting <span class="bold">Preferences</span> from the <span class="bold">Special</span> menu, the data entry operator can set the value of a user preference, <a id="sthref647"></a>data entry display format, to determine the format of the DCI and DCM dates' values:</p>
+<ul>
+<li>
+<p>European format is DD-MM-YYYY</p>
+</li>
+<li>
+<p>Swedish format is YYYY-MM-DD</p>
+</li>
+<li>
+<p>U.S. format is MM-DD-YYYY</p>
+</li>
+<li>
+<p>Standard format is DD-MON-YYYY</p>
+</li>
+<li>
+<p>Dynamic format is based on the log-in header</p>
+</li>
+</ul>
+<p>If you set the date format at the DCM level to US, EUROPEAN, SWEDISH, or STANDARD, the display format for Date-type Questions in data entry is as described above, regardless of the values of the data entry display format user preference set in the Log-In form. However, if you set the date format for the DCM to DYNAMIC, the display format for Date-type Questions in data entry defaults to the value of the data entry display format used in the log-in process.</p>
+<p><a id="sthref648"></a>Because the DYNAMIC date format allows more flexibility for the data entry operator, it is especially useful in distributed studies with different country locations where forms might be identical except for their date format. In these situations, the date displays in the appropriate country date format at a location other than its origin.</p>
+<p>To set the country <a id="sthref649"></a>date format:</p>
+<ol>
+<li>
+<p>From the <span class="bold">Definition</span> menu, select <span class="bold">DCMs</span>, then choose <span class="bold">DCMs</span>. The system displays the Maintain DCMs form.</p>
+</li>
+<li>
+<p>Query or create the DCM.</p>
+</li>
+<li>
+<p>Select the <span class="bold">Date Format</span> field.</p>
+</li>
+<li>
+<p>Use the List function to select the appropriate value.</p>
+</li>
+<li>
+<p>Save.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CACCEDAC"></a>
+<div id="OCCRS561" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">9.1.12</span> Scheduling DCMs</h3>
+<p>You can schedule DCMs by associating them with Clinical Planned Events (CPEs), which are ordinarily clinical visits by patients. You can define a DCM once and collect it at multiple visits.</p>
+<p>If you are using RDC, do not schedule DCMs directly to CPEs. Instead, define a DCI Book that defines associates all study visits with DCMs. You can also use DCI Books for Oracle Clinical data entry; see <a href="books.htm#BABBJACC">Chapter 10, "Defining DCI Books."</a></p>
+<div id="OCCRS562" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref650"></a>
+<h4 class="sect3"><span class="secnum">9.1.12.1</span> Associating DCMs to CPEs</h4>
+<p>The study's protocol determines the number of CPEs and the Intervals between them. You associate each DCM to a specific clinical visit. Mapping a DCM to a CPE lets Oracle Clinical track patient data over time. Mapping a DCM to several CPEs lets Oracle Clinical <a id="sthref651"></a>track specific study Questions under different circumstances, usually after the passage of time or under various experimental situations.</p>
+<p>You create a study's Intervals and CPEs in the Design subsystem. Each DCM corresponds to medical data at an instant in a patient's history, and that instant is defined by associating the DCM with the clinical <a id="sthref652"></a>visit during which the data is collected. The results of this mapping task are presented in a matrix format, <a id="sthref653"></a>with CPEs along the top row as an event sequence, and DCMs or DCM subsets on the left as a data collection sequence. Each intersection of row and column defines a possible association between DCM and CPE.</p>
+<p>Values for these points are as follows:</p>
+<ul>
+<li>
+<p><span class="bold">E</span> &ndash; You expect a site to collect the DCM's data at this CPE.</p>
+</li>
+<li>
+<p><span class="bold">O</span> &ndash; Collection of the DCM is optional at this CPE.</p>
+</li>
+<li>
+<p><span class="bold">(Blank)</span> &ndash; DCM is not scheduled to be collected for this CPE.</p>
+</li>
+</ul>
+<p>When you have completely defined the associations, commit the schedule.</p>
+</div>
+<!-- class="sect3" -->
+<div id="OCCRS563" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref654"></a>
+<h4 class="sect3"><span class="secnum">9.1.12.2</span> Schedule DCMs Form</h4>
+<p>You schedule DCMs from the Schedule DCMs form. From the <span class="bold">Definition</span> menu, select <span class="bold">DCMs</span>, then choose <a id="ABC1121972"></a><span class="bold">Schedule DCMs</span>. The form appears with a pop-up window for you to select a clinical study. The system arranges the DCMs in the collection sequence. From the <span class="bold">Special</span> menu of the Schedule DCMs form, you can copy <a id="ABC1121974"></a>DCMs, copy <a id="ABC1121976"></a>CPEs, resequence the <a id="sthref655"></a>DCMs, or change the study.</p>
+<p>Navigating to any point on the grid and clicking the <span class="bold">DCMs</span> button displays a window with detailed information on the current DCM. Similarly, pressing the <span class="bold">Clinical Planned Events</span> button displays detailed information on the current CPE.</p>
+</div>
+<!-- class="sect3" -->
+<div id="OCCRS564" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref656"></a>
+<h4 class="sect3"><span class="secnum">9.1.12.3</span> Copying the CPE Schedule</h4>
+<p>You may find you want to use the DCM schedule of one CPE for another CPE&mdash;that is, you want to copy the DCM values from one CPE column to another. To copy CPE values:</p>
+<ol>
+<li>
+<p>From the <span class="bold">Definition</span> menu, select <span class="bold">DCMs</span>, then choose <a id="sthref657"></a><span class="bold">Schedule DCMs</span>. Select the DCM schedule with the CPE you want to copy.</p>
+</li>
+<li>
+<p>From the <span class="bold">Special</span> menu, select <span class="bold">Copy CPE</span>. A pop-up window appears, <a id="sthref658"></a>Copy Schedule for CPE.</p>
+</li>
+<li>
+<p>Enter a CPE in the pop-up window to copy the schedule from, or use the List function to view and select valid CPEs.</p>
+</li>
+<li>
+<p>Click:</p>
+<ol>
+<li>
+<p><span class="bold">OK</span> to copy the schedule from one CPE.</p>
+</li>
+<li>
+<p><span class="bold">Cancel</span> to return to the Schedule DCMs form without copying.<a id="sthref659"></a></p>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<div id="OCCRS565" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref660"></a>
+<h4 class="sect3"><span class="secnum">9.1.12.4</span> Copying the DCM Schedule</h4>
+<p>You may find that you want to use the CPE schedule of one DCM for another DCM&mdash;that is, you want to copy the CPE values from one DCM row to another. To do this, follow this procedure in the Schedule DCMs form:</p>
+<ol>
+<li>
+<p>Navigate to Copy DCM or CPE Definition, DCMs, Schedule DCMs, Special Menu, Copy DCM.</p>
+</li>
+<li>
+<p>Select <span class="bold">Copy DCM</span> from the Special menu. A pop-up window appears, <a id="sthref661"></a>Copy Schedule for DCM.</p>
+</li>
+<li>
+<p>Enter a DCM in the pop-up window to copy the CPE schedule from, or use the List function to browse the valid DCMs.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span> to copy the DCM schedule, or cancel and return to the Schedule DCMs form without copying<a id="sthref662"></a>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<div id="OCCRS566" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref663"></a>
+<h4 class="sect3"><span class="secnum">9.1.12.5</span> Resequencing DCMs</h4>
+<p>The DCM<a id="ABC1122134"></a> sequence is the order in which DCMs are displayed in reports (except the DCM Detail Tracking Matrix Report, which is ordered by ascending DCM ID) and on the DCM schedule. When you first enter the Schedule DCMs form, you may receive a message that you must resequence the DCMs. This is because the DCMs in the study are not currently sequenced consecutively&mdash;probably because a DCM was added or deleted from the study. The system requires that you alter this sequencing, making the DCM consecutively numbered from 1 to <span class="italic">n</span> before proceeding.</p>
+<p>To resequence the DCMs:</p>
+<ol>
+<li>
+<p>Select <a id="sthref664"></a><span class="bold">Resequence DCM</span> from the <span class="bold">Special</span> menu. Oracle Clinical displays the DCM Sequencing form.</p>
+</li>
+<li>
+<p>Change the <a id="sthref665"></a>sequence number (Seq #).</p>
+</li>
+<li>
+<p>Select <span class="bold">Commit</span>. The system moves the DCM to a new position in the<a id="sthref666"></a> sequence.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="i1001406"></a>
+<div id="OCCRS523" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">9.2</span> Creating Character-Based Layouts</h2>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#CACEGJHI">Creating Default DCM Layouts</a></p>
+</li>
+<li>
+<p><a href="#CACIBCDG">Creating Additional Layouts</a></p>
+</li>
+<li>
+<p><a href="#BABBAJCF">Editing DCM Layouts with the DCM Layout Editor</a></p>
+</li>
+<li>
+<p><a href="#CACCDFHE">Sequencing Data Entry</a></p>
+</li>
+<li>
+<p><a href="#i1001642">Using Data Entry Forms in Test and Production Modes</a></p>
+</li>
+</ul>
+<p>This section describes designing character-based data entry layouts used for data entry in Oracle Clinical. If you are using RDC Onsite, see <a href="dciforms.htm#CHDEBHFD">Chapter 12, "Creating Graphic Layouts."</a></p>
+<p>Two <a id="ABC1119571"></a>tools help you create <a id="sthref667"></a>data <a id="sthref668"></a>entry form layouts:</p>
+<ul>
+<li>
+<p><span class="bold">Default DCM Layout Generator</span><a id="sthref669"></a> Creates an initial layout of data entry fields on a DCM by reading its DCM Question, DCM Question Group, and DCM definition information. This tool takes as input the preferences specified in the DCM definitions&mdash;including <a id="sthref670"></a>prompt position, <a id="sthref671"></a>prompt text, and<a id="sthref672"></a> Question sequencing&mdash;which makes it capable of generating several different styles of <a id="sthref673"></a>DCM layouts.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The Default Layout Generator assigns a display order to each field from left to right and top to bottom according to the DCM Question's Disp Seq# (Display Sequence Number) value. If the Disp Seq# values are changed for the DCM Questions, the existing layout is not affected and the 'Regen Reqd?' flag for the DCM is not checked. The display order of the fields in the character layout is changed only when the layout is defaulted again.</div>
+</li>
+<li>
+<p><span class="bold"><a id="sthref674"></a>DCM Layout Editor.</span> Use the DCM Layout Editor to customize the appearance of default layouts, refining the DCM's interface to be more intuitive for data entry.</p>
+</li>
+</ul>
+<p>The basic steps to create <a id="ABC1119628"></a>data <a id="sthref675"></a>entry screens are:</p>
+<ol>
+<li>
+<p>Generate a default layout for the specified DCM.</p>
+</li>
+<li>
+<p>View the default layout with the DCM Layout Editor.</p>
+<p>Optionally, return to the DCM and change default settings and regenerate the default layout.</p>
+</li>
+<li>
+<p>Modify the default layout with the DCM Layout Editor.</p>
+</li>
+<li>
+<p>Test the layout by using it in the test environment.</p>
+</li>
+<li>
+<p>Move the layout from the test environment into production.</p>
+</li>
+</ol>
+<a id="CACEGJHI"></a>
+<div id="OCCRS10092" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">9.2.1</span> Creating Default DCM Layouts<a id="ABC1119512"></a> <a id="sthref676"></a><a id="sthref677"></a></h3>
+<p>To create a new DCM character-based layout:</p>
+<ol>
+<li>
+<p>Put your cursor on an existing DCM that you want to create a layout for. If the DCM has more than one subset, select the one for which you want the new layout.</p>
+</li>
+<li>
+<p>In the Special menu, choose <span class="bold">Default Character Layout</span>. A message appears in the status bar stating that a <a id="sthref678"></a>layout has been successfully created, and the system sets the <a id="sthref679"></a><a id="sthref680"></a>Data Entry<a id="sthref681"></a> Generation Time value. You can see the timestamp in the Character Layout tab.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CACIBCDG"></a>
+<div id="OCCRS10093" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">9.2.2</span> Creating Additional Layouts</h3>
+<p>You can create multiple layouts for the same DCM; for example, layouts in German and French. If a DCM has multiple subsets, you can create multiple layouts for each subset.</p>
+<p>To create an additional layout for a DCM, from the Data Collection Modules window, do the following:</p>
+<ol>
+<li>
+<p>Put your cursor on an existing DCM that you want to create a layout for. If the DCM has more than one subset, select the one for which you want the new layout.</p>
+</li>
+<li>
+<p>In the Special menu, choose <span class="bold">Create DCM Layout</span>. The system creates a new layout with the Layout number incremented by one.</p>
+</li>
+<li>
+<p>In the <span class="bold">Description</span> field, explain the purpose of the new layout.</p>
+</li>
+<li>
+<p>If you want to prevent a Question from being displayed in the new layout, click the <span class="bold">Questions Group</span> button, select the Question's Question Group, click the <span class="bold">Questions</span> button, and deselect <span class="bold">Displayed?</span> for the Question.</p>
+</li>
+<li>
+<p>Edit the new layout (see <a href="#BABBAJCF">"Editing DCM Layouts with the DCM Layout Editor"</a>).</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BABBAJCF"></a>
+<div id="OCCRS524" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">9.2.3</span> Editing DCM Layouts with the DCM Layout Editor <a id="sthref682"></a></h3>
+<p>The DCM Layout Editor allows you to modify data entry forms to more closely resemble CRFs, to improve the efficiency of data entry, or to add on-screen information. The DCM Layout Editor can display all the Questions in a particular Question Group, including all repeating instances of fields. The ability to create more than one layout for a single DCM, combined with the ability to tailor each one, means that you can create different layouts for different uses.</p>
+<p>An example of this flexibility is a case where two laboratories collect data in different Question sequences and with different labels. You need create only one DCM in Oracle Clinical, with two layouts tailored to each laboratory's usage. The use of different DCM layouts does not affect the underlying structure of the DCM, nor the organization of the resulting data in the database.</p>
+<p>To open the DCM Layout Editor:</p>
+<ol>
+<li>
+<p>From the <span class="bold">Definition</span> menu, select DCMs, then choose DCMs.</p>
+</li>
+<li>
+<p>Select the DCM to edit</p>
+</li>
+<li>
+<p>From the Special menu, select <a id="sthref683"></a><span class="bold">Edit Layout</span>.</p>
+<p>The DCM window opens the DCM Layout editor in a new window. All windows in your session remain open. If you return to your session, you see a message stating that a Layout Editing session is in progress. (Check that you have saved your work in the DCM Layout Editor, if necessary, before closing this message box.)</p>
+</li>
+</ol>
+<div id="OCCRS525" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref684"></a>
+<h4 class="sect3"><span class="secnum">9.2.3.1</span> Parts of the DCM Layout Editor <a id="sthref685"></a></h4>
+<p>The DCM Layout Editor window has a menu, a toolbar, a work area, and&mdash;at the bottom of the window&mdash;a task bar. A sample detail of the DCM Layout Editor's window follows:</p>
+<img width="665" height="333" src="img/dcmlay01.gif" alt="Description of dcmlay01.gif follows" /><br />
+<a id="sthref686" href="img_text/dcmlay01.htm">Description of the illustration ''dcmlay01.gif''</a><br />
+<br />
+<p><span class="italic">Objects</span> are any selectable parts of the layout: response fields, field labels, text, and graphic shapes. In the sample illustration above:</p>
+<ul>
+<li>
+<p>ddd is the label text</p>
+</li>
+<li>
+<p>ALLERGIC_REACTION is a Question name, and the surrounding white box is the representation of the field's shape and position in the corresponding data entry form.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<div id="OCCRS526" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref687"></a>
+<h4 class="sect3"><span class="secnum">9.2.3.2</span> Positioning Objects</h4>
+<p>The DCM Layout Editor allows positioning objects within a <span class="italic"><a id="sthref688"></a><a id="sthref689"></a>character grid</span> in one-character increments. The administrator of the Web server controls the character grid size by changing registry settings (described in Appendix A of the <span class="italic">Oracle Clinical Administrator's Guide</span>).You can display an overlay of the character grid on your workspace by dropping down the View menu and selecting the Show Grid box. Rulers along the top and left sides of the work area display the coordinates of the cursor position. (The numbers on the ruler represent tens of characters; the number 1 represents ten characters.) You can also see the exact position of a selected object, or the mouse pointer, in the left-side corner of the taskbar.</p>
+</div>
+<!-- class="sect3" -->
+<a id="i1005062"></a>
+<div id="OCCRS527" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><span class="secnum">9.2.3.3</span> Selecting Objects</h4>
+<p>Selected objects display <span class="italic"><a id="sthref690"></a><a id="sthref691"></a>pull handles</span> (small black squares at the corners and midpoints).</p>
+<div id="OCCRS528" class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref692"></a>
+<h5 class="sect4"><span class="secnum">9.2.3.3.1</span> Selecting Individual Objects<a id="sthref693"></a></h5>
+<p>To select one response field, field label, or text object: with the selection tool, click inside the borders of the object. For a box object, either position the point of the selector over the border of the box and left-click, or position the cursor inside the box and click-drag in a diagonal direction.</p>
+</div>
+<!-- class="sect4" -->
+<div id="OCCRS529" class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref694"></a>
+<h5 class="sect4"><span class="secnum">9.2.3.3.2</span> Selecting Contiguous Objects</h5>
+<p>To select all the objects in an area of the layout: Click-drag the selector in a diagonal direction across the area.</p>
+</div>
+<!-- class="sect4" -->
+<div id="OCCRS530" class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref695"></a>
+<h5 class="sect4"><span class="secnum">9.2.3.3.3</span> Selecting Non-contiguous Objects</h5>
+<p>You can Control-click to select or deselect objects regardless of their geographic location in the layout. If you are Control-clicking a box, note that you must position the pointer of the selector tool directly on its border.</p>
+</div>
+<!-- class="sect4" --></div>
+<!-- class="sect3" -->
+<div id="OCCRS531" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref696"></a>
+<h4 class="sect3"><span class="secnum">9.2.3.4</span> Editing or Adding Text</h4>
+<p>The DCM Layout Generator creates text objects of the Questions' Default Prompt values, referred to sometimes as boilerplate text. You can change the text in these objects as well as in new text objects you add to the layout. To edit the text in a text object, double-click the <a id="sthref697"></a>object. The system changes to text edit mode. To stop editing a text object, click outside the text object.</p>
+<p>You can add extra text objects to the layout. Text objects cannot exceed one character in height. (Stack multiple text objects to create multiple lines.) To create new text objects:</p>
+<ol>
+<li>
+<p>Click the Text button in the tool bar.</p>
+</li>
+<li>
+<p>Position the mouse pointer in the layout at the position where the text starts. You can see the character grid location of the pointer on the rulers and in X,Y character coordinates on the taskbar.</p>
+</li>
+<li>
+<p>Click. The system places a text field in the layout, snapped to the coordinates of the closest positions in the character grid, and changes to text editing mode.</p>
+</li>
+<li>
+<p>Enter the text.</p>
+</li>
+</ol>
+<p>Your organization sets the DCM layout text font characteristics with registry entries on the Web server computer. For text objects, the registry entry is OC_DE_TEXTFONT. For field text, the registry entry is OC_DE_FIELDFONT. Note that these registries control layout screens and data entry screens.</p>
+</div>
+<!-- class="sect3" -->
+<div id="OCCRS532" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref698"></a>
+<h4 class="sect3"><span class="secnum">9.2.3.5</span> Adding Boxes</h4>
+<p>You can add ruled rectangles, or boxes, to enhance the usability of the data entry form. You can, for instance draw a rectangle around a <a id="sthref699"></a>Question Group to indicate to the data entry operator that the fields are related.</p>
+<ol>
+<li>
+<p>Click the Rectangle button in the toolbar.</p>
+</li>
+<li>
+<p>Position the mouse pointer in the layout at the point of a desired corner. You can see the character grid location of the pointer on the rulers and in X,Y character coordinates on the taskbar.</p>
+</li>
+<li>
+<p>Click and drag the pointer diagonally to the desired position of the opposite corner. The system places a text field in the layout, snapped to the coordinates of the closest positions in the character grid.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<div id="OCCRS533" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref700"></a>
+<h4 class="sect3"><span class="secnum">9.2.3.6</span> Moving Objects</h4>
+<p>You can move objects with either the mouse or with your keyboard's arrow keys. All movements increment to the closest position on the character grid.</p>
+<div id="OCCRS534" class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref701"></a>
+<h5 class="sect4"><span class="secnum">9.2.3.6.1</span> Moving an Object with the Mouse</h5>
+<p>You can move an individual object with the mouse. For a rectangle object, place the tip of the mouse pointer on the perimeter of the rectangle. (Try to avoid the midpoints and corners, which are the locations of the grab handles.) Mouse-click and hold while you drag the rectangle to a new position. For any other type of object, place the tip of the mouse pointer within the object's perimeter, then mouse-click and hold while you drag the object to another position.</p>
+</div>
+<!-- class="sect4" -->
+<div id="OCCRS535" class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref702"></a>
+<h5 class="sect4"><span class="secnum">9.2.3.6.2</span> Moving Objects with the Keyboard Arrows</h5>
+<p>You can move one or more selected objects with the keyboard arrows. This approach is effective for maintaining the geographic relationship among a local set of objects (for instance, response fields and their labels), while moving them.</p>
+</div>
+<!-- class="sect4" --></div>
+<!-- class="sect3" -->
+<div id="OCCRS536" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref703"></a>
+<h4 class="sect3"><span class="secnum">9.2.3.7</span> Arranging Objects</h4>
+<p>The DCM Layout Editor has a set of tools for aligning selected objects, and a tool for controlling the distance between repeating Questions.</p>
+<div id="OCCRS537" class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref704"></a>
+<h5 class="sect4"><span class="secnum">9.2.3.7.1</span> Aligning Selected Objects</h5>
+<p>The DCM Layout Editor has six tools for systematically aligning groups of selected objects by the objects' axes or borders. You invoke the tools either from the Arrange menu or from toolbar buttons. Position the mouse pointer over a symbol to read a description of how it aligns selected objects.</p>
+</div>
+<!-- class="sect4" -->
+<div id="OCCRS538" class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref705"></a>
+<h5 class="sect4"><span class="secnum">9.2.3.7.2</span> Setting Distance Between Repeating Questions</h5>
+<p>You can adjust the spacing between repeating Questions. Select a set of repeating Questions, then from the Arrange menu, select Lines Per Repeat. The Lines Per Repeat dialog box opens. The lines per repeat increment corresponds to the character grid. Enter a number and click OK. The system adjusts the distance between repeating Questions a corresponding number of character cell increments.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The Lines Per Repeat spacing tool only works for Question Groups with a prompt position value of 'L.' Its prompt position must be set to the Left radio button in the DCM Question Groups dialog box. (See <a href="questions.htm#i15796">"Creating and Maintaining Question Groups"</a> for more information.)</div>
+</div>
+<!-- class="sect4" --></div>
+<!-- class="sect3" -->
+<div id="OCCRS539" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref706"></a>
+<h4 class="sect3"><span class="secnum">9.2.3.8</span> Deleting Objects</h4>
+<p>To delete an object, select it and press the Delete keyboard key, or use the keyboard combination Control-X. Alternatively, from the Edit menu, select Delete. If the object is a non-expendable part of the DCM, deleting without pasting generates an error message.</p>
+</div>
+<!-- class="sect3" -->
+<div id="OCCRS540" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref707"></a>
+<h4 class="sect3"><span class="secnum">9.2.3.9</span> Resizing Objects</h4>
+<p>You can change the height and width of rectangles and text objects, and the lengths of text fields. You can also systematically resize a group of selected items in one operation.</p>
+<div id="OCCRS541" class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref708"></a>
+<h5 class="sect4"><span class="secnum">9.2.3.9.1</span> Resizing Individual Rectangles or Text Objects</h5>
+<p>Select the object to expose its pull handles (small black boxes at the midpoints and corners of the object). Place the point of the mouse pointer over a pull handle. Click and hold while you drag the pull handle. You must pull the handle at least one character length for a change to take place.</p>
+</div>
+<!-- class="sect4" -->
+<div id="OCCRS542" class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref709"></a>
+<h5 class="sect4"><span class="secnum">9.2.3.9.2</span> Resizing Individual Response Fields</h5>
+<p>You can only lengthen the width. Select the field to expose its pull handles. Place the point of the mouse over one of the drag handles at either end of the field. Click and drag the handle at least one character length.</p>
+</div>
+<!-- class="sect4" -->
+<div id="OCCRS543" class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref710"></a>
+<h5 class="sect4"><span class="secnum">9.2.3.9.3</span> Resizing Widths of Multiple Selections</h5>
+<p>Use the tools in the Resize menu to change the widths of all selected objects to a uniform size, either:</p>
+<ul>
+<li>
+<p>the shortest selected width</p>
+</li>
+<li>
+<p>the average of all of the selected widths (to the nearest character)</p>
+</li>
+<li>
+<p>the longest selected width</p>
+</li>
+</ul>
+</div>
+<!-- class="sect4" --></div>
+<!-- class="sect3" -->
+<div id="OCCRS545" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref711"></a>
+<h4 class="sect3"><span class="secnum">9.2.3.10</span> Controlling Spacing and Sizing of Objects</h4>
+<p>Layout controls are independent of the default font setting. These controls enable you to specify the spacing of the objects in your data entry layouts and the length of field. The values are in pixels.</p>
+<p>You control the appearance of the data entry panel (the lower panel in the data entry window), with parameters de_gridwidth and de_gridheight. You must set these values.</p>
+<p>You adjust the width of list of values columns in the data entry form with the parameter de_lgridwidth. This parameter is optional. If you don't supply a value, the default value is 11 pixels You adjust the size character width of List of Values entries in data entry screens with parameter de_lgridwidth.</p>
+<p>To adjust these values, edit file formsweb.cfg, which is located at <span class="italic">oracle_home</span>\forms60\server. Follow these instructions:</p>
+<ol>
+<li>
+<p>Open formsweb.cfg in a text editor.</p>
+</li>
+<li>
+<p>In the <code dir="ltr">[opa45]</code> section, find the line that begins: <code dir="ltr">form=opamenu.fmx</code>.</p>
+</li>
+<li>
+<p>Add the following text string to the end of this line:</p>
+<p><code dir="ltr">de_gridwidth=</code><code dir="ltr"><span class="codeinlineitalic">number</span></code> <code dir="ltr">de_gridheight=</code><code dir="ltr"><span class="codeinlineitalic">number</span></code></p>
+<p>Where <code dir="ltr"><span class="codeinlineitalic">number</span></code> is the parameter value (in pixels) you choose.</p>
+</li>
+<li>
+<p>Save and close formsweb.cfg.</p>
+</li>
+<li>
+<p>Test your settings by opening a data entry form.</p>
+</li>
+</ol>
+<p>For default DCM data entry layouts, Oracle recommends you use de_gridheight=18 de_gridwidth=7. If you re-arranged objects in earlier layouts, Oracle recommends you use de_gridheight=27 and de_gridwidth=10. DVG LOVs are objects in the bottom panel of the data entry form. To adjust the width of DVG list of valueslist of values columns, add to the otherparams line: de_lgridwidth=number Where number is the parameter value you choose. If you do not add this line, the system sets the de_lgridwidth default value to 10.</p>
+<p>Here is a sample text string for new default layouts:</p>
+<p><code dir="ltr">form=opamenu.fmx term=opahome\opa_fmrpcweb.res de_gridheight=18 de_gridwidth=7</code></p>
+<p>Here is a sample text string for revised default layouts:</p>
+<p><code dir="ltr">form=opamenu.fmx term=opahome\opa_fmrpcweb.res de_gridheight=27 de_gridwidth=10</code></p>
+</div>
+<!-- class="sect3" -->
+<div id="OCCRS546" class="sect3"><a id="sthref712"></a>
+<h4 class="sect3"><span class="secnum">9.2.3.11</span> Changing Page Numbers of Objects</h4>
+<p>Select the object(s) you want to move to another page. Select Cut to move to the clipboard. Use the Page list to move to the page where you want to place the object(s). Select Paste, then click where you want to place it. The editor pastes objects at the clicked mouse location if they fit there. Otherwise they remain in the clipboard, and an error message appears.</p>
+<p><a href="#CACCBJBA">Table 9-2</a> describes the function of each menu entry.</p>
+<div id="OCCRS547" class="tblruleformal">
+<p class="titleintable"><a id="sthref713"></a><a id="CACCBJBA"></a>Table 9-2 DCM Layout Editor Menu Entries</p>
+<table class="cellalignment36" title="DCM Layout Editor Menu Entries" summary="This table summarizes DCM layout menu entries." dir="ltr">
+<thead>
+<tr class="cellalignment27">
+<th class="cellalignment37" id="r1c1-t19">Menu</th>
+<th class="cellalignment37" id="r1c2-t19">Entry</th>
+<th class="cellalignment37" id="r1c3-t19">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r2c1-t19" headers="r1c1-t19">
+<p>File</p>
+</td>
+<td class="cellalignment33" headers="r2c1-t19 r1c2-t19">&nbsp;</td>
+<td class="cellalignment33" headers="r2c1-t19 r1c3-t19">&nbsp;</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r3c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment33" headers="r3c1-t19 r1c2-t19">
+<p>Save</p>
+</td>
+<td class="cellalignment33" headers="r3c1-t19 r1c3-t19">
+<p>Update the database with the current version of your edits.</p>
+</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r4c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment33" headers="r4c1-t19 r1c2-t19">
+<p>Validate</p>
+</td>
+<td class="cellalignment33" headers="r4c1-t19 r1c3-t19">
+<p>Test that the layout conforms to layout rules that prevent, for instance, overlapping fields.</p>
+</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r5c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment33" headers="r5c1-t19 r1c2-t19">
+<p>Revert</p>
+</td>
+<td class="cellalignment33" headers="r5c1-t19 r1c3-t19">
+<p>Select Revert to return to the previous saved version without exiting the Layout Editor.</p>
+</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r6c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment33" headers="r6c1-t19 r1c2-t19">
+<p>Exit</p>
+</td>
+<td class="cellalignment33" headers="r6c1-t19 r1c3-t19">
+<p>This choice performs a number of tests to ensure that the current layout conforms to DCM and layout rules.</p>
+</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r7c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment33" headers="r7c1-t19 r1c2-t19">
+<p>Exit without saving</p>
+</td>
+<td class="cellalignment33" headers="r7c1-t19 r1c3-t19">
+<p>Choose this entry to bypass conformance checks. (The system still prompts you if you have unsaved work)</p>
+</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r8c1-t19" headers="r1c1-t19">
+<p>Edit</p>
+</td>
+<td class="cellalignment33" headers="r8c1-t19 r1c2-t19">&nbsp;</td>
+<td class="cellalignment33" headers="r8c1-t19 r1c3-t19">&nbsp;</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r9c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment33" headers="r9c1-t19 r1c2-t19">
+<p>Cut</p>
+</td>
+<td class="cellalignment33" headers="r9c1-t19 r1c3-t19">
+<p>Copy the selection to the clipboard and remove it from the layout. (Control-X)</p>
+</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r10c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment33" headers="r10c1-t19 r1c2-t19">
+<p>Copy</p>
+</td>
+<td class="cellalignment33" headers="r10c1-t19 r1c3-t19">
+<p>Copy the selection to the clipboard. (Control-C)</p>
+</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r11c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment33" headers="r11c1-t19 r1c2-t19">
+<p>Paste</p>
+</td>
+<td class="cellalignment33" headers="r11c1-t19 r1c3-t19">
+<p>Place the contents of the clipboard on the current page. (Control-V)</p>
+</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r12c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment33" headers="r12c1-t19 r1c2-t19">
+<p>Undo</p>
+</td>
+<td class="cellalignment33" headers="r12c1-t19 r1c3-t19">
+<p>Return the layout to its state prior to the last action. (Control-U)</p>
+</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r13c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment33" headers="r13c1-t19 r1c2-t19">
+<p>Redo</p>
+</td>
+<td class="cellalignment33" headers="r13c1-t19 r1c3-t19">
+<p>Return the layout to its state prior to the last Undo.</p>
+</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r14c1-t19" headers="r1c1-t19">
+<p>Resize</p>
+</td>
+<td class="cellalignment33" headers="r14c1-t19 r1c2-t19">&nbsp;</td>
+<td class="cellalignment33" headers="r14c1-t19 r1c3-t19">&nbsp;</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r15c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment33" headers="r15c1-t19 r1c2-t19">
+<p>Resize to smallest width</p>
+</td>
+<td class="cellalignment33" headers="r15c1-t19 r1c3-t19">
+<p>Adjust the width of selected objects to the width of the narrowest selected object in one operation.</p>
+</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r16c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment33" headers="r16c1-t19 r1c2-t19">
+<p>Resize to average width</p>
+</td>
+<td class="cellalignment33" headers="r16c1-t19 r1c3-t19">
+<p>Adjust the width of selected objects to the average width of the selected objects in one operation.</p>
+</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r17c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment33" headers="r17c1-t19 r1c2-t19">
+<p>Resize to largest width</p>
+</td>
+<td class="cellalignment33" headers="r17c1-t19 r1c3-t19">
+<p>Adjust the width of selected objects to the width of the longest selected object in one operation.</p>
+</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r18c1-t19" headers="r1c1-t19">
+<p>Order</p>
+</td>
+<td class="cellalignment33" headers="r18c1-t19 r1c2-t19">&nbsp;</td>
+<td class="cellalignment33" headers="r18c1-t19 r1c3-t19">&nbsp;</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r19c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment33" headers="r19c1-t19 r1c2-t19">
+<p>Order by clicking</p>
+</td>
+<td class="cellalignment33" headers="r19c1-t19 r1c3-t19">&nbsp;</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r20c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment33" headers="r20c1-t19 r1c2-t19">
+<p>Order by entering Sequence Number</p>
+</td>
+<td class="cellalignment33" headers="r20c1-t19 r1c3-t19">&nbsp;</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r21c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment33" headers="r21c1-t19 r1c2-t19">
+<p>Display</p>
+</td>
+<td class="cellalignment33" headers="r21c1-t19 r1c3-t19">&nbsp;</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r22c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment33" headers="r22c1-t19 r1c2-t19">
+<p>Order Current Page by Row/Column</p>
+</td>
+<td class="cellalignment33" headers="r22c1-t19 r1c3-t19">&nbsp;</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r23c1-t19" headers="r1c1-t19">
+<p>View</p>
+</td>
+<td class="cellalignment33" headers="r23c1-t19 r1c2-t19">&nbsp;</td>
+<td class="cellalignment33" headers="r23c1-t19 r1c3-t19">&nbsp;</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r24c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment33" headers="r24c1-t19 r1c2-t19">
+<p>Show Grid box</p>
+</td>
+<td class="cellalignment33" headers="r24c1-t19 r1c3-t19">&nbsp;</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r25c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment33" headers="r25c1-t19 r1c2-t19">
+<p>Zoom (radio buttons for various magnifications)</p>
+</td>
+<td class="cellalignment33" headers="r25c1-t19 r1c3-t19">&nbsp;</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r26c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment33" headers="r26c1-t19 r1c2-t19">
+<p>Center on selection box</p>
+</td>
+<td class="cellalignment33" headers="r26c1-t19 r1c3-t19">&nbsp;</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r27c1-t19" headers="r1c1-t19">
+<p>Arrange</p>
+</td>
+<td class="cellalignment33" headers="r27c1-t19 r1c2-t19">&nbsp;</td>
+<td class="cellalignment33" headers="r27c1-t19 r1c3-t19">&nbsp;</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r28c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment33" headers="r28c1-t19 r1c2-t19">
+<p>Lines Per Repeat</p>
+</td>
+<td class="cellalignment33" headers="r28c1-t19 r1c3-t19">&nbsp;</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r29c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment33" headers="r29c1-t19 r1c2-t19">
+<p>Align Left</p>
+</td>
+<td class="cellalignment33" headers="r29c1-t19 r1c3-t19">&nbsp;</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r30c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment33" headers="r30c1-t19 r1c2-t19">
+<p>Align Middle Horizontally</p>
+</td>
+<td class="cellalignment33" headers="r30c1-t19 r1c3-t19">&nbsp;</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r31c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment33" headers="r31c1-t19 r1c2-t19">
+<p>Align Right</p>
+</td>
+<td class="cellalignment33" headers="r31c1-t19 r1c3-t19">&nbsp;</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r32c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment33" headers="r32c1-t19 r1c2-t19">
+<p>Align Top</p>
+</td>
+<td class="cellalignment33" headers="r32c1-t19 r1c3-t19">&nbsp;</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r33c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment33" headers="r33c1-t19 r1c2-t19">
+<p>Align Middle Vertically</p>
+</td>
+<td class="cellalignment33" headers="r33c1-t19 r1c3-t19">&nbsp;</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r34c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment33" headers="r34c1-t19 r1c2-t19">
+<p>Align Bottom</p>
+</td>
+<td class="cellalignment33" headers="r34c1-t19 r1c3-t19">&nbsp;</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r35c1-t19" headers="r1c1-t19">
+<p>Page</p>
+</td>
+<td class="cellalignment33" headers="r35c1-t19 r1c2-t19">&nbsp;</td>
+<td class="cellalignment33" headers="r35c1-t19 r1c3-t19">&nbsp;</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r36c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment33" headers="r36c1-t19 r1c2-t19">
+<p>Next</p>
+</td>
+<td class="cellalignment33" headers="r36c1-t19 r1c3-t19">&nbsp;</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r37c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment33" headers="r37c1-t19 r1c2-t19">
+<p>Previous</p>
+</td>
+<td class="cellalignment33" headers="r37c1-t19 r1c3-t19">&nbsp;</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r38c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment33" headers="r38c1-t19 r1c2-t19">
+<p>Insert</p>
+</td>
+<td class="cellalignment33" headers="r38c1-t19 r1c3-t19">&nbsp;</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r39c1-t19" headers="r1c1-t19">
+<p>Page</p>
+</td>
+<td class="cellalignment33" headers="r39c1-t19 r1c2-t19">
+<p>Delete</p>
+</td>
+<td class="cellalignment33" headers="r39c1-t19 r1c3-t19">
+<p>You must first delete or move elsewhere all objects on the page; otherwise the editor displays an error message and prevents you from continuing.</p>
+</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r40c1-t19" headers="r1c1-t19">
+<p>Help</p>
+</td>
+<td class="cellalignment33" headers="r40c1-t19 r1c2-t19">&nbsp;</td>
+<td class="cellalignment33" headers="r40c1-t19 r1c3-t19">&nbsp;</td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r41c1-t19" headers="r1c1-t19">&nbsp;</td>
+<td class="cellalignment33" headers="r41c1-t19 r1c2-t19">
+<p>Help</p>
+</td>
+<td class="cellalignment33" headers="r41c1-t19 r1c3-t19">
+<p>Opens context-sensitive HTML-based extended online help.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" --></div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CACCDFHE"></a>
+<div id="OCCRS548" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">9.2.4</span> Sequencing Data Entry</h3>
+<p><a id="sthref714"></a>A data entry form has a <span class="italic"><a id="sthref715"></a>cursor visitation order</span>: the order in which the response fields become active as a data entry operator completes them. The default Layout Generator assigns visitation order values to each field from left to right, top to bottom according to the Questions' Disp Seq# values in the DCM Questions form. Until you use the DCM Layout Editor's Order utility, fields retain their default visitation order values, even if you move them in the Layout Editor. If a default or modified layout does not have the most efficient or intuitive visitation order, you can resequence the values.</p>
+<p>To display a layout's cursor visitation order, from the Order menu, select Display. The DCM Layout Editor replaces each response field's Question name with its cursor visitation order value. To simplify reordering, the values are multiples of 10. For instance, the DCM's first active field has a value of <code dir="ltr">10</code>, and the next field in the visitation order has a value of <code dir="ltr">20</code>. (You cannot adjust the visitation order from this menu path. See the following sections for changing the visitation order.) The system replaces the layout toolbar with the ordering mode toolbar.</p>
+<p>There are three visitation ordering tools, each described in the following sections.</p>
+<div class="infobox-note">
+<p class="notep1">Notes:</p>
+You cannot insert the visitation order value of a Question into the visitation order sequence of a repeating Question Group unless it is a member of the repeating Question Group.</div>
+<div id="OCCRS549" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref716"></a>
+<h4 class="sect3"><span class="secnum">9.2.4.1</span> Ordering by Row and Column<a id="sthref717"></a></h4>
+<p>When the system generates the default layout it assigns a visitation order to the fields from left to right, from top to bottom. You can assign this same visitation order scheme to a rearranged layout. The row/column visitation order might suffice for data entry, or you can use it as a starting point for further manipulation with one of the other ordering tools. Navigate to Order, then Order Current Page by Row/Column. With this tool you remain in layout mode. (To view the results, from the Order menu, select Display. To return to the layout after viewing the visitation order, click the Exit button in the toolbar, which appears in the editor's toolbar as a doorway.)</p>
+</div>
+<!-- class="sect3" -->
+<div id="OCCRS550" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref718"></a>
+<h4 class="sect3"><span class="secnum">9.2.4.2</span> Ordering by Clicking</h4>
+<p>Use the Order by Clicking tool to set the visitation order by clicking each successive field in the layout: click once in the field you want to be first, then click once in each successive field in the new order. As you click each field, the system automatically adjusts the order values of the remaining fields. Note that once you have clicked as many times as there are fields, continued clicking assigns the last sequence number with each click.</p>
+<p>When you finish ordering, click the Door-close button in the toolbar to return to layout mode. Or, if you are unsatisfied with the results of your pass through the fields, click the Door-close button. You can then reopen the Order by Clicking tool (or Order by Entering Sequence Numbers, described next), and start again.</p>
+</div>
+<!-- class="sect3" -->
+<div id="OCCRS551" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref719"></a>
+<h4 class="sect3"><span class="secnum">9.2.4.3</span> Ordering by Entering Sequence Numbers</h4>
+<p>You can select a field and change its visitation order by entering a value. From the Order menu, select Order by Entering Sequence Number. You select a field and enter a number, and the system adjusts the values of all other fields accordingly. You can either enter the values manually or with the plus and minus incrementing buttons, described in the next sections.</p>
+<div id="OCCRS552" class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref720"></a>
+<h5 class="sect4"><span class="secnum">9.2.4.3.1</span> Reordering Manually</h5>
+<p>To insert a field's visitation between two consecutively ordered fields, assign the inserted field the greater value. (You can also assign a value between the two values.) The system renumbers the fields to the new sequence. As an example, a rearranged layout might have a visitation order like:</p>
+<div class="inftblinformal">
+<table class="cellalignment36" title="Example of visitation order for a rearranged layout" summary="Example of visitation order for a rearranged layout" dir="ltr">
+<thead>
+<tr class="cellalignment27">
+<th class="cellalignment37" id="r1c1-t21">Field</th>
+<th class="cellalignment37" id="r1c2-t21">Visitation Order Number</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r2c1-t21" headers="r1c1-t21"><span class="syntaxinline">WEIGHT</span></td>
+<td class="cellalignment33" headers="r2c1-t21 r1c2-t21"><span class="syntaxinline">10</span></td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r3c1-t21" headers="r1c1-t21"><span class="syntaxinline">HEIGHT</span></td>
+<td class="cellalignment33" headers="r3c1-t21 r1c2-t21"><span class="syntaxinline">40</span></td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r4c1-t21" headers="r1c1-t21"><span class="syntaxinline">BIRTHDATE</span></td>
+<td class="cellalignment33" headers="r4c1-t21 r1c2-t21"><span class="syntaxinline">20</span></td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" -->
+<p>To sequence the visitation order of these fields top to bottom, change the value of <span class="bold">HEIGHT</span> from 40 to 20 (or, for instance, to 15), and select another field. The system reorders the fields to:</p>
+<div class="inftblinformal">
+<table class="cellalignment36" title="Visitation order after the system renumbers fields" summary="Visitation order after the system renumbers fields" dir="ltr">
+<thead>
+<tr class="cellalignment27">
+<th class="cellalignment37" id="r1c1-t22">Field</th>
+<th class="cellalignment37" id="r1c2-t22">Visitation Order Number</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r2c1-t22" headers="r1c1-t22"><span class="syntaxinline">WEIGHT</span></td>
+<td class="cellalignment33" headers="r2c1-t22 r1c2-t22"><span class="syntaxinline">10</span></td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r3c1-t22" headers="r1c1-t22"><span class="syntaxinline">HEIGHT</span></td>
+<td class="cellalignment33" headers="r3c1-t22 r1c2-t22"><span class="syntaxinline">20</span></td>
+</tr>
+<tr class="cellalignment27">
+<td class="cellalignment33" id="r4c1-t22" headers="r1c1-t22"><span class="syntaxinline">BIRTHDATE</span></td>
+<td class="cellalignment33" headers="r4c1-t22 r1c2-t22"><span class="syntaxinline">30</span></td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" --></div>
+<!-- class="sect4" -->
+<div id="OCCRS553" class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref721"></a>
+<h5 class="sect4"><span class="secnum">9.2.4.3.2</span> Reordering with the Plus and Minus Buttons</h5>
+<p>The Order by Entering Sequence Numbers tool also includes <span class="bold">Plus</span> and <span class="bold">Minus</span> buttons in the toolbar that you can use to change individual sequence values. You select a field, then click either button to change its value by one value. In the example in the previous section, to change <span class="bold">HEIGHT</span> from 40 to 20, you would select 40, then click the <span class="bold">Minus</span> button twice. The results are the same as manually entering 20.</p>
+</div>
+<!-- class="sect4" --></div>
+<!-- class="sect3" -->
+<div id="OCCRS554" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref722"></a>
+<h4 class="sect3"><span class="secnum">9.2.4.4</span> Validating a Layout</h4>
+<p>The DCM Layout Editor includes several constraints to prevent lost objects or other layout errors. When you save a layout the system tests if it is valid. You can invoke these tests on a layout before you save it. From the <span class="bold">File</span> menu, select <span class="bold">Validate</span>. You can check that your layout meets the following constraints:</p>
+<ul>
+<li>
+<p>There must be at least one Question requiring data on each page.</p>
+</li>
+<li>
+<p>At least one Question must follow an indicator Question in the cursor visitation order.</p>
+</li>
+<li>
+<p>Objects cannot overlap.</p>
+</li>
+<li>
+<p>For Question Groups:</p>
+<ul>
+<li>
+<p>An indicator response field must be the first response field visited by a cursor in a Question Group.</p>
+</li>
+<li>
+<p>A response field cannot be physically on the same row as a response field in a repeating Question Group, unless the two response fields belong to the same Question Group.</p>
+</li>
+<li>
+<p>The cursor visitation order of a Question cannot place a response field between two response fields of a repeating Question Group unless all three response fields are part of the same Question Group.</p>
+</li>
+<li>
+<p>All of the response fields of a repeating Question Group must be located on the same page.</p>
+</li>
+<li>
+<p>If the <span class="bold">Prompt Position Type</span> field is "L" (left), the distance between response fields must be less than the number of lines specified by the lines per repeat for that repeating Question Group. For instance, if lines per repeat is 3, response fields cannot be more than 2 rows apart. If lines per repeat is 1, response fields must be on the same row. Note that the lines per repeat is one less than the LINES_PER_ROW specified in the database.</p>
+</li>
+<li>
+<p>For repeating Question Groups where <span class="bold">Prompt Position Type</span> field is "A" (Above), lines per repeat must be one in number.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>When you test validation or save, the system displays a log of any errors.</p>
+</div>
+<!-- class="sect3" -->
+<div id="OCCRS555" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref723"></a>
+<h4 class="sect3"><span class="secnum">9.2.4.5</span> Saving a Layout</h4>
+<p>You can save your work even if a layout does not pass validation. In that case you receive a message that the layout is invalid. You can save your work, but you cannot move the DCM to production until you reopen the DCM and fix the errors.</p>
+</div>
+<!-- class="sect3" -->
+<div id="OCCRS556" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref724"></a>
+<h4 class="sect3"><span class="secnum">9.2.4.6</span> Closing the Editor</h4>
+<p>You can exit by menu path or the <span class="bold">Door-close</span> button in the toolbar.</p>
+<p>The system prevents you from modifying a DCM while the Layout Editor is open, and displays a warning if you attempt to access the Maintain DCMs form.</p>
+</div>
+<!-- class="sect3" -->
+<div id="OCCRS557" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref725"></a>
+<h4 class="sect3"><span class="secnum">9.2.4.7</span> Laid Out Versus Not Laid Out Objects</h4>
+<p>If you make changes to a DCM after you have generated a default layout, the system automatically collects any new objects into a Not Laid Out area and activates the <span class="bold">Not Laid Out</span> button in the toolbar. In fact if you have not generated a default layout and you open the DCM Layout Editor, all the DCM's objects are in the Not Laid Out area. In order for a layout to pass validation, you must move all of these objects from the Not Laid Out area to the Laid Out area:</p>
+<ol>
+<li>
+<p>Click the <span class="bold">Not Laid Out</span> button to open the Not Laid Out area.</p>
+</li>
+<li>
+<p>Select one or more objects. (See <a href="#i1005062">"Selecting Objects"</a>.)</p>
+</li>
+<li>
+<p>Cut (Ctrl+X) the objects. This action removes the selected objects from the current area and makes a copy of them in the Windows clipboard.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Laid Out</span> button in the toolbar to return to the layout area.</p>
+</li>
+<li>
+<p>Paste (Ctrl+V) the objects.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<div id="OCCRS558" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref726"></a>
+<h4 class="sect3"><span class="secnum">9.2.4.8</span> Using Undo or Revert</h4>
+<p>To undo the last action, from the <span class="bold">Edit</span> menu, select <span class="bold">Undo</span> last action (where the system determines the type of action).</p>
+<p>To return the state of your layout to the previous saved version without exiting the Layout Editor, select <span class="bold">Revert</span>.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="i1001642"></a>
+<div id="OCCRS559" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">9.2.5</span> Using Data Entry Forms in Test and Production Modes</h3>
+<p>You can test DCMs and layouts by doing data entry in test mode; see <a href="test.htm#CHDIIBBB">Chapter 17, "Test Mode"</a> for more information.</p>
+<div id="OCCRS10094" class="sect3"><a id="sthref727"></a>
+<h4 class="sect3"><span class="secnum">9.2.5.1</span> Character-Based Layouts in Test and Production Modes</h4>
+<p>If you are working with character layouts, you explicitly move the layout to production upon finalizing your DCM layout. The requirements for test and production data entry are:</p>
+<ul>
+<li>
+<p><span class="bold">Test mode</span> requires that DCMs have a valid layout. The status of the DCM can be either provisional or active. It does not matter if the DCM layout has been moved to production or not.</p>
+</li>
+<li>
+<p><span class="bold">Production mode</span> also requires a valid layout. It is possible to move the layout for a provisional DCM to Production, but Oracle recommends moving layouts to production for active DCMs only.</p>
+</li>
+</ul>
+<p>To move a character-based DCM layout to Production:</p>
+<ol>
+<li>
+<p>From the <span class="bold">Definition</span> menu, select <span class="bold">DCMs</span>, then choose <span class="bold">DCMs</span>.</p>
+</li>
+<li>
+<p>Select the Character Layout tab, then the DCM layout you want to move to Production.</p>
+</li>
+<li>
+<p>From the <span class="bold">Special</span> menu, select<a id="sthref728"></a> <span class="bold">Move to Prod</span>. The system updates the <span class="bold">Production <a id="sthref729"></a>Generation Time</span> field. The DCM is then ready for data entry.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<div id="OCCRS10095" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref730"></a>
+<h4 class="sect3"><span class="secnum">9.2.5.2</span> Graphic Layouts in Test and Production Modes</h4>
+<p>If you are using graphic layouts in RDC, you must embed your DCM layouts into a DCI Form; see <a href="dciforms.htm#CHDEBHFD">Chapter 12, "Creating Graphic Layouts."</a> The requirements for test and production data entry are:</p>
+<ul>
+<li>
+<p><span class="bold">Test mode</span> requires a valid DCI Form. The status of the DCI can be either provisional or active. If both are available, the system uses the provisional version and its provisional, valid DCI Form version. If the DCI is active and both provisional and active DCI Form versions are available, the system uses the provisional version.</p>
+</li>
+<li>
+<p><span class="bold">Production mode</span> requires an active DCI and an active DCI Form version.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BABFCBHA"></a>
+<div id="OCCRS567" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">9.3</span> Defining DCIs</h2>
+<p>This section includes the following topics:</p>
+<ul>
+<li>
+<p><a href="#i1001789">Creating a DCI</a></p>
+</li>
+<li>
+<p><a href="#CACJECDG">Adding DCMs to DCIs</a></p>
+</li>
+<li>
+<p><a href="#CACFIEHF">Defining DCM Pages</a></p>
+</li>
+<li>
+<p><a href="#CACIAEHE">Copying a DCI</a></p>
+</li>
+<li>
+<p><a href="#CHDGBCIA">Marking a DCI as Critical for Source Data Verification</a></p>
+</li>
+<li>
+<p><a href="#CACEFCED">Deleting a DCI</a></p>
+</li>
+<li>
+<p><a href="#CACCEIFE">Defining DCI Access at the Study Level</a></p>
+</li>
+<li>
+<p><a href="#CHDFIJHD">Defining Custom Reviews Required at the DCI Level</a></p>
+</li>
+</ul>
+<p>A DCI includes one or more DCMs and corresponds to a CRF.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+A DCI's size directly affects how long it takes for end users to open and save CRFs in RDC Onsite. Avoid designing Oracle Clinical DCIs with more than 250 fields. Do not exceed 500 fields per DCI.</div>
+<a id="i1001789"></a>
+<div id="OCCRS571" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">9.3.1</span> Creating a DCI</h3>
+<p>You can create <a id="sthref731"></a>DCIs directly from a DCM definition, by copying a DCI, or "manually" in the DCI window:</p>
+<ul>
+<li>
+<p>When you make a DCM <a id="sthref732"></a>active, you have the option of creating a <a id="sthref733"></a>DCI that has the <a id="sthref734"></a>DCM subset name. You can choose the <span class="bold">Create</span> option to create the DCI as Provisional, or the <span class="bold">Create and Activate</span> option to create and activate the DCI.</p>
+</li>
+<li>
+<p>From either an Active or a Provisional DCM, choose <span class="bold">Create a Default DCI</span> from the <span class="bold">Special</span> menu to create a provisional DCM that has the DCM subset name.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If a DCI has already been manually created for a Provisional DCM (and no other DCMs), the system allows you to activate the existing DCI or to create a new one, depending on whether the existing DCI's name or short name is the same as the DCM subset name.
+<p>If either the DCI's name or short name is the same as the DCM subset name, the message says, "Make corresponding DCI active also?" If you choose <span class="bold">Yes</span>, the system makes the DCI Active.</p>
+<p>If they are different, the message says, "'Create Default DCI." If you choose <span class="bold">Create</span>, the system creates a new provisional DCI. If you choose <span class="bold">Create and Activate</span>, the system creates a new active DCI.</p>
+</div>
+</li>
+<li>
+<p>Copy a DCI from the Global Library or from a study; see <a href="#CACIAEHE">"Copying a DCI"</a>.</p>
+</li>
+<li>
+<p>If the <a id="sthref735"></a>DCI has many DCMs, create a <a id="sthref736"></a>DCI in the Maintain Study DCIs window:</p>
+<ol>
+<li>
+<p>Navigate to <span class="bold">Definition</span>, <span class="bold">DCIs</span>, then <span class="bold">DCIs</span>. The Maintain Study DCIs window opens.</p>
+</li>
+<li>
+<p>Refer to the online help for information on each field.</p>
+<p>The <span class="bold">Collect Time?</span> setting determines if the <a id="sthref737"></a>DCI Time field appears in the Log-In form.</p>
+</li>
+</ol>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="CACJECDG"></a>
+<div id="OCCRS570" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">9.3.2</span> Adding DCMs to DCIs</h3>
+<p>In the Maintain Study DCIs window, click the <span class="bold">DCI Modules</span> button to reach the <a id="sthref738"></a>Data Collection Modules window. Copy either a Library DCM or a study DCM into the DCI using the Special menu.</p>
+<p>Any changes you make apply only to the DCM in the context of this DCI, where it is also known as a <span class="italic">DCI Module</span>. Some DCI Module attributes, such as qualifying values and Clinical Planned Events, are available only in the context of a DCI.</p>
+<p>Enter values as follows:</p>
+<ul>
+<li>
+<p><span class="syntaxinlinebold">Disp Seq #</span> Controls the order in which the DCMs appear in the <a id="sthref739"></a>Received DCMs window.</p>
+</li>
+<li>
+<p><span class="syntaxinlinebold">Planned Event</span> If provided, forces the received DCM to be logged in for that clinical planned event and cannot be changed during login. You could use this feature to structure a DCI for a CRF containing multiple predefined visits.</p>
+<p>If you leave the <span class="bold">Planned Event</span> field empty, at login you can create received DCMs for as many unique CPEs as there are on the CRFs. You might do this when you have a CRF that collects multiple CPEs, but allows the name of the event to be entered by the Investigator (instead of being preprinted).</p>
+</li>
+<li>
+<p><span class="syntaxinlinebold"><a id="sthref740"></a>Qualifying Value</span> If provided for a qualified DCM, forces the RDCM to be logged in for that particular qualifying value and cannot be changed during login. You could use this feature to structure a DCI for the particular variant of a CRF that collects information about the particular qualifying value. For instance, with two identical CRFs, one preprinted for information about the right eye and one for the left eye, you could create two DCMs, one with RIGHT as the qualifying value, and one with LEFT.</p>
+<p>If you leave the <span class="bold">Qualifying Value</span> field empty, you can create received DCMs at each visit for as many unique qualifying values as are defined for the Qualifying Question. You might do this when you have a CRF that collects a group of Questions about, for example, multiple culture sites, but that allows the name of the culture site to be entered by the Investigator (instead of being predefined on the CRF). At login, you could create a received DCM for each culture site named on the CRF.</p>
+</li>
+<li>
+<p><span class="syntaxinlinebold">Use DCI Date?</span> Determines whether the <a id="sthref741"></a>received DCM created at login automatically inherits the <a id="sthref742"></a>date and clinical <a id="sthref743"></a>planned event (and time if used) entered for the <a id="sthref744"></a>DCI. If so, the date and clinical planned event (and time) cannot be changed at the <a id="sthref745"></a>received DCM level.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If you have chosen to collect the time, also check this box to collect the DCI Date.</div>
+</li>
+<li>
+<p><span class="syntaxinlinebold">Collect Time?</span> If checked, the <span class="bold">Time</span> field is enterable at login.</p>
+</li>
+<li>
+<p><span class="syntaxinlinebold">Optional?</span> Invokes a special behavior during login. You can only specify that a DCM is <a id="sthref746"></a>optional in a DCI if there is a single DCM in the DCI. At login, you can enter as many received DCMs for an optional DCM as are allowed by the study definition.</p>
+</li>
+<li>
+<p><span class="syntaxinlinebold">Start Page and End Page</span> Display only; see <a href="#CACFIEHF">"Defining DCM Pages"</a>.</p>
+</li>
+<li>
+<p><span class="syntaxinlinebold">DCM Available</span> The system checks this value if the DCM Graphic Layout is available. This field is read-only.</p>
+</li>
+<li>
+<p><span class="syntaxinlinebold">Show Qual Value?</span> Select this setting if the DCM has a Qualifying Question and you want to display the Question and text. If selected, the system includes the Qualifying Question in the DCM Header. If there is no Qualifying Question for the DCM, you cannot select this field. If there is a Qualifying Question, but no value for the qualifying value on the DCI Modules window, the system selects this field and prevents you from changing it.</p>
+</li>
+<li>
+<p><span class="syntaxinlinebold">Show Lab?</span> Select this setting if the DCM has a lab Question and you want to collect the name of the lab for the DCM. If selected, the system includes the lab Question in the DCM Header. You cannot select this field if there is no lab Question.</p>
+</li>
+<li>
+<p><span class="syntaxinlinebold">Visit Display</span> This field controls the display of <span class="bold">Visit Name</span> and <span class="bold">Subevent Number</span>. Here is a description of the available values:</p>
+<ul>
+<li>
+<p><span class="syntaxinlinebold">NAME ONLY</span> The system displays only the <span class="bold">Visit Name</span> on the DCI Form.</p>
+</li>
+<li>
+<p><span class="syntaxinlinebold">NAME+SUB#</span> The system displays the <span class="bold">Visit Name</span> and <span class="bold">Subevent Number</span> as one field with a period separator (for instance, CHECKUP.1).</p>
+</li>
+<li>
+<p><span class="syntaxinlinebold">NAME/SUB#</span> The system displays the <span class="bold">Visit Name</span> and <span class="bold">Subevent Number</span> as separate fields.</p>
+</li>
+<li>
+<p><span class="syntaxinlinebold">HIDDEN</span> The system hides the <span class="bold">Visit Name</span> and <span class="bold">Subevent Number</span> in the DCM Header. If there is no defined CPE, or the <span class="bold">Use DCI Date</span> setting is deselected, you cannot select value HIDDEN for the <span class="bold">Visit Display</span>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="syntaxinlinebold">Show Blank?</span> If this box is selected, the system generates a <span class="bold">Blank</span> box in the DCM Header.</p>
+</li>
+<li>
+<p><span class="syntaxinlinebold">Show Data Comment?</span> If selected, the system includes the <span class="bold">Data Comment</span> in the DCM Header. You can only enter data through the Oracle Clinical Data Entry subsystem. Select this field if you want the data comment to show in the PDR.</p>
+</li>
+<li>
+<p><span class="syntaxinlinebold">Show Comment?</span> If selected, the system includes the <span class="bold">Comment</span> in the DCM Header. You can only enter data through the Oracle Clinical Data Entry subsystem. Select this field if you want the comment to show in the PDR.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="CACFIEHF"></a>
+<div id="OCCRS2999" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">9.3.3</span> Defining DCM Pages</h3>
+<p>Use this window only if you are using the Page Tracking feature for a paper-based trial. See <a href="books.htm#CIHHJAHH">"Using CRF Page Tracking"</a>.</p>
+<p>If a DCI spans multiple pages, specify which questions go on which page by defining the final Question on each page in the Data Collection Module Pages window.</p>
+<p>From the <span class="bold">DCI Modules</span> page, select the DCM and click the <span class="bold">DCI Modules Pages</span> button.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CACIAEHE"></a>
+<div id="OCCRS574" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">9.3.4</span> Copying a DCI</h3>
+<p>If there is a <a id="sthref747"></a>DCI in the Global Library or in another study that suits your needs, you can copy it into the current study&mdash;rather than creating it from scratch&mdash;by selecting one of two copy options. To copy a Global Library DCI:</p>
+<ol>
+<li>
+<p>Navigate to <span class="bold">Definition</span>, then <span class="bold">DCIs</span>, and <span class="bold">DCIs</span>.</p>
+</li>
+<li>
+<p>Select either <span class="bold">Copy Lib <a id="sthref748"></a>DCI</span> or <span class="bold">Copy <a id="sthref749"></a>Study</span> from the <span class="bold">Special</span> menu. Either the <a id="sthref750"></a>Locate Library DCIs or the <a id="sthref751"></a>Locate Study DCIs form appears, according to your selection.</p>
+</li>
+<li>
+<p>Query for the DCI you want to copy.</p>
+</li>
+<li>
+<p>Click either:</p>
+<ul>
+<li>
+<p><span class="bold">OK</span> button to perform the copy</p>
+</li>
+<li>
+<p><span class="bold">Cancel</span> to return to the Maintain Study DCIs form without making a copy</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>Follow this procedure to copy an existing study DCI:</p>
+<ol>
+<li>
+<p>Navigate to <span class="bold">Definition</span>, then <span class="bold">DCIs</span>, and <span class="bold">DCIs</span>.</p>
+</li>
+<li>
+<p>Select <span class="bold">Copy <a id="sthref752"></a>Study</span> from the <span class="bold">Special</span> menu. The <a id="sthref753"></a>Locate Study DCIs form appears.</p>
+</li>
+<li>
+<p>Enter the study name to copy from.</p>
+</li>
+<li>
+<p>Click the <span class="bold">OK</span> button to perform the copy, or <span class="bold">Cancel</span> to return to the Maintain Study DCIs form without making a copy.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CHDGBCIA"></a>
+<div id="OCCRS10096" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">9.3.5</span> Marking a DCI as Critical for Source Data Verification</h3>
+<p>Critical CRFs must be verified against source data for all patients. You can designate a CRF as critical by marking the DCI on which it is based as critical, either in the global library or in a study.</p>
+<ul>
+<li>
+<p>To mark a DCI as critical at the study level, go to <span class="bold">Definition</span>, <span class="bold">DCIs</span> and then select <span class="bold">DCIs</span>. Mark the <span class="bold">SDV?</span> check box for the critical DCI.</p>
+</li>
+<li>
+<p>To define the DCI critical at the Global Library level, select <span class="bold">Glib</span>, then <span class="bold">DCIs DCMs Procedures</span>, and then select <span class="bold">DCIs</span>. Mark the <span class="bold">SDV?</span> check box for the critical DCI.</p>
+</li>
+</ul>
+<p>See <a href="plan.htm#CACBEJAC">"Setting Up Partial Source Data Verification"</a> for more information.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CACEFCED"></a>
+<div id="OCCRS10097" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">9.3.6</span> Deleting a DCI</h3>
+<p>Under some circumstances you can delete a DCI by selecting it and then selecting Delete Record from the Data menu.</p>
+<p>The system gives a warning if you delete a DCI that is associated with a Rule in an enhanced DCI Book for the study. If you proceed with the deletion you must delete the Rule or delete the DCI from the Rule before you can validate the DCI Book.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CACCEIFE"></a>
+<div id="OCCRS10098" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">9.3.7</span> Defining DCI Access at the Study Level</h3>
+<p>You can define access to particular DCIs at the study level by overriding the default user role access settings. Here are two example situations:</p>
+<ul>
+<li>
+<p>A local laboratory's personnel require RDC access so they can enter their lab results directly. However, lab personnel must only have access to the specific laboratory CRF and no others. An administrator can create a user role for the local laboratory personnel and you can restrict access for that role to the DCIs relevant to the lab's CRFs.</p>
+</li>
+<li>
+<p>The Patient Data Report includes only data in DCIs to which the user who runs the report has access. If the role of the user who runs the report does not have access to a particular DCI, the report does not include any data for the patient for that DCI.</p>
+</li>
+</ul>
+<p>The default user role settings, defined at the installation level, are either completely restricted or completely unrestricted. At the study level, you can override these settings and for any user role, specify either a list of DCIs that this role can see (an Inclusion list), or cannot see (an Exclusion list).</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If a user does not have access to a study based on the defined study-level or site-level access, the study DCI access cannot provide the user with access to the DCI or to the study.</div>
+<p>To specify DCI access at the study level:</p>
+<ol>
+<li>
+<p>Create the default user roles. (See the <span class="italic">Oracle Clinical Remote Data Capture Administrator's Guide</span>for more information.)</p>
+</li>
+<li>
+<p>In Oracle Clinical, navigate to <span class="bold">Definition</span>, then <span class="bold">DCIs</span>, and then <span class="bold">DCI Access</span>. (Users with Maintain privileges can see both the DCI Access and Query DCI Access navigation options. Users with Browse privileges can see the Query DCI Access option.)</p>
+</li>
+<li>
+<p>Choose a study and click OK. The DCI Access window opens with the current study displayed in the title bar. (You can click the <span class="bold">Change Study</span> button at the bottom of the DCI Access window to select another study. You can also select <span class="bold">Special</span>, then <span class="bold">Select Study</span>.)</p>
+</li>
+<li>
+<p>In the <span class="bold">User Role</span> section, select the first empty row and enter a valid user role name. You can also open the list of user role values, and choose a user role.</p>
+</li>
+<li>
+<p>In the <span class="bold">DCI List Type</span> section, open the list of values in the same row as the User Role row you selected in the previous step. You have two choices:</p>
+<ul>
+<li>
+<p>Select <span class="bold">EXCLUSION</span> to allow the user to see everything except the listed DCIs.</p>
+</li>
+<li>
+<p>Select <span class="bold">INCLUSION</span> to allow the user to see only the listed DCIs.</p>
+</li>
+</ul>
+<p>The administrator sets default value for the DCI List Type field.</p>
+</li>
+<li>
+<p>In the <span class="bold">DCI Name</span> section, enter a DCI name, or select a DCI from the list of values. The list of values includes all DCIs defined in the study.</p>
+<p>You can also leave the DCI Name field empty. An empty DCI list is interpreted differently:</p>
+<ul>
+<li>
+<p>EXCLUSION: The user has access to all DCIs. This approach may be taken when the default DCI access for the role is Restricted, but for a specific study the user role has access to all DCIs.</p>
+</li>
+<li>
+<p>INCLUSION: The user has access to no DCIs for this study. This approach may be taken when the default DCI access for the role is Unrestricted, but for a specific study the user role has access to no DCIs.</p>
+<p>Note that for individual users, you can accomplish the same access with study security.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>In the <span class="bold">Access</span> section, select the type of access to allow for this DCI. Your options vary depending on whether you are including or excluding access to the DCI.</p>
+<p>If the DCI List Type is set to INCLUSION you can select:</p>
+<ul>
+<li>
+<p><span class="bold">Default study/site privileges</span>: Indicates that the DCI is accessed according to the user's study or site privileges.</p>
+</li>
+<li>
+<p><span class="bold">Browse</span>: Indicates that the user role can open and view the DCI only in browse mode.</p>
+</li>
+</ul>
+<p>If the DCI List Type is set to EXCLUSION, you can select:</p>
+<ul>
+<li>
+<p><span class="bold">None</span>: The user role cannot access the DCI.</p>
+</li>
+<li>
+<p><span class="bold">Browse</span>: The user role can open and view the DCI only in browse mode.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Continue to define the DCIs that this user role can access (include and exclude).</p>
+</li>
+<li>
+<p>Save.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CHDFIJHD"></a>
+<div id="OCCRS10099" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">9.3.8</span> Defining Custom Reviews Required at the DCI Level</h3>
+<ol>
+<li>
+<p>Expand the <span class="bold">Definition</span> node, then expand <span class="bold">DCIs</span>, and then select <span class="bold">DCIs</span>.</p>
+</li>
+<li>
+<p>Select or switch to the study to which the DCI belongs.</p>
+</li>
+<li>
+<p>Select the <span class="bold">Review Requirements</span> tab.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+The checkbox <span class="bold">Allow CRF status change to RN when review is required?</span> at the top of the tab is read-only and indicates the inherited installation or study setting, if one is defined. You can specify a different setting for individual custom review types in step 7.</div>
+</li>
+<li>
+<p>Query in the DCI Name field for the DCI for which you want to set the custom review requirements.</p>
+</li>
+<li>
+<p>Click in the <span class="bold">Custom Reviews Required</span> field for that DCI to open the Reviews Required dialog box.</p>
+</li>
+<li>
+<p>Select (highlight) all the review types that should be required for this DCI.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+Clicking a single review type drops the current selection and selects only that review type. Use Shift+click, Ctrl+click, or the controls below the list to select or deselect multiple review types.</div>
+</li>
+<li>
+<p>Make sure that <span class="bold">Allow Override RN Status</span> is checked for only those selected (required) review types for which you want to allow reviewers to set the review status to Review not Required (RN).</p>
+</li>
+<li>
+<p>Click <span class="bold">Save</span>.</p>
+</li>
+</ol>
+<p>For information about custom review types, see chapter "Configuring Custom Review Types" in the <span class="italic">Oracle Clinical Remote Data Capture Administrator's Guide</span>.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment26">
+<tr>
+<td class="cellalignment33">
+<table class="cellalignment31">
+<tr>
+<td class="cellalignment30"><a href="glib.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment30"><a href="books.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;1996, 2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment35">
+<table class="cellalignment29">
+<tr>
+<td class="cellalignment30"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment30"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment30"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment30"><a href="index.htm"><img width="24" height="24" src="../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td class="cellalignment30"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

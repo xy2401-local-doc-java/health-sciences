@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>Oracle&reg; Healthcare Foundation Application Toolkit Installation Guide</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="description" content="Oracle Healthcare Foundation provides a standalone Application Toolkit that enables you to build downstream applications for Oracle Healthcare Foundation without the need to install the complete product." />
+<meta name="dcterms.created" content="2017-09-08T12:9:0Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Healthcare Foundation Application Toolkit Installation Guide" />
+<meta name="dcterms.identifier" content="E79467-03" />
+<meta name="dcterms.isVersionOf" content="OHATG" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2016, 2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"   src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"   src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="alternate" href="OHATG.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="OHATG.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="OHATG.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript"  src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript"  src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript"  src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript"  src="../dcommon/js/foundation.min.js"></script>
+<script type="application/javascript"  src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript"  src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript"  src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="application/javascript"  src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="application/javascript"  src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="application/javascript"  src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="application/javascript"  src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<!-- End Header -->
+<div class="letterstyle">
+<h1>Oracle&reg; Healthcare Foundation</h1>
+<p class="booktitle">Application Toolkit Installation Guide</p>
+<p><span class="revnumber">Release 7.1.1</span></p>
+<p class="invpartnumber">E79467-03</p>
+<p class="date">April 2017</p>
+<p><a id="OHATG101"></a>Oracle Healthcare Foundation provides a standalone Application Toolkit that enables you to build downstream applications for Oracle Healthcare Foundation without the need to install the complete product. The Application Toolkit includes the Healthcare Common Data Mart (HCD) data model and the Oracle Business Intelligence Enterprise Edition (OBIEE) RPD file for HCD, which is used for Self-Service Analytics.</p>
+<p>This manual contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#CEGCAGJJ">Installing the Application Toolkit HCD on Linux</a></p>
+</li>
+<li>
+<p><a href="#CEGJJHDB">Installing the Application Toolkit HCD on Windows</a></p>
+</li>
+<li>
+<p><a href="#CEGDHDJI">Installing the RPD File for Self-Service Analytics</a></p>
+</li>
+<li>
+<p><a href="#CEGDCDAE">Troubleshooting</a></p>
+</li>
+</ul>
+<a id="CEGCAGJJ"></a>
+<div id="OHATG102" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">1</span> Installing the Application Toolkit HCD on Linux</h2>
+<ol>
+<li>
+<p><a href="#CEGBAADI">Check Software Requirements</a></p>
+</li>
+<li>
+<p><a href="#CEGGADEJ">Check Prerequisites</a></p>
+</li>
+<li>
+<p><a href="#CEGIAHDD">Prepare the Installer</a></p>
+</li>
+<li>
+<p><a href="#CEGGECAJ">Run the Installer</a></p>
+</li>
+</ol>
+<a id="CEGBAADI"></a>
+<div id="OHATG103" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">1.1</span> Check Software Requirements</h3>
+<div class="inftblinformal">
+<table class="cellalignment93" summary="Prerequisite Checklist" dir="ltr">
+<tbody>
+<tr class="cellalignment88">
+<td class="cellalignment94" id="r1c1-t2"><input type="checkbox" /></td>
+<td class="cellalignment95">Oracle Linux 6.5 or above (64-bit)</td>
+</tr>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r2c1-t2"><input type="checkbox" /></td>
+<td class="cellalignment96" headers="r2c1-t2">Oracle Database 12.1.0.2.0 Enterprise Edition</td>
+</tr>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r3c1-t2"><input type="checkbox" /></td>
+<td class="cellalignment96" headers="r3c1-t2">Python 2.6.6</td>
+</tr>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r4c1-t2"><input type="checkbox" /></td>
+<td class="cellalignment96" headers="r4c1-t2">Linux X-windows (Linux Graphical User Interface)</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" --></div>
+<!-- class="sect2" -->
+<a id="CEGGADEJ"></a>
+<div id="OHATG104" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">1.2</span> Check Prerequisites</h3>
+<div class="inftblinformal">
+<table class="cellalignment93" summary="Prerequisite Checklist" dir="ltr">
+<tbody>
+<tr class="cellalignment88">
+<td class="cellalignment94" id="r1c1-t3"><input type="checkbox" /></td>
+<td class="cellalignment95">Make sure that the ORACLE_HOME and PATH environment variables are setup in your session. For example:
+<p><code dir="ltr">export ORACLE_HOME=/u01/app/oracle/product/121020 export PATH=$PATH:$ORACLE_HOME/bin</code></p>
+</td>
+</tr>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r2c1-t3"><input type="checkbox" /></td>
+<td class="cellalignment96" headers="r2c1-t3">Make sure that the password expiry notification message does not display for the Sys and system schemas.</td>
+</tr>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r3c1-t3"><input type="checkbox" /></td>
+<td class="cellalignment96" headers="r3c1-t3">Set the NLS_LENGTH_SEMANTICS parameter to either CHAR or BYTE, based on your requirements.
+<p>For Oracle Healthcare Foundation Globalization Support information, see <span class="italic">Oracle Database Globalization Support Guide</span> and set your database character set accordingly.</p>
+</td>
+</tr>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r4c1-t3"><input type="checkbox" /></td>
+<td class="cellalignment96" headers="r4c1-t3">Make sure the database connection through SERVICE_NAME is enabled. You can verify the database connectivity using the following command:
+<p><code dir="ltr">SQL&gt;connect &lt;username&gt;@&lt;hostname&gt;:&lt;port number&gt;/&lt;service name&gt;</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" --></div>
+<!-- class="sect2" -->
+<a id="CEGIAHDD"></a>
+<div id="OHATG105" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">1.3</span> Prepare the Installer</h3>
+<div class="inftblinformal">
+<table class="cellalignment93" summary="Prepare the Installer" dir="ltr">
+<tbody>
+<tr class="cellalignment88">
+<td class="cellalignment94" id="r1c1-t4"><input type="checkbox" /></td>
+<td class="cellalignment95">Extract the contents of the Oracle Healthcare Foundation media pack to your system.</td>
+</tr>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r2c1-t4"><input type="checkbox" /></td>
+<td class="cellalignment96" headers="r2c1-t4">Navigate to the <span class="bold">&lt;media_pack_location&gt;/</span> folder.</td>
+</tr>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r3c1-t4"><input type="checkbox" /></td>
+<td class="cellalignment96" headers="r3c1-t4">Unzip the <span class="bold">OHF_V711_AT_Linux-x64.zip</span> file where you want to launch the installer using the following command:
+<p><code dir="ltr">unzip -a OHF_V711_AT_Linux-x64.zip</code></p>
+</td>
+</tr>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r4c1-t4"><input type="checkbox" /></td>
+<td class="cellalignment96" headers="r4c1-t4">Navigate to the <span class="bold">Disk1/install</span> folder.</td>
+</tr>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r5c1-t4"><input type="checkbox" /></td>
+<td class="cellalignment96" headers="r5c1-t4">Change the protection on files as follows:
+<p><code dir="ltr">chmod 755 *</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" --></div>
+<!-- class="sect2" -->
+<a id="CEGGECAJ"></a>
+<div id="OHATG106" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">1.4</span> Run the Installer</h3>
+<p>Start the Oracle Universal Installer (OUI) using the following command:</p>
+<ul>
+<li>
+<p>If the database server is on the machine where the installer is running:</p>
+<p><code dir="ltr">sh runInstaller.sh -local</code></p>
+</li>
+<li>
+<p>If the database server is on a different machine:</p>
+<p><code dir="ltr">sh runInstaller.sh -local remote_installation=true</code></p>
+</li>
+</ul>
+<p>where, the <code dir="ltr">-local</code> option is to install on the local node irrespective of the cluster nodes specified on the installer machine.</p>
+<div class="inftblinformal">
+<table class="cellalignment93" summary="Run the Installer" dir="ltr">
+<thead>
+<tr class="cellalignment88">
+<th class="cellalignment97" id="r1c1-t5"><br /></th>
+<th class="cellalignment98" id="r1c2-t5">Screen</th>
+<th class="cellalignment99" id="r1c3-t5">Action</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r2c1-t5" headers="r1c1-t5"><input type="checkbox" /></td>
+<td class="cellalignment96" headers="r2c1-t5 r1c2-t5">Welcome</td>
+<td class="cellalignment96" headers="r2c1-t5 r1c3-t5">Click <span class="bold">Next</span>.</td>
+</tr>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r3c1-t5" headers="r1c1-t5"><input type="checkbox" /></td>
+<td class="cellalignment96" headers="r3c1-t5 r1c2-t5">Specify Home Details</td>
+<td class="cellalignment96" headers="r3c1-t5 r1c3-t5">Enter the installation home name and location.
+<p>Click <span class="bold">Next</span>.</p>
+</td>
+</tr>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r4c1-t5" headers="r1c1-t5"><input type="checkbox" /></td>
+<td class="cellalignment96" headers="r4c1-t5 r1c2-t5">Oracle Client Home Configuration</td>
+<td class="cellalignment96" headers="r4c1-t5 r1c3-t5">Specify the Oracle client home path. The installer validates this path.
+<p>Click <span class="bold">Next</span>.</p>
+</td>
+</tr>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r5c1-t5" headers="r1c1-t5"><input type="checkbox" /></td>
+<td class="cellalignment96" headers="r5c1-t5 r1c2-t5">Database Configuration</td>
+<td class="cellalignment96" headers="r5c1-t5 r1c3-t5">Enter values for the following fields:
+<ul>
+<li>
+<p>Host name - By default, the system host name appears.</p>
+</li>
+<li>
+<p>Port - By default, the port number is 1521. You can edit this field if required.</p>
+</li>
+<li>
+<p>Service name</p>
+</li>
+<li>
+<p>System user password</p>
+</li>
+<li>
+<p>Sys user password</p>
+</li>
+</ul>
+<p>Click <span class="bold">Next</span>.</p>
+</td>
+</tr>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r6c1-t5" headers="r1c1-t5"><input type="checkbox" /></td>
+<td class="cellalignment96" headers="r6c1-t5 r1c2-t5">Healthcare Common Data Mart Configuration</td>
+<td class="cellalignment96" headers="r6c1-t5 r1c3-t5">Enter values for the following fields:
+<ul>
+<li>
+<p>Common data mart schema name</p>
+</li>
+<li>
+<p>Common data mart schema password</p>
+</li>
+</ul>
+<p><span class="bold">Note:</span> If you are upgrading from a previous Application Toolkit version, provide the values for the existing Common data mart schema.</p>
+<p>Click <span class="bold">Next</span>.</p>
+</td>
+</tr>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r7c1-t5" headers="r1c1-t5"><input type="checkbox" /></td>
+<td class="cellalignment96" headers="r7c1-t5 r1c2-t5">Tablespace Details</td>
+<td class="cellalignment96" headers="r7c1-t5 r1c3-t5">Specify the default tablespace details for the HCD schema. Enter values for the following fields:
+<ul>
+<li>
+<p>Tablespace name</p>
+</li>
+<li>
+<p>Initial size</p>
+</li>
+<li>
+<p>Maximum size - By default, this is set to UNLIMITED.</p>
+</li>
+</ul>
+<p>Click <span class="bold">Next</span>.</p>
+</td>
+</tr>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r8c1-t5" headers="r1c1-t5"><input type="checkbox" /></td>
+<td class="cellalignment96" headers="r8c1-t5 r1c2-t5">Temporary Tablespace</td>
+<td class="cellalignment96" headers="r8c1-t5 r1c3-t5">Specify the temporary tablespace details for the Common datamart schema. Enter values for the following fields:
+<ul>
+<li>
+<p>Tablespace name</p>
+</li>
+<li>
+<p>Initial size</p>
+</li>
+<li>
+<p>Maximum size - By default, this is set to UNLIMITED.</p>
+</li>
+</ul>
+<p>Click <span class="bold">Next</span>.</p>
+</td>
+</tr>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r9c1-t5" headers="r1c1-t5"><input type="checkbox" /></td>
+<td class="cellalignment96" headers="r9c1-t5 r1c2-t5">Tablespace Data File Location</td>
+<td class="cellalignment96" headers="r9c1-t5 r1c3-t5">Specify the location of the Tablespace data files. This is the directory on the database server where the data files are created during the installation.
+<p>For example,</p>
+<p><code dir="ltr">/u01/oradata/dbname/</code></p>
+<p>The installer does not validate the tablespace location entered. Ensure that the tablespace location physically exists if the database server is on the remote server. Otherwise, the installer will fail during the installation.</p>
+<p>Click <span class="bold">Next</span>.</p>
+</td>
+</tr>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r10c1-t5" headers="r1c1-t5"><input type="checkbox" /></td>
+<td class="cellalignment96" headers="r10c1-t5 r1c2-t5">Verify Configuration Parameters</td>
+<td class="cellalignment96" headers="r10c1-t5 r1c3-t5">Click <span class="bold">Next</span>.</td>
+</tr>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r11c1-t5" headers="r1c1-t5"><input type="checkbox" /></td>
+<td class="cellalignment96" headers="r11c1-t5 r1c2-t5">Summary</td>
+<td class="cellalignment96" headers="r11c1-t5 r1c3-t5">Click <span class="bold">Install</span>.</td>
+</tr>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r12c1-t5" headers="r1c1-t5"><input type="checkbox" /></td>
+<td class="cellalignment96" headers="r12c1-t5 r1c2-t5">End of Installation</td>
+<td class="cellalignment96" headers="r12c1-t5 r1c3-t5">After reviewing the installation information, click <span class="bold">Exit</span>.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" -->
+<p>If the installation fails, see <a href="#CEGDCDAE">Troubleshooting</a>.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CEGJJHDB"></a>
+<div id="OHATG107" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">2</span> Installing the Application Toolkit HCD on Windows</h2>
+<ol>
+<li>
+<p><a href="#CEGFBCFB">Check Software Requirements</a></p>
+</li>
+<li>
+<p><a href="#CEGCJGED">Check Prerequisites</a></p>
+</li>
+<li>
+<p><a href="#CEGEHHDD">Prepare the Installer</a></p>
+</li>
+<li>
+<p><a href="#CEGHAHDE">Run the Installer</a></p>
+</li>
+</ol>
+<a id="CEGFBCFB"></a>
+<div id="OHATG108" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">2.1</span> Check Software Requirements</h3>
+<div class="inftblinformal">
+<table class="cellalignment93" summary="Prerequisite Checklist" dir="ltr">
+<tbody>
+<tr class="cellalignment88">
+<td class="cellalignment94" id="r1c1-t6"><input type="checkbox" /></td>
+<td class="cellalignment95">Microsoft Windows (64-bit) OS</td>
+</tr>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r2c1-t6"><input type="checkbox" /></td>
+<td class="cellalignment96" headers="r2c1-t6">Oracle Database 12.1.0.2.0 Enterprise Edition</td>
+</tr>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r3c1-t6"><input type="checkbox" /></td>
+<td class="cellalignment96" headers="r3c1-t6">Python 2.6.6</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" --></div>
+<!-- class="sect2" -->
+<a id="CEGCJGED"></a>
+<div id="OHATG109" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">2.2</span> Check Prerequisites</h3>
+<div class="inftblinformal">
+<table class="cellalignment93" summary="Prerequisite Checklist" dir="ltr">
+<tbody>
+<tr class="cellalignment88">
+<td class="cellalignment94" id="r1c1-t7"><input type="checkbox" /></td>
+<td class="cellalignment95">Make sure that the ORACLE_HOME and PATH environment variables are setup in your session.</td>
+</tr>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r2c1-t7"><input type="checkbox" /></td>
+<td class="cellalignment96" headers="r2c1-t7">Make sure that the password expiry notification message does not display for the Sys and system schemas.</td>
+</tr>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r3c1-t7"><input type="checkbox" /></td>
+<td class="cellalignment96" headers="r3c1-t7">Set the NLS_LENGTH_SEMANTICS parameter to either CHAR or BYTE, based on your requirements.
+<p>For Oracle Healthcare Foundation Globalization Support information, see <span class="italic">Oracle Database Globalization Support Guide</span> and set your database character set accordingly.</p>
+</td>
+</tr>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r4c1-t7"><input type="checkbox" /></td>
+<td class="cellalignment96" headers="r4c1-t7">Make sure the database connection through SERVICE_NAME is enabled. You can verify the database connectivity using the following command:
+<p><code dir="ltr">SQL&gt;connect &lt;username&gt;@&lt;hostname&gt;:&lt;port number&gt;/&lt;service name&gt;</code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" --></div>
+<!-- class="sect2" -->
+<a id="CEGEHHDD"></a>
+<div id="OHATG110" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">2.3</span> Prepare the Installer</h3>
+<div class="inftblinformal">
+<table class="cellalignment93" summary="Prepare the Installer" dir="ltr">
+<tbody>
+<tr class="cellalignment88">
+<td class="cellalignment94" id="r1c1-t8"><input type="checkbox" /></td>
+<td class="cellalignment95">Extract the contents of the Oracle Healthcare Foundation media pack to your system.</td>
+</tr>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r2c1-t8"><input type="checkbox" /></td>
+<td class="cellalignment96" headers="r2c1-t8">Navigate to the <span class="bold">&lt;media_pack_location&gt;/</span> folder.</td>
+</tr>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r3c1-t8"><input type="checkbox" /></td>
+<td class="cellalignment96" headers="r3c1-t8">Unzip the <span class="bold">OHF_V711_AT_Windows-x64.zip</span> file where you want to launch the installer.</td>
+</tr>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r4c1-t8"><input type="checkbox" /></td>
+<td class="cellalignment96" headers="r4c1-t8">Navigate to the <span class="bold">Disk1/install</span> folder.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" --></div>
+<!-- class="sect2" -->
+<a id="CEGHAHDE"></a>
+<div id="OHATG111" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">2.4</span> Run the Installer</h3>
+<p>Start the Oracle Universal Installer (OUI) using the following command:</p>
+<ul>
+<li>
+<p>If the database server is on the machine where the installer is running:</p>
+<p><code dir="ltr">setup.exe</code></p>
+</li>
+<li>
+<p>If the database server is on a different machine:</p>
+<p><code dir="ltr">setup.exe remote_installation=true</code></p>
+</li>
+</ul>
+<div class="inftblinformal">
+<table class="cellalignment93" summary="Run the Installer" dir="ltr">
+<thead>
+<tr class="cellalignment88">
+<th class="cellalignment97" id="r1c1-t9"><br /></th>
+<th class="cellalignment98" id="r1c2-t9">Screen</th>
+<th class="cellalignment99" id="r1c3-t9">Action</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r2c1-t9" headers="r1c1-t9"><input type="checkbox" /></td>
+<td class="cellalignment96" headers="r2c1-t9 r1c2-t9">Welcome</td>
+<td class="cellalignment96" headers="r2c1-t9 r1c3-t9">Click <span class="bold">Next</span>.</td>
+</tr>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r3c1-t9" headers="r1c1-t9"><input type="checkbox" /></td>
+<td class="cellalignment96" headers="r3c1-t9 r1c2-t9">Specify Home Details</td>
+<td class="cellalignment96" headers="r3c1-t9 r1c3-t9">Enter the installation home name and location.
+<p>Click <span class="bold">Next</span>.</p>
+</td>
+</tr>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r4c1-t9" headers="r1c1-t9"><input type="checkbox" /></td>
+<td class="cellalignment96" headers="r4c1-t9 r1c2-t9">Oracle Client Home Configuration</td>
+<td class="cellalignment96" headers="r4c1-t9 r1c3-t9">Specify the Oracle client home path. The installer validates this path.
+<p>Click <span class="bold">Next</span>.</p>
+</td>
+</tr>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r5c1-t9" headers="r1c1-t9"><input type="checkbox" /></td>
+<td class="cellalignment96" headers="r5c1-t9 r1c2-t9">Database Configuration</td>
+<td class="cellalignment96" headers="r5c1-t9 r1c3-t9">Enter values for the following fields:
+<ul>
+<li>
+<p>Host name - By default, the system host name appears.</p>
+</li>
+<li>
+<p>Port - By default, the port number is 1521. You can edit this field if required.</p>
+</li>
+<li>
+<p>Service name</p>
+</li>
+<li>
+<p>System user password</p>
+</li>
+<li>
+<p>Sys user password</p>
+</li>
+</ul>
+<p>Click <span class="bold">Next</span>.</p>
+</td>
+</tr>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r6c1-t9" headers="r1c1-t9"><input type="checkbox" /></td>
+<td class="cellalignment96" headers="r6c1-t9 r1c2-t9">Healthcare Common Data Mart Configuration</td>
+<td class="cellalignment96" headers="r6c1-t9 r1c3-t9">Enter values for the following fields:
+<ul>
+<li>
+<p>Common data mart schema name</p>
+</li>
+<li>
+<p>Common data mart schema password</p>
+</li>
+</ul>
+<p><span class="bold">Note:</span> If you are upgrading from a previous Application Toolkit version, provide the values for the existing Common data mart schema.</p>
+<p>Click <span class="bold">Next</span>.</p>
+</td>
+</tr>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r7c1-t9" headers="r1c1-t9"><input type="checkbox" /></td>
+<td class="cellalignment96" headers="r7c1-t9 r1c2-t9">Tablespace Details</td>
+<td class="cellalignment96" headers="r7c1-t9 r1c3-t9">Specify the default tablespace details for the HCD schema. Enter values for the following fields:
+<ul>
+<li>
+<p>Tablespace name</p>
+</li>
+<li>
+<p>Initial size</p>
+</li>
+<li>
+<p>Maximum size - By default, this is set to UNLIMITED.</p>
+</li>
+</ul>
+<p>Click <span class="bold">Next</span>.</p>
+</td>
+</tr>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r8c1-t9" headers="r1c1-t9"><input type="checkbox" /></td>
+<td class="cellalignment96" headers="r8c1-t9 r1c2-t9">Temporary Tablespace</td>
+<td class="cellalignment96" headers="r8c1-t9 r1c3-t9">Specify the temporary tablespace details for the Common datamart schema. Enter values for the following fields:
+<ul>
+<li>
+<p>Tablespace name</p>
+</li>
+<li>
+<p>Initial size</p>
+</li>
+<li>
+<p>Maximum size - By default, this is set to UNLIMITED.</p>
+</li>
+</ul>
+<p>Click <span class="bold">Next</span>.</p>
+</td>
+</tr>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r9c1-t9" headers="r1c1-t9"><input type="checkbox" /></td>
+<td class="cellalignment96" headers="r9c1-t9 r1c2-t9">Tablespace Data File Location</td>
+<td class="cellalignment96" headers="r9c1-t9 r1c3-t9">Specify the location of the Tablespace data files. This is the directory on the database server where the data files are created during the installation.
+<p>For example,</p>
+<p><code dir="ltr">C:/app/oracle/product/oradata/dbname/</code></p>
+<p>The installer does not validate the tablespace location entered. Ensure that the tablespace location physically exists if the database server is on the remote server. Otherwise, the installer will fail during the installation.</p>
+<p>Click <span class="bold">Next</span>.</p>
+</td>
+</tr>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r10c1-t9" headers="r1c1-t9"><input type="checkbox" /></td>
+<td class="cellalignment96" headers="r10c1-t9 r1c2-t9">Verify Configuration Parameters</td>
+<td class="cellalignment96" headers="r10c1-t9 r1c3-t9">Click <span class="bold">Next</span>.</td>
+</tr>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r11c1-t9" headers="r1c1-t9"><input type="checkbox" /></td>
+<td class="cellalignment96" headers="r11c1-t9 r1c2-t9">Summary</td>
+<td class="cellalignment96" headers="r11c1-t9 r1c3-t9">Click <span class="bold">Install</span>.</td>
+</tr>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r12c1-t9" headers="r1c1-t9"><input type="checkbox" /></td>
+<td class="cellalignment96" headers="r12c1-t9 r1c2-t9">End of Installation</td>
+<td class="cellalignment96" headers="r12c1-t9 r1c3-t9">After reviewing the installation information, click <span class="bold">Exit</span>.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" -->
+<p>If the installation fails, see <a href="#CEGDCDAE">Troubleshooting</a>.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CEGDHDJI"></a>
+<div id="OHATG112" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">3</span> Installing the RPD File for Self-Service Analytics</h2>
+<ol>
+<li>
+<p><a href="#CEGIEEAF">Check Software Requirements</a></p>
+</li>
+<li>
+<p><a href="#CEGIHDBC">Prepare the RPD File</a></p>
+</li>
+<li>
+<p><a href="#CEGDHFHD">Install the RPD File</a></p>
+</li>
+</ol>
+<a id="CEGIEEAF"></a>
+<div id="OHATG113" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">3.1</span> Check Software Requirements</h3>
+<div class="inftblinformal">
+<table class="cellalignment93" summary="Prerequisite Checklist" dir="ltr">
+<tbody>
+<tr class="cellalignment88">
+<td class="cellalignment94" id="r1c1-t10"><input type="checkbox" /></td>
+<td class="cellalignment95">Oracle Business Intelligence Enterprise Edition (OBIEE) 12.2.1.2.0</td>
+</tr>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r2c1-t10"><input type="checkbox" /></td>
+<td class="cellalignment96" headers="r2c1-t10">Oracle Business Intelligence Developer Client Tools 12.2.1.2.0</td>
+</tr>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r3c1-t10"><input type="checkbox" /></td>
+<td class="cellalignment96" headers="r3c1-t10">Java Runtime Environment (JRE) 1.8 Update 91 (JRE 1.8 u91) or above</td>
+</tr>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r4c1-t10"><input type="checkbox" /></td>
+<td class="cellalignment96" headers="r4c1-t10">Oracle Healthcare Foundation Application Toolkit Healthcare Common Data Mart</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" --></div>
+<!-- class="sect2" -->
+<a id="CEGIHDBC"></a>
+<div id="OHATG114" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">3.2</span> Prepare the RPD File</h3>
+<div class="inftblinformal">
+<table class="cellalignment93" summary="Prepare the RPD File" dir="ltr">
+<tbody>
+<tr class="cellalignment88">
+<td class="cellalignment94" id="r1c1-t11"><input type="checkbox" /></td>
+<td class="cellalignment95">Extract the contents of the Oracle Healthcare Foundation media pack to your system.</td>
+</tr>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r2c1-t11"><input type="checkbox" /></td>
+<td class="cellalignment96" headers="r2c1-t11">Navigate to the <span class="bold">&lt;media_pack_location&gt;/</span> folder.</td>
+</tr>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r3c1-t11"><input type="checkbox" /></td>
+<td class="cellalignment96" headers="r3c1-t11">Depending on your operating system, unzip the <span class="bold">OHF_V711_Linux-x64.zip</span> or the <span class="bold">OHF_V711_AT_Windows_x64.zip</span> file.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" --></div>
+<!-- class="sect2" -->
+<a id="CEGDHFHD"></a>
+<div id="OHATG115" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">3.3</span> Install the RPD File</h3>
+<div class="inftblinformal">
+<table class="cellalignment93" summary="Install the RPD File" dir="ltr">
+<tbody>
+<tr class="cellalignment88">
+<td class="cellalignment94" id="r1c1-t12"><input type="checkbox" /></td>
+<td class="cellalignment95">Navigate to the <span class="bold">selfserviceanalytics</span> folder in the media pack.</td>
+</tr>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r2c1-t12"><input type="checkbox" /></td>
+<td class="cellalignment96" headers="r2c1-t12">Open the RPD file, <span class="bold">ohf_ssa_hcd.rpd</span>, available in the selfserviceanalytics\hcd_rpd folder using the Oracle BI Administration Tool, and perform the following steps:
+<ol>
+<li>
+<p>Navigate to <span class="bold">Manage &gt; Variables</span>, update the default value of the puser variable to point to the HCD schema name, and click <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>In the Physical layer, navigate to <span class="bold">localhost &gt; Properties &gt; Connection Pools</span>, and double-click <span class="bold">Relation Connection</span>.</p>
+<p>- Update the Data source name with the database host name, port number, and service name.</p>
+<p>- Update the HCD schema password.</p>
+</li>
+<li>
+<p>In the Physical layer, rename the physical schema <span class="bold">hcd</span> with the HCD schema name.</p>
+</li>
+</ol>
+</td>
+</tr>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r3c1-t12"><input type="checkbox" /></td>
+<td class="cellalignment96" headers="r3c1-t12">Save the <span class="bold">ohf_ssa_hcd.rpd</span> file and deploy it on the OBIEE server for analytics and reporting.
+<p>For details on deploying the RPD file, see <span class="italic">Oracle Business Intelligence Enterprise Edition 12.2.1.2.0</span> documentation.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CEGDCDAE"></a>
+<div id="OHATG116" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">4</span> Troubleshooting</h2>
+<p>If the installation fails, check the log files for errors (see <a href="#CEGECHCB">Installation Log Files</a>).</p>
+<p>You must fix the issues and rerun the installer from the installation home location.</p>
+<p>When re-executing the installer due to a failure, enter the same details in the question prompting phase at all times. Do not delete any objects in the installation folder.</p>
+<p>Contact Oracle support, if necessary, to resolve any persisting errors.</p>
+<a id="CEGECHCB"></a>
+<div id="OHATG117" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">4.1</span> Installation Log Files</h3>
+<p>While installing the HCD Data Model, the installer generates the following log files:</p>
+<div class="inftblinformal">
+<table class="cellalignment93" summary="Installation Log Files" dir="ltr">
+<thead>
+<tr class="cellalignment88">
+<th class="cellalignment100" id="r1c1-t13">Log File</th>
+<th class="cellalignment99" id="r1c2-t13">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r2c1-t13" headers="r1c1-t13"><code dir="ltr">installActions&lt;timestamp&gt;.log</code></td>
+<td class="cellalignment96" headers="r2c1-t13 r1c2-t13">Records the actions of the installer and can be used to diagnose issues with the installer.</td>
+</tr>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r3c1-t13" headers="r1c1-t13"><code dir="ltr">oraInstall&lt;timestamp&gt;.out</code></td>
+<td class="cellalignment96" headers="r3c1-t13 r1c2-t13">Records the output of the SQL scripts run by the installer. Database objects are installed using the Python framework.</td>
+</tr>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r4c1-t13" headers="r1c1-t13"><code dir="ltr">oraInstall&lt;timestamp&gt;.err</code></td>
+<td class="cellalignment96" headers="r4c1-t13 r1c2-t13">Records the errors from the SQL scripts run by the installer.</td>
+</tr>
+<tr class="cellalignment88">
+<td class="cellalignment96" id="r5c1-t13" headers="r1c1-t13"><code dir="ltr">&lt;INSTALL_HOME&gt;/at/install.err</code></td>
+<td class="cellalignment96" headers="r5c1-t13 r1c2-t13">This file is generated only when there are any SQL errors. Database objects are installed using the Python framework and the error logging is redirected to this location.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" -->
+<p>The log files are time stamped and each installation session creates a new log file. The log files are located at <span class="bold">&lt;ORACLE_BASE&gt;/oraInventory/logs</span>.</p>
+<p>For example:</p>
+<ul>
+<li>
+<p>Linux - /u01/app/oraInventory/logs</p>
+</li>
+<li>
+<p>Windows - C:\Program Files\Oracle\Inventory\logs</p>
+</li>
+</ul>
+<p>When reporting any problems that occur during installation to Oracle support, make sure that you include all the above log files.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CHDBIEBI"></a>
+<div id="OHATG118" class="sect1">
+<h2 class="sect1"><span class="secnum">5</span> Documentation Accessibility</h2>
+<p>For information about Oracle's commitment to accessibility, visit the Oracle Accessibility Program website at <code dir="ltr"><a href="http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=docacc">http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=docacc</a></code>.</p>
+<p class="subhead2"><a id="sthref1"></a>Access to Oracle Support</p>
+<p>Oracle customers that have purchased support have access to electronic support through My Oracle Support. For information, visit <code dir="ltr"><a href="http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=info">http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=info</a></code> or visit <code dir="ltr"><a href="http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=trs">http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=trs</a></code> if you are hearing impaired.</p>
+</div>
+<!-- class="sect1" -->
+<a id="sthref2"></a>
+<hr />
+<p>Oracle Healthcare Foundation Application Toolkit Installation Guide, Release 7.1.1</p>
+<p>E79467-03</p>
+<p>Copyright &copy; 2016, 2017,&nbsp;Oracle and/or its affiliates. All rights reserved.</p>
+<p>This software and related documentation are provided under a license agreement containing restrictions on use and disclosure and are protected by intellectual property laws. Except as expressly permitted in your license agreement or allowed by law, you may not use, copy, reproduce, translate, broadcast, modify, license, transmit, distribute, exhibit, perform, publish, or display any part, in any form, or by any means. Reverse engineering, disassembly, or decompilation of this software, unless required by law for interoperability, is prohibited.</p>
+<p>The information contained herein is subject to change without notice and is not warranted to be error-free. If you find any errors, please report them to us in writing.</p>
+<p>If this is software or related documentation that is delivered to the U.S. Government or anyone licensing it on behalf of the U.S. Government, then the following notice is applicable:</p>
+<p>U.S. GOVERNMENT END USERS: Oracle programs, including any operating system, integrated software, any programs installed on the hardware, and/or documentation, delivered to U.S. Government end users are "commercial computer software" pursuant to the applicable Federal Acquisition Regulation and agency-specific supplemental regulations. As such, use, duplication, disclosure, modification, and adaptation of the programs, including any operating system, integrated software, any programs installed on the hardware, and/or documentation, shall be subject to license terms and license restrictions applicable to the programs. No other rights are granted to the U.S. Government.</p>
+<p>This software or hardware is developed for general use in a variety of information management applications. It is not developed or intended for use in any inherently dangerous applications, including applications that may create a risk of personal injury. If you use this software or hardware in dangerous applications, then you shall be responsible to take all appropriate fail-safe, backup, redundancy, and other measures to ensure its safe use. Oracle Corporation and its affiliates disclaim any liability for any damages caused by use of this software or hardware in dangerous applications.</p>
+<p>Oracle and Java are registered trademarks of Oracle and/or its affiliates. Other names may be trademarks of their respective owners.</p>
+<p>Intel and Intel Xeon are trademarks or registered trademarks of Intel Corporation. All SPARC trademarks are used under license and are trademarks or registered trademarks of SPARC International, Inc. AMD, Opteron, the AMD logo, and the AMD Opteron logo are trademarks or registered trademarks of Advanced Micro Devices. UNIX is a registered trademark of The Open Group.</p>
+<p>This software or hardware and documentation may provide access to or information about content, products, and services from third parties. Oracle Corporation and its affiliates are not responsible for and expressly disclaim all warranties of any kind with respect to third-party content, products, and services unless otherwise set forth in an applicable agreement between you and Oracle. Oracle Corporation and its affiliates will not be responsible for any loss, costs, or damages incurred due to your access to or use of third-party content, products, or services, except as set forth in an applicable agreement between you and Oracle.</p>
+</div>
+<!-- class="letterstyle" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment87">
+<tr>
+<td class="cellalignment96">&nbsp;</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2016, 2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment102">
+<table class="cellalignment90">
+<tr>
+<td class="cellalignment91"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment91"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment91"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment91"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

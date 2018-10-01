@@ -1,0 +1,2532 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Working with Cohort Criteria and Queries</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2017-08-30T14:41:46Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Healthcare Translational Research User's Guide" />
+<meta name="dcterms.identifier" content="E84083-02" />
+<meta name="dcterms.isVersionOf" content="TCEUG" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2012, 2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Prev" href="cohortexp.htm" title="Previous" type="text/html" />
+<link rel="Next" href="cohviewer.htm" title="Next" type="text/html" />
+<link rel="alternate" href="TCEUG.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="TCEUG.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="TCEUG.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">6/11</span> <!-- End Header -->
+<div id="TCEUG399" class="chapter"><a id="BABDAHDB"></a>
+<h1 class="chapter"><span class="secnum">3</span> Working with Cohort Criteria and Queries</h1>
+<p>This chapter contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#BABDGJGD">Categories and Topics</a></p>
+</li>
+<li>
+<p><a href="#BABJACIB">Selecting Cohort Criteria</a></p>
+</li>
+<li>
+<p><a href="#BABGCJEJ">Working with Inclusion and Exclusion Criteria</a></p>
+</li>
+<li>
+<p><a href="#BGBCGFEA">Viewing Patient Count and Patient Data</a></p>
+</li>
+<li>
+<p><a href="#BABBJJBD">Viewing Specimen Count</a></p>
+</li>
+<li>
+<p><a href="#BABJJCHF">Saving a Query</a></p>
+</li>
+<li>
+<p><a href="#BABBCAIA">Loading a Saved Query</a></p>
+</li>
+</ul>
+<a id="BABDGJGD"></a>
+<div id="TCEUG754" class="sect1">
+<h2 class="sect1">Categories and Topics</h2>
+<p>The query criteria are grouped into three broad data categories&mdash;Patient information, Clinical data, and Genomic data.</p>
+<p>Each category is further divided into multiple topics where you can drill into specific parameters.</p>
+<div id="TCEUG402" class="tblformal">
+<p class="titleintable"><a id="sthref38"></a><a id="sthref39"></a>Table 3-1 Categories and Topics</p>
+<table class="cellalignment54" title="Categories and Topics" summary="Cohort selection Criteria" dir="ltr">
+<thead>
+<tr class="cellalignment41">
+<th class="cellalignment51" id="r1c1-t2">Category</th>
+<th class="cellalignment51" id="r1c2-t2">Topic</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r2c1-t2" headers="r1c1-t2">
+<p><a href="#BABHGHII">Patient Information</a></p>
+</td>
+<td class="cellalignment47" headers="r2c1-t2 r1c2-t2">
+<p><a href="#BABIGFFF">Demographics</a></p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r3c1-t2" headers="r1c1-t2">
+<p><a href="#BABHGHII">Patient Information</a></p>
+</td>
+<td class="cellalignment47" headers="r3c1-t2 r1c2-t2">
+<p><a href="#BABGIBEE">Consent</a></p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r4c1-t2" headers="r1c1-t2">
+<p><a href="#BABJCHDI">Clinical Data</a></p>
+</td>
+<td class="cellalignment47" headers="r4c1-t2 r1c2-t2">
+<p><a href="#BABJCEFF">Diagnosis</a></p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r5c1-t2" headers="r1c1-t2">
+<p><a href="#BABJCHDI">Clinical Data</a></p>
+</td>
+<td class="cellalignment47" headers="r5c1-t2 r1c2-t2">
+<p><a href="#BABGDBGE">Clinical Encounter</a></p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r6c1-t2" headers="r1c1-t2">
+<p><a href="#BABJCHDI">Clinical Data</a></p>
+</td>
+<td class="cellalignment47" headers="r6c1-t2 r1c2-t2">
+<p><a href="#BABHBGDA">Procedure</a></p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r7c1-t2" headers="r1c1-t2">
+<p><a href="#BABJCHDI">Clinical Data</a></p>
+</td>
+<td class="cellalignment47" headers="r7c1-t2 r1c2-t2">
+<p><a href="#BABGAEDE">Medication</a></p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r8c1-t2" headers="r1c1-t2">
+<p><a href="#BABJCHDI">Clinical Data</a></p>
+</td>
+<td class="cellalignment47" headers="r8c1-t2 r1c2-t2">
+<p><a href="#BABJCGCB">Patient History</a></p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r9c1-t2" headers="r1c1-t2">
+<p><a href="#BABJCHDI">Clinical Data</a></p>
+</td>
+<td class="cellalignment47" headers="r9c1-t2 r1c2-t2">
+<p><a href="#BABDCDAF">Test or Observation</a></p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r10c1-t2" headers="r1c1-t2">
+<p><a href="#BABJCHDI">Clinical Data</a></p>
+</td>
+<td class="cellalignment47" headers="r10c1-t2 r1c2-t2">
+<p><a href="#BABIBJGI">Specimen</a></p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r11c1-t2" headers="r1c1-t2">
+<p><a href="#BABJCHDI">Clinical Data</a></p>
+</td>
+<td class="cellalignment47" headers="r11c1-t2 r1c2-t2">
+<p><a href="#BABJGDFD">Study</a></p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r12c1-t2" headers="r1c1-t2">
+<p><a href="#BABJCHDI">Clinical Data</a></p>
+</td>
+<td class="cellalignment47" headers="r12c1-t2 r1c2-t2">
+<p><a href="#BABBIABE">Relative Time Events</a></p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r13c1-t2" headers="r1c1-t2">
+<p><a href="#BABEBDDH">Genomic Data</a></p>
+</td>
+<td class="cellalignment47" headers="r13c1-t2 r1c2-t2">
+<p><a href="#BABBCJII">Sequence Variants</a></p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r14c1-t2" headers="r1c1-t2">
+<p><a href="#BABEBDDH">Genomic Data</a></p>
+</td>
+<td class="cellalignment47" headers="r14c1-t2 r1c2-t2">
+<p><a href="#BABDIDEI">Copy Number Variation</a></p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r15c1-t2" headers="r1c1-t2">
+<p><a href="#BABEBDDH">Genomic Data</a></p>
+</td>
+<td class="cellalignment47" headers="r15c1-t2 r1c2-t2">
+<p><a href="#BABBIDCE">Microarray Expression</a></p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r16c1-t2" headers="r1c1-t2">
+<p><a href="#BABEBDDH">Genomic Data</a></p>
+</td>
+<td class="cellalignment47" headers="r16c1-t2 r1c2-t2">
+<p><a href="#BABDHHGE">RNA-seq Expression</a></p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r17c1-t2" headers="r1c1-t2">
+<p><a href="#BABEBDDH">Genomic Data</a></p>
+</td>
+<td class="cellalignment47" headers="r17c1-t2 r1c2-t2">
+<p><a href="#BABBGFHB">Metadata Filters</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" -->
+<a id="BABHGHII"></a>
+<div id="TCEUG408" class="sect2">
+<h3 class="sect2">Patient Information</h3>
+<a id="BABIGFFF"></a>
+<div id="TCEUG409" class="sect3">
+<h4 class="sect3">Demographics</h4>
+<div id="TCEUG410" class="figure">
+<p class="titleinfigure"><a id="sthref40"></a>Figure 3-1 Patient Information Demographics options</p>
+<img width="361" height="502" src="img/trc5.gif" alt="Description of Figure 3-1 follows" /><br />
+<a id="sthref41" href="img_text/trc5.htm">Description of ''Figure 3-1 Patient Information Demographics options''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<div id="TCEUG411" class="tblhruleformalwidemax">
+<p class="titleintable"><a id="sthref42"></a><a id="sthref43"></a>Table 3-2 Demographics Details</p>
+<table class="cellalignment50" title="Demographics Details" summary="Demographic Details" dir="ltr">
+<thead>
+<tr class="cellalignment41">
+<th class="cellalignment51" id="r1c1-t3">Field Name</th>
+<th class="cellalignment51" id="r1c2-t3">Definition</th>
+<th class="cellalignment51" id="r1c3-t3">Sample Value or Values</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r2c1-t3" headers="r1c1-t3">
+<p>Patient ID or Subject ID</p>
+</td>
+<td class="cellalignment47" headers="r2c1-t3 r1c2-t3">
+<p>Double-blinded unique identifier for the Patient. Also known as the Oracle ID</p>
+</td>
+<td class="cellalignment47" headers="r2c1-t3 r1c3-t3">
+<p>-</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r3c1-t3" headers="r1c1-t3">
+<p>Gender</p>
+</td>
+<td class="cellalignment47" headers="r3c1-t3 r1c2-t3">
+<p>Patient's gender</p>
+</td>
+<td class="cellalignment47" headers="r3c1-t3 r1c3-t3">
+<p>Male, Female</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r4c1-t3" headers="r1c1-t3">
+<p>Marital Status</p>
+</td>
+<td class="cellalignment47" headers="r4c1-t3 r1c2-t3">
+<p>Patient's marital status</p>
+</td>
+<td class="cellalignment47" headers="r4c1-t3 r1c3-t3">
+<p>Married, Single, Separated, Divorced</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r5c1-t3" headers="r1c1-t3">
+<p>Age (in Years)</p>
+</td>
+<td class="cellalignment47" headers="r5c1-t3 r1c2-t3">
+<p>Patient's chronological age</p>
+</td>
+<td class="cellalignment47" headers="r5c1-t3 r1c3-t3">
+<p>-</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r6c1-t3" headers="r1c1-t3">
+<p>Date of Birth</p>
+</td>
+<td class="cellalignment47" headers="r6c1-t3 r1c2-t3">
+<p>Patient's date of birth</p>
+</td>
+<td class="cellalignment47" headers="r6c1-t3 r1c3-t3">
+<p>-</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r7c1-t3" headers="r1c1-t3">
+<p>Deceased Date</p>
+</td>
+<td class="cellalignment47" headers="r7c1-t3 r1c2-t3">
+<p>Patient's decease date</p>
+</td>
+<td class="cellalignment47" headers="r7c1-t3 r1c3-t3">
+<p>-</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r8c1-t3" headers="r1c1-t3">
+<p>Ethnicity</p>
+</td>
+<td class="cellalignment47" headers="r8c1-t3 r1c2-t3">
+<p>Code to reflect Patient's ethnicity</p>
+</td>
+<td class="cellalignment47" headers="r8c1-t3 r1c3-t3">
+<p>-</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r9c1-t3" headers="r1c1-t3">
+<p>Race</p>
+</td>
+<td class="cellalignment47" headers="r9c1-t3 r1c2-t3">
+<p>Code to reflect Patient's race</p>
+</td>
+<td class="cellalignment47" headers="r9c1-t3 r1c3-t3">
+<p>-</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r10c1-t3" headers="r1c1-t3">
+<p>City</p>
+</td>
+<td class="cellalignment47" headers="r10c1-t3 r1c2-t3">
+<p>Code for Patient's City of residence</p>
+</td>
+<td class="cellalignment47" headers="r10c1-t3 r1c3-t3">
+<p>-</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r11c1-t3" headers="r1c1-t3">
+<p>State</p>
+</td>
+<td class="cellalignment47" headers="r11c1-t3 r1c2-t3">
+<p>Code for Patient's State of residence</p>
+</td>
+<td class="cellalignment47" headers="r11c1-t3 r1c3-t3">
+<p>-</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r12c1-t3" headers="r1c1-t3">
+<p>Zip Code</p>
+</td>
+<td class="cellalignment47" headers="r12c1-t3 r1c2-t3">
+<p>Code for Patient's Zip code</p>
+</td>
+<td class="cellalignment47" headers="r12c1-t3 r1c3-t3">
+<p>-</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r13c1-t3" headers="r1c1-t3">
+<p>County</p>
+</td>
+<td class="cellalignment47" headers="r13c1-t3 r1c2-t3">
+<p>Code for Patient's County</p>
+</td>
+<td class="cellalignment47" headers="r13c1-t3 r1c3-t3">
+<p>-</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r14c1-t3" headers="r1c1-t3">
+<p>Country</p>
+</td>
+<td class="cellalignment47" headers="r14c1-t3 r1c2-t3">
+<p>Code for Patient's Country</p>
+</td>
+<td class="cellalignment47" headers="r14c1-t3 r1c3-t3">
+<p>-</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwidemax" --></div>
+<!-- class="sect3" -->
+<a id="BABGIBEE"></a>
+<div id="TCEUG412" class="sect3">
+<h4 class="sect3">Consent</h4>
+<div id="TCEUG413" class="figure">
+<p class="titleinfigure"><a id="sthref44"></a>Figure 3-2 Consent</p>
+<img width="367" height="376" src="img/trc9.gif" alt="Description of Figure 3-2 follows" /><br />
+<a id="sthref45" href="img_text/trc9.htm">Description of ''Figure 3-2 Consent''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<div id="TCEUG414" class="tblformal">
+<p class="titleintable"><a id="sthref46"></a><a id="sthref47"></a>Table 3-3 Consent Screen Fields</p>
+<table class="cellalignment54" title="Consent Screen Fields" summary="Conscent Screen Fields" dir="ltr">
+<thead>
+<tr class="cellalignment41">
+<th class="cellalignment51" id="r1c1-t4">Prompt Heading</th>
+<th class="cellalignment51" id="r1c2-t4">Definition</th>
+<th class="cellalignment51" id="r1c3-t4">Sample Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r2c1-t4" headers="r1c1-t4">
+<p>Consent Type Code</p>
+</td>
+<td class="cellalignment47" headers="r2c1-t4 r1c2-t4">
+<p>Authorization for specified medical care.</p>
+</td>
+<td class="cellalignment47" headers="r2c1-t4 r1c3-t4">
+<p>Procedure Consent, Specimen Consent</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r3c1-t4" headers="r1c1-t4">
+<p>Consent Status</p>
+</td>
+<td class="cellalignment47" headers="r3c1-t4 r1c2-t4">
+<p>The status of the consent form.</p>
+</td>
+<td class="cellalignment47" headers="r3c1-t4 r1c3-t4">
+<p>Active, Pending, Refused</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r4c1-t4" headers="r1c1-t4">
+<p>Consent Start Date</p>
+</td>
+<td class="cellalignment47" headers="r4c1-t4 r1c2-t4">
+<p>The period start date of the patient's consent.</p>
+</td>
+<td class="cellalignment47" headers="r4c1-t4 r1c3-t4">
+<p>-</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r5c1-t4" headers="r1c1-t4">
+<p>Consent End Date</p>
+</td>
+<td class="cellalignment47" headers="r5c1-t4 r1c2-t4">
+<p>The period end date of the patient's consent.</p>
+</td>
+<td class="cellalignment47" headers="r5c1-t4 r1c3-t4">
+<p>-</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" --></div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BABJCHDI"></a>
+<div id="TCEUG415" class="sect2">
+<h3 class="sect2">Clinical Data</h3>
+<a id="BABJCEFF"></a>
+<div id="TCEUG416" class="sect3">
+<h4 class="sect3">Diagnosis</h4>
+<div id="TCEUG417" class="figure">
+<p class="titleinfigure"><a id="sthref48"></a>Figure 3-3 Diagnosis</p>
+<img width="298" height="416" src="img/trc10.gif" alt="Description of Figure 3-3 follows" /><br />
+<a id="sthref49" href="img_text/trc10.htm">Description of ''Figure 3-3 Diagnosis''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p>Click the magnifying glass icon for <span class="bold">Diagnosis,</span> to search either by Diagnosis Code or Diagnosis Name.</p>
+<div id="TCEUG418" class="tblformal">
+<p class="titleintable"><a id="sthref50"></a><a id="sthref51"></a>Table 3-4 Diagnosis Screen Fields</p>
+<table class="cellalignment54" title="Diagnosis Screen Fields" summary="Diagnosis" dir="ltr">
+<thead>
+<tr class="cellalignment41">
+<th class="cellalignment51" id="r1c1-t5">Prompt Heading</th>
+<th class="cellalignment51" id="r1c2-t5">Definition</th>
+<th class="cellalignment51" id="r1c3-t5">Sample Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r2c1-t5" headers="r1c1-t5">
+<p>Diagnosis</p>
+</td>
+<td class="cellalignment47" headers="r2c1-t5 r1c2-t5">
+<p>Code that classifies the patient's clinical condition.</p>
+</td>
+<td class="cellalignment47" headers="r2c1-t5 r1c3-t5">
+<p>Most commonly identified with ICD codes.</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r3c1-t5" headers="r1c1-t5">
+<p>Diagnosis Status</p>
+</td>
+<td class="cellalignment47" headers="r3c1-t5 r1c2-t5">
+<p>Code that reflects the status of the Diagnosis</p>
+</td>
+<td class="cellalignment47" headers="r3c1-t5 r1c3-t5">
+<p>Active, New, Recurring</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r4c1-t5" headers="r1c1-t5">
+<p>Onset Date</p>
+</td>
+<td class="cellalignment47" headers="r4c1-t5 r1c2-t5">
+<p>Date of the onset</p>
+</td>
+<td class="cellalignment47" headers="r4c1-t5 r1c3-t5">
+<p>-</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r5c1-t5" headers="r1c1-t5">
+<p>Reported Date</p>
+</td>
+<td class="cellalignment47" headers="r5c1-t5 r1c2-t5">
+<p>Date when the diagnosis was recorded by a service provider</p>
+</td>
+<td class="cellalignment47" headers="r5c1-t5 r1c3-t5">
+<p>-</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r6c1-t5" headers="r1c1-t5">
+<p>End Date</p>
+</td>
+<td class="cellalignment47" headers="r6c1-t5 r1c2-t5">
+<p>Date of resolution.</p>
+</td>
+<td class="cellalignment47" headers="r6c1-t5 r1c3-t5">
+<p>-</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r7c1-t5" headers="r1c1-t5">
+<p>Age at First Onset</p>
+</td>
+<td class="cellalignment47" headers="r7c1-t5 r1c2-t5">
+<p>Age of the patient at first onset (years)</p>
+</td>
+<td class="cellalignment47" headers="r7c1-t5 r1c3-t5">
+<p>-</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r8c1-t5" headers="r1c1-t5">
+<p>Anatomical Site</p>
+</td>
+<td class="cellalignment47" headers="r8c1-t5 r1c2-t5">
+<p>Anatomical site or sites related to the diagnosis</p>
+</td>
+<td class="cellalignment47" headers="r8c1-t5 r1c3-t5">
+<p>-</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" --></div>
+<!-- class="sect3" -->
+<a id="BABGDBGE"></a>
+<div id="TCEUG419" class="sect3">
+<h4 class="sect3">Clinical Encounter</h4>
+<div id="TCEUG420" class="figure">
+<p class="titleinfigure"><a id="sthref52"></a>Figure 3-4 Clinical Encounter</p>
+<img width="520" height="439" src="img/trc58.gif" alt="Description of Figure 3-4 follows" /><br />
+<a id="sthref53" href="img_text/trc58.htm">Description of ''Figure 3-4 Clinical Encounter''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p>Click the magnifying glass icon, next to Encounter Type, to search either by Encounter Code or Encounter Name.</p>
+<div id="TCEUG421" class="tblformal">
+<p class="titleintable"><a id="sthref54"></a><a id="sthref55"></a>Table 3-5 Clinical Encounter Screen Fields</p>
+<table class="cellalignment54" title="Clinical Encounter Screen Fields" summary="Clinical Encounter" dir="ltr">
+<thead>
+<tr class="cellalignment41">
+<th class="cellalignment51" id="r1c1-t6">Prompt Heading</th>
+<th class="cellalignment51" id="r1c2-t6">Definition</th>
+<th class="cellalignment51" id="r1c3-t6">Sample Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r2c1-t6" headers="r1c1-t6">
+<p>Encounter Type</p>
+</td>
+<td class="cellalignment47" headers="r2c1-t6 r1c2-t6">
+<p>Type of clinical encounter that individual has undergone, valid values may be inpatient, outpatient</p>
+</td>
+<td class="cellalignment47" headers="r2c1-t6 r1c3-t6">
+<p>Inpatient, Outpatient</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r3c1-t6" headers="r1c1-t6">
+<p>Location</p>
+</td>
+<td class="cellalignment47" headers="r3c1-t6 r1c2-t6">
+<p>Facility where it took place, generally name of the hospital, clinic, doctors office and so on</p>
+</td>
+<td class="cellalignment47" headers="r3c1-t6 r1c3-t6">
+<p>Sequoia Hospital, Medical Associates, Mass General Hospital Ear and Nose Dept</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r4c1-t6" headers="r1c1-t6">
+<p>Time</p>
+</td>
+<td class="cellalignment47" headers="r4c1-t6 r1c2-t6">
+<p>Date when encounter took place</p>
+</td>
+<td class="cellalignment47" headers="r4c1-t6 r1c3-t6">
+<p>-</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r5c1-t6" headers="r1c1-t6">
+<p>Datasource</p>
+</td>
+<td class="cellalignment47" headers="r5c1-t6 r1c2-t6">
+<p>Name of the data system actual clinical data is coming from</p>
+</td>
+<td class="cellalignment47" headers="r5c1-t6 r1c3-t6">
+<p>EMR1, EMR2</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" --></div>
+<!-- class="sect3" -->
+<a id="BABHBGDA"></a>
+<div id="TCEUG422" class="sect3">
+<h4 class="sect3">Procedure</h4>
+<div id="TCEUG423" class="figure">
+<p class="titleinfigure"><a id="sthref56"></a>Figure 3-5 Procedure</p>
+<img width="376" height="515" src="img/trc11.gif" alt="Description of Figure 3-5 follows" /><br />
+<a id="sthref57" href="img_text/trc11.htm">Description of ''Figure 3-5 Procedure''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p>Click the magnifying glass icon for <span class="bold">Procedure,</span> to search either by Procedure Code or Procedure Name.</p>
+<div id="TCEUG424" class="tblformal">
+<p class="titleintable"><a id="sthref58"></a><a id="sthref59"></a>Table 3-6 Procedure Screen Fields</p>
+<table class="cellalignment54" title="Procedure Screen Fields" summary="Procedure" dir="ltr">
+<thead>
+<tr class="cellalignment41">
+<th class="cellalignment51" id="r1c1-t7">Prompt Heading</th>
+<th class="cellalignment51" id="r1c2-t7">Definition</th>
+<th class="cellalignment51" id="r1c3-t7">Sample Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r2c1-t7" headers="r1c1-t7">
+<p>Procedure</p>
+</td>
+<td class="cellalignment47" headers="r2c1-t7 r1c2-t7">
+<p>A discreet intervention performed by a clinician. Procedures are most commonly identified with CPT codes</p>
+</td>
+<td class="cellalignment47" headers="r2c1-t7 r1c3-t7">
+<p>-</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r3c1-t7" headers="r1c1-t7">
+<p>Procedure Type</p>
+</td>
+<td class="cellalignment47" headers="r3c1-t7 r1c2-t7">
+<p>A sub categorization of procedures</p>
+</td>
+<td class="cellalignment47" headers="r3c1-t7 r1c3-t7">
+<p>Surgical, Radiology, Diagnostic</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r4c1-t7" headers="r1c1-t7">
+<p>Procedure Start Date</p>
+</td>
+<td class="cellalignment47" headers="r4c1-t7 r1c2-t7">
+<p>The date when the procedure began</p>
+</td>
+<td class="cellalignment47" headers="r4c1-t7 r1c3-t7">
+<p>-</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r5c1-t7" headers="r1c1-t7">
+<p>Procedure End Date</p>
+</td>
+<td class="cellalignment47" headers="r5c1-t7 r1c2-t7">
+<p>The date when the procedure concluded</p>
+</td>
+<td class="cellalignment47" headers="r5c1-t7 r1c3-t7">
+<p>-</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" --></div>
+<!-- class="sect3" -->
+<a id="BABGAEDE"></a>
+<div id="TCEUG425" class="sect3">
+<h4 class="sect3">Medication</h4>
+<div id="TCEUG426" class="figure">
+<p class="titleinfigure"><a id="sthref60"></a>Figure 3-6 Medication</p>
+<img width="366" height="451" src="img/trc12.gif" alt="Description of Figure 3-6 follows" /><br />
+<a id="sthref61" href="img_text/trc12.htm">Description of ''Figure 3-6 Medication''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p>Click the magnifying glass icon for <span class="bold">Medication</span> to search either by Medication Code or Medication Name. There are two search modes available. For details, see <a href="#BABBCIIA">Medication Search Modes</a>.</p>
+<div id="TCEUG427" class="tblformal">
+<p class="titleintable"><a id="sthref62"></a><a id="sthref63"></a>Table 3-7 Medication Screen Fields</p>
+<table class="cellalignment54" title="Medication Screen Fields" summary="medication Screen" dir="ltr">
+<thead>
+<tr class="cellalignment41">
+<th class="cellalignment51" id="r1c1-t8">Prompt Heading</th>
+<th class="cellalignment51" id="r1c2-t8">Definition</th>
+<th class="cellalignment51" id="r1c3-t8">Sample Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r2c1-t8" headers="r1c1-t8">
+<p>Medication</p>
+</td>
+<td class="cellalignment47" headers="r2c1-t8 r1c2-t8">
+<p>A pharmaceutical substance intended to provide therapeutic benefit.</p>
+</td>
+<td class="cellalignment47" headers="r2c1-t8 r1c3-t8">
+<p>NDC codes, RxNorm codes</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r3c1-t8" headers="r1c1-t8">
+<p>Medication Start Date</p>
+</td>
+<td class="cellalignment47" headers="r3c1-t8 r1c2-t8">
+<p>The start date for the administration of the medication.</p>
+</td>
+<td class="cellalignment47" headers="r3c1-t8 r1c3-t8">
+<p>-</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r4c1-t8" headers="r1c1-t8">
+<p>Medication End Date</p>
+</td>
+<td class="cellalignment47" headers="r4c1-t8 r1c2-t8">
+<p>The end date for the administration of the medication.</p>
+</td>
+<td class="cellalignment47" headers="r4c1-t8 r1c3-t8">
+<p>-</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r5c1-t8" headers="r1c1-t8">
+<p>Dosage</p>
+</td>
+<td class="cellalignment47" headers="r5c1-t8 r1c2-t8">
+<p>The medication's dosage.</p>
+</td>
+<td class="cellalignment47" headers="r5c1-t8 r1c3-t8">
+<p>-</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r6c1-t8" headers="r1c1-t8">
+<p>Dosage Units</p>
+</td>
+<td class="cellalignment47" headers="r6c1-t8 r1c2-t8">
+<p>Code for the medication dosage's units.</p>
+</td>
+<td class="cellalignment47" headers="r6c1-t8 r1c3-t8">
+<p>-</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r7c1-t8" headers="r1c1-t8">
+<p>Medication Outcome</p>
+</td>
+<td class="cellalignment47" headers="r7c1-t8 r1c2-t8">
+<p>Clinical outcome of taking a given medication as assessed by clinician or medical professional</p>
+</td>
+<td class="cellalignment47" headers="r7c1-t8 r1c3-t8">
+<p>Partial Recovery, Full Recovery, Adverse Reaction</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" -->
+<a id="BABBCIIA"></a>
+<div id="TCEUG755" class="sect4"><!-- infolevel="all" infotype="General" -->
+<h5 class="sect4">Medication Search Modes</h5>
+<p>The Medication search menu supports the following two search modes:</p>
+<p class="subhead2"><a id="TCEUG694"></a>Classic Search</p>
+<p>Classic search lets you search for Medication codes based on medication name, medication code and code system. These parameters can be used with the following options:</p>
+<ul>
+<li>
+<p>Starts with</p>
+</li>
+<li>
+<p>Ends with</p>
+</li>
+<li>
+<p>Equals</p>
+</li>
+<li>
+<p>Does not equal</p>
+</li>
+<li>
+<p>Contains (this is the default value)</p>
+</li>
+<li>
+<p>Does not contain</p>
+</li>
+<li>
+<p>Is blank</p>
+</li>
+<li>
+<p>Is not blank</p>
+</li>
+</ul>
+<p>To perform a search in classic mode:</p>
+<ol>
+<li>
+<p>Navigate to <span class="bold">Cohort Query</span> &gt; <span class="bold">Clinical Data</span> &gt; <span class="bold">Medication</span>.</p>
+</li>
+<li>
+<p>Click the magnifying glass icon next to the <span class="bold">Medication</span> field.</p>
+</li>
+<li>
+<p>Select <span class="bold">Classic Search</span>.</p>
+</li>
+<li>
+<p>Specify the search criteria either by using the above parameters individually or in combination, along with the available operators.</p>
+<div id="TCEUG695" class="figure">
+<p class="titleinfigure"><a id="sthref64"></a>Figure 3-7 Classic Search</p>
+<img width="1050" height="679" src="img/trc103.gif" alt="Description of Figure 3-7 follows" /><br />
+<a id="sthref65" href="img_text/trc103.htm">Description of ''Figure 3-7 Classic Search''</a><br />
+<br /></div>
+<!-- class="figure" --></li>
+<li>
+<p>Click <span class="bold">Search</span>.</p>
+</li>
+<li>
+<p>The Code, Code Name and Code System of the matching codes are displayed on the left. Expand the list items to view details about code hierarchy and the Code Description.</p>
+<p>If you have not specified any search criteria, then all codes at all levels of hierarchy from all the hierarchies are listed.</p>
+</li>
+<li>
+<p>Select any number of rows on the left and copy them to the right hand side selection list using the <span class="bold">&gt;</span> button.</p>
+</li>
+<li>
+<p>Click <span class="bold">Submit</span> at the bottom of the screen. All the selected codes are used for defining query criteria in the Cohort Query.</p>
+</li>
+</ol>
+<p class="subhead2"><a id="TCEUG696"></a>Hierarchy Drill-in Search</p>
+<p>Hierarchy Drill-in search lets you search for Medication codes based on medication name, medication code and code system. These parameters can be used with the options:</p>
+<ul>
+<li>
+<p>Starts with</p>
+</li>
+<li>
+<p>Equals</p>
+</li>
+<li>
+<p>Contains (this is the default value)</p>
+</li>
+</ul>
+<ol>
+<li>
+<p>Navigate to <span class="bold">Cohort Query</span> &gt; <span class="bold">Clinical Data</span> &gt; <span class="bold">Medication</span>.</p>
+</li>
+<li>
+<p>Click the magnifying glass icon next to the <span class="bold">Medication</span> field.</p>
+</li>
+<li>
+<p>Select <span class="bold">Hierarchy Drill-in Search</span>.</p>
+<div id="TCEUG697" class="figure">
+<p class="titleinfigure"><a id="sthref66"></a>Figure 3-8 Hierarchy Drill-in Search</p>
+<img width="1053" height="694" src="img/trc104.gif" alt="Description of Figure 3-8 follows" /><br />
+<a id="sthref67" href="img_text/trc104.htm">Description of ''Figure 3-8 Hierarchy Drill-in Search''</a><br />
+<br /></div>
+<!-- class="figure" --></li>
+<li>
+<p>Specify the search criteria either by using the above parameters individually or in combination, along with the available operators.</p>
+<p>The drop down list for <span class="bold">Code System</span> lets you select multiple Code Systems.</p>
+</li>
+<li>
+<p>Click <span class="bold">Search</span>.</p>
+</li>
+<li>
+<p>The matching codes are displayed on the left. The entire hierarchy in which the matching code is present, is listed as a hyperlink. Click the hyperlink to view an indented list where each child level code is displayed at one indent level more than its parent code.</p>
+<p>If you have not specified any search criteria, then all the codes at all the levels of hierarchy, from all the hierarchies are listed.</p>
+<div id="TCEUG698" class="figure">
+<p class="titleinfigure"><a id="sthref68"></a>Figure 3-9 Matching Codes from Hierarchy Drill-in Search</p>
+<img width="824" height="631" src="img/trc105.gif" alt="Description of Figure 3-9 follows" /><br />
+<a id="sthref69" href="img_text/trc105.htm">Description of ''Figure 3-9 Matching Codes from Hierarchy Drill-in Search''</a><br />
+<br /></div>
+<!-- class="figure" --></li>
+<li>
+<p>To view the count of patients who were given the medication represented by the Code, select <span class="bold">Code(s)</span> and click <span class="bold">Count Patients</span>. The count is cumulative of the selected Code and all its child Codes.</p>
+<p>For example, if Second Level Child Code is selected, then the count corresponds to the Patients who were given the Medication represented by Second Level Child Code or Medications represented by any of the children of the Second Level Child Code.</p>
+</li>
+<li>
+<p>Select any number of rows on the left and copy them to the right hand side selection list using the <span class="bold">&gt;</span> button.</p>
+</li>
+<li>
+<p>Click <span class="bold">Submit</span>. All the selected codes are used for defining query criteria in the Cohort Query.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect4" --></div>
+<!-- class="sect3" -->
+<a id="BABJCGCB"></a>
+<div id="TCEUG428" class="sect3">
+<h4 class="sect3">Patient History</h4>
+<div id="TCEUG429" class="figure">
+<p class="titleinfigure"><a id="sthref70"></a>Figure 3-10 Patient History</p>
+<img width="353" height="567" src="img/trc13.gif" alt="Description of Figure 3-10 follows" /><br />
+<a id="sthref71" href="img_text/trc13.htm">Description of ''Figure 3-10 Patient History''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p>Click the magnifying glass icon for <span class="bold">Patient History</span> to search either by Medication Code or Medication Name.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+In the <span class="bold">Patient History</span> dialog, the History Type by default uses the Equals operator and lists the first 100 history types only. If there are more than 100 history type values in your data, you can search using other operators like "Starts with," "Contains," and so on.</div>
+<div id="TCEUG430" class="tblformal">
+<p class="titleintable"><a id="sthref72"></a><a id="sthref73"></a>Table 3-8 Patient History Screen Fields</p>
+<table class="cellalignment54" title="Patient History Screen Fields" summary="Patient History" dir="ltr">
+<thead>
+<tr class="cellalignment41">
+<th class="cellalignment51" id="r1c1-t10">Prompt Heading</th>
+<th class="cellalignment51" id="r1c2-t10">Definition</th>
+<th class="cellalignment51" id="r1c3-t10">Sample Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r2c1-t10" headers="r1c1-t10">
+<p>Patient History</p>
+</td>
+<td class="cellalignment47" headers="r2c1-t10 r1c2-t10">
+<p>A coded representation of the Patient History</p>
+</td>
+<td class="cellalignment47" headers="r2c1-t10 r1c3-t10">
+<p>Smoking, Obesity</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r3c1-t10" headers="r1c1-t10">
+<p>Patient History Start Date</p>
+</td>
+<td class="cellalignment47" headers="r3c1-t10 r1c2-t10">
+<p>Date when this history was known to be active</p>
+</td>
+<td class="cellalignment47" headers="r3c1-t10 r1c3-t10">
+<p>-</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r4c1-t10" headers="r1c1-t10">
+<p>Patient History End Date</p>
+</td>
+<td class="cellalignment47" headers="r4c1-t10 r1c2-t10">
+<p>Date when this history is known to no longer be active</p>
+</td>
+<td class="cellalignment47" headers="r4c1-t10 r1c3-t10">
+<p>-</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r5c1-t10" headers="r1c1-t10">
+<p>Amount</p>
+</td>
+<td class="cellalignment47" headers="r5c1-t10 r1c2-t10">
+<p>Numerical value</p>
+</td>
+<td class="cellalignment47" headers="r5c1-t10 r1c3-t10">
+<p>For example, 1</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r6c1-t10" headers="r1c1-t10">
+<p>Amount Units</p>
+</td>
+<td class="cellalignment47" headers="r6c1-t10 r1c2-t10">
+<p>Unit of Measure</p>
+</td>
+<td class="cellalignment47" headers="r6c1-t10 r1c3-t10">
+<p>For example, mmHg</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r7c1-t10" headers="r1c1-t10">
+<p>Frequency</p>
+</td>
+<td class="cellalignment47" headers="r7c1-t10 r1c2-t10">
+<p>Numerical Value</p>
+</td>
+<td class="cellalignment47" headers="r7c1-t10 r1c3-t10">
+<p>For example, 12</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r8c1-t10" headers="r1c1-t10">
+<p>Frequency Units</p>
+</td>
+<td class="cellalignment47" headers="r8c1-t10 r1c2-t10">
+<p>Unit of Measure</p>
+</td>
+<td class="cellalignment47" headers="r8c1-t10 r1c3-t10">
+<p>For example, TPDAY (times per day)</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r9c1-t10" headers="r1c1-t10">
+<p>Text Value or Code</p>
+</td>
+<td class="cellalignment47" headers="r9c1-t10 r1c2-t10">
+<p>Value of history which is represented by text or coded.</p>
+</td>
+<td class="cellalignment47" headers="r9c1-t10 r1c3-t10">
+<p>Yes, No, Frequently, Rarely</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r10c1-t10" headers="r1c1-t10">
+<p>History Applicable To</p>
+</td>
+<td class="cellalignment47" headers="r10c1-t10 r1c2-t10">
+<p>For Familial History, this will contain type of blood relative, which may have a history value</p>
+</td>
+<td class="cellalignment47" headers="r10c1-t10 r1c3-t10">
+<p>Father, Mother, Paternal grandmother, Paternal Grandfather</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" --></div>
+<!-- class="sect3" -->
+<a id="BABDCDAF"></a>
+<div id="TCEUG431" class="sect3">
+<h4 class="sect3">Test or Observation</h4>
+<div id="TCEUG432" class="figure">
+<p class="titleinfigure"><a id="sthref74"></a>Figure 3-11 Test or Observation</p>
+<img width="366" height="492" src="img/trc14.gif" alt="Description of Figure 3-11 follows" /><br />
+<a id="sthref75" href="img_text/trc14.htm">Description of ''Figure 3-11 Test or Observation''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p>Click the magnifying glass for <span class="bold">Test or Observation</span> to search either by Test or Observation Code, Test or Observation Name. The units will be filtered based on the selected Test or Observation.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+In the <span class="bold">Search Test or Observation</span> dialog, the Test or Observation Type by default uses the Equals operator and lists the first 100 types only. If there are more than 100 Test or Observation type values in your data, you can search using other operators like "Starts with," "Contains," and so on.</div>
+<div id="TCEUG433" class="tblformal">
+<p class="titleintable"><a id="sthref76"></a><a id="sthref77"></a>Table 3-9 Test or Observation Screen Fields</p>
+<table class="cellalignment54" title="Test or Observation Screen Fields" summary="Diagnostic Test" dir="ltr">
+<thead>
+<tr class="cellalignment41">
+<th class="cellalignment51" id="r1c1-t12">Prompt Heading</th>
+<th class="cellalignment51" id="r1c2-t12">Definition</th>
+<th class="cellalignment51" id="r1c3-t12">Sample Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r2c1-t12" headers="r1c1-t12">
+<p>Test or Observation</p>
+</td>
+<td class="cellalignment47" headers="r2c1-t12 r1c2-t12">
+<p>Any kind of medical intervention performed to aid in the diagnosis or detection of disease</p>
+</td>
+<td class="cellalignment47" headers="r2c1-t12 r1c3-t12">
+<p>Blood Pressure</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r3c1-t12" headers="r1c1-t12">
+<p>Test Date</p>
+</td>
+<td class="cellalignment47" headers="r3c1-t12 r1c2-t12">
+<p>The date the test was performed</p>
+</td>
+<td class="cellalignment47" headers="r3c1-t12 r1c3-t12">
+<p>May-12-2012</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r4c1-t12" headers="r1c1-t12">
+<p>Result (numeric) Search</p>
+</td>
+<td class="cellalignment47" headers="r4c1-t12 r1c2-t12">
+<p>The Test result</p>
+</td>
+<td class="cellalignment47" headers="r4c1-t12 r1c3-t12">
+<p>140, 90</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r5c1-t12" headers="r1c1-t12">
+<p>Operator</p>
+</td>
+<td class="cellalignment47" headers="r5c1-t12 r1c2-t12">
+<p>This search mode enables searching numeric results with UoMs based on reference range or absolute values.</p>
+</td>
+<td class="cellalignment47" headers="r5c1-t12 r1c3-t12">&nbsp;</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r6c1-t12" headers="r1c1-t12">
+<p>Units</p>
+</td>
+<td class="cellalignment47" headers="r6c1-t12 r1c2-t12">
+<p>The Test units of measure</p>
+</td>
+<td class="cellalignment47" headers="r6c1-t12 r1c3-t12">
+<p>mmHg</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r7c1-t12" headers="r1c1-t12">
+<p>Result String (text)</p>
+</td>
+<td class="cellalignment47" headers="r7c1-t12 r1c2-t12">
+<p>Textual Test result, also Notes or remarks for the Test</p>
+</td>
+<td class="cellalignment47" headers="r7c1-t12 r1c3-t12">
+<p>Positive/Negative</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" --></div>
+<!-- class="sect3" -->
+<a id="BABIBJGI"></a>
+<div id="TCEUG434" class="sect3">
+<h4 class="sect3">Specimen</h4>
+<div id="TCEUG435" class="figure">
+<p class="titleinfigure"><a id="sthref78"></a>Figure 3-12 Specimen</p>
+<img width="328" height="496" src="img/trc15.gif" alt="Description of Figure 3-12 follows" /><br />
+<a id="sthref79" href="img_text/trc15.htm">Description of ''Figure 3-12 Specimen''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The three fields of and <span class="bold">Specimen Type</span>, <span class="bold">Specimen Number</span>, <span class="bold">Specimen Vendor</span> are used in combination to search for particular data. Click the magnifying glass icon next to each field, to specify the appropriate criteria.</div>
+<div id="TCEUG436" class="tblformal">
+<p class="titleintable"><a id="sthref80"></a><a id="sthref81"></a>Table 3-10 Specimen Screen Fields</p>
+<table class="cellalignment54" title="Specimen Screen Fields" summary="Specimen Screen" dir="ltr">
+<thead>
+<tr class="cellalignment41">
+<th class="cellalignment51" id="r1c1-t14">Prompt Heading</th>
+<th class="cellalignment51" id="r1c2-t14">Definition</th>
+<th class="cellalignment51" id="r1c3-t14">Sample Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r2c1-t14" headers="r1c1-t14">
+<p>Specimen Type Name</p>
+</td>
+<td class="cellalignment47" headers="r2c1-t14 r1c2-t14">
+<p>A coded description for the type of Specimen.</p>
+</td>
+<td class="cellalignment47" headers="r2c1-t14 r1c3-t14">
+<p>Blood, Urine, Sputum</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r3c1-t14" headers="r1c1-t14">
+<p>Specimen Number</p>
+</td>
+<td class="cellalignment47" headers="r3c1-t14 r1c2-t14">
+<p>A unique identifier for a specimen.</p>
+</td>
+<td class="cellalignment47" headers="r3c1-t14 r1c3-t14">
+<p>-</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r4c1-t14" headers="r1c1-t14">
+<p>Specimen Vendor Number</p>
+</td>
+<td class="cellalignment47" headers="r4c1-t14 r1c2-t14">
+<p>A unique identifier for a source of the specimen, namely lab the specimen was analyzed.</p>
+</td>
+<td class="cellalignment47" headers="r4c1-t14 r1c3-t14">
+<p>Harvard-CancerInstitute01, MIT-Whitehead-Lodish5</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r5c1-t14" headers="r1c1-t14">
+<p>Anatomical Site</p>
+</td>
+<td class="cellalignment47" headers="r5c1-t14 r1c2-t14">
+<p>The target site of the intervention.</p>
+</td>
+<td class="cellalignment47" headers="r5c1-t14 r1c3-t14">
+<p>-</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r6c1-t14" headers="r1c1-t14">
+<p>Specimen Collection Date</p>
+</td>
+<td class="cellalignment47" headers="r6c1-t14 r1c2-t14">
+<p>Date the specimen was collected.</p>
+</td>
+<td class="cellalignment47" headers="r6c1-t14 r1c3-t14">
+<p>-</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r7c1-t14" headers="r1c1-t14">
+<p>Specimen Amount</p>
+</td>
+<td class="cellalignment47" headers="r7c1-t14 r1c2-t14">
+<p>The amount of the specimen collected.</p>
+</td>
+<td class="cellalignment47" headers="r7c1-t14 r1c3-t14">
+<p>-</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r8c1-t14" headers="r1c1-t14">
+<p>Units</p>
+</td>
+<td class="cellalignment47" headers="r8c1-t14 r1c2-t14">
+<p>The units of measure for the specimen collected.</p>
+</td>
+<td class="cellalignment47" headers="r8c1-t14 r1c3-t14">
+<p>Mg/dL, millimoles/liter</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" --></div>
+<!-- class="sect3" -->
+<a id="BABJGDFD"></a>
+<div id="TCEUG437" class="sect3">
+<h4 class="sect3">Study</h4>
+<div id="TCEUG438" class="figure">
+<p class="titleinfigure"><a id="sthref82"></a>Figure 3-13 Study Screen</p>
+<img width="364" height="312" src="img/trc16.gif" alt="Description of Figure 3-13 follows" /><br />
+<a id="sthref83" href="img_text/trc16.htm">Description of ''Figure 3-13 Study Screen''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p>Click the magnifying glass icon for <span class="bold">Study,</span> to search either by Study Code or Study Name.</p>
+<div id="TCEUG439" class="tblformal">
+<p class="titleintable"><a id="sthref84"></a><a id="sthref85"></a>Table 3-11 Study Screen Fields</p>
+<table class="cellalignment54" title="Study Screen Fields" summary="Study Screen" dir="ltr">
+<thead>
+<tr class="cellalignment41">
+<th class="cellalignment51" id="r1c1-t15">Prompt Heading</th>
+<th class="cellalignment51" id="r1c2-t15">Definition</th>
+<th class="cellalignment51" id="r1c3-t15">Sample Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r2c1-t15" headers="r1c1-t15">
+<p>Study (Name or Identifier)</p>
+</td>
+<td class="cellalignment47" headers="r2c1-t15 r1c2-t15">
+<p>A reference to a particular study.</p>
+</td>
+<td class="cellalignment47" headers="r2c1-t15 r1c3-t15">
+<p>NOT-A-STUDY (any genomic data that is not explicitly tied to study would be categorized there), Glioblastoma Study</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r3c1-t15" headers="r1c1-t15">
+<p>Study Start Date</p>
+</td>
+<td class="cellalignment47" headers="r3c1-t15 r1c2-t15">
+<p>The start date for the study.</p>
+</td>
+<td class="cellalignment47" headers="r3c1-t15 r1c3-t15">
+<p>-</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r4c1-t15" headers="r1c1-t15">
+<p>Study End Date</p>
+</td>
+<td class="cellalignment47" headers="r4c1-t15 r1c2-t15">
+<p>The end date for the study.</p>
+</td>
+<td class="cellalignment47" headers="r4c1-t15 r1c3-t15">
+<p>-</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" --></div>
+<!-- class="sect3" -->
+<a id="BABBIABE"></a>
+<div id="TCEUG440" class="sect3">
+<h4 class="sect3">Relative Time Events</h4>
+<p>Frequently, the events that drive cohort or patient set searches are relevant to finding patients that may have certain event dependencies such as being diagnosed with a disease after taking a medication.</p>
+<p>You can search for such patients based on relative time event dependencies. You can set this criteria and search for patients who have a history of one clinical (or genomic change) event relative to another.</p>
+<p>In other words, you can specify a search for patients that took a certain medication or a set of medications within 30 days before being diagnosed with a specific disease. You can also search for patients who had a procedure performed on them two months after starting a medication.</p>
+<div id="TCEUG441" class="figure">
+<p class="titleinfigure"><a id="sthref86"></a>Figure 3-14 Relative Time Events</p>
+<img width="472" height="936" src="img/trc18.gif" alt="Description of Figure 3-14 follows" /><br />
+<a id="sthref87" href="img_text/trc18.htm">Description of ''Figure 3-14 Relative Time Events''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p>To select relative time events:</p>
+<ol>
+<li>
+<p>Specify the event data to start your event.</p>
+</li>
+<li>
+<p>Specify the relative time condition. This is how the events in Step 1 and Step 3 relate to each other.</p>
+</li>
+<li>
+<p>Specify the related event to associate with the event in Step 1.</p>
+</li>
+</ol>
+<p>The search criteria is interpreted - Search for patients that experienced Event X at any time while, certain amount of time before or after Event Y. The idea is that X is the original event, Y is the associated event, and the time frame describes the time relationship between the two events, for the given patient.</p>
+<p>The events listed for selection in Step 1 or Step 3 are present in Clinical or Genomics Data categories.</p>
+<p>However, it is important to explain what the Relative time conditions are in Step 2 and how their meaning translates into SQL:</p>
+<ul>
+<li>
+<p><span class="italic">at any time while</span> - the meaning of this relative time condition is to find any events that overlap with each other in terms of their occurrence. For example, if we have two distinct events with start and end dates, as long as at some point in time both events were true, this condition is satisfied.</p>
+<p>Example 1:</p>
+<p>Event in Step 1 - Started on May 1, 2010 - ended on June 29, 2011</p>
+<p>Event in Step 3 - Started on June 10, 2011 - till present</p>
+<p>The two events have overlap between June 10-29, 2011 thus the condition is satisfied.</p>
+<p>Example 2:</p>
+<p>Event in Step 1 - Started on Dec 1, 2010 - ended on Dec 12, 2011</p>
+<p>Event in Step 3 - was performed on August 3, 2011</p>
+<p>The two events have overlap on August 3, 2011 thus the condition is satisfied.</p>
+<p>Example 3:</p>
+<p>Event in Step 1 - Started on May 1, 2010 - ended on June 29, 2011</p>
+<p>Event in Step 3 - Started on June 10, 2009 - till present</p>
+<p>The two events have overlap between May 1, 2010 and June 29, 2011 thus the condition is satisfied.</p>
+<p>The dates used for time comparing each event type are as follows:</p>
+<ul>
+<li>
+<p>Diagnosis: Reported Date - End Date (if null, use present date)</p>
+</li>
+<li>
+<p>Procedure: Start Date - End Date (if null, use present date)</p>
+</li>
+<li>
+<p>Medication: Start Date - End Date (if null, use present date)</p>
+</li>
+<li>
+<p>Test or Observation: Test Date (single day event only)</p>
+</li>
+<li>
+<p>Gene Variant: Specimen Collection Date for end date use present date</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="italic">(more than / less than / exactly) [ ] (days / weeks / months / years) (before / after)</span> - the meaning of this relative time condition is to find any events that have start or occurrence dates that relate to each other with the time period specified by the condition.</p>
+<p>Examples:</p>
+<p>Start date of Event in Step 1 is more than 5 weeks before Start date of Event in Step 3</p>
+<p>Occurrence, for example, Test Date of Test or Observation in Step 1 is less than 1 month before Start Date of Medication in Step 3</p>
+<p>Gene Variant Specimen Collection Date in Step 1 is exactly 1 day after Procedure Start Date in Step 3</p>
+<p>The dates used for time comparing each event type are as follows:</p>
+<ul>
+<li>
+<p>Diagnosis: Reported Date</p>
+</li>
+<li>
+<p>Procedure: Start Date</p>
+</li>
+<li>
+<p>Medication: Start Date</p>
+</li>
+<li>
+<p>Test or Observation: Test Date</p>
+</li>
+<li>
+<p>Gene Variant: Specimen Collection Date</p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BABEBDDH"></a>
+<div id="TCEUG442" class="sect2">
+<h3 class="sect2">Genomic Data</h3>
+<a id="BABBIDCE"></a>
+<div id="TCEUG443" class="sect3">
+<h4 class="sect3">Microarray Expression</h4>
+<p>Microarray expression is one of the growing set of genomic criteria that can be used to stratify patients. The genomic data driving this filter comes from the Oracle Healthcare Omics (OHO, formerly known as ODB) model, specifically the W_EHA_RSLT_GENE_EXPR table and related tables. Gene expression data is associated with patients through the specimen used for genomic study analyses collected during study participation or other genomic testing.</p>
+<p>The upper section of the criteria gives you the choice to specify Specimen Type and Anatomical site to further filter the results.</p>
+<p>In the popup for Gene Expression, you are given two options (Array data types to choose from). For each option, you must specify the criteria when selecting patients based on their gene expression data.</p>
+<ul>
+<li>
+<p><span class="bold">One-channel</span> &ndash; Single channel data can be filtered based on the following data fields:</p>
+<ul>
+<li>
+<p>On Intensity; as a cutoff based on aggregates or on values, and across an experiment or multiple ones.</p>
+</li>
+<li>
+<p>P-value; as a cutoff on values.</p>
+</li>
+<li>
+<p>Call; on any of the three call types.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="bold">Two-channel</span> &ndash; Here data can be filtered on the following data field:</p>
+<ul>
+<li>
+<p>Log2Ratio &ndash; as a cutoff on values</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>In <span class="bold">Expression for Genes From</span>, select at least one unique gene from any of the three specified sources:</p>
+<ol>
+<li>
+<p>Ad-hoc list</p>
+</li>
+<li>
+<p>Pathway</p>
+</li>
+<li>
+<p>Gene Set</p>
+</li>
+</ol>
+<div id="TCEUG444" class="figure">
+<p class="titleinfigure"><a id="sthref88"></a>Figure 3-15 Microarray Expression</p>
+<img width="762" height="828" src="img/trc17.gif" alt="Description of Figure 3-15 follows" /><br />
+<a id="sthref89" href="img_text/trc17.htm">Description of ''Figure 3-15 Microarray Expression''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p>Click the magnifying glass icon for <span class="bold">Specimen Type</span>, to search either by Specimen Name or Specimen Code. This also applies to the other search criteria. Criteria identified with * are required.</p>
+<div id="TCEUG446" class="tblformal">
+<p class="titleintable"><a id="sthref90"></a><a id="sthref91"></a>Table 3-12 Microarray Expression Screen Fields</p>
+<table class="cellalignment54" title="Microarray Expression Screen Fields" summary="Gene Expression Screen" dir="ltr">
+<thead>
+<tr class="cellalignment41">
+<th class="cellalignment51" id="r1c1-t16">Prompt Heading</th>
+<th class="cellalignment51" id="r1c2-t16">Definition</th>
+<th class="cellalignment51" id="r1c3-t16">Sample Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r2c1-t16" headers="r1c1-t16">
+<p>Specimen Type</p>
+</td>
+<td class="cellalignment47" headers="r2c1-t16 r1c2-t16">
+<p>The specimen type description that identifies the specimen used for genomic tests.</p>
+</td>
+<td class="cellalignment47" headers="r2c1-t16 r1c3-t16">
+<p>Normal sample, tumor sample.</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r3c1-t16" headers="r1c1-t16">
+<p>Anatomical Site</p>
+</td>
+<td class="cellalignment47" headers="r3c1-t16 r1c2-t16">
+<p>Anatomical site name or code corresponding to the specimen collected.</p>
+</td>
+<td class="cellalignment47" headers="r3c1-t16 r1c3-t16">
+<p>Left lung, kidney, small intestine</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r4c1-t16" headers="r1c1-t16">
+<p>Intensity</p>
+</td>
+<td class="cellalignment47" headers="r4c1-t16 r1c2-t16">
+<p>This and the following two fields are specific to Single Channel data. This field is a Gene expression value range specification. Data driving this selection is in the W_EHA_RSLT_GENE_EXP table in OHO and is generally expected to be normalized now to take full advantage of this criteria selection. Additionally, the data values should all be positive. The criteria conditions allow you to narrow down patients based on up-regulated gene expression (using <span class="italic">greater than 1.0 times mean</span> condition either across columns (<span class="italic">same hybridization</span>) or rows (<span class="italic">single result file</span>) of the data in the particular experiment.</p>
+</td>
+<td class="cellalignment47" headers="r4c1-t16 r1c3-t16">
+<p>Down regulated gene in hybridization example - Intensity is less than 2.0 times mean in the gene expression within a particular hybridization.</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r5c1-t16" headers="r1c1-t16">
+<p>P-value</p>
+</td>
+<td class="cellalignment47" headers="r5c1-t16 r1c2-t16">
+<p>Significance value associated with the specific experiment, optional.</p>
+</td>
+<td class="cellalignment47" headers="r5c1-t16 r1c3-t16">
+<p>P-value &lt; 0.00001</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r6c1-t16" headers="r1c1-t16">
+<p>Call</p>
+</td>
+<td class="cellalignment47" headers="r6c1-t16 r1c2-t16">
+<p>Call made on the particular value, if present. All are taken unless specified. Optional.</p>
+</td>
+<td class="cellalignment47" headers="r6c1-t16 r1c3-t16">
+<p>P - Present, A - Absent, M - Marginal</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r7c1-t16" headers="r1c1-t16">
+<p>Log2Ratio</p>
+</td>
+<td class="cellalignment47" headers="r7c1-t16 r1c2-t16">
+<p>Specific to dual channel differential gene expression relating the difference between, for example, control sample and the tested sample intensity. Data for this selection in found in the <span class="bold">W_EHA_RSLT_2CHANNEL_GXP</span> table.</p>
+</td>
+<td class="cellalignment47" headers="r7c1-t16 r1c3-t16">
+<p>Float type integer representing a log base 2integer value of a fraction.</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r8c1-t16" headers="r1c1-t16">
+<p>Expression for genes from*</p>
+</td>
+<td class="cellalignment47" headers="r8c1-t16 r1c2-t16">
+<p>Selection of genes that are to be used for patient stratification based on the expression. At least one of the below criteria must be specified.</p>
+</td>
+<td class="cellalignment47" headers="r8c1-t16 r1c3-t16">
+<p>N/A</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r9c1-t16" headers="r1c1-t16">
+<p>Ad-hoc List: Gene</p>
+</td>
+<td class="cellalignment47" headers="r9c1-t16 r1c2-t16">
+<p>List of one or more genes.</p>
+</td>
+<td class="cellalignment47" headers="r9c1-t16 r1c3-t16">
+<p>-</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r10c1-t16" headers="r1c1-t16">
+<p>Pathway</p>
+</td>
+<td class="cellalignment47" headers="r10c1-t16 r1c2-t16">
+<p>Reference to a pathway stored on the reference side of the Oracle Healthcare Omics (OHO, formerly known as ODB) model. This in turn corresponds to a list of genes that are to be used to compare their Intensity values.</p>
+</td>
+<td class="cellalignment47" headers="r10c1-t16 r1c3-t16">
+<p>-</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r11c1-t16" headers="r1c1-t16">
+<p>Gene Set</p>
+</td>
+<td class="cellalignment47" headers="r11c1-t16 r1c2-t16">
+<p>User-defined collection of genes that you can reference across any UI instead of having to build ad-hoc lists of genes each time.</p>
+</td>
+<td class="cellalignment47" headers="r11c1-t16 r1c3-t16">
+<p>MyGeneSet1, GlioblastomaSmithLabGenes</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r12c1-t16" headers="r1c1-t16">
+<p>Assembly Version</p>
+</td>
+<td class="cellalignment47" headers="r12c1-t16 r1c2-t16">
+<p>Represents GRCh assembly version. Default selection is last loaded version.</p>
+</td>
+<td class="cellalignment47" headers="r12c1-t16 r1c3-t16">
+<p>GRCh38 or GRCh37</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r13c1-t16" headers="r1c1-t16">
+<p>DNA Reference Version</p>
+</td>
+<td class="cellalignment47" headers="r13c1-t16 r1c2-t16">
+<p>Represents the Ensembl reference version for getting gene annotations. This is related to 'Assembly Version' and by default it shows the preferred DNA Reference Version which is set in OHO.</p>
+</td>
+<td class="cellalignment47" headers="r13c1-t16 r1c3-t16">
+<p>Ensembl release 70</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" -->
+<p>For Metadata Filter details for Microarray Expression, see <a href="#BABBGFHB">Metadata Filters</a>.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BABBCJII"></a>
+<div id="TCEUG447" class="sect3">
+<h4 class="sect3">Sequence Variants</h4>
+<p>The Variants Criteria Selection interface falls under the category of Genomic criteria and enable the user to query for patients based on results present in the <span class="bold">W_EHA_RSLT_SEQUENCING</span> and related tables in the Oracle Healthcare Omics (OHO, formerly known as ODB) model.</p>
+<p>In the Sequence Variant screen, you have the option to select Specimen Type and Anatomical site for associating the selected variant criteria in this screen. Currently, the following 5 main options are available for searching:</p>
+<ul>
+<li>
+<p>having Variants in selected Genes: this enables you to search variants in specific genes.</p>
+</li>
+<li>
+<p>having selected Genomic Variants : this enables you to search for specific known variants by their Cosmic or dbSNP identifiers.</p>
+</li>
+<li>
+<p>having Variants within specified Genomic Region: this enables you to search variants in specified genomic location like chr1:19094593-29302393 or whole of chr1.</p>
+</li>
+<li>
+<p>having Zygosity: this enables you to search variants with specific zygosity.</p>
+</li>
+<li>
+<p>having Genotypes: this enables you to search for specific genotypes like AT, or AA, or wildtype (same as reference), and so on.</p>
+</li>
+</ul>
+<p>Additionally there are other parameter, attributes and metrics associated with variants that you can use for further filtering on specific variants. These options are:</p>
+<ul>
+<li>
+<p>Specifying variants by their attributes.</p>
+</li>
+<li>
+<p>Specifying variants by their non-synonymous substitution scores</p>
+</li>
+<li>
+<p>Specifying quality metrics filters depending on the sequencing file type like VCF, MAF and CGI masterVar.</p>
+</li>
+</ul>
+<p>The filtering options have been categorized into 2 steps. Step 1 as shown in <a href="#BABFDCDG">Figure 3-16</a> has all mandatory filter options for creating a query. Step 2 shown in <a href="#BABCFHIC">Figure 3-17</a> has the optional filters.</p>
+<div id="TCEUG448" class="figure">
+<p class="titleinfigure"><a id="BABFDCDG"></a>Figure 3-16 Mandatory Filters</p>
+<img width="379" height="648" src="img/trc19.gif" alt="Description of Figure 3-16 follows" /><br />
+<a id="sthref92" href="img_text/trc19.htm">Description of ''Figure 3-16 Mandatory Filters''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<div id="TCEUG699" class="figure">
+<p class="titleinfigure"><a id="BABCFHIC"></a>Figure 3-17 Optional Filters</p>
+<img width="579" height="521" src="img/trc106.gif" alt="Description of Figure 3-17 follows" /><br />
+<a id="sthref93" href="img_text/trc106.htm">Description of ''Figure 3-17 Optional Filters''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<div id="TCEUG449" class="tblformal">
+<p class="titleintable"><a id="sthref94"></a><a id="sthref95"></a>Table 3-13 Variants Screen Fields</p>
+<table class="cellalignment54" title="Variants Screen Fields" summary="Variants screen" dir="ltr">
+<thead>
+<tr class="cellalignment41">
+<th class="cellalignment51" id="r1c1-t17">Field Name</th>
+<th class="cellalignment51" id="r1c2-t17">Definition</th>
+<th class="cellalignment51" id="r1c3-t17">Sample Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r2c1-t17" headers="r1c1-t17">
+<p>Specimen Type, Anatomical Site</p>
+</td>
+<td class="cellalignment47" headers="r2c1-t17 r1c2-t17">
+<p>For more information on Microarray Expression, refer to description under <a href="#BABBIDCE">Microarray Expression</a> section.</p>
+</td>
+<td class="cellalignment47" headers="r2c1-t17 r1c3-t17">
+<p>As in Microarray Expression section.</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r3c1-t17" headers="r1c1-t17">
+<p>Having Variants in selected Genes</p>
+</td>
+<td class="cellalignment47" headers="r3c1-t17 r1c2-t17">
+<p>Variant mode selection - being able to specify variants in specified genes</p>
+</td>
+<td class="cellalignment47" headers="r3c1-t17 r1c3-t17">
+<p>N/A</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r4c1-t17" headers="r1c1-t17">
+<p>Having selected Genomic Variants</p>
+</td>
+<td class="cellalignment47" headers="r4c1-t17 r1c2-t17">
+<p>Variant mode selection - being able to specify known variants by their identifier. At least one mode of variant specification must be given.</p>
+</td>
+<td class="cellalignment47" headers="r4c1-t17 r1c3-t17">
+<p>N/A</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r5c1-t17" headers="r1c1-t17">
+<p>having Variants within Specified Genomic Region</p>
+</td>
+<td class="cellalignment47" headers="r5c1-t17 r1c2-t17">
+<p>Variant mode selection - being able to specify variants in a specific genomic location like chr1:1234324-3434333, chr7:1000, chr3 or chr2:1000+200</p>
+</td>
+<td class="cellalignment47" headers="r5c1-t17 r1c3-t17">
+<p>N/A</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r6c1-t17" headers="r1c1-t17">
+<p>Genomic Variant ID</p>
+</td>
+<td class="cellalignment47" headers="r6c1-t17 r1c2-t17">
+<p>Specify known gene variant reference identifiers such as dbSNP or Cosmic. Allows for selecting multiple values.</p>
+<p>Assembly Version helps specify variants in a selected assembly version. Enables multiple selection, except for 'having Genotype' option where only single selection is allowed.</p>
+</td>
+<td class="cellalignment47" headers="r6c1-t17 r1c3-t17">
+<p>rs56289060, 905944</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r7c1-t17" headers="r1c1-t17">
+<p>DNA Reference Assembly Version</p>
+</td>
+<td class="cellalignment47" headers="r7c1-t17 r1c2-t17">
+<p>Helps specify variants in a selected reference assembly version. Allows multiple selection, except for <span class="italic">having Genotype</span> option where only single selection is allowed.</p>
+</td>
+<td class="cellalignment47" headers="r7c1-t17 r1c3-t17">
+<p>GRCh37</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r8c1-t17" headers="r1c1-t17">
+<p>DNA Reference Version</p>
+</td>
+<td class="cellalignment47" headers="r8c1-t17 r1c2-t17">
+<p>Represents the Ensembl reference version for getting gene annotations. This is related to 'Assembly Version' and by default displays the preferred DNA Reference Version, which is set in Oracle Healthcare Omics (OHO, formerly known as ODB).</p>
+</td>
+<td class="cellalignment47" headers="r8c1-t17 r1c3-t17">
+<p>Ensembl release 70</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r9c1-t17" headers="r1c1-t17">
+<p>At Genomic Position</p>
+</td>
+<td class="cellalignment47" headers="r9c1-t17 r1c2-t17">
+<p>Helps specify a genomic region in which variants has to be searched.</p>
+</td>
+<td class="cellalignment47" headers="r9c1-t17 r1c3-t17">
+<p>chr7, chr7:1000, chr3:1000-2000, chr2:1000+200</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r10c1-t17" headers="r1c1-t17">
+<p>Genotype</p>
+</td>
+<td class="cellalignment47" headers="r10c1-t17 r1c2-t17">
+<p>List available genotype values for the selected genomic position or genomic variant based on the position. Also displays wildtype base (same as reference base). User can select a combination of two genotypes to search or just one genotype and search for patients with these selected genotypes.</p>
+</td>
+<td class="cellalignment47" headers="r10c1-t17 r1c3-t17">
+<p>N/A</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r11c1-t17" headers="r1c1-t17">
+<p>Additional Variant Information (Optional) are used in the context of either of the radio buttons selection above</p>
+</td>
+<td class="cellalignment47" headers="r11c1-t17 r1c2-t17">
+<p>Additional criteria used to filter down variants based on variant type and variant impact features.</p>
+</td>
+<td class="cellalignment47" headers="r11c1-t17 r1c3-t17">
+<p>N/A</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r12c1-t17" headers="r1c1-t17">
+<p>Variant Type and corresponding Variant Impact</p>
+</td>
+<td class="cellalignment47" headers="r12c1-t17 r1c2-t17">
+<p>You can select any of the variant types supported along with additional variant metadata such as each variant type's impact on the resulting protein.</p>
+<p><span class="bold">Note:</span> Not all Variant Impact annotations apply to each Variant Type.</p>
+</td>
+<td class="cellalignment47" headers="r12c1-t17 r1c3-t17">
+<p>Variant Type: Substitution, Insertion, Deletion, Indel, Complex</p>
+<p>Variant Impact: Synonymous, Missense, Nonsense, Unknown,</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r13c1-t17" headers="r1c1-t17">
+<p>Variant Status</p>
+</td>
+<td class="cellalignment47" headers="r13c1-t17 r1c2-t17">
+<p>Specifies which variant types to consider - whether the variant should be known or novel. Default considers all variants.</p>
+</td>
+<td class="cellalignment47" headers="r13c1-t17 r1c3-t17">
+<p>Known, Novel</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r14c1-t17" headers="r1c1-t17">
+<p>Strand</p>
+</td>
+<td class="cellalignment47" headers="r14c1-t17 r1c2-t17">
+<p>Gene transcription direction attribute. By default, all directions of transcription are included.</p>
+</td>
+<td class="cellalignment47" headers="r14c1-t17 r1c3-t17">
+<p>+ means forward, - means reverse</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r15c1-t17" headers="r1c1-t17">
+<p>Ad-hoc List: Gene; Pathway; Gene Set</p>
+</td>
+<td class="cellalignment47" headers="r15c1-t17 r1c2-t17">
+<p>For more information on Microarray Expression, refer to description under <a href="#BABBIDCE">Microarray Expression</a> section.</p>
+</td>
+<td class="cellalignment47" headers="r15c1-t17 r1c3-t17">
+<p>As in Microarray Expression section.</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r16c1-t17" headers="r1c1-t17">
+<p>At Genomic Position</p>
+</td>
+<td class="cellalignment47" headers="r16c1-t17 r1c2-t17">
+<p>Specify genomic location for the variants to occur in, the format should be chr#:from-to or chr# if entire chromosome to be used.</p>
+</td>
+<td class="cellalignment47" headers="r16c1-t17 r1c3-t17">
+<p>chrX:13000-120000, chr7</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r17c1-t17" headers="r1c1-t17">
+<p>Non-synonymous Substitution Scores</p>
+</td>
+<td class="cellalignment47" headers="r17c1-t17 r1c2-t17">
+<p>Data for this section is loaded into the reference side of the OHO model from Ensembl based on either PolyPhen algorithm or SIFT algorithm. The prediction value can be specified numerically or alternatively can be specified using PolyPhen or SIFT specific annotation.</p>
+<p><span class="bold">Note</span>: SIFT or PolyPhen predictions are only available for Known variants</p>
+</td>
+<td class="cellalignment47" headers="r17c1-t17 r1c3-t17">
+<p>With PolyPhen, prediction between 0 and 1 or labeled as benign, Probably Damaging, possibly damaging and unknown</p>
+<p>With SIFT, prediction between 0 and 1 or labeled as Deleterious and tolerated</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r18c1-t17" headers="r1c1-t17">
+<p>Variant Parameters Depending on Sequencing File Type</p>
+</td>
+<td class="cellalignment47" headers="r18c1-t17 r1c2-t17">
+<p>User can select to specify more detailed filtering criteria based on data coming from 3 different sequencing file formats such as VCF, MAF, CGI masterVar. As each input file formats uses different metadata to describe stored entities, depending on the sequencing input format selection, the user can elect to specify:</p>
+<p>VCF: Variant Call Format, Format.GQ range - user can specify upper or lower numeric values for this parameter</p>
+<p>MAF: Mutation Annotation Format, Score - user can specify upper or lower numeric values for this parameter</p>
+<p>Somatic Status</p>
+<p>Somatic Score</p>
+<p>Allele Read Count</p>
+<p>Reference Read Count</p>
+<p>Total Read Count</p>
+<p>RMS Base Quality</p>
+<p>RMS Mapping Quality</p>
+<p>AD/DP Ratio</p>
+<p>CGI masterVar: Complete Genomics masterVariation format. The available fields to search by are</p>
+<ul>
+<li>
+<p>Allele Zygosity</p>
+</li>
+<li>
+<p>Score VAF</p>
+</li>
+<li>
+<p>Score EAF</p>
+</li>
+<li>
+<p>Allele read count</p>
+</li>
+<li>
+<p>Reference read count</p>
+</li>
+</ul>
+</td>
+<td class="cellalignment47" headers="r18c1-t17 r1c3-t17">
+<p>See appropriate file formats documentation for appropriate value ranges (VCF 4.2 format, MAF 2.0-2.2 format, Complete Genomics masterVar format). For example, Allele Zygosity for CG masterVar includes het-alt, hom, half, het-ref options.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" -->
+<p>For Metadata Filter details for Microarray Expression, see <a href="#BABBGFHB">Metadata Filters</a>.</p>
+<div id="TCEUG461" class="sect4"><a id="sthref96"></a>
+<h5 class="sect4">At Genomic Position</h5>
+<p>You can opt to specify genomic data selection using genomic co-ordinates. You specify the chromosome region in a standard format for the Variation and CNV data. You can specify a complete chromosome or part of a chromosome as criteria. Currently, only one chromosome region at a time is implemented for search.</p>
+<p>The following chromosome region formats are supported.</p>
+<ul>
+<li>
+<p>CHR15:10000-200000: Considers region between 10000 to 200000 in chromosome 15.</p>
+</li>
+<li>
+<p>CHR15:1,200,000+5000 - Considers 5000 bases upstream from 1,200,000 position in chromosome 15.</p>
+</li>
+<li>
+<p>CHR15 - Considers whole of the chromosome 15.</p>
+</li>
+<li>
+<p>CHR15:1000 - Considers 1000th nucleotide position of chromosome 15.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect4" --></div>
+<!-- class="sect3" -->
+<a id="BABDIDEI"></a>
+<div id="TCEUG450" class="sect3">
+<h4 class="sect3">Copy Number Variation</h4>
+<p>The Copy Number Variation criteria selection interface falls under the category of Genomic criteria where you can query for patients based on results present in the <span class="bold">W_EHA_RSLT_COPY_NBR_VAR</span> table and related tables in the Oracle Healthcare Omics (OHO, formerly known as ODB) model. Currently, this table contains data from two formats&mdash;from Complete Genomics and SEG and VCF files with CNV data. Both of these have log2 ratio stored in OHO.</p>
+<p>For CNV, you can optionally select specimen type and anatomical site.</p>
+<p>Next select CNV Result Type, which represents data from numeric (array based) and categorized sequencing based platform.</p>
+<p>You can then filter results based on the list of Copy Number Variation Attributes. For example, for numeric based CNV Result Type, SNP log2 Ratio and for categorized based, gain, loss, equal to indicate Amplification, Deletion or no change in the copy number of a given gene or gene region.</p>
+<p>Finally, you should specify the location of Copy Number Variation which is the gene or genomic position of interest.</p>
+<div id="TCEUG451" class="figure">
+<p class="titleinfigure"><a id="sthref97"></a>Figure 3-18 Copy Number Variation - Numeric Based</p>
+<img width="391" height="648" src="img/trc20.gif" alt="Description of Figure 3-18 follows" /><br />
+<a id="sthref98" href="img_text/trc20.htm">Description of ''Figure 3-18 Copy Number Variation - Numeric Based''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<div id="TCEUG452" class="figure">
+<p class="titleinfigure"><a id="sthref99"></a>Figure 3-19 Copy Number Variation - Categorized Based</p>
+<img width="450" height="671" src="img/sequencingbased.gif" alt="Description of Figure 3-19 follows" /><br />
+<a id="sthref100" href="img_text/sequencingbased.htm">Description of ''Figure 3-19 Copy Number Variation - Categorized Based''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<div id="TCEUG453" class="tblhruleformalwidemax">
+<p class="titleintable"><a id="sthref101"></a><a id="sthref102"></a>Table 3-14 Copy Number Variation</p>
+<table class="cellalignment50" title="Copy Number Variation" summary="This table provides details about Copy Number Variation." dir="ltr">
+<thead>
+<tr class="cellalignment41">
+<th class="cellalignment51" id="r1c1-t18">Prompt Heading</th>
+<th class="cellalignment51" id="r1c2-t18">Definition</th>
+<th class="cellalignment51" id="r1c3-t18">Sample Value or Values</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r2c1-t18" headers="r1c1-t18">
+<p>Study*, Specimen Type, Anatomical Site</p>
+</td>
+<td class="cellalignment47" headers="r2c1-t18 r1c2-t18">
+<p>For more information on Microarray Expression, refer to description under <a href="#BABBIDCE">Microarray Expression</a> section.</p>
+</td>
+<td class="cellalignment47" headers="r2c1-t18 r1c3-t18">
+<p>As in Microarray Expression section.</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r3c1-t18" headers="r1c1-t18">
+<p>CNV Result Type</p>
+</td>
+<td class="cellalignment47" headers="r3c1-t18 r1c2-t18">
+<p>Search CNV results either belonging to array based platform like Genome_Wide_SNP_6 array or sequencing based CNV data from complete Genomics.</p>
+</td>
+<td class="cellalignment47" headers="r3c1-t18 r1c3-t18">
+<p>Array based or sequencing based</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r4c1-t18" headers="r1c1-t18">
+<p>SNP Log2 Ratio (Segment Mean)</p>
+</td>
+<td class="cellalignment47" headers="r4c1-t18 r1c2-t18">
+<p>Values for segment mean in the form of a range. You can also specify a single value in Log2 Ratio and search for results with segment mean greater than the specified value.</p>
+</td>
+<td class="cellalignment47" headers="r4c1-t18 r1c3-t18">
+<p>Numeric value. It can accept negative values.</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r5c1-t18" headers="r1c1-t18">
+<p>CNV Type</p>
+</td>
+<td class="cellalignment47" headers="r5c1-t18 r1c2-t18">
+<p>Copy Number Variation attribute indicating whether it is an amplification - gain, deletion - loss, or no change - equal.</p>
+</td>
+<td class="cellalignment47" headers="r5c1-t18 r1c3-t18">
+<p>Gain, Loss, Equal</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r6c1-t18" headers="r1c1-t18">
+<p>With confidence &gt; (CNV Type score)</p>
+</td>
+<td class="cellalignment47" headers="r6c1-t18 r1c2-t18">
+<p>Copy number variation confidence score associated with CNV Type. Score is populated from the source file, and depending on the scoring method, the range can vary.</p>
+</td>
+<td class="cellalignment47" headers="r6c1-t18 r1c3-t18">
+<p>Numeric value, range can vary depending on source</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r7c1-t18" headers="r1c1-t18">
+<p>Called Ploidy</p>
+</td>
+<td class="cellalignment47" headers="r7c1-t18 r1c2-t18">
+<p>Values for ploidy can be given more specifically as a range, either upper and/or lower bound can be specified. For example, for duplication, called ploidy can be specified as 2.</p>
+</td>
+<td class="cellalignment47" headers="r7c1-t18 r1c3-t18">
+<p>Range of Ploidy to be selecting based on, e.g. for duplication, it can be specified as between 1.5 and 2.5</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r8c1-t18" headers="r1c1-t18">
+<p>With confidence &gt; (Ploidy score)</p>
+</td>
+<td class="cellalignment47" headers="r8c1-t18 r1c2-t18">
+<p>Confidence score associated with Called Ploidy. Score is populated from the source file, and depending on the scoring method, the range can vary. The higher the confidence, the more confidence is that the ploidy score is correct, lower range can be specified</p>
+</td>
+<td class="cellalignment47" headers="r8c1-t18 r1c3-t18">
+<p>Numeric value, range can vary depending on source.</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r9c1-t18" headers="r1c1-t18">
+<p>CNV Location: in Genes from*</p>
+</td>
+<td class="cellalignment47" headers="r9c1-t18 r1c2-t18">
+<p>Selection of genes that are to be used for patient stratification based on Copy Number Variation. At least one of the below criteria must be specified.</p>
+</td>
+<td class="cellalignment47" headers="r9c1-t18 r1c3-t18">
+<p>N/A</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r10c1-t18" headers="r1c1-t18">
+<p>Ad-hoc List: Gene; Pathway; Gene Set</p>
+</td>
+<td class="cellalignment47" headers="r10c1-t18 r1c2-t18">
+<p>For more information on Microarray Expression, refer to description under <a href="#BABBIDCE">Microarray Expression</a> section.</p>
+</td>
+<td class="cellalignment47" headers="r10c1-t18 r1c3-t18">
+<p>As in Microarray Expression section.</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r11c1-t18" headers="r1c1-t18">
+<p>At Genomic Position</p>
+</td>
+<td class="cellalignment47" headers="r11c1-t18 r1c2-t18">
+<p>Specify genomic location for the variants to occur in: the format should be chr#:from-to or chr# if the entire chromosome is to be used.</p>
+</td>
+<td class="cellalignment47" headers="r11c1-t18 r1c3-t18">
+<p>chrX:13000-120000, chr7</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r12c1-t18" headers="r1c1-t18">
+<p>Assembly Version</p>
+</td>
+<td class="cellalignment47" headers="r12c1-t18 r1c2-t18">
+<p>Represents GRCh version. Default selection is the last loaded reference version.</p>
+</td>
+<td class="cellalignment47" headers="r12c1-t18 r1c3-t18">
+<p>GRCh38</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r13c1-t18" headers="r1c1-t18">
+<p>DNA Reference Version</p>
+</td>
+<td class="cellalignment47" headers="r13c1-t18 r1c2-t18">
+<p>Represents the Ensembl reference version for getting gene annotations. This is related to <span class="italic">Assembly Version</span> and by default displays the preferred DNA Reference Version, which is set in OHO.</p>
+</td>
+<td class="cellalignment47" headers="r13c1-t18 r1c3-t18">
+<p>Ensembl version 70</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwidemax" -->
+<p>For Metadata Filter details for Microarray Expression, see <a href="#BABBGFHB">Metadata Filters</a>.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BABDHHGE"></a>
+<div id="TCEUG454" class="sect3">
+<h4 class="sect3">RNA-seq Expression</h4>
+<p>The RNA-seq Expression criteria selection interface falls under the category of Genomic criteria where you can query for patients based on results present in the W_EHA_RSLT_RNA_SEQ table and related tables in the OHO model.</p>
+<p>As for Gene Expression, you can optionally select specimen type and anatomical site. Next, you can filter results based on the RPKM values, Raw Counts, Median length and strand.</p>
+<p>Finally, you should specify the location for searching RNA-seq expression results which is the gene or genomic position of interest.</p>
+<div id="TCEUG455" class="figure">
+<p class="titleinfigure"><a id="sthref103"></a>Figure 3-20 RNA-seq Expression</p>
+<img width="470" height="780" src="img/trc76.gif" alt="Description of Figure 3-20 follows" /><br />
+<a id="sthref104" href="img_text/trc76.htm">Description of ''Figure 3-20 RNA-seq Expression''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<div id="TCEUG456" class="tblhruleformalwidemax">
+<p class="titleintable"><a id="sthref105"></a><a id="sthref106"></a>Table 3-15 RNA-seq Expression</p>
+<table class="cellalignment50" title="RNA-seq Expression" summary="This table provides details about RNA-seq Expression." dir="ltr">
+<thead>
+<tr class="cellalignment41">
+<th class="cellalignment51" id="r1c1-t19">Prompt Heading</th>
+<th class="cellalignment51" id="r1c2-t19">Definition</th>
+<th class="cellalignment51" id="r1c3-t19">Sample Value or Values</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r2c1-t19" headers="r1c1-t19">
+<p>Specimen Type, Anatomical Site</p>
+</td>
+<td class="cellalignment47" headers="r2c1-t19 r1c2-t19">
+<p>For more information on RNA-seq Expression, refer to description under <a href="#BABBIDCE">Microarray Expression</a> section.</p>
+</td>
+<td class="cellalignment47" headers="r2c1-t19 r1c3-t19">
+<p>As in Microarray Expression section.</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r3c1-t19" headers="r1c1-t19">
+<p>RPKM</p>
+</td>
+<td class="cellalignment47" headers="r3c1-t19 r1c2-t19">
+<p>Represents 'Reads Per Kilobaseq exon Model per million mapped reads', calculated expression intensity values in positive float or zero.</p>
+</td>
+<td class="cellalignment47" headers="r3c1-t19 r1c3-t19">
+<p>N/A</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r4c1-t19" headers="r1c1-t19">
+<p>Raw Counts</p>
+</td>
+<td class="cellalignment47" headers="r4c1-t19 r1c2-t19">
+<p>Represents raw read counts in positive floating point values or a zero if unavailable.</p>
+</td>
+<td class="cellalignment47" headers="r4c1-t19 r1c3-t19">
+<p>N/A</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r5c1-t19" headers="r1c1-t19">
+<p>Median Length (Normalized)</p>
+</td>
+<td class="cellalignment47" headers="r5c1-t19 r1c2-t19">
+<p>A normalized region length calculation in positive float or zero.</p>
+</td>
+<td class="cellalignment47" headers="r5c1-t19 r1c3-t19">
+<p>N/A</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r6c1-t19" headers="r1c1-t19">
+<p>Strand</p>
+</td>
+<td class="cellalignment47" headers="r6c1-t19 r1c2-t19">
+<p>Strand of stored gene.</p>
+</td>
+<td class="cellalignment47" headers="r6c1-t19 r1c3-t19">
+<p>N/A</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r7c1-t19" headers="r1c1-t19">
+<p>RNA-seq Location: in Genes from*</p>
+</td>
+<td class="cellalignment47" headers="r7c1-t19 r1c2-t19">
+<p>Selection of genes that are to be used for patient stratification based on RNA-seq expression. At least one of the below criteria must be specified.</p>
+</td>
+<td class="cellalignment47" headers="r7c1-t19 r1c3-t19">
+<p>N/A</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r8c1-t19" headers="r1c1-t19">
+<p>Ad-hoc List: Gene; Pathway; Gene Set</p>
+</td>
+<td class="cellalignment47" headers="r8c1-t19 r1c2-t19">
+<p>For more information on RNA-seq Expression, refer to description under Gene Expression section.</p>
+</td>
+<td class="cellalignment47" headers="r8c1-t19 r1c3-t19">
+<p>As in Microarray Expression section.</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r9c1-t19" headers="r1c1-t19">
+<p>For Transcript IDs</p>
+</td>
+<td class="cellalignment47" headers="r9c1-t19 r1c2-t19">
+<p>Search for Ensembl Transcript ID</p>
+</td>
+<td class="cellalignment47" headers="r9c1-t19 r1c3-t19">
+<p>N/A</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r10c1-t19" headers="r1c1-t19">
+<p>At Genomic Position</p>
+</td>
+<td class="cellalignment47" headers="r10c1-t19 r1c2-t19">
+<p>Specify genomic location for the variants to occur in, the format should be chr#:from-to or chr# if entire chromosome is to be used.</p>
+</td>
+<td class="cellalignment47" headers="r10c1-t19 r1c3-t19">
+<p>chrX:13000-120000, chr7</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r11c1-t19" headers="r1c1-t19">
+<p>Assembly Version</p>
+</td>
+<td class="cellalignment47" headers="r11c1-t19 r1c2-t19">
+<p>Represents GRCh version. Default selection is the last loaded reference version.</p>
+</td>
+<td class="cellalignment47" headers="r11c1-t19 r1c3-t19">
+<p>GRCh38</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r12c1-t19" headers="r1c1-t19">
+<p>DNA Reference Version</p>
+</td>
+<td class="cellalignment47" headers="r12c1-t19 r1c2-t19">
+<p>Represents the Ensembl reference version for getting gene annotations. This is related to <span class="italic">Assembly Version</span> and by default displays the preferred DNA Reference Version, which is set in OHO.</p>
+</td>
+<td class="cellalignment47" headers="r12c1-t19 r1c3-t19">
+<p>Ensembl version 70</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwidemax" --></div>
+<!-- class="sect3" -->
+<a id="BABBGFHB"></a>
+<div id="TCEUG457" class="sect3">
+<h4 class="sect3">Metadata Filters</h4>
+<p>All genomic criteria screens like Sequence Variant, Copy Number Variation, Microarray Expression and RNA-seq Expression have additional filter criteria based on the metadata associated with the specimens or patients. This option is present at the bottom of each of the genomic criteria screens.</p>
+<div id="TCEUG458" class="figure">
+<p class="titleinfigure"><a id="sthref107"></a>Figure 3-21 Metadata Filters</p>
+<img width="569" height="205" src="img/trc77.gif" alt="Description of Figure 3-21 follows" /><br />
+<a id="sthref108" href="img_text/trc77.htm">Description of ''Figure 3-21 Metadata Filters''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p>Once you expand the <span class="bold">Metadata Filters</span> option, click <span class="bold">Add Metadata Attribute</span> to open the Select Metadata Attribute dialog.</p>
+<div id="TCEUG459" class="figure">
+<p class="titleinfigure"><a id="sthref109"></a>Figure 3-22 Select Metadata Attributes</p>
+<img width="525" height="370" src="img/trc78.gif" alt="Description of Figure 3-22 follows" /><br />
+<a id="sthref110" href="img_text/trc78.htm">Description of ''Figure 3-22 Select Metadata Attributes''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p>Then search based on <span class="bold">Attribute Name</span>, <span class="bold">Scope</span> or <span class="bold">Category</span> to get a list of attributes associated with Metadata. Select attribute to add as Metadata Filter and assign a value for the added filer.</p>
+<div id="TCEUG460" class="tblhruleformalwidemax">
+<p class="titleintable"><a id="sthref111"></a><a id="sthref112"></a>Table 3-16 Metadata Filters</p>
+<table class="cellalignment50" title="Metadata Filters" summary="This table provides details about Metadata Filters" dir="ltr">
+<thead>
+<tr class="cellalignment41">
+<th class="cellalignment51" id="r1c1-t20">Prompt Heading</th>
+<th class="cellalignment51" id="r1c2-t20">Definition</th>
+<th class="cellalignment51" id="r1c3-t20">Sample Value or Values</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r2c1-t20" headers="r1c1-t20">
+<p>Attribute Name</p>
+</td>
+<td class="cellalignment47" headers="r2c1-t20 r1c2-t20">
+<p>Represents the metadata qualifier tag from W_EHA_QUALIFIER table.</p>
+</td>
+<td class="cellalignment47" headers="r2c1-t20 r1c3-t20">
+<p>N/A</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r3c1-t20" headers="r1c1-t20">
+<p>Scope</p>
+</td>
+<td class="cellalignment47" headers="r3c1-t20 r1c2-t20">
+<p>Scope is retrieved from the table W_EHA_QLFR_TABLE. Based on the internal mapping scope is shown as 'Per Result' for value in table as 'W_EHA_RSLT_FILE_SPEC_QLFR' and 'Per Specimen' as scope value for value in table as 'W_EHA_RSLT_SPEC_QLFR'.</p>
+</td>
+<td class="cellalignment47" headers="r3c1-t20 r1c3-t20">
+<p>N/A</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r4c1-t20" headers="r1c1-t20">
+<p>Category</p>
+</td>
+<td class="cellalignment47" headers="r4c1-t20 r1c2-t20">
+<p>Represents the metadata qualifier category tag from W_EHA_QLFR_CATEGORY table.</p>
+</td>
+<td class="cellalignment47" headers="r4c1-t20 r1c3-t20">
+<p>N/A</p>
+</td>
+</tr>
+<tr class="cellalignment41">
+<td class="cellalignment47" id="r5c1-t20" headers="r1c1-t20">
+<p>Value</p>
+</td>
+<td class="cellalignment47" headers="r5c1-t20 r1c2-t20">
+<p>Based on the selected metadata attribute this value datatype would change. If a numeric attribute is selected then a numeric value is given as input. Similarly, for date attribute, date would be as input and for character attribute, character would be as input.</p>
+</td>
+<td class="cellalignment47" headers="r5c1-t20 r1c3-t20">
+<p>N/A</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwidemax" --></div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BABJACIB"></a>
+<div id="TCEUG401" class="sect1">
+<h2 class="sect1">Selecting Cohort Criteria</h2>
+<p>To select cohort criteria:</p>
+<ol>
+<li>
+<p>Navigate the <span class="bold">Cohort Query</span> tab.</p>
+</li>
+<li>
+<p>On the left, select <span class="bold">Patient Information</span>, <span class="bold">Clinical Data</span> or <span class="bold">Genomic Data</span> to view the topics within each. For more information on the topics within each category, see <a href="#BABDGJGD">Categories and Topics</a>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Note:</p>
+You can select criteria within any one or all the three categories.</div>
+</li>
+<li>
+<p>Click the topic that aligns with the data you want to select.</p>
+</li>
+<li>
+<p>Select the required data. Required fields in a topic are identified with an <span class="italic">asterisk</span>. For example, you are required to indicate one or more Diagnoses for a patient along with a date, onset, or other parameters.</p>
+<p>Click the magnifying glass icon to search for data for a given field.</p>
+</li>
+<li>
+<p>In the <span class="bold">Insert as</span> group, select <span class="bold">inclusion</span> or <span class="bold">exclusion</span> to confirm whether the definition is to be included or excluded in the query.</p>
+<div class="infobox-note">
+<p class="notep1">Tip:</p>
+Prepare the query definition in a structured format (line-by-line) before creating it in OHTR. Visualizing your definition may help you recognize a simple way to organize it.</div>
+</li>
+<li>
+<p>Click <span class="bold">Submit</span>.</p>
+<p>To clear all the fields, click <span class="bold">Reset</span>. To close the window without making any selection, click <span class="bold">Cancel</span>.</p>
+</li>
+<li>
+<p>The criteria you selected appears in its query statement on the right side of the page.</p>
+<p>You can add as many criteria as you want. The query definition expands each time you add a new statement.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="BABGCJEJ"></a>
+<div id="TCEUG464" class="sect1">
+<h2 class="sect1">Working with Inclusion and Exclusion Criteria</h2>
+<p>Once you have added several criteria statements to your query, you can:</p>
+<ul>
+<li>
+<p>expand or collapse the display for the Inclusions or Exclusions criteria</p>
+</li>
+<li>
+<p>select the arrow to the left of the criteria statement to expand or collapse its detail</p>
+</li>
+</ul>
+<div id="TCEUG756" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref113"></a>
+<h3 class="sect2">Modifying Details of an Existing Criteria Statement</h3>
+<p>You can continue to adjust the details of an existing statement using the icons on the right.</p>
+<ul>
+<li>
+<p>The pencil icon displays and edits your criteria selection.</p>
+</li>
+<li>
+<p>The red X removes any particular statement.</p>
+</li>
+<li>
+<p>The green + icon adds another set of criteria from the same topic. For example, clicking the plus icon from within a <span class="bold">Demographics</span> tab prompts you to select additional Demographics criteria.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<div id="TCEUG758" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref114"></a>
+<h3 class="sect2">Logic within Inclusion and Exclusion Criteria</h3>
+<p>Within an Inclusion statement, distinct criteria statements related to the same topic is considered with an OR criteria.</p>
+<p>For example,</p>
+<p>INCLUDE: Diagnosis = Diabetes AND (Demographics = Male OR&rdquo; Demographics = Married)</p>
+<p>Within an Exclusion statement, distinct criteria statements related to the same topic will be considered with an AND.</p>
+<p>For example,</p>
+<p>EXCLUDE: Diagnosis = Diabetes OR (Demographics = Male AND Demographics = Married)</p>
+<p>This function can be used to simplify your query structure, where you can address each data topic and category one at a time rather than having the same topic listed in both the Inclusion and Exclusion sections.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BGBCGFEA"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Viewing Patient Count and Patient Data</h2>
+<p>Based on the Cohort Criteria, the corresponding Patient or Subject Count is displayed. Total number of patients or subjects in the database is also displayed. This count is updated or refreshed each time you log into the system and select the Query Patients tab.</p>
+<p>To run a query and view the counts:</p>
+<ol>
+<li>
+<p>Select at least one row of criteria defined in the <span class="bold">Inclusions</span> or <span class="bold">Exclusions</span> options.</p>
+</li>
+<li>
+<p>Click <span class="bold">Run Query</span>. The patient count is visible in the top right.</p>
+</li>
+<li>
+<p>To view patient data, click the patient count.</p>
+<img width="322" height="251" src="img/trc125.gif" alt="Description of trc125.gif follows" /><br />
+<a id="sthref115" href="img_text/trc125.htm">Description of the illustration ''trc125.gif''</a><br />
+<br /></li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="BABBJJBD"></a>
+<div id="TCEUG761" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Viewing Specimen Count</h2>
+<p>To view the specimen count:</p>
+<ol>
+<li>
+<p>Click the <span class="bold">Options</span> drop-down menu in the <span class="bold">Cohort Query</span> tab.</p>
+</li>
+<li>
+<p>Select <span class="bold">Show Specimen Count</span>.</p>
+</li>
+<li>
+<p>The specimen count is displayed. This is the count of all the specimens in the cohort that match the selected criteria.</p>
+<img width="801" height="477" src="img/trc117.gif" alt="Description of trc117.gif follows" /><br />
+<a id="sthref116" href="img_text/trc117.htm">Description of the illustration ''trc117.gif''</a><br />
+<br /></li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="BABJJCHF"></a>
+<div id="TCEUG472" class="sect1">
+<h2 class="sect1">Saving a Query</h2>
+<p>When you save a query, the only information that is preserved is the criteria definition itself. Neither the patient count nor any of the underlying patient data is saved. Each time the query is opened, it must rerun to view current patient counts. Therefore, patient counts for the same query may change over time.</p>
+<p>Each query is saved along with the context it was generated against and hence any criteria not relevant to that context is not saved.</p>
+<p>To save a query:</p>
+<ol>
+<li>
+<p>Click the <span class="bold">Query Library</span> drop-down.</p>
+</li>
+<li>
+<p>Click <span class="bold">Save Query</span>.</p>
+<img width="802" height="419" src="img/trc118.gif" alt="Description of trc118.gif follows" /><br />
+<a id="sthref117" href="img_text/trc118.htm">Description of the illustration ''trc118.gif''</a><br />
+<br /></li>
+<li>
+<p>You can save it as a new query (with a new name), or overwrite an existing query from the library.</p>
+<p>If you enter a new query name and that name is already recognized in your library, the system prompts you to determine if you want to overwrite your existing query. If not, you can specify a new query name.</p>
+<img width="458" height="366" src="img/trc26.gif" alt="Description of trc26.gif follows" /><br />
+<a id="sthref118" href="img_text/trc26.htm">Description of the illustration ''trc26.gif''</a><br />
+<br /></li>
+<li>
+<p>Click <span class="bold">Submit</span>. A confirmation is displayed that the query was saved.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="BABBCAIA"></a>
+<div id="TCEUG470" class="sect1">
+<h2 class="sect1">Loading a Saved Query</h2>
+<p>To rerun a query and edit its definition, perform the following steps:</p>
+<ol>
+<li>
+<p>Click the <span class="bold">Query Library</span> drop-down.</p>
+<img width="802" height="419" src="img/trc118.gif" alt="Description of trc118.gif follows" /><br />
+<a id="sthref119" href="img_text/trc118.htm">Description of the illustration ''trc118.gif''</a><br />
+<br /></li>
+<li>
+<p>Select <span class="bold">Load Query</span>.</p>
+</li>
+<li>
+<p>Enter all or part of a <span class="bold">Query Name</span>.</p>
+<img width="576" height="447" src="img/trc119.gif" alt="Description of trc119.gif follows" /><br />
+<a id="sthref120" href="img_text/trc119.htm">Description of the illustration ''trc119.gif''</a><br />
+<br /></li>
+<li>
+<p>Click <span class="bold">Search</span>.</p>
+</li>
+<li>
+<p>Select the required query.</p>
+</li>
+<li>
+<p>Click <span class="bold">Submit</span>. The query definition is displayed on the main page.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment40">
+<tr>
+<td class="cellalignment47">
+<table class="cellalignment45">
+<tr>
+<td class="cellalignment44"><a href="cohortexp.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment44"><a href="cohviewer.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2012, 2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment49">
+<table class="cellalignment43">
+<tr>
+<td class="cellalignment44"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment44"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment44"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment44"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

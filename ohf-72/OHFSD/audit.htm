@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Enable the OHF SSA Usage Tracking</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="description" content="This chapter explains how to enable the Usage Tracking feature for Oracle Healthcare Foundation in OBIEE. This allows you to run the reports in the Audit Trail and Usage Tracking Dashboard." />
+<meta name="dcterms.created" content="2018-09-10T9:4:7Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Healthcare Foundation Dashboards User's Guide" />
+<meta name="dcterms.identifier" content="E94537-01" />
+<meta name="dcterms.isVersionOf" content="OHFSD" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Prev" href="boards.htm" title="Previous" type="text/html" />
+<link rel="Next" href="lineage.htm" title="Next" type="text/html" />
+<link rel="alternate" href="OHFSD.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="OHFSD.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="OHFSD.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+                    <script>var w=window;if(w.performance||w.mozPerformance||w.msPerformance||w.webkitPerformance){var d=document;AKSB=w.AKSB||{},AKSB.q=AKSB.q||[],AKSB.mark=AKSB.mark||function(e,_){AKSB.q.push(["mark",e,_||(new Date).getTime()])},AKSB.measure=AKSB.measure||function(e,_,t){AKSB.q.push(["measure",e,_,t||(new Date).getTime()])},AKSB.done=AKSB.done||function(e){AKSB.q.push(["done",e])},AKSB.mark("firstbyte",(new Date).getTime()),AKSB.prof={custid:"322179",ustr:"",originlat:"0",clientrtt:"1",ghostip:"23.212.3.15",ipv6:false,pct:"10",clientip:"45.78.37.67",requestid:"2286dec",region:"32996",protocol:"",blver:14,akM:"dsca",akN:"ae",akTT:"O",akTX:"1",akTI:"2286dec",ai:"206465",ra:"false",pmgn:"",pmgi:"",pmp:"",qc:""},function(e){var _=d.createElement("script");_.async="async",_.src=e;var t=d.getElementsByTagName("script"),t=t[t.length-1];t.parentNode.insertBefore(_,t)}(("https:"===d.location.protocol?"https:":"http:")+"//ds-aksb-a.akamaihd.net/aksb.min.js")}</script>
+                    <script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">5/6</span> <!-- End Header -->
+<div id="OHFSD153" class="chapter"><a id="BEHEHHIF"></a>
+<h1 class="chapter"><span class="secnum">2</span> Enable the OHF SSA Usage Tracking</h1>
+<p><a id="OHFSD154"></a>This chapter explains how to enable the Usage Tracking feature for Oracle Healthcare Foundation in OBIEE. This allows you to run the reports in the <a href="boards.htm#CHDCIGFA">Audit Trail and Usage Tracking Dashboard</a>.</p>
+<ol>
+<li>
+<p><a href="#BEHBAGEH">Set Up the Data Model</a></p>
+</li>
+<li>
+<p><a href="#BEHGDFJB">Enable the Usage Tracking Feature in the NQSConfig.INI File</a></p>
+</li>
+<li>
+<p><a href="#BEHGEDCD">Configure the OHF SSA RPD File</a></p>
+</li>
+<li>
+<p><a href="#BEHIEHAJ">Deploy the OHF SSA RPD File</a></p>
+</li>
+</ol>
+<a id="BEHBAGEH"></a>
+<div id="OHFSD155" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Set Up the Data Model</h2>
+<ol>
+<li>
+<p>Make sure the Repository Creation Utility (RCU) has been successfully run while installing OBIEE. You should have the <code dir="ltr">&lt;prefix&gt;_BIPLATFORM</code> schema installed with the following tables in it:</p>
+<ul>
+<li>
+<p><code dir="ltr">S_NQ_ACCT</code></p>
+</li>
+<li>
+<p><code dir="ltr">S_NQ_DB_ACCT</code></p>
+</li>
+<li>
+<p><code dir="ltr">S_NQ_INITBLOCK</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Go to <code dir="ltr">&lt;OBIEE_HOME&gt;/bi/bifoundation/samples/usagetracking</code>.</p>
+</li>
+<li>
+<p>Extract the <code dir="ltr">UsageTracking-datafiles.zip</code> archive.</p>
+</li>
+<li>
+<p>Connect to the <code dir="ltr">&lt;prefix&gt;_BIPLATFORM</code> schema and execute the following SQL scripts in order:</p>
+<ol>
+<li>
+<p><code dir="ltr">Oracle_create_nQ_Calendar.sql</code></p>
+</li>
+<li>
+<p><code dir="ltr">Oracle_create_nQ_Clock.sql</code></p>
+</li>
+<li>
+<p><code dir="ltr">Oracle_nQ_Calendar.sql</code></p>
+</li>
+<li>
+<p><code dir="ltr">Oracle_nQ_Clock.sql</code></p>
+</li>
+</ol>
+</li>
+<li>
+<p>Create a view in the <code dir="ltr">&lt;prefix&gt;_BIPLATFORM</code> schema:</p>
+<p><code dir="ltr">CREATE OR REPLACE VIEW nq_login_group AS SELECT DISTINCT user_name AS login FROM s_nq_acct;</code></p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="BEHGDFJB"></a>
+<div id="OHFSD156" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Enable the Usage Tracking Feature in the NQSConfig.INI File</h2>
+<ol>
+<li>
+<p>Go to <code dir="ltr">&lt;OBIEE_HOME&gt;/user_projects/domains/bi_domain/config/fmwconfig/biconfig/OBIS/</code>.</p>
+</li>
+<li>
+<p>Open the <code dir="ltr">NQSConfig.INI</code> file in a text editor.</p>
+</li>
+<li>
+<p>In the [Usage Tracking] section set the <code dir="ltr">ENABLE</code> parameter to <code dir="ltr">YES</code>.</p>
+</li>
+<li>
+<p>Set the <code dir="ltr">DIRECT_INSERT</code> parameter to <code dir="ltr">YES</code>.</p>
+</li>
+<li>
+<p>Set the <code dir="ltr">PHYSICAL_TABLE_NAME</code> parameter to point to the S_NQ_ACCT table in the &lt;prefix&gt;_BIPLATFORM schema in the following format: "&lt;Database&gt;"."&lt;Catalog&gt;"."&lt;Schema&gt;"."&lt;Table&gt;";</p>
+<p>Use the database, catalog, schema, and table names predefined in the OHF SSA RPD file:</p>
+<ul>
+<li>
+<p><span class="bold">Database</span>: <code dir="ltr">"OHF Usage Tracking"</code></p>
+</li>
+<li>
+<p><span class="bold">Catalog</span>: <code dir="ltr">"Catalog"</code></p>
+</li>
+<li>
+<p><span class="bold">Schema</span>: <code dir="ltr">"dbo"</code></p>
+</li>
+<li>
+<p><span class="bold">Table Name</span>: <code dir="ltr">"S_NQ_ACCT"</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Set the <code dir="ltr">CONNECTION_POOL</code> parameter in the following format "&lt;Database&gt;"."&lt;Connection Pool&gt;";</p>
+<p>Use the database and connection pool values predefined in the OHF SSA RPD file:</p>
+<ul>
+<li>
+<p><span class="bold">Database</span>: <code dir="ltr">"OHF Usage Tracking"</code></p>
+</li>
+<li>
+<p><span class="bold">Connection Pool</span>: <code dir="ltr">"OHF Usage Tracking Connection Pool"</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Uncomment the <code dir="ltr">INIT_BLOCK_TABLE_NAME</code> parameter and set it to point to the S_NQ_INITBLOCK table in the &lt;prefix&gt;_BIPLATFORM schema in the following format: "&lt;Database&gt;"."&lt;Catalog&gt;"."&lt;Schema&gt;"."&lt;Table&gt;";</p>
+<p>Use the following values:</p>
+<ul>
+<li>
+<p><span class="bold">Database</span>: <code dir="ltr">"OHF Usage Tracking"</code></p>
+</li>
+<li>
+<p><span class="bold">Catalog</span>: <code dir="ltr">"Catalog"</code></p>
+</li>
+<li>
+<p><span class="bold">Schema</span>: <code dir="ltr">"dbo"</code></p>
+</li>
+<li>
+<p><span class="bold">Table Name</span>: <code dir="ltr">"S_NQ_INITBLOCK"</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Uncomment the <code dir="ltr">INIT_BLOCK_CONNECTION_POOL</code> parameter and set it to refer to the connection pool for writing statuses to the S_NQ_INITBLOCK table in the &lt;prefix&gt;_BIPLATFORM schema in the following format: "&lt;Database&gt;"."&lt;Connection Pool&gt;";</p>
+<p>Use the database and connection pool values predefined in the OHF SSA RPD file:</p>
+<ul>
+<li>
+<p><span class="bold">Database</span>: <code dir="ltr">"OHF Usage Tracking"</code></p>
+</li>
+<li>
+<p><span class="bold">Connection Pool</span>: <code dir="ltr">"OHF Usage Tracking Connection Pool"</code></p>
+</li>
+</ul>
+<p>The above parameters should be set as below:</p>
+<p><code dir="ltr">===============================================================================<br />
+# Parameters used for inserting data into the table (i.e. DIRECT_INSERT = YES).<br />
+#<br />
+# Init-Block Tracking Options are commented out and as a result disabled.<br />
+# To enable Init-Block Tracking Feature, define the two parameters for<br />
+# Init-Block, INIT_BLOCK_TABLE_NAME and INIT_BLOCK_CONNECTION_POOL.<br />
+#<br />
+PHYSICAL_TABLE_NAME = "OHF Usage Tracking"."Catalog"."dbo"."S_NQ_ACCT"; # Or "&lt;Database&gt;"."&lt;Schema&gt;"."&lt;Table&gt;" ;<br />
+CONNECTION_POOL = "OHF Usage Tracking"."OHF Usage Tracking Connection Pool";<br />
+INIT_BLOCK_TABLE_NAME = "OHF Usage Tracking"."Catalog"."dbo"."S_NQ_INITBLOCK" ; # Or "&lt;Database&gt;"."&lt;Schema&gt;"."&lt;Table&gt;" ;<br />
+INIT_BLOCK_CONNECTION_POOL = "OHF Usage Tracking"."OHF Usage Tracking Connection Pool";</code></p>
+</li>
+<li>
+<p>Stop and restart the OBIEE Services using the stop and start scripts available in <code dir="ltr">&lt;OBIEE_HOME&gt;/user_projects/domains/bi_domain/bitools/bin</code>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="BEHGEDCD"></a>
+<div id="OHFSD157" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Configure the OHF SSA RPD File</h2>
+<p>Update the OHF Usage Tracking Connection Pool in the OHF SSA RPD file to point to the &lt;prefix&gt;_BIPLATFORM schema:</p>
+<ol>
+<li>
+<p>In the <span class="bold">Oracle BI Administration Tool</span>, navigate to the <code dir="ltr">selfserviceanalytics\hcd_rpd</code> folder.</p>
+</li>
+<li>
+<p>Open the <code dir="ltr">ohf_ssa_hcd.rpd</code> file.</p>
+</li>
+<li>
+<p>In the RPD Physical layer, expand <span class="bold">OHF Usage Tracking</span> and double-click <span class="bold">OHF Usage Tracking Connection Pool</span>.</p>
+<div id="OHFSD158" class="figure">
+<p class="titleinfigure"><a id="sthref28"></a>Figure 2-1 Selecting the OHF Usage Tracking Connection Pool</p>
+<img width="409" height="123" src="img/usage_tracking_setup.png" alt="Selecting the OHF Usage Tracking Connection Pool" /><br /></div>
+<!-- class="figure" --></li>
+<li>
+<p>Update the data source name with the database host name, port number, and service name of the <code dir="ltr">&lt;prefix&gt;_BIPLATFORM</code> schema.</p>
+</li>
+<li>
+<p>Update the username as the <code dir="ltr">&lt;prefix&gt;_BIPLATFORM</code> schema name.</p>
+</li>
+<li>
+<p>Enter the schema password and confirm.</p>
+<div id="OHFSD159" class="figure">
+<p class="titleinfigure"><a id="sthref29"></a>Figure 2-2 OHF Usage Tracking Connection Pool Setup</p>
+<img width="1262" height="677" src="img/connection_pool.png" alt="Connection Pool" /><br /></div>
+<!-- class="figure" --></li>
+<li>
+<p>Save the <code dir="ltr">ohf_ssa_hcd.rpd</code> file and choose <span class="bold">No</span> when prompted for Consistency Check.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="BEHIEHAJ"></a>
+<div id="OHFSD160" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Deploy the OHF SSA RPD File</h2>
+<p>Use the <code dir="ltr">datamodel.sh</code> utility to upload the RPD file to the OBIEE server:</p>
+<ol>
+<li>
+<p>Go to <code dir="ltr">[OBIEE_HOME]/user_projects/domains/bi/bitools/bin/</code>.</p>
+</li>
+<li>
+<p>Run the <code dir="ltr">datamodel.sh</code> utility using the following syntax:</p>
+<p><code dir="ltr">datamodel.sh uploadrpd -I &lt;location of rpd file to be uploaded&gt; -W &lt;RPDpwd&gt; -SI &lt;Service Instance Name&gt; -U &lt;weblogic user&gt; -P &lt;weblogic password&gt;</code></p>
+<p>To find the Service Instance Name, look in the <code dir="ltr">&lt;OBIEE Home&gt;/user_projects/domains/bi/bidata/service_instances</code> directory. For example:</p>
+<div id="OHFSD161" class="figure">
+<p class="titleinfigure"><a id="sthref30"></a>Figure 2-3 Running the datamodel.sh Utility</p>
+<img width="936" height="76" src="img/data_model_sh.png" alt="Surrounding text describes Figure 2-3 ." /><br /></div>
+<!-- class="figure" --></li>
+</ol>
+<p>After usage tracking is enabled, OBIEE starts to log usage information and statistics and display this information in the <a href="boards.htm#CHDCIGFA">Audit Trail and Usage Tracking Dashboard</a>.</p>
+</div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment10">
+<tr>
+<td class="cellalignment17">
+<table class="cellalignment21">
+<tr>
+<td class="cellalignment14"><a href="boards.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment14"><a href="lineage.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment19">
+<table class="cellalignment20">
+<tr>
+<td class="cellalignment14"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment14"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment14"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment14"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

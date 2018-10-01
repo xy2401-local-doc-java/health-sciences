@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Quick Training Setup: A Visual Guide for Training Administrators and Managers</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Get ready for study verification or study go live."/>   
+
+        <script src="common/js/lib/jquery.min.js"></script>
+        <script src="common/js/lib/jquery-ui.min.js"></script>
+
+        <script src="common/js/lib/TweenMax.min.js"></script>
+        <script src="common/js/lib/jquery.gsap.min.js"></script>
+        <script src="common/js/lib/CSSPlugin.min.js"></script> 
+        <script src="common/js/lib/ScrollMagic.min.js"></script>
+        <!----- <script src="common/js/lib/animation.gsap.js"></script> ------>
+        <script src="common/js/lib/jquery.ScrollMagic.js"></script>
+        <script src="common/js/lib/debug.addIndicators.min.js"></script>
+
+        <link href="common/js/lib/jquery-ui.css" rel="stylesheet" type="text/css">
+
+        <link href="common/css/scrolling_gs.css" rel="stylesheet" type="text/css" id="StyleSheet">
+        <link href="common/css/popup.css" rel="stylesheet" type="text/css">
+
+        <script src="common/js/scrolling.js"></script>
+
+        <style type="text/css" media="print">
+            BODY {display:none;visibility:hidden;}
+        </style>
+
+        <script>
+            var mode = "";
+            $(window).on("resize", function () {
+                if ($(window).width() > 1000) {
+                    //Desktop mode
+                    mode = setMode(mode, "DESKTOP", function () {
+                        $("#StyleSheet").attr("href", "common/css/scrolling_gs.css");
+                        $(".phone").hide();
+                        $(".tablet").hide();
+                        $(".desktop").show();
+                    });
+                } else if ($(window).width() > 700) {
+                    //portrait mode
+                    mode = setMode(mode, "TAB", function () {
+                        $("#StyleSheet").attr("href", "common/css/scrolling-tab_gs.css");
+                        $(".phone").hide();
+                        $(".desktop").hide();
+                        $(".tablet").show();
+                    });
+                } else {
+                    //Phone mode
+                    mode = setMode(mode, "PHONE", function () {
+                        $("#StyleSheet").attr("href", "common/css/scrolling-phone_gs.css");
+                        $(".tablet").hide();
+                        $(".desktop").hide();
+                        $(".phone").show();
+                    });
+                }
+            });
+            $(window).trigger("resize");
+            function setMode(m1, m2, callback) {
+                if (m1 !== m2) {
+                    callback();
+                }
+                return m2;
+            }
+        </script>
+
+        <!-- Version: March 2018 -->
+
+    <script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+    <body>
+
+    <logo>
+        <a href="https://docs.oracle.com/en/industries/health-sciences/index.html" target="_blank"><img src="common/images/o-redbadge-digital-master_HS.png" style="max-width: 175px;"></a>
+    </logo>
+
+    <header id="side-header">
+		<div class="text_link"><a href="index_text.html" target="_blank" tabindex="0" style="border-bottom: 1px solid #fff;">Text Version</a></div>
+        <div class="h0" id="bigTitle">Clinical One</div>
+        <h1 id="title-trigger">Quick Training Setup: A Visual Guide for Training Administrators and Managers</h1>
+    </header>
+
+<div class="sidebargrey"></div>
+        
+    <nav>
+        <div class="displayPopup" style= "max-width:150px; height:auto;" title="Overview" data-popup="overview">
+            <p><a href="#overview" style="text-decoration: none; color: white;">Overview</a></p>
+        </div>
+    </nav>
+	
+	<nav2>
+        <p><a href="Quick_Training_Setup.pdf" target="_blank">Download PDF</a></p>
+    </nav2>
+
+    <article>
+        <section>
+			
+			<div class="getstarted">
+                <p style="padding-left: 25px;"><a href="https://docs.oracle.com/health-sciences/clinical-one/index.html" alt="Click to return to the Oracle Help Center" title="Click to return to the Oracle Help Center" style="text-decoration: none; color: #fff;" target="_blank"><b>< </b><em style="font-style: normal; border-bottom: #fff solid 1px;">Back to Oracle Help Center</em></a></p>
+				<br>
+				<p style="margin-left: 50px;">Where do I assign training?</p>
+					<ul style="margin-left: 100px; margin-right:100px;">
+                    <li><strong>If your organization hosts your study</strong>: Assign training for InForm, Central Designer, Central Cording, or IRT in <strong>Clinical One</strong>.</li>
+                    <li><strong>If Oracle hosts your study:</strong></li>
+							<ul style="margin-left: 50px;">
+							<li>Assign training for InForm, Central Designer, Central Coding, or IRT in the <strong>User Management Tool (UMT)</strong>.</li>
+							<li>Assign training for the User Management Tool (UMT) and other training that isn't associated with a study (such as a release you're considering upgrading to) in <strong>Clinical One</strong>.
+							</ul>
+                  </ul><br>
+				  <p style="margin-left: 50px;">Who is this guide for?</p>
+				<ul style="margin-left: 100px; margin-right:100px;">
+                    <li><strong>Training administrators</strong> and <strong>training managers</strong> who need to manage training for InForm, Central Designer, Central Coding, IRT, or UMT.</li>
+                    <li><strong>Delegated administrators</strong> who need to provision training administrators and managers in OHSIAMS Oracle Identity Self Service.</li>
+                    <li><strong>Clinical One user managers</strong> who need to provision users in Clinical One. 
+				</ul>
+                <br>
+                <p style="margin-left: 50px;">For the computer and browser requirements for using Clinical One, see the <a href="https://docs.oracle.com/health-sciences/clinical-one/release-notes/index.htm" style="text-decoration: none; color: #fff; border-bottom: #fff solid 1px;" target="_blank" alt="Clinical One Release Notes" title="Clinical One Release Notes">Oracle® Health Sciences Clinical One Release Notes</a>.</p>
+				<br>
+			</div>
+            <div class="overview">
+                <h3>How do I provision users?</h3>
+                <ul class="breadcrumb">
+					<li><a href="#step1"><b>1. </b>Overview of users and their tasks</a></li>
+					<li><a href="#step2"><b>2. </b>How to get access</a></li>
+					<li><a href="#step3"><b>3. </b>Make the roles available to Oracle</a></li>
+					<li><a href="#step4"><b>4. </b>Provision training administrators and managers</a></li>
+                    <li><a href="#step5"><b>5. </b>Create users in Clinical One</a></li>
+                </ul>
+                <br>
+				<h3>What are my tasks as a training administrator?</h3>
+                <ul class="breadcrumb">
+					<li><a href="#step6"><b>6. </b>Create a training study</a></li>
+                    <li><a href="#step7"><b>7. </b>Assign a training study to training managers</a></li>
+                </ul>
+                <br>
+                <h3>What are my tasks as a training manager?</h3>
+                <ul class="breadcrumb">
+                    <li><a href="#step8"><b>8. </b>Add trainees to a study, and assign training to them</a></li>
+					<li><a href="#step9"><b>9. </b>Assign additional training to one or more trainees</a></li>
+                    <li><a href="#step10"><b>10. </b>Send an email reminder to trainees</a></li>
+                    <li><a href="#step11"><b>11. </b>Run a training report</a></li>
+                    <li><a href="#step12"><b>12. </b>Change a trainee's name</a></li>
+                    <li><a href="#step13"><b>13. </b>Check a trainee's training status</a></li>
+                </ul>
+                <br>
+            </div>
+             
+        </section>
+
+	    <section id="navTrigger" class="anim">
+            <h2 data-overview="step1Overview">How do I provision users?</h2>
+
+            <div class="white_box" id="step1">
+                <h4><span class="lrg_number_circle">1</span>Overview of users and their tasks</h4><br>
+				<p style="margin-left: 0px;">Someone at your organization can have one or more of these roles:</p>
+                
+				<div class="check_circle" style="height: 15px;"><img src="images/check.png" alt="check mark"></div>
+				<p><strong>Delegated administrators</strong> work in <strong>OHSIAMS Oracle Identity Self Service</strong> and are responsible for:</p>
+				<ul style="margin-left: 90px;">
+				<li><p style="margin-left: 0px;">Provisioning user accounts for training administrators and training managers.</p></li>
+				<li><p style="margin-left: 0px;">Sharing the URL for Clinical One with all Clinical One user managers, training administrators, and training managers.</p></li>
+				</ul>
+				
+				<div class="check_circle" style="height: 15px;"><img src="images/check.png" alt="check mark"></div>
+				<p><strong>Clinical One user managers</strong> work in <strong>Clinical One</strong> and are responsible for:</p>
+				<ul style="margin-left: 90px;">
+				<li><p style="margin-left: 0px;">Assigning users the appropriate roles.</p></li>
+				</ul>
+				
+                <div class="check_circle" style="height: 15px;"><img src="images/check.png" alt="check mark"></div>
+				<p><strong>Training administrators</strong> work in <strong>Clinical One</strong> and are responsible for:</p>
+								<ul style="margin-left: 90px;">
+					<li><p style="margin-left: 0px;">Creating training studies for supported Oracle Health Sciences products.</p></li>
+					<li><p style="margin-left: 0px;">Assigning each training study to one or more training managers.</p></li>
+				</ul>
+
+				<div class="check_circle" style="height: 15px;"><img src="images/check.png" alt="check mark"></div>
+				<p><strong>Training managers</strong> work in <strong>Clinical One</strong> and are responsible for:</p>
+				<ul style="margin-left: 90px;">
+					<li><p style="margin-left: 0px;">Assigning training to trainees (not applicable for training associated with a study in the User Management Tool), and sending reminders about incomplete training.</p></li>
+					<li><p style="margin-left: 0px;">Checking the training that a trainee has completed, including running reports for assigned and completed training.</p></li>
+					<li><p style="margin-left: 0px;">Reviewing the twice-daily training completion reports that are sent over email, for your assigned studies.</p></li>
+				</ul>
+                <div class="check_circle" style="height: 15px;"><img src="images/check.png" alt="check mark"></div>
+                <p><strong>Trainees</strong> work in <strong>Health Sciences Learn</strong> to complete their training and are reponsible for:</p>
+				<ul style="margin-left: 90px;">
+					<li><p style="margin-left: 0px;">Signing in to Health Sciences Learn and completing their assigned training. After a training manager assigns training to a trainee or sends a reminder, the trainee receives an email with a link to Health Sciences Learn.</p>
+					<p style="margin-left: 0px;"><strong>Note</strong>: Trainees who don't have an Oracle account can create one for themselves by clicking the link in the email. They'll receive another email to verify their email address and then can take their assigned training.</p></li>
+				</ul>
+			</div>
+			
+			<div class="white_box" id="step2">
+                <h4><span class="lrg_number_circle">2</span>How to get access to OHSIAMS Oracle Identity Self Service and Clinical One</h4><br>
+                
+				<div class="check_circle"><img src="images/check.png" alt="check mark"></div>
+                <p><strong>OHSIAMS Oracle Identity Self Service</strong></p>
+                <p><strong>Who needs access?</strong> Delegated administrators.</p>
+                <p><strong>How do I get the product URL?</strong> You'll receive a welcome letter over email with the product URL.</p>
+                <p><strong>How do I get my user name and password?</strong> After Oracle creates your account in OHSIAMS Oracle Identity Self Service, you receive two emails, one with your user name and another with a temporary password and a link to reset your password.</p>
+                <p><strong>What if I want to add or change delegated administrators?</strong> Contact Oracle Support.</p><br>
+                <div class="check_circle"><img src="images/check.png" alt="check mark"></div>
+                <p><strong>Clinical One</strong></p>
+                <p><strong>Who needs access?</strong> Clinical One user managers, training administrators, and training managers.</p>
+                <p><strong>How do I get the product URL?</strong> The URL is sent to the delegated administrator, who is responsible for sharing it with all Clinical One users.</p>
+                <p><strong>How do I get my user name and password?</strong> After the delegated administrator creates your account in OHSIAMS Oracle Identity Self Service, you receive two emails, one with your user name and another with a temporary password and a link to reset your password.</p><br>
+            </div>			
+			
+			<div class="white_box" id="step3">
+                <h4><span class="lrg_number_circle">3</span>Make the roles available to Oracle (One-time only)</h4><br>
+				
+                <p id="left_align"><strong>Who does this?</strong> Your company's delegated administrator.</p>
+                <p id="left_align">Make <strong>ClinicalOne_Production</strong> and <strong>ClinicalOne_Production_AssignGlobalRoles</strong> available to Oracle so that they can be assigned to Health Sciences Support in case you need help.</p>
+				<p id="left_align"><strong>Tip:</strong> If your organization is already using Clinical One to deploy studies, you probably already published both of these roles, and you don't have to publish them again.</p><br>
+				<div class="check_circle">1.</div>
+                
+                <p>Open OHSIAMS Oracle Identity Self Service.</p><br>
+              <div class="check_circle">2.</div>
+                <p>Under the <strong>Administration</strong> menu on the left, click <strong>Roles</strong>.</p><br>
+              <div class="check_circle" style="height: 15px">3.</div>
+                <p>In the Search section, for <strong>Display Name</strong>:</p>
+					<div class="check_circle2">a.</div>				
+					<p>From the list, select <strong>Equals</strong>.</p>
+					<div class="check_circle2">b.</div>
+					<p style="margin-bottom: 10px;">In the field, type <strong>ClinicalOne_Production</strong>.</p>
+			  <div class="check_circle">4.</div>
+                <p>Click <strong>Search</strong>.</p><br>
+			  <div class="check_circle">5.</div>
+			    <p>In the Search Results, click the link in the <strong>Display Name</strong> column to open the role page.</p><br>
+			  <div class="check_circle">6.</div>
+			    <p>In the row of controls at the top of the role page, click <strong>Publish Role to External Organization</strong>.</p><br>
+			  <div class="check_circle">7.</div>
+				<p>Select the checkbox for the <strong>oracle</strong> organization.</p><br>
+			  <div class="check_circle">8.</div>
+				<p>Click <strong>Submit</strong>. A confirmation message appears at the bottom of the dialog box.</p><br>
+			  <div class="check_circle">9.</div>
+				<p>Repeat steps 3 to 8 for the <strong>ClinicalOne_Production_AssignGlobalRoles</strong> role (Display Name: <strong>AssignGlobalRoles</strong>).</p><br>           
+            </div>
+			
+				
+			
+			<div class="white_box" id="step4">
+                <h4><span class="lrg_number_circle">4</span>Provision training administrators and training managers in OHSIAMS Oracle Identity Self Service</h4><br>
+                
+				<p id="left_align"><strong>Who does this?</strong> A delegated administrator.</p>
+                <p id="left_align">If you previously managed training using User Management Tool, the Clinical One user managers, training administrators, and training managers at your organization might have already been created for you in OHSIAMS Oracle Identity Self Service. All you have to do is assign them the appropriate roles!</p><br>
+				<div class="check_circle">1.</div>
+                <p>Sign in to OHSIAMS Oracle Identity Self Service.</p><br>
+                <div class="check_circle">2.</div>
+                <p>Add any Clinical One user managers, training administrators, or managers who haven't yet been created.</p>
+                <p>For instructions on adding users, see <a href="https://docs.oracle.com/health-sciences/ohs-iams/admin-guide/toc.htm#IAMSA102" target="_blank">Create a user account</a> in the <em>Oracle Health Sciences Identity and Access Management Service Administrator Guide</em>.</p><br>
+				<div class="check_circle">3.</div>
+				<p style="padding-bottom: 5px;">For one Clinical One user manager (and that might be you), assign the <strong>AssignGlobalRoles</strong> role (its Display Name is <strong>AssignGlobalRoles</strong>, and its Name is <strong>ClinicalOne_Production_AssignGlobalRoles</strong>).</p>
+                <p><strong>Note:</strong> Your organization might have additional Clinical One user managers, but only one person needs the <strong>AssignGlobalRoles</strong> role. The role should be assigned to the person who will sign in to Clinical One first. Then that person can create other users, including additional Clinical One user managers, from within Clinical One.</p>
+				<div class="check_circle">4.</div>
+				<p style="padding-bottom: 5px;">For training administrators (including yourself, if you are both a delegated administrator and a training administrator for your organization), assign the <strong>ClinicalOne_Production</strong> role. 
+				<p><strong>Reminder:</strong> If you are already using Clinical One to deploy studies, you've probably set up the <strong>AssignGlobalRoles</strong> and <strong>ClinicalOne_Production</strong> roles so that all role assignments must be approved. For details about how to approve the assignments, see <a href="https://docs.oracle.com/health-sciences/ohs-iams/admin-guide/toc.htm#IAMSA139" target="_blank">Activate approval for a role</a> in the <em>Oracle Health Sciences Identity and Access Management Service Administrator Guide</em>.</p>
+				<div class="check_circle">5.</div>
+				<p>For training managers, assign the <strong>ClinicalOne_Production</strong> role.
+
+				<p class="training"><a href="https://apexapps.oracle.com/pls/apex/f?p=44785:265:0::::P265_CONTENT_ID:19014" target="_blank"><img src="common/images/youtube_blue.png" alt="YouTube logo" style="vertical-align: baseline;"> Watch training.</a></p>				
+            </div>
+            
+			<div class="white_box" id="step5">
+                <h4><span class="lrg_number_circle">5</span>Create users in Clinical One</h4><br>
+                <div>
+					<img src="images/create_ta_tm.png" class="img_right displayPopup" alt="Create users in Clinical One" title="Create users in Clinical One" data-popup="popup1">
+				</div>
+				<p id="left_align"><strong>Who does this?</strong> A Clinical One user manager. Don't forget to create your own account!</p><br>
+				<div class="check_circle">1.</div>
+                <p>Sign in to Clinical One.</p><br>
+                <div class="check_circle">2.</div>
+                <p>On the Home page, click <strong>Global Settings</strong>, along the top.</p><br>
+                <div class="check_circle">3.</div>
+                <p>Click <strong>Create Global User</strong>.</p><br>
+                <div class="check_circle">4.</div>
+                <p>From the <strong>Full Name</strong> drop-down, select the user's name.</p><br>
+                <div class="check_circle">5.</div>
+                <p>Click on the <strong>Global Roles</strong> field and select the appropriate role:</p>
+				<ul style="margin-left: 90px;">
+					<li><p style="margin-left: 0px;"><strong>Global User Manager</strong>: Assign this to Clinical One user managers at your organization, including yourself.</p></li>
+					<li><p style="margin-left: 0px;"><strong>Training Administrator</strong>: Assign this role to all training administrators.</p></li>
+					<li><p style="margin-left: 0px;"><strong>Training Manager</strong>: Assign this role to all training managers.</p></li>
+
+				</ul><br>
+                <p><strong>Tips:</strong> 
+				<ul style="margin-left: 90px;">
+				<li><p style="margin-left: 0px;">Users at your organization might have one, some, or all of these roles. And don't forget to assign these roles, as appropriate, to yourself.</p></li>
+				<li><p style="margin-left: 0px;">If someone has both the Training Administrator and Training Manager roles, they can see and manage all studies but receive the training completion report over email only for the studies they're assigned to.</p></li><br>
+				</ul>
+                <div class="check_circle">6.</div>
+                <p>Click <strong>Create</strong>.</p><br>
+                <div class="check_circle">7.</div>
+                <p>Create additional users as needed.</p><br>
+				
+				<p class="training"><a href="https://apexapps.oracle.com/pls/apex/f?p=44785:265:0::::P265_CONTENT_ID:23668" target="_blank"><img src="common/images/youtube_blue.png" alt="YouTube logo" style="vertical-align: baseline;"> Watch training.</a></p>				
+            </div>
+			
+	
+			
+			<p style="page-break-after:always;"></p>
+			
+		</section>
+
+			
+		<section id="navTrigger" class="anim">
+            <h2 data-overview="step2Overview">What are my tasks as a training administrator?</h2>
+	 			
+			<div class="white_box" id="step6">
+                <h4><span class="lrg_number_circle">6</span>Create a training study</h4><br>
+                <div><img src="images/create_training_study.png" class="img_right displayPopup" alt="Create a training study" title="Create a training study" data-popup="popup2"></div>
+                <p id="left_align"><strong>If Oracle hosts your study:</strong> The only training studies you need to create are for assigning training that isn't associated with a study, such as training for the User Management Tool (UMT) or for a release you're considering upgrading to. You assign training associated with a study in UMT, and you can view (but not change) it here. </p>
+                <p id="left_align"><strong>If your organization hosts your study:</strong> Create a training study so you can assign training for InForm, Central Designer, Central Coding, and IRT.</p><br>
+				<div class="check_circle">1.</div>
+                <p>Sign in to Clinical One, open the <strong>Training Study</strong> drop-down, and select <strong>Create Training Study</strong>.</p><br>
+                <div class="check_circle">2.</div>
+                <p>Enter the study name, and click <strong>Save</strong>.</p>
+                <p><strong>Tip:</strong> The study name you enter here is for tracking the study, and it doesn't need to match the actual study name. You cannot edit the study name after it is created.</p><br>
+                <div class="check_circle">3.</div>
+                <p>To create another study, click <strong>Create Another Study</strong>.</p>
+                <p>To return to the Home page, click <strong>Close</strong>.</p><br>
+				
+				<p class="training"><a href="https://apexapps.oracle.com/pls/apex/f?p=44785:265:0::::P265_CONTENT_ID:23658" target="_blank"><img src="common/images/youtube_blue.png" alt="YouTube logo" style="vertical-align: baseline;"> Watch training.</a></p>	
+				              
+            </div>
+			
+            <div class="white_box" id="step7" >
+                <h4><span class="lrg_number_circle">7</span>Assign the training study to training managers</h4><br>
+                <div><img src="images/assign_training_study_to_tm.png" class="img_right displayPopup" alt="Assign training study to training managers" title="Assign training study to training managerse" data-popup="popup3"></div>
+				 <p id="left_align">Assign a study to a training manager so that they can manage training for the study and receive the twice-daily training completion report over email.</p><br>
+				<div class="check_circle">1.</div>
+                <p>Sign in to Clinical One, open the <strong>Training Study</strong> drop-down, and select <strong>Assign Studies to Training Managers</strong>.</p><br>
+                <div class="check_circle">2.</div>
+                <p>In the table, locate the row for the user who will manage training for one or more studies, and click in the Study column for the user's row.</p>
+                <p>All studies that the user manages training for appear.</p><br>
+                <div class="check_circle">3.</div>
+                <p>Click again in the Study column for the user's row.</p>
+                <p>A list of all training studies appears.</p><br>
+				<div class="check_circle">4.</div>
+                <p>Select a study to assign it to the user. For multiple studies that need to be assigned to one or more users, repeat the process. </p>
+                <p><strong>Tip:</strong> You can assign a study to one or more training managers.</p><br> 
+                <div class="check_circle">5.</div>
+                <p>Click <strong>Save</strong>.</p><br>      
+
+				<p class="training"><a href="https://apexapps.oracle.com/pls/apex/f?p=44785:265:0::::P265_CONTENT_ID:23658" target="_blank"><img src="common/images/youtube_blue.png" alt="YouTube logo" style="vertical-align: baseline;"> Watch training.</a></p>	
+            </div>
+			
+			
+        </section>
+
+        <section id="navTrigger" class="anim">
+            <h2 data-overview="step3Overview">What are my tasks as a training manager?</h2> 
+        
+            <div class="white_box" id="step8" >
+                <h4><span class="lrg_number_circle">8</span>Add or remove trainees from a study, and assign training to them</h4><br>
+                <div style="display: inline-block; float: right;">
+					<img src="images/add_trainee.png" class="img_right displayPopup" alt="Add a trainee" title="Add a trainee" data-popup="popup4">
+					<img src="images/remove_trainee.png" class="img_right displayPopup" style="clear: both; margin-top: 150px;" alt="Remove trainee" title="Remove trainee" data-popup="popup4a">
+				</div>
+				<p id="left_align">If your Home page includes training studies created in User Management Tool (UMT): </p>
+				<ul style="margin-left: 40px;">
+					<li><p style="margin-left: 0px;">You cannot change the trainees or their training assignments.</p></li>
+					<li><p style="margin-left: 0px;">However, you can edit trainees' names, run reports, and receive the twice-daily training completion report over email.</p></li>
+				</ul>
+				<br>
+                <br>
+				<div class="check_circle">1.</div>
+                <p>Sign in to Clinical One, click the study settings button <img src="images/Settings_icon.gif" style="max-height: 20px; vertical-align: text-top;" title="Study settings icon" alt="Study settings icon, a cog"> for the study you want to add a trainee to, and select <strong>Open Settings</strong>.</p><br>
+                <div class="check_circle">2.</div>
+                <p>Click <strong>Add Trainee</strong>.</p><br>
+              <div class="check_circle" style="height: 15px;">3.</div>
+				<p style="font-weight: bold;">To add one trainee at a time:</p>
+					<div class="check_circle2">a.</div>				
+					<p>To the right above the table, click <strong>Add Row</strong>.</p>
+					<div class="check_circle2">b.</div>
+					<p style="margin-left: 110px;">In the blank row that appears in the table, enter details about the trainee and select the training the trainee must take.</p>
+					<div class="check_circle2">c.</div>
+                    <p>Repeat steps a and b to add more trainees, if necessary.</p>
+					<p style="margin-left: 110px"><strong>Tip:</strong> To assign a trainee to more than one course, add more rows with the same trainee details and a different course. Alternatively,  you can assign additional training once the trainee has been assigned to the first course.</p>
+					<div class="check_circle2">d.</div>
+					<p>After you're finished adding trainees, click <strong>Save</strong>.</p>
+                    <p style="margin-left: 110px;">An assignment email is sent to the trainee(s). The training is marked as <strong>Complete</strong> and no email is sent if the trainee completed the training in the last 12 months, as long as the trainee completed the training <strong>under the same email address</strong>.</p><br>
+
+				<p style="font-weight: bold;">To add multiple trainees at the same time:</p>
+					<div class="check_circle2">a.</div>				
+					<p style="margin-left: 110px">Click <strong>Training Assignment Template</strong>, and save the spreadsheet template to your computer.</p>
+                    <p style="margin-left: 110px"><strong>Tip:</strong> In the Google Chrome browser, downloaded files typically appear along the bottom of your browser window.</p>
+					<div class="check_circle2">b.</div>
+					<p style="margin-left: 110px">Fill in the fields in the spreadsheet. Make sure you enter details in all columns.</p>
+					<div class="check_circle2">c.</div>
+					<p>Complete, save, and close the spreadsheet.</p>	
+					<div class="check_circle2">d.</div>
+					<p>Click <strong>Upload File</strong>, and then navigate to and select the file.</p>
+                    <p style="margin-left: 110px">The details from the spreadsheet appear in the table.</p>
+                    <div class="check_circle2">e.</div>
+                    <p>Click <strong>Save</strong>.</p>
+                    <p style="margin-left: 110px;">An assignment email is sent to the trainee(s). The training is marked as <strong>Complete</strong> and no email is sent if the trainee completed the training in the last 12 months, as long as the trainee completed the training <strong>under the same email address</strong>.</p>
+                    <p><strong>Tip:</strong> To remove trainees from a study, select the trainees, and from the <strong>Manage Users</strong> drop-down, select <strong>Remove.</strong></p><br>
+				
+				<p class="training"><a href="https://apexapps.oracle.com/pls/apex/f?p=44785:265:0::::P265_CONTENT_ID:23659" target="_blank"><img src="common/images/youtube_blue.png" alt="YouTube logo" style="vertical-align: baseline;"> Watch training.</a></p>					
+          </div>
+
+            <div class="white_box" id="step9" >
+                <h4><span class="lrg_number_circle">9</span>Assign additional training to one or more trainees</h4><br>
+                <div><img src="images/assign_additional_training.png" alt="Assign additional training" height="332" class="img_right displayPopup" title="Assign additional training" data-popup="popup5"></div>
+				<p id="left_align">If your Home page includes training studies created in User Management Tool (UMT), you can't change training assingments here. You must perform this task in UMT.</p><br>
+				<div class="check_circle">1.</div>
+                <p>Sign in to Clinical One, click the study settings button <img src="images/Settings_icon.gif" style="max-height: 20px; vertical-align: text-top;" title="Study settings icon" alt="Study settings icon, a cog"> for a study, and select <strong>Open Settings</strong>.</p><br>
+                <div class="check_circle">2.</div>
+                <p>Select one or more trainees who need to be assigned the same training.</p><br>
+                <div class="check_circle">3.</div>
+                <p>From the <strong>Manage Users</strong> drop-down, select <strong>Assign Training</strong>.</p><br>
+				<div class="check_circle">4.</div>
+                <p>Click in the empty field, and select the appropriate training from the drop-down.</p><br>
+                <div class="check_circle">5.</div>
+                <p>Click <strong>Save</strong>.</p>
+              <p>An assignment email with the joining instructions is sent to the trainees, unless they have completed the training within the last 12 months. If a trainee has completed the training and the trainee has the same email address in both studies, the training status is marked as Complete.</p><br>              
+            </div>
+			
+			<div class="white_box" id="step10" >
+                <h4><span class="lrg_number_circle">10</span>Send an email reminder to trainees who haven't completed training</h4><br>
+                <div><img src="images/send_email_reminder.png" class="img_right displayPopup" alt="Send email reminder" title="Send email reminder" data-popup="popup6"></div>
+				<p id="left_align">You can send an email reminder for all training studies on your Home page, including any training studies created in UMT.</p><br>
+				<div class="check_circle">1.</div>
+                <p>Sign in to Clinical One, click the study settings button <img src="images/Settings_icon.gif" style="max-height: 20px; vertical-align: text-top;" title="Study settings icon" alt="Study settings icon, a cog"> for a study, and select <strong>Open Settings</strong>.</p><br>
+                <div class="check_circle">2.</div>
+                <p>Select the trainees who should receive the training email reminder.</p>
+                <p><strong>Tip:</strong> To select all trainees, select the column-level checkbox on the left in the table. Reminder emails are sent only to trainees who have incomplete training.</p><br>
+                <div class="check_circle">3.</div>
+                <p>From the <strong>Manage Users</strong> drop-down, select <strong>Send Email Reminder</strong>.</p><br>
+				
+				<p class="training"><a href="https://apexapps.oracle.com/pls/apex/f?p=44785:265:0::::P265_CONTENT_ID:22798" target="_blank"><img src="common/images/youtube_blue.png" alt="YouTube logo" style="vertical-align: baseline;"> Watch training.</a></p>	
+				              
+            </div>
+			<div class="white_box" id="step11" >
+                <h4><span class="lrg_number_circle">11</span>View a report of all assigned and completed training</h4><br>
+                <div><img src="images/view_report.png" class="img_right displayPopup" alt="View report" title="View report" data-popup="popup7"></div>
+				<p id="left_align">You can run training reports for all training studies owhich are assigned to you as a Training Manager.</p><br>
+				<div class="check_circle" style="height: 15px;">1.</div>
+				<p>To run a report:</p>
+					<div class="check_circle2">a.</div>				
+					<p>Sign in to Clinical One.</p>
+					<div class="check_circle2">b.</div>
+					<p>On the Home page, click <strong>Reports</strong>, along the top.</p>
+					<div class="check_circle2">c.</div>
+					<p>Select <strong>Health Sciences Learn Training Report</strong>.</p>
+              	    <div class="check_circle2">d.</div>
+					<p>On the right, make sure Settings is expanded, and fill in the fields.</p>
+                    <div class="check_circle2">e.</div>
+					<p>Click <strong>Run Report</strong>.</p>
+                    <p style="margin-left: 110px;"><strong>Tip:</strong> While the report is running, you can navigate away from the Reports page and continue working.</p><br>
+				<div class="check_circle" style="height: 15px;">2.</div>
+				<p>To download a report:</p>
+					<div class="check_circle2">a.</div>				
+					<p>In the lower right, expand Download Reports and locate the report.</p>
+                    <div class="check_circle2">b.</div>
+					<p>Click the <strong>Download</strong> link.</p>
+                    <p style="margin-left: 110px;"><strong>Tip:</strong> To view CSV, HTML, and PDF files, make sure your browser isn't blocking pop-ups.</p><br>         
+            <p id="left_align" style="margin-left: 60px;"><strong>Reminder:</strong> All dates in reports are in the UTC (Coordinated Universal Time) time zone, which corresponds to the Greenwich Mean Time zone.</p>
+			<p id="left_align" style="margin-left: 60px;"><strong>Note: </strong>Every 12 hours you receive a notification on your email for any completed training in your studies in the previous 12 hours.</p>
+			
+			<p class="training"><a href="https://apexapps.oracle.com/pls/apex/f?p=44785:265:0::::P265_CONTENT_ID:19588" target="_blank"><img src="common/images/youtube_blue.png" alt="YouTube logo" style="vertical-align: baseline;"> Watch training.</a></p>	
+			
+            </div>
+            <div class="white_box" id="step12" >
+                <h4><span class="lrg_number_circle">12</span>Change a trainee's name</h4><br>
+                <div><img src="images/change_trainee_name.png" class="img_right displayPopup" alt="Change a trainee's name" title="Change a trainee's name" data-popup="popup8"></div>
+				<p id="left_align">If your Home page includes training studies created in UMT, you have to change trainees' name in both places: UMT and Clinical One.</p><br>
+				<div class="check_circle">1.</div>
+                <p>Sign in to Clinical One, click the study settings button <img src="images/Settings_icon.gif" style="max-height: 20px; vertical-align: text-top;" title="Study settings icon" alt="Study settings icon, a cog"> for a study, and select <strong>Open Settings</strong>.</p><br>
+                <div class="check_circle">2.</div>
+                <p>Select the trainee.</p><br>
+                <div class="check_circle">3.</div>
+                <p>From the <strong>Manage Users</strong> drop-down, select <strong>Edit</strong>.</p><br>
+				<div class="check_circle">4.</div>
+                <p>Modify the details.</p><br>
+                <div class="check_circle">5.</div>
+                <p>Click <strong>Save</strong>.</p><br>              
+            </div>
+            <div class="white_box" id="step13" >
+                <h4><span class="lrg_number_circle">13</span>Check a trainee's training status</h4><br>
+                <div><img src="images/check_training_status.png" class="img_right displayPopup" alt="Check training status" title="Check training status" data-popup="popup9"></div>
+				<p id="left_align">You can check a trainee's status for all training studies on your Home page, including any training studies created in UMT.</p><br>
+				<div class="check_circle">1.</div>
+                <p>Sign in to Clinical One, click the study settings button <img src="images/Settings_icon.gif" style="max-height: 20px; vertical-align: text-top;" title="Study settings icon" alt="Study settings icon, a cog"> for a study, and select <strong>Open Settings</strong>.</p><br>
+                <div class="check_circle">2.</div>
+                <p>Select a trainee.</p><br>
+                <div class="check_circle">3.</div>
+                <p>On the right, make sure User Training is expanded.</p>
+				<p>All training assigned to the trainee is listed. If the user completed the training, the completion date appears. For incomplete training, the date the training was assigned appears.</p><br>             
+            </div>
+			         
+        </section>
+
+        <!-- DO NOT EDIT -->
+        <section class="anim2">
+            <div class="white_box2">
+                <h4><img src="common/images/green_check.png" valign="center" alt="green checkmark">&nbsp;You're done!</h4>
+            </div>
+        </section>
+
+        <p  style="page-break-before:always;"></p> 
+
+        <section class="anim">        
+            <h6>Find out more about <strong>Clinical One</strong>!</h6>
+            <div class="info_box" >
+
+                <!--
+                Links table - left column: Update the links below with service-specific versions. Note that this column is displayed 
+                over the right column defined below when the viewport size <1000px.
+                -->
+                <div class="bottomTableLeft">
+					<span class="h7" data-highlight="6">Get more information</span>
+                    <p><span data-highlight="4"> See the <a href="https://docs.oracle.com/health-sciences/clinical-one/index.html" target="_blank"> Oracle Health Sciences Clinical One</a> documentation library on the Oracle Help Center.<br>
+					</span></p>
+                    
+                    <span class="h7" data-highlight="5">Other resources</span>
+                    <p>Watch <a href="https://docs.oracle.com/health-sciences/clinical-one/clinicalone-training.htm" target="_blank">short training videos</a> on the Oracle Help Center.</p>
+                </div>
+
+                <!--
+                Links table - right column: Update the links below with service-specific versions. Note that this column is displayed 
+                under the left column defined above when the viewport size <1000px.
+                -->
+                <div class="bottomTableRight">
+                    <span class="h7" data-highlight="5">Contact Support</span>
+                    <p><span data-highlight="4">For assistance, contact <a href="https://www.oracle.com/us/support/contact/health-sciences-cloud-support/index.html" target="_blank">Health Sciences Cloud Support</a>.</span></p>
+                </div>
+				<div class="bottomTableRight">
+					<span class="h7" data-highlight="5">Can't find what you need?</span>
+					<p><span data-highlight="4">Write to us at <a href="mailto:clinical_one_doc_feedback_us_grp@oracle.com.?subject=Clinical%20One%20Documentation%20Suggestion">clinical_one_doc_feedback_us_grp@oracle.com</a>.</span></p>
+				</div>
+            </div>
+            <p>&nbsp;</p>
+
+            <!--
+            Footer: Leave the footer section as-is - do not update any links.
+            -->
+            <footer>
+                <div class="footlink"><a href="http://www.oracle.com/corporate/index.html" target="_blank">About Oracle</a> </div>
+                <div class="footlink"><a href="http://www.oracle.com/us/corporate/contact/index.html" target="_blank">Contact Us</a> </div>
+                <div class="footlink"><a href="http://www.oracle.com/us/legal/index.html" target="_blank">Legal Notices</a> </div>
+                <div class="footlink"><a href="http://www.oracle.com/us/legal/terms/index.html" target="_blank">Terms of Use</a> </div>
+                <div class="footlink"><a href="http://www.oracle.com/us/legal/privacy/index.html" target="_blank">Your Privacy Rights</a> </div>
+                <br>
+				<br>
+                <div class="footlink"><a href="http://www.oracle.com/pls/topic/lookup?ctx=cpyr&id=en">Copyright © 2018, Oracle and/or its affiliates. All rights reserved.</a></div>
+            </footer>
+
+        </section>
+
+    </article>
+
+
+    <!--
+    Overview popup: The titles in the following div must be an exact match to the titles in the div with class="overview" that appears earlier in the html.
+    -->
+    <div class="overview" class="popup" id="overview">
+		<h3>Provision users</h3>
+		<ul class="breadcrumb">
+			<li><a href="#step1"><b>1. </b>Overview of users and their tasks</a></li>
+			<li><a href="#step2"><b>2. </b>How to get access</a></li>
+			<li><a href="#step3"><b>3. </b>Make the roles available to Oracle</a></li>
+			<li><a href="#step4"><b>4. </b>Provision training administrators and managers</a></li>
+            <li><a href="#step5"><b>5. </b>Create users in Clinical One</a></li>
+		</ul>
+		<br>
+		<h3>What are my tasks as a training administrator?</h3>
+		<ul class="breadcrumb">
+			<li><a href="#step6"><b>6. </b>Create a training study</a></li>
+			<li><a href="#step7"><b>7. </b>Assign the training study to training managers</a></li>
+			
+		</ul>
+		<br>
+		<h3>What are my tasks as a training manager?</h3>
+		<ul class="breadcrumb">
+			<li><a href="#step8"><b>8. </b>Add trainees to a study, and assign training to them</a></li>
+			<li><a href="#step9"><b>9. </b>Assign additional training to one or more trainees</a></li>
+			<li><a href="#step10"><b>10. </b>Send an email reminder to trainees</a></li>
+            <li><a href="#step11"><b>11. </b>Run a training report</a></li>
+            <li><a href="#step12"><b>12. </b>Change a trainee's name</a></li>
+            <li><a href="#step13"><b>13. </b>Check a trainee's training status</a></li>
+		</ul>
+		<br>
+	</div>
+
+    <!--
+    Thumbnail popups: The following divs define the popup images displayed when the corresponding thumbnail images are clicked. Ensure
+    the id is the same as the one defined for the thumbnail in the steps above, and the image references and alt tags are updated.
+    -->
+    <div id="popup1" class="popup">
+        <img src="images/create_ta_tm.png" alt="Create users in Clinical One">
+    </div>
+
+	<div id="popup2" class="popup">
+		<img src="images/create_training_study.png" alt="Create a training study">
+    </div>
+   
+	<div id="popup3" class="popup">
+		<img src="images/assign_training_study_to_tm.png" alt="Assign training study to training managers">
+    </div>
+   
+	<div id="popup4" class="popup">
+			<img src="images/add_trainee.png" alt="Add a trainee">
+	</div> 
+	
+	<div id="popup4a" class="popup">
+			<img src="images/remove_trainee.png" alt="Remove trainee">
+	</div> 
+
+	<div id="popup5" class="popup">
+		<img src="images/assign_additional_training.png" alt="Assign additional training">
+	</div> 
+
+	<div id="popup6" class="popup">
+		<img src="images/send_email_reminder.png" alt="Send email reminder">
+	</div>
+
+	<div id="popup7" class="popup">
+		<img src="images/view_report.png" alt="View report">
+	</div>
+
+	<div id="popup8" class="popup">
+		<img src="images/change_trainee_name.png" alt="Change a trainee's name">
+	</div>
+
+	<div id="popup9" class="popup">
+		<img src="images/check_training_status.png" alt="Check training status">
+	</div>
+
+	<script language="javascript">
+        var s_prefix = "Infographic";
+        if (typeof (document.title) != "undefined") {
+            var s_pageName = s_prefix + ":" + document.title};
+    </script>
+    <script type="text/javascript" src="https://www.oracleimg.com/us/assets/metrics/ora_docs.js"></script>
+</body>
+</html>

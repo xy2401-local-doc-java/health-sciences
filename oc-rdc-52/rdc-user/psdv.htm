@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Using Source Data Verification</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2017-08-28T5:11:14Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Oracle&reg; Clinical Remote Data Capture Onsite User's Guide" />
+<meta name="dcterms.identifier" content="E86392-01" />
+<meta name="dcterms.isVersionOf" content="RDCOG" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;1996, 2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Index" href="index.htm" title="Index" type="text/html" />
+<link rel="Prev" href="reports.htm" title="Previous" type="text/html" />
+<link rel="Next" href="appendix1.htm" title="Next" type="text/html" />
+<link rel="alternate" href="RDCOG.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="RDCOG.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="RDCOG.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">18/21</span> <!-- End Header -->
+<div id="RDCOG506" class="chapter"><a id="CHDFEFAD"></a>
+<h1 class="chapter"><span class="secnum">13</span> Using Source Data Verification</h1>
+<p>In order to implement partial source data verification (PSDV) for a study site, the site must have a published SDV Plan. Default SDV plan selections for the study are made in Oracle Clinical in the DCI Form Local Study Settings form and in the Maintain Study DCIs form. You can then simultaneously create and publish SDV plans for each site in the study based on those default values, or you can create and publish an SDV plan for each site individually, using the Source Data Verification Plan page in RDC. In either case, you can use this page to make updates to the Study Site SDV Plan through the course of the study. For more information see <span class="italic">Setting Up Partial Source Data Verification</span> in <span class="italic">Oracle Clinical Creating a Study</span>.</p>
+<p>In Oracle Clinical Remote Data Capture, you can access the Source Data Verification (SDV) Plan page if you have either the BROWSE_SDVPLAN or UPDATE_SDVPLAN privilege. For an overview, see <a href="getstart.htm#CIHJIICE">"Source Data Verification Plan Page"</a>.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The Source Data Verification Plan tab is not available in RDC Test Mode.</div>
+<p>An SDV Plan can have two parts: a patient plan and a critical forms plan. The patient plan identifies a subset of patients that require 100% SDV, and the forms plan identifies forms that should be verified across all patients. For each type of plan, it is possible to have a published version, a draft version, and one or more obsolete versions.</p>
+<p>This chapter includes the following topics:</p>
+<ul>
+<li>
+<p><a href="#CJGEDGHI">Published, Draft, and Obsolete SDV Plan Versions</a></p>
+</li>
+<li>
+<p><a href="#CACFDJEI">Patient Plan</a></p>
+</li>
+<li>
+<p><a href="#CACHGGCF">Critical Forms Plan</a></p>
+</li>
+<li>
+<p><a href="#CACGDICC">Obsolete Plans</a></p>
+</li>
+<li>
+<p><a href="#CJGBBICJ">Using 100% Source Data Verification</a></p>
+</li>
+<li>
+<p><a href="#CJGFCIDF">Using Empty SDV Plans</a></p>
+</li>
+</ul>
+<a id="CJGEDGHI"></a>
+<div id="RDCOG507" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Published, Draft, and Obsolete SDV Plan Versions</h2>
+<p>The Source Data Verification Plan tab includes four links to view the published and draft versions of both patient and forms SDV plans. A fifth link provides access to all obsolete plan versions. A link is inactive if your site doesn't have that type of SDV plan. For example, if you don't have any draft patient plans for the current study site, the Patient Plan: Draft link is inactive.</p>
+<img width="617" height="46" src="img/sdv_vers.gif" alt="Surrounding text describes sdv_vers.gif." /><br />
+<p>Below are common workflows that include descriptions of how the links become active and inactive in the course of creating and updating SDV plan versions.</p>
+<a id="CJGDFAEF"></a>
+<div id="RDCOG508" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Updating a Published SDV Plan</h3>
+<p>Published plans cannot be updated directly. In order to make changes to a published SDV plan, you must first create a draft copy of the current plan, make your changes in the draft version, then publish the new version.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You may want to make changes soon after the initial SDV plans are published using the Oracle Clinical option to Publish SDV Plans for all Sites. In this case, when you select the Source Data Verification Plan tab in RDC, links for the published versions of both the patient and critical forms plan are enabled. The Draft plan links are disabled.</div>
+<p>Follow these steps to update a published SDV plan:</p>
+<ol>
+<li>
+<p>Open the published patient or critical forms plan you want to update.</p>
+</li>
+<li>
+<p>Click on <span class="bold">Create a New Version</span> to create a draft version of the plan.</p>
+</li>
+<li>
+<ul>
+<li>
+<p>A copy of the published plan is created with an incremented version number.</p>
+</li>
+<li>
+<p>RDC navigates to the Draft plan page so that you can edit the draft copy.</p>
+</li>
+<li>
+<p>The published plan version remains in effect while you work on the draft version. At this point, both the Published and Draft links for the plan are enabled.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>In the draft version, make the required updates. You can save the draft version without having to publish it.</p>
+</li>
+<li>
+<p>When you are satisfied with your updates, select the <span class="bold">Publish</span> option from the Actions drop-down.</p>
+<p>With publication, the Draft plan link is disabled, and RDC navigates back to the Published plan page where the newly published plan version is displayed. The previously published version of the plan is automatically obsoleted and can be viewed in the Obsolete Plans page.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<div id="RDCOG509" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref1257"></a>
+<h3 class="sect2">Creating a New SDV Plan</h3>
+<p>You may want to create and publish SDV plans for each study site individually, instead of using the Oracle Clinical option to Publish SDV Plans for all Sites. In this case, when you first select the Source Data Verification Plan tab in RDC, the Draft plan links for both Patient and Critical Forms plans are enabled, and the Published and Obsolete plan links are disabled.</p>
+<p>Follow these steps to create and publish a new SDV plan:</p>
+<ol>
+<li>
+<p>Select the <span class="bold">Draft</span> link for either the patient or critical forms plan.</p>
+<p>At this point, the upper right corner of the page displays either <span class="italic">No Patient SDV Plan created</span> or <span class="italic">No Forms SDV Plan created</span>, depending on the page you have selected. The Draft Patient Plan page shows the default values that have been specified for the study in Oracle Clinical: <span class="italic">Number of initial patients</span>, <span class="italic">Patient auto-select rate</span>, <span class="italic">Exclude batch-loaded CRFs?</span>, and <span class="italic">Exclude non-migrated CRFs?</span>. The Draft Critical Forms Plan page identifies the CRFs that were identified in Oracle Clinical as critical for the study.</p>
+</li>
+<li>
+<p>You can save the plan in its current state with the default values in place, override default selections, or make additional selections.</p>
+</li>
+<li>
+<p>When you are satisfied with your plan, select the <span class="bold">Publish</span> option from the Actions drop-down.</p>
+<p>With publication, the Draft plan link becomes disabled, and RDC navigates to the Published plan page, where the newly published plan version 1 is displayed.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CACFDJEI"></a>
+<div id="RDCOG510" class="sect1">
+<h2 class="sect1">Patient Plan</h2>
+<p>The Patient Plan panel includes the following sections:</p>
+<ul>
+<li>
+<p>Initial patient count and/or auto-select rate (auto-select section).</p>
+</li>
+<li>
+<p>Patient SDV selection status &mdash; In both the draft and published patient plan pages, this table of patients reports the current SDV eligibility and SDV selection status for each patient. In a draft plan version patients can be manually selected for SDV, and the Pending Action column shows your new selection or exclusion. The draft version of the plan lists all patients assigned to the site. The published version of the plan only lists the patients that are selected for SDV.</p>
+</li>
+<li>
+<p>Active SDV Patients report &mdash; This report shows the number of patients that are both SDV Eligible and selected for SDV (active SDV patients) and gives the breakdown of this count by selection type (Initial, Auto-Selected, Imported, or (manually) Selected.</p>
+</li>
+</ul>
+<img width="686" height="340" src="img/psdv_opt.gif" alt="Description of psdv_opt.gif follows" /><br />
+<a id="sthref1258" href="img_text/psdv_opt.htm">Description of the illustration ''psdv_opt.gif''</a><br />
+<br />
+<div id="RDCOG511" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref1259"></a>
+<h3 class="sect2">Patient Plan Draft</h3>
+<p>You use the draft patient plan page to create the initial patient SDV plan for a site or to make changes to the published plan version. You can perform the following actions in a draft patient SDV plan:</p>
+<ul>
+<li>
+<p>Change the initial patient count and the auto-selection rate, or both &mdash; If no patients require 100% SDV for this site, set both the auto-select rate and initial number of patients selected to 0. This is an <span class="italic">empty</span> plan. See <a href="#CJGFCIDF">"Using Empty SDV Plans"</a> for more details.</p>
+</li>
+<li>
+<p>Choose between CRF options &mdash; You can exclude batch-loaded or non-migrated CRFs from the SDV requirement even for patients requiring 100% SDV.</p>
+</li>
+<li>
+<p>Patient selection actions &mdash; You can manually select patients for SDV using the Patient Selection table. To do so, first select a patient by clicking anywhere in the patient row. You can use Shift+click or Ctrl+click to select multiple patient rows. Then choose <span class="bold">Select</span> from the Actions drop-down list for this table. Your selection, if valid, is saved in the Pending Action column for each patient affected. If the action was not valid for one or more patients, you are notified to go to the action log to view the error message(s). Other actions are available and valid for a selected patient as follows:</p>
+<ul>
+<li>
+<p><span class="bold">Select</span> is valid for any patient with a selection status of null or excluded.</p>
+</li>
+<li>
+<p><span class="bold">Exclude</span> is valid for a patient having any status except excluded.</p>
+</li>
+<li>
+<p><span class="bold">Undo select</span> is valid for a manually selected or imported patient.</p>
+</li>
+<li>
+<p><span class="bold">Undo exclude</span> is valid for an excluded patient.</p>
+</li>
+</ul>
+<p>Other patient selection actions are also available. The <span class="bold">Clear Pending</span> action can be used to undo a previous action. This has an effect only for patients which have a value in the Pending Action column. <span class="bold">View Action Log</span> allows you to view any errors resulting from the last action.</p>
+</li>
+<li>
+<p>Plan actions &mdash; You can validate the changes and publish the plan after changing the plan parameters using the <span class="bold">Validate</span> and <span class="bold">Publish</span> actions, respectively. If the validation returns error messages, they are added to the Validation log. You can view the log by selecting <span class="bold">View Validation Log</span>. When you publish the plan without getting any errors, the Published plan page comes into focus.</p>
+<p>In addition to the <span class="bold">Refresh</span>, <span class="bold">Save</span> and <span class="bold">Cancel</span> actions, if you have the ADMIN_SDVPLAN privilege for the study or site, you can also <span class="bold">Unlock</span> an SDV plan. This situation can occur if several users simultaneously open a Draft plan for update.</p>
+</li>
+<li>
+<p>Review current patient SDV status &mdash; In the Patient Selection table, the columns Selection Status, SDV Eligibility, Proc Vers, and Active SDV? all provide you with information about the current SDV status of each patient.</p>
+<p>The Selection Status column can contain any of the values listed below:</p>
+</li>
+<li>
+<ul>
+<li>
+<p>null &mdash; The patient is not selected for 100% SDV.</p>
+</li>
+<li>
+<p>Initial &mdash; The patient was auto-selected for SDV as one of the first n patients to become SDV-eligible for this site, where n was specified in a published patient SDV plan.</p>
+</li>
+<li>
+<p>Auto-Selected &mdash; The patient was auto-selected for SDV based on the auto-select rate specified in the published patient SDV plan.</p>
+</li>
+<li>
+<p>Selected &mdash; You manually selected the patient for SDV using this page.</p>
+</li>
+<li>
+<p>Imported &mdash; The patient was selected for SDV as part of a patient list imported using Oracle Clinical's Load Patient SDV Attributes job.</p>
+</li>
+<li>
+<p>Excluded &mdash; You manually excluded the patient for SDV using this page.</p>
+</li>
+<li>
+<p>Import Excluded &mdash; The patient was excluded from SDV as part of a patient list imported using Oracle Clinical's Load Patient SDV Attributes job.</p>
+</li>
+</ul>
+<p>The SDV Eligibility column can be null, show an eligibility date, or specify <span class="italic">failed</span> plus the date when the patient became ineligible for SDV.</p>
+<p>The Active SDV? column can contain the following:</p>
+<ul>
+<li>
+<p>Active &mdash; The patient is both eligible and selected for SDV. These are the patients that are retrieved when an RDC user searches for patients requiring 100% SDV.</p>
+</li>
+<li>
+<p>Not eligible yet &mdash; Indicates that the patient was manually selected or imported for SDV, but is not yet eligible for SDV. Patients with this status are not retrieved when an RDC user searches for patients requiring 100% SDV.</p>
+</li>
+<li>
+<p>Failed eligibility &mdash; Indicates that the patient was manually selected or imported for SDV, but failed SDV eligibility. Patients with this status are not retrieved when an RDC user searches for patients requiring 100% SDV.</p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<div id="RDCOG512" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref1260"></a>
+<h3 class="sect2">Patient Plan Published</h3>
+<p>The published version of the plan cannot be edited, so neither the Action drop-down list or Pending Action column are visible. You can press the <span class="bold">Create a New Version</span> button to copy the plan and create a draft version which you can edit. See <a href="#CJGDFAEF">"Updating a Published SDV Plan"</a> for more information on how to do this. If you already have a draft version, you have the option to overwrite it.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CACHGGCF"></a>
+<div id="RDCOG513" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Critical Forms Plan</h2>
+<p>The Critical Forms Plan panel (Critical Forms for All Patients) includes the list of forms (DCIs) defined for the study, which in a draft plan can be selected for SDV.</p>
+<div id="RDCOG514" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref1261"></a>
+<h3 class="sect2">Critical Forms Plan Draft</h3>
+<p>You use the draft critical forms plan page to create the initial forms SDV plan for a site or to make modifications to the current published plan version.</p>
+<a id="CACGGAGB"></a>
+<div id="RDCOG515" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Review Exclusion Options</h4>
+<p>The settings Exclude batch-loaded CRFs? and Exclude non-migrated CRFs? can only be updated in the Patient SDV Plan, but are displayed in the Forms plan, because they apply to both plans. In other words, if you have a form X that requires source data verification across all patients, and the setting for Exclude batch-loaded CRFs? is checked, the form X will not be identified as requiring SDV in any case where the form content is batch-loaded.</p>
+<p>If you are not using a Patient SDV plan, you can create an otherwise empty patient plan specifically to check or uncheck the Exclusion options. See <a href="#CJGFCIDF">"Using Empty SDV Plans"</a> for details.</p>
+</div>
+<!-- class="sect3" -->
+<div id="RDCOG516" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref1262"></a>
+<h4 class="sect3">Select Critical Forms for SDV</h4>
+<p>You can select critical forms that require SDV across all patients for the site using the Form Selection table. First select a CRF by clicking anywhere in the CRF row, then Shift+click or Ctrl+click to select multiple CRF rows. Then choose <span class="bold">Select</span> (or <span class="bold">Undo select</span>) from the Actions drop-down list for this table. Your selection is saved in the Pending Action column for each CRF you selected. If you want to renounce the selection, use the <span class="bold">Clear Pending</span> action. This only affects CRFs with a value in the Pending Action column.</p>
+<img width="909" height="596" src="img/cfdr_sdvplan.gif" alt="Description of cfdr_sdvplan.gif follows" /><br />
+<a id="sthref1263" href="img_text/cfdr_sdvplan.htm">Description of the illustration ''cfdr_sdvplan.gif''</a><br />
+<br /></div>
+<!-- class="sect3" -->
+<div id="RDCOG517" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref1264"></a>
+<h4 class="sect3">Review the Current CRF SDV Selection Status</h4>
+<p>In the Form Selection table, the columns Selection Status and Selection Source are presented to provide you with information about the current SDV status of each form, based on the currently published plan. The selection status can be either null or selected. The Selection Source column indicates whether the selection was made in Oracle Clinical for the study as a whole, or in the site-specific forms SDV plan, using this page.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<div id="RDCOG518" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref1265"></a>
+<h3 class="sect2">Critical Forms Plan Published</h3>
+<p>In the published version of the critical forms plan, the Action drop-down list and Pending Action column are not available because this is a read-only version. You can press the <span class="bold">Create a New Version</span> button to copy the plan and create a draft version which you can edit. See <a href="#CJGDFAEF">"Updating a Published SDV Plan"</a> for more information. If you already have a draft version, you have the option to overwrite it.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CACGDICC"></a>
+<div id="RDCOG519" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Obsolete Plans</h2>
+<p>In this tab you can find a list of all the previously published SDV plans, both patient plans and critical form SDV plans. When you select the row of a patients plan from the table, the Patients panel opens, showing the plan metrics from when that version became obsolete. If you select a critical forms plan, the Critical Forms panel expands, showing the forms that were selected for SDV at the time that plan version became obsolete.</p>
+</div>
+<!-- class="sect1" -->
+<a id="CJGBBICJ"></a>
+<div id="RDCOG520" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Using 100% Source Data Verification</h2>
+<p>If all of your sites require 100% SDV, it is not required that you publish any type of SDV plan. With no published SDV plan, an RDC search for CRFs requiring verification will retrieve all CRFs, but you cannot search for patients requiring 100% SDV.</p>
+<p>To enforce 100% SDV only for some sites, create a patient SDV plan for those sites and set the patient auto-selection rate to 100%. That way your intentions are explicit and you have access to search and filtering options. You do not also need a critical forms SDV plan in this case because all CRFs must be verified for all patients.</p>
+</div>
+<!-- class="sect1" -->
+<a id="CJGFCIDF"></a>
+<div id="RDCOG521" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Using Empty SDV Plans</h2>
+<p>RDC allows you to publish a patient SDV plan without a critical forms SDV plan, and the other way around. This might produce unintended consequences that you can avoid by using empty SDV plans. An empty patient SDV plan is one in which both the initial patient count and the auto-select rate are zero and no individual patients are manually selected or imported. An empty critical forms SDV plan is one in which no forms are selected.</p>
+<p>Consider using empty SDV plans in the following circumstances:</p>
+<ul>
+<li>
+<p>If you want to be explicit about not having SDV requirements, you can publish a blank patient SDV plan, a blank critical forms SDV plan, or both. Publishing empty plans ensures that search is available in the RDC search pane and that the appropriate review data is displayed in the Single Patient Casebook Page, even if these values are zero.</p>
+</li>
+<li>
+<p>If you do not require 100% patient SDV and do not have a patient SDV plan, but want to exclude batch-loaded or non-migrated CRFs from the critical forms SDV plan, you can create an empty patient plan to set the CRF exclusion options. See <a href="#CACGGAGB">"Review Exclusion Options"</a> for details.</p>
+</li>
+<li>
+<p>If no patients require 100% SDV, but critical forms do require SDV across all patients, publish an empty patient plan to maintain consistency in the RDC search pane from one site to the next. Otherwise, the option to search for <span class="italic">Patients requiring 100% SDV</span> is not available for the site, but is available for other sites where a patient plan is published.</p>
+</li>
+<li>
+<p>If none of your sites require a selection of patients for 100% SDV, you can publish a critical forms SDV plan for each site with no accompanying patient SDV plan. This means that no patients require 100% SDV at any site, and RDC users will not have the option to search for <span class="italic">Patients requiring 100% SDV</span> at any site.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment1">
+<tr>
+<td class="cellalignment10">
+<table class="cellalignment6">
+<tr>
+<td class="cellalignment5"><a href="reports.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment5"><a href="appendix1.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;1996, 2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment12">
+<table class="cellalignment4">
+<tr>
+<td class="cellalignment5"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment5"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment5"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment5"><a href="index.htm"><img width="24" height="24" src="../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td class="cellalignment5"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

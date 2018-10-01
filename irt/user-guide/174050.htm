@@ -1,0 +1,64 @@
+&#xfeff;<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="EN" xmlns="http://www.w3.org/1999/xhtml" xml:lang="EN">
+<head>
+<title> Adding a new supply type </title>
+<meta name="Generator" content="Author-it" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="Keywords" content=""/>
+<script language="javascript" type="text/javascript" charset="UTF-8" src="dhtml_toc.js"></script>
+<script language="javascript" type="text/javascript" charset="UTF-8" src="open_parent.js"></script>
+<script language="javascript" type="text/javascript" charset="UTF-8" src="dhtml_load.js"></script>
+<script language="javascript" type="text/javascript" charset="UTF-8" src="dhtml_search.js"></script>
+<link rel="stylesheet" type="text/css" href="newwave.css"/>
+<link rel="stylesheet" type="text/css" href="index_stylesheet.css"/>
+<base target="CONTENT"/>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body onload="loadParent();;bodyLoad();;;if (isTOCLoaded()) {expand('165600');expand('165445');expand('165624');highlight('174050')}" text="#000000" link="#0000A0" alink="#008000" vlink="#FF0000">
+	<div id="searchResultsNone"></div>
+	<div id="content" style="padding-bottom: 50px;">
+		<table summary="" class="relatedtopics aboveheading" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td width= "18">
+<p class="bodytext"><a href="173713.htm" target="_self"><img width="34" height="34" src="125.gif" alt="Previous Topic" vspace="0" hspace="0" align="bottom" border="0" /></a></p></td>
+<td width= "18">
+<p class="bodytext"><a href="165632.htm" target="_self"><img width="33" height="34" src="124.gif" alt="Next Topic" vspace="0" hspace="0" align="bottom" border="0" /></a></p></td>
+<td width= "48">
+<p class="bodytext"><a href="javascript:expand('165600');expand('165445');expand('165624');highlight('174050')" onclick="loadTOC()" target="_self"><img width="165" height="27" src="122.gif" alt="Book Contents" vspace="0" hspace="0" align="bottom" border="0" /></a></p></td>
+</tr>
+</table>
+<h4 class="heading4">Adding a new supply type</h4>
+<p class="bodytext">Before you can add a new supply type, you must <a id="h124364" class="jumptemplate-noheadingtext" title="Setting a site supply type" href="165833.htm" target="_self">add the list of available supply types to the site</a>. The supply type defines the drug order parameters that control how resupply orders are handled for the site.</p>
+<p class="note"><strong class="specialbold">Caution:</strong> If the minimum buffer quantity is greater than or equal to the initial quantity, extra supplies might be sent to sites to resupply the site up to the maximum buffer quantity.</p>
+<p class="bodytext"></p>
+<ol class="listnumber"><li class="listnumber">Click <strong class="buttons">Supplies</strong> (<img width="24" height="24" src="167485.gif" alt="Sites tab (main menu)" vspace="0" hspace="0" align="bottom" border="0" />).</li><li class="listnumber">On the left, in the <strong class="buttons">Inventory</strong> section, select <strong class="buttons">Resupply Setting</strong>.<p class="listcontinue">For descriptions of the fields on this page, see <a id="h169649" class="jumptemplate-noheadingtext" title="Resupply Setting page" href="174174.htm" target="_self">Resupply Setting page</a>.</p>
+</li><li class="listnumber">Select the resupply strategy you want to use:<ul class="listbullet2"><li class="listbullet2"><strong class="specialbold">Buffer Resupply</strong>&mdash;Uses the MinB and MaxB only; patient visits do not affect the orders.</li><li class="listbullet2"><strong class="specialbold">Projection Resupply</strong>&mdash;Uses the entire resupply model; orders are based on patient visits.</li></ul></li><li class="listnumber">Click <strong class="buttons">Add New Resupply Type</strong>.</li><li class="listnumber">In the <strong class="buttons">Resupply Name</strong> field, type a descriptive name for the resupply type.</li><li class="listnumber">For prediction supply orders, to the right of the <strong class="buttons">Drug Type</strong>:<ul class="listbullet2"><li class="listbullet2">Type a number in the <strong class="buttons">Trigger Weeks</strong> field to set up the minimum number of weeks of supply required to be available at the site at all times.</li><li class="listbullet2">Type a number in the <strong class="buttons">Resupply Weeks</strong> field to set up the maximum weeks of supply at a site as a result of a resupply order.</li></ul><p class="listcontinue">The <strong class="buttons">Resupply Weeks</strong> value must be greater than or equal to the <strong class="buttons">Trigger Weeks</strong> value.</p>
+</li><li class="listnumber">Type the <strong class="buttons">Min Buffer</strong> and <strong class="buttons">Max Buffer</strong> to identify the minimum and maximum number of extra drug units to add to the drug order to account for unpredictable events, such as new subjects who need to be randomized and lost or damaged supplies.<p class="listcontinue">The <strong class="buttons">Max Buffer </strong>must be equal to or greater than the <strong class="buttons">Min Buffer</strong>.</p>
+</li><li class="listnumber">Type the quantity for the initial order that is sent when the site is activated or the first subject is screened.</li><li class="listnumber">Click <strong class="buttons">Submit</strong>.</li></ol>
+
+		
+	</div>
+	<div id="feedback"><a href="mailto:inform_doc_feedback_grp@oracle.com?Subject=Comments about the IRT 5.6 User Guide - Adding a new supply type" target="_top"><img width="24" height="108" src="feedback.gif" alt="Send Feedback"></a>
+	</div>
+	
+	<div id="foot">		
+			<ul style="padding: 0;">
+				<li class="footer" style="padding: 0 7px 0 0;"><a href="217485.htm">Access to Oracle Support</a></li>
+				<li class="footer"><a href="http://www.oracle.com/pls/topic/lookup?ctx=acc&id=docacc" target="_blank">Accessibility</a></li>
+				<li class="footer" style="border-right-style: none;"><a href="217488.htm">Legal Notices</a></li>
+			</ul>
+			<p style="font-size:12px;">Copyright &copy; 2015, 2018 Oracle and/or its affiliates. All rights reserved.</p>
+	</div>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>
+<footer>
+</footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+<script>$(document).foundation();</script>
+</body>
+</html>

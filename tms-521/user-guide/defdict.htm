@@ -1,0 +1,2012 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Defining and Loading Dictionaries</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2018-02-27T10:10:48Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Thesaurus Management System User's Guide" />
+<meta name="dcterms.identifier" content="E61918-02" />
+<meta name="dcterms.isVersionOf" content="TMSUG" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;1999, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Index" href="index.htm" title="Index" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="integ.htm" title="Previous" type="text/html" />
+<link rel="Next" href="defmisc.htm" title="Next" type="text/html" />
+<link rel="alternate" href="TMSUG.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="TMSUG.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="TMSUG.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">10/25</span> <!-- End Header -->
+<div id="TMSUG11460" class="chapter"><a id="BABEIAHC"></a>
+<h1 class="chapter"><span class="secnum">6</span> Defining and Loading Dictionaries</h1>
+<p>Oracle Thesaurus Management System (TMS) enables you to design, define, and load dictionary data into its repository.</p>
+<p>You must have the <a id="sthref303"></a>tms_define_priv role to define dictionaries and domains. See <a href="admin.htm#CDCGFIHI">Chapter 3, "Administration"</a> for information on granting this role to users.</p>
+<p>This section includes:</p>
+<ul>
+<li>
+<p><a href="#CHDIJABC">Dictionary Types</a></p>
+</li>
+<li>
+<p><a href="#i1004601">Planning Strong Dictionary Structure</a></p>
+</li>
+<li>
+<p><a href="#i1001502">Defining a Dictionary</a></p>
+</li>
+<li>
+<p><a href="#CHDJIBAF">Defining Dictionary-wide Informative Notes Before Activation</a></p>
+</li>
+<li>
+<p><a href="#CHDGECHB">Loading a Dictionary</a></p>
+</li>
+<li>
+<p><a href="#CHDCGAED">Activating Loaded Terms</a></p>
+</li>
+<li>
+<p><a href="#CHDIGJDE">Evaluating Dictionary Contents</a></p>
+</li>
+<li>
+<p><a href="#BABCFJDB">Defining Links Between Dictionaries</a></p>
+</li>
+<li>
+<p><a href="#i1009237">Creating Domains and Assigning Dictionaries to Domains</a></p>
+</li>
+</ul>
+<a id="CHDIJABC"></a>
+<div id="TMSUG11461" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Dictionary Types<a id="sthref304"></a></h2>
+<p>You can define the following types of dictionaries:</p>
+<ul>
+<li>
+<p><a href="#i1004784">Strong Dictionaries</a></p>
+</li>
+<li>
+<p><a href="#CHDCADAG">Weak Dictionaries</a></p>
+</li>
+<li>
+<p><a href="#i1004785">Virtual Dictionaries</a></p>
+</li>
+<li>
+<p><a href="#CHDBEJJJ">Filter Dictionaries</a></p>
+</li>
+<li>
+<p><a href="#CHDCHECF">Nonunique Coding Level Dictionaries</a></p>
+</li>
+</ul>
+<a id="i1004784"></a>
+<div id="TMSUG11462" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Strong<a id="sthref305"></a> <a id="sthref306"></a>Dictionaries</h3>
+<p>A strong dictionary definition in TMS consists of a fixed number of hierarchical levels with defined relations between the levels. You store every dictionary term in a particular level and define relations from each term to terms in other levels, according to the relations you have defined for the levels themselves. This type of TMS dictionary definition is appropriate for external dictionaries such as MedDRA and WHO-Drug.</p>
+<p>Strong dictionaries can serve as the base for creating virtual dictionaries and filter dictionaries; see <a href="#i1004785">"Virtual Dictionaries"</a> and <a href="#CHDBEJJJ">"Filter Dictionaries"</a>.</p>
+<p>For more information, see <a href="#i1004601">"Planning Strong Dictionary Structure"</a>.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CHDCADAG"></a>
+<div id="TMSUG11463" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Weak<a id="sthref307"></a> <a id="sthref308"></a><a id="sthref309"></a>Dictionaries<a id="sthref310"></a><a id="sthref311"></a></h3>
+<p>Some external dictionaries, such as SNOMED, require a different type of structure, one that is dynamically created by relations between terms. TMS supports these with <span class="italic">weak</span> dictionaries and <span class="italic">named relations</span> between terms.</p>
+<p>Where strong dictionaries have fixed hierarchies, represented by levels, weak dictionary have dynamic hierarchies, which are variable. For example, a strong dictionary with four levels from the coding level to the highest derivation level will only have four terms in a hierarchical chain:</p>
+<br />
+Level 1 - Term 1<br />
+Level 2 - Term 2<br />
+Level 3 - Term 3<br />
+Level 4 - Term 4<br />
+<p>A weak dictionary does not depend on dictionary levels to identify the hierarchy. The hierarchical structure of the dictionary is defined by the relationships permitted and used in the dictionary. Named relations describe the connection between terms. For example, you can use the named relation <span class="bold">Narrower term</span> to link the terms "aspirin" and "pain reliever," or the named relation <span class="bold">Is part of</span> to define a hierarchical series of relations as follows:</p>
+<br />
+Term 1 - is part of - Term 2<br />
+Term 2 - is part of - Term 3<br />
+Term 3 - is part of - Term 4<br />
+Term 4 - is part of - Term 5<br />
+Term 5 - is part of - Term 6<br />
+<p>In the above example, the number of terms that can be linked in a hierarchical chain is not limited by the number of levels. In fact, all of the terms (1 through 6) are on the same level, and the length of the hierarchical chain is unlimited. Dictionaries with this characteristic are called <span class="italic">dynamic.</span></p>
+<p>TMS requires that each dictionary definition have at least one level to contain dictionary terms. If your dictionary is really a collection of dynamic dictionaries, you can define a TMS dictionary level for each component dictionary and fully define the dynamic dictionary within that level. (Do not define level relations as you do in strong dictionaries.) If your dictionary is a single dynamic dictionary, define a single dictionary level for it. You can define named relations between terms in the same or different levels of a weak dictionary, as business needs dictate.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You cannot code verbatim terms against weak dictionaries because they do not have a specific classification level.</div>
+<p>See <a href="defmisc.htm#i1003246">"Defining Named Relations"</a> for more information.</p>
+</div>
+<!-- class="sect2" -->
+<a id="i1004785"></a>
+<div id="TMSUG11464" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Virtual <a id="sthref312"></a>Dictionaries <a id="sthref313"></a></h3>
+<p>Base dictionaries usually contain the latest dictionary and verbatim terms, because they are updated on an ongoing basis. These dictionaries are useful for studies that require the most up-to-date dictionary information.</p>
+<p>By contrast, virtual dictionaries have defined cut-off dates, after which no dictionary terms can be added. Using a virtual dictionary enables you to continue coding verbatim terms for a clinical study against one version of a dictionary while the base dictionary changes. You can also use virtual dictionaries to view the state of a dictionary's terms and relations for any date in that dictionary's history. Virtual dictionaries can only be based on a single, active base dictionary, from which the virtual dictionary inherits its definition.</p>
+<p>To set up a virtual dictionary in TMS, choose a base dictionary (and activate it, if the base dictionary is still provisional), define the virtual dictionary's name and cut-off date, and assign the virtual dictionary to a domain (see <a href="#CHDCFCCI">"Assigning a Dictionary to a Domain"</a>).</p>
+<ol>
+<li>
+<p>Define and activate the base dictionary on which you want to base the virtual dictionary; see <a href="#i1001502">"Defining a Dictionary"</a> and set it to active; see <a href="#i1008334">"Setting the Dictionary's Status to Active"</a>.</p>
+</li>
+<li>
+<p>Load data into the base dictionary and activate the data; see <a href="#CHDGECHB">"Loading a Dictionary"</a>.</p>
+</li>
+<li>
+<p>With the base dictionary displayed in the Base Dictionary tab of the Define Dictionaries window, click the Virtual Dictionaries tab.</p>
+</li>
+<li>
+<p>From the <span class="bold">Record</span> menu, choose <span class="bold">Insert Record</span>. The system displays values for most fields that are inherited from the base dictionary. You can modify the Short Name, Name, and Description to make them more meaningful.</p>
+</li>
+<li>
+<p>Define a <span class="bold">Cut-off Date</span>. All terms current at the point in time you specify will constitute the virtual dictionary. You cannot change the cut-off date after saving. Click in the Cut-off Date field. If other virtual dictionaries have been created for the same base dictionary, their cut-off dates are available in the LOV. If not, you can enter the date using the format:</p>
+<p>DD-MON-YYYY HH:MM:SS</p>
+<p>for example, 01-NOV-2006 10:01:15</p>
+<p>You can enter the date portion only and the system will enter a time of midnight.</p>
+</li>
+<li>
+<p>If a <a id="sthref314"></a>Release Label has already been associated with the timestamp you selected, the system displays it in the <span class="bold">Release Label</span> field. You can modify it if necessary. <span class="bold">Save</span>.</p>
+</li>
+<li>
+<p>When you are satisfied with your virtual dictionary definition, set its <span class="bold">Status</span> to Active and <span class="bold">Save</span>.</p>
+</li>
+<li>
+<p>You can then assign an Informative Note of type Dictionary Version to the virtual dictionary by clicking the <span class="bold">Info Notes</span> button. See <a href="defmisc.htm#i1005467">"Defining Dictionary-wide Informative Notes"</a> for instructions.</p>
+</li>
+</ol>
+<p>To browse the state of a dictionary at a particular point in time, adjust the data currency to view the terms that were current in a dictionary at any date in the dictionary's history. To view such a representation of the dictionary, launch the Browse Repository Data form and enter the date in the appropriate field at the top of the window. For more instructions on browsing the repository, see <a href="dictbrws.htm#BACJIEEH">Chapter 14, "Using the TMS Lite Browser."</a></p>
+</div>
+<!-- class="sect2" -->
+<a id="CHDBEJJJ"></a>
+<div id="TMSUG11465" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Filter<a id="sthref315"></a> Dictionaries</h3>
+<p>This section includes:</p>
+<ul>
+<li>
+<p><a href="#CHDCEDEJ">About Filter Dictionaries</a></p>
+</li>
+<li>
+<p><a href="#CHDIACBD">Using MedDRA SMQs in TMS</a></p>
+</li>
+<li>
+<p><a href="#CHDEADFJ">Filter Dictionary Rules</a></p>
+</li>
+<li>
+<p><a href="#CHDJCDHE">Defining Informative Notes for SMQ Algorithms</a></p>
+</li>
+<li>
+<p><a href="#CHDIJBHB">Maintaining Filter Dictionaries</a></p>
+</li>
+<li>
+<p><a href="#CHDCEDCJ">Searching Filter Dictionaries Using the TMS Lite Browser</a></p>
+</li>
+</ul>
+<a id="CHDCEDEJ"></a>
+<div id="TMSUG11466" class="sect3">
+<h4 class="sect3">About Filter Dictionaries</h4>
+<p>Standardized MedDRA Queries (SMQs) are designed to aid in the identification and retrieval of case safety reports in clinical studies. The MedDRA Maintenance and Support Services Organization (MSSO) defines SMQs as follows:</p>
+<p><span class="italic">SMQs are groupings of terms from one or more MedDRA System Organ Classes (SOCs) that relate to a defined medical condition or area of interest. They are intended to aid in case identification. The included terms may relate to signs, symptoms, diagnoses, syndromes, physical findings, laboratory and other physiologic test data, etc., related to the medical condition or area of interest. Lowest Level Terms (LLTs) that are not subordinate to an included Preferred Term (PT) are excluded.</span></p>
+<p>See <a href="#CHDFFGFA">Figure 6-1, "Acute Pancreatitis SMQ Terms and Algorithm"</a> for an example of a MedDRA SMQ.</p>
+<p>TMS provides filter dictionaries as a generic way to support SMQs and potential similar features for other standard dictionaries. You define, load, and maintain a filter dictionary in the same way you define, load, and maintain a base dictionary such as MedDRA. You must define a filter dictionary as a strong dictionary with at least one level and link the filter dictionary to one and only one base dictionary. In addition, before you load MedDRA SMQs you must define broad and narrow named relations and algorithm Informative Notes (see below).</p>
+<p>You can use the TMS Lite Browser to perform SMQ (filter dictionary) searches to retrieve dictionary terms and the VTAs and source terms related to them.</p>
+<p>MedDRA SMQs may use one or more of the following design features:</p>
+<ul>
+<li>
+<p><span class="bold">Broad and Narrow</span>. SMQ relations with dictionary terms may be identified as <span class="italic">broad</span> or <span class="italic">narrow</span>. Narrow terms are highly likely to represent the condition of interest while broad terms help to identify all possible cases, including some that may prove to be of little or no interest. A broad search retrieves broad terms. A narrow search retrieves narrow terms.</p>
+<p>To support broad and narrow SMQ searches in TMS, define and load broad and narrow named relations from SMQ terms to base dictionary terms.</p>
+</li>
+<li>
+<p><span class="bold"><a id="sthref316"></a>Algorithm</span>. Algorithms within SMQs are used to further define combinations of specific terms based on rules defined in an algorithm that can be processed programmatically during a search operation.</p>
+<p>To support SMQ algorithms, define an Informative Note of type Algorithm for SMQ terms with algorithms; see <a href="#CHDJCDHE">"Defining Informative Notes for SMQ Algorithms"</a>.</p>
+<p>MSSO provides predefined categories of terms called A&hellip;F. You must load these categories with SMQ filter dictionary terms and store them in the Status column of the table TMS_DICT_RELATIONS. Some SMQ algorithms use these categories.</p>
+</li>
+<li>
+<p><span class="bold">Hierarchy</span>. Some SMQs are a series of queries related to one another in a hierarchical relationship similar to the hierarchical structure of MedDRA itself.</p>
+<p>To support hierarchical SMQ searches in TMS, load SMQ terms into different levels of the filter dictionary with relations between the terms.</p>
+</li>
+</ul>
+<div id="TMSUG11467" class="figure">
+<p class="titleinfigure"><a id="CHDFFGFA"></a>Figure 6-1 Acute Pancreatitis SMQ Terms and Algorithm</p>
+<img width="566" height="314" src="img/smq_algorithm.gif" alt="Description of Figure 6-1 follows" /><br />
+<a id="sthref317" href="img_text/smq_algorithm.htm">Description of ''Figure 6-1 Acute Pancreatitis SMQ Terms and Algorithm''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p><a id="TMSUG11468"></a><span class="subhead3">Virtual Dictionaries of Filter Dictionaries&nbsp;</span>You can create a virtual dictionary of a filter dictionary&mdash;that is, a filter dictionary at a specific point in time. The filter dictionary's virtual dictionary must have the same cut-off date and time as an existing virtual dictionary of its base dictionary.</p>
+<p>For example, given the following dictionary definitions:</p>
+<ul>
+<li>
+<p>MedDRA SMQ is the filter dictionary of MedDRA</p>
+</li>
+<li>
+<p>MedDRA Version 7 is a virtual dictionary of MedDRA with the cut-off date 8/1/2006 00:00:00</p>
+</li>
+</ul>
+<p>you can define a virtual dictionary called MedDRA SMQ Version 7 of MedDRA SMQ with the same cut-off date as virtual dictionary MedDRA Version 7: 8/1/2006 00:00:00. It will reference terms in virtual dictionary MedDRA Version 7.</p>
+<p>In other words, if you are using a virtual dictionary for coding and you want to use a filter dictionary with it, you must create a virtual dictionary of the filter dictionary with the same cut-off date as the virtual dictionary you are using for coding.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CHDIACBD"></a>
+<div id="TMSUG11469" class="sect3">
+<h4 class="sect3">Using <a id="sthref318"></a>MedDRA <a id="sthref319"></a>SMQs in TMS</h4>
+<p>To use MedDRA SMQs in TMS, do the following:</p>
+<ol>
+<li>
+<p>Define a filter dictionary for MedDRA SMQs; see <a href="#CHDEADFJ">"Filter Dictionary Rules"</a>.</p>
+</li>
+<li>
+<p>Specify its base dictionary in the <span class="bold">Dictionary Links</span> tab, using the link type <span class="bold">Filter Dictionary Of</span>. For the MedDRA SMQs filter dictionary, the base dictionary must be a MedDRA dictionary. See <a href="#CHDCIJEA">"Defining Filter Dictionary Links"</a>.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Filter dictionaries inherit their domain assignments from their base dictionary.</div>
+</li>
+<li>
+<p>Define two named relations of type Standard with Many Cardinality, each with no reciprocal relation defined, to support broad and narrow relationships. Include the exact short name you define for these named relations in your MedDRA SMQs load script; see <a href="defmisc.htm#i1003246">"Defining Named Relations"</a>.</p>
+<p>Include the DEF_NAMED_REL_ID of these named relations in your MedDRA SMQs load script.</p>
+</li>
+<li>
+<p>For the broad and narrow named relationships you have defined, create a dictionary named relationship record from the filter dictionary to the base dictionary; see <a href="defmisc.htm#CHDJFCBG">"Defining Dictionary NRLs"</a>.</p>
+</li>
+<li>
+<p>Define Informative Note attributes of type Algorithm for SMQ algorithms; see <a href="#CHDJCDHE">"Defining Informative Notes for SMQ Algorithms."</a>.</p>
+</li>
+<li>
+<p>Create a load script and load MedDRA SMQs; see <a href="#CHDGECHB">"Loading a Dictionary"</a>.</p>
+<p>You can use the load script to load Algorithm-type Informative Notes and Broad and Narrow named relations or define them manually; see <a href="#CHDJCDHE">"Defining Informative Notes for SMQ Algorithms"</a> and <a href="dictmnt.htm#i1004475">"Creating Named Relations Between Terms"</a>.</p>
+</li>
+<li>
+<p>Use the TMS Lite Browser to search for filter dictionary terms and their related base dictionary terms; see <a href="dictbrws.htm#BABBGGDI">"Searching for Terms Using Filter Dictionaries"</a>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<a id="CHDEADFJ"></a>
+<div id="TMSUG11470" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Filter Dictionary Rules</h4>
+<p>See <a href="#i1001502">"Defining a Dictionary"</a> for detailed instructions on how to define a dictionary. Select <span class="bold">Filter</span> as the <span class="bold">Dict Type</span> and observe the following rules for filter dictionaries:</p>
+<ul>
+<li>
+<p><span class="bold">Language</span>. Filter dictionaries and their base dictionaries must have the same language attribute setting.</p>
+</li>
+<li>
+<p><span class="bold">VT Level Required</span>. Uncheck. Filter dictionaries cannot have a VT level.</p>
+</li>
+<li>
+<p><span class="bold">Folder Type</span>. Filter dictionaries must be designated as Strong type.</p>
+</li>
+<li>
+<p><span class="bold">Dictionary Link</span>. A filter dictionary must have one and only one "Filter Dictionary Of" dictionary link to a base dictionary. This dictionary link defines the fact that the filter dictionary will contain only terms defined in the base dictionary.</p>
+<p>A base dictionary can have one and only one "has Filter Dictionary" link to a filter dictionary.</p>
+</li>
+<li>
+<p><span class="bold">Virtual Dictionaries</span>. Filter dictionaries can have associated virtual dictionaries. These "versions" of filter dictionaries must have the same cut-off date as an existing virtual dictionary of the filter dictionary's base dictionary.</p>
+</li>
+<li>
+<p><span class="bold">Domains</span>. Filter dictionary domains are maintained by TMS. A filter dictionary inherits all the domains of its base dictionary. You can see a filter dictionary's domains in the Define Domain Dictionaries form, but you cannot change them.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<a id="CHDJCDHE"></a>
+<div id="TMSUG11471" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Defining Informative Notes for SMQ Algorithms<a id="sthref320"></a></h4>
+<p>Some MedDRA SMQs include algorithms that return refined search results. You can use these algorithms in TMS to search for source terms that report relevant symptoms or diagnoses; see <a href="dictbrws.htm#BABBGGDI">"Searching for Terms Using Filter Dictionaries"</a>.</p>
+<p>To use SMQ algorithms in TMS you must do the following:</p>
+<ul>
+<li>
+<p>Create one Informative Note attribute of type Algorithm; see <a href="defmisc.htm#i1004701">"Defining Informative Note Attributes"</a>.</p>
+</li>
+<li>
+<p>Create an Informative Note of type Algorithm for each SMQ filter dictionary term with an algorithm defined, either manually (see <a href="dictmnt.htm#i1008831">"Creating Informative Notes for Terms and Relations"</a>) or as part of the load script; see <a href="#i1009004">"About Load Scripts"</a>.</p>
+</li>
+</ul>
+<p>To support MedDRA SMQs, include the algorithm defined by MSSO for the SMQ filter dictionary term, but transform the format of the algorithm so that TMS can execute it. For example, in MedDRA 9.0, the SMQ algorithm defined by the MSSO for "Acute pancreatitis (SMQ)" is:</p>
+<p><code dir="ltr">A or (B and C)</code></p>
+<p>where A&hellip;F are categories of terms predefined by MSSO. You must load these categories with SMQ filter dictionary terms and store them in the Status column of the TMS table TMS_DICT_RELATIONS.</p>
+<p>To translate this into a format that TMS understands, replace "or" with "UNION", replace "and" with "INTERSECT", and add the column name of the relations table that stores the SMQ category:</p>
+<p><code dir="ltr">status = 'A' UNION (status='B' INTERSECT status='C')</code></p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You can substitute your own algorithm if you prefer. However, each term can have only one Informative Note of type Algorithm.</div>
+</div>
+<!-- class="sect3" -->
+<a id="CHDIJBHB"></a>
+<div id="TMSUG11472" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Maintaining Filter Dictionaries</h4>
+<p>Maintain filter dictionaries as you do base dictionaries:</p>
+<ul>
+<li>
+<p><span class="bold">Maintain Repository Data</span>. Use the Maintain Repository Data window to maintain terms within a filter dictionary. In the lower block, the <span class="bold">R. Status</span> column contains the SMQ category of the target term, which is used in SMQ algorithms; see <a href="dictmnt.htm#i1003853">"Modifying Repository Data in the Maintain Repository Data Window"</a>.</p>
+</li>
+<li>
+<p><span class="bold">Repository Authoring</span>. Maintain named relations to base dictionary terms in the Repository Authoring window; <a href="dictmnt.htm#i1003635">"Repository Authoring"</a>.</p>
+</li>
+</ul>
+<p>From both windows you can click the <span class="bold">Informative Notes</span> button to navigate to the Maintain Informative Notes forms, where you can maintain the SMQ algorithm as well as other Informative Notes; see <a href="dictmnt.htm#i1008831">"Creating Informative Notes for Terms and Relations"</a>.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CHDCEDCJ"></a>
+<div id="TMSUG11473" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Searching Filter Dictionaries Using the TMS Lite Browser</h4>
+<p>You can use the TMS Lite Browser to do the following kinds of searches based on a filter dictionary term:</p>
+<ul>
+<li>
+<p>Search for VTAs related to the filter dictionary term or its child, grandchild, etc. terms.</p>
+</li>
+<li>
+<p>Search for source terms related to the filter dictionary term and its related VTAs. This functionality is also available using the API; see the <span class="italic"><span class="italic">Oracle Thesaurus Management System Technical Reference Manual</span></span>.</p>
+</li>
+<li>
+<p>Use the filter dictionary term's named relations, such as Broad or Narrow, to search for base dictionary terms.</p>
+</li>
+<li>
+<p>Use the filter dictionary term's algorithm to search for source terms; see <a href="dictbrws.htm#BACJBAFB">"Performing a Simple Source Data Filter Search"</a>.</p>
+</li>
+</ul>
+<p>See <a href="dictbrws.htm#BABBGGDI">"Searching for Terms Using Filter Dictionaries"</a> for information on all the above searches.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CHDCHECF"></a>
+<div id="TMSUG11474" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Nonunique Coding Level Dictionaries</h3>
+<p>In <span class="bold"><a id="sthref321"></a>WHO-Drug Format C</span>, many drug names occur more than once in the coding level. They are distinguished from one another by auxiliary information including the country where they are distributed, their pharmaceutical form (for example, tablets or coated tablets), and their strength (for example, the number of milligrams per tablet). In the TMS dictionary definition, each type of auxiliary information (country or strength, for example) is defined as a sublevel of the classification level.</p>
+<p>Auxiliary information must be imported from the source data system for each source term as a definition-value pair consisting of a dictionary level and data value; for example, Strength and 500mg. Updates to auxiliary information should be treated as source term updates.</p>
+<p>If you are using <a id="sthref322"></a><a id="sthref323"></a>Oracle Clinical, you can set up question sets to handle multiple input question responses for each source term. In addition to providing auxiliary information about the drug, you can send information about the indication for which the drug is being taken. This is required in cases where the term must be classified differently depending on the indication, or where a different higher level term must be derived depending on the indication. See <a href="#CHDIIJIC">"Classifying High-Level Terms Based on Indication,"</a><a href="ocinteg.htm#CEGEHFJA">"Defining Question Set Variables,"</a> and <a href="mngomiss.htm#BEICDGFH">"Classifying Indication Omissions."</a></p>
+<p>The <a id="sthref324"></a>classification of a verbatim term with a specific set of auxiliary information values to a nonunique dictionary term is called a <span class="bold">verbatim term individual (VTI)</span>, similar to a verbatim term assignment (VTA) for classifications to unique dictionary terms. Both VTAs and VTIs are supported in the same dictionary. TMS handles VTIs similarly to VTAs, but with some differences. VTIs are always created as approved and are always specific to a domain&mdash;never global. Both VTAs and VTIs can be designated either misspelled or accepted.</p>
+<p>TMS captures and stores sets of auxiliary information values, assigning an ID to each set and reusing it for terms in all dictionaries and domains that have the same combination of auxiliary information values. For example, the first time the source term Carbamazepine is classified to the dictionary term Carbamazepine with auxiliary values Netherlands, coated tablet, and 200mg, TMS creates an ID such as 1000 for the value collection. When a different verbatim term that shares the same values&mdash;Netherlands, coated tablet, 200mg&mdash;is classified to any drug, TMS uses the same auxiliary information ID for the new VTI. The ID is stored with its values in the Auxiliary Information table, and the ID is included in the Omissions and Source Terms tables.</p>
+<p>Autoclassification cannot match a source term to a nonunique dictionary term until a user manually classifies it. After that, if the dictionary is defined to allow autoclassification with auxiliary information, it classifies all occurrences of the same verbatim term with the same auxiliary information to the same dictionary term.</p>
+<p><span class="bold">MedDRA</span> also supports classifying the same source term to different dictionary terms. For example, the source term "Migraine Headache" might sometimes be classified as "Headache" and other times as "Migraine."</p>
+</div>
+<!-- class="sect2" -->
+<a id="CHDIIJIC"></a>
+<div id="TMSUG11475" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Classifying High-Level Terms Based on <a id="sthref325"></a>Indication</h3>
+<p>Different instances of the same dictionary coding-level term may be classified to different high level terms&mdash;for example, Anatomical - Therapeutic - Chemical (ATC) terms in WHO-Drug Format C&mdash;based on the <span class="bold">indication</span> for which the drug was taken by a patient. In this case, multiple high-level terms are related to a single lower-level dictionary term with no primary path defined. TMS cannot derive the high-level term and creates an <span class="italic">indication omission</span>. After a user has manually classified the indication omission, TMS derives all current and future occurrences of the same term for the same verbatim term/indication combination.</p>
+<p>In Oracle Clinical you can create a question set variable of type Indication to collect the indication; see <a href="ocinteg.htm#CEGEHFJA">"Defining Question Set Variables"</a>. If you are using a different external source data system you must also import "Indication" and the indication value as a value pair to support this feature.</p>
+<div class="infobox-note">
+<p class="notep1">Notes:</p>
+<ul>
+<li>
+<p>Users cannot classify an indication omission without an indication, and after a verbatim term is classified, there is no way to send an action message to the source system requesting information. So you must set up indication collection before classifying indication omissions.</p>
+</li>
+<li>
+<p>Indication omissions are not highlighted in Oracle Clinical Data Entry as verbatim term omissions.</p>
+</li>
+</ul>
+</div>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="i1004601"></a>
+<div id="TMSUG11476" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Planning Strong Dictionary <a id="sthref326"></a>Structure<a id="sthref327"></a> <a id="sthref328"></a></h2>
+<p>This section includes:</p>
+<ul>
+<li>
+<p><a href="#i1003963">Defining Relationships Between Dictionary Levels</a></p>
+</li>
+<li>
+<p><a href="#i1007582">Grouping Levels</a></p>
+</li>
+<li>
+<p><a href="#i1004215">Deriving Terms</a></p>
+</li>
+<li>
+<p><a href="#i1006028">Enforcing the Structure</a></p>
+</li>
+<li>
+<p><a href="#i1006467">Strong Dictionary Structure in Other Forms</a></p>
+</li>
+</ul>
+<p>TMS provides flexibility in designing dictionaries, including those supplied by vendors. You can design the dictionary structure, ranking levels hierarchically and/or creating levels at the same rank. You can define the cardinality and optionality of level relations, and specify a Primary Link or Primary Path Link between levels.</p>
+<p>Basic strategies for organizing <a id="sthref329"></a>dictionary structure include:</p>
+<ul>
+<li>
+<p>Ranking levels in a vertical hierarchy so that terms become more general and fewer in each higher level of the hierarchy, effectively organizing lower-level terms into categories.</p>
+</li>
+<li>
+<p>Adding levels horizontally, at the same rank, to provide supplementary information about terms, such as preferred names or indications.</p>
+</li>
+<li>
+<p>Assigning levels to group levels to promote efficiency and enforce Primary Links to more than one level (see <a href="#CHDHDEDC">"Requiring a Primary Link to a Group Level"</a>).</p>
+</li>
+<li>
+<p>Defining the classification level as a group level that includes both the conventional classification level and a synonym level with a many-to-one relation to the classification level. In this case, TMS searches in both sublevels for a match to a verbatim term. If it finds a match in the synonym level, it creates the VTA to link directly to the related conventional classification level term. Because of this behavior, using group levels as classification levels greatly increases the likelihood that a match will be found without increasing the number of terms in the conventional classification level.</p>
+</li>
+</ul>
+<p>Review each of the remaining sections in this chapter to consider your dictionary needs before defining a TMS dictionary or writing load scripts.</p>
+<a id="i1004786"></a>
+<div id="TMSUG11477" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Uniqueness of Terms</h3>
+<p>In addition to the flexibility with which many internal and vendor-supplied dictionaries define their hierarchies and relationships, dictionaries can also differ in the manner in which they handle a term's uniqueness. You can specify that terms be unique throughout a level or group level in a dictionary, throughout all levels of a dictionary, or choose not to enforce uniqueness of terms at all for a particular dictionary.</p>
+<p>If you plan to use a dictionary for classification of verbatim terms, you must enforce uniqueness on the classification level. For other internal or vendor-supplied dictionaries, choose the degree of uniqueness based on how duplicate terms exist within the dictionary.</p>
+<p>TMS evaluates uniqueness based on the "term upper" version of a dictionary term, in which TMS converts the dictionary term to all uppercase letters and removes all extraneous spaces.</p>
+</div>
+<!-- class="sect2" -->
+<a id="i1003963"></a>
+<div id="TMSUG11478" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Defining Relationships Between Dictionary Levels</h3>
+<p>To create strong dictionary relations in TMS, so that you can link terms in one level to terms in another, you must define relations between the levels in the dictionary structure.</p>
+<p>During Activation, TMS checks all terms and relations against the relations defined for their dictionary levels. Terms and relations whose definitions conflict with the defined level relations cannot be activated. For example, if you have defined relations to more than one term in a level with a Single cardinality relation, the Activation job activates the first relation it processes and rejects the rest.</p>
+<p>You must define the following attributes for relations between levels within a strong dictionary: <a href="#i1009113">Mandatory Relations</a> and <a href="#BABDBBAF">Cardinality</a>. For relations with Many cardinality defined you can also define a Primary Link or, if the dictionary includes a group level, a primary path.</p>
+<p>The relations you define between levels create the derivation path for verbatim terms associated with the dictionary. A valid derivation path enables TMS to derive one and only one term from each level above the verbatim term level, and send the derived terms to an external system such as Oracle Clinical (see <a href="#i1004223">"Derivation Path"</a>). If Single cardinality is defined from the lower to the higher level, no Primary Link is required because a term in the lower level can be related to only one term in the higher level, and TMS can derive that term. If Many cardinality is defined, so that a term in the lower level can be related to multiple terms in the higher level, you must require a Primary Link to identify which related term in the higher level is derived. See <a href="#i1003979">"Primary Links and Primary Path Links"</a>.</p>
+<a id="i1009113"></a>
+<div id="TMSUG11479" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Mandatory Relations<a id="sthref330"></a><a id="sthref331"></a></h4>
+<p>For each level relation you can require that a term in each level have a relation with a term in the other level, or define the relation as optional in either direction. For example:</p>
+<div id="TMSUG11480" class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref332"></a>
+<h5 class="sect4">The Relation Is Mandatory in One Direction but Optional in the Other</h5>
+<p>Terms in Level A must have a relation to a term in Level B, but terms in Level B may or may not have a relation to a term in Level A.</p>
+</div>
+<!-- class="sect4" -->
+<div id="TMSUG11481" class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref333"></a>
+<h5 class="sect4">Both Relations Are Mandatory</h5>
+<p>Terms in Level B must have a relation to a term in Level A, and terms in Level A must have a relation to a term in Level B.</p>
+</div>
+<!-- class="sect4" -->
+<div id="TMSUG11482" class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref334"></a>
+<h5 class="sect4">Both Relations Are Optional</h5>
+<p>Terms in Level B may or may not have a relation to a term in Level A, and terms in Level A may or may not have a relation to a term in Level B.</p>
+</div>
+<!-- class="sect4" --></div>
+<!-- class="sect3" -->
+<a id="BABDBBAF"></a>
+<div id="TMSUG11483" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Cardinality<a id="sthref335"></a></h4>
+<p>The <a href="glossary.htm#CBAGIFCJ"><span class="xrefglossterm">cardinality</span></a> of a level relation controls the ratio allowed between terms in two levels and must be defined in both directions:</p>
+<ul>
+<li>
+<p>Can a single term in Level A be linked to more than one term in Level B?</p>
+</li>
+<li>
+<p>Can a single term in Level B be linked to more than one term in Level A?</p>
+</li>
+</ul>
+<p>You can define a level relation as many-to-many, one-to-many in either direction, or one-to-one.</p>
+</div>
+<!-- class="sect3" -->
+<a id="i1003979"></a>
+<div id="TMSUG11484" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Primary Links and Primary <a id="sthref336"></a>Path Links<a id="sthref337"></a></h4>
+<p>If you define a relation where a term in Lower Level B can be linked to many terms in Higher Level A (Many cardinality), you can specify that each term in Lower Level B must have a <a href="glossary.htm#CBAHDDID"><span class="xrefglossterm">Primary Link</span></a> to a single term in Higher Level A. If the relation is on the <a href="glossary.htm#CBAFEJEF"><span class="xrefglossterm">derivation path</span></a>&mdash;levels from which TMS can derive terms to be sent to an external system&mdash;you must require a Primary Link. Otherwise, TMS cannot activate the dictionary.</p>
+<p>When a Primary Link is required, it is possible to create a Domain Primary Link for a particular term to override its Global Primary Link within a particular domain.</p>
+<p>When you define a group level, you can define primary relations from terms outside (and below) the group level to the group level in two different ways:</p>
+<ul>
+<li>
+<p><span class="bold">Primary Link</span>. If you define a Primary Link to the group level, and Many cardinality is defined on the higher side of level relations, the lower-level term can have links to multiple terms on multiple levels in the group level, but only one link can be the Primary Link. The Primary Link can be between the lower-level term and a single term on any level within the group level.</p>
+</li>
+<li>
+<p><span class="bold">Primary Path Link</span>. If you define a Primary Path Link to the group level, a term in the lower level can have links to multiple terms in multiple levels within the group level, but it must have a Primary Link to a term in the lowest level within the group, and to a related term in the next highest level, all the way to the top level.</p>
+<p>You must load or define the Primary Link for each lower-level term to a term in each of the group levels from the bottom up. TMS restricts your choices at each level to terms that are related to the Primary Link term in the immediately lower level. Thus, different lower-level terms can have a Primary Link to the same term in the lowest group level but different terms in the higher group levels (see <a href="#i1007592">Figure 6-2</a>).</p>
+<p>Primary Path Links are designed to accommodate MedDRA's structure.</p>
+</li>
+</ul>
+<p>See <a href="#i1007582">"Grouping Levels"</a> for background information on group levels.</p>
+<p><a href="#i1007592">Figure 6-2</a> shows derivation paths using Primary Link (on the left) and a primary path (on the right). In these examples, all relations between levels are many-to-many, so Primary Links are required for each relation in the derivation path.</p>
+<ul>
+<li>
+<p>The example on the left shows a dictionary structure without a group level, where a Primary Link is required between each level and the next higher level. Terms PT1 and PT2 are both defined with a Primary Link to the same term&mdash;HLT1&mdash;in the next higher level. Their derivation path is the same because the rest of the derivation path depends on the Primary Links defined for the higher-level terms: HLT1 has a single Primary Link to HLGT1, which has a single Primary Link to SOC1.</p>
+</li>
+<li>
+<p>The example on the right shows a dictionary structure where the HLT, HLGT, and SOC levels are all included in a group level, but a primary path is defined between the PT level and the group level. In this case, terms PT1 and PT2 can be linked to the same term in the HLT level and yet be linked to different terms in the two higher levels. This model conforms to MedDRA's structure.</p>
+</li>
+</ul>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Note that there is a third possible structure. If you defined the same group level as in the example on the right&mdash;containing the SOC, HLGT, and HLT levels&mdash;and defined a Primary Link from the PT level to the group level instead of a Primary Path Link, then the terms PT1 and PT2 would each link to HLT1 but, if Many cardinality were defined from the HLT to the HLGT and from the HLGT to the SOC, their derivation path would end there. No higher level terms could be derived because no other Primary Links or primary paths would exist.
+<p>If Single cardinality were defined from the HLT to the HLGT and from the HLGT to the SOC, and those levels were defined as reportable and their relations as derivable, the derivation path would continue all the way to the SOC level.</p>
+</div>
+<div id="TMSUG11485" class="figure">
+<p class="titleinfigure"><a id="i1007592"></a>Figure 6-2 Derivation Path Examples for MedDRA</p>
+<img width="1142" height="379" src="img/ppath_ex.gif" alt="Description of Figure 6-2 follows" /><br />
+<a id="sthref338" href="img_text/ppath_ex.htm">Description of ''Figure 6-2 Derivation Path Examples for MedDRA''</a><br />
+<br /></div>
+<!-- class="figure" --></div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="i1007582"></a>
+<div id="TMSUG11486" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Grouping Levels <a id="sthref339"></a></h3>
+<p>You can arrange levels of a strong dictionary into a <a href="glossary.htm#CBAECAAC"><span class="xrefglossterm">group level</span></a>, and define other levels as having a relation with the group level rather than one or more of its sublevels. You can then define individual terms as having relations with terms in sublevels within the group level. This enhances efficiency and functionality by:</p>
+<ul>
+<li>
+<p>Eliminating unnecessary duplication of terms in more than one level. By enforcing uniqueness of terms throughout the VTC group level in <a href="#i1008698">Figure 6-3</a>, for example, you can ensure that no duplicate terms exist between the PN and SYN levels.</p>
+</li>
+<li>
+<p>Allowing you to define a Primary Link requirement to the group level as a whole; when you define specific Primary Links for terms from outside the group level to the group level, you can choose to create the Primary Link to a term in any one of the group's sublevels.</p>
+</li>
+</ul>
+<p>For example, you could define WHO-Drug as shown in <a href="#i1008698">Figure 6-3</a>, with two group levels, ATC and classification level VTC:</p>
+<div id="TMSUG11487" class="figure">
+<p class="titleinfigure"><a id="i1008698"></a>Figure 6-3 Group Levels in a Sample WHO-Drug Dictionary</p>
+<img width="290" height="403" src="img/whodrug2.gif" alt="Description of Figure 6-3 follows" /><br />
+<a id="sthref340" href="img_text/whodrug2.htm">Description of ''Figure 6-3 Group Levels in a Sample WHO-Drug Dictionary''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p>This definition of WHO-Drug makes use of the Group Level feature as described in the following two sections.</p>
+<a id="i1004074"></a>
+<div id="TMSUG11488" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Classifying Verbatim Terms to a Group Level</h4>
+<p>By defining the <a href="glossary.htm#CBAHABGG"><span class="xrefglossterm">classification level</span></a> (the level in which TMS looks for a match to verbatim terms) as a group level, you can include more than one sublevel within the group for TMS to search. This increases the number of terms TMS can search without forcing the same terms to exist on multiple levels, which reduces the size of the dictionary. If you define a group level to be the classification level, you must specify that a term can exist in only one of the group's sublevels at a time. To enforce this structure, choose <span class="bold">Level</span> from the <span class="bold">Term Uniqueness</span> list when you define the group level.</p>
+<p>In the WHO-Drug structure shown above, the classification level is defined as the group level called VTC, which contains as sublevels the Preferred Name level and the Synonym level. When TMS attempts to classify a verbatim term, it searches both sublevels, one after the other. Because TMS searches both levels to find a match, it is not necessary to include every preferred term in the Synonym level because TMS searches both levels to find a match.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CHDHDEDC"></a>
+<div id="TMSUG11489" class="sect3">
+<h4 class="sect3">Requiring a Primary Link to a Group Level<a id="sthref341"></a></h4>
+<p>Grouping the dictionary's higher levels and requiring a Primary Link to the group level enables you to define a Primary Link for a specific term to any one of the group's sublevels. TMS derives the Primary Link term and related terms in any higher levels within the group if the following conditions apply:</p>
+<ul>
+<li>
+<p>There is a many-to-one or one-to-one relation between each lower and higher level (Single cardinality is required at the higher end).</p>
+</li>
+<li>
+<p>The group level and all its sublevels are defined as reportable.</p>
+</li>
+<li>
+<p>The relations between the levels are defined as derivable.</p>
+</li>
+</ul>
+<p>Alternatively, you can define a primary path between the group level and a lower level. A primary path enables you to specify which terms to derive for each lower level term from each of the group sublevels (see <a href="#i1003979">"Primary Links and Primary Path Links"</a>).</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+In addition, you must create structures in the external system to receive the derived values; in Oracle Clinical you need a question set variable and derived question for each sublevel that might contain the Primary Link term (see <a href="ocinteg.htm#i1002061">"Setting Up Data Collection in Oracle Clinical"</a>).</div>
+</div>
+<!-- class="sect3" -->
+<a id="i1004081"></a>
+<div id="TMSUG11490" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Group Level Constraints<a id="sthref342"></a></h4>
+<p>TMS enforces the following additional constraints for group levels.</p>
+<ul>
+<li>
+<p>A level can be linked to a group level or a sublevel within it, but not to both.</p>
+</li>
+<li>
+<p>If two group levels are linked, none of the sublevels can be linked directly to sublevels in the other group.</p>
+</li>
+<li>
+<p>A group level cannot be a child level because that might cause problems during derivation. However, a group level can be lower in the hierarchy than other levels if the top sublevel (not the group level itself) has the child relation with the parent level.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<a id="i1004086"></a>
+<div id="TMSUG11491" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Tree Structure Display of Group Levels<a id="sthref343"></a></h4>
+<p>Group levels do not fit easily into a standard tree structure display. TMS displays them as follows:</p>
+<ul>
+<li>
+<p>If a group level exists below the top of the hierarchy, its sublevels are displayed twice: once below the group level, which is displayed as a sibling level to the level above (because it cannot be defined as a child level), and once directly under the higher level with the relation between the top sublevel and the higher level displayed.</p>
+</li>
+<li>
+<p>The <span class="bold">Group Level</span> icon is displayed to the left of the group level.</p>
+</li>
+<li>
+<p>The relation icons (lines, dotted lines, and branches) appear in color for all sublevels within a group except the topmost, which by definition cannot have a conventional relation defined to the group level.</p>
+</li>
+</ul>
+<p>This display is for a sample WHO-Drug dictionary as shown in <a href="#i1008931">Figure 6-4</a>.</p>
+<div id="TMSUG11492" class="figure">
+<p class="titleinfigure"><a id="i1008931"></a>Figure 6-4 Sample WHO-Drug Dictionary in the TMS Navigator Tree</p>
+<img width="200" height="338" src="img/whod_2_0.gif" alt="Description of Figure 6-4 follows" /><br />
+<a id="sthref344" href="img_text/whod_2_0.htm">Description of ''Figure 6-4 Sample WHO-Drug Dictionary in the TMS Navigator Tree''</a><br />
+<br /></div>
+<!-- class="figure" --></div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="i1004215"></a>
+<div id="TMSUG11493" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Deriving Terms</h3>
+<p>When TMS successfully maps a verbatim term to a dictionary term, it derives related terms or other user-defined information from the dictionary levels you specify when you set up the derived questions in Oracle Clinical question sets. See <a href="ocinteg.htm#i1002123">"Defining Questions"</a>. When you use TMS with another external system, you must create the objects to receive the derived values and the mechanism to call for them. If TMS is fully integrated with the external system, it derives the values to the external system on demand.</p>
+<p>In MedDRA, for example, you can classify the verbatim term <span class="italic">secondary anemia</span> to the classification level term <span class="italic">secondary anaemia</span> (LLT). In the dictionary definition, you can specify that the Preferred Term (PT) and System Organ Class (SOC) levels be derivable and reportable. If you have specified that TMS should derive a term, TMS returns the PT level term <span class="italic">secondary anaemia</span> and the SOC level term <span class="italic">blood and lymphatic system disorders</span>.</p>
+<p>See the <span class="italic"><span class="italic">Oracle Thesaurus Management System Technical Reference Manual</span></span> for more information on integrating TMS with external systems.</p>
+<a id="i1004223"></a>
+<div id="TMSUG11494" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Derivation Path</h4>
+<p>In the TMS dictionary structure, you must define one and only one derivation path. A derivation path is a series of consecutively related levels defined as derivable that begins at the classification level and includes all levels from which you want to derive terms. There must be one and only one path from the verbatim term level to each derivable level.</p>
+</div>
+<!-- class="sect3" -->
+<a id="i1004227"></a>
+<div id="TMSUG11495" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Setting Up Derivation Within a Dictionary</h4>
+<p>Deriving terms from TMS into an external system such as Oracle Clinical requires setup activity in both TMS and the external system.</p>
+<p>To set up derivation:</p>
+<ol>
+<li>
+<p>Select <span class="bold">Report Value?</span> in the Define Dictionary Level window to be able to derive terms from the level you are defining. The <span class="bold">Report Value?</span> setting is optionally used by the external system to display the levels available for reporting.</p>
+</li>
+<li>
+<p>Select the <span class="bold">Derivable?</span> box in the Define Level Relations window for each level in the path of derivable levels. There must be one and only one pathway to derivable terms in any level from the classification level. All levels you define as reportable must also be derivable, but derivable levels do not necessarily have to be reportable.</p>
+</li>
+<li>
+<p>Create objects to receive the derived values and the mechanism to call for them. This process varies according to the external system and the level of integration. For information on deriving terms for Oracle Clinical, see <a href="ocinteg.htm#BABBBFEB">Chapter 4, "Integrating TMS with Oracle Clinical."</a> For information on levels of integration, see <a href="overview.htm#BABHEHAA">Chapter 1, "Getting Started."</a></p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="i1006028"></a>
+<div id="TMSUG11496" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Enforcing the Structure</h3>
+<p>Each time TMS tries to activate a term, it runs several types of validation tests to ensure that the term and its relations conform to the dictionary structure you have defined. During this process, TMS:</p>
+<ul>
+<li>
+<p>Checks if the term and its relations to terms in other levels do not violate the cardinality and optionality specifications you have defined between levels.</p>
+</li>
+<li>
+<p>Runs any additional validation code to enforce further rules and relations (see Step 8, <a href="#CHDCJDJJ">"Add Validation Code (Optional)"</a>).</p>
+</li>
+<li>
+<p>Prevents deletion of terms linked to a verbatim term assignment.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="i1006467"></a>
+<div id="TMSUG11497" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Strong Dictionary Structure in Other Forms</h3>
+<p>TMS reflects the structure you define in the way it displays the dictionary in the Maintain Repository Data and Browse Repository Data windows. See <a href="overview.htm#BCGGIIDI">"Using the Tree Structure"</a> for details on how TMS reflects dictionary structure in these windows.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="i1001502"></a>
+<div id="TMSUG11498" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Defining a Dictionary</h2>
+<p>To use a dictionary in TMS you must define it in the TMS user interface. This section includes:</p>
+<ul>
+<li>
+<p><a href="#i1001541">Defining the Basic Dictionary Settings</a></p>
+</li>
+<li>
+<p><a href="#i1001565">Defining the Dictionary Levels</a></p>
+</li>
+<li>
+<p><a href="#i1001618">Defining Relations Between Levels (Strong Dictionaries Only)</a></p>
+</li>
+<li>
+<p><a href="#i1001695">Defining Level Details</a></p>
+</li>
+<li>
+<p><a href="#i1008334">Setting the Dictionary's Status to Active</a></p>
+</li>
+</ul>
+<a id="i1001541"></a>
+<div id="TMSUG11499" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Defining the Basic Dictionary Settings <a id="sthref345"></a></h3>
+<p>The Base Dictionary tab of the Define Dictionaries window enables you to define the high-level settings of a dictionary and to set a dictionary's status from Provisional to Active. This section discusses definition only, because you must keep the dictionary status set to Provisional while you complete the definition tasks. You use the Base Dictionary tab to set a dictionary to Active status later on. See <a href="#i1008334">"Setting the Dictionary's Status to Active"</a>.</p>
+<p>The high-level dictionary definition includes:</p>
+<ul>
+<li>
+<p>The dictionary's name, short name, and description.</p>
+</li>
+<li>
+<p>Whether the dictionary is a base dictionary, virtual dictionary, or filter dictionary; see <a href="#i1004785">"Virtual Dictionaries"</a> and <a href="#CHDBEJJJ">"Filter Dictionaries"</a>.</p>
+</li>
+<li>
+<p>The dictionary structure (strong or weak); <a href="#i1004784">"Strong Dictionaries"</a>.</p>
+</li>
+<li>
+<p>The language of the dictionary's terms and relations.</p>
+</li>
+<li>
+<p>The Release Label prefix.</p>
+</li>
+<li>
+<p>Other settings that drive aspects of dictionary structure and the dictionary's availability to other components in TMS.</p>
+</li>
+</ul>
+<p><a href="loaddefs.htm#CJACDEEG">Appendix A, "Sample Dictionary Definitions"</a> contains the definitions you must use in order to successfully load and activate practice dictionary CLS.</p>
+<p>To define the basic dictionary settings:</p>
+<ol>
+<li>
+<p>From the <span class="bold">Definition</span> menu, select <span class="bold">Define Dictionaries</span>. The Define Dictionaries window opens, with the Base Dictionary tab selected.</p>
+</li>
+<li>
+<p>Choose whether you want to create a base, filter, or virtual dictionary.</p>
+<ul>
+<li>
+<p>For a base or filter dictionary, begin by highlighting the <span class="bold">Dictionaries</span> line in the tree structure and select <span class="bold">Insert Record</span>.</p>
+</li>
+<li>
+<p>For a virtual dictionary, select an active base dictionary folder in the tree and click the <span class="bold">Virtual Dictionary</span> tab. Select <span class="bold">Insert Record</span>. See <a href="#i1004785">"Virtual Dictionaries"</a> for more information.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Define the dictionary itself (Name, Short Name, Description).</p>
+<div class="infobox-note">
+<p class="notep1">Notes:</p>
+<ul>
+<li>
+<p>Special characters are not allowed in the Short Name definition.</p>
+</li>
+<li>
+<p>The short name must be exactly the same in the GUI definition and in the load script. Sample load scripts are available on My Oracle Support. See <a href="loaddefs.htm#CJACDEEG">Appendix A, "Sample Dictionary Definitions."</a></p>
+</li>
+<li>
+<p>To delete a dictionary, you must place the cursor on the right side of the window in the <span class="bold">Dictionary</span> field (not the <span class="bold">Dictionary Name</span> in the tree). Before you can delete the dictionary itself, you must delete all the dictionary data, its levels, and set it to Provisional status.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+<p>The following steps apply to base dictionaries only. Virtual dictionaries inherit all settings from their base dictionaries.</p>
+<ol>
+<li>
+<p>From the <span class="bold">Language</span> list, select the language for this dictionary. You can link terms in dictionaries that have different languages by using named relations of type Translation.</p>
+</li>
+<li>
+<p>From the <span class="bold">Dict. Type</span> list, select one of the following:</p>
+<ul>
+<li>
+<p><span class="bold">Base</span>. Select Base to define a dictionary published by an external organization (such as MedDRA or WHO-Drug, or a legacy dictionary developed by your company.</p>
+</li>
+<li>
+<p><span class="bold">Filter</span>. Select Filter to use MedDRA SMQs or a similar standardized query dictionary; see <a href="#CHDBEJJJ">"Filter Dictionaries"</a> for more information.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>From the <span class="bold">Folder Type</span> list, select <span class="bold">Strong</span> to create a strongly defined dictionary or <span class="bold">Weak</span> to create a dictionary folder.</p>
+</li>
+<li>
+<p>Leave the <span class="bold">Status</span> set to <span class="bold">Provisional</span> until you are ready to activate and use the dictionary; see <a href="#i1008334">"Setting the Dictionary's Status to Active"</a>.</p>
+</li>
+<li>
+<p>Enter a <span class="bold">Label Prefix</span>. Accept the default value of <code dir="ltr">1.</code> or enter the prefix of your choice. TMS automatically concatenates this value with a build number that represents the number of times Activation has been run on the dictionary. If you use a numerical prefix, you may want to end it with a period/full stop (.) to separate the prefix from the build number.</p>
+<p>You may want to use additional decimal places to accommodate point releases of the same dictionary, and you may want to use the dictionary's official release number.</p>
+<p>For example, if you define a label prefix of <code dir="ltr">3.0.</code> when you initially load WHO-Drug 3.0, TMS assigns a Release Label of 3.0.1 to the successfully activated terms and relations the first time you run Activation on the Activation Group, 3.0.2 the second time, and so on. You can use Release Labels, including the label prefix, to define named relations of type Release Label (RL); see <a href="defmisc.htm#i1003246">"Defining Named Relations"</a>.</p>
+<p>You can also use a text prefix such as <code dir="ltr">MEDDRA</code>, or a prefix that combines text and numbers, such as <code dir="ltr">MEDDRA7.0.</code></p>
+</li>
+<li>
+<p>Assess the following options for your dictionary, selecting the appropriate boxes:</p>
+<ul>
+<li>
+<p><span class="bold">VT Level Required?</span> For strong dictionaries only. If selected, you must define a classification level or classification group level in your dictionary&mdash;which, in turn, creates a Verbatim Term level&mdash;before you can activate this dictionary. In the TMS modules that deal with verbatim terms (every module under the VTA Maintenance and Omission Management nodes, as well as Browse VT Classification Data), TMS populates the list of values in the <span class="bold">Dictionary</span> field from the set of dictionaries that have a <span class="bold">VT Level Required?</span> selected.</p>
+</li>
+<li>
+<p><span class="bold">Web Search Accessible?</span> This setting is obsolete.</p>
+</li>
+<li>
+<p><span class="bold">Accessible to Light Browser?</span> Can the dictionary be used at all in the TMS Lite Browser? If selected, TMS users will be able to browse and search this dictionary's terms, relations, and VTAs in the TMS Lite Browser.</p>
+<p>Before activating this option, consider this dictionary' usage and the sensitivity of its data. The TMS Lite Browser may be set for Auto-login, meaning that users do not have to enter a user name and password to browse accessible data. See <a href="admin.htm#CDCBHFCD">"Customizing the TMS Lite Browser URL to Support Additional Databases or Automatic Login."</a></p>
+<p>Do check this flag for filter dictionaries to enable filter dictionary searches using MedDRA SMQs.</p>
+</li>
+<li>
+<p><span class="bold">Term Uniqueness Enforced?</span> If selected, terms in this dictionary must be unique over the scope of the entire dictionary. When you choose to enforce uniqueness for an entire dictionary, you in turn enforce term uniqueness on all levels and group levels within that dictionary.</p>
+</li>
+<li>
+<p><span class="bold"><a id="sthref346"></a>VTI <a id="sthref347"></a>Allowed?</span> Check to enable creating Verbatim Term Individual VTI) classifications. This is required if nonunique terms are allowed in the coding level, either with auxiliary information as in WHO-Drug C, or with different higher level relations, as you may have in MedDRA.</p>
+<p>If checked, VTIs can be allowed or not allowed for this dictionary in dictionary domains.</p>
+</li>
+<li>
+<p><span class="bold">Autocode with <a id="sthref348"></a>Aux?</span> Check to allow the TMS autoclassification process to create VTIs based on existing VTIs or dictionary terms with the same auxiliary information. Use this option if you are using a dictionary with nonunique terms in the classification level and auxiliary information for each term, such as WHO-Drug C.</p>
+<p>If checked, Autocoding with auxiliary information can be allowed or not allowed for this dictionary in dictionary domains.</p>
+</li>
+<li>
+<p><span class="bold">Autoqueried in Light Browser?</span> Is the dictionary available for browsing in the Exploration/Hierarchies tab of the HTML Browser? If selected, the TMS Lite Browser automatically queries for all terms in the top level of the dictionary when you select the dictionary in the main TMS Lite Browser window. This setting is appropriate only for strong dictionaries (dictionaries with hierarchical levels defined).</p>
+<p>Not recommended for dictionaries in which most or all of the terms are stored in the highest or only level, because autoqueries in such dictionaries can be very time- and resource-consuming.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The Terminologies tab in the TMS Lite Browser appears only if both <span class="bold">Autoqueried in Light Browser?</span> and <span class="bold">Accessible to Light Browser?</span> are checked for at least one of the dictionaries linked to the current domain.</div>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="bold">Dictionary Term Display Procedure</span> If desired, specify a procedure in this field to modify the behavior of the <span class="bold">Dictionary Term</span> field in VT classification and reclassification. By default, TMS displays the dictionary term to which the selected verbatim term is classified, if any. By writing a procedure and specifying it for a dictionary, you can display a different term in these fields.</p>
+<p>For details about writing a Dictionary Term Display Procedure, see <a href="admin.htm#i1002967">"Writing a Procedure to Change the Dictionary Display"</a>. Because this feature is only relevant for verbatim term classification, enter a procedure in this field only for strong dictionaries with verbatim term levels.</p>
+</li>
+<li>
+<p>Save. For a base dictionary, TMS inserts the new dictionary into the tree structure. Virtual dictionaries do not appear in the navigation tree within the Define Dictionaries module. In either case, TMS populates the audit information fields.</p>
+</li>
+</ol>
+<p>The Virtual Dictionary tab window can only display definition information for a single virtual dictionary. If you define multiple virtual dictionaries against a base dictionary, you can scroll through the records to find the virtual dictionary you want to modify. From the <span class="bold">Navigate</span> menu, select <span class="bold">Previous Record</span> or <span class="bold">Navigate</span>, then choose <span class="bold">Next Record</span> to navigate to your choice. Alternatively, use the arrows on your keyboard.</p>
+</div>
+<!-- class="sect2" -->
+<a id="i1001565"></a>
+<div id="TMSUG11500" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Defining the Dictionary Levels<a id="sthref349"></a></h3>
+<p>The Level tab of the Define Dictionaries window enables you to define a dictionary's levels. For strong dictionaries, begin by defining the topmost level in the dictionary hierarchy and work your way down. For weak dictionary folders, define all of the dictionaries you want to add to this dictionary folder. To delete a level, see <a href="#CHDBEJBJ">"Deleting a Level"</a>.</p>
+<p>To define dictionary levels:</p>
+<ol>
+<li>
+<p>Click the Base Dictionary tab. (You cannot add levels to virtual dictionaries.)</p>
+</li>
+<li>
+<p>Click the name of your selected dictionary in the navigator tree.</p>
+</li>
+<li>
+<p>Select <span class="bold">Record</span>, then <span class="bold">Insert</span>.</p>
+<p>The Level tabs replace the Dictionary tabs, and the new level definition appears in the Level tab window and in the navigator tree. If you are defining a weak dictionary folder, the fields in the Level Relations tab are grayed out.</p>
+</li>
+<li>
+<p>Define the short name and name of the level.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The level names you define in the GUI must exactly match those you specify in the load script. See <a href="loaddefs.htm#CJACDEEG">Appendix A</a> for the level names of the practice dictionary CLS.</div>
+</li>
+<li>
+<p>Select <span class="bold">Classification Level?</span> if this is the level against which you want TMS to map verbatim terms. You can select classification level for only one level. If you use a group level for the classification level, you must also choose <span class="bold">Level</span> from the <span class="bold">Term Uniqueness</span> list.</p>
+<p>If you define this level as the classification level, TMS automatically creates a level under it called Verbatim Term Level where it will store verbatim term assignments (VTAs). TMS displays a blue "vt" above the relation line in the tree structure to denote that the level is the Verbatim Term Level.</p>
+<p>You can define classification levels for strong dictionaries only.</p>
+</li>
+<li>
+<p>Select <span class="bold">Report Value?</span> if you want TMS to report terms of this level to the external system as derived terms when they are called for by the external system, as long as the relation between this level and the next lower level is on the derivation path. See <a href="#i1004223">"Derivation Path"</a> for more information.</p>
+<p>You can only create reportable levels in strong dictionaries.</p>
+</li>
+<li>
+<p>In the <span class="bold">Level Order</span> field, enter a number only if this level is one of two or more levels at the same rank (children of the same parent level) in the dictionary hierarchy. Enter 1,2&hellip;<span class="italic">n</span> to specify the order in which TMS should display the levels vertically in the dictionary hierarchy tree structure. Levels with lower Level Order numbers appear higher in the tree structure. This has no functional effect; the setting is necessary only because you cannot display two levels in the same place in the tree structure. The field is enterable for all levels, but TMS only uses it to determine the presentation order of peer levels.</p>
+</li>
+<li>
+<p>In the <span class="bold">Level Type</span> list, choose <span class="bold">Level</span> or <span class="bold">Group Level</span>. A <a href="glossary.htm#CBAECAAC"><span class="xrefglossterm">group level</span></a> is a level that contains more than one level within it. You must define a group level before you define the levels within it. See <a href="#i1004081">"Group Level Constraints"</a>. If you are defining a group level, leave the <span class="bold">Group Short Name</span> field blank. To define other levels as sublevels within the group level:</p>
+<ul>
+<li>
+<p>Level Definition &ndash; Give sublevels a Level Type of Level and enter the group level's short name in the Group Short Name field.</p>
+</li>
+<li>
+<p>Relation Definition &ndash; In the Level Relations window, define the top sublevel's relation with the parent group level as a Relation Type of Top Sublevel. See <a href="#i1001618">"Defining Relations Between Levels (Strong Dictionaries Only)"</a>. Define subsequent sublevels as having a <span class="bold">Relation Type</span> of <span class="bold">Level</span> in relation to the next higher sublevel.</p>
+</li>
+</ul>
+<p>You can only define group levels in strong dictionaries. See <a href="#i1004081">"Group Level Constraints"</a> and <a href="#i1004086">"Tree Structure Display of Group Levels"</a>.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The <span class="bold">Verbatim Term Level</span> setting is for system use only; TMS enters this value automatically when it creates the VT Level. Levels that are neither group nor verbatim term levels should be called simply <span class="italic">level</span> here, including sublevels within a group.</div>
+</li>
+<li>
+<p><span class="bold">Term Uniqueness</span>: If set to Level, terms within this level must be unique. If set to None, there can be multiple occurrences of the same term in this level. Each occurrence may have different auxiliary information.</p>
+</li>
+<li>
+<p>If the level you are defining is one of the sublevels within a group, enter the short name of the group level in the <span class="bold">Group Short Name</span> field. Leave this field blank for all other levels, including the group level itself.</p>
+</li>
+<li>
+<p>Save. TMS inserts the level into the tree structure, and populates the audit information fields.</p>
+</li>
+<li>
+<p>To define subsequent levels for a strong dictionary, you can either:</p>
+<ul>
+<li>
+<p>Highlight the parent level in the tree structure and select <span class="bold">Record</span> and then <span class="bold">Insert</span>. Then choose <span class="bold">New Level</span> from the <span class="bold">Level</span> or <span class="bold">Relation Creation</span> dialog box.</p>
+</li>
+<li>
+<p>Highlight any field in the Levels window and select <span class="bold">Insert Record</span>. TMS creates a child level of the level you highlight.</p>
+</li>
+</ul>
+<p>To define subsequent dictionaries for a weak dictionary folder, highlight either the dictionary folder name or any of its dictionaries, and add a record.</p>
+</li>
+</ol>
+<p class="subhead2"><a id="CHDBEJBJ"></a><a id="TMSUG11501"></a>Deleting a Level<a id="sthref350"></a></p>
+<p>To delete a level, highlight the level short name in the Levels window and select <span class="bold">Delete Record</span>. You cannot directly delete a verbatim term level, but you can remove one indirectly by either deleting the classification level above it or clearing the <span class="bold">Classification Level?</span> box for the classification level above it. In either case, TMS automatically deletes the verbatim term level.</p>
+</div>
+<!-- class="sect2" -->
+<a id="i1001618"></a>
+<div id="TMSUG11502" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Defining Relations Between Levels (Strong Dictionaries Only)</h3>
+<p>You define relations between levels in the Level Relations window, one pair of levels at a time. The child level is highlighted in the tree structure. See <a href="#i1004081">"Group Level Constraints"</a> and <a href="#i1004086">"Tree Structure Display of Group Levels"</a>.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You cannot define relationships between the levels, or microthesauri, in a weak dictionary folder, although you can define links between their terms. In such cases, the cardinality and optionality of the relation is defined by the named relation itself; see <a href="defmisc.htm#i1003246">"Defining Named Relations"</a> for more information.</div>
+<div id="TMSUG11503" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref351"></a>
+<h4 class="sect3">Level Selection in the Define Dictionaries Window<a id="sthref352"></a></h4>
+<p>This window provides subtle visual cues to show you the currently selected dictionary level. Before defining your dictionary structure any further, be sure that you understand this user interface behavior and its consequences for dictionary definition.</p>
+<p>There are two ways that the user interface displays levels as appearing to be selected:</p>
+<ul>
+<li>
+<p>The level name appears highlighted, as in the left example in <a href="#CHDHHIEJ">Figure 6-5</a>. TMS highlights levels when you click them for the first time.</p>
+</li>
+<li>
+<p>The name appears highlighted and dashed lines are present above and below the level name, as in the right example in <a href="#CHDHHIEJ">Figure 6-5</a>. You can select a level by double-clicking any level, or single-clicking a highlighted level.</p>
+</li>
+</ul>
+<div id="TMSUG11504" class="figure">
+<p class="titleinfigure"><a id="CHDHHIEJ"></a>Figure 6-5 Highlighted and Selected Levels in Define Dictionaries</p>
+<img width="332" height="96" src="img/imgslct.gif" alt="Description of Figure 6-5 follows" /><br />
+<a id="sthref353" href="img_text/imgslct.htm">Description of ''Figure 6-5 Highlighted and Selected Levels in Define Dictionaries''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p>The difference between these selection states appears when you attempt to enter a new level into a dictionary. If you select <span class="bold">Insert</span> and then <span class="bold">New Record</span> when a level is highlighted, TMS inserts a child level under it.</p>
+<p>However, if you insert a new record when a level is selected, TMS prompts you to choose between adding a new level under the selected level, or creating a new relation between the selected level and an existing level in the dictionary.</p>
+</div>
+<!-- class="sect3" -->
+<div id="TMSUG11505" class="sect3"><a id="sthref354"></a>
+<h4 class="sect3">Defining Relations Between Levels<a id="sthref355"></a></h4>
+<p>To define relations between levels of a strong dictionary:</p>
+<ol>
+<li>
+<p>Open the Level Relations window using one of the following methods, depending on:</p>
+<ul>
+<li>
+<p>If you are defining the relation between the level you have just created and its parent, click the <span class="bold">Level Relations</span> tab. TMS populates the parent and child level information.</p>
+</li>
+<li>
+<p>If you are defining a relation between levels that already exist:</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Highlight or select the parent level in the tree structure, click the <span class="bold">Level Relations</span> tab, select <span class="bold">Record</span>, and then <span class="bold">Insert</span>.</p>
+</li>
+<li>
+<p>If you had selected (instead of highlighted) the level, TMS opens the <span class="bold">Level</span> or <span class="bold">Relation Creation</span> box. Select <span class="bold">New Relation to an Existing Level?</span> and click <span class="bold">OK</span>. TMS displays a list that includes all levels that do not currently have a relation with the parent level.</p>
+</li>
+<li>
+<p>Select the level to which you want to define a relation and click <span class="bold">OK</span>. TMS enters the new relation in the tree structure: it displays the child level a second time with a relation line to the new parent level.</p>
+</li>
+<li>
+<p>Click the new display of the child level in the tree structure and click the <span class="bold">Level Relations</span> tab. TMS populates the parent and child level information.</p>
+<p>For example, to create the standard definition of MedDRA you define a branch of related levels beginning with System Organ Class (SOC) and continuing to High Level Group Term (HLGT), High Level Term (HLT) and Preferred Term (PT), each the parent of the next. However, you can link the PT level directly to the SOC level. To create this relation, after you have created the PT level under the HLT level, select (do not merely highlight) the SOC level in the tree structure, select <span class="bold">Insert Record</span>, select <span class="bold">New Relation to an Existing Level</span>, select the PT level from the <span class="bold">Child</span> LOV, and define the relation.</p>
+</li>
+<li>
+<p>From the <span class="bold">Relation Type</span> list, choose either <span class="bold">Level</span> or <span class="bold">Group Level</span> (<span class="bold">Verbatim Level</span> is for TMS system use only).</p>
+<ul>
+<li>
+<p>Choosing <span class="bold">Top Sublevel</span> instructs TMS to create the new level as the top sublevel within the parent level, which must have a <span class="bold">Level Type</span> of <span class="bold">Group Level</span> in the Level window. See <a href="#i1004081">"Group Level Constraints"</a>. Top sublevels cannot have any other relation type specified; you cannot select any of the other flags in this window.</p>
+</li>
+<li>
+<p>Choosing <span class="bold">Level</span> instructs TMS to create the new level as a child of the parent level. If the parent level is the top sublevel within a group, TMS creates the child as a lower sublevel within the group. If the parent level is a group level, the child level will be linked to the group level as a whole and cannot be linked directly to any of the sublevels within it.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Define the parent side of the relation. Select or leave deselected each box as it relates to the parent side of the relation.</p>
+<p>It may help to diagram the relation, indicating whether each end is either multi or single, and either mandatory or optional.</p>
+<p>For example, to define the relation shown below, leave both the <span class="bold">Mandatory?</span> and <span class="bold">Many Cardinality?</span> boxes clear for the parent level, and select both those boxes for the child level.</p>
+<img width="152" height="76" src="img/manycrd1.gif" alt="Description of manycrd1.gif follows" /><br />
+<a id="sthref356" href="img_text/manycrd1.htm">Description of the illustration ''manycrd1.gif''</a><br />
+<br />
+<p>See <a href="loaddefs.htm#CJACDEEG">Appendix A, "Sample Dictionary Definitions"</a> for sample dictionary diagrams and the corresponding definitions.</p>
+<ul>
+<li>
+<p><span class="bold">Mandatory?</span><a id="sthref357"></a> Select if terms in the parent level must have a link to a term in the child level.<a id="sthref358"></a></p>
+</li>
+<li>
+<p><span class="bold">Many Cardinality?</span> Select if terms in the child level can have links to more than one term in the parent level.<a id="sthref359"></a></p>
+</li>
+<li>
+<p><span class="bold">Primary Link?</span> Select if <span class="bold">Many Cardinality?</span> is selected for the parent level and you want to require that one of the terms in the parent level be defined as the child level term's Primary Link. If <span class="bold">Derivable?</span> is also selected for the parent level, you must select either the <span class="bold">Primary Link?</span> or <span class="bold">Primary Path Link?</span> boxes. Otherwise, TMS will not activate the dictionary.</p>
+</li>
+<li>
+<p><span class="bold">Primary Path Link?</span> Select this to define a Primary Path Link between the selected parent and child levels.</p>
+</li>
+<li>
+<p><span class="bold">Derivable?</span> There must be one and only one pathway to derivable levels from the classification level. Select if you want this relation to be part of that pathway.</p>
+<div class="infobox-note">
+<p class="notep1">Notes:</p>
+<ul>
+<li>
+<p>To derive terms from a dictionary level, the level must be on the derivation path (see <a href="#i1004223">"Derivation Path"</a>), the level's <span class="bold">Report Value?</span> box must be selected, and the external system must be set up to request derived values from that level. For example, see <a href="ocinteg.htm#i1002061">"Setting Up Data Collection in Oracle Clinical"</a>.</p>
+</li>
+<li>
+<p>You cannot modify the automatically defined relation between the verbatim term level and the classification level. On the child side, <span class="bold">Mandatory?</span> and <span class="bold">Many Cardinality?</span> are selected; on the parent side, only <span class="bold">Derivable?</span> is selected.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li>
+<p>Define the child side of the relation. Select or leave clear each box as it relates to the child side of the relation.</p>
+<ol>
+<li>
+<p><span class="bold">Mandatory?</span> Select if terms in the child level must have a link to a term in the parent level.</p>
+</li>
+<li>
+<p><span class="bold">Many Cardinality?</span> Select if terms in the parent level can have links to more than one term in the child level.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+It is possible to define relations between levels of different dictionaries as well as levels within a dictionary. For more information on linking terms between dictionaries, see <a href="dictmnt.htm#i1002439">"Setting Up Cross-Dictionary Relations"</a>.</div>
+</li>
+</ol>
+</li>
+<li>
+<p>Save. TMS populates the audit information fields.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="i1001695"></a>
+<div id="TMSUG11506" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Defining Level Details</h3>
+<p>This section describes what level details are and how to define them.</p>
+<ul>
+<li>
+<p><a href="#CHDHJAFJ">Understanding Level Details</a></p>
+</li>
+<li>
+<p><a href="#CHDJGAII">Defining a Dictionary's Level Details</a></p>
+</li>
+</ul>
+<a id="CHDHJAFJ"></a>
+<div id="TMSUG11507" class="sect3">
+<h4 class="sect3">Understanding Level Details</h4>
+<p>Level details are optional. They store and display additional, customized information about terms in a particular dictionary level. Details reference seven columns in the tms_dict_contents table. Level details enable you to customize these columns for your company's needs.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Level details and the validation configured within the Define Dictionaries module are only enforced and displayed from within the TMS Graphical User Interface. Batch loading of data does not adhere to these configurations.</div>
+<p>TMS displays fields corresponding to Level Details in the Maintain Repository Data and Browse Repository Data windows. You define the field label, content type, and other characteristics for up to seven fields. These fields are:</p>
+<div id="TMSUG11508" class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref360"></a>
+<h5 class="sect4">Label</h5>
+<p>The column heading that you want TMS windows to use for this column in this dictionary.</p>
+</div>
+<!-- class="sect4" -->
+<a id="i1009057"></a>
+<div id="TMSUG11509" class="sect4"><!-- infolevel="all" infotype="General" -->
+<h5 class="sect4">Category</h5>
+<p>You can use this field to define a category for the term, such as 'Provisional' for terms as they go through the MSSO Dictionary Maintenance process.</p>
+</div>
+<!-- class="sect4" -->
+<div id="TMSUG11510" class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref361"></a>
+<h5 class="sect4">Dict Content Code</h5>
+<p>Corresponding to the dict_content_code column, this field is designed to serve as the primary key within this dictionary. This column is indexed.</p>
+</div>
+<!-- class="sect4" -->
+<a id="i1001703"></a>
+<div id="TMSUG11511" class="sect4"><!-- infolevel="all" infotype="General" -->
+<h5 class="sect4">Dict Content Alt Code</h5>
+<p>By default, the <span class="bold">Dict Content Alt Code</span> has a function different from <span class="bold">Values 1</span>&hellip;<span class="bold">4</span>. It corresponds to the dict_contents_alt_code column, which is indexed, unlike the Value 1&hellip;4 columns. It is designed to allow you a cross-reference to a legacy thesaurus system.</p>
+</div>
+<!-- class="sect4" -->
+<a id="i1001706"></a>
+<div id="TMSUG11512" class="sect4"><!-- infolevel="all" infotype="General" -->
+<h5 class="sect4">Value 1, 2, 3, and 4</h5>
+<p>You can use <span class="bold">Value 1</span>&hellip;<span class="bold">4</span> to customize other fields in the Maintain and Browse Repository Data windows. For example, you could define that <span class="bold">Value 1</span> for the WHO-Drug Dictionary's Preferred Term level was "number of ingredients." See Step 3 below to define a list of values for the field.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You can modify level details even in an active dictionary.</div>
+</div>
+<!-- class="sect4" --></div>
+<!-- class="sect3" -->
+<a id="CHDJGAII"></a>
+<div id="TMSUG11513" class="sect3">
+<h4 class="sect3">Defining a Dictionary's Level Details</h4>
+<p>This section describes how to define a dictionary's level details using the Define Dictionaries window.</p>
+<p>To define a dictionary's level details:</p>
+<ol>
+<li>
+<p>Click the <span class="bold">Level Details</span> tab. The Level Details window opens.</p>
+</li>
+<li>
+<p>In the <span class="bold">Level Detail</span> field, choose a value from the list. See the explanations of these fields for more information.</p>
+</li>
+<li>
+<p>Specify the label of the field to appear on the Maintain Repository Data form.</p>
+</li>
+<li>
+<p>Write a description of the purpose and/or content of the field.</p>
+</li>
+<li>
+<p>Specify the following:</p>
+<ul>
+<li>
+<p><span class="bold">Enterable?</span> Select if you want the user to be able to enter a value in the field to appear on the Maintain Repository Data form.</p>
+</li>
+<li>
+<p><span class="bold">Updateable?</span> Select if you want the user to be able to update a value in the field, following the initial insert of the term.</p>
+</li>
+<li>
+<p><span class="bold">LOV Validation?</span> Select if you want TMS to validate that one of the values from the LOV is entered in the field. If <span class="bold">Validation?</span> is selected and the user enters an invalid value in the Maintain Repository Data window, TMS does not allow the user to save the record.</p>
+</li>
+<li>
+<p><span class="bold">Mandatory?</span> Select if you want the user to be required to enter a value in the field. If <span class="bold">Mandatory?</span> is selected, and you do not enter a value in the Maintain Repository Data window, TMS does not allow you to save the record.</p>
+</li>
+<li>
+<p><span class="bold">Entry Length</span>. Enter the maximum number of characters the field can contain. TMS does not allow the user to save a longer value in the Maintain Repository Data window.</p>
+</li>
+<li>
+<p><span class="bold">Data Type</span>. From the list, select the type of data to be contained in the field: char, date, or numbers. In the Maintain Repository Data window, TMS does not allow the user to save the wrong data type.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>In the <span class="bold">Description</span> field, define the purpose or content of the field.</p>
+</li>
+<li>
+<p>In the <span class="bold">LOV Statement</span> field, write a select statement to determine the items to appear in an LOV for the field (optional). The statement must select two columns from the database, one of which is the value that will be stored in the database, and the other of which is the value displayed in the LOV.</p>
+<p>For example:</p>
+<p><code dir="ltr">select 'A', 'Approved' from dual</code></p>
+<p><code dir="ltr">union</code></p>
+<p><code dir="ltr">select 'P', 'Provisional' from dual</code></p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Do not put a semicolon (;) at the end of the statement.</div>
+</li>
+<li>
+<p>Save. TMS commits the level details to the database, and populates the audit information fields.</p>
+<p>To define another detail, put your cursor in the existing detail and select <span class="bold">Insert Record</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="i1008334"></a>
+<div id="TMSUG11514" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Setting the Dictionary's Status to Active<a id="sthref362"></a></h3>
+<p>When you are satisfied with all the dictionary's definitions, set its status to Active in the <span class="bold">Status</span> field of the Define Dictionaries window and save.</p>
+<p>Once a dictionary is set to Active status, you may set its status back to Provisional only as long as it has no terms, TMS domains or VTAs associated with it, or if the dictionary has any Translation Derivation Links. However, you can still add levels to a weak dictionary folder even when it is set to Active status.</p>
+<p>When changing the Active/Provisional status for a base or virtual dictionary, keep the following rules in mind:</p>
+<ul>
+<li>
+<p>An Active base dictionary cannot be set to Provisional if an Active virtual dictionary based on it exists.</p>
+</li>
+<li>
+<p>A base dictionary set to VT Level Required cannot be set to Active unless it has one and only one verbatim term level.</p>
+</li>
+<li>
+<p>A Provisional virtual dictionary can be deleted at any time.</p>
+</li>
+<li>
+<p>A virtual dictionary with status Active cannot be deleted.</p>
+</li>
+<li>
+<p>The status of a virtual dictionary cannot be set from Active to Provisional if it is assigned to a domain.</p>
+</li>
+<li>
+<p>A base dictionary cannot be deleted if there are search objects associated with it.</p>
+</li>
+<li>
+<p>Changing the status of a base dictionary that has a virtual dictionary defined to provisional deletes the Provisional virtual dictionary.</p>
+</li>
+</ul>
+<p>The following table describes which activities are allowed when the dictionary is Provisional and when you set it to Active.</p>
+<div id="TMSUG11515" class="tblformal">
+<p class="titleintable"><a id="sthref363"></a><a id="CHDHDCIG"></a>Table 6-1 Activities Allowed in Provisional and Active Dictionaries</p>
+<table class="cellalignment32" title="Activities Allowed in Provisional and Active Dictionaries" summary="This table shows which actions are allowed in provisional and in active dictionaries." dir="ltr">
+<thead>
+<tr class="cellalignment26">
+<th class="cellalignment33" id="r1c1-t18">Action</th>
+<th class="cellalignment33" id="r1c2-t18">Provisional</th>
+<th class="cellalignment33" id="r1c3-t18">Active</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment26">
+<td class="cellalignment34" id="r2c1-t18" headers="r1c1-t18">
+<p>Modifying the dictionary short name</p>
+</td>
+<td class="cellalignment34" headers="r2c1-t18 r1c2-t18">
+<p>Yes</p>
+</td>
+<td class="cellalignment34" headers="r2c1-t18 r1c3-t18">
+<p>No</p>
+</td>
+</tr>
+<tr class="cellalignment26">
+<td class="cellalignment34" id="r3c1-t18" headers="r1c1-t18">
+<p>Changing the folder type (before any levels exist)</p>
+</td>
+<td class="cellalignment34" headers="r3c1-t18 r1c2-t18">
+<p>Yes</p>
+</td>
+<td class="cellalignment34" headers="r3c1-t18 r1c3-t18">
+<p>No</p>
+</td>
+</tr>
+<tr class="cellalignment26">
+<td class="cellalignment34" id="r4c1-t18" headers="r1c1-t18">
+<p>Changing enforcement of uniqueness of terms</p>
+</td>
+<td class="cellalignment34" headers="r4c1-t18 r1c2-t18">
+<p>Yes</p>
+</td>
+<td class="cellalignment34" headers="r4c1-t18 r1c3-t18">
+<p>No</p>
+</td>
+</tr>
+<tr class="cellalignment26">
+<td class="cellalignment34" id="r5c1-t18" headers="r1c1-t18">
+<p>Changing the <span class="bold">VT Level Reqd?</span> setting</p>
+</td>
+<td class="cellalignment34" headers="r5c1-t18 r1c2-t18">
+<p>Yes</p>
+</td>
+<td class="cellalignment34" headers="r5c1-t18 r1c3-t18">
+<p>No</p>
+</td>
+</tr>
+<tr class="cellalignment26">
+<td class="cellalignment34" id="r6c1-t18" headers="r1c1-t18">
+<p>Modifying the level hierarchy</p>
+</td>
+<td class="cellalignment34" headers="r6c1-t18 r1c2-t18">
+<p>Yes</p>
+</td>
+<td class="cellalignment34" headers="r6c1-t18 r1c3-t18">
+<p>For weak dict. folders only</p>
+</td>
+</tr>
+<tr class="cellalignment26">
+<td class="cellalignment34" id="r7c1-t18" headers="r1c1-t18">
+<p>Adding new level details</p>
+</td>
+<td class="cellalignment34" headers="r7c1-t18 r1c2-t18">
+<p>Yes</p>
+</td>
+<td class="cellalignment34" headers="r7c1-t18 r1c3-t18">
+<p>Yes</p>
+</td>
+</tr>
+<tr class="cellalignment26">
+<td class="cellalignment34" id="r8c1-t18" headers="r1c1-t18">
+<p>Modifying details</p>
+</td>
+<td class="cellalignment34" headers="r8c1-t18 r1c2-t18">
+<p>Yes</p>
+</td>
+<td class="cellalignment34" headers="r8c1-t18 r1c3-t18">
+<p>Yes</p>
+</td>
+</tr>
+<tr class="cellalignment26">
+<td class="cellalignment34" id="r9c1-t18" headers="r1c1-t18">
+<p>Modifying the dictionary name</p>
+</td>
+<td class="cellalignment34" headers="r9c1-t18 r1c2-t18">
+<p>Yes</p>
+</td>
+<td class="cellalignment34" headers="r9c1-t18 r1c3-t18">
+<p>Yes</p>
+</td>
+</tr>
+<tr class="cellalignment26">
+<td class="cellalignment34" id="r10c1-t18" headers="r1c1-t18">
+<p>Modifying the dictionary description</p>
+</td>
+<td class="cellalignment34" headers="r10c1-t18 r1c2-t18">
+<p>Yes</p>
+</td>
+<td class="cellalignment34" headers="r10c1-t18 r1c3-t18">
+<p>Yes</p>
+</td>
+</tr>
+<tr class="cellalignment26">
+<td class="cellalignment34" id="r11c1-t18" headers="r1c1-t18">
+<p>Modifying the dictionary Release Label prefix</p>
+</td>
+<td class="cellalignment34" headers="r11c1-t18 r1c2-t18">
+<p>Yes</p>
+</td>
+<td class="cellalignment34" headers="r11c1-t18 r1c3-t18">
+<p>Yes</p>
+</td>
+</tr>
+<tr class="cellalignment26">
+<td class="cellalignment34" id="r12c1-t18" headers="r1c1-t18">
+<p>Changing the level order</p>
+</td>
+<td class="cellalignment34" headers="r12c1-t18 r1c2-t18">
+<p>Yes</p>
+</td>
+<td class="cellalignment34" headers="r12c1-t18 r1c3-t18">
+<p>Yes</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CHDJIBAF"></a>
+<div id="TMSUG11516" class="sect1">
+<h2 class="sect1">Defining Dictionary-wide Informative Notes Before Activation</h2>
+<p>See <a href="defmisc.htm#CHDFFCCD">"Overview of Informative Notes and Attributes"</a> for general information about Informative Notes. You must define Informative Note Attributes and associate them with a dictionary before you can define dictionary-wide Informative Notes for the dictionary; see <a href="defmisc.htm#i1004701">"Defining Informative Note Attributes"</a> and <a href="defmisc.htm#CHDEDBJI">"Making Informative Note Attributes Available for Dictionaries and Record Types"</a>.</p>
+<p>This section describes adding dictionary-wide Informative Notes to the pre-dictionary tables, using the TMS API. This approach enables you to validate the notes you add by running Activation. You can also add dictionary-wide Informative Notes directly to the production tables by using the Define Dictionaries window (see <a href="defmisc.htm#i1005467">"Defining Dictionary-wide Informative Notes"</a>). The direct approach skips the Activation process.</p>
+<p>Dictionary-wide Informative Notes serve one of two purposes in TMS, depending on the note type you choose:</p>
+<ul>
+<li>
+<p>Notes of type Standard and URL cascade down to that dictionary's data. By defining a dictionary-wide Informative Note, you also assign that note to every data record within the dictionary.</p>
+</li>
+<li>
+<p>Dictionary version numbers enable you to specify which version of a dictionary you have loaded into the database. Dictionary versions are based upon the attribute Dictionary Version, which is derivable. See <a href="defmisc.htm#CHDJGEGF">"Defining a Dictionary Version Informative Note"</a>.</p>
+</li>
+</ul>
+<p>You cannot use the Workflow note type for dictionary-wide Informative Notes.</p>
+<p>You can create dictionary-wide Informative Notes for either base or virtual dictionaries, but the dictionary must be active.</p>
+<p>To add a dictionary-wide Informative Note to the pre-dictionary tables:</p>
+<ol>
+<li>
+<p>Connect to SQL*Plus as the load user.</p>
+</li>
+<li>
+<p>Run the API procedure tms_user_mt_info.insertInfo.</p>
+<p>You must specify a pInfoNoteType of 'D' to create a dictionary-wide Informative Note.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="CHDGECHB"></a>
+<div id="TMSUG11517" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Loading a Dictionary</h2>
+<p>Use the instructions in this section to load a dictionary for the first time or to upgrade a loaded dictionary to a new version. For more information on upgrading a dictionary, see <a href="dict_upg.htm#BABGFFBD">Chapter 8, "Upgrading to a New Dictionary Version."</a></p>
+<p>This section includes:</p>
+<ul>
+<li>
+<p><a href="#CHDIIFFE">Required Setup</a></p>
+</li>
+<li>
+<p><a href="#i1009004">About Load Scripts</a></p>
+</li>
+<li>
+<p><a href="#i1001838">Downloading Sample Scripts</a></p>
+</li>
+</ul>
+<div class="infobox-note">
+<p class="notep1">Important:</p>
+<span class="bold">Oracle is not responsible for the files you upload.</span>
+<p>You are solely responsible for obtaining a valid license for any dictionary file(s) you upload. By uploading dictionary files you confirm that you understand all terms that apply to the use of the dictionary.</p>
+<p>By uploading a version of WHODrug Enhanced, WHODrug Global, or other Uppsala Monitoring Centre products, you confirm that you hold a valid license granted by the Uppsala Monitoring Centre for the uploaded Uppsala Monitoring Centre product.</p>
+</div>
+<a id="CHDIIFFE"></a>
+<div id="TMSUG11518" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><a id="sthref364"></a>Required Setup</h3>
+<p>Before you load a dictionary, check that you have the necessary setup:</p>
+<ul>
+<li>
+<p>Loading data into the temporary tables requires Oracle SQL Loader, which is part of your basic Oracle software package, and is located in the bin directory.</p>
+</li>
+<li>
+<p>Create a new user for loading data into TMS. In the TMS Define Users window, create a superuser and set the <span class="bold">Load User?</span> flag to <span class="bold">Yes</span>. For more information, see <a href="admin.htm#CHDDJIBB">"Defining Users"</a>.</p>
+</li>
+<li>
+<p>Define the dictionary structure, domains, activation groups, dictionary named relationships and dictionary informative notes attributes (instructions in this chapter and in <a href="defmisc.htm#CHDBEEDI">Chapter 7, "Defining Other TMS Elements"</a>).</p>
+</li>
+<li>
+<p>Download the appropriate sample scripts from My Oracle Support and edit them for your installation. See <a href="#i1001838">"Downloading Sample Scripts."</a></p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="i1009004"></a>
+<div id="TMSUG11519" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">About Load Scripts <a id="sthref365"></a></h3>
+<p>If you are loading data into TMS, a load script is necessary to move the data from temporary tables to the <a href="glossary.htm#CBACDIBD"><span class="xrefglossterm">predict tables</span></a> (pre-dictionary tables). Your load script must be consistent with your dictionary level and level relation definitions.</p>
+<p>Oracle supplies sample load scripts for various dictionaries including MedDRA, MedDRA Primary Path, MedDRA SMQ, WHO-Drug B, B2, and C, and SNOMED on My Oracle Support. The corresponding dictionary structures are described in <a href="loaddefs.htm#CJACDEEG">Appendix A, "Sample Dictionary Definitions."</a></p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+This documentation is not intended to provide complete and specific instructions for the loading process, which may vary depending on the dictionary and on the individual needs of your location. Rather, these instructions are a guideline by which you can create load scripts that are compatible with your dictionaries. Oracle provides only sample load scripts that are not intended to dictate the usage or maintenance strategy for individual customers. These scripts are supported only to the extent that the API functions are specified.</div>
+<p>Load scripts must do the following for each defined element that you are using:</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Using named relations and Informative Notes is optional.</div>
+<ul>
+<li>
+<p>Load dictionary terms into tms_predict_contents.</p>
+</li>
+<li>
+<p>Load relations between terms, including named relations, into tms_predict_relations.</p>
+</li>
+<li>
+<p>Load named relation definitions into tms_def_named_rels.</p>
+</li>
+<li>
+<p>Load mappings between named relationships and dictionaries into table tms_def_dict_nrls.</p>
+</li>
+<li>
+<p>Load Informative Notes into tables tms_predict_info_hdrs, tms_predict_info_strs, and tms_predict_info_clobs.</p>
+</li>
+<li>
+<p>Load Informative Note attributes into tms_def_details.</p>
+</li>
+<li>
+<p>Load mappings between Informative Notes and the items they describe or complement&mdash;dictionaries, terms, or relations&mdash;into table tms_def_dict_info_dets.</p>
+</li>
+</ul>
+<a id="i1008988"></a>
+<div id="TMSUG11520" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Load Script Requirements<a id="sthref366"></a></h4>
+<p>Your load script must:</p>
+<ul>
+<li>
+<p>Consist mainly of a series of select statements to transfer data from the temporary tables into the predict tables.</p>
+</li>
+<li>
+<p>Set the DML column value in the predict tables to indicate the transaction to be performed as Insert, Update or Delete for each term and relation.</p>
+</li>
+<li>
+<p>Make use of the constants in the tms_def_dict_cons package to avoid hardcoding constants.</p>
+</li>
+<li>
+<p>Call the necessary packages for all appropriate transactions. The load script for loading a dictionary for the first time only needs to allow for insert transactions, but the load script for updating a dictionary must allow for Insert, Update, and Delete transactions. You can use the same script for loading and updating if it allows for all three transactions. The information on the transaction required for each term and relation is contained in the ASCII files supplied by the vendor.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<div id="TMSUG11521" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref367"></a>
+<h4 class="sect3">API Packages</h4>
+<p>All inserts, updates and deletes must be done using API calls rather than direct DML statements. Some of these packages are explained in <a href="overview.htm#i1001263">"The API"</a>, and full API descriptions are available in the <span class="italic"><span class="italic">Oracle Thesaurus Management System Technical Reference Manual</span></span>, which is available from Oracle Support.</p>
+</div>
+<!-- class="sect3" -->
+<div id="TMSUG11522" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref368"></a>
+<h4 class="sect3">Load Scripts and Activation Groups</h4>
+<p>The sample load scripts work on one Activation Group at a time, but you can write one that loads more than one Activation Group at a time. By default, when you run the load script, all of the terms in the temporary tables are inserted into the Activation Group you specify. See <a href="#i1001826">"Creating or Assigning an Activation Group"</a>.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="i1001838"></a>
+<div id="TMSUG11523" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Downloading Sample Scripts</h3>
+<p>Download instructions and sample scripts from My Oracle Support at <code dir="ltr"><a href="https://support.oracle.com">https://support.oracle.com</a><a href=""></a></code>.</p>
+<ol>
+<li>
+<p>Sign in to My Oracle Support.</p>
+</li>
+<li>
+<p>Search for Article ID: 258975.1; see <a href="preface.htm#BABJFICC">"Searching by Article ID."</a> The article is titled <span class="italic">Sample Maintenance Scripts for MedDRA, MedDRA Primary Path, MedDRA SMQ, WHO-Drug Formats B, B2, and C, and SNOMED</span>.</p>
+</li>
+<li>
+<p>Scroll down to the Attachments section and download the file for the dictionary you want to load.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CHDCGAED"></a>
+<div id="TMSUG11524" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Activating Loaded Terms<a id="sthref369"></a></h2>
+<p>The TMS Activation process runs against terms and relations in the predict tables that are associated with the Activation Group you choose. Activation includes two stages:</p>
+<ul>
+<li>
+<p>TMS validates terms and relations against dictionary definitions. During this process, TMS validates pre-dictionary Informative Notes as well.</p>
+</li>
+<li>
+<p>TMS moves records that do not violate dictionary definitions to the production tables. The system leaves any records that do violate these rules in the pre-dictionary tables and populates the error message field for each record with the reason that the record failed activation.</p>
+</li>
+</ul>
+<p>You can run Activation in Check or Transfer mode. Check mode stops short of transferring data to the production tables while enabling you to see the results of the data validation. See <a href="#i1001937">"About Activation"</a>.</p>
+<p>You can run Activation from the GUI or from SQL*Plus. You can monitor the process and, if you run in Check mode, you can view data that would fail activation in the Maintain Repository Data window and make the necessary changes before transferring the data to the production tables.</p>
+<a id="i1001826"></a>
+<div id="TMSUG11525" class="sect2">
+<h3 class="sect2">Creating or Assigning an Activation Group<a id="sthref370"></a><a id="sthref371"></a><a id="sthref372"></a></h3>
+<p>You must assign all data to an Activation Group for TMS to load it into predict tables and, later, to activate it. TMS activates all data in the group in the same batch job. You can use an existing group or define a new one. To define a new Activation Group:</p>
+<ol>
+<li>
+<p>From the <span class="bold">Repository Maintenance</span> menu, select <span class="bold">Maintain Repository Data</span>. The Maintain Repository Data window appears.</p>
+</li>
+<li>
+<p>Highlight <span class="bold">Activation Groups</span> in the tree structure and select <span class="bold">Insert Record</span>.</p>
+</li>
+<li>
+<p>Enter a name and description. (If you are setting up the practice drug dictionary CLS, name the Activation Group <code dir="ltr">CLS_AG.</code>)</p>
+</li>
+<li>
+<p>Under <span class="bold">Dictionaries</span> within the Activation Group, click in the <span class="bold">Short Name</span> field and press F9 to see the LOV. Select the dictionaries you want to include in the Activation Group.</p>
+</li>
+<li>
+<p>Save. TMS populates the <span class="bold">Name</span> and <span class="bold">In Domain?</span> fields. When you run Activation on this Activation Group, TMS processes all dictionaries associated with this group. However, if a dictionary is not assigned to the current domain, you cannot see it in the Maintain Repository Data window and therefore cannot use the GUI to modify it. To add a dictionary to a domain, from the <span class="bold">Definition</span> menu, select <span class="bold">Define Domains</span>, and click the <span class="bold">Dictionaries</span> button.</p>
+</li>
+</ol>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+TMS populates the audit information fields.</div>
+</div>
+<!-- class="sect2" -->
+<a id="i1001906"></a>
+<div id="TMSUG11526" class="sect2">
+<h3 class="sect2">Running the Activate Preliminary Data Batch Job from the GUI<a id="sthref373"></a></h3>
+<p>To invoke Activation from the TMS Graphical User Interface:</p>
+<ol>
+<li>
+<p>From the <span class="bold">Repository Maintenance</span> menu, select <span class="bold">Activate Preliminary Data</span>. The Batch Job window appears.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You can also invoke Activation (immediately, in Transfer mode only, on the current Activation Group) from the Maintain Repository Data window by clicking the <span class="bold">Transfer Data</span> button.</div>
+</li>
+<li>
+<p>In the Job Specific section, click the <span class="bold">Activation Group</span> field. A list arrow appears.</p>
+</li>
+<li>
+<p>Select an Activation Group from the list. (For information about Activation Groups, see <a href="#i1001826">"Creating or Assigning an Activation Group"</a>.)</p>
+</li>
+<li>
+<p>Click the <span class="bold">Activation Mode</span> field. A list arrow appears.</p>
+</li>
+<li>
+<p>Select an activation mode from the list. The choices are:</p>
+<ul>
+<li>
+<p><span class="bold">Check</span>. TMS invokes the Activation process, but stops short of transferring valid data to the production tables. You can view data that would fail activation in the Maintain Repository Data window and make the necessary changes before activating the data.</p>
+</li>
+<li>
+<p><span class="bold">Transfer</span>. TMS runs the Activation process to completion. Valid data is transferred to the production tables. Invalid data remains in the predict tables.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>In the Schedule section, enter the name of the report server. Other schedule options appear.</p>
+</li>
+<li>
+<p>Select <span class="bold">Submit</span> from the <span class="bold">Job</span> menu or click the <span class="bold">Submit</span> icon.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="i1001927"></a>
+<div id="TMSUG11527" class="sect2">
+<h3 class="sect2">Running Activation from SQL*Plus<a id="sthref374"></a></h3>
+<p>To run Activation in Transfer mode, type:</p>
+<p><code dir="ltr">exec tms_user_activation.activateterms (</code><code dir="ltr"><span class="codeinlineitalic">Predict_Group_Id</span></code><code dir="ltr">, 'T')</code></p>
+<p>To run Activation in Check mode, type:</p>
+<p><code dir="ltr">exec tms_user_activation.activateterms (</code><code dir="ltr"><span class="codeinlineitalic">Predict_Group_Id</span></code><code dir="ltr">, 'C')</code></p>
+<p>You can monitor the Activation process and analyze the tables to optimize execution speed. To do so, from SQL*Plus, type:</p>
+<p><code dir="ltr">select count (*) from tms_dict_contents</code></p>
+<p>In previous versions, it was necessary at this stage to compute statistics to speed the job, then reanalyze tables after job completion. The Activation batch job performs these steps for TMS 4.0 and later, so these steps are no longer necessary.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CHDCJDJJ"></a>
+<div id="TMSUG11528" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Add Validation Code (Optional)</h3>
+<p>TMS provides an empty package, <span class="bold">tms_ud_activation_rules</span>, that runs immediately after TMS has completed its own activation process. You can modify the package to include additional validation code.</p>
+<p>For example, you can specify using a SQL statement that in MedDRA, a preferred term must always also exist as a lowest level term. If TMS finds a preferred term without a corresponding lower level term, the preferred term stays in the predictionary table with an error message saying it failed activation due to user-defined validation code.</p>
+<p>When you write code in TMS, refer to the package <span class="bold">tms_def_dict_cons</span> for constants including the dictionary ID, dictionary levels, and any other constants relevant to all active dictionaries.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CHDDCEJH"></a>
+<div id="TMSUG11529" class="sect2">
+<h3 class="sect2">Refreshing the Context Server Index</h3>
+<p>After activation refresh the context server index; see <a href="admin.htm#i1001957">"Refreshing the Context Server Index"</a>.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CHDEFCHE"></a>
+<div id="TMSUG11530" class="sect2">
+<h3 class="sect2">Gathering Statistics to Improve Performance</h3>
+<p>Refresh schema statistics to improve performance. This is especially important after activating WHO-Drug C. See <a href="admin.htm#BAJIFFDF">"Running Scripts to Gather Schema Statistics for the 12c Optimizer."</a></p>
+</div>
+<!-- class="sect2" -->
+<a id="i1001937"></a>
+<div id="TMSUG11531" class="sect2">
+<h3 class="sect2">About Activation<a id="sthref375"></a></h3>
+<p>During Activation, TMS processes terms and relations in one Activation Group at a time, enforcing the integrity of their relations against the level relations defined for the dictionary. TMS gathers threads of data&mdash;terms related directly and indirectly to each other&mdash;and checks all the links in the thread.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+During Activation, TMS checks for cardinality violations. If you have defined relations to more than one term in a level with only a single cardinality relation defined, TMS rejects all relations.</div>
+<div id="TMSUG11532" class="sect3"><a id="sthref376"></a>
+<h4 class="sect3">Rules Enforced</h4>
+<p>In addition to user-defined dictionary level relations and optional validation rules, TMS enforces the following internal rules about external, company, and TMS domain terms:</p>
+<ul>
+<li>
+<p>A domain or company term cannot be linked to more than one external term, but an external term can be linked to more than one domain or company term.</p>
+</li>
+<li>
+<p>A domain term cannot be linked to more than one company term, but a company term can be linked to more than one domain term.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<div id="TMSUG11533" class="sect3"><a id="sthref377"></a>
+<h4 class="sect3">Database Tables</h4>
+<p>TMS stores terms awaiting activation in the predict tables (tms_predict_contents and tms_predict_relations) and moves them to the production tables (tms_dict_contents and tms_dict_relations) when they are successfully activated. Terms that fail the Activation process remain in the predict tables associated with an error message.</p>
+</div>
+<!-- class="sect3" -->
+<div id="TMSUG11534" class="sect3"><a id="sthref378"></a>
+<h4 class="sect3">Activation Failure Messages</h4>
+<p>You can view the error messages associated with failed data in the <span class="bold">Error</span> field of the Maintain Repository Data and Repository Authoring windows, or by running the <a href="#CHDFIDHC">Preliminary Repository Report</a>.</p>
+</div>
+<!-- class="sect3" -->
+<div id="TMSUG11535" class="sect3"><a id="sthref379"></a>
+<h4 class="sect3">DML Transactions</h4>
+<p>TMS uses a series of Insert, Update and Delete transactions to move the data from the predict tables to the production tables. During the load process&mdash;when you are loading a dictionary for the first time&mdash;all transactions will be of type Insert.</p>
+</div>
+<!-- class="sect3" -->
+<div id="TMSUG11536" class="sect3"><a id="sthref380"></a>
+<h4 class="sect3">More Information on Activation</h4>
+<p>The Activation process uses objects and relations defined in many parts of the system and documented as follows:</p>
+<ul>
+<li>
+<p><span class="bold">Activation Groups</span>: See <a href="#i1001826">"Creating or Assigning an Activation Group."</a></p>
+<p>From the <span class="bold">Repository Maintenance</span> menu, select <span class="bold">Maintain Repository Data</span>, then choose <span class="bold">Activation Groups</span>.</p>
+</li>
+<li>
+<p><span class="bold">Dictionary Level Relations</span>: See <a href="#i1003963">"Defining Relationships Between Dictionary Levels"</a> and<a href="#i1001618">"Defining Relations Between Levels (Strong Dictionaries Only)."</a></p>
+<p>From the <span class="bold">Definition</span> menu, select <span class="bold">Define Dictionaries</span>, then choose <span class="bold">Level Relations</span>.</p>
+</li>
+<li>
+<p><span class="bold">Level Details (Optional)</span>: See <a href="#i1001695">"Defining Level Details."</a></p>
+<p>From the <span class="bold">Definition</span> menu, select <span class="bold">Define Dictionaries</span>, then choose <span class="bold">Level Details</span>.</p>
+</li>
+<li>
+<p><span class="bold">Validation Code (Optional)</span>: See <a href="#CHDCJDJJ">"Add Validation Code (Optional)."</a></p>
+</li>
+<li>
+<p><span class="bold">Terms and Relations</span>: See <a href="dictmnt.htm#BABJCJGI">Chapter 12, "Repository Maintenance."</a></p>
+<p>From the <span class="bold">Repository Maintenance</span> menu, select <span class="bold">Maintain Repository Data</span>.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CHDIGJDE"></a>
+<div id="TMSUG11537" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Evaluating Dictionary Contents<a id="sthref381"></a></h2>
+<p>If you have the tms_maintain_priv role, you can see and evaluate data that failed activation in two places: the <a href="#CHDIFJJF">Maintain Data Repository Window</a> and the <a href="#CHDFIDHC">Preliminary Repository Report</a>.</p>
+<p>If you are upgrading to a new dictionary version, additional tools are available; see <a href="dict_upg.htm#BABGFFBD">Chapter 8, "Upgrading to a New Dictionary Version."</a></p>
+<a id="CHDIFJJF"></a>
+<div id="TMSUG11538" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Maintain Data Repository Window</h3>
+<p>From the <span class="bold">Repository Maintenance</span> menu, select <span class="bold">Maintain Repository Data</span>, and select <span class="bold">All Data</span> from the <span class="bold">Data Source</span> list to see data in the production and predict tables. Terms and relations that failed activation have error messages explaining the reason for the failure in the <span class="bold">Error Message</span> field. See <a href="dictmnt.htm#i1005375">"About the Maintain Repository Data Window"</a> for more information.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CHDFIDHC"></a>
+<div id="TMSUG11539" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Preliminary Repository Report</h3>
+<p>To run the Preliminary Repository Report, do the following:</p>
+<ol>
+<li>
+<p>From the <span class="bold">Repository Maintenance</span> menu, select <span class="bold">Preliminary Repository Report</span>.</p>
+</li>
+<li>
+<p>Enter a <span class="bold">Destination Type</span> and any dependent fields (see <a href="reports_jobs.htm#CHDHEIGD">"Running a Job"</a>).</p>
+</li>
+<li>
+<p>Under <span class="bold">Job Specific</span>, enter values for the following parameters:</p>
+<ul>
+<li>
+<p><span class="bold">Activation Group</span>. From the list, choose the Activation Group whose data you want to check.</p>
+</li>
+<li>
+<p><span class="bold">Activation Data Scope</span>. From the list, choose <span class="bold">All</span> to see all records in the Activation, whether or not they were successfully activated; or <span class="bold">Errors Only</span> to see only data that failed activation.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Set schedule parameters, to run the job at a future time (optional; see <a href="reports_jobs.htm#CHDEGGHA">"Scheduling Parameters"</a>).</p>
+</li>
+<li>
+<p>Click the <span class="bold">Submit Job</span> icon.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BABCFJDB"></a>
+<div id="TMSUG11540" class="sect1">
+<h2 class="sect1">Defining Links Between Dictionaries</h2>
+<p>You cannot relate terms in separate TMS dictionaries until you establish linkage between the dictionaries. TMS allows you to define the following types of linkage between dictionaries:</p>
+<ul>
+<li>
+<p>A <a href="glossary.htm#CBACGJAA"><span class="xrefglossterm">cross-dictionary link</span></a> allows you to define a dictionary named relation between two dictionaries; see <a href="defmisc.htm#CHDJFCBG">"Defining Dictionary NRLs"</a>. After you create the dictionary named relation, you can create relations between terms in the linked dictionaries.</p>
+</li>
+<li>
+<p>A <a href="glossary.htm#CBAGDECJ"><span class="xrefglossterm">Translation Derivation Link</span></a> connects two dictionaries of different languages, enabling you to derive translations between corresponding terms in the dictionaries based on the dictionary code. These links are only permissible between dictionaries with identical structure.</p>
+</li>
+<li>
+<p>Define an <span class="bold">Is Filter Dictionary Of</span> link from a filter dictionary to its base dictionary. See <a href="#CHDCIJEA">"Defining Filter Dictionary Links"</a>.</p>
+</li>
+<li>
+<p>Define a <span class="bold">Has Filter Dictionary</span> link from a base dictionary to its filter dictionary. See <a href="#CHDCIJEA">"Defining Filter Dictionary Links"</a>.</p>
+</li>
+</ul>
+<a id="BABIJAHB"></a>
+<div id="TMSUG11541" class="sect2">
+<h3 class="sect2">Defining a Cross-Dictionary Link<a id="sthref382"></a></h3>
+<p>Using cross-dictionary links can help you migrate a study from one base dictionary to another more easily. It also provides you more flexibility in creating relations in the repository.</p>
+<p>Before you can define relations between terms in different dictionaries, you must link the dictionaries using the Dictionary Link tab window. TMS refers to the links you define in this window when it lists the candidate dictionaries for a reference term in the Repository Authoring window. After you select the first term in a relation, TMS restricts the list of candidate dictionaries for the reference term in the relation by using the cross-dictionary links defined for the first term's dictionary.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Links between dictionaries are bi-directional, so you can define relationships from terms in either dictionary to terms in the other dictionary once you create the link.</div>
+<p>After you define the cross-dictionary links you need for a particular dictionary, see <a href="dictmnt.htm#i1002439">"Setting Up Cross-Dictionary Relations"</a> to define relations between terms in the linked dictionaries.</p>
+<p class="subhead2"><a id="TMSUG11542"></a>Rule</p>
+<p>You must choose two Active base dictionaries. Term mappings can span dictionary levels, although group and VT levels do not support term mappings.</p>
+<p class="subhead2"><a id="TMSUG11543"></a>Creating a Cross-dictionary Link</p>
+<p>To create a cross-dictionary link in the TMS user interface:</p>
+<ol>
+<li>
+<p>From the Define Dictionaries window, choose either dictionary in the relation by clicking its name in the structured part of the window.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Dictionary Link</span> tab. The Define Dictionaries window displays the <span class="bold">Dictionary Link</span> tab window.</p>
+</li>
+<li>
+<p>Choose <span class="bold">Record</span>, then <span class="bold">Insert</span>.</p>
+</li>
+<li>
+<p>From the <span class="bold">Link Type</span> field, choose <span class="bold">Cross Dictionary Link</span>.</p>
+</li>
+<li>
+<p>From the <span class="bold">To Dictionary</span> list, choose the dictionary to which you want to link.</p>
+</li>
+<li>
+<p>Save. If both dictionaries satisfy the linkage criteria listed above, TMS commits this cross-dictionary link to the database.</p>
+</li>
+</ol>
+<p>You can create links from one dictionary to multiple target dictionaries. Select links to other target dictionaries by selecting the next lines and inserting records.</p>
+<p>You can break a cross-dictionary link by deleting its row from the <span class="bold">Dictionary Link</span> tab window. TMS allows you to remove a cross-dictionary link only if no dictionary named relations have been defined between the linked dictionaries.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABGEBFF"></a>
+<div id="TMSUG11544" class="sect2">
+<h3 class="sect2">Defining a Translation Derivation Link<a id="sthref383"></a></h3>
+<p>Translation Derivation Link enable you to connect a <a href="glossary.htm#CBAFIHDH"><span class="xrefglossterm">global language</span></a> dictionary (usually one with terms and relations in English) to an identically structured <a href="glossary.htm#CBABDHIE"><span class="xrefglossterm">local language</span></a> dictionary. Once you define the link, the reporting levels of the two dictionaries are linked. You can then automatically derive a translation for a reported level term in either direction: you can determine the global language equivalent of a term in the local language dictionary, or vice versa.</p>
+<p>TMS derives a term's translation by searching in the non-coding dictionary for a term on the same level that shares the same dictionary code. Note that TMS still derives values in the coding dictionary by using the hierarchy of that dictionary.</p>
+<p>Because TMS cannot derive translations correctly unless each code appears exactly once in each of the linked dictionaries, you should run the Translation Reports to resolve differences between the data in these dictionaries after you link them. See <a href="dictmnt.htm#CHDHCGJE">"Translation Reports to Identify Inconsistent Data"</a> for details.</p>
+<p>In this section, you only define the Translation Derivation Link between two dictionaries. During the process of <a href="ocinteg.htm#i1002181">Linking an Oracle Clinical Study to TMS</a> in the TMS Domain Elements window, you identify the global language dictionary and local language dictionary in this pairing, and define which one is the coding dictionary for this Oracle Clinical project or study.</p>
+<p class="subhead2"><a id="BABIAGEC"></a><a id="TMSUG11545"></a>Rules</p>
+<p>The dictionaries must satisfy the following criteria:</p>
+<ul>
+<li>
+<p>You must select two Active base dictionaries with identical structure. The short names of the dictionary levels must match exactly.</p>
+</li>
+<li>
+<p>The dictionaries must be in different languages. You set a dictionary's language from the <span class="bold">Language</span> field in the <span class="bold">Base Dictionary</span> tab.</p>
+</li>
+<li>
+<p>Both dictionaries must have a coding level.</p>
+</li>
+<li>
+<p>The linked dictionaries must have dictionary codes that use the same number of bytes to store each digit. Single-byte and multibyte (or "narrow" and "wide") representations of the same characters are not considered equivalent by TMS.</p>
+</li>
+</ul>
+<p>You can only delete Translation Derivation Links when neither of the linked dictionaries contains any data. You also cannot set a dictionary to Provisional status if it has a Translation Derivation Link.</p>
+<p class="subhead2"><a id="TMSUG11546"></a>Defining a Translation Derivation Link</p>
+<p>To define a Translation Derivation Link:</p>
+<ol>
+<li>
+<p>From the Define Dictionaries window, choose either dictionary in the relation.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Dictionary Link</span> tab. The Define Dictionaries window displays the <span class="bold">Dictionary Link</span> tab window.</p>
+</li>
+<li>
+<p>Choose <span class="bold">Record</span>, then <span class="bold">Insert</span>.</p>
+</li>
+<li>
+<p>From the <span class="bold">Link Type</span> field, choose <span class="bold">Translation Derivation Link</span>.</p>
+</li>
+<li>
+<p>From the <span class="bold">To Dictionary</span> list, choose the dictionary to which you want to link.</p>
+</li>
+<li>
+<p>Save. If both dictionaries satisfy the linkage criteria listed above, TMS commits this cross-dictionary link to the database.</p>
+</li>
+</ol>
+<p>To delete a Translation Derivation Link, select its row in the <span class="bold">Dictionary Link</span> tab window, choose <span class="bold">Record</span>, and then <span class="bold">Delete</span>. As stated in the <a href="#BABIAGEC">Rules</a>, you cannot delete a Translation Derivation Link if data exists in either of the linked dictionaries.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CHDCIJEA"></a>
+<div id="TMSUG11548" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Defining Filter Dictionary Links</h3>
+<p>When you define a filter dictionary, you must create a dictionary link between the filter dictionary and its base dictionary. You can define the link in either direction; TMS then displays the link from each dictionary. You must define these links before you can activate the filter dictionary.</p>
+<p>Each filter dictionary can have only one base dictionary, and each base dictionary can have only one filter dictionary.</p>
+<p><a id="TMSUG11549"></a><span class="subhead3">Filter to Base&nbsp;</span>To create a link from the filter dictionary to its base dictionary, do the following:</p>
+<ol>
+<li>
+<p>With the filter dictionary selected in the <span class="bold">Define Dictionaries</span> window, click the <span class="bold">Dictionary Link</span> tab. The <span class="bold">Dictionary Link</span> tab opens.</p>
+</li>
+<li>
+<p>From the <span class="bold">Link Type</span> list, select <span class="bold">Filter Dictionary of</span>.</p>
+</li>
+<li>
+<p>Click in the <span class="bold">To Dictionary</span> field. The <span class="bold">Cross Dictionary Link Dictionaries</span> list of values appears.</p>
+</li>
+<li>
+<p>Select the base dictionary. For the MedDRA SMQ filter dictionary you must select MedDRA as the base dictionary.</p>
+</li>
+<li>
+<p>Save.</p>
+</li>
+</ol>
+<p><a id="TMSUG11550"></a><span class="subhead3">Base to Filter&nbsp;</span>To create a link from the base dictionary to a filter dictionary, do the following:</p>
+<ol>
+<li>
+<p>With the base dictionary selected in the <span class="bold">Define Dictionaries</span> window, click the <span class="bold">Dictionary Link</span> tab. The <span class="bold">Dictionary Link</span> tab opens.</p>
+</li>
+<li>
+<p>From the <span class="bold">Link Type</span> list, select <span class="bold">has Filter Dictionary</span>.</p>
+</li>
+<li>
+<p>Click in the <span class="bold">To Dictionary</span> field. The <span class="bold">Cross Dictionary Link Dictionaries</span> list of values appears.</p>
+</li>
+<li>
+<p>Select the filter dictionary.</p>
+</li>
+<li>
+<p>Save.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="i1009237"></a>
+<div id="TMSUG11551" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Creating Domains and Assigning Dictionaries to Domains <a id="sthref384"></a></h2>
+<p>This section includes:</p>
+<ul>
+<li>
+<p><a href="#CHDFBIDC">Creating a Domain</a></p>
+</li>
+<li>
+<p><a href="#CHDCFCCI">Assigning a Dictionary to a Domain</a></p>
+</li>
+</ul>
+<p>A domain is a logical group of dictionary terms and VTAs. You must explicitly associate a dictionary with a domain in order to use it in that domain. In addition, you can define terms, relations, and verbatim term assignments (VTAs) for use only in a particular domain.</p>
+<p>When you use TMS, you usually see a domain view of repository data; that is, you see only data associated with the current domain, including global and domain-specific terms and relations, for the dictionary or dictionaries you have linked to the domain.</p>
+<p>TMS domains enable you to use the TMS repository differently in different situations as necessary. For example, you can use domains in the following ways:</p>
+<ul>
+<li>
+<p>You can tailor dictionary modifications and VTAs for a particular use by defining them as domain-specific. For example, you could create two domains for reference by two studies that needed to track one drug's effect on different body systems.</p>
+</li>
+<li>
+<p>You can associate different dictionary combinations with different domains. For example, you might need to reference one adverse event dictionary in one country, and a different one in a different country. Your sites in the two countries can use different TMS domains.</p>
+</li>
+<li>
+<p>If you choose, you can allow classifying terms to nonapproved dictionary terms in some domains but not others. For example, in a domain used for an active study you can prevent classification to nonapproved terms, but in a domain used for post-marketing surveillance, you can allow classification to nonapproved terms to prevent unnecessary reclassification after a dictionary upgrade.</p>
+</li>
+</ul>
+<a id="CHDFBIDC"></a>
+<div id="TMSUG11552" class="sect2">
+<h3 class="sect2">Creating a Domain</h3>
+<p>To create a domain:</p>
+<ol>
+<li>
+<p>From the <span class="bold">Definition</span> menu, select <span class="bold">Define Domains</span> to reach the Define Domains window. The Define Domains window has two tabs: <span class="bold">Domains</span> displays a single domain and its audit information, and <span class="bold">Multi Display Domains</span> displays the names and descriptions of several domains at once.</p>
+</li>
+<li>
+<p>Insert a new record in either tab window, and enter a name and description for the new TMS domain.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Do not use special characters in the <span class="bold">Domain Name</span>. Characters such as (&amp; @ *) may cause problems, including preventing using the Disconnected System Integration feature for studies associated with the domain.</div>
+</li>
+<li>
+<p>Save. TMS populates the audit fields.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Dictionaries</span> button to reach the Define Domain Dictionaries window. See <a href="#CHDCFCCI">"Assigning a Dictionary to a Domain"</a>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CHDCFCCI"></a>
+<div id="TMSUG11553" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Assigning a Dictionary to a Domain<a id="sthref385"></a><a id="sthref386"></a></h3>
+<p>You must assign a base dictionary to a TMS domain before you can use it (filter dictionaries inherit their domain assignments from their base dictionary). A dictionary may be assigned to more than one domain, and a domain may have more than one dictionary, and any number of non-external terms, assigned to it.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+All dictionaries associated with a single domain must be either base dictionaries or virtual dictionaries with an identical cut-off date and time. Do not use a combination of base and virtual dictionaries or virtual dictionaries with different cut-off dates (including the complete timestamp, down to the second) with a single domain.
+<p>In addition, a domain can be associated with only one rendition&mdash;base or virtual&mdash;of any one base dictionary.</p>
+</div>
+<p>To assign a dictionary to an existing TMS domain:</p>
+<ol>
+<li>
+<p>From the <span class="bold">Definition</span> menu, select <span class="bold">Define Domains</span> to reach the Define Domains window and query for the domain to which you want to assign one or more dictionaries.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Dictionaries</span> button to reach the Define Domain Dictionaries window.</p>
+</li>
+<li>
+<p>Click the ellipsis (<span class="bold">&hellip;</span>) or press F9 to launch the list of values for available dictionaries.</p>
+</li>
+<li>
+<p>Select a dictionary and click <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>Select <span class="bold">VTA Appr Reqd?</span> to require that in this dictionary/TMS domain combination, all VTAs are created as Unapproved. There is one exception to this rule: if the VTA has been created via Synchronization because of a direct match to a dictionary term, the VTA is created as approved.</p>
+<p>This may be useful at the beginning stages of a study, or use of the TMS domain, because it gives you the opportunity to manually check TMS's classifications. When you are satisfied that a classification is correct, you can manually approve the VTA in the Approve VTAs window under the <span class="bold">Omission Management</span> menu. After you do, TMS classifies all future occurrences of the verbatim term automatically.</p>
+<p>The default setting of the VTA Appr Reqd? flag is determined by the setting of a reference codelist value that appears in the TMS_CONFIGURATION codelist; see <a href="admin.htm#BAJFGBBD">"DOMVTAAPPRREQD"</a>.</p>
+<p>You can change the VTA Appr Reqd? flag setting at any time, including during an ongoing study.</p>
+</li>
+<li>
+<p>Select the <span class="bold">Action Appr Reqd?</span> box to require that in this dictionary/TMS domain combination, all Answerable Action assignments must be manually approved. Internal Actions are used for this purpose.</p>
+<p>The default setting of the Action Appr Reqd? flag is determined by the setting of a reference codelist value that appears in the TMS_CONFIGURATION codelist; see <a href="admin.htm#CDCBJJGJ">"DOMACTAPPRREQD"</a>.</p>
+<p>You can change the Action Appr Reqd? flag setting at any time, including during an ongoing study.</p>
+</li>
+<li>
+<p><span class="bold">VTI<a id="sthref387"></a> Allowed?</span> Check to make it possible to create Verbatim Term Individual (VTI) classifications. This is required if non-unique terms are allowed. It is possible to select this setting only if VTIs are allowed in the dictionary definition.</p>
+</li>
+<li>
+<p><span class="bold">Autocode with <a id="sthref388"></a>Aux?</span> Check to enable the TMS autoclassification process to create VTIs after the same term with the same auxiliary information has been manually classified. It is possible to select this setting only if it is allowed in the dictionary definition. Changing this setting affects only future executions of Autoclassification.</p>
+</li>
+<li>
+<p>In the <span class="bold">Non Appr DT</span> drop-down:</p>
+<ul>
+<li>
+<p>Select <span class="bold">None</span> to prevent classification to nonapproved dictionary terms.</p>
+</li>
+<li>
+<p>Select <span class="bold">VTA</span> to allow classification to nonapproved dictionary terms. This setting may be appropriate, for example:</p>
+<ul>
+<li>
+<p>during post-marketing surveillance if you do not want to have to reclassify verbatim terms whose dictionary terms become invalid (nonapproved) after a dictionary upgrade</p>
+</li>
+<li>
+<p>if you are using MedDRA-J and want to be able to classify terms to nonpreferred Japanese terms when multiple Japanese terms correspond to the same English term.</p>
+</li>
+</ul>
+<p>When you select this option, in this domain the Autoclassification job treats nonapproved terms exactly the same as approved terms in this dictionary.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You can change this value from VTA to None only if no current VTAs are linked to a nonapproved dictionary term in the dictionary/domain combination.</div>
+</li>
+</ul>
+</li>
+<li>
+<p>To add another dictionary, click in the next row and repeat the process.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>. TMS saves the domain/dictionary links you have defined.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<div id="TMSUG11554" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref389"></a>
+<h3 class="sect2">Unassigning a Dictionary from a Domain</h3>
+<p>To unlink a dictionary (to prevent its use in this TMS domain), highlight it and select <span class="bold">Record</span>, then <span class="bold">Delete</span>.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You cannot delete a domain/dictionary assignment if a filter dictionary is defined on the base dictionary and contains dictionary terms. Filter dictionaries inherit the domain assignments of their base dictionary. See <a href="#CHDBEJJJ">"Filter Dictionaries"</a> for more information.</div>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment25">
+<tr>
+<td class="cellalignment34">
+<table class="cellalignment30">
+<tr>
+<td class="cellalignment29"><a href="integ.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment29"><a href="defmisc.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;1999, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment36">
+<table class="cellalignment28">
+<tr>
+<td class="cellalignment29"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment29"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment29"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment29"><a href="index.htm"><img width="24" height="24" src="../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td class="cellalignment29"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

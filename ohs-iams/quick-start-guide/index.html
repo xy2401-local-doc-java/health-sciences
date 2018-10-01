@@ -1,0 +1,452 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>OHSIAMS Quick Start Guide</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Get ready for study verification or study go live."/>   
+
+        <script src="common/js/lib/jquery.min.js"></script>
+        <script src="common/js/lib/jquery-ui.min.js"></script>
+
+        <script src="common/js/lib/TweenMax.min.js"></script>
+        <script src="common/js/lib/jquery.gsap.min.js"></script>
+        <script src="common/js/lib/CSSPlugin.min.js"></script> 
+        <script src="common/js/lib/ScrollMagic.min.js"></script>
+        <script src="common/js/lib/jquery.ScrollMagic.js"></script>
+        <script src="common/js/lib/debug.addIndicators.min.js"></script>
+
+        <link href="common/js/lib/jquery-ui.css" rel="stylesheet" type="text/css">
+
+        <link href="common/css/scrolling_gs.css" rel="stylesheet" type="text/css" id="StyleSheet">
+        <link href="common/css/popup.css" rel="stylesheet" type="text/css">
+
+        <script src="common/js/scrolling.js"></script>
+
+        <style type="text/css" media="print">
+            BODY {display:none;visibility:hidden;}
+        </style>
+
+        <script>
+            var mode = "";
+            $(window).on("resize", function () {
+                if ($(window).width() > 1000) {
+                    //Desktop mode
+                    mode = setMode(mode, "DESKTOP", function () {
+                        $("#StyleSheet").attr("href", "common/css/scrolling_gs.css");
+                        $(".phone").hide();
+                        $(".tablet").hide();
+                        $(".desktop").show();
+                    });
+                } else if ($(window).width() > 700) {
+                    //portrait mode
+                    mode = setMode(mode, "TAB", function () {
+                        $("#StyleSheet").attr("href", "common/css/scrolling-tab_gs.css");
+                        $(".phone").hide();
+                        $(".desktop").hide();
+                        $(".tablet").show();
+                    });
+                } else {
+                    //Phone mode
+                    mode = setMode(mode, "PHONE", function () {
+                        $("#StyleSheet").attr("href", "common/css/scrolling-phone_gs.css");
+                        $(".tablet").hide();
+                        $(".desktop").hide();
+                        $(".phone").show();
+                    });
+                }
+            });
+            $(window).trigger("resize");
+            function setMode(m1, m2, callback) {
+                if (m1 !== m2) {
+                    callback();
+                }
+                return m2;
+            }
+        </script>
+
+        <!-- Version: April 2018 -->
+
+    <script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+    <body>
+
+    <logo>
+        <a href="https://docs.oracle.com/en/industries/health-sciences/index.html" target="_blank"><img src="common/images/o-redbadge-digital-master_HS.png" style="max-width: 175px;"></a>
+    </logo>
+
+    <header id="side-header">
+		<div class="text_link"><a href="index_text.html" target="_blank" tabindex="0">Text Version</a></div>
+        <div class="h0" id="bigTitle">Oracle Health Sciences Identity and Access Management Service (OHSIAMS)</div>
+        <h1 id="title-trigger">Quick Start Guide</h1>
+    </header>
+
+<div class="sidebargrey"></div>
+        
+    <nav>
+        <div class="displayPopup" style= "max-width:150px; height:auto;" title="Overview" data-popup="overview">
+            <p><a href="#overview" style="text-decoration: none; color: white;">Overview</a></p>
+        </div>
+    </nav>
+
+    <article>
+		
+        <section>
+			
+			<div class="getstarted">
+				<p style="padding-left: 25px;"><a href="https://docs.oracle.com/health-sciences/ohs-iams/index.html" alt="Click to return to the Oracle Help Center" title="Click to return to the Oracle Help Center" style="text-decoration: none; color: #1f92ac;" target="_blank"><img src="common/images/check.png" alt="check mark" style="vertical-align: text-top; transform: scaleX(-1); max-height: 20px;"> Back to Oracle Help Center</a></p>
+				<br>
+				<p style="margin-left: 50px;">This guide is for users who want to:</p><br>
+				<ul style="margin-left: 100px; margin-right:100px;">
+					<li>Use My Oracle Bookmarks or Oracle Health Sciences Cloud landing page to open studies and applications.</li><br>
+					<li>Manage their OHSIAMS single sign-on (SSO) account.</li>
+				</ul>
+				<br>
+			</div>
+			 <!--
+				Overview section: The titles in the following div must be an exact match to the titles in the div with class="popup" that appears towards the end of the html.
+			-->
+            <div class="overview">
+                <h3>Initial account setup</h3>
+                <ul class="breadcrumb">
+					<li><a href="#step1"><b>1. </b>Get your account information</a></li>
+					<li><a href="#step2"><b>2. </b>Sign in for the first time</a></li>
+			    </ul>
+                <br>
+				<h3>Manage your account</h3>
+                <ul class="breadcrumb">
+					<li><a href="#step5"><b>3. </b>Forgot your user login?</a></li>
+                    <li><a href="#step6"><b>4. </b>Locked out of your account?</a></li>
+                    <li><a href="#step7"><b>5. </b>Change your password</a></li>
+					<li><a href="#step7"><b>6. </b>Change your challenge questions</a></li>
+					<li><a href="#step7"><b>7. </b>Update your name or telephone number</a></li>
+					<li><a href="#step7"><b>8. </b>See the roles that are assigned to you</a></li>
+                </ul>
+                <br>
+                <h3>Request access to applications and studies</h3>
+                <ul class="breadcrumb">
+                    <li><a href="#step8"><b>9. </b>Request access</a></li>
+				</ul>
+                <br>
+            </div>
+             
+        </section>
+
+	    <section id="navTrigger" class="anim">
+            <h2 data-overview="step1Overview">Initial account setup</h2>
+
+            <div class="white_box" id="step1" style="min-height: 600px;">
+                <h4><span class="lrg_number_circle">1</span>Get your account information</h4><br>
+                <div style="display: inline-block; float: right;">
+					<img src="images/Task_1_image.png" class="img_right displayPopup" alt="My Oracle Bookmarks landing page" title="My Oracle Bookmarks landing page" data-popup="popup1">
+					<img src="images/Task_1a_image.png" class="img_right displayPopup" style="clear: both;" alt="Oracle Health Sciences Cloud landing page" title="Oracle Health Sciences Cloud landing page" data-popup="popup1a">
+				</div>
+				<p id="left_align"><strong>Where can I get the product or study URL?</strong> You will have access to one of these two pages, depending on what your organization opted to use. From there, you can open the applications or studies to which you have access.</p><br>
+				
+				   <div class="check_circle2"><img src="images/check.png" alt="check mark"></div>  
+				   <p>My Oracle Bookmarks</p><br>
+				   <div class="check_circle2"><img src="images/check.png" alt="check mark"></div>
+				   <p>Oracle Health Sciences Cloud landing page</p><br>
+				
+				<p id="left_align"><strong>How do I access my landing page?</strong> Your delegated administrator must first create your account in OHSIAMS Oracle Identity Self Service. After your account is created, you receive two emails:</p><br>
+				   <div class="check_circle2"><img src="images/check.png" alt="check mark"></div>				
+				   <p style="margin-left: 110px;">New Account Email: Contains the user login for your Oracle Health Sciences SSO account.</p><br>
+				   <div class="check_circle2"><img src="images/check.png" alt="check mark"></div>				   
+				   <p style="margin-left: 110px;">Account Password Email: Contains the password for your Oracle Health Sciences SSO account. Use this password only the first time you sign into your SSO account. After that, you must create a new password for your account by following the instructions <a href="#step5";>here</a>. The <strong>Oracle Health Sciences Cloud account</strong> link in this email takes you to one of the My Oracle Bookmarks or the Oracle Health Science Cloud landing page.</p>
+			    
+				<br>
+				<p id="left_align"><strong>Tip:</strong> Save these emails, so you can return to them when you are notified that you have been given access to Oracle applications managed through OHSIAMS Oracle Identity Self Service. If you lose these emails, contact your delegated administrator or <a href="http://www.oracle.com/us/support/contact/health-sciences-cloud-support/index.html" target="_blank">Health Sciences Support</a> to get your user login and password.</p><br> 
+	  
+            </div>
+			
+			<div class="white_box" id="step2">
+                <h4><span class="lrg_number_circle">2</span>Sign in for the first time</h4><br>
+                <div><img src="images/Task_2_image.png" class="img_right displayPopup" alt="Sign in for the first time" title="Sign in for the first time" data-popup="popup2"></div>
+                <p id="left_align">A delegated administrator will create your account, and then you will receive two emails, one with your user login and another with a password. Sign in to setup your account and define your own password.</p><br>
+				<div class="check_circle">1.</div>
+                <p>Click the <strong>Oracle Health Sciences Cloud account</strong> link in the Account Password email you received.</p><br>
+                <div class="check_circle">2.</div>
+                <p>Sign in using the user login from the New Account email and the password from the Account Password email.</p><br>
+                <div class="check_circle">3.</div>
+                <p>Enter the old password you received in the Account Password email.</p><br>
+				<div class="check_circle">4.</div>
+                <p>Enter the new password and confirm the new password.</p><br>
+				<div class="check_circle">5.</div>
+				<p>Choose three of the available challenge questions from the drop-down, and enter answers for them.</p><br>
+				<div class="check_circle">6.</div>
+				<p>Click <strong>Submit</strong>. <br>Your password is changed, and the Sign In page opens.</p><br>
+				<div class="check_circle">7.</div>
+				<p>Sign in using your new password. Depending on your organization's setup, you will be redirected to one of the following:</p><br>
+			    
+				      <div class="check_circle2"><img src="images/check.png" alt="check mark"></div>
+			          <p style="margin-left: 110px;">My Oracle Bookmarks; watch these <a href="https://docs.oracle.com/health-sciences/my-oracle-bookmarks/mob-videos.html" target="_blank">short training videos</a> to get started with My Oracle Bookmarks. <br>From here, you can access (or open) any study or application that you work in.</p><br>
+					  <div class="check_circle2"><img src="images/check.png" alt="check mark"></div>
+				      <p style="margin-left: 110px;">Oracle Health Sciences Cloud landing page.<br>The studies and applications you work in are listed under My Applications.</p><br>
+		        </ul>
+		   </div>		
+			
+		<section id="navTrigger" class="anim">
+            <h2 data-overview="step2Overview">Manage your account</h2>	
+			<div class="white_box" id="step3">
+                <h4><span class="lrg_number_circle">3</span>Forgot your user login?</h4><br>
+                <div><img src="images/Task_3_image.png" class="img_right displayPopup" alt="Forgot your user login?" title="Forgot your user login?" data-popup="popup3"></div>
+				<div class="check_circle"></div>
+                <p>If you have lost your user login, contact your delegated administrator or <a href="http://www.oracle.com/us/support/contact/health-sciences-cloud-support/index.html" target="_blank">Health Sciences Support.</a></p>
+				</div>
+			
+			<div class="white_box" id="step4">
+                <h4><span class="lrg_number_circle">4</span>Locked out of your account?</h4><br>
+                <div><img src="images/Task_4_image.png" class="img_right displayPopup" alt="Locked out of your account?" title="Locked out of your account?" data-popup="popup4"></div>
+				<p id="left_align">If you enter an incorrect password 5 times in a row, your account gets locked. If your account is locked, you need to reset your password to unlock your account.</p><br>
+				<div class="check_circle">1.</div>
+                <p>Click <strong>Forgot Password?</strong> in the Sign In page.</p><br>
+                <div class="check_circle">2.</div>
+                <p>Enter your user login name, and click <strong>Next</strong>.</p><br>
+                <div class="check_circle">3.</div>
+                <p>Enter answers for the challenge questions, and click <strong>Next</strong>.</p><br>
+				<div class="check_circle">4.</div>
+                <p>Enter your new password, and confirm the password.</p><br>
+				<div class="check_circle">5.</div>
+                <p>Click <strong>Save</strong>.</p><br>
+			    <p id="left_align"> <strong>What if I can't reset my password?</strong> Contact your delegated administrator or <a href="http://www.oracle.com/us/support/contact/health-sciences-cloud-support/index.html" target="_blank">Health Sciences Support</a> and ask them to reset the password for you.</p><br>
+            </div>
+			
+			
+			<p style="page-break-after:always;"></p>
+			
+		</section>
+			
+		
+			<div class="white_box" id="step5">
+                <h4><span class="lrg_number_circle">5</span>Change your password</h4><br>
+				<div><img src="images/Task_5_image.png" class="img_right displayPopup" style="clear: both;" alt="Change your password" title="Change your password" data-popup="popup5">
+				</div>
+                <div class="check_circle">1.</div>
+                <p>If the My Oracle Bookmarks page appears after you sign in: In the top-right, select <strong>Account Management</strong> from the drop-down. The OHSIAMS Oracle Identity Self Service console opens.</p><br>
+				<p>If the Oracle Health Sciences Cloud landing page appears after you sign in: Under the Quick Links section on the left, click <strong>Update Profile</strong>. The OHSIAMS Oracle Identity Self Service console opens.</p><br>
+                <div class="check_circle">2.</div>
+                <p>Under My Profile, click <strong>My Information</strong>.</p><br>
+                <div class="check_circle">3.</div>
+                <p>Expand the <strong>Change Password</strong> section.</p><br>
+				<div class="check_circle">4.</div>
+                <p>Enter your old password.</p><br>
+                <div class="check_circle">5.</div>
+                <p>Enter your new password, and confirm the password.</p><br>
+				<div class="check_circle">6.</div>
+                <p>In the top-right of the Change Password section, click <strong>Apply</strong>.</p><br>				
+            </div>
+			
+            <div class="white_box" id="step6" >
+                <h4><span class="lrg_number_circle">6</span>Change your challenge questions</h4><br>
+                <div><img src="images/Task_6_image.png" class="img_right displayPopup" alt="Change your challenge questions" title="Change your challenge questions" data-popup="popup6"></div>
+				<div class="check_circle">1.</div>
+                <p>If the My Oracle Bookmarks page appears after you sign in: In the top-right, select <strong>Account Management</strong> from the drop-down. The OHSIAMS Oracle Identity Self Service console opens.</p><br>
+				<p>If the Oracle Health Sciences Cloud landing page appears after you sign in: Under the Quick Links section on the left, click <strong>Update Profile</strong>. The OHSIAMS Oracle Identity Self Service console opens.</p><br>
+                <div class="check_circle">2.</div>
+                <p>Under My Profile, click <strong>My Information</strong>.</p><br>
+                <div class="check_circle">3.</div>
+                <p>Expand the <strong>Challenge Questions</strong> section.</p><br>
+				<div class="check_circle">4.</div>
+                <p>Set three challenge questions and enter answers for them.</p><br>     
+                <div class="check_circle">4.</div>
+                <p>In the top-right of the Challenge Questions section, click <strong>Apply</strong>.</p><br>				
+            </div>
+			
+			<div class="white_box" id="step7" >
+                <h4><span class="lrg_number_circle">7</span>Update your name or telephone number</h4><br>
+                <div><img src="images/Task_7_image.png" class="img_right displayPopup" alt="Update your name or telephone number" title="Update your name or telephone number" data-popup="popup7"></div>
+				<div class="check_circle">1.</div>
+                <p>If the My Oracle Bookmarks page appears after you sign in: In the top-right, select <strong>Account Management</strong> from the drop-down. The OHSIAMS Oracle Identity Self Service console opens.</p><br>
+				<p>If the Oracle Health Sciences Cloud landing page appears after you sign in: Under the Quick Links section on the left, click <strong>Update Profile</strong>. The OHSIAMS Oracle Identity Self Service console opens.</p><br>
+                <div class="check_circle">2.</div>
+                <p>Under My Profile, click <strong>My Information</strong>.</p><br>
+                <div class="check_circle">3.</div>
+                <p>Review the information in the <strong>First Name</strong> and <strong>Last Name</strong> fields, and edit if required.</p><br>
+				<div class="check_circle">4.</div>
+                <p>Optionally, you can add your telephone number.</p><br>
+                <div class="check_circle">5.</div>
+                <p>In the top-right of the Basic User Information section, click <strong>Apply</strong>.</p><br>				
+            </div>
+			
+			<div class="white_box" id="step8" >
+                <h4><span class="lrg_number_circle">8</span>See the roles that are assigned to you</h4><br>
+                <div><img src="images/Task_8_image.png" class="img_right displayPopup" alt="See the roles that are assigned to you" title="See the roles that are assigned to you" data-popup="popup8"></div>
+				<div class="check_circle">1.</div>
+                <p>If the My Oracle Bookmarks page appears after you sign in: In the top-right, select <strong>Account Management</strong> from the drop-down. The OHSIAMS Oracle Identity Self Service console opens.</p><br>
+				<p>If the Oracle Health Sciences Cloud landing page appears after you sign in: Under the Quick Links section on the left, click <strong>Update Profile</strong>. The OHSIAMS Oracle Identity Self Service console opens.</p><br>
+                <div class="check_circle">2.</div>
+                <p>Under My Profile, click <strong>My Access</strong>.<br>A list of roles assigned to your account appears.</p><br>
+                <div class="check_circle">3.</div>
+                <p>Review your roles.</p><br>
+				<div class="check_circle">4.</div>
+                <p>To remove a role, select the role from the list and click <strong>Remove Roles</strong>.</p><br>
+				<div class="check_circle"></div>
+				<p> <strong>Tip:</strong> If you accidentally remove a role, you need to ask a delegated administrator to assign that role to you.</p><br>
+                <div class="check_circle">5.</div>
+                <p>Select the role you want to remove, and click <strong>Revoke</strong>.</p><br>				
+            </div>
+        </section>
+		
+		<section id="navTrigger" class="anim">
+            <h2 data-overview="step1Overview">Request access to applications and studies</h2>
+            
+            <div class="white_box" id="step9" >
+                <h4><span class="lrg_number_circle">9</span>Request access</h4><br>
+                <div><img src="images/Task_9_image.png" class="img_right displayPopup" alt="Request access" title="Request access" data-popup="popup9"></div>
+				<p>If you received an application or study URL and self-service registration is active, you will see an access request form. Use it to submit an access request for the application or study. To do so:</p><br>
+				<div class="check_circle">1.</div>
+                <p>Sign in with your user login and password.</p><br>
+                <div class="check_circle">2.</div>
+                <p>Enter a justification to request for authorization.</p><br>
+                <div class="check_circle">3.</div>
+                <p>Click <strong>Submit</strong>.<br>If valid, after a delegated administrator approves your request, the role that is required to access the study or application is assigned to your account.</p><br>
+				<div class="check_circle"></div>
+                <p><strong>How do I know when I have the role?</strong> If you have the role, visiting the URL opens the application or study. If you don't have the role, you will see the access request form.</p><br>
+				<div class="check_circle"></div>
+				<p> <strong>Why is it taking so long for me to get access?</strong> Check with your delegated administrator on the status of your request.</p><br>
+            </div>
+           
+			
+				         
+        </section>
+
+        <section class="anim2">
+            <div class="white_box2">
+                <h4><img src="common/images/green_check.png" valign="center" alt="green checkmark">&nbsp;You're done!</h4>
+            </div>
+        </section>
+
+        <p  style="page-break-before:always;"></p> 
+
+        <section class="anim">        
+            <h6>Find out more about <strong>OHSIAMS</strong></h6>
+            <div class="info_box" >
+
+                <!--
+                Links table - left column: Update the links below with service-specific versions. Note that this column is displayed 
+                over the right column defined below when the viewport size <1000px.
+                -->
+                <div class="bottomTableLeft">
+					<span class="h7" data-highlight="6">Get more information</span>
+                    <p><span data-highlight="4"> See the <a href="https://docs.oracle.com/health-sciences/ohs-iams/index.html" target="_blank"> Oracle Health Sciences OHSIAMS</a> documentation library on the Oracle Help Center.<br>
+					See the <a href="https://support.oracle.com/epmos/faces/DocumentDisplay?id=1964916.1" target="_blank">Release Notes</a> on My Oracle Support (available for registered users).</span></p>
+                    
+                    <span class="h7" data-highlight="5">Other resources</span>
+                    <p>Watch <a href="https://docs.oracle.com/health-sciences/ohs-iams/iams-videos.html" target="_blank">short training videos</a> on the Oracle Help Center.</p>
+                </div>
+
+                <!--
+                Links table - right column: Update the links below with service-specific versions. Note that this column is displayed 
+                under the left column defined above when the viewport size <1000px.
+                -->
+                <div class="bottomTableRight">
+                    <span class="h7" data-highlight="5">Contact Support</span>
+                    <p><span data-highlight="4">For assistance, contact <a href="https://www.oracle.com/us/support/contact/health-sciences-cloud-support/index.html" target="_blank">Health Sciences Cloud Support</a>.</span></p>
+                </div>
+				<div class="bottomTableRight">
+					<span class="h7" data-highlight="5">Can't find what you need?</span>
+					<p><span data-highlight="4">Write to us at <a href="mailto:inform_doc_feedback_grp@oracle.com@oracle.com?subject=OHSIAMS%20Documentation%20Suggestion">inform_doc_feedback_grp@oracle.com</a>.</span></p>
+				</div>
+            </div>
+            <p>&nbsp;</p>
+
+            <!--
+            Footer: Leave the footer section as-is - do not update any links.
+            -->
+            <footer>
+                <div class="footlink"><a href="http://www.oracle.com/corporate/index.html" target="_blank">About Oracle</a> </div>
+                <div class="footlink"><a href="http://www.oracle.com/us/corporate/contact/index.html" target="_blank">Contact Us</a> </div>
+                <div class="footlink"><a href="http://www.oracle.com/us/legal/index.html" target="_blank">Legal Notices</a> </div>
+                <div class="footlink"><a href="http://www.oracle.com/us/legal/terms/index.html" target="_blank">Terms of Use</a> </div>
+                <div class="footlink"><a href="http://www.oracle.com/us/legal/privacy/index.html" target="_blank">Your Privacy Rights</a> </div>
+                <br>
+                <div class="footlink"><a href="http://www.oracle.com/pls/topic/lookup?ctx=cpyr&id=en">Copyright © 2018, Oracle and/or its affiliates. All rights reserved.</a></div>
+            </footer>
+
+        </section>
+
+    </article>
+
+
+    <!--
+    Overview popup: The titles in the following div must be an exact match to the titles in the div with class="overview" that appears earlier in the html.
+    -->
+    <div class="overview" class="popup" id="overview">
+		<h3>Initial account setup</h3>
+		<ul class="breadcrumb">
+			<li><a href="#step1"><b>1. </b>Get your account information</a></li>
+			<li><a href="#step2"><b>2. </b>Sign in for the first time</a></li>
+			
+		</ul>
+		<br>
+		<h3>Manage your account</h3>
+		<ul class="breadcrumb">
+			<li><a href="#step3"><b>3. </b>Forgot your user login?</a></li>
+			<li><a href="#step4"><b>4. </b>Locked out of your account?</a></li>
+			<li><a href="#step5"><b>5. </b>Change your password</a></li>
+			<li><a href="#step6"><b>6. </b>Change your challenge questions</a></li>
+			<li><a href="#step7"><b>7. </b>Update your name or telephone number</a></li>
+			<li><a href="#step8"><b>8. </b>See the roles that are assigned to you</a></li>
+		</ul>
+		<br>
+		<h3>Request access to applications and studies</h3>
+		<ul class="breadcrumb">
+			<li><a href="#step9"><b>9. </b>Request access</a></li>
+			
+		</ul>
+		<br>
+	</div>
+
+    <!--
+    Thumbnail popups: The following divs define the popup images displayed when the corresponding thumbnail images are clicked. Ensure
+    the id is the same as the one defined for the thumbnail in the steps above, and the image references and alt tags are updated.
+    -->
+    <div id="popup1" class="popup">
+        <img src="images/Task_1_image.png" alt="My Oracle Bookmarks landing page">
+    </div>
+	
+	<div id="popup1a" class="popup">
+        <img src="images/Task_1a_image.png" alt="Oracle Health Sciences Cloud landing page">
+    </div>
+
+	<div id="popup2" class="popup">
+		<img src="images/Task_2_image.png" alt="Sign in for the first time">
+    </div>
+   
+	<div id="popup3" class="popup">
+		<img src="images/Task_3_image.png" alt="Forgot your user login?">
+    </div>
+   
+	<div id="popup4" class="popup">
+			<img src="images/Task_4_image.png" alt="Locked out of your account?">
+	</div> 
+	
+	<div id="popup5" class="popup">
+		<img src="images/Task_5_image.png" alt="Change your password">
+	</div>
+
+	<div id="popup6" class="popup">
+		<img src="images/Task_6_image.png" alt="Change your challenge questions">
+	</div>
+
+	<div id="popup7" class="popup">
+		<img src="images/Task_7_image.png" alt="Update your name or telephone number">
+	</div>
+
+	<div id="popup8" class="popup">
+		<img src="images/Task_8_image.png" alt="See the roles that are assigned to you">
+	</div>
+
+	<div id="popup9" class="popup">
+		<img src="images/Task_9_image.png" alt="Request access">
+	</div>
+
+	
+
+    <script language="javascript">
+        var s_prefix = "Infographic";
+        if (typeof (document.title) != "undefined") {
+            var s_pageName = s_prefix + ":" + document.title};
+    </script>
+    <script type="text/javascript" src="https://www.oracleimg.com/us/assets/metrics/ora_docs.js"></script>
+</body>
+</html>

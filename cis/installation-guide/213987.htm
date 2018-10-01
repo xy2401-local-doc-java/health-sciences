@@ -1,0 +1,62 @@
+&#xfeff;<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="EN" xmlns="http://www.w3.org/1999/xhtml" xml:lang="EN">
+<head>
+<title> Configuring CIS behind a Proxy server </title>
+<meta name="Generator" content="Author-it" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="Keywords" content=""/>
+<script language="javascript" type="text/javascript" charset="UTF-8" src="dhtml_toc.js"></script>
+<script language="javascript" type="text/javascript" charset="UTF-8" src="open_parent.js"></script>
+<script language="javascript" type="text/javascript" charset="UTF-8" src="dhtml_load.js"></script>
+<script language="javascript" type="text/javascript" charset="UTF-8" src="dhtml_search.js"></script>
+<link rel="stylesheet" type="text/css" href="newwave.css"/>
+<link rel="stylesheet" type="text/css" href="index_stylesheet.css"/>
+<base target="CONTENT"/>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+
+<body onload="loadParent();;bodyLoad();;;if (isTOCLoaded()) {expand('64879');highlight('213987')}" text="#000000" link="#0000A0" alink="#008000" vlink="#FF0000">
+<div id="searchResultsNone"></div>
+<div id="content">
+    <table summary="" class="relatedtopics aboveheading" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td width= "18">
+<p class="bodytext"><a href="205828.htm" target="_self"><img width="34" height="34" src="125.gif" alt="Previous Topic" vspace="0" hspace="0" align="bottom" border="0" /></a></p></td>
+<td width= "18">
+<p class="bodytext"><a href="206300.htm" target="_self"><img width="33" height="34" src="124.gif" alt="Next Topic" vspace="0" hspace="0" align="bottom" border="0" /></a></p></td>
+<td width= "48">
+<p class="bodytext"><a href="javascript:expand('64879');highlight('213987')" onclick="loadTOC()" target="_self"><img width="55" height="34" src="122.gif" alt="Book Contents" vspace="0" hspace="0" align="bottom" border="0" /></a></p></td>
+</tr>
+</table>
+<h2 class="heading2">Configuring CIS behind a Proxy server</h2>
+<p class="bodytext">If your environment has the CIS software placed behind a Proxy server, you must update the following configuration files:</p>
+<p class="listcontinue"><strong class="commandbold">..\Clintrial Integration Solution\CentralAdmin\web.config </strong></p>
+<p class="listcontinue"><strong class="commandbold">..\Clintrial Integration Solution\CISSync\bin\ PhaseForward.CISSynchAdapter.CISSyncProcessor.exe.config </strong></p>
+<p class="bodytext">To update the files:</p>
+<ul class="listbullet"><li class="listbullet">Add the following attributes to the binding name<strong class="buttons">=&quot;ICentralAdminService&quot; </strong>and binding name<strong class="buttons">=&quot;TransactionAdapterService&quot;</strong>: <p class="listcontinue"><strong class="commandbold">closeTimeout=&quot;00:01:00&quot; openTimeout=&quot;00:10:00&quot; receiveTimeout=&quot;00:10:00&quot; sendTimeout=&quot;00:10:00&quot; useDefaultWebProxy=&quot;false&quot; allowCookies=&quot;false&quot; proxyAddress= &quot;&lt;myproxy_url&gt;&quot; </strong></p>
+<p class="listcontinue"></p>
+<p class="listcontinue">The content of both elements in those files should look like: </p>
+<p class="listcontinue"><strong class="commandbold">&lt;binding name=&quot;ICentralAdminService&quot; maxBufferPoolSize=&quot;2147483647&quot; maxReceivedMessageSize=&quot;2147483647&quot; closeTimeout=&quot;00:01:00&quot; openTimeout=&quot;00:10:00&quot; receiveTimeout=&quot;00:10:00&quot; sendTimeout=&quot;00:10:00&quot; useDefaultWebProxy=&quot;false&quot; allowCookies=&quot;false&quot; proxyAddress=&quot;http://&amp;lt;proxy_address&quot;&gt;</strong></p>
+<p class="listcontinue"></p>
+<p class="listcontinue"><strong class="commandbold">    &lt;binding name=&quot;TransactionAdapterService&quot; maxBufferPoolSize=&quot;2147483647&quot; maxReceivedMessageSize=&quot;2147483647&quot; closeTimeout=&quot;00:01:00&quot; openTimeout=&quot;00:10:00&quot; receiveTimeout=&quot;00:10:00&quot; sendTimeout=&quot;00:10:00&quot; useDefaultWebProxy=&quot;false&quot; allowCookies=&quot;false&quot; proxyAddress=&quot;http://&amp;lt;proxy_address&quot;&gt;</strong></p>
+<p class="listcontinue"></p>
+</li></ul><p class="bodytext">If you do not update the CIS configuration files, you might experience connection problems. For example, the error &quot;The underlying connection was closed: The remote name could not be resolved&quot; might appear in the event log.</p>
+<p class="bodytext">The error information includes the operation that was taking place at the point where the connection could not be acquired.</p>
+
+
+ 
+<p class="copy">Copyright &copy; 2002, 2017 Oracle and/or its affiliates. All rights reserved.</p>
+</div>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>
+<footer>
+</footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+<script>$(document).foundation();</script>
+</body>
+</html>

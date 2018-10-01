@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Setting Up the Security System</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2018-05-25T8:2:33Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Life Sciences Data Hub System Administrator's Guide" />
+<meta name="dcterms.identifier" content="E95829-01" />
+<meta name="dcterms.isVersionOf" content="LSHAG" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2006, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="classsetup.htm" title="Previous" type="text/html" />
+<link rel="Next" href="db_accts.htm" title="Next" type="text/html" />
+<link rel="alternate" href="LSHAG.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="LSHAG.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="LSHAG.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">12/24</span> <!-- End Header -->
+<div id="LSHAG225" class="chapter"><a id="BCGFDCDF"></a>
+<h1 class="chapter"><span class="secnum">9</span> Setting Up the Security System</h1>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#BABFFDEB">About Security in the Oracle Life Sciences Data Hub</a></p>
+</li>
+<li>
+<p><a href="#BABEHHGB">About Security in Oracle Health Sciences Data Management Workbench</a></p>
+</li>
+<li>
+<p><a href="#BABDDFBI">Setting Up User Accounts</a></p>
+</li>
+<li>
+<p><a href="#BABHJHDE">Setting Up Specialized Administrators</a></p>
+</li>
+<li>
+<p><a href="#CEGEDJHE">Setting Up Object Security</a></p>
+</li>
+<li>
+<p><a href="#BABEGCGF">Granting Security Access to APIs</a></p>
+</li>
+</ul>
+<p>See also:</p>
+<ul>
+<li>
+<p>"Designing a Security System" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Implementation Guide</span></span>.</p>
+</li>
+<li>
+<p><a href="adapter.htm#CHDICIEB">Setting Up Security for Adapters</a></p>
+</li>
+<li>
+<p><a href="db_accts.htm#CHDIIIDD">Managing Database Account Privileges for Generic Visualization Business Areas</a></p>
+</li>
+<li>
+<p><a href="remote.htm#BABCECCI">Chapter 5, "Registering Locations and Connections"</a></p>
+</li>
+<li>
+<p>"Managing User Groups" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub User's Guide</span></span></p>
+</li>
+</ul>
+<a id="BABFFDEB"></a>
+<div id="LSHAG226" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">About Security in the Oracle Life Sciences Data Hub</h2>
+<p>Before using the Oracle Life Sciences Data Hub (Oracle LSH), you must set up Oracle LSH security. You can continue to add to and modify security components as necessary over time. The basic tasks for setting up security are:</p>
+<ul>
+<li>
+<p><span class="bold">Create a user account for each user</span> and assign one or more application roles to each user account. Application roles allow access to part or the whole of the Oracle LSH user interface or grant blinding privileges. See <a href="#BABDDFBI">"Setting Up User Accounts"</a>.</p>
+</li>
+<li>
+<p><span class="bold">Assign specialized administrative roles to a few users</span>. Each of these administrators must then perform a specific task: set up the classification system, create Domains to contain and organize objects, grant blind break and unblind privileges, or add users to user groups. See <a href="#BABHJHDE">"Setting Up Specialized Administrators"</a>.</p>
+</li>
+<li>
+<p><span class="bold">Set up a security system for defined objects and outputs</span>. See "Designing a Security System" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Implementation Guide</span></span> for information on how to design a security system for the contents of the Life Sciences Data Hub: defined objects, outputs, and through them, data. Instructions are included in this chapter for creating the necessary subtypes, user groups, and object roles, and assigning roles to subtypes and user groups. See <a href="#CEGEDJHE">"Setting Up Object Security"</a>.</p>
+</li>
+</ul>
+<p><a href="#CEGDIAAC">Figure 9-1</a> shows how these tasks relate to each other. The tasks are described in detail in the subsequent sections.</p>
+<p><a id="LSHAG227"></a><span class="subhead3">Required Roles&nbsp;</span>To perform most of the tasks described in this chapter, you must be assigned either the LSH Security Administrator role or one of its component roles: LSH Function Security Administrator (for assigning administrative or other application roles to users) or LSH Data Security Administrator (for setting up object security.) Information on assigning these roles is included in the "Create System Administrator and Security Administrator Users" section in the chapter on installing Oracle LSH in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Installation Guide</span></span>.</p>
+<p>Creating user accounts is done through a standard Oracle Applications UMX user interface, and you need the UMX sysadmin role to create user accounts.</p>
+<div id="LSHAG228" class="figure">
+<p class="titleinfigure"><a id="CEGDIAAC"></a>Figure 9-1 Flowchart of Security Administrator Tasks</p>
+<img width="585" height="399" src="img/admin_setup.gif" alt="Description of Figure 9-1 follows" /><br />
+<a id="sthref25" href="img_text/admin_setup.htm">Description of ''Figure 9-1 Flowchart of Security Administrator Tasks''</a><br />
+<br /></div>
+<!-- class="figure" --></div>
+<!-- class="sect1" -->
+<a id="BABEHHGB"></a>
+<div id="LSHAG1806" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">About Security in Oracle Health Sciences Data Management Workbench</h2>
+<p>Oracle Health Sciences Data Management Workbench (Oracle DMW) is installed on top of Oracle LSH and uses its security system, which is itself based in part on the Oracle Applications (Oracle E-Business Suite) security system. For introductory information, see the chapter on administration in the <span class="italic">Oracle Health Sciences Data Management Warehouse User's Guide</span>.</p>
+<p>To set up Oracle DMW security:</p>
+<ul>
+<li>
+<p><span class="bold">Assign specialized administrative roles to a few users</span> to create Domains to contain and organize studies, grant blind break and unblind privileges, and add users to user groups. See <a href="#BABHJHDE">"Setting Up Specialized Administrators"</a>.</p>
+</li>
+<li>
+<p><span class="bold">Create user accounts</span> for all users, including application roles for all users; see <a href="#BABHBAEG">"Creating User Accounts"</a> and <a href="#CEGEAFHB">"Assigning Application Roles"</a>.</p>
+</li>
+<li>
+<p><span class="bold">Create user groups</span>; see <a href="#BABCEJDJ">"Creating and Maintaining User Groups"</a>.</p>
+</li>
+<li>
+<p><span class="bold">Assign object security roles to user groups</span>. You can use shipped roles created for use with Oracle DMW or modify them as required.</p>
+<p>See the appendix "Predefined Roles" in the <span class="italic">Oracle Health Sciences Data Management Warehouse User's Guide</span> for more information.</p>
+</li>
+<li>
+<p><span class="bold">Assign users to object security roles within user groups</span>; see <a href="#CEGFHBEI">"Adding Supported Roles to User Groups"</a>.</p>
+</li>
+<li>
+<p><span class="bold">Assign user groups to objects in Oracle DMW</span>; see the <span class="italic">Oracle Health Sciences Data Management Warehouse User's Guide</span>.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect1" -->
+<a id="BABDDFBI"></a>
+<div id="LSHAG230" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Setting Up User Accounts</h2>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#CEGBGCGJ">About Users</a></p>
+</li>
+<li>
+<p><a href="#BABHBAEG">Creating User Accounts</a></p>
+</li>
+<li>
+<p><a href="#BABEHAFD">Maintaining User Accounts</a></p>
+</li>
+<li>
+<p><a href="#CEGEAFHB">Assigning Application Roles</a></p>
+</li>
+</ul>
+<a id="CEGBGCGJ"></a>
+<div id="LSHAG231" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">About Users</h3>
+<p>Every person who will use Oracle LSH or Oracle DMW must have a user account. A user account includes:</p>
+<ul>
+<li>
+<p>The user's name and other information; see <a href="#BABHBAEG">"Creating User Accounts"</a>.</p>
+</li>
+<li>
+<p>One or more application roles. These predefined roles determine which parts of the Oracle LSH or Oracle DMW user interface a user can see and manipulate. See <a href="#CEGEAFHB">"Assigning Application Roles"</a>.</p>
+</li>
+</ul>
+<p>You use the Oracle Applications UMX interface for creating user accounts and assigning application roles.</p>
+<p>To reach the User Management screens, log in to Oracle LSH as sysadmin and then select the User Management responsibility. For further information see "Create System Administrator and Security Administrator Users" in the chapter on installing Oracle LSH in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Installation Guide</span></span>.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+For complete information, see the <span class="italic">Oracle&reg; E-Business Suite System Administrator's Guide - Security</span> at <code dir="ltr"><a href="http://download.oracle.com/docs/cd/B53825_08/current/acrobat/121sasg.pdf">http://download.oracle.com/docs/cd/B53825_08/current/acrobat/121sasg.pdf</a><a href=""></a></code>.</div>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The system prevents you from modifying your own user account; the account you used to log in.</div>
+</div>
+<!-- class="sect2" -->
+<a id="BABHBAEG"></a>
+<div id="LSHAG233" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Creating User Accounts</h3>
+<p>System Administrators and Security Administrators can create user accounts in the system.</p>
+<p>To register a user:</p>
+<ol>
+<li>
+<p>Log in as the system administrator.</p>
+</li>
+<li>
+<p>Select <span class="bold">User Management</span> from the Navigator drop-down or from the Home page, then click <span class="bold">Users</span>. The Oracle User Management User Maintenance screen appears.</p>
+</li>
+<li>
+<p>In the Register drop-down, select <span class="bold">External Organization Contact</span> and click <span class="bold">Go</span>.</p>
+</li>
+<li>
+<p>Enter values in the following fields:</p>
+<ul>
+<li>
+<p><span class="bold">Email</span>. The user's email address. Oracle LSH uses this address for corresponding with the user to reset passwords and send notifications.</p>
+</li>
+<li>
+<p><span class="bold">Name Fields</span>. Enter the name of the user in the fields. The First Name and the Last Name are mandatory. Prefix, Middle Name and Suffix are optional.</p>
+</li>
+<li>
+<p><span class="bold">Organization</span>. Enter or search for the Organization to which the user belongs.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You must set up the list of allowed values as a post-installation step for Oracle Applications. See the <span class="italic">Oracle&reg; E-Business Suite System Administrator's Guide - Security</span> at <code dir="ltr"><a href="http://download.oracle.com/docs/cd/B53825_08/current/acrobat/121sasg.pdf">http://download.oracle.com/docs/cd/B53825_08/current/acrobat/121sasg.pdf</a><a href=""></a></code>.</div>
+</li>
+<li>
+<p><span class="bold">Phone Number</span>. The telephone contact details of the user.</p>
+</li>
+<li>
+<p><span class="bold">Account Information--Password</span>. If you select <span class="bold">Generate Automatically</span>, the system generates and emails the password to the email account you specified for the user.</p>
+<p>If you select <span class="bold">Enter Manually</span> you must type and confirm the password an inform the user what it is. The user will have to reset the password in either case.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You can set the minimum length and other requirements for passwords; see <a href="pwd.htm#CIHDGAJG">Chapter 3, "Setting Profile Values"</a>.</div>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Submit</span>. The Confirmation screen appears.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>. The system creates the user and returns to the User Management screen.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BABEHAFD"></a>
+<div id="LSHAG235" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Maintaining User Accounts</h3>
+<p>In the User Maintenance screen, search for the user you want to update and click the corresponding Update icon. After you make the relevant changes, click <span class="bold">Apply</span> to save them or click <span class="bold">Cancel</span> to discard the changes.</p>
+<p><a id="LSHAG236"></a><span class="subhead3">Name Fields&nbsp;</span>Type the name of the user in the fields. The First Name and the Last Name are mandatory. Prefix, Middle Name and Suffix are optional.</p>
+<p><a id="LSHAG237"></a><span class="subhead3">Email Address&nbsp;</span>The user's email address. Oracle LSH uses this address for corresponding with the user.</p>
+<p><a id="LSHAG238"></a><span class="subhead3">Active From&nbsp;</span>The date the user account becomes active.</p>
+<p><a id="LSHAG239"></a><span class="subhead3">Active To&nbsp;</span>The date the user account becomes inactive and the user can no longer use Oracle LSH. Leave this field blank to keep the user account active indefinitely. Enter an end time when the user leaves the company.</p>
+<p><a id="LSHAG240"></a><span class="subhead3">Roles&nbsp;</span>See <a href="#CEGEAFHB">"Assigning Application Roles"</a>.</p>
+<p><a id="LSHAG241"></a><span class="subhead3">Contact Information&nbsp;</span>You can only view the user's contact information.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CEGEAFHB"></a>
+<div id="LSHAG243" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Assigning Application Roles</h3>
+<p>To assign an application role to a User:</p>
+<ol>
+<li>
+<p>In the User Maintenance screen, search for the user to whom you want to assign Roles.</p>
+</li>
+<li>
+<p>Click the Update icon corresponding to the User. The Update User screen appears.</p>
+</li>
+<li>
+<p>In the Roles subtab, click <span class="bold">Assign Roles</span>. The Search and Select screen appears.</p>
+</li>
+<li>
+<p>Search for all Oracle LSH predefined roles by selecting Search By Role, entering <code dir="ltr">LSH%</code>, and clicking <span class="bold">Go</span>. The system displays all the predefined Oracle LSH application roles in the lower part of the screen.</p>
+<p>For an explanation of application-type application roles required for using Oracle LSH, see <a href="#BCGCBHIJ">"Oracle Life Sciences Data Hub Application Roles"</a> and <a href="#BABEJDDC">"Oracle Health Sciences Data Management Workbench Application Roles"</a>. For an explanation of administrative-type application roles, see <a href="#BABHJHDE">"Setting Up Specialized Administrators"</a>.</p>
+</li>
+<li>
+<p>Select each role you want to assign by selecting its check box.</p>
+</li>
+<li>
+<p>Click <span class="bold">Select</span>. The system adds the roles to the user and the Update User screen appears.</p>
+</li>
+<li>
+<p>You must enter a justification for assigning each role to the user.</p>
+</li>
+<li>
+<p>Click <span class="bold">Apply</span>. The system assigns the roles to the user and returns to the User Maintenance screen.</p>
+</li>
+</ol>
+<a id="BCGCBHIJ"></a>
+<div id="LSHAG244" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Oracle Life Sciences Data Hub Application Roles</h4>
+<p>Users need one or more of the predefined application roles to perform their work in Oracle LSH. The predefined nonadministrative Oracle LSH application roles follow. For descriptions of the administrative roles, see <a href="#BABHJHDE">"Setting Up Specialized Administrators"</a>.</p>
+<p><a id="LSHAG245"></a><span class="subhead3">LSH Application User&nbsp;</span>The role on which all other application roles are based.</p>
+<p><a id="LSHAG246"></a><span class="subhead3">LSH Consumer&nbsp;</span>Users assigned the LSH Consumer role have access to the Home and Reports tabs in the user interface. Assign this role to users who need to retrieve information from Oracle LSH and/or run Oracle LSH applications to load and transform data. Oracle LSH object security determines which operations these users are allowed to perform on particular applications and reports.</p>
+<p><a id="LSHAG247"></a><span class="subhead3">LSH Definer&nbsp;</span>Users assigned the LSH Definer role have access to the same tabs as the LSH Consumer, plus the Applications tab. Assign this role to users who must build, test, or validate Oracle LSH applications. Oracle LSH object security determines which operations these users are allowed to perform on particular defined objects and outputs.</p>
+<p><a id="BABGABJB"></a><a id="LSHAG248"></a><span class="subhead3">LSH Data Blind Break User&nbsp;</span>Only the LSH Data Blind Administrator can assign this role to users. This role does not provide access to any tabs in the user interface. Users assigned to this role typically also have the LSH Consumer role.</p>
+<p>Users with this application role can do the following, if they have normal object security access and the blinding-related object security privilege noted:</p>
+<ul>
+<li>
+<p>Run a job on Tables with a Blinding Status of Blinded that displays the real data, not the dummy data (also requires an object security role with the Blind Break operation on Table instances)</p>
+</li>
+<li>
+<p>View the output(s) generated by a job run on real, blinded data (also requires an object security role with the Blind Break operation on outputs)</p>
+</li>
+</ul>
+<p><a id="BABBEGBC"></a><a id="LSHAG249"></a><span class="subhead3">LSH Data Unblind User&nbsp;</span>Only the LSH Data Blind Administrator can assign this role to users. This role does not provide access to any tabs in the user interface. Users assigned to this role typically also have the LSH Consumer role.</p>
+<p>Users with this application role can do the following, if they have normal object security access and the blinding-related object security privilege noted:</p>
+<ul>
+<li>
+<p>Permanently unblind data in Table instances (also requires an object security role with the Unblind operation on Table instances)</p>
+</li>
+<li>
+<p>Change the status of an output from Blinded to Unblinded (also requires an object security role with the Unblind operation on outputs)</p>
+</li>
+<li>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The LSH Data Unblind User application role is not required in conjunction with the Read Unblind operation on either Table instances or outputs. Users can have an object security role that includes the Read Unblind operation on Table instances (to run a job on unblinded Table instances) and/or outputs (to view the results of such a job) without having the LSH Data Unblind User application role as well.</div>
+</li>
+</ul>
+<p><a id="LSHAG250"></a><span class="subhead3">XMLP Roles&nbsp;</span>You can assign the BI Publisher roles (XML Publisher is the old name for Oracle BI Publisher) to Oracle LSH Definers to enable them to create or use Oracle LSH BI Publisher Programs. See <a href="bipsec.htm#CIHBIDDI">"Assigning Application Roles in Oracle LSH"</a> for more information.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+These predefined roles and composite roles should be sufficient for your needs. However, it is possible to create custom composite roles. See the <span class="italic">Oracle&reg; E-Business Suite System Administrator's Guide - Security</span> at <code dir="ltr"><a href="http://download.oracle.com/docs/cd/B53825_08/current/acrobat/121sasg.pdf">http://download.oracle.com/docs/cd/B53825_08/current/acrobat/121sasg.pdf</a><a href=""></a></code>.)</div>
+</div>
+<!-- class="sect3" -->
+<a id="BABEJDDC"></a>
+<div id="LSHAG1807" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Oracle Health Sciences Data Management Workbench Application Roles</h4>
+<p>Each user must have at least one of the following application roles to access the Oracle DMW user interface.</p>
+<p><a id="LSHAG1808"></a><span class="subhead3">DMW_STUDY_MANAGER&nbsp;</span>is intended for users who run data loads, transformations, and validation checks. It provides access to the Home, Study Configuration, Listings, and Discrepancies pages.</p>
+<p>Users with this role can create, modify, and remove studies in the Home page.</p>
+<p><a id="LSHAG1809"></a><span class="subhead3">DMW_STUDY_CONFIG&nbsp;</span>is intended for users who set up studies by defining models, transformations, and validation checks. It provides access to the Home, Study Configuration, Listings, and Discrepancies pages.</p>
+<p>Users with this role can create, modify, and remove studies in the Home page.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+There is no functional difference between the application roles DMW_STUDY_MANAGER and DMW_STUDY_CONFIG.</div>
+<p><a id="LSHAG1810"></a><span class="subhead3">DMW_STUDY_CONSUMER&nbsp;</span>is intended for users who need to review data and raise discrepancies. It provides access to the Home, Listings, and Discrepancies pages.</p>
+<p><a id="LSHAG1811"></a><span class="subhead3">DMW_LIB_ADMIN&nbsp;</span>is intended for users who create and modify library models and code lists. It provides access only to the Library page.</p>
+<p><a id="LSHAG1812"></a><span class="subhead3">DMW_SYS_ADMIN&nbsp;</span>is intended for users who do administrative tasks including setting up data sources and defining objects used across studies, such as categories, flags, and tags. It provides access only to the Administration tab.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+In addition, some Oracle DMW users should have blinding-related privileges in order to view blinded data and/or unblind data. This requires both a blinding-related application role-- <a href="#BABGABJB">LSH Data Blind Break User</a> or <a href="#BABBEGBC">LSH Data Unblind User</a>--and blinding-related object security privileges through a role in a user group assigned to the object, plus normal object security access to the object. For more information about blinding data in Oracle LSH, see the <span class="italic">Oracle Life Sciences Data Hub Implementation Guide</span> and the <span class="italic">Oracle Life Sciences Data Hub Application Developer's Guide</span>.</div>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BABHJHDE"></a>
+<div id="LSHAG252" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Setting Up Specialized Administrators</h2>
+<p>As part of setting up Oracle LSH, the Security Administrator needs to assign the following administrative application roles to users. Each of these administrators has special privileges and responsibilities as follows:</p>
+<p><a id="LSHAG253"></a><span class="subhead3">LSH Adapter Security Admin&nbsp;</span>The LSH Adapter Security Admin role is required to see the Adapter Security subtab of the Security tab and to assign user groups to Adapter Domains and Adapter Areas. See <a href="adapter.htm#BGBCFJED">Chapter 2, "Setting Up Adapters to External Systems"</a> for further information.</p>
+<p><a id="LSHAG254"></a><span class="subhead3">LSH Classification Admin&nbsp;</span>The Classification Administrator creates and maintains classification hierarchies and terms. See <a href="classsetup.htm#CHDIIFDB">Chapter 8, "Setting Up the Classification System"</a> for more information.</p>
+<p><a id="LSHAG255"></a><span class="subhead3">LSH Data Blind Admin&nbsp;</span>The Data Blind Administrator is responsible for assigning the Blind and Unblind application roles to users. See "LSH Data Blind Admin" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Implementation Guide</span></span> for more information.</p>
+<p><a id="LSHAG256"></a><span class="subhead3">LSH Data Security Admin&nbsp;</span>The Data Security Administrator sets up security for defined objects.</p>
+<p><a id="LSHAG257"></a><span class="subhead3">LSH Checkin Admin&nbsp;</span>The Checkin Administrator can check in objects checked out by any user, provided he or she also has the Modify object security privileges for the object. This is required if the user who has checked out the object becomes unavailable for some reason. Note that a Checkin Administrator can install Reports Sets, and Work Areas that contain objects checked out by other users.</p>
+<p><a id="LSHAG258"></a><span class="subhead3">LSH Function Security Admin&nbsp;</span>The Function Security Administrator assigns functional roles to users.</p>
+<p><a id="LSHAG259"></a><span class="subhead3">LSH Groups Admin&nbsp;</span>Users with this role can be designated the Group Administrator of a user group. This role allows them to see the Groups Administration subtab under the Security tab, which is required for assigning users to user groups. See <a href="#CEGECHII">"Creating User Groups"</a> for more information.</p>
+<p><a id="LSHAG260"></a><span class="subhead3">LSH Security Admin&nbsp;</span>The Security Administrator role includes both the LSH Function Security Admin role's functions and the LSH Data Security Admin role's functions. Instructions for setting up the first user with this role are included in the "Create System Administrator and Security Administrator Users" section in the chapter on installing Oracle LSH in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Installation Guide</span></span>.</p>
+<p><a id="LSHAG261"></a><span class="subhead3">LSH Security Bootstrap Admin&nbsp;</span> This Administrator is responsible for creating Domain and assigning user groups to the Domains. See instructions for creating Domains in "Applications User Interface" of the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Application Developer's Guide</span></span>.</p>
+<p><a id="LSHAG262"></a><span class="subhead3">LSH System Admin&nbsp;</span>The LSH System Administrator can run the post-installation job and define service locations and services. Instructions for setting up the first user with this role are included in the "Create System Administrator and Security Administrator Users" section in the chapter on installing Oracle LSH in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Installation Guide</span></span>.</p>
+<p><a id="LSHAG263"></a><span class="subhead3">LSH Super User&nbsp;</span>The LSH Super User has access to all user interface tabs in LSH: Home, Applications, Reports, Classification, Security, and Administration, as well as the Oracle Applications user and role screens. The Super User role does not include the Bootstrap role or the blinding-related roles.</p>
+<p>To create an Administrator:</p>
+<ol>
+<li>
+<p>Log in as the Security Administrator.</p>
+</li>
+<li>
+<p>Create a user account. See <a href="#BABHBAEG">"Creating User Accounts"</a>.</p>
+</li>
+<li>
+<p>Assign one of the administrative application roles (listed above) to the user. See <a href="#CEGEAFHB">"Assigning Application Roles"</a>.</p>
+</li>
+</ol>
+<p><a id="LSHAG264"></a><span class="subhead3">XMLP Admin&nbsp;</span>The XMLP Admin has administrative privileges in Oracle BI Publisher. Assign this role to an Oracle LSH Administrator who needs to perform administrative tasks (manage /delete reports and folders) in Oracle BI Publisher.</p>
+</div>
+<!-- class="sect1" -->
+<a id="CEGEDJHE"></a>
+<div id="LSHAG266" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Setting Up Object Security</h2>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#CEGIFJIH">Creating and Maintaining Object Subtypes</a></p>
+</li>
+<li>
+<p><a href="#BABBGJAE">Creating and Maintaining Object Security Roles</a></p>
+</li>
+<li>
+<p><a href="#BABFGBIH">Assigning Subtype Operations to Roles and Modifying Assignments</a></p>
+</li>
+<li>
+<p><a href="#BABCEJDJ">Creating and Maintaining User Groups</a></p>
+</li>
+</ul>
+<p>Your company must design a security system that meets its particular needs. For information, recommendations, and examples of security system design, see "Designing a Security System" in the <span class="italic">LSH Implementation Guide</span>.</p>
+<p>Each time a user tries to perform an operation on a defined object, the system runs a check that compares the security privileges of the user with the security requirements of the object.</p>
+<p>A user can operate on an object only if both these conditions are met:</p>
+<ul>
+<li>
+<p>The user belongs to an active user group that is assigned to that object, either explicitly or through inheritance.</p>
+</li>
+<li>
+<p>The user has a role in that user group that permits the operation on the object's subtype.</p>
+</li>
+</ul>
+<p>The <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Implementation Guide</span></span> has information on designing an appropriate set of object subtypes, roles, and user groups to meet your company's needs. This section contains the instructions for actually creating these things in Oracle LSH.</p>
+<a id="CEGIFJIH"></a>
+<div id="LSHAG267" class="sect2">
+<h3 class="sect2">Creating and Maintaining Object Subtypes</h3>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#CEGFDJHH">Creating Object Subtypes</a></p>
+</li>
+<li>
+<p><a href="#CEGDEDCJ">Modifying Object Subtypes</a></p>
+</li>
+</ul>
+<p>See also:</p>
+<p><a href="#BABFGBIH">Assigning Subtype Operations to Roles and Modifying Assignments</a></p>
+<p>Oracle LSH includes a set of predefined object types, such as Tables, Programs, Report Sets, and Variables. Each of these object types has a predefined set of all possible operations that can be performed on objects of that type.</p>
+<p>To allow you greater flexibility as you set up your security system, Oracle LSH bases object security on subtypes rather than the predefined object types. You can define different subtypes&mdash;for example, Clinical and Financial&mdash;for one or more object types and define different classification and security requirements for each subtype of the same object type. Object subtypes have the same predefined set of operations as their object type. Oracle LSH ships with one default subtype for each object type. If you do not wish to add the flexibility (and complexity) of subtypes to your design, you can use the predefined subtype only.</p>
+<p>Defining additional subtypes is optional.</p>
+<p>When a Definer creates an object, he or she must select an object subtype on which to base the object. The object has the classification and security requirements defined for the selected subtype.</p>
+<p>When the Definer creates an object, the system checks the subtype of the parent object and, if a subtype with the same name is defined for the new object, uses that subtype for the new object. If the new object does not have a subtype with the same name, the system uses the predefined Default subtype. The Definer can change it as necessary.</p>
+<p>For further information, see "Designing a Security System" in the <span class="italic">LSH Implementation Guide</span>. For information on using subtypes in classification, see <a href="classsetup.htm#BABFJHGC">"Assigning Levels to Object Subtypes"</a>.</p>
+<a id="CEGFDJHH"></a>
+<div id="LSHAG268" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Creating Object Subtypes</h4>
+<p>To create a new object subtype, go to the Subtype subtab of the Security tab and do the following:</p>
+<ol>
+<li>
+<p>In the Manage Subtype screen, choose either Operation or Role from the View Subtypes drop-down list.</p>
+<ul>
+<li>
+<p>Choose <span class="bold">Role</span> if you have created a new role and want to add multiple operations to it at the same time. This is the more common situation.</p>
+</li>
+<li>
+<p>Choose <span class="bold">Operation</span> if you want to add multiple roles to a single operation on the subtype at the same time.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click the node (<span class="bold">+</span>) icon in the Manage column of the object type for which you want to add a Subtype. The Create Subtype screen appears.</p>
+</li>
+<li>
+<p>Enter a name for the Subtype (required, maximum 60 characters). You do not need to include the name of the Object Type in the Subtype name.</p>
+</li>
+<li>
+<p>Click <span class="bold">Apply</span>. The system creates the Subtype and the Manage Subtype screen reappears. The new Subtype is automatically created as:</p>
+<ul>
+<li>
+<p><span class="bold">Not Active</span>; not available for use in object definition.</p>
+</li>
+<li>
+<p><span class="bold">Not the Default</span>; when a Definer creates an object of this type, this Subtype is not the default Subtype of the new object. See <a href="#BABFDBCB">"Default Subtype Behavior"</a> below for further information.</p>
+</li>
+</ul>
+<p>To change either the Active or Default setting, click the pencil icon in the Update column.</p>
+</li>
+</ol>
+<p><a id="BABFDBCB"></a><a id="LSHAG269"></a><span class="subhead3">Default Subtype Behavior&nbsp;</span>The subtype you set as the default here is not necessarily the one that all new objects of this type default to. Instead, when a user creates a new object, the system reads the subtype of the object's parent, and if the new object has a subtype with the same name as the parent's, the system creates the new object with the same subtype as its parent. If not, the system uses the default subtype.</p>
+<p>For example, if a user creates a new Program instance in a Work Area, and the Work Area's subtype is Clinical, the system checks whether there is a Program instance subtype called Clinical. If there is, the system creates the new Program instance with a subtype of Clinical. If Program instances do not have a subtype called Clinical, the system creates the new Program instance with the subtype defined as the default for Program instances.</p>
+<p>The user can change the subtype manually.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CEGDEDCJ"></a>
+<div id="LSHAG272" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Modifying Object Subtypes</h4>
+<p>To modify a Subtype, click the corresponding Update icon in the Manage Subtype screen.</p>
+<p>You can modify the following Subtype characteristics:</p>
+<ul>
+<li>
+<p><span class="bold">Name</span></p>
+</li>
+<li>
+<p><span class="bold">Is Active</span>. If selected, this Subtype is available for use during definition of objects of this Object Subtype.</p>
+</li>
+<li>
+<p><span class="bold">Is Default</span>. If selected, this is the default Subtype for objects of this Object Subtype.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BABBGJAE"></a>
+<div id="LSHAG274" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Creating and Maintaining Object Security Roles</h3>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#CEGDGBDF">Creating Object Security Roles</a></p>
+</li>
+<li>
+<p><a href="#CEGFCBHD">Modifying Object Security Roles</a></p>
+</li>
+</ul>
+<p>A role consists of a name, description, and a set of operations allowed on object subtypes. Users in a user group that have access to a particular object will be able to perform the operations on the types of objects specified by the role(s) they have in the user group.</p>
+<p>Predefined roles intended for use with Oracle Health Sciences Data Management Warehouse (Oracle DMW) are shipped with Oracle LSH. These roles appear in the Oracle LSH Manage Roles page. Although they were created for use with Oracle DMW, you can also use these roles in Oracle LSH user groups either as they are or with any modifications you choose. Additional privileges are required to perform Oracle LSH tasks on objects that do not exist in Oracle DMW.</p>
+<p>You can also define your own roles for either Oracle LSH or Oracle DMW. See "Designing a Security System" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Implementation Guide</span></span> for information on designing a set of roles.</p>
+<a id="CEGDGBDF"></a>
+<div id="LSHAG275" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Creating Object Security Roles</h4>
+<p>To create a Role:</p>
+<ol>
+<li>
+<p>In the Security tab, click <span class="bold">Roles</span>. The Manage Roles screen appears.</p>
+</li>
+<li>
+<p>Click <span class="bold">Create</span>. The Create Role screen appears.</p>
+</li>
+<li>
+<p>Enter values in the following fields:</p>
+<ul>
+<li>
+<p><span class="bold">Role Name</span>. Enter a unique name for the role to be displayed in the Oracle LSH user interface.</p>
+</li>
+<li>
+<p><span class="bold">Code Value</span>. Enter a unique code for the role to be used internally by Oracle LSH.</p>
+</li>
+<li>
+<p><span class="bold">Description</span>. Enter a description of the role to help group administrators decide if they want to assign the role to a particular user in their user group.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Apply</span>. The Manage Roles screen appears. You can query for the role by name to check that it was created successfully.</p>
+</li>
+<li>
+<p>Set it to Active so that it is available for use.</p>
+<ol>
+<li>
+<p>In the Manage Roles screen, query for the role. The role appears.</p>
+</li>
+<li>
+<p>Click the icon in the <span class="bold">Update</span> column. The Update Role screen appears.</p>
+</li>
+<li>
+<p>Select <span class="bold">Is Active</span> and click <span class="bold">Apply</span>. You can assign subtype operations only to Active roles.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Assign operations on object subtypes to the role. Users assigned to the role within a user group will be able to perform the operations you specify on the object subtypes you specify. See <a href="#BABFGBIH">"Assigning Subtype Operations to Roles and Modifying Assignments"</a> for instructions.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<a id="CEGFCBHD"></a>
+<div id="LSHAG277" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Modifying Object Security Roles</h4>
+<p>In the Manage Roles screen, click the corresponding Update icon to modify a particular Role. After you make the relevant changes, click <span class="bold">Apply</span> to save them or click <span class="bold">Cancel</span> to discard the changes.</p>
+<p>You can modify the following characteristics:</p>
+<ul>
+<li>
+<p><span class="bold">Role Name</span>. You can change the name of the role that appears in the Oracle LSH user interface.</p>
+</li>
+<li>
+<p><span class="bold">Description</span>. You can change the description that appears in the Oracle LSH user interface.</p>
+</li>
+<li>
+<p><span class="bold">Is Active</span>. If selected, you can assign the role to operations on object subtypes and a user group administrator can assign the role to a user in his or her user group.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BABFGBIH"></a>
+<div id="LSHAG279" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Assigning Subtype Operations to Roles and Modifying Assignments</h3>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#BABCFIHI">Assigning Roles to Operations</a></p>
+</li>
+<li>
+<p><a href="#BABJACAE">Modifying Operation Assignments to Roles</a></p>
+</li>
+<li>
+<p><a href="#BABICBBJ">Notes on Particular Object Types</a></p>
+</li>
+</ul>
+<p>Subtype operations are predefined. They are the same as the predefined operations on their object type. You must assign at least one role to each operation; if no roles are assigned to the operation, no one will be able to perform the operation on objects of that subtype.</p>
+<p>Users who are assigned to a particular role can perform operations on the subtype that are assigned to the same role, if the user is assigned to the role in the context of an active user group assigned to the object.</p>
+<p>See "Designing a Security System" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Implementation Guide</span></span> for information on how Oracle LSH security uses Roles and Operations.</p>
+<p>In the Subtypes subtab in the Administration tab, you can see the relationship of roles to object operations two ways. Make your choice in the <span class="bold">View Subtype By</span> drop-down list:</p>
+<ul>
+<li>
+<p>Choose <span class="bold">Operation</span> to add a new role to operations or to add multiple roles to a single operation on a subtype at the same time.</p>
+</li>
+<li>
+<p>Choose <span class="bold">Role</span> if you have already assigned the role to operations and want to view or modify the role's assignments.</p>
+</li>
+</ul>
+<a id="BABCFIHI"></a>
+<div id="LSHAG280" class="sect3">
+<h4 class="sect3">Assigning Roles to Operations</h4>
+<p>To assign roles to operations, go to the Subtype subtab of the Security tab and do the following:</p>
+<ol>
+<li>
+<p>Select <span class="bold">Operation</span> from the <span class="bold">View Subtype By</span> drop-down list.</p>
+</li>
+<li>
+<p>Expand the node (+) of the object type. All the subtypes appear.</p>
+</li>
+<li>
+<p>Expand the node (<span class="bold">+</span>) of the object subtype. All the subtype's operations appear.</p>
+</li>
+<li>
+<p>Click the icon in the Manage column of the operation to which you want to assign or remove a role. The Add Role(s) to Operation screen appears.</p>
+</li>
+<li>
+<p>Double-click on a role in the Available Roles column to move it into the Selected Roles column and assign it to the role. Or move it from Selected Roles to Available Roles to remove the assignment.</p>
+<p>You can also select multiple roles by using Shift+Click or Control+Click and use the arrows to move one, a few, or all at once to the column in the shuttle.</p>
+<p>You can change the order of the operations using the Up and Down arrows on the right. The display order has no functional effect.</p>
+</li>
+<li>
+<p>Click <span class="bold">Apply</span>. The system assigns the role(s) to the operation on the subtype and the Manage Subtype screen appears.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<a id="BABJACAE"></a>
+<div id="LSHAG281" class="sect3">
+<h4 class="sect3">Modifying Operation Assignments to Roles</h4>
+<p>To modify assignments, go to the Subtype subtab of the Security tab and do the following:</p>
+<ol>
+<li>
+<p>Select <span class="bold">Role</span> from the <span class="bold">View Subtype By</span> drop-down list.</p>
+</li>
+<li>
+<p>Expand the node (<span class="bold">+</span>) of the object type. All the subtypes appear.</p>
+</li>
+<li>
+<p>Expand the node (<span class="bold">+</span>) of the object subtype. All the roles currently assigned to any operation on the subtype appear.</p>
+</li>
+<li>
+<p>Click the icon in the Manage column of the role whose assignments you want to modify. The Add Operation for Role screen appears.</p>
+</li>
+<li>
+<p>Double-click on an operation in the Available Operations column to move it into the Selected Roles column and assign it to the role.</p>
+<p>You can also select multiple operations by using Shift+Click or Control+Click and use the arrows to move one, a few, or all at once to the column in the shuttle.</p>
+<p>You can change the order of the operations using the Up and Down arrows on the right. The display order has no functional effect.</p>
+</li>
+<li>
+<p>Click <span class="bold">Apply</span>. The system adds the operations to the role for the subtype and the Manage Subtype screen appears.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<a id="BABICBBJ"></a>
+<div id="LSHAG282" class="sect3">
+<h4 class="sect3">Notes on Particular Object Types</h4>
+<p>Some object types require some explanation:</p>
+<ul>
+<li>
+<p><span class="bold">Execution Setups</span>. To delete or modify an Execution Setup, a user must also have Modify privileges on the object instance that owns the Execution Setup. Therefore, any role you assign to Remove or Modify Execution Setups, you should also assign to Modify the type executable object whose Execution Setup it can remove or modify.</p>
+</li>
+<li>
+<p><span class="bold">Adapter Domains and Adapter Areas</span>. These include all the same operations that Domains and Application Areas have. However, only view operations on some objects are required; see <a href="adapter.htm#BGBDJIHB">"Creating Roles with the Required Operations for Adapters"</a>.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BABCEJDJ"></a>
+<div id="LSHAG284" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Creating and Maintaining User Groups</h3>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#CEGECHII">Creating User Groups</a></p>
+</li>
+<li>
+<p><a href="#CEGFHBEI">Adding Supported Roles to User Groups</a></p>
+</li>
+<li>
+<p><a href="#CEGDJGDC">Duplicating User Groups</a></p>
+</li>
+<li>
+<p><a href="#CEGIJHDH">Assigning a Group Administrator to the User Group</a></p>
+</li>
+<li>
+<p><a href="#CEGFHGAG">Modifying User Groups</a></p>
+</li>
+</ul>
+<p>User groups control the access of users to objects and outputs (and through them, to data). A user has access to an object only if he or she belongs to a user group that is assigned to the object, either explicitly or through inheritance. See "User Groups" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Implementation Guide</span></span> for further information.</p>
+<p>A user group definition consists of a name, description, and a set of object security roles supported by the group (available for assignment to users within the group). Each group must also have an assigned Group Administrator.</p>
+<p>You may require the same or very similar user groups, with the same or different users, assigned to different objects. For example, you might have a Study01 user group assigned to your Study01 Application Area. Study02, which has its own Application Area, might require a user group with exactly the same set of roles as Study01. Oracle LSH allows you to copy a user group either with or without users. You can then modify the name or roles assigned as necessary. The Group Administrator can add and remove users and/or change their roles within the copied group.</p>
+<p>Group Administrator tasks, adding roles to a group and assigning users to a group and to roles within the group, are covered in "Managing User Groups" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub User's Guide</span></span>.</p>
+<a id="CEGECHII"></a>
+<div id="LSHAG285" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Creating User Groups</h4>
+<p>To create a new user group:</p>
+<ol>
+<li>
+<p>In the Security tab, click <span class="bold">User Groups</span>. The Manage User Groups screen appears.</p>
+</li>
+<li>
+<p>Click <span class="bold">Create</span>. The Create User Group screen appears.</p>
+</li>
+<li>
+<p>Enter values in the following fields:</p>
+<ul>
+<li>
+<p><span class="bold">Group Name</span></p>
+</li>
+<li>
+<p><span class="bold">Description</span></p>
+</li>
+<li>
+<p><span class="bold">Is Active</span>. If selected, you can assign the user group to an object subtype.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Apply</span>. The Manage User Group screen appears.</p>
+</li>
+</ol>
+<p>You must assign at least one role to a user group. See Step <a href="#CEGFDAJG">5</a> of <a href="#CEGFHBEI">"Adding Supported Roles to User Groups"</a>.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CEGFHBEI"></a>
+<div id="LSHAG287" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Adding Supported Roles to User Groups</h4>
+<p>The roles you add to a user group become available for the Group Administrator to assign to users within that user group.</p>
+<p>To add roles to a user group:</p>
+<ol>
+<li>
+<p>In the Security tab, click <span class="bold">User Groups</span>. The Manage User Groups screen appears.</p>
+</li>
+<li>
+<p>Type the name of the user group for which you want to add roles in the user group box.</p>
+</li>
+<li>
+<p>Click <span class="bold">Search</span>. All the user groups matching the search criteria appear.</p>
+</li>
+<li>
+<p>Click the required user group. The Group screen appears.</p>
+</li>
+<li id="CEGFDAJG">
+<p>Click <span class="bold">Add and Remove Role</span>. The Add a Default Role to Group screen appears.</p>
+</li>
+<li>
+<p>Double-click on a role in the Available Roles column to move it into the Selected Roles column.</p>
+<p>You can also select multiple Roles by using Shift+Click or Control+Click and use the arrows to move one, a few, or all at once to the column in the shuttle.</p>
+<p>You can change the order of the Roles using the Up and Down arrows on the right.</p>
+</li>
+<li>
+<p>Click <span class="bold">Apply</span>. The system assigns all the roles displayed in the Selected Roles column to this user group and returns to the Group screen.</p>
+</li>
+</ol>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You must assign a Group Administrator to every user group. See <a href="#CEGIJHDH">"Assigning a Group Administrator to the User Group"</a>.</div>
+</div>
+<!-- class="sect3" -->
+<a id="CEGIJHDH"></a>
+<div id="LSHAG289" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Assigning a Group Administrator to the User Group</h4>
+<p>The Group Administrator is responsible for adding and removing users to a particular user group, and changing users' role assignments within the group.</p>
+<p>You must have the LSH Security Admin or LSH Function Security Admin role to assign the LSH Group Admin role to a user.</p>
+<p>To assign a Group Administrator to a user group:</p>
+<ol>
+<li>
+<p>Select the <span class="bold">Life Sciences Data Hub</span> responsibility in the navigator and click the <span class="bold">Users Groups</span> subtab. The Manage User Groups screen appears.</p>
+</li>
+<li>
+<p>Search for and select the required group.</p>
+</li>
+<li>
+<p>Click <span class="bold">Expand All</span>. All the supported roles appear.</p>
+</li>
+<li id="CEGEEEEH">
+<p>Click the <span class="bold">Add User</span> icon corresponding to the LSH Group Administrator role. The Search and Select Users to Add to Role screen appears.</p>
+</li>
+<li>
+<p>Search for and select the users who need to be LSH Group Administrators for this User Group.</p>
+</li>
+<li>
+<p>Click <span class="bold">Select</span>. The system assigns the LSH Group Administrator role to the selected users and the Group screen appears.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Group Administrators must have the Group Admin application role assigned. See <a href="#CEGEAFHB">Assigning Application Roles</a>.</div>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<a id="CEGDJGDC"></a>
+<div id="LSHAG291" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Duplicating User Groups</h4>
+<p>You can create copies of a user group in two ways. Either you can duplicate only the user group definition with its supported roles or you can duplicate the definition with its supported roles and also the users assigned to it and their role assignments. When you duplicate a user group, the system appends 'Copy of' to the name of the user group. For example, if you duplicate a user group named <span class="italic">Study01 User Group</span>, the system names the new user group <span class="italic">Copy of Study01 User Group</span>.</p>
+<p><a id="LSHAG292"></a><span class="subhead3">Duplicate Definition with Roles Only&nbsp;</span>To duplicate only the user group definition with its roles:</p>
+<ol>
+<li>
+<p>In the Security tab, click <span class="bold">User Groups</span>. The Manage User Groups screen appears.</p>
+</li>
+<li>
+<p>Enter a search string&mdash;the name of the user group you want to duplicate in the User Group box or text with the wildcard %, or leave blank to retrieve all user groups.</p>
+</li>
+<li>
+<p>Click <span class="bold">Go</span>. All the user groups matching the search criteria appear.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Select</span> check box corresponding to the required user group.</p>
+</li>
+<li>
+<p>Click <span class="bold">Duplicate with Roles</span>. The system creates a copy of the user group and the Manage User Groups screen appears.</p>
+</li>
+</ol>
+<p><a id="LSHAG293"></a><span class="subhead3">Duplicate Definition with Roles and Users&nbsp;</span>To duplicate the definition with its roles and assigned users:</p>
+<ol>
+<li>
+<p>In the Security tab, click <span class="bold">User Groups</span>. The Manage User Groups screen appears.</p>
+</li>
+<li>
+<p>Type the name of the user group you want to duplicate the User Group box.</p>
+</li>
+<li>
+<p>Click <span class="bold">Search</span>. All the user groups matching the search criteria appear.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Select</span> check box corresponding to the required user group.</p>
+</li>
+<li>
+<p>Click <span class="bold">Duplicate with Roles, Users</span>. The system creates a copy of the user group and the Manage User Groups screen appears.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<a id="CEGFHGAG"></a>
+<div id="LSHAG295" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Modifying User Groups</h4>
+<p>In the Manage User Groups screen, click the corresponding Update icon to modify a particular User Group. After you make the relevant changes, click <span class="bold">Apply</span> to save them or click <span class="bold">Cancel</span> to discard the changes.</p>
+<p>You can modify the following characteristics:</p>
+<ul>
+<li>
+<p><span class="bold">Group Name</span></p>
+</li>
+<li>
+<p><span class="bold">Description</span></p>
+</li>
+<li>
+<p><span class="bold">Is Active</span>. If selected, you can assign the User Group to an Object Subtype.</p>
+</li>
+</ul>
+<p>You can also add and remove Roles from the User Group; see <a href="#CEGFHBEI">"Adding Supported Roles to User Groups"</a>.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BABEGCGF"></a>
+<div id="LSHAG297" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Granting Security Access to APIs</h2>
+<p>In order to run any of the public APIs for Oracle LSH from outside Oracle LSH, a user must have the Execute privilege granted on the API package cdr_pub_api_initialization.</p>
+<p>To grant this privilege to a user, do the following:</p>
+<ol>
+<li>
+<p>Log in to SQL*Plus on the Oracle LSH database.</p>
+</li>
+<li>
+<p>Enter:</p>
+<p><code dir="ltr">Grant execute on cdr_pub_api_initialization to</code> <code dir="ltr"><span class="codeinlineitalic">user_name;</span></code></p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment1">
+<tr>
+<td class="cellalignment8">
+<table class="cellalignment6">
+<tr>
+<td class="cellalignment5"><a href="classsetup.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment5"><a href="db_accts.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2006, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment10">
+<table class="cellalignment4">
+<tr>
+<td class="cellalignment5"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment5"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment5"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment5"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

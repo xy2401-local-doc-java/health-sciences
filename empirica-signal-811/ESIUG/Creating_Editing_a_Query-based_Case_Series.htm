@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-US" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Creating or editing a query-based case series</title>
+<link rel="StyleSheet" href="Empirica.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Working with case series\nCreating a case series\nCreating or editing a query-based case series");
+addAvenueInfo("Using Case Series","csManualCaseSeriesEntry.htm","qQuerySaveAs_cs.htm");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("About_WebVDME.htm", "", "&gt;", "Overview", "About_WebVDME_1.htm");
+document.write("<a href=\"About_Case_Series.htm\">Working with case series<\/a> &gt; <a href=\"Creating_Editing_a_Query-based_Case_Series.htm\">Creating a case series<\/a> &gt; Creating or editing a query-based case series<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('About_WebVDME.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Creating or editing a query-based case series</h1>
+<p>One way to create a case series is by creating a query and including the cases found by the query in the case series. You can also edit a query-based case series that you have created. To create or edit a query-based case series, you use the Query Wizard, which guides you through the process of selecting variables, selecting values, and specifying query logic.</p>
+<p class="Note"><span class="Button">Note:</span> If you edit and re-execute the query portion of a query-based case series to which cases have been <a href="csTransferFromFirstLevelDrilldown.htm">transferred</a> or <a href="csManualCaseSeriesEntry.htm">added manually</a>, the application drops those cases from the case series if they do not meet the query criteria.</p>
+
+<p class="ListNumber1"><span class="rls-1-Empirica">1.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Click the <span class="Button">Case Series</span> tab.</p>
+
+<p class="ListContinue1">The Case Series page appears.</p>
+
+<p class="ListNumber1" style="text-indent: -30px; margin-left: 30px;"><span class="rls-1-Empirica">2.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>To create a query-based case series, <span class="Button" style="font-weight: normal;">click</span> <span class="Button">Create Using Query Wizard</span>.</p>
+
+<p class="ListContinue1">The Select Configuration page appears.</p>
+
+<p class="ListNumber2" style=" margin-left: 60px; text-indent: -30px;">A.<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>From the <span class="Button">Configuration</span> drop-down list, <a href="cfgSelectConfigPopup.htm">select a data configuration</a>. You can click Browse to select from a list of data configurations.</p>
+
+<p class="ListNumber2" style=" margin-left: 60px; text-indent: -30px;">B.<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Click <span class="Button">Next</span>.</p>
+
+<p class="ListContinue1">The Define Query page appears. See <a href="qQueryDesign.htm">Defining query conditions</a>.</p>
+<p class="ListContinue1">or</p>
+<p class="ListContinue1">To edit a query-based case series that you created, click the row menu (<img src="hand.jpg" alt="Row menu" border="0" />) for the case series, and then click <span class="Button">Edit Query</span>.</p>
+<p class="ListContinue1">The Define Query page appears.</p>
+
+<p class="ListNumber2" style=" margin-left: 60px; text-indent: -30px;">A.<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>To change the data configuration, on the Define Query page, click <span class="Button">Back</span>. You can select a different data configuration from a list of available configurations. Available data configurations are those with at least the same variables as the original case series' data configuration. The variables must have the same names and the underlying database columns must have the same Oracle data type.</p>
+
+<p class="ListNumber2" style=" margin-left: 60px; text-indent: -30px;">B.<span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Click <span class="Button">Next</span>.</p>
+
+<p class="ListContinue1">The Define Query page appears.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">3.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Define or edit the query. For more information, see <a href="qQueryDesign.htm">Defining a query</a>, beginning with Step 6.</p>
+
+<p class="ListContinue1">The Preview Query page appears.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">4.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>To preview the query results, click <span class="Button">Preview Cases</span>. This option is available only if you specified values for all variables and your user preference <span class="Button">Show case count by default on preview page</span> is enabled. <span style="text-indent: -30px;">For more information, see <a href="qQueryPreview.htm">Previewing a query</a>.</span></p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">5.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Click <span style="font-weight: bold;">Next</span>.</p>
+
+<p class="ListContinue1">The Save Case Series page appears.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">6.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>In the <span class="Button">Name</span> field, type a new name for the case series. The name does not need to be unique, although Oracle recommends that you use a unique name.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">7.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>In the <span class="Button">Descriptio</span>n field, leave the description or modify the description of the case series.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">8.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>To assign the case series to an existing <a href="Using_Projects.htm" id="a11">project</a>, click <span class="Button">Add to existing project</span> and select the project from the drop-down list. Only projects associated with objects that you created or that are published to you appear in the list.</p>
+
+<p class="ListContinue1">or</p>
+<p class="ListContinue1">To create a new project and assign the case series to it, click <span class="Button">Add to a new project named</span> and enter a project name.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">9.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Click <span style="font-weight: bold;">OK</span>.</p>
+
+<p class="ListContinue1">The application submits the case series to the <a href="About_background_processing_job_queue_for_reports.htm">background processing job queue</a>. For larger datasets, the Background Processing indicator appears next to the <span class="Button">Preferences</span> link.</p>
+<p class="ListNote1"><span style="font-weight: bold;">Note:</span> The Background Processing indicator may not appear if you create a case series from a small data set that processes quickly.</p>
+<p class="ListContinue1">The Case Series page appears, listing the new or edited case series.</p>
+<p class="Subhead">&#160;</p>
+<p class="Subhead"><a href="javascript:void(0);" onclick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) &gt;=2 &amp;&amp; typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'_blank','About background processing','About_Background_Processing.htm','About background processing job queue','About_background_processing_job_queue_for_reports.htm','About case series','About_Case_Series.htm','Cancelling a background processing job','Cancelling_a_Background_Processing_Job.htm');return false;" title=" Related Topics"><span style="font-family:Verdana;font-size:10pt;font-weight:normal;font-style:normal;text-decoration:none"><nobr>  Related Topics </nobr></span></a> </p>
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="margin-bottom: 0pt;">Copyright © 2002, 2018, Oracle and/or 
+	 its affiliates. All rights reserved. </p>
+	<p style="text-align: right; margin-top: 0pt; margin-bottom: 0pt;">Help 
+	 Build 8.1.1</p>
+</div>
+<script type="text/javascript" language="JavaScript">//<![CDATA[
+if (parseInt(navigator.appVersion) >= 3 && typeof (WritePopupMenuLayer) == "function")
+  WritePopupMenuLayer();
+//]]></script><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

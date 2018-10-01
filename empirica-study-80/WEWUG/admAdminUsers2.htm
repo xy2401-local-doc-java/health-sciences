@@ -1,0 +1,332 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="ProgId" content="Word.Document" />
+<meta name="Originator" content="Microsoft Word 10" />
+<meta name="generator" content="Adobe RoboHelp 2017" />
+<title>Adding and editing users in a self-hosted environment</title>
+<link rel="File-List" href="adminusers2_files/filelist.xml" />
+<link rel="Edit-Time-Data" href="adminusers2_files/editdata.mso" />
+<link rel="StyleSheet" href="Empirica.css" type="text/css" />
+ <link rel="StyleSheet" href="Empirica.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body lang="EN-US" xml:lang="EN-US" style="tab-interval: .5in;"><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Administration\nManaging users\nManaging users\nAdding and editing users in a self-hosted environment");
+addAvenueInfo("Managing Users","admAdminUsers1.htm","AdmUserRoles.htm");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\">");
+AddMasterBreadcrumbs("About_WebVDME.htm", "", "&gt;", "Overview", "home.htm");
+document.write("<a href=\"About_Managing_Users.htm\">Administration<\/a> &gt; <a href=\"About_Managing_Users.htm\">Managing users<\/a> &gt; <a href=\"About_user_names.htm\">Managing users<\/a> &gt; Adding and editing users in a self-hosted environment<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('About_WebVDME.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Adding and editing users in a self-hosted environment</h1>
+<p>You create a <a href="About_user_names.htm">user name</a> for each user who logs in to Empirica Study.</p>
+<p>When you create a new user, Empirica Study sends an email message to the user if you have provided an email address for the user. The message includes the new user name and password, and the URL from which to access Empirica Study. The From address is the address associated with the <a href="siteoptions.htm">site option</a> <span style="font-weight: bold;">Feedback Email</span>.</p>
+<p class="MsoNormal">If you have enabled single sign-on, the Empirica Study user names that you create must be identical to their associated single sign-on user names in Oracle Access Manager. In addition, you must still provide a Empirica Study password. When single sign-on is enabled, Empirica Study user names and passwords are applicable if, for example, a Superuser logs in to Empirica Study natively using a remote desktop connection. You create Empirica Study passwords according to the password restrictions you specified on the <a href="siteoptions.htm">Site Options</a> page.</p>
+<p>This procedure describes adding and editing Empirica Study users only. For information on creating single sign-on users in OHSIAMS Oracle Identity Self Service, refer to your OHSIAMS Oracle Identity Self Service documentation.</p>
+<p class="Subhead">To add or edit a user:</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">1.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>On the <span style="mso-bidi-font-weight: normal; font-weight: bold;"><a href="admAdminUsers1.htm" style="font-weight: normal;">Users</a></span> <span style="mso-bidi-font-weight: normal;">page, do one of the following:</span></p>
+
+<ol>
+<li class="NumBullet1"><span style="mso-bidi-font-weight: normal;">To</span> <span style="mso-bidi-font-weight: normal; font-weight: bold;">add</span> <span style="mso-bidi-font-weight: normal;">a user, click</span> <span class="Button">Add a New User</span><span style="mso-bidi-font-weight: normal;">.</span></li>
+<li class="NumBullet1"><span style="mso-bidi-font-weight: normal;">To</span> <span style="mso-bidi-font-weight: normal; font-weight: bold;">edit</span> <span style="mso-bidi-font-weight: normal;">a user, click</span> <img width="17" height="19" src="hand.jpg" alt="" style="border: none;" border="0" /> next to the user that you want to edit, and then click <span style="font-weight: bold;">Edit</span>.</li>
+</ol>
+<p class="ListBulletContinue1"><span style="mso-bidi-font-weight: normal;">The</span> <span style="mso-bidi-font-weight: normal; font-weight: bold;">Add/Edit User</span> <span style="mso-bidi-font-weight: normal;">page appears.</span></p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">2.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Enter the following:</p>
+<br />
+<table summary="" summary="" class="Empirica" style="margin-left: 0.375in;" cellspacing="0px" width="94.471%">
+<col style="width: 21.138%;" />
+<col style="width: 78.862%;" />
+<tr class="t1st">
+<td>
+<p class="TableHeader">Field</p>
+</td>
+<td>
+<p class="TableHeader">Description</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Authentication</p>
+</td>
+<td>
+<p class="TableBody">Indicates whether single sign-on is enabled for the user name.</p>
+<ul>
+<li class="Bullet1"><span style="font-weight: bold;">SSO</span>&mdash;Single sign-on authentication is enabled.</li>
+<li class="Bullet1"><span style="font-weight: bold;">Local</span>&mdash;Single sign-on authentication is disabled. The user is locally authenticated.</li>
+</ul>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Username</p>
+</td>
+<td>
+<p class="TableBody">Unique name (up to 100 characters) of the user account. You can also re-use deleted user names. This field appears only if you are creating a new user name. If you are using single sign-on, this user name must be identical to the associated single sign-on user name in OHSIAMS Oracle Identity Self Service.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody">First Name</p>
+</td>
+<td>
+<p class="TableBody">The user first name.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Last Name</p>
+</td>
+<td>
+<p class="TableBody">The user last name</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Email</p>
+</td>
+<td>
+<p class="TableBody">Optional e-mail address (or addresses, separated by commas) for the user. This is the default email sender address when the user sends feedback, and the default recipient address when the user requests email notification about run completion. For a user with appropriate permissions, it is also used if the user sends a message to all users, or receives notification of a user account lockout due to login failures.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Quota</p>
+</td>
+<td>
+<p class="TableBody">Reserved for future use. Leave blank.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Login Group</p>
+</td>
+<td>
+<p class="TableBody">Name of the <a href="file://D:/Empirica Study/SVN/Study Help Sources/admLoginGroups.htm" style="font-weight: normal;">login group</a> to which the user belongs.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Password</p>
+<p class="TableBody">(Local authentication only)</p>
+</td>
+<td>
+<p class="TableBody">Password for the user, up to a maximum of 64 characters. Note that users can also modify their own Empirica Study passwords. Follow any recommendations by your organization related to creating secure passwords. <a href="siteoptions.htm" style="font-weight: normal;">Site options</a> affect allowed passwords.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Confirm Password</p>
+<p class="TableBody">(Local authentication only)</p>
+</td>
+<td>
+<p class="TableBody">Re-enter the password.</p>
+</td>
+</tr>
+</table>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">3.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Select or deselect any of the following:</p>
+<br />
+<table summary="" summary="" class="Empirica" style="margin-left: 0.375in;" cellspacing="0px" width="96.284%">
+<col style="width: 20.625%;" />
+<col style="width: 79.375%;" />
+<tr class="t1st">
+<td>
+<p class="TableHeader">Field</p>
+</td>
+<td>
+<p class="TableHeader">Description</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Superuser</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Indicates whether the user is a Superuser. Available only if you are logged in as a Superuser.</p>
+<ul>
+<li class="Bullet1"><span style="font-weight: bold;">If selected</span><span style="font-size: 11.0pt; line-height: 115%; font-family: Calibri, sans-serif; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">&mdash;</span><span style="line-height: 115%; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">The user is a Superuser.</span></li>
+<li class="Bullet1"><span style="mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; font-weight: bold;">If deselected</span><span style="mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">&mdash;The user is not a Superuser.</span></li>
+</ul>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Password never expires</p>
+<p class="TableBody">(Local authentication only)</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Indicates whether the user password never expires. At least one user should have a password that does not expire, and can access all users. Generally, this is user is the user with the Administer Users permission.</p>
+<ul>
+<li class="Bullet1"><span style="font-weight: bold;">If selected</span><span style="font-size: 11.0pt; line-height: 115%; font-family: Calibri, sans-serif; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">&mdash;</span>The user password never expires.</li>
+<li class="Bullet1"><span style="font-weight: bold;">If deselected</span><span style="font-size: 11.0pt; line-height: 115%; font-family: Calibri, sans-serif; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">&mdash;</span>The user password expires after the number of days specified in the Password Expiration site option.</li>
+</ul>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody">User must change password at next login</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">Indicates whether the user must change his or her password during the next login.</p>
+<ul>
+<li class="Bullet1"><span style="font-weight: bold;">If selected</span><span style="font-size: 11.0pt; line-height: 115%; font-family: Calibri, sans-serif; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">&mdash;</span><span style="line-height: 115%; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">A</span> window appears during the login process, requiring the user to enter a new password. Empirica Study then deselects this option automatically when the user has reset his or her password.</li>
+<li class="Bullet1"><span style="font-weight: bold;">If deselected</span><span style="font-size: 11.0pt; line-height: 115%; font-family: Calibri, sans-serif; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: 'Times New Roman'; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">&mdash;</span>The user is not required to enter a new password.</li>
+</ul>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Account locked</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody">If selected, the user cannot log in until you clear the check box. This check box is selected automatically for a user who tries to log in with an incorrect password more than the number of times allowed by the <span style="font-weight: bold;">Number of Attempts Allowed</span> <a href="siteoptions.htm">site option</a>.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: top;">
+<p class="TableBody">Account disabled</p>
+</td>
+<td style="vertical-align: top;">
+<p class="TableBody"><span>If selected, the user account is disabled. Disabled users can't log in or receive notifications. When a local user password has expired, the user account becomes disabled.</span> <span style="font-weight: bold;"></span><span>To allow the user to log in again, you must assign a new password to the user and re-enable the user account.</span></p>
+</td>
+</tr>
+</table>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">4.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Click <b><span class="Button">Save</span><span style="font-weight: normal;">. When you have saved the user name, links to assign roles, assign permissions, change the user password, and rename the user appear on the page.</span></b></p>
+
+<p class="ListNote1"><b style="font-weight: normal;"><span style="font-weight: bold;">Note:</span> <span style="font-weight: normal;">If you do not click Save before continuing the next steps, the changes you made in previous steps are not saved.</span></b></p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">5.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Optionally <a href="AdmUserRoles.htm">assign roles</a> to the user.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">6.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Optionally <a href="admUserPermissions.htm">assign permissions</a> to the user.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">7.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Optionally <a href="admAdminUsers3.htm">change the user password</a>.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">8.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Optionally <a href="admAdminUsersRename.htm">rename the user</a>.</p>
+
+<p class="ListContinue1">This link is available only if you are a Superuser or you have the <span style="font-weight: bold;">Administer Users</span> permission.</p>
+<p class="Subhead">Related Topics</p>
+<p><a href="About_Single_Sign-On.htm">About Single Sign-On</a></p>
+<p><a href="admAdminUsers4.htm">Deleting a User</a></p>
+ <div style="width: 100%; position: relative;" id="footer">
+	<p style="margin-top: 20pt; color: #808080;">Copyright &copy; 2002, 2017, 
+	 Oracle and/or its affiliates. All rights reserved.</p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>
+<footer>
+</footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+
+</body>
+</html>
+<footer>
+</footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+<script>$(document).foundation();</script>
+</body>
+</html>

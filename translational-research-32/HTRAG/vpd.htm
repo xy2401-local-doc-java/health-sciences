@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Managing Access to Patient or Subject Records and PII</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2017-09-06T4:8:20Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Healthcare Translational Research Administrator's Guide" />
+<meta name="dcterms.identifier" content="E86015-04" />
+<meta name="dcterms.isVersionOf" content="HTRAG" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Prev" href="preface.htm" title="Previous" type="text/html" />
+<link rel="Next" href="specalias.htm" title="Next" type="text/html" />
+<link rel="alternate" href="HTRAG.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="HTRAG.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="HTRAG.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">5/7</span> <!-- End Header -->
+<div id="HTRAG700" class="chapter"><a id="BABGDDEB"></a>
+<h1 class="chapter"><span class="secnum">1</span> Managing Access to Patient or Subject Records and PII</h1>
+<p>Use data access policies to control users' access to patient and subject data in several ways:</p>
+<ul>
+<li>
+<p><span class="bold">Control access to Personally Identifiable Information (PII) attributes</span>. Create data access policies that specify which Personally Identifiable Information (PII) attributes are visible for subjects in a particular study or patients in a particular patient group, to users assigned to the configuration. PII attributes that are not visible are obfuscated (masking values are displayed).</p>
+<p>This functionality is always enabled so that anyone needing access to PII data must be assigned to a data access policy that grants the required access.</p>
+</li>
+<li>
+<p><span class="bold">Control access to non-PII subject or patient information</span> by enabling row-level filtering. This setting applies across all studies and patient groups.</p>
+<ul>
+<li>
+<p>If disabled (the default state), users can see all non-PII subject or patient data in any study or patient group.</p>
+</li>
+<li>
+<p>If enabled, only users assigned to a data access policy that allows access to a study or patient group can see any non-PII subject or patient data in the study or patient group.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="bold">Allow access to all data</span> by assigning a user to a global configuration that allows access to all subject and patient data, including PII data, in all studies and patient groups.</p>
+</li>
+</ul>
+<p>If a user has access to the same study or patient group through multiple data access policies, if any one data access policy permits access to a particular subject or patient's data, it is visible to the user.</p>
+<ul>
+<li>
+<p><a href="#A1144328">Creating a Data Access Policy</a></p>
+</li>
+<li>
+<p><a href="#A1146365">Assigning a User to a Data Access Policy</a></p>
+</li>
+<li>
+<p><a href="#A1153727">Deactivating a Data Access Policy</a></p>
+</li>
+<li>
+<p><a href="#BABBHBFI">Limiting Access to non-PII Data in Patient and Subject Records</a></p>
+</li>
+<li>
+<p><a href="#A1146901">Granting Access to All Subject and Patient Data</a></p>
+</li>
+<li>
+<p><a href="#A1162719">Attribute Groups</a></p>
+</li>
+<li>
+<p><a href="#A1128391">Sample Use Cases</a></p>
+</li>
+</ul>
+<p>In previous versions of OHTR, data access policies were called <span class="italic">VPD configurations</span>.</p>
+<a id="A1144328"></a>
+<div id="HTRAG737" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">1.1</span> Creating a Data Access Policy</h2>
+<p>Specify a study or patient group and a set of personally identifiable information (PII) that should be visible to certain users. All users assigned to the data access policy have access to the specified PII data for the subjects or patients in the specified study or patient group. If some users should have access to a different set of PII data for the same study or patient group, create a different data access policy for them.</p>
+<ol>
+<li>
+<p>On the database server, log in to SQL*Plus as CDM.</p>
+</li>
+<li>
+<p>Run VPD_UTIL.ADD_VPD_CONFIG, entering values as follows:</p>
+<ul>
+<li>
+<p>A unique name for the data access policy.</p>
+</li>
+<li>
+<p>The name of one study or patient group whose data will be accessible through the data access policy.</p>
+</li>
+<li>
+<p>A description of the data access policy.</p>
+</li>
+<li>
+<p>A value for every attribute group parameter containing either <code dir="ltr">subj</code> or <code dir="ltr">pt</code>, depending on whether you specified a study or a patient group.</p>
+<p>A value of <code dir="ltr">Y</code> allows access. <code dir="ltr">N</code> prevents access. For a description of each attribute group, see:</p>
+<p><a href="#CHDGHDDB">Table 1-1, "Personally Identifiable Attribute Groups for Subjects"</a></p>
+<p><a href="#BABICIBA">Table 1-2, "Personally Identifiable Attribute Groups for Patients"</a></p>
+</li>
+<li>
+<p>(Optional) An expiration date for the data access policy in the format <code dir="ltr">YYYY-MM-DD</code>. On this date the data access policy will be automatically deactivated and any users assigned to it will no longer be able to access subject/patient data through it.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p class="subhead2"><a id="HTRAG738"></a>Example 1 - Data Access Policy with Some PII Access to 'Study B' Subjects</p>
+<pre dir="ltr">
+BEGIN
+VPD_UTIL.ADD_VPD_CONFIG    (I_CONFIG_NAME  =&gt; 'STUDY_B_SUBJECTS_FULL_PII' ,
+I_SUBJ_ADD     =&gt;  'N'                                    ,
+        I_SUBJ_CONSENT =&gt;  'Y'                                    ,
+        I_SUBJ_DATE    =&gt;  'Y'                                    ,
+        I_SUBJ_DX      =&gt;  'Y'                                    ,
+        I_SUBJ_ENC     =&gt;  'Y'                                    ,
+        I_SUBJ_HIST    =&gt;  'Y'                                    ,
+        I_SUBJ_ID      =&gt;  'Y'                                    ,
+        I_SUBJ_MED     =&gt;  'Y'                                    ,
+        I_SUBJ_NAME    =&gt;  'N'                                    ,
+        I_SUBJ_OBSV    =&gt;  'Y'                                    ,
+        I_SUBJ_PROC    =&gt;  'Y'                                    ,
+        I_SUBJ_SPEC          =&gt;    'Y'                                    ,
+I_DESCRIPTION  =&gt; 'data access policy with access to all Study B subjects with all PII attributes except subject name and address',
+I_SUBJECT_STUDY=&gt;'Study B'
+        );
+END;
+/
+</pre>
+<p class="subhead2"><a id="HTRAG739"></a>Example 2 - Data Access Policy with Full PII Access to GROUP1 Patients</p>
+<pre dir="ltr">
+BEGIN
+VPD_UTIL.ADD_VPD_CONFIG    (I_CONFIG_NAME  =&gt; 'GROUP1_PATIENTS_ALL_PII' ,
+        I_PT_ADD     =&gt;    'Y'                                    ,
+        I_PT_CONSENT =&gt;    'Y'                                    ,
+        I_PT_DATE    =&gt;    'Y'                                    ,
+        I_PT_DX      =&gt;    'Y'                                    ,
+        I_PT_ENC     =&gt;    'Y'                                    ,
+        I_PT_HIST    =&gt;    'Y'                                    ,
+        I_PT_ID      =&gt;    'Y'                                    ,
+        I_PT_MED     =&gt;    'Y'                                    ,
+        I_PT_NAME    =&gt;    'Y'                                    ,
+        I_PT_OBSV    =&gt;    'Y'                                    ,
+        I_PT_PROC    =&gt;    'Y'                                    ,
+        I_PT_SPEC  =&gt;      'Y'                                    ,
+I_DESCRIPTION  =&gt; 'data access policy with access to GROUP1 patients for all PII attributes',
+        I_PATIENT_GROUP  =&gt;'GROUP1',
+I_EXPIRATION_DATE       =&gt; date '2025-12-31'
+        );
+END;
+/
+</pre></div>
+<!-- class="sect1" -->
+<a id="A1146365"></a>
+<div id="HTRAG740" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">1.2</span> Assigning a User to a Data Access Policy</h2>
+<p>Assign users to a data access policy to give them permission to see the specified PII for the specified subjects or patients. You can assign either WebLogic user accounts or database user accounts, one account at a time.</p>
+<ol>
+<li>
+<p>On the database server, log in to SQL*Plus as CDM.</p>
+</li>
+<li>
+<p>Run VPD_UTIL.ADD_CONFIG_USER, entering values as follows:</p>
+<ul>
+<li>
+<p>The data access policy name.</p>
+</li>
+<li>
+<p>The user's user name.</p>
+</li>
+<li>
+<p>(Optional) An expiration date for the user assignment in the format <code dir="ltr">YYYY-MM-DD</code>. On this date the user will be automatically deassigned and will no longer be able to access subject/patient data through the data access policy.</p>
+</li>
+</ul>
+<p>For example:</p>
+<pre dir="ltr">
+BEGIN
+VPD_UTIL.ADD_CONFIG_USER
+   (I_EXISTING_CONFIG_NAME  =&gt;      'PATIENT_GROUP_1_ALL_ATTRIBUTES' ,
+   I_USER_NAME  =&gt; 'TESTER' ,
+   I_EXPIRATION_DATE       =&gt; DATE '2025-12-31'   );
+ END;/
+</pre></li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="A1153727"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">1.3</span> Deactivating a Data Access Policy</h2>
+<p>Deactivating a data access policy removes the specified data access from all the users assigned to it, though users may have access through a different data access policy.</p>
+<ol>
+<li>
+<p>On the database server, log in to SQL*Plus as CDM.</p>
+</li>
+<li>
+<p>Run stored procedure VPD_UTIL.INACTIVATE_CONFIG, entering the data access policy name for I_EXISTING_CONFIG_NAME:</p>
+<pre dir="ltr">
+exec VPD_UTIL.INACTIVATE_CONFIG;
+</pre></li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="BABBHBFI"></a>
+<div id="HTRAG706" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">1.4</span> Limiting Access to non-PII Data in Patient and Subject Records</h2>
+<p>By default, any application user is permitted to access non-PII records for all patients and subjects. If required, the row-level filtering mode can be turned on at the system level, which limits user access to only a subset of patients and/or subjects. If this optional mode is turned on, only users explicitly assigned to a data access policy are granted access to the patients or subjects associated with the policy. A user can be assigned to any number of policies.</p>
+<ol>
+<li>
+<p>On the database server, log in to SQL*Plus as CDM.</p>
+</li>
+<li>
+<p>Run stored procedure VPD_UTIL.ENABLE_ROW_FILTER_POLICIES:</p>
+<ul>
+<li>
+<p>To require that users must be assigned to a data access policy to see any subject or patient data for a particular study or patient group, enter a value of <code dir="ltr">1</code>:</p>
+<pre dir="ltr">
+exec vpd_util.enable_row_filter_policies(1)
+</pre></li>
+<li>
+<p>To enable all users to see non-PII data for any subject or patient, enter a value of <code dir="ltr">0</code>. This is the default value.</p>
+<pre dir="ltr">
+exec vpd_util.enable_row_filter_policies(0)
+</pre></li>
+</ul>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="A1146901"></a>
+<div id="HTRAG741" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">1.5</span> Granting Access to All Subject and Patient Data</h2>
+<p>A global data access policy permits access to all patients and subjects and all their PII attribute values. Users who are assigned to this data access policy do not need to be assigned to any other data access policy, even if row filtering is on. Its ID value is <code dir="ltr">1</code>.</p>
+<ol>
+<li>
+<p>On the database server, log in to SQL*Plus as CDM.</p>
+</li>
+<li>
+<p>Run stored procedure VPD_UTILADD_CONFIG_USER entering values as follows:</p>
+<ul>
+<li>
+<p>The configuration ID set to <code dir="ltr">1</code>.</p>
+</li>
+<li>
+<p>The user's user name.</p>
+</li>
+<li>
+<p>(Optional) An expiration date for the user assignment in the format <code dir="ltr">YYYY-MM-DD</code>. On this date the user will be automatically deassigned and will no longer be able to access subject/patient data through the data access policy.</p>
+</li>
+</ul>
+<p>For example:</p>
+<pre dir="ltr">
+BEGIN
+VPD_UTIL.ADD_CONFIG_USER
+  (I_EXISTING_CONFIG_ID  =&gt; 1 ,
+   I_USER_NAME  =&gt; 'JSMITH' ,
+   I_EXPIRATION_DATE       =&gt; DATE '2025-12-31'   );
+ END;
+/
+</pre></li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="A1162719"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">1.6</span> Attribute Groups</h2>
+<p>PII attributes are combined into PII attribute groups. data access policies grant data access to the group, not to individual attributes. See:</p>
+<ul>
+<li>
+<p><a href="#CHDGHDDB">Table 1-1, "Personally Identifiable Attribute Groups for Subjects"</a></p>
+</li>
+<li>
+<p><a href="#BABICIBA">Table 1-2, "Personally Identifiable Attribute Groups for Patients"</a></p>
+</li>
+</ul>
+<div class="tblformalwide">
+<p class="titleintable"><a id="sthref7"></a><a id="CHDGHDDB"></a>Table 1-1 Personally Identifiable Attribute Groups for Subjects</p>
+<table class="cellalignment13" title="Personally Identifiable Attribute Groups for Subjects" summary="Shows the columns included in each attribute group and its parameter name." dir="ltr">
+<thead>
+<tr class="cellalignment2">
+<th class="cellalignment14" id="r1c1-t2">Subject Attribute Groups</th>
+<th class="cellalignment14" id="r1c2-t2">Description</th>
+<th class="cellalignment14" id="r1c3-t2">Table</th>
+<th class="cellalignment14" id="r1c4-t2">Column(s)</th>
+<th class="cellalignment14" id="r1c5-t2">API Procedure Input Parameter</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r2c1-t2" headers="r1c1-t2">
+<p>SUBJ_ADD</p>
+</td>
+<td class="cellalignment8" headers="r2c1-t2 r1c2-t2">
+<p>Subject Address</p>
+</td>
+<td class="cellalignment8" headers="r2c1-t2 r1c3-t2">
+<p>W_EHA_SUBJECT_D</p>
+</td>
+<td class="cellalignment8" headers="r2c1-t2 r1c4-t2">
+<p>CITY, POSTAL_CODE, STREET_ADDRESS_1, STREET_ADDRESS_2, STREET_ADDRESS_3</p>
+</td>
+<td class="cellalignment8" headers="r2c1-t2 r1c5-t2">
+<p>I_SUBJ_ADD</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r3c1-t2" headers="r1c1-t2">
+<p>SUBJ_CONSENT</p>
+</td>
+<td class="cellalignment8" headers="r3c1-t2 r1c2-t2">
+<p>Subject Consent Dates</p>
+</td>
+<td class="cellalignment8" headers="r3c1-t2 r1c3-t2">
+<p>W_EHA_ENC_PATIENT_H</p>
+</td>
+<td class="cellalignment8" headers="r3c1-t2 r1c4-t2">
+<p>CONSENT_START_DT, CONSENT_END_DT</p>
+</td>
+<td class="cellalignment8" headers="r3c1-t2 r1c5-t2">
+<p>I_SUBJ_CONSENT</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r4c1-t2" headers="r1c1-t2">
+<p>SUBJ_DATE</p>
+</td>
+<td class="cellalignment8" headers="r4c1-t2 r1c2-t2">
+<p>Subject Lifecycle Dates</p>
+</td>
+<td class="cellalignment8" headers="r4c1-t2 r1c3-t2">
+<p>W_EHA_SUBJECT_D</p>
+</td>
+<td class="cellalignment8" headers="r4c1-t2 r1c4-t2">
+<p>DOB, DECEASED_DT</p>
+</td>
+<td class="cellalignment8" headers="r4c1-t2 r1c5-t2">
+<p>I_SUBJ_DATE</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r5c1-t2" headers="r1c1-t2">
+<p>SUBJ_DX</p>
+</td>
+<td class="cellalignment8" headers="r5c1-t2 r1c2-t2">
+<p>Subject Diagnosis Dates</p>
+</td>
+<td class="cellalignment8" headers="r5c1-t2 r1c3-t2">
+<p>W_EHA_DX_SUBJECT_H</p>
+</td>
+<td class="cellalignment8" headers="r5c1-t2 r1c4-t2">
+<p>DIAGNOSIS_ONSET_DT, DIAGNOSIS_REPORTED_DT, DIAGNOSIS_END_DT, AGE_AT_FIRST_ONSET</p>
+</td>
+<td class="cellalignment8" headers="r5c1-t2 r1c5-t2">
+<p>I_SUBJ_DX</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r6c1-t2" headers="r1c1-t2">
+<p>SUBJ_ENC</p>
+</td>
+<td class="cellalignment8" headers="r6c1-t2 r1c2-t2">
+<p>Subject Encounter Dates</p>
+</td>
+<td class="cellalignment8" headers="r6c1-t2 r1c3-t2">
+<p>W_EHA_ENC_SUBJECT_H</p>
+</td>
+<td class="cellalignment8" headers="r6c1-t2 r1c4-t2">
+<p>ENCOUNTER_START_DT, ENCOUNTER_END_DT</p>
+</td>
+<td class="cellalignment8" headers="r6c1-t2 r1c5-t2">
+<p>I_SUBJ_ENC</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r7c1-t2" headers="r1c1-t2">
+<p>SUBJ_HIST</p>
+</td>
+<td class="cellalignment8" headers="r7c1-t2 r1c2-t2">
+<p>Subject History</p>
+</td>
+<td class="cellalignment8" headers="r7c1-t2 r1c3-t2">
+<p>W_EHA_SBJ_HISTORY_SBJ_H</p>
+</td>
+<td class="cellalignment8" headers="r7c1-t2 r1c4-t2">
+<p>SUBJECT_HISTORY_START_DT, SUBJECT_HISTORY_END_DT</p>
+</td>
+<td class="cellalignment8" headers="r7c1-t2 r1c5-t2">
+<p>I_SUBJ_HIST</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r8c1-t2" headers="r1c1-t2">
+<p>SUBJ_ID</p>
+</td>
+<td class="cellalignment8" headers="r8c1-t2 r1c2-t2">
+<p>Subject Identifier</p>
+</td>
+<td class="cellalignment8" headers="r8c1-t2 r1c3-t2">
+<p>W_EHA_SUBJECT_D</p>
+</td>
+<td class="cellalignment8" headers="r8c1-t2 r1c4-t2">
+<p>SUBJECT_IDENTIFIER</p>
+</td>
+<td class="cellalignment8" headers="r8c1-t2 r1c5-t2">
+<p>I_SUBJ_ID</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r9c1-t2" headers="r1c1-t2">
+<p>SUBJ_MED</p>
+</td>
+<td class="cellalignment8" headers="r9c1-t2 r1c2-t2">
+<p>Subject Medication Dates</p>
+</td>
+<td class="cellalignment8" headers="r9c1-t2 r1c3-t2">
+<p>W_EHA_SUBADMN_SUBJECT_H</p>
+</td>
+<td class="cellalignment8" headers="r9c1-t2 r1c4-t2">
+<p>SUBADMN_START_DT, SUBADMN_END_DT</p>
+</td>
+<td class="cellalignment8" headers="r9c1-t2 r1c5-t2">
+<p>I_SUBJ_MED</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r10c1-t2" headers="r1c1-t2">
+<p>SUBJ_NAME</p>
+</td>
+<td class="cellalignment8" headers="r10c1-t2 r1c2-t2">
+<p>Subject Name</p>
+</td>
+<td class="cellalignment8" headers="r10c1-t2 r1c3-t2">
+<p>W_EHA_SUBJECT_D</p>
+</td>
+<td class="cellalignment8" headers="r10c1-t2 r1c4-t2">
+<p>FIRST_NAME, MIDDLE_NAME, LAST_NAME</p>
+</td>
+<td class="cellalignment8" headers="r10c1-t2 r1c5-t2">
+<p>I_SUBJ_NAME</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r11c1-t2" headers="r1c1-t2">
+<p>SUBJ_OBSV</p>
+</td>
+<td class="cellalignment8" headers="r11c1-t2 r1c2-t2">
+<p>Subject Observation Dates</p>
+</td>
+<td class="cellalignment8" headers="r11c1-t2 r1c3-t2">
+<p>W_EHA_OBSV_SUBJECT_H</p>
+</td>
+<td class="cellalignment8" headers="r11c1-t2 r1c4-t2">
+<p>OBSV_DT</p>
+</td>
+<td class="cellalignment8" headers="r11c1-t2 r1c5-t2">
+<p>I_SUBJ_OBSV</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r12c1-t2" headers="r1c1-t2">
+<p>SUBJ_PROC</p>
+</td>
+<td class="cellalignment8" headers="r12c1-t2 r1c2-t2">
+<p>Subject Procedure Dates</p>
+</td>
+<td class="cellalignment8" headers="r12c1-t2 r1c3-t2">
+<p>W_EHA_PROC_SUBJECT_H</p>
+</td>
+<td class="cellalignment8" headers="r12c1-t2 r1c4-t2">
+<p>PROCEDURE_START_DT, PROCEDURE_END_DT</p>
+</td>
+<td class="cellalignment8" headers="r12c1-t2 r1c5-t2">
+<p>I_SUBJ_PROC</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r13c1-t2" headers="r1c1-t2">
+<p>SUBJ_SPEC</p>
+</td>
+<td class="cellalignment8" headers="r13c1-t2 r1c2-t2">
+<p>Subject Specimen Identifier and Collection Date</p>
+</td>
+<td class="cellalignment8" headers="r13c1-t2 r1c3-t2">
+<p>W_EHA_SPECIMEN_SUBJECT_H</p>
+</td>
+<td class="cellalignment8" headers="r13c1-t2 r1c4-t2">
+<p>SPECIMEN_COLLECTION_DT,</p>
+<p>SPECIMEN_NUMBER</p>
+</td>
+<td class="cellalignment8" headers="r13c1-t2 r1c5-t2">
+<p>I_SUBJ_SPEC</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformalwide" -->
+<div id="HTRAG703" class="tblformal">
+<p class="titleintable"><a id="sthref8"></a><a id="BABICIBA"></a>Table 1-2 Personally Identifiable Attribute Groups for Patients</p>
+<table class="cellalignment15" title="Personally Identifiable Attribute Groups for Patients" summary="Shows the columns included in each attribute group and its parameter name." dir="ltr">
+<thead>
+<tr class="cellalignment2">
+<th class="cellalignment14" id="r1c1-t3">Patient Attribute Groups</th>
+<th class="cellalignment14" id="r1c2-t3">Description</th>
+<th class="cellalignment14" id="r1c3-t3">Table</th>
+<th class="cellalignment14" id="r1c4-t3">Column(s)</th>
+<th class="cellalignment14" id="r1c5-t3">API Procedure Input Parameter</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r2c1-t3" headers="r1c1-t3">
+<p>PT_ADD</p>
+</td>
+<td class="cellalignment8" headers="r2c1-t3 r1c2-t3">
+<p>Patient Address</p>
+</td>
+<td class="cellalignment8" headers="r2c1-t3 r1c3-t3">
+<p>W_EHA_RESEARCH_PATIENT_D</p>
+</td>
+<td class="cellalignment8" headers="r2c1-t3 r1c4-t3">
+<p>CITY, POSTAL_CODE, STREET_ADDRESS_1, STREET_ADDRESS_2, STREET_ADDRESS_3</p>
+</td>
+<td class="cellalignment8" headers="r2c1-t3 r1c5-t3">
+<p>I_PT_ADD</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r3c1-t3" headers="r1c1-t3">
+<p>PT_CONSENT</p>
+</td>
+<td class="cellalignment8" headers="r3c1-t3 r1c2-t3">
+<p>Patient Consent Dates</p>
+</td>
+<td class="cellalignment8" headers="r3c1-t3 r1c3-t3">
+<p>W_EHA_CONSENT_PATIENT_H</p>
+</td>
+<td class="cellalignment8" headers="r3c1-t3 r1c4-t3">
+<p>CONSENT_START_DT, CONSENT_END_DT</p>
+</td>
+<td class="cellalignment8" headers="r3c1-t3 r1c5-t3">
+<p>I_PT_CONSENT</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r4c1-t3" headers="r1c1-t3">
+<p>PT_DATE</p>
+</td>
+<td class="cellalignment8" headers="r4c1-t3 r1c2-t3">
+<p>Patient Lifecycle Dates</p>
+</td>
+<td class="cellalignment8" headers="r4c1-t3 r1c3-t3">
+<p>W_EHA_RESEARCH_PATIENT_D</p>
+</td>
+<td class="cellalignment8" headers="r4c1-t3 r1c4-t3">
+<p>DOB, DECEASED_DT</p>
+</td>
+<td class="cellalignment8" headers="r4c1-t3 r1c5-t3">
+<p>I_PT_DATE</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r5c1-t3" headers="r1c1-t3">
+<p>PT_DX</p>
+</td>
+<td class="cellalignment8" headers="r5c1-t3 r1c2-t3">
+<p>Patient Diagnosis Dates</p>
+</td>
+<td class="cellalignment8" headers="r5c1-t3 r1c3-t3">
+<p>W_EHA_DX_PATIENT_H</p>
+</td>
+<td class="cellalignment8" headers="r5c1-t3 r1c4-t3">
+<p>DIAGNOSIS_ONSET_DT, DIAGNOSIS_ REPORTED_DT, DIAGNOSIS_END_DT, AGE_AT_FIRST_ONSET</p>
+</td>
+<td class="cellalignment8" headers="r5c1-t3 r1c5-t3">
+<p>I_PT_DX</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r6c1-t3" headers="r1c1-t3">
+<p>PT_ENC</p>
+</td>
+<td class="cellalignment8" headers="r6c1-t3 r1c2-t3">
+<p>Patient Encounter Dates</p>
+</td>
+<td class="cellalignment8" headers="r6c1-t3 r1c3-t3">
+<p>W_EHA_ENC_PATIENT_H</p>
+</td>
+<td class="cellalignment8" headers="r6c1-t3 r1c4-t3">
+<p>ENCOUNTER_START_DT, ENCOUNTER_END_DT</p>
+</td>
+<td class="cellalignment8" headers="r6c1-t3 r1c5-t3">
+<p>I_PT_ENC</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r7c1-t3" headers="r1c1-t3">
+<p>PT_HIST</p>
+</td>
+<td class="cellalignment8" headers="r7c1-t3 r1c2-t3">
+<p>Patient History</p>
+</td>
+<td class="cellalignment8" headers="r7c1-t3 r1c3-t3">
+<p>W_EHA_PT_HISTORY_PT_H</p>
+</td>
+<td class="cellalignment8" headers="r7c1-t3 r1c4-t3">
+<p>PATIENT_HISTORY_START_DT, PATIENT_HISTORY_END_DT</p>
+</td>
+<td class="cellalignment8" headers="r7c1-t3 r1c5-t3">
+<p>I_PT_HIST</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r8c1-t3" headers="r1c1-t3">
+<p>PT_ID</p>
+</td>
+<td class="cellalignment8" headers="r8c1-t3 r1c2-t3">
+<p>Patient Identifier</p>
+</td>
+<td class="cellalignment8" headers="r8c1-t3 r1c3-t3">
+<p>W_EHA_RESEARCH_PATIENT_D</p>
+</td>
+<td class="cellalignment8" headers="r8c1-t3 r1c4-t3">
+<p>PATIENT_IDENTIFIER</p>
+</td>
+<td class="cellalignment8" headers="r8c1-t3 r1c5-t3">
+<p>I_PT_ID</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r9c1-t3" headers="r1c1-t3">
+<p>PT_MED</p>
+</td>
+<td class="cellalignment8" headers="r9c1-t3 r1c2-t3">
+<p>Patient Medication Dates</p>
+</td>
+<td class="cellalignment8" headers="r9c1-t3 r1c3-t3">
+<p>W_EHA_SUBADMN_PATIENT_H</p>
+</td>
+<td class="cellalignment8" headers="r9c1-t3 r1c4-t3">
+<p>SUBADMN_START_DT, SUBADMN_END_DT</p>
+</td>
+<td class="cellalignment8" headers="r9c1-t3 r1c5-t3">
+<p>I_PT_MED</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r10c1-t3" headers="r1c1-t3">
+<p>PT_NAME</p>
+</td>
+<td class="cellalignment8" headers="r10c1-t3 r1c2-t3">
+<p>Patient Name</p>
+</td>
+<td class="cellalignment8" headers="r10c1-t3 r1c3-t3">
+<p>W_EHA_RESEARCH_PATIENT_D</p>
+</td>
+<td class="cellalignment8" headers="r10c1-t3 r1c4-t3">
+<p>FIRST_NAME, MIDDLE_NAME, LAST_NAME</p>
+</td>
+<td class="cellalignment8" headers="r10c1-t3 r1c5-t3">
+<p>I_PT_NAME</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r11c1-t3" headers="r1c1-t3">
+<p>PT_OBSV</p>
+</td>
+<td class="cellalignment8" headers="r11c1-t3 r1c2-t3">
+<p>Patient Observation Dates</p>
+</td>
+<td class="cellalignment8" headers="r11c1-t3 r1c3-t3">
+<p>W_EHA_OBSV_PATIENT_H</p>
+</td>
+<td class="cellalignment8" headers="r11c1-t3 r1c4-t3">
+<p>OBSV_DT</p>
+</td>
+<td class="cellalignment8" headers="r11c1-t3 r1c5-t3">
+<p>I_PT_OBSV</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r12c1-t3" headers="r1c1-t3">
+<p>PT_PROC</p>
+</td>
+<td class="cellalignment8" headers="r12c1-t3 r1c2-t3">
+<p>Patient Procedure Dates</p>
+</td>
+<td class="cellalignment8" headers="r12c1-t3 r1c3-t3">
+<p>W_EHA_PROC_PATIENT_H</p>
+</td>
+<td class="cellalignment8" headers="r12c1-t3 r1c4-t3">
+<p>PROCEDURE_START_DT, PROCEDURE_END_DT</p>
+</td>
+<td class="cellalignment8" headers="r12c1-t3 r1c5-t3">
+<p>I_PT_PROC</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r13c1-t3" headers="r1c1-t3">
+<p>PT_SPEC</p>
+</td>
+<td class="cellalignment8" headers="r13c1-t3 r1c2-t3">
+<p>Patient Specimen Identifier and Collection Date</p>
+</td>
+<td class="cellalignment8" headers="r13c1-t3 r1c3-t3">
+<p>W_EHA_SPECIMEN_PATIENT_H</p>
+</td>
+<td class="cellalignment8" headers="r13c1-t3 r1c4-t3">
+<p>SPECIMEN_COLLECTION_DT, SPECIMEN_NUMBER</p>
+</td>
+<td class="cellalignment8" headers="r13c1-t3 r1c5-t3">
+<p>I_PT_SPEC</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" --></div>
+<!-- class="sect1" -->
+<a id="A1128391"></a>
+<div id="HTRAG732" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">1.7</span> Sample Use Cases</h2>
+<p class="subhead2"><a id="HTRAG746"></a>Scenario 1: Dr. Smith needs to view all patient and subject data with de-identified PII. She works in an environment where row-level filtering is disabled, meaning assignment to a data access policy is not required.</p>
+<p>There is no need to explicitly assign a data access policy to Dr. Smith. In her environment, any user has access to non-PII data for all patients and subjects.</p>
+<p class="subhead2"><a id="HTRAG733"></a>Scenario 2: Dr. Chen needs to see patient data in Patient Group 1, including all PII values except patient name and address. She works in an environment where access to patient and subject records is controlled.</p>
+<ol>
+<li>
+<p>Create a data access policy for the patient group that Dr. Chen is has access to view. Set all patient attribute groups in the policy except Patient name and address to <code dir="ltr">Y</code>.</p>
+<pre dir="ltr">
+BEGIN
+VPD_UTIL.ADD_VPD_CONFIG    (I_CONFIG_NAME  =&gt; 'GROUP1_PATIENTS_ALL_PII_EXCEPT_NAME_ADDRESS' ,
+        I_PT_ADD     =&gt;    'N'                                    ,
+        I_PT_CONSENT =&gt;    'Y'                                    ,
+        I_PT_DATE    =&gt;    'Y'                                    ,
+        I_PT_DX      =&gt;    'Y'                                    ,
+        I_PT_ENC     =&gt;    'Y'                                    ,
+        I_PT_HIST    =&gt;    'Y'                                    ,
+        I_PT_ID      =&gt;    'Y'                                    ,
+        I_PT_MED     =&gt;    'Y'                                    ,
+        I_PT_NAME    =&gt;    'N'                                    ,
+        I_PT_OBSV    =&gt;    'Y'                                    ,
+        I_PT_PROC    =&gt;    'Y'                                    ,
+        I_PT_SPEC  =&gt;      'Y'                                    ,
+I_DESCRIPTION  =&gt; 'Configuration with access to GROUP1 patients with PII attributes except Name and Address',
+        I_PATIENT_GROUP  =&gt;'GROUP1',
+I_EXPIRATION_DATE       =&gt; date '2025-12-31'
+        );
+END;
+/
+</pre></li>
+<li>
+<p>Assign Dr. Chen (jchen12) to the above data access policy.</p>
+<pre dir="ltr">
+BEGIN
+VPD_UTIL.ADD_CONFIG_USER
+  (I_EXISTING_CONFIG_NAME  =&gt; 'GROUP1_PATIENTS_ALL_PII_EXCEPT_NAME_ADDRESS'  ,
+   I_USER_NAME             =&gt; 'jchen12',
+   I_EXPIRATION_DATE       =&gt; date '2025-12-31');
+END;
+/
+</pre></li>
+</ol>
+<p class="subhead2"><a id="HTRAG734"></a>Scenario 3: Dr. Gupta is authorized to see all patient and subject data, including identifiable data.</p>
+<p>Assign the preconfigured global data access policy to Dr. Gupta.</p>
+<pre dir="ltr">
+BEGIN
+VPD_UTIL.ADD_CONFIG_USER  
+  (I_EXISTING_CONFIG_ID    =&gt; 1,
+   I_USER_NAME             =&gt; 'kgupta',
+   I_EXPIRATION_DATE       =&gt; date '2025-12-31');
+END;
+/
+</pre>
+<p class="subhead2"><a id="HTRAG735"></a>Scenario 4: Dr. Black needs to see de-identified data in STUDY A and identified data in STUDY B.</p>
+<ol>
+<li>
+<p>Create a data access policy that grants access to de-identified PII data on subjects from STUDY A.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+This step is optional when row-level filtering is disabled</div>
+<pre dir="ltr">
+BEGIN
+VPD_UTIL.ADD_VPD_CONFIG    (I_CONFIG_NAME  =&gt; 'STUDY_A_SUBJECTS_NO_PII' ,
+  I_SUBJ_ADD     =&gt;        'N'                                    ,
+        I_SUBJ_CONSENT =&gt;  'N'                                    ,
+        I_SUBJ_DATE    =&gt;  'N'                                    ,
+        I_SUBJ_DX      =&gt;  'N'                                    ,
+        I_SUBJ_ENC     =&gt;  'N'                                    ,
+        I_SUBJ_HIST    =&gt;  'N'                                    ,
+        I_SUBJ_ID      =&gt;  'N'                                    ,
+        I_SUBJ_MED     =&gt;  'N'                                    ,
+        I_SUBJ_NAME    =&gt;  'N'                                    ,
+        I_SUBJ_OBSV    =&gt;  'N'                                    ,
+        I_SUBJ_PROC    =&gt;  'N'                                    ,
+        I_SUBJ_SPEC          =&gt;    'N'                                    ,
+  I_DESCRIPTION  =&gt;       'Configuration with access to Study A subjects with no PII attribute values',
+  I_SUBJECT_STUDY=&gt;'Study A'
+        );
+END;
+/
+</pre></li>
+<li>
+<p>Create a data access policy that grants access to subjects from STUDY B and their identifiable attribute values:</p>
+<pre dir="ltr">
+BEGIN
+VPD_UTIL.ADD_VPD_CONFIG    (I_CONFIG_NAME  =&gt; 'STUDY_B_SUBJECTS_FULL_PII' ,
+I_SUBJ_ADD     =&gt;  'Y'                                    ,
+        I_SUBJ_CONSENT =&gt;  'Y'                                    ,
+        I_SUBJ_DATE    =&gt;  'Y'                                    ,
+        I_SUBJ_DX      =&gt;  'Y'                                    ,
+        I_SUBJ_ENC     =&gt;  'Y'                                    ,
+        I_SUBJ_HIST    =&gt;  'Y'                                    ,
+        I_SUBJ_ID      =&gt;  'Y'                                    ,
+        I_SUBJ_MED     =&gt;  'Y'                                    ,
+        I_SUBJ_NAME    =&gt;  'Y'                                    ,
+        I_SUBJ_OBSV    =&gt;  'Y'                                    ,
+        I_SUBJ_PROC    =&gt;  'Y'                                    ,
+        I_SUBJ_SPEC          =&gt;    'Y'                                    ,
+I_DESCRIPTION  =&gt; 'Configuration with access to Study B subjects with all PII attribute values',
+I_SUBJECT_STUDY=&gt;'Study B'
+        );
+END;
+/
+</pre></li>
+<li>
+<p>Assign Dr. Black to these data access policies:</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Assigning <code dir="ltr">STUDY_A_SUBJECTS_NO_PII</code> configuration is optional if row-level filtering is disabled.</div>
+<pre dir="ltr">
+BEGIN
+VPD_UTIL.ADD_CONFIG_USER  
+  (I_EXISTING_CONFIG_NAME  =&gt; 'STUDY_A_SUBJECTS_NO_PII',
+   I_USER_NAME             =&gt; 'sblack',
+   I_EXPIRATION_DATE       =&gt; date '2025-12-31');
+END;
+/
+
+BEGIN
+VPD_UTIL.ADD_CONFIG_USER  
+  (I_EXISTING_CONFIG_NAME  =&gt; 'STUDY_B_SUBJECTS_FULL_PII',
+   I_USER_NAME             =&gt; 'sblack',
+   I_EXPIRATION_DATE       =&gt; date '2025-12-31');
+END;
+/
+</pre></li>
+</ol>
+</div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment1">
+<tr>
+<td class="cellalignment8">
+<table class="cellalignment12">
+<tr>
+<td class="cellalignment5"><a href="preface.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment5"><a href="specalias.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment10">
+<table class="cellalignment11">
+<tr>
+<td class="cellalignment5"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment5"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment5"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment5"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

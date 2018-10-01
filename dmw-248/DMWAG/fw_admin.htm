@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Study setup</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2018-05-25T8:57:3Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Health Sciences Data Management Workbench Administration Guide" />
+<meta name="dcterms.identifier" content="E96068-01" />
+<meta name="dcterms.isVersionOf" content="DMWAG" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2017, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="x_stdy_lsh.htm" title="Previous" type="text/html" />
+<link rel="Next" href="dmw_admin.htm" title="Next" type="text/html" />
+<link rel="alternate" href="DMWAG.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="DMWAG.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="DMWAG.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">6/11</span> <!-- End Header -->
+<div id="DMWAG99752" class="chapter"><a id="CDCDADAG"></a>
+<h1 class="chapter"><span class="secnum">3</span> Study setup</h1>
+<p>To set up integration with data source systems for each study, you do the following tasks in the Administration page. Then the study configurator creates a clinical data model for each data source.</p>
+<ul>
+<li>
+<p><a href="#CDCHGJHG">Set up the study File Watcher to load data files</a></p>
+</li>
+<li>
+<p><a href="#A138146242">Set up InForm data exchange</a></p>
+</li>
+<li>
+<p><a href="#A138149553">Set up data exchange with a non-InForm clinical data system</a></p>
+</li>
+<li>
+<p><a href="#BAJCJBIE">Subscribe users to job status notifications</a></p>
+</li>
+</ul>
+<a id="CDCHGJHG"></a>
+<div id="DMWAG183" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Set up the study File Watcher to load data files</h2>
+<ul>
+<li>
+<p><a href="#CACIHFJF">Create study File Watchers</a></p>
+</li>
+<li>
+<p><a href="#BAJDDDAF">Select a distributed processing (DP) server for the study File Watcher</a></p>
+</li>
+</ul>
+<a id="CACIHFJF"></a>
+<div id="DMWAG1130" class="sect2">
+<h3 class="sect2">Create study File Watchers</h3>
+<p>For each study, create a study File Watcher. It watches the folder you specify here for uploaded data files and loads the data into Oracle DMW.</p>
+<p><a id="DMWAG10312"></a><span class="subhead3">Prerequisites&nbsp;</span>Specify the watched folder locations in a system profile. See <a href="x_stdy_lsh.htm#CHDHGFDI">"Register root folders for File Watcher watched folders"</a>.</p>
+<p>If you want to archive (not delete) loaded data files, specify the archive folder location. See <a href="x_stdy_lsh.htm#CHDHFAHA">"Register root folders for File Watcher archive folders"</a>.</p>
+<ol>
+<li>
+<p>Click the Navigation icon <img width="29" height="21" src="img/navigation_icon.gif" alt="Icon shows a computer monitor." /> at the top of any page and then click <span class="bold">Administration</span>.</p>
+</li>
+<li>
+<p>Click the <span class="bold">File Watcher</span> tab.</p>
+</li>
+<li>
+<p>Click the <img width="16" height="17" src="img/icon_add.gif" alt="Icon is a plus sign." /><span class="bold">Add</span> Icon.</p>
+</li>
+<li>
+<p><span class="bold">Study</span>: Select the name of the study from the drop-down list. The list includes studies with no existing study File Watcher.</p>
+</li>
+<li>
+<p><span class="bold">Study Folder Name</span>: Enter a valid UNIX case-sensitive directory name with <span class="bold">no underscores</span> (_) to be used as the final directory of the watched folder path after each root folder. The Study folder name must be <span class="bold">unique within the DMW instance</span> and you will receive an error if the name you enter is already in use.</p>
+<p>If you have enabled archiving and specified locations for archiving files, it creates study-specific archive folders as well as File Watcher folders.</p>
+</li>
+<li>
+<p><span class="bold">Delete Files After</span>: To permanently delete a file, enter the number of days after the load date to delete it.</p>
+<p>To <span class="italic">archive</span> the files instead of deleting them, enter a higher number here than in the archiving profile value (see <a href="x_stdy_lsh.htm#CHDHFAHA">"Register root folders for File Watcher archive folders"</a>).</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>. The system creates actual folders for the study on the file system.</p>
+</li>
+</ol>
+<p><span class="bold">Next:</span> <a href="#BAJDDDAF">Select a distributed processing (DP) server for the study File Watcher</a>.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BAJDDDAF"></a>
+<div id="DMWAG1133" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Select a distributed processing (DP) server for the study File Watcher</h3>
+<p><a id="DMWAG344"></a><span class="subhead3">Prerequisites&nbsp;</span>These tasks are documented in the <span class="italic">Oracle Health Sciences Data Management Workbench Installation Guide</span>:</p>
+<ul>
+<li>
+<p>Set up the Oracle LSH Distributed Processing (DP) Server and, as part of it, the File Watcher service. The File Watcher service detects files to be loaded.</p>
+</li>
+<li>
+<p>Define at least one DP Service Location and SAS and Text for SQL*Loader DP Server services in the Oracle LSH user interface. These services load data from files into the Oracle DMW database. See the <span class="italic">Oracle Life Sciences Data Hub System Administrator's Guide</span>.</p>
+</li>
+<li>
+<p>Security for the folders.</p>
+</li>
+<li>
+<p>Compatible time zone configuration on each computer. See the <span class="italic">Oracle Health Sciences Data Management Workbench Installation Guide</span>.</p>
+</li>
+</ul>
+<ol>
+<li>
+<p>Click the Navigation icon <img width="29" height="21" src="img/navigation_icon.gif" alt="Icon shows a computer monitor." /> at the top of any page and then click <span class="bold">Administration</span>.</p>
+</li>
+<li>
+<p>Click the <span class="bold">File Watcher</span> tab.</p>
+</li>
+<li>
+<p>Select a Study File Watcher and click the <img width="18" height="19" src="img/icon_dp_srvr_for_stdy_fw.gif" alt="Icon shows a gear and folders." /> <span class="bold">DP Servers for File Watchers</span> icon.</p>
+</li>
+<li>
+<p>Select one DP Server for each type of data file to be loaded in the study.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="A138146242"></a>
+<div id="DMWAG184" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Set up InForm data exchange</h2>
+<ul>
+<li>
+<p><a href="#CDCHHHGD">Create users for InForm integration</a></p>
+</li>
+<li>
+<p><a href="#CDCDBDDE">Add InForm remote locations</a></p>
+</li>
+<li>
+<p><a href="#CDCECICE">Add InForm web service locations</a></p>
+</li>
+</ul>
+<a id="CDCHHHGD"></a>
+<div id="DMWAG185" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Create users for InForm integration</h3>
+<ul>
+<li>
+<p><a href="#CDCEFAFH">Create required Oracle accounts</a></p>
+</li>
+<li>
+<p><a href="#CDCCIBFD">Create required InForm users</a></p>
+</li>
+</ul>
+<a id="CDCEFAFH"></a>
+<div id="DMWAG186" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Create required Oracle accounts</h4>
+<p>On each InForm study database, run scripts to create a read-only user account for Oracle DMW to use to access data and metadata in InForm.</p>
+<p>The account has Select privileges on all tables and views in study accounts referenced by the InForm Connector, including metadata views, operational data views, and RDE views. This schema also has packages that facilitate the data load process.</p>
+<p>Use the credentials of this account when you set up a database connection (remote location) in the Oracle DMW InForm configuration for each study using the InForm database.</p>
+<div id="DMWAG187" class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref16"></a>
+<h5 class="sect4">Create Directory on Each InForm Database</h5>
+<p>On each InForm database with a study for which you plan to use Oracle DMW, create one OS directory using the <code dir="ltr">mkdir</code> command to hold scripts you must copy and run.</p>
+<p>You need one directory per database, not per study.</p>
+</div>
+<!-- class="sect4" -->
+<div id="DMWAG188" class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref17"></a>
+<h5 class="sect4">Copy Scripts</h5>
+<p>Copy the following files from the directory $CDR_TOP/patch/115/sql/ on the computer where you have installed Oracle Life Sciences Data Hub to the InForm database directory you created.</p>
+<ul>
+<li>
+<p><span class="bold">DMWInFormInstall.sql</span>&mdash;the driver script</p>
+</li>
+<li>
+<p><span class="bold">DMWInFormUser.sql</span>&mdash;creates new users or confirms existing users</p>
+</li>
+<li>
+<p><span class="bold">DMWInFAdms.pls</span>&mdash;installs a package specification into the Oracle DMW administration account</p>
+</li>
+<li>
+<p><span class="bold">DMWInFAdmb.pls</span>&mdash;installs a package body into the Oracle DMW administration account</p>
+</li>
+<li>
+<p><span class="bold">DMWInFormROAccessObjs.sql</span>&mdash;installs a table into the Oracle DMW read-only access account</p>
+</li>
+<li>
+<p><span class="bold">DMWInFroas.pls</span>&mdash;installs a package specification into the Oracle DMW read-only access account</p>
+</li>
+<li>
+<p><span class="bold">DMWInFroab.pls</span>&mdash;installs a package body into the Oracle DMW read-only access account</p>
+</li>
+</ul>
+</div>
+<!-- class="sect4" -->
+<div id="DMWAG189" class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref18"></a>
+<h5 class="sect4">Run the Driver Script</h5>
+<p>The driver prompts for all required input parameter values and calls the other scripts as required.</p>
+<ol>
+<li>
+<p>Log into SQL*Plus with an account with DBA privileges.</p>
+</li>
+<li>
+<p>Go to the directory that contains the downloaded scripts.</p>
+</li>
+<li>
+<p>Execute DMWInFormInstall.sql. The script prompts for:</p>
+<ul>
+<li>
+<p>A name to give the log file.</p>
+</li>
+<li>
+<p>TNS name <span class="bold">or</span> connect string for the InForm database. If you enter the connect string, do not enter any spaces.</p>
+</li>
+<li>
+<p><code dir="ltr">system</code> or other DBA username and password.</p>
+</li>
+<li>
+<p>Name of the Oracle DMW Admin account to be used or created for the purpose of giving privileges to the Oracle DMW read-only access account. The system creates the account if it does not already exist.</p>
+</li>
+<li>
+<p>Name of the Oracle DMW read-only access account to be used or created. The system creates the account if it does not already exist.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+Do not use spaces or special characters other than underscore (_) in the username or password.</div>
+</li>
+<li>
+<p>Passwords for both accounts. If the accounts are new, the script prompts you to confirm each password. If the accounts already exist, you must enter a password, but the system does not change the existing password. It proceeds to create or update the packages owned by the schema.</p>
+</li>
+<li>
+<p>If the read-only access account is new, the script also prompts for a tablespace name. It then creates a tablespace on the InForm database to be used for the integration with Oracle DMW and creates or updates all Oracle DMW objects in this tablespace.</p>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+<!-- class="sect4" --></div>
+<!-- class="sect3" -->
+<a id="CDCCIBFD"></a>
+<div id="DMWAG190" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Create required InForm users</h4>
+<p>For each InForm study:</p>
+<ol>
+<li>
+<p>Log in to the system you use to create InForm user accounts:</p>
+<ul>
+<li>
+<p>If your InForm installation is on-premise, use UMT.</p>
+</li>
+<li>
+<p>If your InForm installation is hosted by Oracle, use Single Sign-on.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Create a user with a <span class="bold">suggested username DMW_AUTH</span> to be used for authentication purposes by the web service connection. This user does not need any privileges. You enter this username and password when creating web service locations.</p>
+</li>
+<li>
+<p>Create a user with the <span class="bold">required username DMW_QUERY</span> (in <span class="bold">UPPER CASE</span>) to be used for sending and updating discrepancies in InForm. Assign this user to a query group. The password for this user is not used in Oracle DMW.</p>
+</li>
+<li>
+<p>Activate both accounts.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CDCDBDDE"></a>
+<div id="DMWAG212" class="sect2">
+<h3 class="sect2">Add InForm remote locations</h3>
+<p>Database links are used to load data and metadata from InForm to DMW.</p>
+<p>When defined here, they are available for use in an InForm clinical data model. Alternatively, study configurators can create and edit them in the clinical data model.</p>
+<ol>
+<li>
+<p>Click the Navigation icon <img width="29" height="21" src="img/navigation_icon.gif" alt="Icon shows a computer monitor." /> at the top of any page and then click <span class="bold">Administration</span>.</p>
+</li>
+<li>
+<p>Make sure the <span class="bold">Data Sources</span> tab is selected, then click the <span class="bold">InForm Remote Locations</span> subtab.</p>
+</li>
+<li>
+<p>Click the <img width="16" height="17" src="img/icon_add.gif" alt="Icon is a plus sign." /><span class="bold">Add</span> icon or <img width="15" height="17" src="img/icon_modify.gif" alt="Icon shows a pencil." />Modify icon.</p>
+</li>
+<li>
+<p>Enter:</p>
+<ul>
+<li>
+<p><span class="bold">Name</span>: A name for the InForm database. It cannot contain spaces, slashes, or special characters other than underscore (_). This is displayed for study configurators.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+Include the study name and lifecycle stage in the name to make it easy for the study configurator to select.</div>
+</li>
+<li>
+<p><span class="bold">ConnectString</span>: The text of the Using clause of the Create Database Link SQL statement. This is normally the same as the Description Clause of a TNSNAMES definition&mdash;for example:</p>
+<pre dir="ltr">
+(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=<span class="italic">host_name.company_domain</span>.com)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=<span class="italic">trial_name</span>.world)))
+</pre>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+It cannot contain spaces.</div>
+</li>
+<li>
+<p><span class="bold">Username</span>: The name of the DMW read-only access account in the InForm database for this remote location; see <a href="#CDCEFAFH">"Create required Oracle accounts"</a>. The system will use this account to connect.</p>
+</li>
+<li>
+<p><span class="bold">Password</span>: Enter the password of the account. The system changes and encrypts the password after creating the database link.</p>
+<p>In the unlikely event that you need to change the password, your InForm database administrator must change the password for the Oracle DMW read-only access account. You can then select Enable Password Entry? in the Edit Remote Location window and enter the new password. The system then recreates the database link and changes and encrypts the password.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If you delete the remote location and create a new one with the same username, you must change the password in the InForm database first and then enter it here.</div>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Test Connection</span> to make sure it is set up correctly.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+</ol>
+<p><span class="bold">Next:</span> <a href="#CDCECICE">Add InForm web service locations</a>.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CDCECICE"></a>
+<div id="DMWAG213" class="sect2">
+<h3 class="sect2">Add InForm web service locations</h3>
+<p>Web services are used to send discrepancies from DMW to InForm.</p>
+<p>When created in the Administration page, they are available for use in the appropriate InForm study clinical data model. Alternatively, they can be created and edited in the clinical data model.</p>
+<ol>
+<li>
+<p>Click the Navigation icon <img width="29" height="21" src="img/navigation_icon.gif" alt="Icon shows a computer monitor." /> at the top of any page and then click <span class="bold">Administration</span>.</p>
+</li>
+<li>
+<p>Make sure the <span class="bold">Data Sources</span> tab is selected, then click the <span class="bold">InForm Web Service Locations</span> subtab.</p>
+</li>
+<li>
+<p>Click the <img width="16" height="17" src="img/icon_add.gif" alt="Icon is a plus sign." /><span class="bold">Add</span> icon or <img width="15" height="17" src="img/icon_modify.gif" alt="Icon shows a pencil." />Modify icon.</p>
+</li>
+<li>
+<p>Enter Web Service Location attributes.</p>
+<ul>
+<li>
+<p><span class="bold">Name</span>: Enter any name for the web service location.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+Include the study name and lifecycle stage in the name to make it easy for the study configurator to select.</div>
+</li>
+<li>
+<p><span class="bold">Web Service URL</span>: Enter the URL for the study's InForm website.</p>
+<p>http://<span class="italic">your_InForm_server.your_company</span>.com/<span class="italic">your_trial</span>/pfts.dll</p>
+</li>
+<li>
+<p><span class="bold">Authentication Trial Name</span>: Enter the study name exactly as it appears in the URL.</p>
+</li>
+<li>
+<p><span class="bold">SSO Organization</span>: For an on-premise installation, do not enter anything here. Doing so will cause harm.</p>
+<p>If your InForm installation, specifically the InForm Adapter, is hosted by Oracle, enter the organization associated with the DMW_QUERY user as provisioned for Single Sign-On use.</p>
+</li>
+<li>
+<p><span class="bold">Username</span>: The name of the account set up for authenticating DMW web service transactions. See <a href="#CDCCIBFD">"Create required InForm users"</a>.</p>
+<p>The suggested name is DMW_AUTH.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The Username and Password fields are not displayed if DMW is installed using HTTP, not HTTPS.</div>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Do not use spaces or special characters other than underscore (_) in the username or password.</div>
+</li>
+<li>
+<p><span class="bold">Password</span>: Enter the password required for the same user account. The system encrypts the password.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Test Connection</span> to test without saving, or <span class="bold">Test and Save</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="A138149553"></a>
+<div id="DMWAG191" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Set up data exchange with a non-InForm clinical data system</h2>
+<ul>
+<li>
+<p><a href="#CDCIBBBD">Set up File Watcher</a></p>
+</li>
+<li>
+<p><a href="#BAJCECEE">Add a web service location for a non-InForm clinical data system</a></p>
+</li>
+</ul>
+<a id="CDCIBBBD"></a>
+<div id="DMWAG192" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Set up File Watcher</h3>
+<p>If you are using a clinical data system other than InForm, you must load data from that system in files. Follow instructions in <a href="#CDCHGJHG">"Set up the study File Watcher to load data files"</a>.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BAJCECEE"></a>
+<div id="DMWAG346" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Add a web service location for a non-InForm clinical data system</h3>
+<p>If you are using a clinical data system other than InForm, define a web service location to enable Oracle DMW to send discrepancies to it and to enable data reviewers to open the external system from DMW to view data and discrepancies there.</p>
+<ol>
+<li>
+<p>Click the Navigation icon <img width="29" height="21" src="img/navigation_icon.gif" alt="Icon shows a computer monitor." /> at the top of any page and then click <span class="bold">Administration</span>.</p>
+</li>
+<li>
+<p>Make sure the <span class="bold">Data Sources</span> tab is selected, then click the <span class="bold">External Data Sources</span> subtab.</p>
+</li>
+<li>
+<p>Click the <img width="16" height="17" src="img/icon_add.gif" alt="Icon is a plus sign." /><span class="bold">Add</span> Icon.</p>
+</li>
+<li>
+<p>Enter Web Service Location attributes.</p>
+<ul>
+<li>
+<p><span class="bold">Name</span>: Enter any name for the web service location.</p>
+</li>
+<li>
+<p><span class="bold">Data Model Sub Type</span>:</p>
+</li>
+<li>
+<p><span class="bold">Username</span>: The name of the account set up for authenticating DMW web service transactions.</p>
+<p>The suggested name is DMW_AUTH.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Do not use spaces or special characters other than underscore (_) in the username or password.</div>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The Username and Password fields are not displayed if DMW is installed using HTTP, not HTTPS.</div>
+</li>
+<li>
+<p><span class="bold">Password</span>: Enter the password required for the same user account. The system encrypts the password.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BAJCJBIE"></a>
+<div id="DMWAG174" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Subscribe users to job status notifications</h2>
+<p>You can specify that certain users receive notifications whenever a particular type of job completes with a particular status in a particular study. Users can also set up their own notifications on the Home page.</p>
+<p>User accounts that become inactive or accounts that lose privileges for the target study are automatically unsubscribed from notifications.</p>
+<p><a id="DMWAG347"></a><a id="sthref19"></a><span class="subhead3">Prerequisite&nbsp;</span>If you haven't already, follow the instructions in My Oracle Support article 164871.1, "Configuring the Workflow Notification Mailer(s) in Oracle Applications Manager 11i" as directed in the <span class="italic">Oracle Life Sciences Data Hub Installation Guide</span>.</p>
+<ol>
+<li>
+<p>Click the Navigation icon <img width="29" height="21" src="img/navigation_icon.gif" alt="Icon shows a computer monitor." /> at the top of any page and then click <span class="bold">Administration</span>.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Notification Subscription</span> tab.</p>
+</li>
+<li>
+<p>In the Study Name list, select the study for which you want to set up notifications.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+Type a study name in the search box directly above the list and press Enter to find a particular study.
+<p>To stop filtering, delete the filter name and click <span class="bold">Refresh</span>.</p>
+</div>
+</li>
+<li>
+<p>In the Notification Events list, select one event for which you want the system to send notifications:</p>
+<ul>
+<li>
+<p><span class="bold">Job type</span>s: File loads, InForm loads, Transformations, Validation Checks</p>
+</li>
+<li>
+<p><span class="bold">Completion statuses</span>: Success, Warning, Failure</p>
+</li>
+</ul>
+<p>The Subscribed Users list displays the users who currently receive email notifications when a job completes with the selected status for the selected study.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Subscribe/Unsubscribe Users</span> icon <img width="17" height="18" src="img/sub_unsub_users_icon.gif" alt="Image of the Subscribe/Unsubscribe Users icon" /> on the Subscribed Users title bar.</p>
+</li>
+<li>
+<p>Select the checkbox to the left of a user to subscribe them to notifications for the selected study and event.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+You can use the search box directly above a column to search in that column or click on the column heading to sort by it.</div>
+<p>To unsubscribe users, deselect the checkbox.</p>
+</li>
+<li>
+<p>Click <span class="bold">Save</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment1">
+<tr>
+<td class="cellalignment8">
+<table class="cellalignment6">
+<tr>
+<td class="cellalignment5"><a href="x_stdy_lsh.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment5"><a href="dmw_admin.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2017, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment10">
+<table class="cellalignment4">
+<tr>
+<td class="cellalignment5"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment5"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment5"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment5"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

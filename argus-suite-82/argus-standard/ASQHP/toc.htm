@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>Oracle&reg; Argus Safety Quickhelp for Administrators</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2018-08-03T5:25:52Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Argus Safety Quickhelp for Administrators" />
+<meta name="dcterms.identifier" content="E97700-01" />
+<meta name="dcterms.isVersionOf" content="ASQHP" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"   src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"   src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="alternate" href="ASQHP.pdf" title="PDF version" type="application/pdf" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript"  src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript"  src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript"  src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript"  src="../dcommon/js/foundation.min.js"></script>
+<script type="application/javascript"  src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript"  src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript"  src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="application/javascript"  src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="application/javascript"  src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="application/javascript"  src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="application/javascript"  src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<!-- End Header -->
+<div class="letterstyle">
+<h1>Oracle&reg; Argus Safety</h1>
+<p class="booktitle">Quickhelp for Administrators</p>
+<p><span class="revnumber">Release 8.2</span></p>
+<p class="invpartnumber">E97700-01</p>
+<p class="date">August 2018</p>
+<div id="ASQHP101" class="sect1"><a id="sthref1"></a>
+<h2 class="sect1">Managing Access in Argus Safety</h2>
+<p>You can configure sites, groups, and users from the Argus Console. Each user must be assigned to at least one group in order to determine their security level. Each group is assigned a specific security level. This security level enables members of the group to view, modify, or restrict access rights to various sections of the Case Form, and so on.</p>
+<p>To configure Argus Safety, begin by creating sites, groups, and users in the following order:</p>
+<div id="ASQHP102" class="sect2"><a id="sthref2"></a>
+<h3 class="sect2">Adding User Sites</h3>
+<p>You must begin by configuring user sites as every user has to be assigned 1 site (and not more). Site information is also used to automatically assign case IDs.</p>
+<ol>
+<li>
+<p>Log into Argus Safety and navigate to the Argus Console.</p>
+</li>
+<li>
+<p>Hover over the <span class="bold">Access Management</span> menu and click <span class="bold">Sites</span>.</p>
+<img width="815" height="115" src="img/sites.gif" alt="Surrounding text describes sites.gif." /><br />
+<p>The Code List Maintenance screen is displayed.</p>
+<img width="1244" height="782" src="img/clm-site.gif" alt="Surrounding text describes clm-site.gif." /><br /></li>
+<li>
+<p>In the left pane, click <span class="bold">User Sites</span>.</p>
+<p>The list of users appears in the right pane under Total Number of Rows.</p>
+</li>
+<li>
+<p>Click <span class="bold">Add New</span>.</p>
+<p>The Add New User Site tab is displayed.</p>
+</li>
+<li>
+<p>Enter the required information (fields with a red flag are mandatory) and click <span class="bold">Save</span>.</p>
+</li>
+</ol>
+<p><span class="bold">Adding User Sites&mdash;Fields and Field Descriptions</span></p>
+<div class="inftblinformal">
+<table class="cellalignment70" summary="user sites" dir="ltr">
+<tbody>
+<tr class="cellalignment65">
+<td class="cellalignment71" id="r1c1-t2"><span class="bold">Field</span></td>
+<td class="cellalignment71"><span class="bold">Description</span></td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment71" id="r2c1-t2">Description</td>
+<td class="cellalignment71" headers="r2c1-t2">Enter a description of the site.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment71" id="r3c1-t2">Abbreviation</td>
+<td class="cellalignment71" headers="r3c1-t2">Enter an abbreviation (1-4 characters) of the site name.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment71" id="r4c1-t2">Site Type</td>
+<td class="cellalignment71" headers="r4c1-t2">Select one of the options from the drop-down list: <span class="bold">Argus</span> or <span class="bold">LAM</span>.
+<p><span class="bold">Note:</span> Each Argus Safety user must be assigned to exactly one user site. You cannot change the site type from LAM to Central if the current central site has an association with a LAM site, the current site is associated with any user, or the current LAM site has any events assigned to it.</p>
+</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment71" id="r5c1-t2">Protect Patient Confidentiality -Default</td>
+<td class="cellalignment71" headers="r5c1-t2">Select this checkbox to protect Patient Confidentiality for the site.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment71" id="r6c1-t2">Protect Reporter Confidentiality - Default</td>
+<td class="cellalignment71" headers="r6c1-t2">Select this checkbox to protect Reporter Confidentiality for the site.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment71" id="r7c1-t2">Bulk report By form (Approved reports) -Default</td>
+<td class="cellalignment71" headers="r7c1-t2">Select this checkbox to protect availability of the Bulk Reports by Form for the site.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment71" id="r8c1-t2">LAM Sites</td>
+<td class="cellalignment71" headers="r8c1-t2">Add or Remove previously created LAM sites using the <span class="bold">Add &gt;</span>, <span class="bold">Remove &lt;</span>, <span class="bold">Add All&gt;&gt;</span>, and <span class="bold">Remove All &lt;&lt;</span> buttons.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment71" id="r9c1-t2">Site Printers</td>
+<td class="cellalignment71" headers="r9c1-t2">Use the <span class="bold">Add</span> and <span class="bold">Delete</span> buttons to add/delete the Printer Name, and Printer Path.
+<p><span class="bold">Note:</span> The <span class="bold">Printer Name</span> is displayed in the application when referring to the printer. The name can have up to 20 characters.</p>
+<p>For the <span class="bold">Printer Path</span> textbox, enter the full path of the printer on the network. This path name can have up to 256 characters. The specified path should be accessible from the machine where Argus Safety Service is installed.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" --></div>
+<!-- class="sect2" -->
+<div id="ASQHP103" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref3"></a>
+<h3 class="sect2">Adding User Groups</h3>
+<p>The Administrator can add and configure security levels for each work group. Radio buttons let you view the groups and assign access rights for the Case Form, Menu, Case and Report Workflow sections. If a user belongs to multiple groups, the access rights for the user will be the sum-total of the individual group access rights.</p>
+<ol>
+<li>
+<p>Hover over the <span class="bold">Access Management</span> menu and click <span class="bold">Groups</span>.</p>
+<img width="820" height="110" src="img/groups.gif" alt="Surrounding text describes groups.gif." /><br />
+<p>The Groups and Users screen is displayed.</p>
+<img width="998" height="659" src="img/groups.jpg" alt="Surrounding text describes groups.jpg." /><br /></li>
+<li>
+<p>In the left pane, click <span class="bold">User Groups</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Add Group</span>.</p>
+</li>
+<li>
+<p>Enter the required information (fields with a red flag are mandatory) and click <span class="bold">Save</span>.</p>
+</li>
+</ol>
+<p><span class="bold">Configuring Users&mdash;Fields and Field Descriptions</span></p>
+<div class="inftblinformal">
+<table class="cellalignment70" summary="group name" dir="ltr">
+<thead>
+<tr class="cellalignment65">
+<th class="cellalignment72" id="r1c1-t3">Field / Control Name</th>
+<th class="cellalignment72" id="r1c2-t3">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment65">
+<td class="cellalignment71" id="r2c1-t3" headers="r1c1-t3">Group Name</td>
+<td class="cellalignment71" headers="r2c1-t3 r1c2-t3">Enter a group name. This should be a unique name associated with the group.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment71" id="r3c1-t3" headers="r1c1-t3">Email</td>
+<td class="cellalignment71" headers="r3c1-t3 r1c2-t3">Enter the email address, as applicable</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment71" id="r4c1-t3" headers="r1c1-t3">Supervisor Email</td>
+<td class="cellalignment71" headers="r4c1-t3 r1c2-t3">Enter the supervisor's email address, as applicable.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment71" id="r5c1-t3" headers="r1c1-t3"><span class="bold">Menus</span></td>
+<td class="cellalignment71" headers="r5c1-t3 r1c2-t3">&nbsp;</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment71" id="r6c1-t3" headers="r1c1-t3">File/ New Case/New Case From Image/Open Case and so on</td>
+<td class="cellalignment71" headers="r6c1-t3 r1c2-t3">Select the Enable or Disable the options, as applicable.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment71" id="r7c1-t3" headers="r1c1-t3"><span class="bold">Case Form</span></td>
+<td class="cellalignment71" headers="r7c1-t3 r1c2-t3">&nbsp;</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment71" id="r8c1-t3" headers="r1c1-t3">General Information/Study Information/Reporter Information and so on</td>
+<td class="cellalignment71" headers="r8c1-t3 r1c2-t3">Select Modify, View, or No Access, as applicable.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment71" id="r9c1-t3" headers="r1c1-t3"><span class="bold">Advanced Conditions</span></td>
+<td class="cellalignment71" headers="r9c1-t3 r1c2-t3">&nbsp;</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment71" id="r10c1-t3" headers="r1c1-t3">No Access to Create Advanced Conditions</td>
+<td class="cellalignment71" headers="r10c1-t3 r1c2-t3">Select this checkbox if you do not want the group to have access to create advanced conditions.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment71" id="r11c1-t3" headers="r1c1-t3">No Access to Share Advanced Conditions</td>
+<td class="cellalignment71" headers="r11c1-t3 r1c2-t3">Select this checkbox if you do not want the group to have access to share advanced conditions.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment71" id="r12c1-t3" headers="r1c1-t3">No Access to View and Edit SQL</td>
+<td class="cellalignment71" headers="r12c1-t3 r1c2-t3">Select this checkbox if you do not want the group to have access to view and edit SQL.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment71" id="r13c1-t3" headers="r1c1-t3">Listedness Determination</td>
+<td class="cellalignment71" headers="r13c1-t3 r1c2-t3">In the Listedness Determination section, select a list of countries. This enables the end user to override the listedness determination in the Event Assessment section of the Case Form for product licenses that match the countries selected in this step.
+<p>Add or Remove countries using the <span class="bold">Add &gt;</span>, <span class="bold">Remove &lt;</span>, <span class="bold">Add All&gt;&gt;</span>, and <span class="bold">Remove All &lt;&lt;</span> buttons.</p>
+</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment71" id="r14c1-t3" headers="r1c1-t3">Restrictions -Products</td>
+<td class="cellalignment71" headers="r14c1-t3 r1c2-t3">Select the Products checkbox. Click <span class="bold">Add Product</span>, to open the Available Products dialog box. Select each product you want to add and click <span class="bold">OK</span>.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment71" id="r15c1-t3" headers="r1c1-t3">Restrictions -Studies</td>
+<td class="cellalignment71" headers="r15c1-t3 r1c2-t3">Select the Studies checkbox. Click <span class="bold">Add Study</span>, to open the Available Studies dialog box. Select each study you want to add and click <span class="bold">OK</span>.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" --></div>
+<!-- class="sect2" -->
+<div id="ASQHP104" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref4"></a>
+<h3 class="sect2">Adding Users</h3>
+<p>Ensure that you have provisioned users in IDM before you begin the following procedure.</p>
+<ol>
+<li>
+<p>Log into Argus Safety and navigate to the Argus Console.</p>
+</li>
+<li>
+<p>Hover over the <span class="bold">Access Management</span> menu and click <span class="bold">Users</span>.</p>
+<img width="829" height="134" src="img/users.gif" alt="Surrounding text describes users.gif." /><br />
+<p>The Groups and Users screen is displayed.</p>
+<img width="523" height="379" src="img/addusers.gif" alt="Surrounding text describes addusers.gif." /><br /></li>
+<li>
+<p>In the left pane, click <span class="bold">Users</span>.</p>
+<p>The list of users appears in the right pane.</p>
+</li>
+<li>
+<p>Click <span class="bold">Add New</span>. The fields in the right pane become editable.</p>
+</li>
+<li>
+<p>Enter the details as needed and click <span class="bold">Save</span>.</p>
+</li>
+</ol>
+<p><span class="bold">Configuring Users&mdash;Fields and Field Descriptions</span></p>
+<div class="inftblinformal">
+<table class="cellalignment70" summary="config users" dir="ltr">
+<thead>
+<tr class="cellalignment65">
+<th class="cellalignment72" id="r1c1-t4"><span class="bold">Field / Control Name</span></th>
+<th class="cellalignment72" id="r1c2-t4"><span class="bold">Description</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment65">
+<td class="cellalignment71" id="r2c1-t4" headers="r1c1-t4">User Name</td>
+<td class="cellalignment71" headers="r2c1-t4 r1c2-t4">Enter the full name.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment71" id="r3c1-t4" headers="r1c1-t4">User ID</td>
+<td class="cellalignment71" headers="r3c1-t4 r1c2-t4">Enter unique user identification (ID).</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment71" id="r4c1-t4" headers="r1c1-t4">Reset Password</td>
+<td class="cellalignment71" headers="r4c1-t4 r1c2-t4">Reset the password of a user to a default value specified in the common profile section.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment71" id="r5c1-t4" headers="r1c1-t4">Email Address</td>
+<td class="cellalignment71" headers="r5c1-t4 r1c2-t4">Enter the user's e-mail address.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment71" id="r6c1-t4" headers="r1c1-t4">Application Access</td>
+<td class="cellalignment71" headers="r6c1-t4 r1c2-t4">Configure user access settings for Argus Console and Argus Safety.
+<p>The default application access for the user can be selected from the list.</p>
+</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment71" id="r7c1-t4" headers="r1c1-t4">Enable LDAP Login</td>
+<td class="cellalignment71" headers="r7c1-t4 r1c2-t4">Authenticates users against the active directory server.
+<p>When Enable LDAP Login is selected, all fields inside the Access section are disabled, excluding the Account Disabled option.</p>
+</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment71" id="r8c1-t4" headers="r1c1-t4">LDAP Server Alias</td>
+<td class="cellalignment71" headers="r8c1-t4 r1c2-t4">Click on the drop-down arrow and select the LDAP server which is listed.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment71" id="r9c1-t4" headers="r1c1-t4">Access</td>
+<td class="cellalignment71" headers="r9c1-t4 r1c2-t4">Configure user access settings for Argus Safety. Select the following checkboxes, as applicable:
+<p>Account Disabled</p>
+<p>Forcer Password change at login</p>
+<p>Security Disabled Account</p>
+<p>Force Password to expire every_ days</p>
+<p>Reset Password</p>
+</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment71" id="r10c1-t4" headers="r1c1-t4">Site</td>
+<td class="cellalignment71" headers="r10c1-t4 r1c2-t4">Assigns the user to a site. The values in this field are populated from the code list item User Sites.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment71" id="r11c1-t4" headers="r1c1-t4">User Group - Select</td>
+<td class="cellalignment71" headers="r11c1-t4 r1c2-t4">Attaches the user to pre-configured user groups.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment71" id="r12c1-t4" headers="r1c1-t4">User Type</td>
+<td class="cellalignment71" headers="r12c1-t4 r1c2-t4">Select the type of user, such as, Argus J user from the drop-down list.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment71" id="r13c1-t4" headers="r1c1-t4">User Roles - Select</td>
+<td class="cellalignment71" headers="r13c1-t4 r1c2-t4">Attaches the user to pre-configured user roles such as Global Admin.
+<p>By default, a Global Administrator role is granted only to an Administrator, who can grant/revoke this role to other Argus users. Such a user role must be assigned to users who need access to the Argus Global application. You can also select from other roles present within User Roles.</p>
+</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment71" id="r14c1-t4" headers="r1c1-t4">Enable site security</td>
+<td class="cellalignment71" headers="r14c1-t4 r1c2-t4">When this checkbox is checked, site-based data security is enabled for the user. If the box is not checked, the user has full access to data from all sites.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment71" id="r15c1-t4" headers="r1c1-t4">Enable LDAP Login</td>
+<td class="cellalignment71" headers="r15c1-t4 r1c2-t4">Authenticates users against the active directory server.
+<p>When Enable LDAP Login is selected, all fields inside the Access section are disabled, excluding the Account Disabled option.</p>
+</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment71" id="r16c1-t4" headers="r1c1-t4">Account Disabled</td>
+<td class="cellalignment71" headers="r16c1-t4 r1c2-t4">When this option is selected, the user account is temporarily disabled to prevent users from logging in. This option is different from deleting a user as it enables the Administrator to re-activate the account at a later date.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment71" id="r17c1-t4" headers="r1c1-t4">Security Disabled Account</td>
+<td class="cellalignment71" headers="r17c1-t4 r1c2-t4">When unchecked, the login procedure keeps track of the number of consecutive unsuccessful attempts at logging into the system. If the count reaches three, the login procedure will always fail the password validation to lock the user out. Administrators with rights to user maintenance can reset the login attempts for the user to unlock the account.
+<p>When checked, the login procedure that tracks the consecutive unsuccessful attempts at logging into the system do not apply.</p>
+</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment71" id="r18c1-t4" headers="r1c1-t4">Allow unblinding of cases</td>
+<td class="cellalignment71" headers="r18c1-t4 r1c2-t4">Enables the user to unblind a study case.
+<p>For example, a user without unblinding rights will not see the Study Drug field. A user with unblinding rights sees a yellow Unblind tag next to the Concentration of Product field, and the Broken by Sponsor option in the Blinding Status drop-down list is enabled.</p>
+</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment71" id="r19c1-t4" headers="r1c1-t4">Protect from unblinded Information</td>
+<td class="cellalignment71" headers="r19c1-t4 r1c2-t4">When checked, the user cannot view any unblinded information.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment71" id="r20c1-t4" headers="r1c1-t4">Protect from printing unblinded Information</td>
+<td class="cellalignment71" headers="r20c1-t4 r1c2-t4">When checked, the user cannot print any unblinded information.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment71" id="r21c1-t4" headers="r1c1-t4">Allow locking of cases</td>
+<td class="cellalignment71" headers="r21c1-t4 r1c2-t4">Enables the user to lock/unlock cases.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment71" id="r22c1-t4" headers="r1c1-t4">Allow closing of cases</td>
+<td class="cellalignment71" headers="r22c1-t4 r1c2-t4">Enables the user to close cases.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment71" id="r23c1-t4" headers="r1c1-t4">Route on close case</td>
+<td class="cellalignment71" headers="r23c1-t4 r1c2-t4">Opens a routing dialog when the user closes the case.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment71" id="r24c1-t4" headers="r1c1-t4">Enable Checklist on Route</td>
+<td class="cellalignment71" headers="r24c1-t4 r1c2-t4">By default, this checkbox is selected.
+<p>If this checkbox is not selected, the checklist for the Workflow is not displayed to the user while routing cases, even if the rule that is being used has a checklist.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<div id="ASQHP105" class="sect1"><!-- infolevel="all" infotype="General" --><a id="sthref5"></a>
+<h2 class="sect1">Disabling a User in Argus Safety</h2>
+<ol>
+<li>
+<p>Log into Argus Safety and navigate to the Argus Console.</p>
+</li>
+<li>
+<p>Hover over the Access Management menu and click <span class="bold">Users</span>.</p>
+<p>The Groups and Users screen is displayed.</p>
+</li>
+<li>
+<p>In the left pane, click <span class="bold">Users</span>.</p>
+<p>The list of users appears in the right pane.</p>
+</li>
+<li>
+<p>In the Access tab, select <span class="bold">Account Disabled</span> and click <span class="bold">Save</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<div id="ASQHP106" class="sect1"><a id="sthref6"></a>
+<h2 class="sect1">Documentation Accessibility</h2>
+<p>For information about Oracle's commitment to accessibility, visit the Oracle Accessibility Program website at <code dir="ltr"><a href="http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=docacc">http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=docacc</a></code>.</p>
+<p class="subhead2"><a id="sthref7"></a>Access to Oracle Support</p>
+<p>Oracle customers that have purchased support have access to electronic support through My Oracle Support. For information, visit <code dir="ltr"><a href="http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=info">http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=info</a></code> or visit <code dir="ltr"><a href="http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=trs">http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=trs</a></code> if you are hearing impaired.</p>
+</div>
+<!-- class="sect1" -->
+<a id="sthref8"></a>
+<hr />
+<p>Oracle Argus Safety Quickhelp for Administrators, Release 8.2</p>
+<p>E97700-01</p>
+<p>Copyright &copy; 2018,&nbsp;Oracle and/or its affiliates. All rights reserved.</p>
+<p>This software and related documentation are provided under a license agreement containing restrictions on use and disclosure and are protected by intellectual property laws. Except as expressly permitted in your license agreement or allowed by law, you may not use, copy, reproduce, translate, broadcast, modify, license, transmit, distribute, exhibit, perform, publish, or display any part, in any form, or by any means. Reverse engineering, disassembly, or decompilation of this software, unless required by law for interoperability, is prohibited.</p>
+<p>The information contained herein is subject to change without notice and is not warranted to be error-free. If you find any errors, please report them to us in writing.</p>
+<p>If this is software or related documentation that is delivered to the U.S. Government or anyone licensing it on behalf of the U.S. Government, then the following notice is applicable:</p>
+<p>U.S. GOVERNMENT END USERS: Oracle programs, including any operating system, integrated software, any programs installed on the hardware, and/or documentation, delivered to U.S. Government end users are "commercial computer software" pursuant to the applicable Federal Acquisition Regulation and agency-specific supplemental regulations. As such, use, duplication, disclosure, modification, and adaptation of the programs, including any operating system, integrated software, any programs installed on the hardware, and/or documentation, shall be subject to license terms and license restrictions applicable to the programs. No other rights are granted to the U.S. Government.</p>
+<p>This software or hardware is developed for general use in a variety of information management applications. It is not developed or intended for use in any inherently dangerous applications, including applications that may create a risk of personal injury. If you use this software or hardware in dangerous applications, then you shall be responsible to take all appropriate fail-safe, backup, redundancy, and other measures to ensure its safe use. Oracle Corporation and its affiliates disclaim any liability for any damages caused by use of this software or hardware in dangerous applications.</p>
+<p>Oracle and Java are registered trademarks of Oracle and/or its affiliates. Other names may be trademarks of their respective owners.</p>
+<p>Intel and Intel Xeon are trademarks or registered trademarks of Intel Corporation. All SPARC trademarks are used under license and are trademarks or registered trademarks of SPARC International, Inc. AMD, Opteron, the AMD logo, and the AMD Opteron logo are trademarks or registered trademarks of Advanced Micro Devices. UNIX is a registered trademark of The Open Group.</p>
+<p>This software or hardware and documentation may provide access to or information about content, products, and services from third parties. Oracle Corporation and its affiliates are not responsible for and expressly disclaim all warranties of any kind with respect to third-party content, products, and services unless otherwise set forth in an applicable agreement between you and Oracle. Oracle Corporation and its affiliates will not be responsible for any loss, costs, or damages incurred due to your access to or use of third-party content, products, or services, except as set forth in an applicable agreement between you and Oracle.</p>
+</div>
+<!-- class="letterstyle" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment64">
+<tr>
+<td class="cellalignment71">&nbsp;</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment74">
+<table class="cellalignment67">
+<tr>
+<td class="cellalignment68"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment68"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment68"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment68"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

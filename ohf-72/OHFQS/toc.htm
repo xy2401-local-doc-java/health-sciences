@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>Oracle&reg; Healthcare Foundation Quick Reference Guide for Informatica</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2018-09-06T12:28:11Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Healthcare Foundation Quick Reference Guide for Informatica" />
+<meta name="dcterms.identifier" content="E97795-01" />
+<meta name="dcterms.isVersionOf" content="OHFQS" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"   src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"   src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="alternate" href="OHFQS.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="OHFQS.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="OHFQS.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript"  src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript"  src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript"  src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript"  src="../dcommon/js/foundation.min.js"></script>
+<script type="application/javascript"  src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript"  src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript"  src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="application/javascript"  src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="application/javascript"  src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="application/javascript"  src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="application/javascript"  src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<!-- End Header -->
+<div class="letterstyle">
+<h1>Oracle&reg; Healthcare Foundation</h1>
+<p class="booktitle">Quick Reference Guide for Informatica</p>
+<p><span class="revnumber">Release 7.2</span></p>
+<p class="invpartnumber">E97795-01</p>
+<p class="date">September 2018</p>
+<p>This guide provides the configuration details and the process for data loading.</p>
+<a id="BCFIAFHD"></a>
+<div id="OHFQS101" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Prerequisite</h2>
+<p>Set the database properties according to the Oracle Healthcare Foundation configuration recommendations. For the configuration recommendations, see <span class="italic">Oracle Healthcare Foundation Configuration Guide</span>.</p>
+</div>
+<!-- class="sect1" -->
+<a id="BCFJHFEG"></a>
+<div id="OHFQS102" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Terminology Loaders</h2>
+<a id="BCFFEAAE"></a>
+<div id="OHFQS103" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Configuration File</h3>
+<p>Modify the HLI_ParameterFile.prm, in the <span class="italic">/InfaSrcFiles</span> directory on the Informatica server, to configure the Terminology Loader.</p>
+<div class="inftblruleinformalwidemax">
+<table class="cellalignment70" summary="Sample Configuration Parameters" dir="ltr">
+<thead>
+<tr class="cellalignment65">
+<th class="cellalignment71" id="r1c1-t2">Parameter Name</th>
+<th class="cellalignment71" id="r1c2-t2">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment65">
+<td class="cellalignment72" id="r2c1-t2" headers="r1c1-t2">VAR_SOURCE_FOLDER_NAME</td>
+<td class="cellalignment72" headers="r2c1-t2 r1c2-t2">Location of Terminology Loader data files.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment72" id="r3c1-t2" headers="r1c1-t2">VAR_ARCHIVE_ FOLDER_NAME</td>
+<td class="cellalignment72" headers="r3c1-t2 r1c2-t2">Location where Terminology Loader data files are archived after successful data load.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment72" id="r4c1-t2" headers="r1c1-t2">PARALLEL_DEGREE</td>
+<td class="cellalignment72" headers="r4c1-t2 r1c2-t2">Parallel degree for the session level parallelism.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblruleinformalwidemax" --></div>
+<!-- class="sect2" -->
+<a id="BCFGDJGB"></a>
+<div id="OHFQS104" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">ETL Execution</h3>
+<p>Before executing the ETL, make sure that the Terminology Loaders source files are available in the source directory.</p>
+<p>You can execute the Terminology Loader ETLs by using:</p>
+<ul>
+<li>
+<p><span class="bold">Scheduler</span>: For information, see <a href="#BCFBFFGE">Executing Terminology Loader ETLs Using the Scheduler</a>.</p>
+</li>
+<li>
+<p><span class="bold">Informatica Workflow Manager</span>: For information, see <a href="#BCFEHDFG">Executing Terminology Loader ETLs Using the Informatica Workflow Manager</a>.</p>
+</li>
+</ul>
+<a id="BCFBFFGE"></a>
+<div id="OHFQS105" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Executing Terminology Loader ETLs Using the Scheduler</h4>
+<p>You can schedule ETLs on any enterprise scheduler to match the frequency (daily, weekly, and so on) of the source data acquisition.</p>
+<p>To schedule ETLs:</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You can schedule the default MASTER_EXECUTION_PLAN provided with OHF to execute all Terminology Loader ETLs. Alternatively, you can build a similar MASTER_EXECUTION_PLAN that includes selected ETLs of your choice and schedule that.</div>
+<ol>
+<li>
+<p>Connect to the Terminology Loaders Work Repository, and select <span class="bold">Designer</span>.</p>
+</li>
+<li>
+<p>Expand <span class="bold">EHA_HLI_Integration</span> project &gt; <span class="bold">Global</span> &gt; <span class="bold">Packages</span> &gt; <span class="bold">MASTER_EXECUTION_PLAN</span> &gt; <span class="bold">Scenarios</span></p>
+</li>
+<li>
+<p>Expand the desired scenario.</p>
+</li>
+<li>
+<p>Right-click <span class="bold">Scheduling</span>, and select <span class="bold">New Scheduling</span> to build the schedule.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<a id="BCFEHDFG"></a>
+<div id="OHFQS106" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Executing Terminology Loader ETLs Using the Informatica Workflow Manager</h4>
+<div id="OHFQS107" class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref1"></a>
+<h5 class="sect4">Executing a Single Terminology Loader ETL</h5>
+<ol>
+<li>
+<p>Open the Workflow Manager and connect to the Warehouse Integration Loader repository.</p>
+</li>
+<li>
+<p>Expand the <span class="bold">HLI_MASTER_DATA_MANAGEMENT</span> folder &gt; <span class="bold">Workflows</span>.</p>
+</li>
+<li>
+<p>Right-click the workflow to execute, and select <span class="bold">Start Workflow</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect4" -->
+<div id="OHFQS108" class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref2"></a>
+<h5 class="sect4">Executing all Terminology Loader ETLs</h5>
+<ol>
+<li>
+<p>Open the Workflow Manager and connect to the Warehouse Integration Loader repository.</p>
+</li>
+<li>
+<p>Expand the <span class="bold">HLI_MASTER_DATA_MANAGEMENT</span> folder &gt; <span class="bold">Workflows</span>.</p>
+</li>
+<li>
+<p>Right-click <span class="bold">wf_SIL_HLI_MASTER_LOAD</span>, and select <span class="bold">Start Workflow</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect4" --></div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BCFDAFGE"></a>
+<div id="OHFQS109" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">System Monitoring and Error Handling</h3>
+<ul>
+<li>
+<p>ETL execution error logging:</p>
+<p>When a particular source record fails during data processing, and gets rejected, the ETL logs this exception into the HDI_HLI_ETL_EXCPTN_LOG_G error table. Every exception logged has a message and description. If any session fails, check the Informatica session log.</p>
+</li>
+<li>
+<p>ETL execution error correction:</p>
+<p>ETLs do not fail for any data issues if the file structure is maintained. If an ETL fails for any database related issues, correct the issue, note the step that failed in the wf_SIL_HLI_MASTER_LOAD workflow, and follow the appropriate instructions:</p>
+<ul>
+<li>
+<p>Failed in the HLI_Command task - Check the HLI_Archive.log file in the $PMSourceFileDir directory.</p>
+</li>
+<li>
+<p>Failed before or in the HLI_Command task - Run the <span class="bold">wf_SIL_HLI_MASTER_LOAD</span> workflow.</p>
+</li>
+<li>
+<p>Failed after the HLI archive - In the wf_SIL_HLI_ MASTER_LOAD workflow, right-click <span class="bold">wklt_SIL_HLI_FILE_TO_STAGE_LOAD</span> worklet, and select <span class="bold">Start Workflow From Task</span>.</p>
+</li>
+<li>
+<p>Failed after the worklet wklt_SIL_HLI_FILE_TO_STAGE_LOAD - Run the failed ETL and remaining ETLs individually according to load order.</p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BCFGGDEB"></a>
+<div id="OHFQS110" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Warehouse Integration Loaders</h2>
+<p>The Warehouse Integration Loaders include a comprehensive set of ETLs that provide a data integration solution to process data from diverse source systems through the Interface Tables to the Healthcare Data Warehouse.</p>
+<a id="BCFGEDAE"></a>
+<div id="OHFQS111" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Prerequisites</h3>
+<div id="OHFQS112" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref3"></a>
+<h4 class="sect3">Update Global Settings</h4>
+<p>Review and update the following configurations in the HDI_ETL_GLBL_PARAM_G table of the HMC schema:</p>
+<div class="inftblruleinformalwidemax">
+<table class="cellalignment70" summary="Sample Global Settings" dir="ltr">
+<thead>
+<tr class="cellalignment65">
+<th class="cellalignment71" id="r1c1-t4">Parameter Name</th>
+<th class="cellalignment71" id="r1c2-t4">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment65">
+<td class="cellalignment72" id="r2c1-t4" headers="r1c1-t4">ALLOW_INVALID_CODE</td>
+<td class="cellalignment72" headers="r2c1-t4 r1c2-t4">Controls the way data is loaded to the target when the source code is not resolved against HDM_CD_REPOSITORY.
+<p><span class="bold">Yes</span> - Loads the record to the target with an NAV value for the HDM code attributes.</p>
+<p><span class="bold">No</span> - Rejects the record.</p>
+</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment72" id="r3c1-t4" headers="r1c1-t4">ALLOW_INVALID_REFERENCES</td>
+<td class="cellalignment72" headers="r3c1-t4 r1c2-t4">Controls the way data is loaded to the target when the source reference is not resolved against the HDM table. This is applicable for optional references only.
+<p><span class="bold">Yes</span> - Loads the record to the target with an NAV value for the HDM reference attributes.</p>
+<p><span class="bold">No</span> - Rejects the record.</p>
+</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment72" id="r4c1-t4" headers="r1c1-t4">VERSIONING</td>
+<td class="cellalignment72" headers="r4c1-t4 r1c2-t4">Applicable for the incremental ETLs only when a changed record is from the source system.
+<p><span class="bold">Yes</span> - Creates a new version of the record.</p>
+<p><span class="bold">No</span> - Overwrites the existing record.</p>
+</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment72" id="r5c1-t4" headers="r1c1-t4">RULE_IDS_TO_BE_REPROCESSED</td>
+<td class="cellalignment72" headers="r5c1-t4 r1c2-t4">List of Rule IDs, separated by commas, to be automatically reprocessed if the ETL fails. For example, -9998, -9993. NULL indicates no rules should be reprocessed.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment72" id="r6c1-t4" headers="r1c1-t4">MAX_REPROCESS_CNT</td>
+<td class="cellalignment72" headers="r6c1-t4 r1c2-t4">Number of times a record can be reprocessed before rejecting it. You must configure this in conjunction with RULE_IDS_TO_BE_REPROCESSED.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment72" id="r7c1-t4" headers="r1c1-t4">PARALLEL_DEGREE</td>
+<td class="cellalignment72" headers="r7c1-t4 r1c2-t4">Parallel degree for the session level parallelism.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblruleinformalwidemax" --></div>
+<!-- class="sect3" -->
+<div id="OHFQS113" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref4"></a>
+<h4 class="sect3">Configure Rules and Terminology</h4>
+<ul>
+<li>
+<p>Review and enable or disable the default data validation rules in the HDI_ETL_RL_G table of the HMC schema.</p>
+</li>
+<li>
+<p>Review the seeded terminology standardization configurations in the HDI_ATRB_CD_SYS_LKUP_G and HDM_ATRB_CD_SYS_LKUP_G tables in the HDI and HDM schemas respectively.</p>
+<p>You must disable the seeded configurations if the terminology standardization feature is not used or the seeded configurations are not relevant.</p>
+</li>
+<li>
+<p>Review the seeded terminology validation configurations in the HDI_ATRB_CD_TYP_LKUP_G and HDM_ATRB_CD_TYP_LKUP_G tables in the HDI and HDM schemas respectively.</p>
+<p>You must disable the seeded configurations if the terminology validation feature is not used or the seeded configurations are not relevant.</p>
+</li>
+<li>
+<p>(Optional) Configure the late arriving data rules in the HDI_RL_REFRNTL_INTGRTY_G table in the HMC schema.</p>
+</li>
+</ul>
+<p>For more information, see <span class="italic">Oracle Healthcare Foundation Administrator's Guide</span>.</p>
+</div>
+<!-- class="sect3" -->
+<div id="OHFQS114" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref5"></a>
+<h4 class="sect3">Schedule Load Plans</h4>
+<p>A load plan is a group of related workflows. The load plans created in Warehouse Integration Loader consists of multiple command tasks grouped together as per the dependencies, which executes the workflows. You can modify the load plans to disable, delete, insert, or modify the command task. When you modify the load plan, make sure you delete or add dependencies between workflows.</p>
+<div class="inftblruleinformalwidemax">
+<table class="cellalignment70" summary="Load Plans" dir="ltr">
+<thead>
+<tr class="cellalignment65">
+<th class="cellalignment71" id="r1c1-t5">Load Plan</th>
+<th class="cellalignment71" id="r1c2-t5">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment65">
+<td class="cellalignment72" id="r2c1-t5" headers="r1c1-t5">wf_WIL_MDM_LOAD_PLAN</td>
+<td class="cellalignment72" headers="r2c1-t5 r1c2-t5">Includes the master data, rules, and configuration ETLs.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment72" id="r3c1-t5" headers="r1c1-t5">wf_WIL_INITIAL_LOAD_PLAN</td>
+<td class="cellalignment72" headers="r3c1-t5 r1c2-t5">Includes the HCD or CDM specific ETLs for the initial load in the Party Not Available mode.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment72" id="r4c1-t5" headers="r1c1-t5">wf_WIL_INCREMENTAL_LOAD_PLAN</td>
+<td class="cellalignment72" headers="r4c1-t5 r1c2-t5">Includes the HCD or CDM specific ETLs for the incremental load in the Party Not Available mode.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment72" id="r5c1-t5" headers="r1c1-t5">wf_WIL_INITIAL_LOAD_PLAN_PARTY_AVLBL</td>
+<td class="cellalignment72" headers="r5c1-t5 r1c2-t5">Includes the HCD or CDM specific ETLs for the initial load in the Party Available mode.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment72" id="r6c1-t5" headers="r1c1-t5">wf_WIL_INCREMENTAL_LOAD_PLAN_PARTY_AVLBL</td>
+<td class="cellalignment72" headers="r6c1-t5 r1c2-t5">Includes the HCD or CDM specific ETLs for the incremental load in the Party Available mode.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblruleinformalwidemax" -->
+<p>You can schedule ETLs on any enterprise scheduler to match the frequency (daily, weekly, and so on) of the source data acquisition.</p>
+<p>Before executing or scheduling the load plan:</p>
+<ul>
+<li>
+<p>Create the following environment variables, and associate them with the integration service.</p>
+<ul>
+<li>
+<p><span class="bold">PMUSER</span>: Repository user who executes the workflow.</p>
+</li>
+<li>
+<p><span class="bold">PMPASS</span>: Encrypted repository user password.</p>
+</li>
+</ul>
+<p>Restart the integration service for the variables to take effect.</p>
+</li>
+<li>
+<p>Assign the integration service to load plans.</p>
+</li>
+</ul>
+<p>You can schedule any of the load plans as per your execution frequency.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BCFHIHEI"></a>
+<div id="OHFQS115" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Setting Up the Environment for the First ETL Execution</h3>
+<ul>
+<li>
+<p>Gather statistics on all Interface Tables.</p>
+</li>
+<li>
+<p>Disable the automatic statistics gathering option on the HDM schema.</p>
+</li>
+<li>
+<p>Delete and lock the statistics on the HDM schema.</p>
+</li>
+<li>
+<p>Set the parallel degree in the HDI_ETL_GLBL_PARAM_G table.</p>
+</li>
+<li>
+<p>Review and modify the global parameters.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="BCFEDEDF"></a>
+<div id="OHFQS116" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Executing Master Data Management ETLs</h3>
+<p>The Master Data Management (MDM) ETLs load data to the MDM tables, such as User, Data Source, Code System, Code Repository, Cross Map, and other Code related tables. The MDM ETLs are grouped under the DI_MASTER_DATA_MANAGEMENT folder in the Warehouse Integration Loader repository.</p>
+<p>You can choose to run the MDM ETLs as needed only when there is a change.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BCFBABCC"></a>
+<div id="OHFQS117" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Executing Rules and Configurations ETLs</h3>
+<p>You can create late arriving data rules, data validation rules, and terminology configurations when they are needed, and run the ETLs accordingly. These ETLs are grouped under the DI_MASTER_DATA_MANAGEMENT folder in the Warehouse Integration Loader repository.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BCFDABDA"></a>
+<div id="OHFQS118" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Executing the Initial Load ETLs for Transaction Entities</h3>
+<p>The initial load ETLs process historical data and perform data loading in an optimal way.</p>
+<div id="OHFQS119" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref6"></a>
+<h4 class="sect3">Setting Up the Environment</h4>
+<ol>
+<li>
+<p>Drop the foreign keys according to the guidelines in the <span class="italic">Oracle Healthcare Foundation Administrator's Guide</span>.</p>
+</li>
+<li>
+<p>Make sure that the HDI data load is complete.</p>
+</li>
+<li>
+<p>Make sure that the source data does not contain multiple versions of the same record. The initial load ETLs cannot handle multiple versions.</p>
+</li>
+<li>
+<p>Process any additional rules and configurations, and load the master data tables to the HDM tables.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<div id="OHFQS120" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref7"></a>
+<h4 class="sect3">Executing ETLs</h4>
+<p>When you use an enterprise scheduler, ETLs start automatically at the scheduled time or after the HDI data load is complete. You can monitor the progress of ETLs through the PowerCenter Workflow Monitor.</p>
+</div>
+<!-- class="sect3" -->
+<div id="OHFQS121" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref8"></a>
+<h4 class="sect3">Restarting Failed ETLs</h4>
+<p>When an ETL fails during the data loading process:</p>
+<ol>
+<li>
+<p>Clean up the partially loaded data manually.</p>
+<ul>
+<li>
+<p>When a target table (for example, HDM_ENC) is loaded by a single source table (for example, HDI_ENC), use the following query to clean up the partially loaded HDM data.</p>
+<p>For example,</p>
+<p><code dir="ltr">DELETE FROM HDM_ENC WHERE REQUEST_ID= (SELECT REQUEST_ID FROM HMC.HDI_ETL_LOAD_DT_G WHERE WRK_FLOW_NM='wf_SIL_DI_HDI_ENC');</code></p>
+<p><code dir="ltr">COMMIT;</code></p>
+</li>
+<li>
+<p>When a target table (for example, HDM_PRTY) is loaded by multiple sources (for example, HDI_PT, HDI_SVCPRV, and so on), delete the partially loaded data of the failed ETL. Assuming that the HDI_PT ETL has processed the data to the HDM tables but the HDI_SVCPRV ETL failed while processing data to HDM_PRTY, delete the partially data loaded by the HDI_SVCPRV ETL.</p>
+<p>For example,</p>
+<p><code dir="ltr">DELETE FROM HDM_PRTY WHERE INTEGRATION_ID LIKE 'SVCRPV%' AND REQUEST_ID= (SELECT REQUEST_ID FROM HMC.HDI_ETL_LOAD_DT_G WHERE WRK_FLOW_NM='wf_SIL_DI_HDI_SVCPRV');</code></p>
+<p><code dir="ltr">COMMIT;</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Restart the ETL.</p>
+<p>Each workflow consists of following structure:</p>
+<pre dir="ltr">
+s_SIL_DI_Create_Rule_Param_File [Start]
+                   3 tasks to capture and update load summary details
+s_SIL_DI_&lt;HDI table&gt;_SQLVALID
+                   3 tasks to capture and update load summary details
+s_SIL_DI_&lt;HDI Table&gt;_&lt;HDM Table&gt; [Master session]
+-&gt; Point 1
+                   3 tasks to capture and update load summary details
+s_SIL_DI_&lt;HDI Table&gt;_&lt;HDM Table&gt; [Child session 1]
+-&gt; Point 2
+                   3 tasks to capture and update load summary details
+        s_SIL_DI_&lt;HDI Table&gt;_&lt;HDM Table&gt; [Child session 2]
+-&gt;      Point 3
+                           3 tasks to capture and update load summary details
+s_SIL_DI_HDI_ETL_LOAD_DT_G [Load Date]
+-&gt;      Point 4
+                   3 tasks to capture and update load summary details
+s_SIL_DI_HDI_ETL_EXCPTN_LOG_TMP [Exception]
+-&gt; Point 5 [End]
+                   3 tasks to capture and update load summary details
+</pre></li>
+</ol>
+<div class="inftblruleinformalwidemax">
+<table class="cellalignment70" summary="When ETL Fails" dir="ltr">
+<thead>
+<tr class="cellalignment65">
+<th class="cellalignment71" id="r1c1-t6">When ETL fails...</th>
+<th class="cellalignment71" id="r1c2-t6">What to do:</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment65">
+<td class="cellalignment72" id="r2c1-t6" headers="r1c1-t6">Between Start and Point 1</td>
+<td class="cellalignment72" headers="r2c1-t6 r1c2-t6">Restart the workflow from the beginning.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment72" id="r3c1-t6" headers="r1c1-t6">Between Child Session 1 and Point 2</td>
+<td class="cellalignment72" headers="r3c1-t6 r1c2-t6">Restart the workflow from the Child Session 1.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment72" id="r4c1-t6" headers="r1c1-t6">Between Child Session 2 and Point 3</td>
+<td class="cellalignment72" headers="r4c1-t6 r1c2-t6">Restart the workflow from the Child Session 2.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment72" id="r5c1-t6" headers="r1c1-t6">Between Load Date and Point 4</td>
+<td class="cellalignment72" headers="r5c1-t6 r1c2-t6">Restart the workflow from the Load Date.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment72" id="r6c1-t6" headers="r1c1-t6">Between Exception and End</td>
+<td class="cellalignment72" headers="r6c1-t6 r1c2-t6">Restart the workflow from the Exception.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment72" id="r7c1-t6" headers="r1c1-t6">At assignment or command task</td>
+<td class="cellalignment72" headers="r7c1-t6 r1c2-t6">Create a parameter file under the <span class="bold">$PMSourceFileDir/$PMFolderName/</span> directory, and restart the workflow from the subsequent session that updates the load summary, or directly update the job details in the JB_EXCTN table.
+<p>The following is the sample parameter file (when a_enc_hdm_enc or c_enc_hdm_enc fails):</p>
+<pre dir="ltr">
+Name: s_enc_hdm_enc_stat.prm
+[Global]
+$$workflow_name=wf_SIL_DI_HDI_ENC
+$$session_name=s_SIL_DI_HDI_ENC_HDM_ENC
+$$session_status=SUCCEEDED
+$$source_success_count=15
+$$target_success_count=12
+</pre>
+<p>where, <code dir="ltr">$$source_success_count</code> and <code dir="ltr">$$target_success_count</code> are the sum of records across all source and target instances, and read from Workflow Monitor for the session under consideration.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblruleinformalwidemax" -->
+<ul>
+<li>
+<p>, Create a parameter file under the <span class="bold">$PMSourceFileDir/$PMFolderName/</span> directory, and restart the workflow from the subsequent session that updates the load summary, or directly update the job details in the JB_EXCTN table.</p>
+<p>The following is the sample parameter file (when a_enc_hdm_enc or c_enc_hdm_enc fails):</p>
+<pre dir="ltr">
+Name: s_enc_hdm_enc_stat.prm
+[Global]
+$$workflow_name=wf_SIL_DI_HDI_ENC
+$$session_name=s_SIL_DI_HDI_ENC_HDM_ENC
+$$session_status=SUCCEEDED
+$$source_success_count=15
+$$target_success_count=12
+</pre>
+<p>where, <code dir="ltr">$$source_success_count</code> and <code dir="ltr">$$target_success_count</code> are the sum of records across all source and target instances, and read from Workflow Monitor for the session under consideration.</p>
+</li>
+</ul>
+<p>For multiple sessions at the same level, restart the ETL from the level task from where the multiple sessions originate.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BCFHBEAG"></a>
+<div id="OHFQS122" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Executing the Incremental Load ETLs for the Transaction Entities</h3>
+<p>The incremental ETLs are grouped under the DI_HDWF_INCREMENTAL_LOAD and DI_HDWF_INCREMENTAL_LOAD_PARTY_AVAILABLE folders in the Warehouse Integration Loaders repository.</p>
+<div id="OHFQS123" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref9"></a>
+<h4 class="sect3">Setting Up the Environment</h4>
+<ul>
+<li>
+<p>For the first incremental load, create the foreign key indexes on the HDM table according to guidelines in the <span class="italic">Oracle Healthcare Foundation Administrator's Guide</span>.</p>
+</li>
+<li>
+<p>Schedule an automatic statistics gathering for the HDM and HDI schema using the stale option.</p>
+</li>
+<li>
+<p>Make sure that the HDI data load is complete.</p>
+</li>
+<li>
+<p>Process necessary rules and configurations, and load the master data tables to the HDM tables.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<div id="OHFQS124" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref10"></a>
+<h4 class="sect3">Running ETLs</h4>
+<p>When you use an enterprise scheduler, ETLs start automatically at the scheduled time or after the HDI data load is complete. You can monitor the progress of ETLs through the PowerCenter Workflow Monitor.</p>
+</div>
+<!-- class="sect3" -->
+<div id="OHFQS125" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref11"></a>
+<h4 class="sect3">Restarting Failed ETLs</h4>
+<ol>
+<li>
+<p>Correct the partially loaded data.</p>
+<p>When an incremental ETL fails, correct the partially loaded data in the HDM schema before restarting the ETL. The Warehouse Integration Loaders provide a common ETL, wf_m_SIL_DI_Restartability, which corrects the HDM data. Before running this ETL, configure the failed session in the HDI_ETL_GLBL_PARAM_G table under the parameter RESTART_SESSION.</p>
+<p><span class="bold">Sample Update Command:</span></p>
+<p><code dir="ltr">UPDATE &lt;HMC SCHEMA NAME&gt;.HDI_ETL_GLBL_PARAM_G SET PARAM_ VAL ='&lt;Failed Session Name&gt;'WHERE PARAM_NM='RESTART_SESSION';</code></p>
+<p><code dir="ltr">COMMIT;</code></p>
+<p>When multiple sessions fail, correct the data of each failed HDM table by running the <span class="bold">wf_m_SIL_DI_Restartability</span> ETL for each failed session.</p>
+<p>Only master and child sessions loads data to the HDM tables, and other sessions are used for tracking date, processing rules, handling exceptions, and so on.</p>
+</li>
+<li>
+<p>Restart the ETL</p>
+<p>Each workflow consists of following structure:</p>
+<pre dir="ltr">
+s_SIL_DI_Create_Rule_Param_File [Start]
+                   3 tasks to capture and update load summary details
+s_SIL_DI_&lt;HDI table&gt;_SQLVALID
+                   3 tasks to capture and update load summary details
+s_SIL_DI_&lt;HDI Table&gt;_&lt;HDM Table&gt; [Master session]
+-&gt; Point 1
+                3 tasks to capture and update load summary details
+s_SIL_DI_&lt;HDI Table&gt;_&lt;HDM Table&gt; [Child session 1]
+-&gt;      Point 2
+                   3 tasks to capture and update load summary details
+s_SIL_DI_&lt;HDI Table&gt;_&lt;HDM Table&gt; [Child session 2]
+-&gt; Point 3
+                3 tasks to capture and update load summary details
+s_SIL_DI_HDI_ETL_LOAD_DT_G [Load Date]
+-&gt; Point 4
+                3 tasks to capture and update load summary details
+s_SIL_DI_HDI_ETL_EXCPTN_LOG_TMP [Exception]
+-&gt; Point 5 [End]
+                   3 tasks to capture and update load summary details
+</pre>
+<p>When the ETL fails:</p>
+<ul>
+<li>
+<p>Between Exception and End: Restart the workflow from the Exception.</p>
+<p>For multiple sessions at the same level, restart the ETL from the level task from where the multiple sessions originate.</p>
+</li>
+</ul>
+</li>
+</ol>
+<div class="inftblruleinformalwidemax">
+<table class="cellalignment70" summary="When ETL Fails" dir="ltr">
+<thead>
+<tr class="cellalignment65">
+<th class="cellalignment71" id="r1c1-t7">When ETL fails...</th>
+<th class="cellalignment71" id="r1c2-t7">What to do:</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment65">
+<td class="cellalignment72" id="r2c1-t7" headers="r1c1-t7">Between Start and Point 1</td>
+<td class="cellalignment72" headers="r2c1-t7 r1c2-t7">Restart the workflow from the beginning.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment72" id="r3c1-t7" headers="r1c1-t7">Between Child Session 1 and Point 2</td>
+<td class="cellalignment72" headers="r3c1-t7 r1c2-t7">Restart the workflow from the Child Session 1.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment72" id="r4c1-t7" headers="r1c1-t7">Between Child Session 2 and Point 3</td>
+<td class="cellalignment72" headers="r4c1-t7 r1c2-t7">Restart the workflow from the Child Session 2.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment72" id="r5c1-t7" headers="r1c1-t7">Between Load Date and Point 4</td>
+<td class="cellalignment72" headers="r5c1-t7 r1c2-t7">Restart the workflow from the Load Date.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment72" id="r6c1-t7" headers="r1c1-t7">Between Exception and End</td>
+<td class="cellalignment72" headers="r6c1-t7 r1c2-t7">Restart the workflow from the Exception.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblruleinformalwidemax" --></div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BCFHIBEE"></a>
+<div id="OHFQS126" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Monitoring and Logging</h3>
+<p>You can monitor the progress of the ETL execution through the PowerCenter Workflow Monitor.</p>
+<a id="BABDAEBA"></a>
+<div id="OHFQS127" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Load Summary</h4>
+<p>The Warehouse Integration Loaders capture the ETL execution summary in the JB table of the enterprise schema and the EXCPTN table.</p>
+<p>The execution statistics includes component (Warehouse Integration Loaders and Application Toolkit), job group name (package name), job name (interface name), job type (initial or incremental), job start date, job end data, job status (running, succeeded, or failed), source record count, and target record count.</p>
+<p>The exception statistics includes exception type (reject, reprocess, or suspend) and the exception count.</p>
+</div>
+<!-- class="sect3" -->
+<div id="OHFQS128" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref12"></a>
+<h4 class="sect3">ETL Exceptions</h4>
+<p>The ETL logs any record that fails for mandatory rules, data validation rules, late arriving data rules, or data quality rules during the data loading process, in the HDI_ETL_EXCPTN_LOG_TMP table in the HMC schema.</p>
+<p>Any reprocessing rules, the records that can be reprocessed in the subsequent loads are retained in the HDI_ETL_EXCPTN_LOG_TMP table, and all other exceptions are moved to the HDI_ETL_EXCPTN_LOG_G table.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BCFFEAEI"></a>
+<div id="OHFQS129" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Application Toolkit Loaders</h2>
+<p>The Application Toolkit Loaders include a comprehensive set of ETLs that provide a data integration solution to process data from Healthcare Data Warehouse to Healthcare Common Data mart (HCD).</p>
+<a id="BCFGAJAG"></a>
+<div id="OHFQS130" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Updating Configurations</h3>
+<ul>
+<li>
+<p>Review and update the configurations in the HCD_ETL_ENTY_SELCTN_PARAM_G table of the HMC schema as needed.</p>
+<div class="inftblruleinformalwidemax">
+<table class="cellalignment70" summary="Configuration Details" dir="ltr">
+<thead>
+<tr class="cellalignment65">
+<th class="cellalignment71" id="r1c1-t8">Parameter Name</th>
+<th class="cellalignment71" id="r1c2-t8">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment65">
+<td class="cellalignment72" id="r2c1-t8" headers="r1c1-t8">MSTR_ENTY_NM</td>
+<td class="cellalignment72" headers="r2c1-t8 r1c2-t8">Entity which uses the parameterized attribute value.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment72" id="r3c1-t8" headers="r1c1-t8">ATTRIB_NM</td>
+<td class="cellalignment72" headers="r3c1-t8 r1c2-t8">Name of the attribute to be parameterized.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment72" id="r4c1-t8" headers="r1c1-t8">ATTRIB_VAL</td>
+<td class="cellalignment72" headers="r4c1-t8 r1c2-t8">Value of the parameterized attribute.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment72" id="r5c1-t8" headers="r1c1-t8">ENTERPRISE_ID</td>
+<td class="cellalignment72" headers="r5c1-t8 r1c2-t8">Unique identifier for an enterprise in a multi-enterprise environment.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblruleinformalwidemax" --></li>
+<li>
+<p>Set the degree of parallelism in the HCD_GLBL_PARAM_G table in the HMC schema to parallelize the SQL executions.</p>
+<div class="inftblruleinformalwidemax">
+<table class="cellalignment70" summary="Degree of Parallelism" dir="ltr">
+<thead>
+<tr class="cellalignment65">
+<th class="cellalignment71" id="r1c1-t9">Parameter Name</th>
+<th class="cellalignment71" id="r1c2-t9">Default Value</th>
+<th class="cellalignment71" id="r1c3-t9">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment65">
+<td class="cellalignment72" id="r2c1-t9" headers="r1c1-t9">PARALLEL_QUERY_NO</td>
+<td class="cellalignment72" headers="r2c1-t9 r1c2-t9">1</td>
+<td class="cellalignment72" headers="r2c1-t9 r1c3-t9">This parameter is used for performance enhancement for the initial load ETLs.
+<p>Set this value to an exponential value of 2, that is, 1, 2, 4, 8, 16, and so on.</p>
+<p>For Exadata environment, set this value to 16 or 32. For non-Exadata environment, set this value to 2 or 4.</p>
+</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment72" id="r3c1-t9" headers="r1c1-t9">HDWF_SCHEMA_NAME</td>
+<td class="cellalignment72" headers="r3c1-t9 r1c2-t9">HDM</td>
+<td class="cellalignment72" headers="r3c1-t9 r1c3-t9">Specifies the Healthcare Data Warehouse schema name.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment72" id="r4c1-t9" headers="r1c1-t9">HMC_SCHEMA_NAME</td>
+<td class="cellalignment72" headers="r4c1-t9 r1c2-t9">HMC</td>
+<td class="cellalignment72" headers="r4c1-t9 r1c3-t9">Specifies the ETL configuration schema name.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment72" id="r5c1-t9" headers="r1c1-t9">PROXY_USER_ENABLED</td>
+<td class="cellalignment72" headers="r5c1-t9 r1c2-t9">NO</td>
+<td class="cellalignment72" headers="r5c1-t9 r1c3-t9">Indicates whether the Application Toolkit ETLs have to be executed through a proxy user. Update this parameter to <span class="italic">YES</span> if you want ETLs to be executed through a proxy user.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment72" id="r6c1-t9" headers="r1c1-t9">HCD_SCHEMA_NAME</td>
+<td class="cellalignment72" headers="r6c1-t9 r1c2-t9">HCD</td>
+<td class="cellalignment72" headers="r6c1-t9 r1c3-t9">Specifies the HCD schema name.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblruleinformalwidemax" --></li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="BCFEJEHJ"></a>
+<div id="OHFQS131" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Scheduling Workflows</h3>
+<p>Identify the list of HCD tables and the corresponding ETLs that process data as needed. Follow an optimal load sequence considering the ETL dependencies, data volume, and resource availability.</p>
+<p>You can schedule ETLs on any enterprise scheduler to match the frequency (daily, weekly, and so on) of the source data acquisition.</p>
+<p>You can create multiple ETL groups based on the frequency of data changes to be processed in a sequence.</p>
+<ul>
+<li>
+<p>ETL - Initial</p>
+</li>
+<li>
+<p>ETL - Incremental</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="BABFABBB"></a>
+<div id="OHFQS132" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Scheduling Load Plans</h3>
+<p>The load plan created in HCD consists of multiple command tasks grouped together as per the dependencies, which executes the workflows. You can modify the load plans to disable, delete, insert, or modify the command task. When you modify, make sure you delete or add dependencies between workflows.</p>
+<div class="inftblruleinformalwidemax">
+<table class="cellalignment70" summary="Load Plans" dir="ltr">
+<thead>
+<tr class="cellalignment65">
+<th class="cellalignment71" id="r1c1-t10">Load Plan</th>
+<th class="cellalignment71" id="r1c2-t10">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment65">
+<td class="cellalignment72" id="r2c1-t10" headers="r1c1-t10">wf_HCD_HIERARCHY_LOAD_PLAN</td>
+<td class="cellalignment72" headers="r2c1-t10 r1c2-t10">Includes the hierarchy ETLs.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment72" id="r3c1-t10" headers="r1c1-t10">wf_HCD_INITIAL_LOAD_PLAN</td>
+<td class="cellalignment72" headers="r3c1-t10 r1c2-t10">Includes the HCD ETLs for the initial or bulk load.</td>
+</tr>
+<tr class="cellalignment65">
+<td class="cellalignment72" id="r4c1-t10" headers="r1c1-t10">wf_HCD_INCREMENTAL_LOAD_PLAN</td>
+<td class="cellalignment72" headers="r4c1-t10 r1c2-t10">Includes the HCD ETLs for the incremental load.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblruleinformalwidemax" -->
+<p>Before executing or scheduling the load plan:</p>
+<ul>
+<li>
+<p>Create the following environment variables with the help of an administrator, and associate them with the integration service:</p>
+<ul>
+<li>
+<p><span class="bold">PMUSER</span>: Repository user who executes the workflow.</p>
+</li>
+<li>
+<p><span class="bold">PMPASS</span>: Encrypted repository user password.</p>
+</li>
+</ul>
+<p>Restart the integration service for the variables to take effect.</p>
+</li>
+<li>
+<p>Assign the integration service to load plans.</p>
+</li>
+</ul>
+<p>You can schedule any of the load plans as per your execution frequency.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BCFDFGHB"></a>
+<div id="OHFQS133" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Executing ETLs Using Informatica Workflow Manager</h3>
+<ol>
+<li>
+<p>Open the Workflow Manager and connect to the HCD Loader repository.</p>
+</li>
+<li>
+<p>Expand the required folder.</p>
+</li>
+<li>
+<p>Expand <span class="bold">Workflows</span>.</p>
+</li>
+<li>
+<p>Right-click the workflow to execute, and select <span class="bold">Start Workflow</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BCFIBIHI"></a>
+<div id="OHFQS134" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Setting Up the Environment for the First ETL Execution</h3>
+<ul>
+<li>
+<p>Gather statistics on all HDM tables.</p>
+</li>
+<li>
+<p>Disable the automatic statistics gathering option on the HDM schema.</p>
+</li>
+<li>
+<p>Delete and lock the statistics on the HCD schema.</p>
+</li>
+<li>
+<p>Set the parallel degree in the HDI_ETL_GLBL_PARAM_G table.</p>
+</li>
+<li>
+<p>Review and modify the global parameters.</p>
+</li>
+<li>
+<p>Create a folder <span class="bold">HCD_HIERCHARY_LOAD</span> under the &lt;infa_home&gt;/server/infa_shared/SrcFiles/, and provide read and write permissions by executing the <code dir="ltr">chmod 755</code> command.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="BCFHDDAB"></a>
+<div id="OHFQS135" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Executing Initial Load ETLs</h3>
+<p>The initial load ETLs process historical data and perform data loading in an optimal way.</p>
+<div id="OHFQS136" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref13"></a>
+<h4 class="sect3">Setting Up the Environment</h4>
+<ul>
+<li>
+<p>Drop the foreign keys according to guidelines in the <span class="italic">Oracle Healthcare Foundation Administrator's Guide</span>.</p>
+</li>
+<li>
+<p>Make sure that the HDM data load is complete.</p>
+</li>
+<li>
+<p>Make sure that the selection or inline code configurations are valid in the HCD_ETL_ENTY_SELCTN_PARAM_G entity.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<div id="OHFQS137" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref14"></a>
+<h4 class="sect3">Running ETLs</h4>
+<p>When you use an enterprise scheduler, ETLs start automatically at the scheduled time or after the HDM data load is complete. You can monitor the progress of ETLs through the PowerCenter Workflow Monitor.</p>
+</div>
+<!-- class="sect3" -->
+<div id="OHFQS138" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref15"></a>
+<h4 class="sect3">Restarting failed ETLs</h4>
+<p>When an ETL fails during the data loading process, rerun the workflow from the failed session.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BCFFCAII"></a>
+<div id="OHFQS139" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Executing Incremental Load ETLs</h3>
+<p>The incremental ETLs process the data acquired on a regular basis.</p>
+<div id="OHFQS140" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref16"></a>
+<h4 class="sect3">Setting Up the Environment</h4>
+<ol>
+<li>
+<p>For the first incremental load, create the foreign key indexes on the HDM table according to guidelines in the <span class="italic">Oracle Healthcare Foundation Administrator's Guide</span>.</p>
+</li>
+<li>
+<p>Schedule an automatic statistics gathering for the HDM and HCD schema using the stale option.</p>
+</li>
+<li>
+<p>Make sure that the HDM data load is complete.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<div id="OHFQS141" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref17"></a>
+<h4 class="sect3">Executing ETLs</h4>
+<p>When you use an enterprise scheduler, ETLs start automatically at the scheduled time or after the HDM data load is complete. You can monitor the progress of ETLs through the PowerCenter Workflow Monitor.</p>
+</div>
+<!-- class="sect3" -->
+<div id="OHFQS142" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref18"></a>
+<h4 class="sect3">Restarting Failed ETLs</h4>
+<p>When an ETL fails during the data loading process, rerun the workflow from the failed session.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BCFDJFAD"></a>
+<div id="OHFQS143" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Monitoring and Logging</h3>
+<p>You can monitor the progress of the ETL execution through the PowerCenter Workflow Monitor.</p>
+<p>For the load summary details, see <a href="#BABDAEBA">Load Summary</a>.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BCFBIBGI"></a>
+<div id="OHFQS144" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Cohort Data Mart Loaders</h2>
+<a id="BCFFIGHF"></a>
+<div id="OHFQS145" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Updating Configurations</h3>
+<ul>
+<li>
+<p>Review and update the configurations in the C_LOAD_PARAM table of the HDM schema as needed.</p>
+</li>
+<li>
+<p>Set the degree of parallelism in the C_LOAD_CONFIG table in the CDM schema to parallelize the SQL executions.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="BCFDAJEG"></a>
+<div id="OHFQS146" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Scheduling Workflows</h3>
+<p>Use the following workflows in the CDM_ETL folder to load data into CDM:</p>
+<ul>
+<li>
+<p>wf_CDM_INITIAL_LOAD_PLAN - Use this workflow in the scheduler for full or initial load execution.</p>
+</li>
+<li>
+<p>wf_CDM_INCREMENTAL_LOAD_PLAN - Use this workflow in the scheduler for incremental load execution.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="BCFGBHFF"></a>
+<div id="OHFQS147" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Executing ETLs Using Informatica Workflow Manager</h3>
+<ol>
+<li>
+<p>Open the Workflow Manager and connect to the CDM Loader repository.</p>
+</li>
+<li>
+<p>Expand the <span class="bold">CDM_ETL</span> folder &gt; <span class="bold">Workflows</span>.</p>
+</li>
+<li>
+<p>Right-click the workflow to execute, and select <span class="bold">Start Workflow</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BCFGFBGB"></a>
+<div id="OHFQS148" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Setting Up the Environment for the First ETL Execution</h3>
+<ul>
+<li>
+<p>Gather statistics on all HDM tables.</p>
+</li>
+<li>
+<p>Review and modify the global parameters.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="BCFIGHAF"></a>
+<div id="OHFQS149" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Executing the Initial Load ETLs</h3>
+<p>CDM has a high level workflow (wf_CDM_INITIAL_LOAD_PLAN) to load data in the initial load.</p>
+<div id="OHFQS150" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref19"></a>
+<h4 class="sect3">Setting Up the Environment</h4>
+<p>Make sure that the HDM data load is complete.</p>
+</div>
+<!-- class="sect3" -->
+<div id="OHFQS151" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref20"></a>
+<h4 class="sect3">Executing ETLs</h4>
+<p>When you use an enterprise scheduler, ETLs start automatically at the scheduled time or after the HDM data load is complete. You can monitor the progress of ETLs through the PowerCenter Workflow Monitor.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BCFFAFBF"></a>
+<div id="OHFQS152" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Restarting Failed ETLs</h3>
+<p>When an ETL fails during the data loading process, rerun the workflow from the failed job.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BCFIJBBJ"></a>
+<div id="OHFQS153" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Executing Incremental Load ETLs</h3>
+<p>CDM has a high level workflow (wf_CDM_INCREMENTAL_LOAD_PLAN) for incremental ETLs to process the data acquired on a regular basis.</p>
+<div id="OHFQS154" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref21"></a>
+<h4 class="sect3">Setting Up the Environment</h4>
+<p>Ensure that the HDM data load is complete.</p>
+</div>
+<!-- class="sect3" -->
+<div id="OHFQS155" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref22"></a>
+<h4 class="sect3">Executing ETLs</h4>
+<p>When you use an enterprise scheduler, ETLs start automatically at the scheduled time or after the HDM data load is complete. You can monitor the progress of ETLs through the PowerCenter Workflow Monitor.</p>
+</div>
+<!-- class="sect3" -->
+<div id="OHFQS156" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref23"></a>
+<h4 class="sect3">Restarting Failed ETLs</h4>
+<p>When an ETL fails during the data loading process, rerun the workflow from the failed job.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BCFDAAFA"></a>
+<div id="OHFQS157" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Monitoring and Logging</h3>
+<p>You can monitor the progress of the ETL execution through the PowerCenter Workflow Monitor.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BCFDJADJ"></a>
+<div id="OHFQS158" class="sect1">
+<h2 class="sect1">Documentation Accessibility</h2>
+<p>For information about Oracle's commitment to accessibility, visit the Oracle Accessibility Program website at <code dir="ltr"><a href="http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=docacc">http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=docacc</a></code>.</p>
+<p class="subhead2"><a id="sthref24"></a>Access to Oracle Support</p>
+<p>Oracle customers that have purchased support have access to electronic support through My Oracle Support. For information, visit <code dir="ltr"><a href="http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=info">http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=info</a></code> or visit <code dir="ltr"><a href="http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=trs">http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=trs</a></code> if you are hearing impaired.</p>
+</div>
+<!-- class="sect1" -->
+<a id="sthref25"></a>
+<hr />
+<p>Oracle Healthcare Foundation Quick Reference Guide for Informatica, Release 7.2</p>
+<p>E97795-01</p>
+<p>Copyright &copy; 2018,&nbsp;Oracle and/or its affiliates. All rights reserved.</p>
+<p>This software and related documentation are provided under a license agreement containing restrictions on use and disclosure and are protected by intellectual property laws. Except as expressly permitted in your license agreement or allowed by law, you may not use, copy, reproduce, translate, broadcast, modify, license, transmit, distribute, exhibit, perform, publish, or display any part, in any form, or by any means. Reverse engineering, disassembly, or decompilation of this software, unless required by law for interoperability, is prohibited.</p>
+<p>The information contained herein is subject to change without notice and is not warranted to be error-free. If you find any errors, please report them to us in writing.</p>
+<p>If this is software or related documentation that is delivered to the U.S. Government or anyone licensing it on behalf of the U.S. Government, then the following notice is applicable:</p>
+<p>U.S. GOVERNMENT END USERS: Oracle programs, including any operating system, integrated software, any programs installed on the hardware, and/or documentation, delivered to U.S. Government end users are "commercial computer software" pursuant to the applicable Federal Acquisition Regulation and agency-specific supplemental regulations. As such, use, duplication, disclosure, modification, and adaptation of the programs, including any operating system, integrated software, any programs installed on the hardware, and/or documentation, shall be subject to license terms and license restrictions applicable to the programs. No other rights are granted to the U.S. Government.</p>
+<p>This software or hardware is developed for general use in a variety of information management applications. It is not developed or intended for use in any inherently dangerous applications, including applications that may create a risk of personal injury. If you use this software or hardware in dangerous applications, then you shall be responsible to take all appropriate fail-safe, backup, redundancy, and other measures to ensure its safe use. Oracle Corporation and its affiliates disclaim any liability for any damages caused by use of this software or hardware in dangerous applications.</p>
+<p>Oracle and Java are registered trademarks of Oracle and/or its affiliates. Other names may be trademarks of their respective owners.</p>
+<p>Intel and Intel Xeon are trademarks or registered trademarks of Intel Corporation. All SPARC trademarks are used under license and are trademarks or registered trademarks of SPARC International, Inc. AMD, Opteron, the AMD logo, and the AMD Opteron logo are trademarks or registered trademarks of Advanced Micro Devices. UNIX is a registered trademark of The Open Group.</p>
+<p>This software or hardware and documentation may provide access to or information about content, products, and services from third parties. Oracle Corporation and its affiliates are not responsible for and expressly disclaim all warranties of any kind with respect to third-party content, products, and services unless otherwise set forth in an applicable agreement between you and Oracle. Oracle Corporation and its affiliates will not be responsible for any loss, costs, or damages incurred due to your access to or use of third-party content, products, or services, except as set forth in an applicable agreement between you and Oracle.</p>
+</div>
+<!-- class="letterstyle" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment64">
+<tr>
+<td class="cellalignment72">&nbsp;</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment74">
+<table class="cellalignment67">
+<tr>
+<td class="cellalignment68"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment68"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment68"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment68"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

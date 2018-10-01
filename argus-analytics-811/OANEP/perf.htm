@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Performance Considerations</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2017-10-04T8:20:59Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Argus Analytics User's Guide" />
+<meta name="dcterms.identifier" content="E88812-01" />
+<meta name="dcterms.isVersionOf" content="OANEP" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Prev" href="rpd_dw.htm" title="Previous" type="text/html" />
+<link rel="Next" href="security.htm" title="Next" type="text/html" />
+<link rel="alternate" href="OANEP.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="OANEP.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="OANEP.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">11/16</span> <!-- End Header -->
+<div id="OANEP607" class="chapter"><a id="CDDJDBGJ"></a>
+<h1 class="chapter"><span class="secnum">6</span> Performance Considerations</h1>
+<p>This chapter lists the performance considerations that should be adhered to, while creating requests or dashboards.</p>
+<a id="BABCHHJC"></a>
+<div id="OANEP1009" class="sect1">
+<h2 class="sect1"><span class="secnum">6.1</span> <span class="bold">Conformed Dimensions in Oracle Argus Analytics</span></h2>
+<p>A conformed dimension is a set of data attributes that have been physically implemented in multiple database tables using the same structure, attributes, values, definitions and concepts in each implementation. It is always a good practice to use Conformed Dimension columns along with the Facts when we create any Requests. By using the conformed dimensions, OBIEE forms select statements that choose the correct Fact table to display accurate data.</p>
+<p>Non-conformed dimensions imply the existence of logical and/or physical inconsistencies that should be avoided. Using Non-conformed Dimensions with the Fact leads to unwanted Table selection in the Query formation which results the Report to display null values (in case of Aggregates values) and might degrade the Performance of the Request or Report.</p>
+<p>For example: If user selects some of the aggregate measures from Case Version Fact along with the Routing user from User Dimension and Workflow State from State Dimension, the Report does not display the aggregate measures values as both the selected Dimension attributes are Non-conformed Dimensions for the Case Version Fact.</p>
+<p>The following table contains the details of the conformed Dimensions for the Facts we have used in Oracle Argus Analytics.</p>
+<div id="OANEP1010" class="tblruleformal">
+<p class="titleintable"><a id="sthref68"></a><a id="sthref69"></a>Table 6-1 Conformed Dimensions</p>
+<table class="cellalignment15" title="Conformed Dimensions" summary="This table provides information about accessing online help." dir="ltr">
+<thead>
+<tr class="cellalignment2">
+<th class="cellalignment14" id="r1c1-t2">Retrospective</th>
+<th class="cellalignment14" id="r1c2-t2"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r2c1-t2" headers="r1c1-t2">
+<p><span class="bold">Facts</span></p>
+</td>
+<td class="cellalignment8" headers="r2c1-t2 r1c2-t2">
+<p><span class="bold">Conformed Dimensions</span></p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r3c1-t2" headers="r1c1-t2">
+<p>Case Fact</p>
+</td>
+<td class="cellalignment8" headers="r3c1-t2 r1c2-t2">
+<p>Enterprise</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r4c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r4c1-t2 r1c2-t2">
+<p>Case Processing Site</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r5c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r5c1-t2 r1c2-t2">
+<p>Product</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r6c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r6c1-t2 r1c2-t2">
+<p>Study</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r7c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r7c1-t2 r1c2-t2">
+<p>Period - Clock Start Date</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r8c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r8c1-t2 r1c2-t2">
+<p>Period - Initial Receipt Date</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r9c1-t2" headers="r1c1-t2 r1c2-t2" colspan="2">&nbsp;</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r10c1-t2" headers="r1c1-t2">
+<p>Case Version Fact</p>
+</td>
+<td class="cellalignment8" headers="r10c1-t2 r1c2-t2">
+<p>Enterprise</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r11c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r11c1-t2 r1c2-t2">
+<p>Case Processing Site</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r12c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r12c1-t2 r1c2-t2">
+<p>Product</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r13c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r13c1-t2 r1c2-t2">
+<p>Study</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r14c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r14c1-t2 r1c2-t2">
+<p>Period - Clock Start Date</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r15c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r15c1-t2 r1c2-t2">
+<p>Period - Initial Receipt Date</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r16c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r16c1-t2 r1c2-t2">
+<p>Period - Version Receipt Date</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r17c1-t2" headers="r1c1-t2 r1c2-t2" colspan="2">&nbsp;</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r18c1-t2" headers="r1c1-t2">
+<p>Case Routing Fact</p>
+</td>
+<td class="cellalignment8" headers="r18c1-t2 r1c2-t2">
+<p>Enterprise</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r19c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r19c1-t2 r1c2-t2">
+<p>Case Processing Site</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r20c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r20c1-t2 r1c2-t2">
+<p>Product</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r21c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r21c1-t2 r1c2-t2">
+<p>Study</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r22c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r22c1-t2 r1c2-t2">
+<p>Period - Clock Start Date</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r23c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r23c1-t2 r1c2-t2">
+<p>Period - Initial Receipt Date</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r24c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r24c1-t2 r1c2-t2">
+<p>Period - Version Receipt Date</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r25c1-t2" headers="r1c1-t2 r1c2-t2" colspan="2">&nbsp;</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r26c1-t2" headers="r1c1-t2">
+<p>Case Workflow State Fact</p>
+</td>
+<td class="cellalignment8" headers="r26c1-t2 r1c2-t2">
+<p>Enterprise</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r27c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r27c1-t2 r1c2-t2">
+<p>Case Processing Site</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r28c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r28c1-t2 r1c2-t2">
+<p>Product</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r29c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r29c1-t2 r1c2-t2">
+<p>Study</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r30c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r30c1-t2 r1c2-t2">
+<p>Period - Clock Start Date</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r31c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r31c1-t2 r1c2-t2">
+<p>Period - Initial Receipt Date</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r32c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r32c1-t2 r1c2-t2">
+<p>Period - Version Receipt Date</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r33c1-t2" headers="r1c1-t2 r1c2-t2" colspan="2">&nbsp;</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r34c1-t2" headers="r1c1-t2">
+<p>Case Work User Fact</p>
+</td>
+<td class="cellalignment8" headers="r34c1-t2 r1c2-t2">
+<p>Enterprise</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r35c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r35c1-t2 r1c2-t2">
+<p>Case Processing Site</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r36c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r36c1-t2 r1c2-t2">
+<p>Product</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r37c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r37c1-t2 r1c2-t2">
+<p>Study</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r38c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r38c1-t2 r1c2-t2">
+<p>Period - Clock Start Date</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r39c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r39c1-t2 r1c2-t2">
+<p>Period - Initial Receipt Date</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r40c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r40c1-t2 r1c2-t2">
+<p>Period - Version Receipt Date</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r41c1-t2" headers="r1c1-t2 r1c2-t2" colspan="2">&nbsp;</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r42c1-t2" headers="r1c1-t2">
+<p>Case Work Fact</p>
+</td>
+<td class="cellalignment8" headers="r42c1-t2 r1c2-t2">
+<p>Enterprise</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r43c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r43c1-t2 r1c2-t2">
+<p>Case Processing Site</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r44c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r44c1-t2 r1c2-t2">
+<p>Product</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r45c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r45c1-t2 r1c2-t2">
+<p>Study</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r46c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r46c1-t2 r1c2-t2">
+<p>Period - Clock Start Date</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r47c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r47c1-t2 r1c2-t2">
+<p>Period - Initial Receipt Date</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r48c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r48c1-t2 r1c2-t2">
+<p>Period - Version Receipt Date</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r49c1-t2" headers="r1c1-t2 r1c2-t2" colspan="2">&nbsp;</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r50c1-t2" headers="r1c1-t2">
+<p>Expedited Submission</p>
+</td>
+<td class="cellalignment8" headers="r50c1-t2 r1c2-t2">
+<p>Enterprise</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r51c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r51c1-t2 r1c2-t2">
+<p>Case Processing Site</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r52c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r52c1-t2 r1c2-t2">
+<p>Product</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r53c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r53c1-t2 r1c2-t2">
+<p>Study</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r54c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r54c1-t2 r1c2-t2">
+<p>Period - Clock Start Date</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r55c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r55c1-t2 r1c2-t2">
+<p>Period - Initial Receipt Date</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r56c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r56c1-t2 r1c2-t2">
+<p>Period - Version Receipt Date</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r57c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r57c1-t2 r1c2-t2">
+<p>Expedited Submission Dimensions - Report Generation Date</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r58c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r58c1-t2 r1c2-t2">
+<p>Expedited Submission Dimensions - Report Submission Or MDN Date</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r59c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r59c1-t2 r1c2-t2">
+<p>Expedited Submission Dimensions - License</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r60c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r60c1-t2 r1c2-t2">
+<p>Expedited Submission Dimensions - Report Destination</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r61c1-t2" headers="r1c1-t2 r1c2-t2" colspan="2">&nbsp;</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r62c1-t2" headers="r1c1-t2">
+<p>Report Routing</p>
+</td>
+<td class="cellalignment8" headers="r62c1-t2 r1c2-t2">
+<p>Enterprise</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r63c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r63c1-t2 r1c2-t2">
+<p>Case Processing Site</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r64c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r64c1-t2 r1c2-t2">
+<p>Product</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r65c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r65c1-t2 r1c2-t2">
+<p>Study</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r66c1-t2" headers="r1c1-t2 r1c2-t2" colspan="2">&nbsp;</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r67c1-t2" headers="r1c1-t2">
+<p><span class="bold">Current</span></p>
+</td>
+<td class="cellalignment8" headers="r67c1-t2 r1c2-t2">&nbsp;</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r68c1-t2" headers="r1c1-t2">
+<p><span class="bold">Facts</span></p>
+</td>
+<td class="cellalignment8" headers="r68c1-t2 r1c2-t2">
+<p><span class="bold">Conformed Dimensions</span></p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r69c1-t2" headers="r1c1-t2">
+<p>Pending Cases</p>
+</td>
+<td class="cellalignment8" headers="r69c1-t2 r1c2-t2">
+<p>Enterprise</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r70c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r70c1-t2 r1c2-t2">
+<p>Case Processing Site</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r71c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r71c1-t2 r1c2-t2">
+<p>Product</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r72c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r72c1-t2 r1c2-t2">
+<p>Study</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r73c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r73c1-t2 r1c2-t2">
+<p>Period - Initial Receipt Date</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r74c1-t2" headers="r1c1-t2 r1c2-t2" colspan="2">&nbsp;</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r75c1-t2" headers="r1c1-t2">
+<p>Pending Reports</p>
+</td>
+<td class="cellalignment8" headers="r75c1-t2 r1c2-t2">
+<p>Enterprise</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r76c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r76c1-t2 r1c2-t2">
+<p>Case Processing Site</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r77c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r77c1-t2 r1c2-t2">
+<p>Product</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r78c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r78c1-t2 r1c2-t2">
+<p>Study</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r79c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r79c1-t2 r1c2-t2">
+<p>Period - Initial Receipt Date</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r80c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r80c1-t2 r1c2-t2">
+<p>Pending Report Dimensions - License</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r81c1-t2" headers="r1c1-t2">&nbsp;</td>
+<td class="cellalignment8" headers="r81c1-t2 r1c2-t2">
+<p>Pending Report Dimensions - Report Destination</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" --></div>
+<!-- class="sect1" -->
+<a id="BABCIJCH"></a>
+<div id="OANEP1011" class="sect1">
+<h2 class="sect1"><span class="secnum">6.2</span> <span class="bold">Aggregate Facts in Oracle Argus Analytics</span></h2>
+<p>Most of the requests that we tend to include in Dashboards are Summary Reports, where in data from the fact table is used to roll up to the appropriate level against a dimension. Instead, we can create aggregate tables that contain pre-computed sums, averages and so on for a fact table at a specific hierarchical level in the dimension (e.g. Month for a Period Dimension).</p>
+<p>This, in essence, means that we compress specific data from the base Fact into the derived Aggregate Fact for the agreed dimensions levels. We can then make use of this Aggregate Fact table to derive these Summary Reports which will be much faster (as it will contain much lesser data to process) when compared to rolling up the same data from the detail-level base Fact table thus improving the response times of the requests.</p>
+<p>Aggregate fact tables contain same measure data like in the lowest granularity fact table but summarized on certain levels of the dimensions that we plan to use.</p>
+<p>In Oracle Argus Analytics, we have introduced the following Aggregate Facts to increase the performance of the Dashboard Reports:</p>
+<p>W_PVA_CASE_MN_A</p>
+<p>This is an Aggregate Fact table for the Base Fact W_PVA_CASE_VERSION_F and contains the same aggregate measures like the Base Fact, but aggregated at the Version Receipt Month level from the Period Dimension, along with the Enterprise, Product, Study, Case Processing Site, Case Type, Case Seriousness, and Case Deletion Indicator dimensions. Whereas, in the Base Fact W_PVA_CASE_VERSION_F, the granularity is at the Case ID, Version ID level for all the measures which is in turn at the Version Receipt Date level for each version of the case.</p>
+<p>So, if we select the Month attribute from the "Period" Presentation Folder (Period -&gt; "Case Version - Version Receipt Date" -&gt; Month) along with the Case Version Aggregates, the data will be selected from the Aggregate table and not from the Base Fact table. The same is true even when attributes from Enterprise, Product, Study or Case Processing Site Presentation Folders are selected or the attributes Case Type, Case Seriousness, and Case Deletion Indicator.</p>
+<p>Whereas, If we select attribute Date from the "Period" Presentation Folder (Period -&gt; "Case Version - Version Receipt Date" -&gt; Day) along with the Case Version Aggregates, the data will be selected from the Base fact table, which might take longer to retrieve the results of the request.</p>
+<div id="OANEP1012" class="tblruleformal">
+<p class="titleintable"><a id="sthref70"></a><a id="sthref71"></a>Table 6-2 Aggregate Case Version Fact - Conformed Dimensions</p>
+<table class="cellalignment15" title="Aggregate Case Version Fact - Conformed Dimensions" summary="This table provides information about accessing online help." dir="ltr">
+<thead>
+<tr class="cellalignment2">
+<th class="cellalignment14" id="r1c1-t3">Retrospective</th>
+<th class="cellalignment14" id="r1c2-t3"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r2c1-t3" headers="r1c1-t3">
+<p><span class="bold">Facts</span></p>
+</td>
+<td class="cellalignment8" headers="r2c1-t3 r1c2-t3">
+<p><span class="bold">Conformed Dimensions</span></p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r3c1-t3" headers="r1c1-t3">
+<p>Aggregate Case Version Fact - Version Receipt Month</p>
+</td>
+<td class="cellalignment8" headers="r3c1-t3 r1c2-t3">
+<p>Enterprise</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r4c1-t3" headers="r1c1-t3">&nbsp;</td>
+<td class="cellalignment8" headers="r4c1-t3 r1c2-t3">
+<p>Case Processing Site</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r5c1-t3" headers="r1c1-t3">&nbsp;</td>
+<td class="cellalignment8" headers="r5c1-t3 r1c2-t3">
+<p>Product</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r6c1-t3" headers="r1c1-t3">&nbsp;</td>
+<td class="cellalignment8" headers="r6c1-t3 r1c2-t3">
+<p>Study</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r7c1-t3" headers="r1c1-t3">&nbsp;</td>
+<td class="cellalignment8" headers="r7c1-t3 r1c2-t3">
+<p>Period - Version Receipt Date (at the hierarchical level of Month in the Period dimension)</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r8c1-t3" headers="r1c1-t3">&nbsp;</td>
+<td class="cellalignment8" headers="r8c1-t3 r1c2-t3">
+<p>Case Type</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r9c1-t3" headers="r1c1-t3">&nbsp;</td>
+<td class="cellalignment8" headers="r9c1-t3 r1c2-t3">
+<p>Case Seriousness</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r10c1-t3" headers="r1c1-t3">&nbsp;</td>
+<td class="cellalignment8" headers="r10c1-t3 r1c2-t3">
+<p>Case Deletion Indicator</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<p>W_PVA_WORKFLOW_ST_A (Case Workflow State Fact)</p>
+<p>This is a dual purpose Fact table that serves as an Aggregate Fact (not explicitly called so due to its implementation in the Oracle Argus Analytics RPD), and, it is also used as a Fact table. What this means is that, on one hand it provides meaningful aggregate metrics on the operational effectiveness on routing of cases across workflow states and on the other hand it also serves as an aggregate fact on top of the Case Routing Fact.</p>
+<p>In terms of Aggregate Fact usage, this is a compressed form of the Case Routing Fact table and is compressed to provide aggregate metrics at the level of Enterprise ID, Case ID, Version ID and Workflow State. In the RPD this Fact table is exposed as a Presentation Folder "Case Workflow State" and can be directly used with the dimensions as mentioned in the above table, listing conformed dimensions.</p>
+<p>W_PVA_CASE_PROCESSING_MN_A</p>
+<p>This is an Aggregate Fact table for the Base Fact W_PVA_CASE_F and contains the same aggregate measures like the Base Fact, but aggregated at the Initial Receipt Month level from the Period Dimension, along with the Enterprise, Product, Study, Case Processing Site, Case Type, Case Seriousness and Case Deletion Indicator dimensions. Whereas, in the Base Fact W_PVA_CASE_F, the granularity is at the Case ID level for all the measures which is in turn at the Initial Receipt Date level for each case.</p>
+<div id="OANEP1013" class="tblruleformal">
+<p class="titleintable"><a id="sthref72"></a><a id="sthref73"></a>Table 6-3 Aggregate Case Version Fact - Conformed Dimensions</p>
+<table class="cellalignment15" title="Aggregate Case Version Fact - Conformed Dimensions" summary="This table provides information about accessing online help." dir="ltr">
+<thead>
+<tr class="cellalignment2">
+<th class="cellalignment14" id="r1c1-t4">Retrospective</th>
+<th class="cellalignment14" id="r1c2-t4"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r2c1-t4" headers="r1c1-t4">
+<p><span class="bold">Facts</span></p>
+</td>
+<td class="cellalignment8" headers="r2c1-t4 r1c2-t4">
+<p><span class="bold">Conformed Dimensions</span></p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r3c1-t4" headers="r1c1-t4">
+<p>Aggregate Case Fact - Initial Receipt Month</p>
+</td>
+<td class="cellalignment8" headers="r3c1-t4 r1c2-t4">
+<p>Enterprise</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r4c1-t4" headers="r1c1-t4">&nbsp;</td>
+<td class="cellalignment8" headers="r4c1-t4 r1c2-t4">
+<p>Case Processing Site</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r5c1-t4" headers="r1c1-t4">&nbsp;</td>
+<td class="cellalignment8" headers="r5c1-t4 r1c2-t4">
+<p>Product</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r6c1-t4" headers="r1c1-t4">&nbsp;</td>
+<td class="cellalignment8" headers="r6c1-t4 r1c2-t4">
+<p>Study</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r7c1-t4" headers="r1c1-t4">&nbsp;</td>
+<td class="cellalignment8" headers="r7c1-t4 r1c2-t4">
+<p>Period - Initial Receipt Date (at the hierarchical level of Month in the Period dimension)</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r8c1-t4" headers="r1c1-t4">&nbsp;</td>
+<td class="cellalignment8" headers="r8c1-t4 r1c2-t4">
+<p>Case Type</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r9c1-t4" headers="r1c1-t4">&nbsp;</td>
+<td class="cellalignment8" headers="r9c1-t4 r1c2-t4">
+<p>Case Seriousness</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r10c1-t4" headers="r1c1-t4">&nbsp;</td>
+<td class="cellalignment8" headers="r10c1-t4 r1c2-t4">
+<p>Case Deletion Indicator</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<p>W_PVA_REPORT_SUBMSN_MN_A</p>
+<p>This is an Aggregate Fact table for the Base Fact W_PVA_CASE_RPT_SUBMSN_F and contains the same aggregate measures like the Base Fact, but aggregated at the Report Submission or MDN Month level from the Period Dimension, along with the Enterprise, Product, Study, Case Processing Site, Report Destination, Report Assigned User Group and Report Completion Type dimensions. Whereas, in the Base Fact W_PVA_CASE_RPT_SUBMSN_F, the granularity is at the Case ID, Version ID &amp; Report ID level for all the measures which is in turn at the Report Submission Or MDN Date level for each case.</p>
+<div id="OANEP1014" class="tblruleformal">
+<p class="titleintable"><a id="sthref74"></a><a id="sthref75"></a>Table 6-4 Aggregate Case Version Fact - Conformed Dimensions</p>
+<table class="cellalignment15" title="Aggregate Case Version Fact - Conformed Dimensions" summary="This table provides information about accessing online help." dir="ltr">
+<thead>
+<tr class="cellalignment2">
+<th class="cellalignment14" id="r1c1-t5">Retrospective</th>
+<th class="cellalignment14" id="r1c2-t5"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r2c1-t5" headers="r1c1-t5">
+<p><span class="bold">Facts</span></p>
+</td>
+<td class="cellalignment8" headers="r2c1-t5 r1c2-t5">
+<p><span class="bold">Conformed Dimensions</span></p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r3c1-t5" headers="r1c1-t5">
+<p>Aggregate Report Submission Fact - Report Submission Or MDN Month</p>
+</td>
+<td class="cellalignment8" headers="r3c1-t5 r1c2-t5">
+<p>Enterprise</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r4c1-t5" headers="r1c1-t5">&nbsp;</td>
+<td class="cellalignment8" headers="r4c1-t5 r1c2-t5">
+<p>Case Processing Site</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r5c1-t5" headers="r1c1-t5">&nbsp;</td>
+<td class="cellalignment8" headers="r5c1-t5 r1c2-t5">
+<p>Product</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r6c1-t5" headers="r1c1-t5">&nbsp;</td>
+<td class="cellalignment8" headers="r6c1-t5 r1c2-t5">
+<p>Study</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r7c1-t5" headers="r1c1-t5">&nbsp;</td>
+<td class="cellalignment8" headers="r7c1-t5 r1c2-t5">
+<p>Expedited Submission Dimensions - Report Submission Or MDN Date (at the hierarchical level of Month in the Period dimension)</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r8c1-t5" headers="r1c1-t5">&nbsp;</td>
+<td class="cellalignment8" headers="r8c1-t5 r1c2-t5">
+<p>Report Destination</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r9c1-t5" headers="r1c1-t5">&nbsp;</td>
+<td class="cellalignment8" headers="r9c1-t5 r1c2-t5">
+<p>Report Assigned User Group</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r10c1-t5" headers="r1c1-t5">&nbsp;</td>
+<td class="cellalignment8" headers="r10c1-t5 r1c2-t5">
+<p>Report Completion Type</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" --></div>
+<!-- class="sect1" -->
+<a id="BABGIIIF"></a>
+<div id="OANEP1015" class="sect1">
+<h2 class="sect1"><span class="secnum">6.3</span> <span class="bold">Creation of Prompts and Filters</span></h2>
+<p>When we create Prompts and Filters, it is better to avoid using functions to get or modify the Prompt or Filter values such as Substring, IfNull, Cast, ValueOf and so on. Inclusion of such prompts in the dashboard pages or as filters in Requests might degrade the performance of the Requests/Dashboards associated with it. It is advisable to use the direct column values for creating Prompts and Filters.</p>
+<p>It is a best practice to enforce the Dashboard Prompts to have default values associated with it, so that the Dashboard Requests (which have filters on the same columns) can benefit from the default values, as it will result in analyzing the request on a much smaller subset of the Fact/Aggregate Fact data.</p>
+<a id="BABCJIAG"></a>
+<div id="OANEP1016" class="sect2">
+<h3 class="sect2"><span class="secnum">6.3.1</span> <span class="bold">Mandatory Prompts</span></h3>
+<p>The prompts that are present in the dashboard can be made mandatory. By making a prompt mandatory, the particular report can be forced to use the aggregate facts, thereby improving performance significantly.</p>
+<a id="BAJJAJII"></a>
+<div id="OANEP1017" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><span class="secnum">6.3.1.1</span> Creating a mandatory field in page-level prompts</h4>
+<p>The following example lists the steps required to make the <span class="bold">Product Group</span> prompt as a mandatory prompt:</p>
+<ol>
+<li>
+<p>Login to the OBIEE application as a user with administrative rights and access to edit the dashboards. Typically, this would be the administrator.</p>
+<div id="OANEP1018" class="figure">
+<p class="titleinfigure"><a id="sthref76"></a>Figure 6-1 Dashboard Reports</p>
+<img width="1436" height="675" src="img/mp1.jpg" alt="Surrounding text describes Figure 6-1 ." /><br /></div>
+<!-- class="figure" --></li>
+<li>
+<p>Navigate to the folder in the catalog where prompts are saved. Example: Catalog &gt; Shared folders &gt; Retrospective &gt; Case Processing History.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Edit</span> link to make the change. Example: CP History Page Prompts.</p>
+<div id="OANEP1019" class="figure">
+<p class="titleinfigure"><a id="sthref77"></a>Figure 6-2 OBIEE Objects in Catalog Folders</p>
+<img width="1439" height="673" src="img/mp2.jpg" alt="Surrounding text describes Figure 6-2 ." /><br /></div>
+<!-- class="figure" --></li>
+<li>
+<p>Select the field which is to be made mandatory and click the <span class="bold">Edit</span> icon (present on the top right of the opened screen), such as the <span class="bold">Product Group</span> field selected below.</p>
+<div id="OANEP1020" class="figure">
+<p class="titleinfigure"><a id="sthref78"></a>Figure 6-3 Catalog Prompt Edit Page</p>
+<img width="1436" height="689" src="img/mp5.jpg" alt="Surrounding text describes Figure 6-3 ." /><br /></div>
+<!-- class="figure" --></li>
+<li>
+<p>An <span class="bold">Edit Prompt</span> dialog appears, with options to customize the prompt. To make the field mandatory, check the <span class="bold">Require user input</span> checkbox and click <span class="bold">OK</span>.</p>
+<div id="OANEP1021" class="figure">
+<p class="titleinfigure"><a id="sthref79"></a>Figure 6-4 Edit Prompt Dialog</p>
+<img width="1431" height="698" src="img/mp4.jpg" alt="Surrounding text describes Figure 6-4 ." /><br /></div>
+<!-- class="figure" --></li>
+<li>
+<p>You can verify the change by checking the <span class="bold">Required</span> column of the field (<span class="bold">Product Group</span> below). Mandatory fields have a tick mark displayed against them. In the <span class="bold">Preview</span> window, an asterisk (*) appears before the name of the mandatory field.</p>
+<div id="OANEP1022" class="figure">
+<p class="titleinfigure"><a id="sthref80"></a>Figure 6-5 Preview Changes in Dashboard Prompts</p>
+<img width="1436" height="689" src="img/mp3.jpg" alt="Surrounding text describes Figure 6-5 ." /><br /></div>
+<!-- class="figure" --></li>
+<li>
+<p>Save the prompt by selecting the <span class="bold">Save</span> icon (highlighted below), present on the top right side of the screen.</p>
+<div id="OANEP1023" class="figure">
+<p class="titleinfigure"><a id="sthref81"></a>Figure 6-6 Saving Dashboard Prompts</p>
+<img width="1440" height="694" src="img/mp6.jpg" alt="Surrounding text describes Figure 6-6 ." /><br /></div>
+<!-- class="figure" --></li>
+<li>
+<p>The column configured for mandatory input is now reflected in the page-level prompt of the respective reports.</p>
+<div id="OANEP1024" class="figure">
+<p class="titleinfigure"><a id="sthref82"></a>Figure 6-7 Mandatory Prompts Marked with * in Report Page</p>
+<img width="1434" height="675" src="img/mp7.jpg" alt="Surrounding text describes Figure 6-7 ." /><br /></div>
+<!-- class="figure" -->
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The <span class="bold">Apply</span> button is disabled. This button will get enabled only after values for all the mandatory prompts present in a page have been entered. The text <span class="italic">* Indicates mandatory field</span> is displayed next to the mandatory prompts present in a page.</div>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<a id="BAJJEDAJ"></a>
+<div id="OANEP1025" class="sect3">
+<h4 class="sect3"><span class="secnum">6.3.1.2</span> Setting up default values</h4>
+<p>Prompts can be set with default preferred values, based on the logged-in user. This would be very useful when the same value is supplied to a prompt by a user most of the time. Further, it can also be helpful by setting up a default value for the mandatory prompts.</p>
+<p>The following example lists the steps required to set up the default value for the mandatory parameter called <span class="bold">Product Group</span>:</p>
+<ol>
+<li>
+<p>Navigate to the report where the default prompt value is to be saved. Go to the prompt, select the value, and click <span class="bold">Apply</span>.</p>
+<div id="OANEP1026" class="figure">
+<p class="titleinfigure"><a id="sthref83"></a>Figure 6-8 Default Value Selection for Mandatory Prompts</p>
+<img width="1432" height="362" src="img/mp8.jpg" alt="Surrounding text describes Figure 6-8 ." /><br /></div>
+<!-- class="figure" --></li>
+<li>
+<p>To save the current selection, click the <span class="bold">Page Option</span> icon present on the top right corner of the opened report. Select <span class="bold">Save Current Customization</span> from the drop-down menu.</p>
+<div id="OANEP1027" class="figure">
+<p class="titleinfigure"><a id="sthref84"></a>Figure 6-9 Save Default Customization</p>
+<img width="1440" height="353" src="img/mp9.jpg" alt="Surrounding text describes Figure 6-9 ." /><br /></div>
+<!-- class="figure" --></li>
+<li>
+<p>In the <span class="bold">Save Current Customization</span> dialog that appears, enter the customization name in the <span class="bold">Name</span> field and select the <span class="bold">Make this my default for this pag</span>e checkbox. Click <span class="bold">OK</span> to save your customized changes.</p>
+<div id="OANEP1028" class="figure">
+<p class="titleinfigure"><a id="sthref85"></a>Figure 6-10 Name the Default Customization Before Saving</p>
+<img width="1440" height="466" src="img/mp10.jpg" alt="Surrounding text describes Figure 6-10 ." /><br /></div>
+<!-- class="figure" --></li>
+</ol>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BAJHHFHE"></a>
+<div id="OANEP1029" class="sect1">
+<h2 class="sect1"><span class="secnum">6.4</span> <span class="bold">OBIEE Caching and Cache Seeding</span></h2>
+<p>Cache is a component that improves performance by transparently storing data such that future requests for the same criteria can be served much faster. Like other application cache is not virtual memory in OBIEE. In OBIEE cache will be stored as files on the Hard Disk of the OBIEE Server in the form of files. By Default caching is enabled in the OBIEE server configuration.</p>
+<p>For time-consuming Dashboard Pages, we can use the concept of cache seeding in OBIEE, this can be configured as a scheduled job that will ensure that the data is cached and readily available as and when the user runs the dashboard.</p>
+</div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment1">
+<tr>
+<td class="cellalignment8">
+<table class="cellalignment6">
+<tr>
+<td class="cellalignment5"><a href="rpd_dw.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment5"><a href="security.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment10">
+<table class="cellalignment4">
+<tr>
+<td class="cellalignment5"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment5"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment5"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment5"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

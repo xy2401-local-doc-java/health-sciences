@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Defining Business Areas for Visualizations</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2018-05-25T8:22:17Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Life Sciences Data Hub Application Developer's Guide" />
+<meta name="dcterms.identifier" content="E95831-01" />
+<meta name="dcterms.isVersionOf" content="LSHDG" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2006, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="wkfl.htm" title="Previous" type="text/html" />
+<link rel="Next" href="wa_install.htm" title="Next" type="text/html" />
+<link rel="alternate" href="LSHDG.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="LSHDG.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="LSHDG.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">14/20</span> <!-- End Header -->
+<div id="LSHDG1299" class="chapter"><a id="BABHJGBB"></a>
+<h1 class="chapter"><span class="secnum">11</span> Defining Business Areas for Visualizations</h1>
+<p>This section contains information on the following topics:</p>
+<ul>
+<li>
+<p><a href="#CHDFBFJB">About Visualizations</a></p>
+</li>
+<li>
+<p><a href="#CHDIDGDE">Creating a Business Area</a></p>
+</li>
+<li>
+<p><a href="#BCFJGIEC">Using the Business Area Properties Screen</a></p>
+</li>
+<li>
+<p><a href="#CHDJAGDJ">Defining Table Descriptors</a></p>
+</li>
+<li>
+<p><a href="#CHDIIFJF">Defining Joins</a></p>
+</li>
+<li>
+<p><a href="#CHDDFHCD">Defining Business Area Hierarchies</a></p>
+</li>
+<li>
+<p><a href="#CIHCADFJ">Understanding Business Area Source Code</a></p>
+</li>
+<li>
+<p><a href="#CHDEFGAE">Setting Business Area Attributes and Parameters</a></p>
+</li>
+<li>
+<p><a href="#CHDCIHIB">Defining Oracle Business Intelligence Business Areas</a></p>
+</li>
+<li>
+<p><a href="#CHDEEBDG">Defining Generic Visualization Business Areas</a></p>
+</li>
+<li>
+<p><a href="#CHDHFCDG">Launching Visualizations</a></p>
+</li>
+<li>
+<p><a href="#CHDFIIID">Installing Business Area Instances</a></p>
+</li>
+<li>
+<p><a href="#CHDFJICJ">Modifying Business Areas</a></p>
+</li>
+</ul>
+<a id="CHDFBFJB"></a>
+<div id="LSHDG1301" class="sect1">
+<h2 class="sect1">About Visualizations</h2>
+<p>The Oracle Life Sciences Data Hub (Oracle LSH) is integrated with visualization tools, to allow nontechnical users to quickly create onscreen graphical and tabular displays and interactive dashboards of Oracle LSH data. Any Oracle LSH data can be made available for this purpose&mdash;freshly loaded source data or merged and transformed data.</p>
+<p>You make data available to the visualization tool by defining one or more Business Areas in Oracle LSH. You define Table Descriptors in a Business Area and map them to Table instances. The visualization tool can read data contained in the Table instances to which the Table Descriptors are mapped. An Oracle LSH Business Area corresponds to an Oracle Business Intelligence Enterprise Edition (OBIEE) Repository and a particular visualization can see data through a single Business Area. Your company may support other visualization tools and an Oracle LSH Business Area of that type may correspond to an element in those visualization tools.</p>
+<p>You can also define Joins between the Table Descriptors and Hierarchies (drill-down structures) of Columns in the same Table Descriptor or in joined Table Descriptors. Joins and Hierarchies help determine how visualizations can compare and organize data; see <a href="#CHDIIFJF">"Defining Joins"</a> and <a href="#CHDDFHCD">"Defining Business Area Hierarchies"</a>.</p>
+<p>When you launch a Visualization tool from a Business Area or from the Visualizations subtab of the Reports tab, you can choose to see non-current and blinded data, if you have the appropriate privileges, through the Launch Settings screen. If you open OBIEE directly (not from within Oracle LSH) you can view only current and not blinded data regardless of your privileges.</p>
+<p><a id="LSHDG1303"></a><span class="subhead3">Reports on Business Area Definitions and Instances&nbsp;</span>From the <span class="bold">Actions</span> drop-down list, you can generate reports that provide information on a Business Area definition or instance; see <a href="obj_reports.htm#CIHJIAJE">Chapter 14, "System Reports"</a> for information.</p>
+</div>
+<!-- class="sect1" -->
+<a id="CHDIDGDE"></a>
+<div id="LSHDG1305" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Creating a Business Area</h2>
+<p>When you create a Business Area in a Work Area, you are actually creating an instance of a Business Area definition.</p>
+<div id="LSHDG1300" class="figure">
+<p class="titleinfigure"><a id="BABFJIAG"></a>Figure 11-1 Process of Creating a Business Area Definition and Instance</p>
+<img width="613" height="370" src="img/biz_area_process.gif" alt="Description of Figure 11-1 follows" /><br />
+<a id="sthref80" href="img_text/biz_area_process.htm">Description of ''Figure 11-1 Process of Creating a Business Area Definition and Instance''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p>To create a new Business Area instance:</p>
+<ol>
+<li>
+<p>In a Work Area, select <span class="bold">Business Area</span> from the <span class="bold">Add</span> drop-down list.</p>
+</li>
+<li>
+<p>Click <span class="bold">Go</span>.</p>
+<p>The system displays the Create Business Area screen.</p>
+</li>
+<li>
+<p>Choose one of the following options:</p>
+<ul>
+<li>
+<p><span class="bold">Create a new Business Area definition and instance</span>. Choose this option if no Business Area definition exists that can meet your needs, either as it is or with some modification.</p>
+</li>
+<li>
+<p><span class="bold">Create an instance from an existing Business Area definition</span>. Choose this option if a Business Area definition already exists that meets your needs.</p>
+<p>If you can adapt an existing Business Area definition to make it fit your needs, first copy it into the current Application Area, then choose this option and select the copied definition. See <a href="deftasks.htm#CHDEHHAG">"Finding an Appropriate Definition"</a> and <a href="deftasks.htm#CHDJIJBH">"Reusing Existing Definitions"</a> for further information.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Depending on your choice, follow one of the following sets of instructions:</p>
+<ul>
+<li>
+<p><a href="#CHDCHEDH">Creating a New Business Area Definition and Instance</a></p>
+</li>
+<li>
+<p><a href="deftasks.htm#CHDGAIDJ">Creating an Instance of an Existing Definition</a></p>
+</li>
+</ul>
+</li>
+</ol>
+<a id="CHDCHEDH"></a>
+<div id="LSHDG1307" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Creating a New Business Area Definition and Instance</h3>
+<p>When you select <span class="bold">Create a new Business Area definition and instance</span> in the Create Business Area screen, additional fields appear.</p>
+<ol>
+<li>
+<p>Enter values in the following fields:</p>
+<ul>
+<li>
+<p><span class="bold">Name</span>. See <a href="deftasks.htm#CHDBIJAH">"Naming Objects"</a>.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+For OBIEE Business Areas, the Business Area name is displayed in the OBIEE Answers user interface as the Subject Area.</div>
+</li>
+<li>
+<p><span class="bold">Description</span>. See <a href="deftasks.htm#CHDIHBBC">"Creating and Using Object Descriptions"</a>.</p>
+</li>
+<li>
+<p><span class="bold">Business Area Type</span>. Select the adapter from the drop-down list.</p>
+<p>If you select GENERIC_VISUALIZATION, you must then enter a schema name for the Business Area. See <a href="#CHDEEBDG">"Defining Generic Visualization Business Areas"</a> for more information.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>In the <span class="bold">Classification</span> section, select the following for both the definition and the instance:</p>
+<ul>
+<li>
+<p><span class="bold">Subtype</span>. Select a subtype according to your company's policies.</p>
+</li>
+<li>
+<p><span class="bold">Classification Values</span>. See <a href="deftasks.htm#CHDJADAD">"Classifying Objects and Outputs"</a> for instructions.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Apply</span> to save your work and continue defining the Business Area.</p>
+<p>The system opens the Properties screen for the new Business Area instance.</p>
+</li>
+<li>
+<p>Define the Business Area details. For information and instructions see:</p>
+<ul>
+<li>
+<p><a href="#CHDJAGDJ">Defining Table Descriptors</a></p>
+</li>
+<li>
+<p><a href="#CHDIIFJF">Defining Joins</a></p>
+</li>
+<li>
+<p><a href="#CHDDFHCD">Defining Business Area Hierarchies</a></p>
+</li>
+</ul>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+A Generic Visualization Business Area does not contain Joins, Hierarchies, Source Code, or Parameters.</div>
+</li>
+<li>
+<p>Click <span class="bold">Check In</span>. The system checks in Version 1 of both the Business Area definition and instance.</p>
+</li>
+<li>
+<p>Install the Business Area instance (see <a href="wa_install.htm#BABHJGHA">Chapter 12, "Using, Installing, and Cloning Work Areas"</a>). On creation of the Generic Visualization Business Area, its status is 'Not Installable'.</p>
+</li>
+<li>
+<p>Validate both the definition and the instance according to your company's policies.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CHDEGEIB"></a>
+<div id="LSHDG1306" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Creating an Instance of an Existing Business Area Definition</h3>
+<p>If you use an existing Business Area as a definition source, its Table Descriptors, Joins and Hierarchies (if any) are already defined. See <a href="deftasks.htm#CHDGAIDJ">"Creating an Instance of an Existing Definition"</a> for instructions.</p>
+<p>After you have created the Business Area instance, you must map the Table Descriptors to Table instances; see <a href="deftasks.htm#CIHDCCDA">"Mapping Table Descriptors to Table Instances"</a> for instructions.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BCFJGIEC"></a>
+<div id="LSHDG1309" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Using the Business Area Properties Screen</h2>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#BCFDBDFI">Instance Properties</a></p>
+</li>
+<li>
+<p><a href="#BCFFCDAG">Definition Properties</a></p>
+</li>
+<li>
+<p><a href="#BCFHCDAE">Business Area Attributes</a></p>
+</li>
+<li>
+<p><a href="#BCFDAADA">Buttons</a></p>
+</li>
+<li>
+<p><a href="deftasks.htm#CIHDAIFF">Using the Actions Drop-Down List</a></p>
+</li>
+<li>
+<p>Subtabs:</p>
+<ul>
+<li>
+<p><a href="#CHDJAGDJ">Defining Table Descriptors</a></p>
+</li>
+<li>
+<p><a href="#CHDIIFJF">Defining Joins</a></p>
+</li>
+<li>
+<p><a href="#CHDDFHCD">Defining Business Area Hierarchies</a></p>
+</li>
+<li>
+<p><a href="#CHDEFGAE">Setting Business Area Attributes and Parameters</a></p>
+</li>
+<li>
+<p><a href="#CIHCADFJ">Understanding Business Area Source Code</a></p>
+</li>
+</ul>
+</li>
+</ul>
+<p>See also <a href="#BABFJIAG">Figure 11-1, "Process of Creating a Business Area Definition and Instance"</a>.</p>
+<p>See <a href="#CHDFJICJ">"Modifying Business Areas"</a> for information on modifying Business Areas.</p>
+<p>If you are working in a Work Area, you see the properties of both the Business Area instance and the Business Area definition it references. If you are working directly on the definition in an Application Area or Domain, you see only the properties of the definition.</p>
+<a id="BCFDBDFI"></a>
+<div id="LSHDG1310" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Instance Properties</h3>
+<p>You can see the following instance properties:</p>
+<p><a id="LSHDG1311"></a><span class="subhead3">Name&nbsp;</span>You can click <span class="bold">Update</span> and modify the name. See <a href="deftasks.htm#CHDBIJAH">"Naming Objects"</a> for further information.</p>
+<p><a id="LSHDG1312"></a><span class="subhead3">Description&nbsp;</span>You can click <span class="bold">Update</span> and modify the description. See <a href="deftasks.htm#CHDIHBBC">"Creating and Using Object Descriptions"</a> for further information.</p>
+<p><a id="BCFHIGAJ"></a><a id="LSHDG1313"></a><span class="subhead3">Definition&nbsp;</span>This field specifies the Business Area definition to which this Business Area instance points. For further information, see <a href="#CHDIJEAI">"Definition Source"</a>.</p>
+<p>You can upgrade to a new version of the same definition. See <a href="deftasks.htm#BEIFAIDB">"Upgrading to a Different Definition Version from an Instance"</a>.</p>
+<p><a id="LSHDG1314"></a><span class="subhead3">Validation Status&nbsp;</span>This field displays the current validation status of the Business Area instance. If you have the necessary privileges, you can change the validation status by selecting <span class="bold">Validation Supporting Information</span> from the <span class="bold">Actions</span> drop-down list. See <a href="deftasks.htm#BABGFFBG">"Validating Objects and Outputs"</a> for further information.</p>
+<p><a id="LSHDG1315"></a><span class="subhead3">Status&nbsp;</span>This field displays the installable status of the Business Area: Installable or Non Installable. See <a href="status.htm#BABHIEJG">Appendix A, "Installation Requirements for Each Object Type"</a>.</p>
+<p><a id="LSHDG1316"></a><span class="subhead3">Version&nbsp;</span>This field displays the current version number of the Business Area instance.</p>
+<p><a id="LSHDG1317"></a><span class="subhead3">Version Label&nbsp;</span>This field displays the version label, if any, for the current Business Area instance version.</p>
+<p><a id="LSHDG2001"></a><span class="subhead3">Schema Name&nbsp;</span>(Generic Visualization Business Areas) The unique name of the schema created for the Business Area.</p>
+<p><a id="LSHDG2002"></a><span class="subhead3">Default Blinding Access Type&nbsp;</span>(Generic Visualization Business Areas) The data displayed by default in visualizations based on this Business Area; see <a href="#CHDFDBFG">"Default Blinding Access Type"</a>.</p>
+<p><a id="LSHDG2003"></a><span class="subhead3">Default Snapshot Label&nbsp;</span>(Generic Visualization Business Areas) The data currency displayed by default in visualizations based on this Business Area; see <a href="#CHDBEJJH">"Default Currency"</a>.</p>
+<p>For further information on object versions, see <a href="deftasks.htm#BEIBHCFH">"Understanding Object Versions and Checkin/Checkout"</a>.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BCFFCDAG"></a>
+<div id="LSHDG1318" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Definition Properties</h3>
+<p><a id="LSHDG1319"></a><span class="subhead3">Checked Out Status&nbsp;</span>This field displays the status of the definition: either Checked Out or Checked In. You must check out the definition to modify Table Descriptors, Joins, and Business Area Hierarchies. However, you can change Table Descriptor mappings without checking out the definition. See <a href="deftasks.htm#BEIBHCFH">"Understanding Object Versions and Checkin/Checkout"</a> for further information.</p>
+<p><a id="LSHDG1320"></a><span class="subhead3">Latest Version&nbsp;</span>If set to <span class="bold">Yes</span>, this Business Area instance is pointing to the latest version of the Business Area definition. If set to <span class="bold">No</span>, this Business Area instance is pointing to an older version of the Business Area definition.</p>
+<p><a id="LSHDG1321"></a><span class="subhead3">Checked Out By&nbsp;</span>This field displays the username of the person who has the Business Area definition checked out. See <a href="deftasks.htm#BEIBHCFH">"Understanding Object Versions and Checkin/Checkout"</a> for further information.</p>
+<p><a id="LSHDG1322"></a><span class="subhead3">Version Label&nbsp;</span>This field displays the version label, if any, for this definition version.</p>
+<p><a id="LSHDG1323"></a><span class="subhead3">Business Area / Adapter Type&nbsp;</span>This field displays the name of the Business Area adapter.</p>
+<p><a id="LSHDG1324"></a><span class="subhead3">Validation Status&nbsp;</span>This field displays the current validation status of the Business Area definition. If you are working directly in the definition in an Application Area or Domain and you have the necessary privileges, you can change the validation status by selecting <span class="bold">Validation Supporting Information</span> from the <span class="bold">Actions</span> drop-down list. If you are working in an instance of the Business Area in a Work Area, and you want to change the validation status of the definition, you must go to the definition. See <a href="deftasks.htm#BABGFFBG">"Validating Objects and Outputs"</a> for further information.</p>
+<p><a id="LSHDG1325"></a><span class="subhead3">Status&nbsp;</span>This field displays the installable status of the Business Area: Installable or Non Installable. See <a href="status.htm#BABHIEJG">Appendix A, "Installation Requirements for Each Object Type"</a>.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+When a Generic Visualization Business Area Definition is created, its status is 'Not Installable'.</div>
+</div>
+<!-- class="sect2" -->
+<a id="BCFHCDAE"></a>
+<div id="LSHDG1326" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Business Area Attributes</h3>
+<p>This section of the Business Area screen displays attributes for the type of Business Area you have created. See <a href="#CHDEFGAE">"Setting Business Area Attributes and Parameters"</a> for more information.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BCFDAADA"></a>
+<div id="LSHDG1327" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Buttons</h3>
+<p>From a Business Area instance in a Work Area, you can use the following buttons:</p>
+<p><a id="LSHDG2004"></a><span class="subhead3">Install&nbsp;</span>Click <span class="bold">Install</span> to install the Business Area instance, including mapped Table instances in the same Work Area; see <a href="#CHDFIIID">"Installing Business Area Instances"</a>. For a list of reasons a Business Area instance may not be installable, see <a href="status.htm#BABHIEJG">Appendix A, "Installation Requirements for Each Object Type"</a>.</p>
+<p><a id="LSHDG1328"></a><span class="subhead3">Launch Visualization&nbsp;</span>Click <span class="bold">Launch Visualization</span> to go to the Launch Visualization screen; see <a href="#CHDHFCDG">"Launching Visualizations"</a>. You can see the <span class="bold">Launch Visualization</span> button only after you have installed the Business Area. See <a href="#CHDFIIID">"Installing Business Area Instances"</a>.</p>
+<p><a id="LSHDG1329"></a><span class="subhead3">Update&nbsp;</span>Click <span class="bold">Update</span> to modify the Business Area instance properties. See <a href="#BCFIFEAD">"Modifying Business Area Instance Properties"</a>.</p>
+<p><a id="LSHDG1330"></a><span class="subhead3">Check In/Out and Uncheck&nbsp;</span>Click these buttons to check out, check in, or uncheck the Business Area definition. Different buttons are displayed in the Business Area Definition Properties section depending on the Checked Out Status and whether or not you are the person who has the definition checked out. If someone else has checked out the definition, you cannot check it in or uncheck it. The username of the person who has checked it out is displayed. See <a href="deftasks.htm#BEIBHCFH">"Understanding Object Versions and Checkin/Checkout"</a>.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CHDJAGDJ"></a>
+<div id="LSHDG1332" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Defining Table Descriptors</h2>
+<p>You make data available to visualizations by mapping the Table instances that contain the data to Table Descriptors in a Business Area. Any one visualization can access data through one and only one Business Area. The more Table Descriptors you include in a Business Area, the more data is accessible to a single visualization.</p>
+<p>Business Areas have source Table Descriptors only. They can read data but they cannot write data to Tables instances.</p>
+<p>If you do not want data from a particular Table instance Column available to visualizations, remove the Column from the Table Descriptor that is mapped to that Table instance.</p>
+<p>You can map Business Area Table Descriptors to Table instances in any Work Area.</p>
+<p>If the Table instances to which you want to map a Business Area's Table Descriptors already exist, the simplest way to add and map Table Descriptors to the Business Area is to use the <span class="bold">Table Descriptors from Existing Table Instances</span> job from the <span class="bold">Actions</span> drop-down list. See <a href="deftasks.htm#BABGDGDF">"Creating Table Descriptors from Table Instances and Simultaneously Mapping Them"</a> for further information.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Set the <span class="bold">SAS Library Name</span> of the source Table Descriptor to <code dir="ltr">$REPINIT</code> if you want to enable queries from the OBIEE repository's Repository Init Block to access Table instances mapped to this Table Descriptor. These queries fetch data from the Oracle LSH Table instances at user-defined refresh intervals to initialize Repository Variables.
+<p>If you do not set the <span class="bold">SAS Library Name</span> to <code dir="ltr">$REPINIT</code>, OBIEE cannot access the mapped Table instances and the automatic, periodic OBIEE repository queries will fail.</p>
+</div>
+<p>For additional information about Table Descriptors see the following sections:</p>
+<ul>
+<li>
+<p><a href="deftasks.htm#BABDFGJE">About Table Descriptors</a></p>
+</li>
+<li>
+<p><a href="deftasks.htm#BEIJFJIE">Creating a Table Descriptor</a></p>
+</li>
+<li>
+<p><a href="deftasks.htm#CIHDCCDA">Mapping Table Descriptors to Table Instances</a></p>
+</li>
+</ul>
+</div>
+<!-- class="sect1" -->
+<a id="CHDIIFJF"></a>
+<div id="LSHDG1334" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Defining Joins</h2>
+<p>You can define a Join between two Table Descriptors to allow a visualization to query and display data from two Table instances as if they were one unified table.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Joins are not supported in Generic Visualization Business Areas.</div>
+<p>You must define Table Descriptors before you can define Joins between them. You can create Joins between two and only two Table Descriptors.</p>
+<p>You can define a Join between Table Descriptor A and Table Descriptor B, another Join between Table Descriptors B and C, and another between Table Descriptors C and D, for example. Furthermore, in this same example you can create a join between Table Descriptors D and A.</p>
+<p>However, if you create a Join between Table Descriptor A and Table Descriptor B, you cannot create a Join between the same Table Descriptors with their positions reversed (Table Descriptor B and Table Descriptor A).</p>
+<p><a id="LSHDG1335"></a><span class="subhead3">Joined Columns&nbsp;</span>For each Join, you must specify at least one pair of equivalent Columns, one Column from each Table Descriptor, that are equivalent in terms of their data content; for example, Table A's Patient Column and Table B's Pat Column, both of which contain the patient ID. The joined Columns must be of the same data type.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+For Business Areas of type OBIEE, joins work only if Table instances have a Primary Key constraint.
+<p>Also, OBIEE Business Areas support only one-to-many relationships; for example, if you want to create a join between an employee table and a department table, you must add the department table to the Join first, because a department can have multiple employees in it, but an employee can belong to only one department.</p>
+</div>
+<p>If you specify more than one pair of equivalent Columns, the system sees rows in the two Table instances as being the same only if they have the same value in both Columns. For example, if you create a Column Join between Table A's Investigator Column and Table B's Inv Column, both of which contained an investigator ID, as well as the Patient/Pat join, the visualization query would see rows as being the same in the two Table instances only if they shared the same investigator ID as well as the same Patient ID.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Although some visualization tools allow the use of other operators to join columns, Oracle LSH always applies the "equal to" (=) operator.</div>
+<p><a id="CHDDHCFG"></a><a id="LSHDG1336"></a><span class="subhead3">Inner and Outer Joins&nbsp;</span>By default, an Oracle LSH Join is an inner join. That is, only rows where the joined Columns share the same value are evaluated for the query. Rows that exist in either Table instance that do not have an equivalent row in the other Table instance are not included in the visualization.</p>
+<p>You have the option to create an outer join. In an outer join, the visualization query evaluates all the rows in the Table instance you define as Table A plus all the rows in Table B where each joined Column has the same value as a row in Table A.</p>
+<a id="CHDBDGII"></a>
+<div id="LSHDG1337" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Defining a Join at the Table Level</h3>
+<p>To define an Oracle LSH Join:</p>
+<ol>
+<li>
+<p>From the Joins subtab on the Properties screen of the Business Area, click <span class="bold">Add</span>. The system displays the Join for Business Area screen.</p>
+</li>
+<li>
+<p>Enter a name for the Join.</p>
+</li>
+<li>
+<p>Enter a description for the Join (optional).</p>
+</li>
+<li>
+<p>Click the Search icon to the right of the Table A field.</p>
+</li>
+<li>
+<p>Click <span class="bold">Go</span> to see a list of all the Table Descriptors you have defined for the Business Area. Alternatively, enter the exact name of the Table Descriptor you want, or use special characters if you are unsure of the name (see "Searching" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub User's Guide</span></span> for instructions).</p>
+<p>The system displays one or more Table Descriptors.</p>
+</li>
+<li>
+<p>Click the Quick Select icon to select the Table Descriptor you want.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+In an outer join, the system evaluates all the rows of the Table instance you map to the Table Descriptor you define as Table A; see <a href="#CHDDHCFG">"Inner and Outer Joins"</a>.</div>
+</li>
+<li>
+<p>If you want to define an outer join, select Yes in the <span class="bold">Table A Outer Join</span> field.</p>
+</li>
+<li>
+<p>Click the Search icon to the right of the Table B field.</p>
+</li>
+<li>
+<p>Click <span class="bold">Go</span> to see a list of all the Table Descriptors you have defined for the Business Area. Alternatively, enter the exact name of the Table Descriptor you want, or use special characters if you are unsure of the name (see "Searching" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub User's Guide</span></span> for instructions).</p>
+<p>The system displays one or more Table Descriptors.</p>
+</li>
+<li>
+<p>Click the Quick Select icon to select the Table Descriptor you want.</p>
+</li>
+<li>
+<p>Click <span class="bold">Apply</span>. See <a href="#CHDFHDEE">"Defining a Join at the Column Level"</a>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CHDFHDEE"></a>
+<div id="LSHDG1339" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Defining a Join at the Column Level</h3>
+<p>To define which two Columns are joined, do the following:</p>
+<ol>
+<li>
+<p>Define the Table Descriptors in the Join; see <a href="#CHDBDGII">"Defining a Join at the Table Level"</a>.</p>
+</li>
+<li>
+<p>In the Join properties screen, click <span class="bold">Update</span>. The system displays an Add Join Column button.</p>
+</li>
+<li>
+<p>Click <span class="bold">Add Join Column</span>. The system displays a drop-down list under each Table Descriptor included in the Join.</p>
+</li>
+<li>
+<p>For the Table Descriptor on the left, select the Column you want to define as part of the Column Join from the drop-down list.</p>
+</li>
+<li>
+<p>For the Table Descriptor on the right, select the Column you want to define as part of the Column Join from the drop-down list.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The two Columns must have the same data type.</div>
+</li>
+<li>
+<p>Click <span class="bold">Apply</span>. The system saves your work.</p>
+<p>Click Return to go back to the main Business Area screen.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CHDDFHCD"></a>
+<div id="LSHDG1341" class="sect1">
+<h2 class="sect1">Defining Business Area Hierarchies</h2>
+<p>Many visualization tools allow drilling down into more and more detailed data or up into more and more general data. To allow this functionality for visualizations of Oracle LSH data, you must define Business Area Hierarchies.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Hierarchies are not supported in Generic Visualization Business Areas.</div>
+<p>Business Area Hierarchies define hierarchical relations among Table Columns to organize data in a meaningful way, from general to specific, so that data values at the lower levels aggregate into the data values at higher levels.</p>
+<p>For example, you could define a Hierarchy for the Columns Study, Patient, Visit, Test, in that order, from the most general to the most specific. The system uses the Hierarchy and the data values for each row to interpret the data values in the Columns hierarchically: all tests belong to a visit; all visits are associated with a patient, and all patients are part of a study.</p>
+<p>If Table Descriptors are defined as joined, you can create a Business Area Hierarchy that includes Columns from both Table Descriptors. For example, you could create a Business Area Hierarchy for the Columns Investigator Name, Patient, and Gender where the Investigator Name is in the Sites Table and the Patient and Gender Columns are in the Demography Table.</p>
+<p>When you define a Business Area Hierarchy, you assign each Column an order number. The Column with order number one is the top, or most general, level of the Business Area Hierarchy, and each subsequently numbered Column is the next lower Hierarchy level. Sequential Columns must be contained either in the same Table Descriptor or in joined Table Descriptors.</p>
+<p><a id="CHDGHFDE"></a><a id="LSHDG1342"></a><span class="subhead3">Grouping Columns&nbsp;</span>You can include two or more Columns in the same Business Area Hierarchy level by using the Group With Previous flag. For example, you could define the following Business Area Hierarchy:</p>
+<div id="LSHDG1343" class="example">
+<p class="titleinexample"><a id="sthref81"></a>Example 11-1 Business Area Hierarchy Column Grouping</p>
+<div class="inftblinformal">
+<table class="cellalignment83" title="Data Hierarchy Column Grouping" summary="Data Hierarchy Column Grouping" dir="ltr">
+<thead>
+<tr class="cellalignment71">
+<th class="cellalignment82" id="r1c1-t12">Order number</th>
+<th class="cellalignment82" id="r1c2-t12">Column</th>
+<th class="cellalignment82" id="r1c3-t12">Group With Previous?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment71">
+<td class="cellalignment77" id="r2c1-t12" headers="r1c1-t12">1</td>
+<td class="cellalignment77" headers="r2c1-t12 r1c2-t12">Investigator ID</td>
+<td class="cellalignment77" headers="r2c1-t12 r1c3-t12">&mdash;</td>
+</tr>
+<tr class="cellalignment71">
+<td class="cellalignment77" id="r3c1-t12" headers="r1c1-t12">2</td>
+<td class="cellalignment77" headers="r3c1-t12 r1c2-t12">Investigator Name</td>
+<td class="cellalignment77" headers="r3c1-t12 r1c3-t12">Yes</td>
+</tr>
+<tr class="cellalignment71">
+<td class="cellalignment77" id="r4c1-t12" headers="r1c1-t12">3</td>
+<td class="cellalignment77" headers="r4c1-t12 r1c2-t12">Patient</td>
+<td class="cellalignment77" headers="r4c1-t12 r1c3-t12">&mdash;</td>
+</tr>
+<tr class="cellalignment71">
+<td class="cellalignment77" id="r5c1-t12" headers="r1c1-t12">4</td>
+<td class="cellalignment77" headers="r5c1-t12 r1c2-t12">Gender</td>
+<td class="cellalignment77" headers="r5c1-t12 r1c3-t12">&mdash;</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" --></div>
+<!-- class="example" -->
+<p>The example above shows a three-level hierarchy. Investigator ID and Investigator Name are both in the top level, which makes sense because they are alternate values for the same type of information. Patient is the middle level and Gender is the bottom level. In a visualization, users can drill down from the investigator by either name or ID, or view them both, to all patients for whom a particular investigator is responsible, to an investigator's male patients or the same investigator's female patients.</p>
+<p>To define a Business Area Hierarchy:</p>
+<ol>
+<li>
+<p>From the Business Area Hierarchies subtab on the Properties screen of the Business Area, click <span class="bold">Add</span>. The system displays the Create Business Area Hierarchies screen.</p>
+</li>
+<li>
+<p>Enter a name for the Business Area Hierarchy (required).</p>
+</li>
+<li>
+<p>Enter a description for the Business Area Hierarchy (optional).</p>
+</li>
+<li>
+<p>Click <span class="bold">Apply</span>. The system displays the Properties screen of the new hierarchy.</p>
+</li>
+<li>
+<p>Click <span class="bold">Update</span>. The system adds the Add Another Row button.</p>
+</li>
+<li>
+<p>Click <span class="bold">Add Another Row</span>.</p>
+</li>
+<li>
+<p>Click the Search icon in the <span class="bold">Table</span> column. The system opens a Search and Select screen.</p>
+</li>
+<li>
+<p>Click <span class="bold">Go</span> to see a list of all the Table Descriptors you have defined for the Business Area. Alternatively, enter the exact name of the Table Descriptor you want, or use special characters if you are unsure of the name (see "Searching" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub User's Guide</span></span> for instructions).</p>
+<p>The system displays one or more Table Descriptors.</p>
+</li>
+<li>
+<p>Click the Quick Select icon to select the Table Descriptor that is mapped to the Table instance you want to include in the Hierarchy.</p>
+</li>
+<li>
+<p>Click the Search icon in the <span class="bold">Column Name</span> column. The system opens a Search and Select screen.</p>
+</li>
+<li>
+<p>Click <span class="bold">Go</span> to see a list of all the Columns in the Table Descriptor. Alternatively, enter the exact name of the Column you want, or use special characters if you are unsure of the name (see "Searching" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub User's Guide</span></span> for instructions).</p>
+<p>The system displays one or more Columns.</p>
+</li>
+<li>
+<p>Click the Quick Select icon to select the Column you want to include in the Hierarchy.</p>
+</li>
+<li>
+<p>Repeat Steps 6-12.</p>
+<p>This time the system displays only the Table Descriptor you selected in Step 9 and any other Table Descriptors that are part of a Join that includes the Table Descriptor you selected.</p>
+<p>In addition, beginning with the second row, you can choose to group the Column with the previous one at the same level of the Hierarchy; see <a href="#CHDGHFDE">"Grouping Columns"</a>.</p>
+</li>
+<li>
+<p>When you have added all the rows you want in the Hierarchy, click <span class="bold">Apply</span>. the system saves your changes.</p>
+<p>Click <span class="bold">Return</span> to go back to the Business Area Properties screen.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="CIHCADFJ"></a>
+<div id="LSHDG1345" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Understanding Business Area Source Code</h2>
+<p>In the context of an Oracle LSH Business Area, the Source Code object is used to store files required for integration with an external visualization tool. This is different from the way Source Code is used in Oracle LSH Programs where the Oracle LSH Source Code object contains actual program source code.</p>
+<p>For information on OBIEE Business Area Source Code see <a href="#CHDGFJBI">"About OBIEE Business Areas"</a>.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Source Code is not supported in Generic Visualization Business Areas.</div>
+</div>
+<!-- class="sect1" -->
+<a id="CHDEFGAE"></a>
+<div id="LSHDG1346" class="sect1">
+<h2 class="sect1">Setting Business Area Attributes and Parameters</h2>
+<p>Some types of Business Areas, including third-party types not covered by this documentation, may have attributes and Parameters. When you create a Business Area of those types, attributes or Parameters required for the visualization tool may appear on the Business Area Properties page.</p>
+<p>OBIEE Business Areas have one attribute; see <a href="#CHDCIHIB">"Defining Oracle Business Intelligence Business Areas"</a>.</p>
+</div>
+<!-- class="sect1" -->
+<a id="CHDCIHIB"></a>
+<div id="LSHDG2008" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Defining Oracle Business Intelligence Business Areas</h2>
+<p>This section contains the following:</p>
+<ul>
+<li>
+<p><a href="#CHDGFJBI">About OBIEE Business Areas</a></p>
+</li>
+<li>
+<p><a href="#CHDJFIHI">Defining an OBIEE Business Area</a></p>
+</li>
+<li>
+<p><a href="#CHDBJFBE">Visualizing Business Area Data using OBIEE Answers</a></p>
+</li>
+<li>
+<p><a href="#CHDDGFFD">OBIEE Security</a></p>
+</li>
+<li>
+<p><a href="#CHDGFGFA">Installing and Setting Up Oracle Business Intelligence Administration Tool</a></p>
+</li>
+</ul>
+<p>For information on using the OBIEE Administration Tool and Presentation Services to create visualizations&mdash;Answers and Dashboards&mdash;see the Oracle Business Intelligence documentation, including online help.</p>
+<a id="CHDGFJBI"></a>
+<div id="LSHDG2009" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">About OBIEE Business Areas</h3>
+<p>When you install an OBIEE Business Area for the first time the system generates an Oracle BI repository (.rpd) file&mdash;which is required for creating and displaying Subject Areas, Answers, and Dashboards in Oracle BI Presentation Services&mdash;and copies it to the BI Server. This generating .rpd allows the creation of visualizations of LSH data through OBIEE Answers without the use of the OBIEE Administration tool. Oracle LSH stores the .rpd file in the OBIEE Business Area Source Code definition.</p>
+<p>The system deploys the .rpd files from all the OBIEE Business Areas that share the same OBIEE Service Location Name onto that Oracle BI Server and merges them into a single .rpd file as each Business Area is installed.</p>
+<p>If you are using OBIEE 11g, each time you install an OBIEE Business Area you must open Oracle Enterprise Manager, manually deploy the merged, or master, .rpd file and restart the BI Service for the Business Area to become available to users; see <a href="#CHDBHFDH">"Manually Deploying the Master RPD File"</a>. If you are using OBIEE 10g, this process is automatic each time you install the Business Area.</p>
+<p><a id="LSHDG2010"></a><span class="subhead3">Customizing the RPD File Using OBIEE Administration Tool&nbsp;</span>Oracle LSH takes advantage of only a small number of the features that OBIEE has to offer. If you are experienced with OBIEE you may wish to make changes to the Business Area's default .rpd file using the OBIEE Administration Tool and upload the resultant .rpd to replace the system-generated .rpd in the Business Area in Oracle LSH.</p>
+<p>In order to ensure that subsequent installations of the Business Area do not overwrite those customizations, the system tracks the origin of the .rpd file. When Oracle LSH creates an .rpd file during installation, it populates the File Reference Name with the value <code dir="ltr">SYSTEM</code>. When a user uploads a customized .rpd file the system populates the File Reference Name with the value <code dir="ltr">USER</code>.</p>
+<p>Each time you install the Business Area, the system checks if the current .rpd file was generated by the system or manually uploaded to the Business Area. If the file was generated by Oracle LSH and not manually uploaded and the Table Descriptor, Join, or Hierarchy definitions have changed, then the system generates a new .rpd file and stores this as a new version of that Source Code.</p>
+<p>If the current .rpd file was uploaded, the system does not override it with a new file even if you have made changes in Oracle LSH. You must make corresponding changes&mdash;adding, deleting, or modifying tables, joins, and hierarchies&mdash;in the Administration Tool and reupload the file.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CHDJFIHI"></a>
+<div id="LSHDG2011" class="sect2">
+<h3 class="sect2">Defining an OBIEE Business Area</h3>
+<p>Oracle recommends developing an OBIEE Business Area in the following order:</p>
+<ol>
+<li>
+<p>Create the Business Area; see <a href="#CHDIDGDE">"Creating a Business Area"</a>. Special information for OBIEE Business Areas:</p>
+<ul>
+<li>
+<p><span class="bold">Name</span>. The Business Area name is displayed in OBIEE Answers as the Subject Area. <span class="bold">The name must be unique among Business Areas using the same service location</span>. If it is not unique, when you install the Business Area you receive an error message with the location of the previously installed Business Area with the same name.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Do not change the name of a previously installed Business Area. This will cause problems with the .rpd file.</div>
+</li>
+<li>
+<p><span class="bold">OBIEE Service Location Name</span>. Select the value for the computer with the Presentation Server you want this Business Area to use, if more than one is available in your company.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Add Table Descriptors and map them to the Table instances that contain the data you want to make available in OBIEE; see <a href="#CHDJAGDJ">"Defining Table Descriptors"</a>.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+To enable the OBIEE repository to query the source Table instances that the Oracle LSH OBIEE Business Area uses, set the <span class="bold">SAS Library Name</span> of the mapped Table Descriptor to <code dir="ltr">$REPINIT</code>. See <a href="#CHDJAGDJ">"Defining Table Descriptors"</a>.</div>
+</li>
+<li>
+<p>If you want to add joins and hierarchies in Oracle LSH, do so now; see <a href="#CHDIIFJF">"Defining Joins"</a> and <a href="#CHDDFHCD">"Defining Business Area Hierarchies"</a>. See <a href="#CHDGFJBI">"About OBIEE Business Areas"</a>.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Do not explicitly create a Source Code definition. The Source Code is automatically created when you install the Business Area. Its name is determined by the value of the Details attribute in the Deploy service defined for the service location you selected.</div>
+</li>
+<li>
+<p>Install the Business Area to create the initial .rpd file. Install it again if you make changes in Oracle LSH before working in the OBIEE Administration Tool. The system generates a new .rpd file with your changes.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Customization in the OBIEE Administration Tool is optional.</div>
+</li>
+<li>
+<p>Click <span class="bold">Launch IDE</span> to open the OBIEE Administration Tool. When prompted for a repository password, enter blank and continue. Work on the .rpd file in this tool, using the OBIEE user documentation.</p>
+<p>If you make structural changes in the OBIEE Administration Tool&mdash;changes to tables, joins, or hierarchies&mdash;you must make the same changes in Oracle LSH so that the .rpd file is always synchronized with the Business Area definition. Otherwise you will not be able to use the new structures in OBIEE. For example, if you add a column to a table in OBIEE but do not add the column in the Business Area Table Descriptor and map it to a column in its Table instance, you will not be able to see the data in the column in OBIEE.</p>
+</li>
+<li>
+<p>When you are finished making changes, upload the .rpd file to the Business Area:</p>
+<ol>
+<li>
+<p>In the Source Code tab, click the link to the Source Code definition.</p>
+</li>
+<li>
+<p>Click <span class="bold">Browse...</span>. The .rpd file is generally stored on the C drive, in the CdrWork folder. The full path of the repository file looks like this:</p>
+<pre dir="ltr">
+<span class="italic">Drive</span>:\CdrWork<span class="codeinlineitalic">\LSH_database_username\OBIEE_BA_Domain_name\OBIEE_BA_Application_Area_name\OBIEE_BA_Work_Area_name\OBIEE_BA_name\OBIEE_BA_version_number\</span>
+</pre>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Oracle LSH supports uploading zipped .rpd files. However, you must give the .zip file exactly the same name as the .rpd file; for example, <code dir="ltr">test.zip</code> must contain <code dir="ltr">test.rpd</code>.</div>
+</li>
+<li>
+<p>Click <span class="bold">Apply</span>.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Install the Business Area. If you are using OBIEE 10g, the system creates a new version of the Source Code definition that contains the newly uploaded file and deploys the file to the repository folder path defined on the Oracle BI Server, merging it into the master .rpd file.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If an .rpd file does not appear in the Source Code tab after installation, check the Jobs subtab. If the Execution Status is Pending Logon or Obtain Service, there is a problem with the Distributed Processing (DP) Server on the BI Server computer.</div>
+</li>
+<li>
+<p>If you are using OBIEE 11g, manually deploy the master .rpd file to the BI Server and restart the BI Service; see <a href="#CHDBHFDH">"Manually Deploying the Master RPD File"</a>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CHDBHFDH"></a>
+<div id="LSHDG2012" class="sect2">
+<h3 class="sect2">Manually Deploying the Master RPD File</h3>
+<p>Manually deploy the new version of the master .rpd file on your OBIEE 11g BI Server using the Oracle Enterprise Manager. This step is required every time you install a Business Area.</p>
+<ol>
+<li>
+<p>Open the Oracle Enterprise Manager using the URL specific to your environment.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If the URL does not work, you may need to restart the WebLogic Server; see <a href="#CHDEIEEF">"Starting the WebLogic Server"</a>.</div>
+</li>
+<li>
+<p>In the left-hand panel, navigate to Farm_bifoundation_domain, then Business Intelligence, then coreapplication. Then click the <span class="bold">Deployment</span> tab, and then the <span class="bold">Repository</span> subtab.</p>
+</li>
+<li>
+<p>Click <span class="bold">Lock and Edit Configuration</span> near the top. A confirmation message appears.</p>
+</li>
+<li>
+<p>Under Upload BI Server Repository, click the <span class="bold">Browse</span> button for the Repository File field and select the master .rpd file.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The location of the master .rpd file is determined by the edited obieedeploy.cmd file; ask your administrator for it.</div>
+</li>
+<li>
+<p>Enter the repository password and confirm password. The password <span class="bold">must</span> be same as the administrator password stored in LSH under Remote Location Connections. This is very important for the integration. Click <span class="bold">Apply</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Activate Changes</span> at the top of the screen. A confirmation message appears.</p>
+</li>
+<li>
+<p>Click <span class="bold">Restart</span> and confirm.</p>
+</li>
+<li>
+<p>Ensure that Restart All completed successfully. This indicates the successful deployment of the .rpd on the BI Server and a successful restart of the BI Server services. The Business Area .rpd is now ready to be used through the OBIEE Presentation Service (BI Answers).</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CHDEIEEF"></a>
+<div id="LSHDG2013" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Starting the WebLogic Server</h3>
+<p>If the URL for Oracle Enterprise Manager is not working, the WebLogic Server may be down. To start it:</p>
+<ol>
+<li>
+<p>On the BI Server computer, right-click <span class="bold">Command Prompt</span> under the Start menu and select <span class="bold">Run as Administrator</span>.</p>
+</li>
+<li>
+<p>Change directory to the Domain folder under the OBIEE installation folder; for example, E:\oracle\fmw\user_projects\domains\bifoundation_domain.</p>
+</li>
+<li>
+<p>Run the command <code dir="ltr">startWeblogic.cmd</code> under this folder. The system prompts you for the WebLogic Server username and password.</p>
+</li>
+<li>
+<p>Check that the command window displays the message "Server started in RUNNING mode."</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CHDBJFBE"></a>
+<div id="LSHDG2014" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Visualizing Business Area Data using OBIEE Answers</h3>
+<p>You can access OBIEE data visualizations in two ways:</p>
+<ul>
+<li>
+<p><span class="bold">In Oracle LSH</span>, go to the Visualizations subtab of the Reports tab; locate the Business Area under its classification hierarchy; click the View icon in the Actions column for the Business Area; and click <span class="bold">Launch Visualization</span>.</p>
+<p>The system launches the Oracle Business Intelligence Presentation Services interface. Navigate to the Subject Area with the same name as the Business Area and follow instructions in the OBIEE user documentation to create Answers and Dashboards.</p>
+</li>
+<li>
+<p><span class="bold">Outside Oracle LSH</span>, go to the URL of the computer corresponding to the Service Location Name. The system launches the Oracle Business Intelligence Presentation Services interface. Navigate to the Subject Area with the same name as the Business Area and follow instructions in the OBIEE user documentation to create Answers and Dashboards.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="CHDDGFFD"></a>
+<div id="LSHDG2015" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">OBIEE Security</h3>
+<p>OBIEE security is handled through Oracle LSH.</p>
+<div id="LSHDG2016" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref82"></a>
+<h4 class="sect3">End User Security</h4>
+<p>Security access to OBIEE visualizations is determined by users' security privileges on the Business Area on which the visualization is based. The automatically generated RPDUpdates.txt file contains the information required to initiate user authentication. This file is passed to the BI Server during Business Area installation and RPD file merge and deployment operation.</p>
+<p>When you launch an OBIEE visualization from within Oracle LSH , you can see noncurrent and blinded Oracle LSH data if you have the required privileges.</p>
+<p>If you access an OBIEE visualization outside of Oracle LSH, through the URL of the OBIEE Presentation Services, you cannot see blinded or noncurrent data regardless of your privileges.</p>
+</div>
+<!-- class="sect3" -->
+<div id="LSHDG2017" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref83"></a>
+<h4 class="sect3">Developer Security</h4>
+<p>Developers must have normal security access to modify the Business Area.</p>
+<p>When you launch the OBIEE Administration Tool or an OBIEE visualization from within Oracle LSH , you can see noncurrent and blinded Oracle LSH data if you have the required privileges.</p>
+<p>When you launch the OBIEE Administration Tool from Oracle LSH, the system create synonyms to the Business Area's Table Descriptors for your database account, and the OBIEE Administration Tool connects to the LSH database with your database account. The logon trigger authenticates against Oracle LSH user privileges.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CHDGFGFA"></a>
+<div id="LSHDG2018" class="sect2">
+<h3 class="sect2">Installing and Setting Up Oracle Business Intelligence Administration Tool</h3>
+<p>To use the Oracle Business Intelligence Administration Tool, you must do the following on your local PC:</p>
+<ul>
+<li>
+<p>Get the CD-ROM that contains the Oracle LSH files <span class="bold">cdrconfig.xml</span> and <span class="bold">cdrclient.exe</span> from your system administrator and insert it into your PC. InstallShield automatically runs setup.exe to load cdrconfig.xml and cdrclient.exe to a location you specify on your local computer.</p>
+</li>
+<li>
+<p>Install Oracle BI Client Tools on your PC in the location specified by your system administrator. The location must match the directory path specified in <span class="bold">cdrconfig.xml</span>.</p>
+</li>
+<li>
+<p>Ensure that <span class="bold">cdrconfig.xml</span> has the correct directory path for the Oracle BI Administration tool.</p>
+</li>
+<li>
+<p>In the Oracle BI Administration Tool, set up connectivity with the Oracle LSH database. See <a href="#CHDGAHFF">"Set Up Database Connectivity"</a> for information.</p>
+</li>
+<li>
+<p>Add and set the following environment variables on the PC through advanced system properties:</p>
+<ul>
+<li>
+<p><span class="bold">ORACLE_HOME</span> Enter the absolute path of the Oracle Home on your PC; for example:</p>
+<pre dir="ltr">
+<span class="italic">Drive</span>:\Program Files\Oracle Business Intelligence Enterprise Edition Plus Client\oraclebi\orahome
+</pre></li>
+<li>
+<p><span class="bold">ORACLE_INSTANCE</span> Enter the absolute path to Oracle BI orainst1 on your PC; for example:</p>
+<pre dir="ltr">
+<span class="italic">Drive</span>:\Program Files\Oracle Business Intelligence Enterprise Edition Plus Client\oraclebi\orainst
+</pre></li>
+<li>
+<p><span class="bold">ORACLE_BI_APPLICATION</span> You must enter the following value exactly:</p>
+<pre dir="ltr">
+coreapplication
+</pre></li>
+</ul>
+</li>
+</ul>
+<a id="CHDGAHFF"></a>
+<div id="LSHDG2019" class="sect3">
+<h4 class="sect3">Set Up Database Connectivity</h4>
+<p>To access Oracle LSH data in the Administration Tool on your PC, you must set up connectivity between the Oracle LSH database and your PC. You can use a system ODBC DSN or the Oracle Call Interface (OCI10g):</p>
+<ul>
+<li>
+<p><span class="bold">Set Up Database Connectivity Using a System DSN</span></p>
+<ol>
+<li>
+<p>Create a valid Oracle driver-based System Data Source Name (DSN) on your PC that points to the LSH database.</p>
+</li>
+<li>
+<p>Consult Microsoft Windows online help for instructions on creating the System DSN.</p>
+</li>
+<li>
+<p>Use the Test Connection button to test the connection.</p>
+</li>
+</ol>
+</li>
+<li>
+<p><span class="bold">Set Up Database Connectivity Using OCI 11g</span></p>
+<ol>
+<li>
+<p>Create an entry in your PC's tnsnames.ora file with the name and connection details for the LSH database server.</p>
+</li>
+<li>
+<p>Create an entry in your PC's tnsnames.ora file with the name and connection details for the LSH database server.</p>
+</li>
+<li>
+<p>Test the connection by trying to connect to the Oracle LSH database using sqlplus as apps. For example:</p>
+<pre dir="ltr">
+sqlplus apps/<span class="codeinlineitalic">apps_password</span>@<span class="codeinlineitalic">lsh_database_name</span>
+</pre></li>
+</ol>
+</li>
+</ul>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CHDEEBDG"></a>
+<div id="LSHDG2020" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Defining Generic Visualization Business Areas</h2>
+<p>Oracle LSH includes a Generic Visualization adapter to allow you to integrate the data visualization tool of your choice with Oracle LSH so that your end users can view Oracle LSH data through that tool. See the <span class="italic">Oracle Life Sciences Data Hub Adapter Toolkit Guide</span> for information on using the Generic Visualization adapter.</p>
+<p>After setting up integration, you define and install one or more Business Area instances of type GENERIC_VISUALIZATION. Users can then access the data visualizations through the tool's URL. Users can then access data visualizations through the tool's URL.</p>
+<div id="LSHDG2021" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref84"></a>
+<h3 class="sect2">Generic Visualization Business Area Instance Properties</h3>
+<p>Generic Visualization Business Area instances have the following properties:</p>
+<p><a id="LSHDG2022"></a><span class="subhead3">Schema Name&nbsp;</span>Enter a unique name for the schema of up to 30 characters. The value is stored in uppercase. Do not use special characters or reserved words; see <a href="deftasks.htm#CHDBIJAH">"Naming Objects"</a>. Users will be able to use this account to log in to the integrated visualization tool.</p>
+<p>If a schema already exists in the Oracle LSH installation with the same name, the system automatically appends _<span class="italic">n</span> to the name, where <span class="italic">n</span> is 1 or the next higher integer if there is already a schema name <span class="italic">your_name</span>_1 or higher.</p>
+<p><a id="CHDBEJJH"></a><a id="LSHDG2023"></a><span class="subhead3">Default Currency&nbsp;</span>This setting controls the data viewed by users if they do not explicitly make another selection at login. The default value is Current. If all the source Table instances mapped to the Business Area have the same snapshot label applied and you want users to see that snapshot data by default, select the snapshot label.</p>
+<p><a id="CHDFDBFG"></a><a id="LSHDG2024"></a><span class="subhead3">Default Blinding Access Type&nbsp;</span>This setting controls the data available to users. Users' privileges also determine which data they can view. Your own privileges determine which values you can set. The possible settings include:</p>
+<ul>
+<li>
+<p><span class="bold">NA/Dummy</span> All users, regardless of their privileges, can see data in Table instances whose Blinding flag is set to <span class="bold">No</span> and the dummy data in Table instances whose Blinding flag is set to <span class="bold">Yes</span>. If all Table instances mapped to Business Area Table Descriptors have their Blinding flag set to <span class="bold">No</span>, this is the only option available.</p>
+</li>
+<li>
+<p><span class="bold">Real(Unblinded)</span> If all Table instances whose Blinding flag is set to <span class="bold">Yes</span> have a Blinding status of <span class="bold">Unblinded</span>, you can set the Default Blinding Access Type to this value. In these Table instances, users with the necessary privileges can see the real, unblinded data, and users without these privileges see the dummy data. All users can see data in Table instances whose Blinding flag is set to <span class="bold">No</span>.</p>
+</li>
+</ul>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The adapter can allow users with Blind Break privileges on all Table instances whose Blinding flag is set to <span class="bold">Yes</span> and whose Blinding Status is set to <span class="bold">Blinded</span> to select the <span class="bold">Real (Blind Break)</span> option when they log in, regardless of the Default Blinding Access Type. All blind breaks are audited.</div>
+<p><a id="LSHDG2025"></a><span class="subhead3">Table Descriptors&nbsp;</span> Generic Visualization Business Area Table Descriptors can be mapped to any Table instance type including 'View' Table instances.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CHDEFBEG"></a>
+<div id="LSHDG2026" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Assigning Security Privileges to Business Area Data</h3>
+<p>Unlike other Business Areas, which are installed in their Work Area's schema, Oracle LSH installs each Generic Visualization Business Area instance in its own schema outside the Work Area schema. There are simplified security requirements for data in this schema.</p>
+<p>Users can log in to the integrated visualization tool using an Oracle LSH database account. The system checks if there is an Oracle LSH user account linked to the database account. If there is a linked user account, the system uses it to determine the user's privileges. If there is no linked user account, the system uses the database account itself to determine the user's privileges.</p>
+<p>The database account can have one or two privileges assigned:</p>
+<ul>
+<li>
+<p><span class="bold">Read Data</span>. This privilege allows the user to view data that was never blinded and dummy data in Table instances that are currently blinded. All database accounts that should have access to the Business Area instance data should have this privilege.</p>
+</li>
+<li>
+<p><span class="bold">Read Unblind</span>. This privilege allows the user to view data that has been permanently unblinded.</p>
+</li>
+</ul>
+<p>If a user should be able to view currently blinded data, he or she must have an Oracle LSH user account with all the required Blind Break privileges and a linked database account. An administrator must set up the user account and appropriate privileges.</p>
+<p>If you have the Manage GVA BA Database Access operation on Business Area instances and belong to a user group assigned to a Business Area instance, you can grant or revoke Read Data and Read Unblind privileges database accounts for the Business Area instance. Oracle LSH audits all changes to these permissions.</p>
+<p>To grant privileges to database accounts on Business Area instance data:</p>
+<ol>
+<li>
+<p>In the Business Area instance Properties page, select <span class="bold">Manage DB Privileges</span> from the Actions drop-down list. Select <span class="bold">Go</span>.</p>
+<p>You see the the privileges <span class="bold">Read Access</span> and <span class="bold">Read Unblind Access</span>. You can expand either privilege to view the database accounts currently assigned to that privilege.</p>
+</li>
+<li>
+<p>To change assignments, select the plus (<span class="bold">+</span>) icon in the <span class="bold">Manage</span> column for either Read Access or Read Unblind Access. A screen opens displaying available accounts for assignment and those already selected for the privilege.</p>
+</li>
+<li>
+<p>Use the arrow icons to grant or revoke the selected privilege to one or more accounts:</p>
+<ul>
+<li>
+<p>To grant an account the privilege you selected, double-click or use the arrow icons to move the account from Available Users to Selected Users.</p>
+</li>
+<li>
+<p>To revoke the privilege, double-click or use the arrow icons to move an account from Selected Users to Available Users.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Apply</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CHDHFCDG"></a>
+<div id="LSHDG1364" class="sect1">
+<h2 class="sect1">Launching Visualizations</h2>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#CHDDBFAA">Creating a Visualization</a></p>
+</li>
+<li>
+<p><a href="#BCFFFEHA">Setting Data Currency and Blinding Values</a></p>
+</li>
+</ul>
+<a id="CHDDBFAA"></a>
+<div id="LSHDG1365" class="sect2">
+<h3 class="sect2">Creating a Visualization</h3>
+<p>To create a Visualization from a Business Area instance:</p>
+<ol>
+<li>
+<p>Click <span class="bold">Launch</span>. Oracle LSH opens the Launch Visualization screen.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Launching the IDE is not supported for Generic Visualization Business Areas.</div>
+</li>
+<li>
+<p>The Launch Visualization screen displays details about the Business Area instance, and launch settings&mdash;data currency, and data blinding-related settings&mdash;for data that becomes available to OBIEE. To edit these settings, click <span class="bold">Launch Settings</span>. Oracle LSH opens the Launch Settings screen. See <a href="#BCFFFEHA">"Setting Data Currency and Blinding Values"</a>.</p>
+</li>
+<li>
+<p>After making your selections in the Launch Settings screen, click <span class="bold">Launch</span> on the Launch Visualization screen. Oracle LSH opens the OBIEE Administration Tool.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+When you launch the OBIEE Administration Tool, you have to log in with an Oracle LSH username and password.</div>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BCFFFEHA"></a>
+<div id="LSHDG1366" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Setting Data Currency and Blinding Values</h3>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#BCFEAFIG">Setting the Blind Break Value</a></p>
+</li>
+<li>
+<p><a href="#BCFEIHGI">Setting the Shared Snapshot Value</a></p>
+</li>
+</ul>
+<p>You can determine the blinding status and currency of the data you see by clicking the Launch Settings button and selecting a value for Blind Break and Shared Snapshot Label.</p>
+<a id="BCFEAFIG"></a>
+<div id="LSHDG1367" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Setting the Blind Break Value</h4>
+<p>This setting is relevant only when one or more source Table instances either currently or formerly contained blinded data. Special privileges are required to view real data that is either currently blinded or was formerly blinded. You must have these special privileges on all such Tables, in order to see real data in any of them.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You must have Read Data privileges in order to see any data at all.</div>
+<p>The following choices are available depending both on the state of the data and on your security privileges:</p>
+<ul>
+<li>
+<p><span class="bold">Not Applicable</span>. If none of the data has ever been blinded, the only option available is <span class="bold">Not Applicable</span>. No special privileges are required.</p>
+</li>
+<li>
+<p><span class="bold">Dummy</span>. This is the only option available to you if you do not have blinding-related privileges for blinded Tables. You can also see this option if you have blinding-related privileges. In that case, you can select this option to work with dummy (not real) data in Oracle Business Intelligence Enterprise Edition.</p>
+</li>
+<li>
+<p><span class="bold">Real (Blind Break)</span>. If any of the data is currently blinded, and you have the required privileges, you can select this option to view real data in Oracle Business Intelligence Enterprise Edition according to your company's policies. The table(s) containing the blinded data remain blinded after you run the visualization.</p>
+</li>
+<li>
+<p><span class="bold">Real (Unblinded)</span>. If a blinded Table instance has now been unblinded, you can see real data for the Table instance, provided you have the required privileges. If there are more than one such Table instances, you need the required privileges for all of them to be able to use this option.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<a id="BCFEIHGI"></a>
+<div id="LSHDG1368" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Setting the Shared Snapshot Value</h4>
+<p>If all the relevant Table instances share one or more snapshot labels, those snapshot labels appear in this drop-down list and you can select one.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If a Table instance is defined as a pass-through view, visualizations always display current data in it, regardless of this setting.</div>
+<p>In addition, you normally have the option to view the current data.</p>
+<p>You can apply snapshot labels in the Work Area; see <a href="wa_install.htm#CHDBBHBG">"Adding, Removing, or Moving a Snapshot Label"</a>.</p>
+<p>For more information on what snapshots are, see <a href="exec.htm#BCGEHDIE">"Data Snapshots"</a>.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CHDFIIID"></a>
+<div id="LSHDG2027" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Installing Business Area Instances</h2>
+<p>You can install a Business Area instance directly from its Properties screen, using the Install button, or in its Work Area (see <a href="wa_install.htm#CHDGCFAF">"Installing a Work Area and Its Objects"</a>).</p>
+<p>When you install a Business Area instance using the <span class="bold">Install</span> button on its Properties screen:</p>
+<ul>
+<li>
+<p>The system checks in the Business Area instance and definition, and also the Table instances in the current Work Area to which the instance is mapped.</p>
+</li>
+<li>
+<p>The system attempts to install the Business Area instance and its source Table instances in the current Work Area. The system displays a success or error message. If the installation fails, the error message displays the name of any objects that were not installable.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If the Business Area definition or any of its source Table instances in the current Work Area is not installable, the system cannot install the Business Area instance. See <a href="status.htm#BABHIEJG">Appendix A, "Installation Requirements for Each Object Type"</a> for the reasons these objects may not be installable.</div>
+</li>
+<li>
+<p>In an OBIEE Business Area, the system may generate a repository file; see <a href="#CHDGFJBI">"About OBIEE Business Areas"</a>.</p>
+</li>
+</ul>
+<p><a id="LSHDG2028"></a><span class="subhead3">Log File&nbsp;</span>To see the log file for the installation, you must go to the Work Area Installation screen, as follows:</p>
+<ol>
+<li>
+<p>Click the <span class="bold">Applications</span> tab. The main Application Development screen opens.</p>
+</li>
+<li>
+<p>Click the name of the Work Area you are working in. The Work Area screen opens.</p>
+</li>
+<li>
+<p>From the <span class="bold">Actions</span> drop-down list, select <span class="bold">Installation History</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Go</span>. The system displays the Installation History screen with the log files in chronological order.</p>
+</li>
+<li>
+<p>Click the <span class="bold">View Log</span> link for the most recent installation attempt or for the date and time that you ran the install process. The system displays the log file.</p>
+</li>
+</ol>
+<p>For information on installation and on reading the log file, see <a href="wa_install.htm#CHDGCFAF">"Installing a Work Area and Its Objects"</a>.</p>
+</div>
+<!-- class="sect1" -->
+<a id="CHDFJICJ"></a>
+<div id="LSHDG1369" class="sect1">
+<h2 class="sect1">Modifying Business Areas</h2>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#BCFIFEAD">Modifying Business Area Instance Properties</a></p>
+</li>
+<li>
+<p><a href="#CHDFFGCC">Modifying Business Area Definition Properties</a></p>
+<ul>
+<li>
+<p><a href="#BCFCDAEJ">Modifying Table Descriptors</a></p>
+</li>
+<li>
+<p><a href="#BCFGGDCA">Modifying Joins</a></p>
+</li>
+<li>
+<p><a href="#CHDEJJHF">Modifying Business Area Hierarchies</a></p>
+</li>
+<li>
+<p><a href="#CHDGABFB">Modifying Business Area Source Code</a></p>
+</li>
+</ul>
+</li>
+</ul>
+<p>If you have the necessary privileges, you can modify a Business Area either through an instance of it in a Work Area or directly in the definition in its Domain or Application Area. In most cases it makes sense to work through an instance in a Work Area for the following reasons:</p>
+<ul>
+<li>
+<p>In order to use or test changes to the definition you must create and install an instance of it.</p>
+</li>
+<li>
+<p>If you work through an instance, the system automatically repoints the instance to the new version of the definition.</p>
+</li>
+</ul>
+<p>However, if you need to change properties of the definition, you must work directly in the definition in its Domain or Work Area.</p>
+<p>Whether you work in an instance or directly in the definition, when you check in the new version of the definition you have the opportunity to upgrade instances of the original definition to the new version; see <a href="deftasks.htm#BEIHAHEE">"Upgrading Object Instances to a New Definition Version"</a>.</p>
+<a id="BCFIFEAD"></a>
+<div id="LSHDG1370" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Modifying Business Area Instance Properties</h3>
+<p>On the Business Area instance's Properties screen, click <span class="bold">Update</span> to enter changes. Oracle LSH creates a new version of the instance you are working on and applies your changes to it when you click <span class="bold">Apply</span>. Click <span class="bold">Cancel</span> to discard your changes and the new version.</p>
+<p>You can modify some properties through the <span class="bold">Actions</span> drop-down list; see <a href="deftasks.htm#CIHDAIFF">"Using the Actions Drop-Down List"</a> for further information.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You must reinstall the Business Area for the changes to take effect.</div>
+<p>You can modify the following:</p>
+<p><a id="LSHDG2029"></a><span class="subhead3">Name&nbsp;</span>See <a href="deftasks.htm#CHDBIJAH">"Naming Objects"</a> for further information.</p>
+<p><a id="LSHDG2030"></a><span class="subhead3">Description&nbsp;</span>See <a href="deftasks.htm#CHDIHBBC">"Creating and Using Object Descriptions"</a> for further information.</p>
+<p><a id="CHDIJEAI"></a><a id="LSHDG2031"></a><span class="subhead3">Definition Source&nbsp;</span>This field applies to the instance only. It specifies the Business Area definition to which this Business Area instance points. It generally does not make sense to change the source definition for the following reasons:</p>
+<ul>
+<li>
+<p>Changing the definition may result in a new set of Table Descriptors, Joins, and Business Area Hierarchies.</p>
+</li>
+<li>
+<p>Any new Table Descriptors are not mapped.</p>
+</li>
+<li>
+<p>The Business Area's status changes to <span class="bold">Non Installable</span>.</p>
+</li>
+</ul>
+<p>If you want to change to a new version of the same definition, use the <span class="bold">Upgrade Instance</span> option from the <span class="bold">Actions</span> drop-down list.</p>
+<p><a id="LSHDG2032"></a><span class="subhead3">Default Blinding Access Type&nbsp;</span>(Generic Visualization Business Areas) See <a href="#CHDFDBFG">"Default Blinding Access Type"</a>.</p>
+<p><a id="LSHDG2033"></a><span class="subhead3">Default Currency&nbsp;</span>(Generic Visualization Business Areas) See <a href="#CHDBEJJH">"Default Currency"</a>.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CHDFFGCC"></a>
+<div id="LSHDG1374" class="sect2">
+<h3 class="sect2">Modifying Business Area Definition Properties</h3>
+<p>You can go to a Business Area definition's Properties screen in one of the following ways:</p>
+<ul>
+<li>
+<p><span class="bold">From the Business Area's Properties screen</span>: Click the hyperlink of the Business Area definition that appears in the Definition field. See <a href="#BCFHIGAJ">"Definition"</a>.</p>
+</li>
+<li>
+<p><span class="bold">From the Domain or Application Area where you created the definition</span>: Click Manage Definitions to view all the definitions in that Domain or Application Area. Click the definition name.</p>
+</li>
+</ul>
+<p>Once on the Business Area definition screen, click <span class="bold">Update</span> to enter changes. Oracle LSH creates a new version of the definition. You can change the following properties:</p>
+<p><a id="LSHDG1375"></a><span class="subhead3">Name&nbsp;</span>See <a href="deftasks.htm#CHDBIJAH">"Naming Objects"</a> for further information.</p>
+<p><a id="LSHDG1376"></a><span class="subhead3">Description&nbsp;</span>See <a href="deftasks.htm#CHDIHBBC">"Creating and Using Object Descriptions"</a> for further information.</p>
+<p>You can modify some properties through the <span class="bold">Actions</span> drop-down list; see <a href="deftasks.htm#CIHDAIFF">"Using the Actions Drop-Down List"</a> for further information.</p>
+<a id="BCFCDAEJ"></a>
+<div id="LSHDG1377" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Modifying Table Descriptors</h4>
+<p>Table Descriptors belong to the Business Area definition, but Table Descriptor mappings belong to the Business Area instance. You must check out the definition to add, remove, or update Table Descriptors, but not to map, unmap, or remap Table Descriptors.</p>
+<p>You can remove the existing Table Descriptors and add different ones. See <a href="#CHDIDGDE">"Creating a Business Area"</a> for information about the function of Table Descriptors in a Business Area.</p>
+<p>Oracle LSH enforces the following rules:</p>
+<ul>
+<li>
+<p>You cannot remove a Table Descriptor if any Join or Hierarchy references it.</p>
+</li>
+<li>
+<p>You cannot change a Table Descriptor's source Table definition to a different Table definition if any Join or Hierarchy references the Table descriptor.</p>
+</li>
+<li>
+<p>You cannot remove a Column from a Table Descriptor if any Join or Hierarchy references it.</p>
+</li>
+</ul>
+<p>You can change the Table Descriptor mappings, which are part of the Business Area instance, not the definition; see <a href="deftasks.htm#CIHDCCDA">"Mapping Table Descriptors to Table Instances"</a>.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Oracle LSH does not prevent all changes that might cause your Business Area to not function properly. For example, you are allowed to change the underlying Variable of a Column even if the Column is part of a Join. However, if you select a Variable that has a different data type, the Join may no longer work.</div>
+</div>
+<!-- class="sect3" -->
+<a id="BCFGGDCA"></a>
+<div id="LSHDG1379" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Modifying Joins</h4>
+<p>Joins belong to the Business Area definition.You must check out the definition to add, remove, and modify Joins. See <a href="#CHDIIFJF">"Defining Joins"</a> for information about Joins.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CHDEJJHF"></a>
+<div id="LSHDG1381" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Modifying Business Area Hierarchies</h4>
+<p>Business Area Hierarchies belong to the Business Area definition. You must check out the definition to add, delete, and modify Business Area Hierarchies. See <a href="#CHDDFHCD">"Defining Business Area Hierarchies"</a> for information about Business Area Hierarchies.</p>
+<p>To change the order of the hierarchy columns, click Reorder. See <a href="deftasks.htm#CHDBHCJC">"Reordering and Renumbering Objects"</a>.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CHDGABFB"></a>
+<div id="LSHDG1383" class="sect3">
+<h4 class="sect3">Modifying Business Area Source Code</h4>
+<p>Business Area Source Code belongs to the Business Area definition. You must check out the definition to make any changes to the Source Code instance, for example, editing and uploading an OBIEE repository file for OBIEE Business Areas. See <a href="#CHDGFJBI">"About OBIEE Business Areas"</a> for more information on OBIEE Business Area Source Code.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment70">
+<tr>
+<td class="cellalignment77">
+<table class="cellalignment75">
+<tr>
+<td class="cellalignment74"><a href="wkfl.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment74"><a href="wa_install.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2006, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment79">
+<table class="cellalignment73">
+<tr>
+<td class="cellalignment74"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment74"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment74"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment74"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

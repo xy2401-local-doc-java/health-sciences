@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Study monitoring</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2018-05-25T8:57:5Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Health Sciences Data Management Workbench Administration Guide" />
+<meta name="dcterms.identifier" content="E96068-01" />
+<meta name="dcterms.isVersionOf" content="DMWAG" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2017, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="fw_admin.htm" title="Previous" type="text/html" />
+<link rel="Next" href="dmw_security.htm" title="Next" type="text/html" />
+<link rel="alternate" href="DMWAG.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="DMWAG.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="DMWAG.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">7/11</span> <!-- End Header -->
+<div id="DMWAG752" class="chapter"><a id="CDCDADAX"></a>
+<h1 class="chapter"><span class="secnum">4</span> Study monitoring</h1>
+<p>Do the following tasks to manage ongoing studies:</p>
+<ul>
+<li>
+<p><a href="#CDCHIJBH">Monitor, suspend, and resume study File Watchers</a></p>
+</li>
+<li>
+<p><a href="#XXXXXXXX">View file specifications for study File Watchers</a></p>
+</li>
+<li>
+<p><a href="#A135768230">Monitor validation check discrepancies sent to the source data system</a></p>
+</li>
+<li>
+<p><a href="#CACEDGAD">View, cancel, and suspend scheduled jobs</a></p>
+</li>
+<li>
+<p><a href="#CDCGGIJE">View past and current job executions</a></p>
+</li>
+<li>
+<p><a href="#CDCEFCEE">Use tracing and logging</a></p>
+</li>
+<li>
+<p><a href="#BEIIJFDB">Set up data visualizations</a></p>
+</li>
+</ul>
+<a id="CDCHIJBH"></a>
+<div id="DMWAG882" class="sect1">
+<h2 class="sect1">Monitor, suspend, and resume study File Watchers</h2>
+<ol>
+<li>
+<p>Click the Navigation icon <img width="29" height="21" src="img/navigation_icon.gif" alt="Icon shows a computer monitor." /> at the top of any page and then click <span class="bold">Administration</span>.</p>
+</li>
+<li>
+<p>Click the <span class="bold">File Watcher</span> tab.</p>
+</li>
+<li>
+<p>Select a study file watcher. Each study has one watcher for each lifecycle stage. You can see the lifecycle stage in the File Specifications pane.</p>
+</li>
+<li>
+<p>Check the Watcher Status.</p>
+<ul>
+<li>
+<p>If it is Running, you can click the <img width="14" height="18" src="img/icon_suspend.gif" alt="Icon is two parallel vertical lines." /><span class="bold">Suspend Watcher</span> icon to suspend it.</p>
+</li>
+<li>
+<p>If the Watcher is Suspended, click the <img width="13" height="20" src="img/icon_resume.gif" alt="Icon is a forward arrow triangle." /><span class="bold">Resume</span> icon to resume it.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Check the <span class="bold">DP Server Status</span>. If it is Offline, the Watcher cannot run, even if its status is Running. To start it, follow instructions in the LSH <span class="italic">Administrator's Guide</span>.</p>
+</li>
+</ol>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The study configurator can also suspend and resume File Watchers.</div>
+</div>
+<!-- class="sect1" -->
+<a id="XXXXXXXX"></a>
+<div id="DMWAG10313" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">View file specifications for study File Watchers</h2>
+<p>If a data file is not loaded as expected, the problem may be that the file is not named as required by the file specification for the study/clinical data model/lifecycle combination. The study configurator creates file specifications.</p>
+<ol>
+<li>
+<p>Click the Navigation icon <img width="29" height="21" src="img/navigation_icon.gif" alt="Icon shows a computer monitor." /> at the top of any page and then click <span class="bold">Administration</span>.</p>
+</li>
+<li>
+<p>Click the <span class="bold">File Watcher</span> tab.</p>
+</li>
+<li>
+<p>Select a study file watcher. Each study has one watcher for each lifecycle stage. You can see the lifecycle stage in the File Specifications pane.</p>
+</li>
+<li>
+<p>Check the file specification in the File Name column against the actual file name in the Home page, Files Not Processed tab.</p>
+<ul>
+<li>
+<p>The file specification is case-sensitive.</p>
+</li>
+<li>
+<p>File specifications must use the POSIX standard Extended Regular Expression syntax. An asterisk (*) in POSIX syntax matches zero or more occurrences of the preceding character. A dot (.) means "any single character."</p>
+<p>For example, in the file specification CentralLab_.*.zip, where the upload date is expected after the underscore (_), the dot plus asterisk (.*) after the underscore means "any character or no characters."</p>
+<p>For more information, see <code dir="ltr"><a href="https://docs.oracle.com/cd/B28359_01/server.111/b28286/ap_posix001.htm">https://docs.oracle.com/cd/B28359_01/server.111/b28286/ap_posix001.htm</a></code>.</p>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="A135768230"></a>
+<div id="DMWAG99832" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Monitor validation check discrepancies sent to the source data system</h2>
+<p>Validation checks with an Initial Action set to Send to <span class="italic">System</span> immediately send discrepancies they create to InForm or another source data system as queries. To check the status of this operation:</p>
+<ol>
+<li>
+<p>Click the Navigation icon <img width="29" height="21" src="img/navigation_icon.gif" alt="Icon shows a computer monitor." /> at the top of any page and then click <span class="bold">Administration</span>.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Validation Checks</span> tab.</p>
+</li>
+<li>
+<p>Select a study and lifecycle stage.</p>
+<p>For each source data system, DMW displays counts for the selected study and lifecycle stage:</p>
+<ul>
+<li>
+<p><span class="bold">Processing for</span><span class="bolditalic">System</span> shows the number of validation check discrepancies currently being sent to the system.</p>
+</li>
+<li>
+<p><span class="bold">Failed Processing for</span><span class="bolditalic">System</span> shows the number of discrepancies that should have been sent to the system but weren't.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>If any discrepancies failed to be sent, click the <img width="19" height="21" src="img/icon_reprocess_discs.gif" alt="Icon shows a refresh arrow and exclamation point." /> <span class="bold">Reprocess Discrepancies</span> icon to send them again. Click the <img width="19" height="17" src="img/icon_refresh.gif" alt="Icon is a near circular arrow." /> <span class="bold">Refresh</span> icon to see progress.</p>
+<p>Reprocessing is also available in the Home page, Validation Checks tab.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="CACEDGAD"></a>
+<div id="DMWAG10203" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">View, cancel, and suspend scheduled jobs</h2>
+<ol>
+<li>
+<p>Click the Navigation icon <img width="29" height="21" src="img/navigation_icon.gif" alt="Icon shows a computer monitor." /> at the top of any page and then click <span class="bold">Administration</span>.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Scheduled Jobs</span> tab.</p>
+</li>
+<li>
+<p>Enter search criteria:</p>
+<ul>
+<li>
+<p><span class="bold">Lifecycle</span>: (Optional) Select from the drop-down list.</p>
+</li>
+<li>
+<p><span class="bold">Study Name</span>: Enter part or all of the study name.</p>
+</li>
+<li>
+<p><span class="bold">User Name</span>: Enter part or all of the ID of the user who scheduled the job.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Search</span>. The system displays all pending jobs for data loads, transformations, and validation checks.</p>
+</li>
+<li>
+<p>You can filter by entering values in the blank field above any column. If the blank fields are not displayed, click the <img width="19" height="19" src="img/icon_qbe.gif" alt="Icon is a funnel in front of data." /> <span class="bold">Query By Example</span> icon.</p>
+</li>
+<li>
+<p>To cancel or suspend one or more jobs, select the job(s) and:</p>
+<ul>
+<li>
+<p>Click the <img width="21" height="20" src="img/icon_delete.gif" alt="Icon is an X." /> <span class="bold">Cancel All Jobs</span> icon. This applies to transformation, validation check batch, and data load jobs.</p>
+</li>
+<li>
+<p>Click the <img width="14" height="18" src="img/icon_suspend.gif" alt="Icon is two parallel vertical lines." /> <span class="bold">Suspend Job(s)</span> icon. This applies to data load jobs.</p>
+</li>
+</ul>
+</li>
+</ol>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+This pane displays currently scheduled jobs. After a job has been canceled or suspended here or elsewhere, it no longer appears.
+<p>The exception is that File Watcher Specifications that are current and not explicitly suspended are still displayed even if they are not running because the corresponding Study File Watcher is suspended. If the Study File Watcher is resumed, these File Watcher Specifications resume.</p>
+</div>
+<p>You cannot reschedule jobs in the Administration page. Do so:</p>
+<ul>
+<li>
+<p>For transformations and validation checks, in the Home page.</p>
+</li>
+<li>
+<p>For data loads, in the Clinical Data Models page under Study Configuration.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect1" -->
+<a id="CDCGGIJE"></a>
+<div id="DMWAG99766" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">View past and current job executions</h2>
+<p>Use this page to query for jobs that have already run and jobs that are currently running. You can cancel jobs that are in progress.</p>
+<ol>
+<li>
+<p>Click the Navigation icon <img width="29" height="21" src="img/navigation_icon.gif" alt="Icon shows a computer monitor." /> at the top of any page and then click <span class="bold">Administration</span>.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Job Execution</span> tab.</p>
+</li>
+<li>
+<p>To find jobs:</p>
+<ul>
+<li>
+<p>Query in the Search Jobs pane. To search by date, job status, or submitting user, click <span class="bold">Advanced</span>.</p>
+</li>
+<li>
+<p>To filter results further, enter a string in the blank field above any column. If the blank fields are not displayed, click the <img width="19" height="19" src="img/icon_qbe.gif" alt="Icon is a funnel in front of data." /> <span class="bold">Query By Example</span> icon.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>To cancel a job, select it and click the <img width="21" height="20" src="img/icon_delete.gif" alt="Icon is an X." /> <span class="bold">Cancel</span> icon. You can only cancel jobs that currently have the status In Progress or Executing.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="CDCEFCEE"></a>
+<div id="DMWAG10440" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Use tracing and logging</h2>
+<p>Use this page to turn on either logging (debugging) or tracing, either for a particular user or all users. When a user logs in while tracing or logging is running for any user or systemwide, a message appears at the top of every page notifying them that diagnostics are running.</p>
+<a id="CHDEIABG"></a>
+<div id="DMWAG99793" class="sect2">
+<h3 class="sect2">Turn on tracing or logging</h3>
+<p>Logging and tracing begin for each user when he or she logs in after the request has been made. They begin immediately for your own session.</p>
+<ol>
+<li>
+<p>Click the Navigation icon <img width="29" height="21" src="img/navigation_icon.gif" alt="Icon shows a computer monitor." /> at the top of any page and then click <span class="bold">Administration</span>.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Tracing and Logging</span> tab.</p>
+</li>
+<li>
+<p>Click the <img width="16" height="17" src="img/icon_add.gif" alt="Icon is a plus sign." /> <span class="bold">Add Session</span> icon.</p>
+</li>
+<li>
+<p><span class="bold">Session Type</span>: Select either <span class="bold">Logging</span> or <span class="bold">Tracing</span>.</p>
+</li>
+<li>
+<p><span class="bold">Session Scope</span>: Select either <span class="bold">System</span> (all users) or <span class="bold">User</span>.</p>
+</li>
+<li>
+<p>If you selected User, select the user from the <span class="bold">User</span> drop-down.</p>
+</li>
+<li>
+<p>If you selected Tracing for a particular user, enter a trace file identifier string to help you find the file on the database server.</p>
+<p>Logging data is written to the table CDR.CDR_EXE_DEBUG.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CHDCCJED"></a>
+<div id="DMWAG99794" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Locate the trace file</h3>
+<p>The trace file is generated on the database server. Its location and name are in the TRACEFILE column of the system view V$PROCESS. Use the following query to fetch this and other useful information:</p>
+<pre dir="ltr">
+select s.sid,s.serial#,s.audsid,s.username,s.osuser, s.client_identifier, s.sql_trace,s.action, p.spid, p.TRACEFILE
+from v$session s,v$process p
+where s.paddr=p.addr
+and s.username is not null;
+</pre>
+<p>The username for nonbatch jobs is <code dir="ltr">CDRRUN</code> and the client_identifier is the DMW username of the user whose session is traced. If tracing is running for a particular user, the trace file identifier is appended to the trace file name just before the .trc extension.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CHDHAFBH"></a>
+<div id="DMWAG99795" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Turn off tracing or logging</h3>
+<p>When tracing or logging is turned off, the job is no longer displayed in this page.</p>
+<ol>
+<li>
+<p>Click the Navigation icon <img width="29" height="21" src="img/navigation_icon.gif" alt="Icon shows a computer monitor." /> at the top of any page and then click <span class="bold">Administration</span>.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Tracing and Logging</span> tab.</p>
+</li>
+<li>
+<p>Select the process you want to stop.</p>
+</li>
+<li>
+<p>Click the <img width="19" height="20" src="img/icon_cancel_job.gif" alt="Icon is an X." /><span class="bold">Cancel Session</span> icon.</p>
+</li>
+<li>
+<p>For user logging or tracing, the <span class="bold">user must log in again</span> to end the process.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+When you stop the process, the record, including the file name, is no longer displayed.</div>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CHDHJHJJ"></a>
+<div id="DMWAG99796" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Truncate logging data</h3>
+<p>To delete all logging data from the database:</p>
+<ol>
+<li>
+<p>Click the Navigation icon <img width="29" height="21" src="img/navigation_icon.gif" alt="Icon shows a computer monitor." /> at the top of any page and then click <span class="bold">Administration</span>.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Tracing and Logging</span> tab.</p>
+</li>
+<li>
+<p>Make sure no logging processes are currently running.</p>
+</li>
+<li>
+<p>Click the <img width="22" height="21" src="img/icon_cancel_triggered_job.gif" alt="Icon is a small X with a data sheet." /><span class="bold">Truncate Log Data</span> icon.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BEIIJFDB"></a>
+<div id="DMWAG236" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Set up data visualizations</h2>
+<p>You can integrate an external data visualization tool so that users can view data graphically and interactively with the protection of DMW security and blinding access privileges, one clinical data model at a time. Requirements:</p>
+<ul>
+<li>
+<p>The study configurator must select the Business Area option when he or she creates or modifies a clinical data model. The system then generates a <span class="italic">Business Area</span> object in the database containing views of all tables in the model.</p>
+</li>
+<li>
+<p>Users viewing DMW data in a visualization tool must have a database account and must log into the visualization tool using the database account.</p>
+</li>
+<li>
+<p>In hosted releases you must install the visualization tool locally and access your hosted data over your VPN.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment1">
+<tr>
+<td class="cellalignment8">
+<table class="cellalignment6">
+<tr>
+<td class="cellalignment5"><a href="fw_admin.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment5"><a href="dmw_security.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2017, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment10">
+<table class="cellalignment4">
+<tr>
+<td class="cellalignment5"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment5"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment5"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment5"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

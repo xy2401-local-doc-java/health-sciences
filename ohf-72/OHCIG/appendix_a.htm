@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Configuration Guide for Exadata</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2018-09-07T11:6:28Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Healthcare Foundation Installation Guide" />
+<meta name="dcterms.identifier" content="E91260-01" />
+<meta name="dcterms.isVersionOf" content="OHCIG" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Prev" href="mt_troubleshooting.htm" title="Previous" type="text/html" />
+<link rel="Next" href="appendix_b.htm" title="Next" type="text/html" />
+<link rel="alternate" href="OHCIG.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="OHCIG.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="OHCIG.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+                    <script>var w=window;if(w.performance||w.mozPerformance||w.msPerformance||w.webkitPerformance){var d=document;AKSB=w.AKSB||{},AKSB.q=AKSB.q||[],AKSB.mark=AKSB.mark||function(e,_){AKSB.q.push(["mark",e,_||(new Date).getTime()])},AKSB.measure=AKSB.measure||function(e,_,t){AKSB.q.push(["measure",e,_,t||(new Date).getTime()])},AKSB.done=AKSB.done||function(e){AKSB.q.push(["done",e])},AKSB.mark("firstbyte",(new Date).getTime()),AKSB.prof={custid:"322179",ustr:"",originlat:"0",clientrtt:"1",ghostip:"23.212.3.15",ipv6:false,pct:"10",clientip:"45.78.37.67",requestid:"2287094",region:"32996",protocol:"",blver:14,akM:"dsca",akN:"ae",akTT:"O",akTX:"1",akTI:"2287094",ai:"206465",ra:"false",pmgn:"",pmgi:"",pmp:"",qc:""},function(e){var _=d.createElement("script");_.async="async",_.src=e;var t=d.getElementsByTagName("script"),t=t[t.length-1];t.parentNode.insertBefore(_,t)}(("https:"===d.location.protocol?"https:":"http:")+"//ds-aksb-a.akamaihd.net/aksb.min.js")}</script>
+                    <script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">27/28</span> <!-- End Header -->
+<div id="OHCIG118" class="appendix"><a id="sthref22"></a>
+<h1 class="appendix"><span class="secnum">A</span> Configuration Guide for Exadata</h1>
+<p>This guide describes the Exadata configuration for Oracle Healthcare Foundation. It contains minimum parameter requirements for a large deployment of about 10 million patients.</p>
+<p>The contents of this guide apply only to the Oracle Healthcare Foundation ETL platform and does not consider any application stack.</p>
+<p>This guide contains the following sections:</p>
+<ul>
+<li>
+<p><a href="#BGBCEBDI">System Configuration</a></p>
+</li>
+<li>
+<p><a href="#BGBJAFJH">Application Considerations</a></p>
+</li>
+</ul>
+<a id="BGBCEBDI"></a>
+<div id="OHCIG119" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">A.1</span> System Configuration</h2>
+<ul>
+<li>
+<p><a href="#BGBIEAFD">Exadata Component Configuration</a></p>
+</li>
+<li>
+<p><a href="#BGBJAAFD">Database Configuration</a></p>
+</li>
+</ul>
+<a id="BGBIEAFD"></a>
+<div id="OHCIG120" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">A.1.1</span> Exadata Component Configuration</h3>
+<div id="OHCIG121" class="tblformal">
+<p class="titleintable"><a id="sthref23"></a><a id="sthref24"></a>Table A-1 Exadata Components and Configuration</p>
+<table class="cellalignment95" title="Exadata Components and Configuration" summary="Exadata Components and Configuration" dir="ltr">
+<thead>
+<tr class="cellalignment76">
+<th class="cellalignment107" id="r1c1-t2">Component</th>
+<th class="cellalignment91" id="r1c2-t2">Configuration</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment76">
+<td class="cellalignment85" id="r2c1-t2" headers="r1c1-t2">
+<p>Exa check</p>
+</td>
+<td class="cellalignment85" headers="r2c1-t2 r1c2-t2">
+<p>Run the Exachk utility and verify the adherence to the recommended Exadata best practices.</p>
+<p>For more information, see article ID 1070954.1 on My Oracle Support (<code dir="ltr"><a href="https://support.oracle.com">https://support.oracle.com</a></code>).</p>
+</td>
+</tr>
+<tr class="cellalignment76">
+<td class="cellalignment85" id="r3c1-t2" headers="r1c1-t2">
+<p>RAC</p>
+</td>
+<td class="cellalignment85" headers="r3c1-t2 r1c2-t2">
+<p>Use defaults and native load balance.</p>
+</td>
+</tr>
+<tr class="cellalignment76">
+<td class="cellalignment85" id="r4c1-t2" headers="r1c1-t2">
+<p>High performance disks</p>
+</td>
+<td class="cellalignment85" headers="r4c1-t2 r1c2-t2">
+<p>We recommend 15000 revolutions per minute (RPM) high performance disks.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" --></div>
+<!-- class="sect2" -->
+<a id="BGBJAAFD"></a>
+<div id="OHCIG122" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">A.1.2</span> Database Configuration</h3>
+<div id="OHCIG123" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref25"></a>
+<h4 class="sect3"><span class="secnum">A.1.2.1</span> Database I/O Calibration</h4>
+<p>Run the I/O calibration tool for each database to set the automatic degree of parallelism.</p>
+<p>For more information on I/O calibration and automatic degree of parallelism, see article IDs 727062.1 and 1269321.1 on My Oracle Support (<code dir="ltr"><a href="https://support.oracle.com">https://support.oracle.com</a></code>).</p>
+</div>
+<!-- class="sect3" -->
+<div id="OHCIG124" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref26"></a>
+<h4 class="sect3"><span class="secnum">A.1.2.2</span> Resource Manager</h4>
+<p>Use the Oracle Resource Manager to manage and prioritize the resource allocation for different applications, databases, instances, users, and so on.</p>
+<p>For more information, see article ID 1339769.1 on My Oracle Support (<code dir="ltr"><a href="https://support.oracle.com">https://support.oracle.com</a></code>) and the White Paper <span class="italic">Using Oracle Database Resource Manager</span> at <span class="italic">http://www.oracle.com/technetwork/database/database-technologies/performance/resource-manager-twp-133705.pdf</span>.</p>
+</div>
+<!-- class="sect3" -->
+<div id="OHCIG125" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref27"></a>
+<h4 class="sect3"><span class="secnum">A.1.2.3</span> Database Parameters</h4>
+<div id="OHCIG126" class="tblformal">
+<p class="titleintable"><a id="sthref28"></a><a id="sthref29"></a>Table A-2 Recommended Settings for Database Parameters</p>
+<table class="cellalignment95" title="Recommended Settings for Database Parameters" summary="Recommended Settings for Database Parameters" dir="ltr">
+<thead>
+<tr class="cellalignment76">
+<th class="cellalignment105" id="r1c1-t3">Database Parameter</th>
+<th class="cellalignment91" id="r1c2-t3">Recommended Settings</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment76">
+<td class="cellalignment85" id="r2c1-t3" headers="r1c1-t3">
+<p>processes</p>
+</td>
+<td class="cellalignment85" headers="r2c1-t3 r1c2-t3">
+<p>1500</p>
+</td>
+</tr>
+<tr class="cellalignment76">
+<td class="cellalignment85" id="r3c1-t3" headers="r1c1-t3">
+<p>parallel_max_servers</p>
+</td>
+<td class="cellalignment85" headers="r3c1-t3 r1c2-t3">
+<p>500-1280</p>
+</td>
+</tr>
+<tr class="cellalignment76">
+<td class="cellalignment85" id="r4c1-t3" headers="r1c1-t3">
+<p>parallel_min_servers</p>
+</td>
+<td class="cellalignment85" headers="r4c1-t3 r1c2-t3">
+<p>128</p>
+</td>
+</tr>
+<tr class="cellalignment76">
+<td class="cellalignment85" id="r5c1-t3" headers="r1c1-t3">
+<p>parallel_degree_policy</p>
+</td>
+<td class="cellalignment85" headers="r5c1-t3 r1c2-t3">
+<p>LIMITED</p>
+</td>
+</tr>
+<tr class="cellalignment76">
+<td class="cellalignment85" id="r6c1-t3" headers="r1c1-t3">
+<p>parallel_adaptive_multi_user</p>
+</td>
+<td class="cellalignment85" headers="r6c1-t3 r1c2-t3">
+<p>TRUE</p>
+</td>
+</tr>
+<tr class="cellalignment76">
+<td class="cellalignment85" id="r7c1-t3" headers="r1c1-t3">
+<p>parallel_degree_limit</p>
+</td>
+<td class="cellalignment85" headers="r7c1-t3 r1c2-t3">
+<p>CPU</p>
+</td>
+</tr>
+<tr class="cellalignment76">
+<td class="cellalignment85" id="r8c1-t3" headers="r1c1-t3">
+<p>parallel_force_local</p>
+</td>
+<td class="cellalignment85" headers="r8c1-t3 r1c2-t3">
+<p>TRUE</p>
+</td>
+</tr>
+<tr class="cellalignment76">
+<td class="cellalignment85" id="r9c1-t3" headers="r1c1-t3">
+<p>sga_target</p>
+</td>
+<td class="cellalignment85" headers="r9c1-t3 r1c2-t3">
+<p>40 GB</p>
+</td>
+</tr>
+<tr class="cellalignment76">
+<td class="cellalignment85" id="r10c1-t3" headers="r1c1-t3">
+<p>sga_max_size</p>
+</td>
+<td class="cellalignment85" headers="r10c1-t3 r1c2-t3">
+<p>40 GB</p>
+</td>
+</tr>
+<tr class="cellalignment76">
+<td class="cellalignment85" id="r11c1-t3" headers="r1c1-t3">
+<p>pga_aggregate_target</p>
+</td>
+<td class="cellalignment85" headers="r11c1-t3 r1c2-t3">
+<p>If HugePages is used, set this parameter to 20 GB. Else, set it to 12 GB.</p>
+</td>
+</tr>
+<tr class="cellalignment76">
+<td class="cellalignment85" id="r12c1-t3" headers="r1c1-t3">
+<p>memory_target</p>
+</td>
+<td class="cellalignment85" headers="r12c1-t3 r1c2-t3">
+<p>If HugePages is used, set this parameter to 0. Else, set it to 60 GB.</p>
+</td>
+</tr>
+<tr class="cellalignment76">
+<td class="cellalignment85" id="r13c1-t3" headers="r1c1-t3">
+<p>memory_max_target</p>
+</td>
+<td class="cellalignment85" headers="r13c1-t3 r1c2-t3">
+<p>If HugePages is used, set this parameter to 0. Else, set it to 60 GB.</p>
+</td>
+</tr>
+<tr class="cellalignment76">
+<td class="cellalignment85" id="r14c1-t3" headers="r1c1-t3">
+<p>db_block_size</p>
+</td>
+<td class="cellalignment85" headers="r14c1-t3 r1c2-t3">
+<p>8192</p>
+</td>
+</tr>
+<tr class="cellalignment76">
+<td class="cellalignment85" id="r15c1-t3" headers="r1c1-t3">
+<p>workarea_size_policy</p>
+</td>
+<td class="cellalignment85" headers="r15c1-t3 r1c2-t3">
+<p>AUTO</p>
+</td>
+</tr>
+<tr class="cellalignment76">
+<td class="cellalignment85" id="r16c1-t3" headers="r1c1-t3">
+<p>db_cache_size</p>
+</td>
+<td class="cellalignment85" headers="r16c1-t3 r1c2-t3">
+<p>2 GB</p>
+</td>
+</tr>
+<tr class="cellalignment76">
+<td class="cellalignment85" id="r17c1-t3" headers="r1c1-t3">
+<p>shared_pool_size</p>
+</td>
+<td class="cellalignment85" headers="r17c1-t3 r1c2-t3">
+<p>2 GB</p>
+</td>
+</tr>
+<tr class="cellalignment76">
+<td class="cellalignment85" id="r18c1-t3" headers="r1c1-t3">
+<p>optimizer_features_enable</p>
+</td>
+<td class="cellalignment85" headers="r18c1-t3 r1c2-t3">
+<p>See <a href="#BGBGBJJG">Optimizer Features Enable</a></p>
+</td>
+</tr>
+<tr class="cellalignment76">
+<td class="cellalignment85" id="r19c1-t3" headers="r1c1-t3">
+<p>optimizer_secure_view_merging</p>
+</td>
+<td class="cellalignment85" headers="r19c1-t3 r1c2-t3">
+<p>False</p>
+</td>
+</tr>
+<tr class="cellalignment76">
+<td class="cellalignment85" id="r20c1-t3" headers="r1c1-t3">
+<p>_px_join_skew_handling</p>
+</td>
+<td class="cellalignment85" headers="r20c1-t3 r1c2-t3">
+<p>FALSE</p>
+</td>
+</tr>
+<tr class="cellalignment76">
+<td class="cellalignment85" id="r21c1-t3" headers="r1c1-t3">
+<p>result size max</p>
+</td>
+<td class="cellalignment85" headers="r21c1-t3 r1c2-t3">
+<p>0</p>
+</td>
+</tr>
+<tr class="cellalignment76">
+<td class="cellalignment85" id="r22c1-t3" headers="r1c1-t3">
+<p>_optimizer_dsdir_usage_control</p>
+</td>
+<td class="cellalignment85" headers="r22c1-t3 r1c2-t3">
+<p>0</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" --></div>
+<!-- class="sect3" -->
+<div id="OHCIG127" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref30"></a>
+<h4 class="sect3"><span class="secnum">A.1.2.4</span> Parallel Degree Policy</h4>
+<p>Set the parallel_degree_policy parameter to LIMITED to use the automatic degree of parallelism and smart scans.</p>
+<ul>
+<li>
+<p>The Omics Data Bank (ODB) application uses Exadata SQL processing innovations. Setting this parameter to LIMITED, disables the in-memory parallel execution that leads to better use of smart scans.</p>
+</li>
+<li>
+<p>Statement queuing is disabled to avoid any waits under heavy load where there are chances of draining all PX servers thereby impacting response times.</p>
+</li>
+</ul>
+<div id="OHCIG128" class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref31"></a>
+<h5 class="sect4"><span class="secnum">A.1.2.4.1</span> Parallel Degree Limit</h5>
+<p>Set the parallel_degree_limit parameter to CPU or below to improve the response time. A resource-intensive query may request too many PX servers, draining available resources. Use the Resource Manager to limit the resource allocation to intensive or long running processes.</p>
+</div>
+<!-- class="sect4" -->
+<div id="OHCIG129" class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref32"></a>
+<h5 class="sect4"><span class="secnum">A.1.2.4.2</span> Adaptive Tuning</h5>
+<p>Set the parallel_adaptive_multi_user parameter to TRUE, which lets Oracle downgrade PX requests under stress. You should not over-burden the database CPUs by allocating all requested PX servers, especially when the database nodes are running at over 80% CPU load.</p>
+<p>Alternatively, you can use the Resource Manager to control resources.</p>
+</div>
+<!-- class="sect4" -->
+<div id="OHCIG130" class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref33"></a>
+<h5 class="sect4"><span class="secnum">A.1.2.4.3</span> Parallel Max Servers</h5>
+<p>Set the parallel_max_servers parameter between 500-1280 to make sure that there are enough PX server processes to allocate to concurrent user requests. In benchmark tests, this was set to 512.</p>
+</div>
+<!-- class="sect4" -->
+<div id="OHCIG131" class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref34"></a>
+<h5 class="sect4"><span class="secnum">A.1.2.4.4</span> Parallel Min Servers</h5>
+<p>Set the parallel_min_servers parameter to CPU to ensure the availability of a specific number of PX server processes at startup.</p>
+</div>
+<!-- class="sect4" -->
+<div id="OHCIG132" class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref35"></a>
+<h5 class="sect4"><span class="secnum">A.1.2.4.5</span> Memory Settings</h5>
+<p>Set the Automatic Memory Management (AMM) using the memory_target parameter to 60 GB.</p>
+<p>Also, you have to set the Program Global Area (PGA) (pga_aggregate_target parameter) to a minimum of 20/10 GB depending upon whether Hugepages is used and the System Global Area (SGA) (sga_max_size parameter) to a minimum of 40 GB.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If you use HugePages, set all DB memory parameters appropriately as AMM does not work with HugePages. If you encounter any shared pool issues with HugePages, switch to alternate recommended settings.</div>
+</div>
+<!-- class="sect4" -->
+<a id="BGBGBJJG"></a>
+<div id="OHCIG133" class="sect4"><!-- infolevel="all" infotype="General" -->
+<h5 class="sect4"><span class="secnum">A.1.2.4.6</span> Optimizer Features Enable</h5>
+<p>Although Oracle Healthcare Foundation is benchmarked with 12.2.0.1, we recommend you to upgrade to the latest version of the optimizer when it is available.</p>
+<p>If the SQL execution plans are not optimized in the later version, consider using the 12.2.0.1 optimizer.</p>
+</div>
+<!-- class="sect4" -->
+<div id="OHCIG134" class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref36"></a>
+<h5 class="sect4"><span class="secnum">A.1.2.4.7</span> Processes</h5>
+<p>Set the processes parameter to a sizeable number based on the expected concurrency. The minimum value should be 1024. In internal benchmarks, it was set to 2000 based on concurrent loads.</p>
+</div>
+<!-- class="sect4" --></div>
+<!-- class="sect3" -->
+<div id="OHCIG135" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref37"></a>
+<h4 class="sect3"><span class="secnum">A.1.2.5</span> Oracle Automatic Stats Job</h4>
+<p>Disable the Oracle Automatic Stats job if it is configured.</p>
+<p>Automatic statistics scheduler jobs run under different maintenance windows (such as daily, weekly, and so on). This may potentially generate bad statistics due to data availability (for example, the application may have transient data or no data in stage tables).</p>
+</div>
+<!-- class="sect3" -->
+<div id="OHCIG136" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref38"></a>
+<h4 class="sect3"><span class="secnum">A.1.2.6</span> Tablespace and Redo Log Recommendations</h4>
+<div id="OHCIG137" class="tblformal">
+<p class="titleintable"><a id="sthref39"></a><a id="sthref40"></a>Table A-3 Tablespace Recommendations</p>
+<table class="cellalignment95" title="Tablespace Recommendations" summary="Tablespace Recommendations" dir="ltr">
+<thead>
+<tr class="cellalignment76">
+<th class="cellalignment107" id="r1c1-t5">Tablespace</th>
+<th class="cellalignment91" id="r1c2-t5">Recommended</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment76">
+<td class="cellalignment85" id="r2c1-t5" headers="r1c1-t5">
+<p>TEMP</p>
+</td>
+<td class="cellalignment85" headers="r2c1-t5 r1c2-t5">
+<p>500 GB across all nodes.</p>
+</td>
+</tr>
+<tr class="cellalignment76">
+<td class="cellalignment85" id="r3c1-t5" headers="r1c1-t5">
+<p>UNDO</p>
+</td>
+<td class="cellalignment85" headers="r3c1-t5 r1c2-t5">
+<p>500 GB per instance.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" -->
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Use the BigFile tablespace for TEMP, UNDO, and user (HDI, HDM, and HCD) tablespaces to ease tablespace maintenance.</div>
+<p>Configure the redo logs to have at least five groups per instance with each member having a size of 500 MB or higher.</p>
+</div>
+<!-- class="sect3" -->
+<div id="OHCIG138" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref41"></a>
+<h4 class="sect3"><span class="secnum">A.1.2.7</span> ASM Recommendations</h4>
+<p><span class="bold">Redundancy</span> - Oracle uses NORMAL redundancy for all benchmarks. You can use HIGH redundancy as per the data mirroring requirements. However, note that the usable storage is lower when using ASM with HIGH redundancy disk groups.</p>
+<p><span class="bold">ASM AU Size</span> - We recommend you to use the default setting for the disk sequential reads.</p>
+</div>
+<!-- class="sect3" -->
+<div id="OHCIG171" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref42"></a>
+<h4 class="sect3"><span class="secnum">A.1.2.8</span> Maximum Availability Recommendations</h4>
+<p>You may want to consider the recommendations in the White Paper <span class="italic">Best Practices for Database Consolidation on Exadata Database Machine</span> at <span class="italic">http://www.oracle.com/technetwork/database/features/availability/exadata-consolidation-522500.pdf</span>.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BGBJAFJH"></a>
+<div id="OHCIG172" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">A.2</span> Application Considerations</h2>
+<ul>
+<li>
+<p><a href="#BGBBGBCG">General Recommendations</a></p>
+</li>
+<li>
+<p><a href="#BGBDBEAD">Oracle Healthcare Foundation</a></p>
+</li>
+<li>
+<p><a href="#BGBHFGIH">Cohort Data Model</a></p>
+</li>
+<li>
+<p><a href="#BGBFHIBC">Omics Loaders</a></p>
+</li>
+</ul>
+<a id="BGBBGBCG"></a>
+<div id="OHCIG173" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">A.2.1</span> General Recommendations</h3>
+<ul>
+<li>
+<p>Oracle Table or Schema Statistics:</p>
+<p>Configure the scheduled jobs to collect the Oracle statistics using the following method. This should be configured after the initial load is complete.</p>
+<p><code dir="ltr">exec dbms_stats.gather_schema_stats (ownname=&gt; '&lt;OWNER&gt;', method_ opt=&gt; 'for all columns size auto', estimate_percent=&gt; dbms_ stats.auto_sample_ size, cascade=&gt;true, block_sample =&gt; true, options =&gt; 'GATHER STALE')</code></p>
+</li>
+<li>
+<p>Data files or flat files (for example, ODB result and reference data files) should be staged on Database File System (DBFS) as the Oracle DB provides much better security, availability, robustness, transactions, and scalability than the traditional file systems. For setting up DBFS, see article ID 1954431.1 on My Oracle Support (<code dir="ltr"><a href="https://support.oracle.com">https://support.oracle.com</a></code>).</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="BGBDBEAD"></a>
+<div id="OHCIG174" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">A.2.2</span> Oracle Healthcare Foundation</h3>
+<ul>
+<li>
+<p>See <a href="dm_installation.htm#BABFECCB">Data Model Installation</a> for Exadata-specific configurable compression options and index reduction notes.</p>
+</li>
+<li>
+<p>If advanced compression is used during installation (for certain business cases), you may still want to consider HCC compression for cold (least DML activity) or old table partitions. Use the following method to implement HCC and for better compression ratios for cold or old table partitions:</p>
+<ol>
+<li>
+<p>Perform annual or biannual maintenance to change the table partition compression mode to HCC Query High.</p>
+</li>
+<li>
+<p>Rebuild the table partitions using the <code dir="ltr">alter table .. move ..</code> SQL command.</p>
+<p>Rebuilding all the unique and non-unique indexes on these tables is necessary as the table or partition rebuild invalidates index structure. See <span class="italic">Oracle Healthcare Foundation Administrator's Guide</span> (<code dir="ltr">hdm_hcc_maintenance_exadata.sql)to</code> change the compression for partitioned tables to hybrid columnar compression (QUERY HIGH).</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Oracle Table or Schema Statistics:</p>
+<p>HDI source tables should have proper table statistics before the initial load. See <span class="italic">Oracle Healthcare Foundation Administrator's Guide</span> for details on gathering statistics and for ETL specific recommendations regarding parallel options.</p>
+</li>
+<li>
+<p>Oracle Healthcare Foundation Data loads:</p>
+<ul>
+<li>
+<p>When you load HDI data, make sure that you load data using the direct path insert to obtain a high compression ratio. For more information about improving INSERT performance with Direct-Path INSERT, see the <span class="italic">Oracle Database Administrator Guide</span>, and implement accordingly for your ETL loads to HDI.</p>
+</li>
+<li>
+<p>If direct path insert is not possible due to code or ETL limitations, rebuild the tables or partitions using the <code dir="ltr">alter table .. move ..</code> SQL command (indexes on these tables should be rebuilt) to achieve better compression. However, this leads to regular maintenance of these tables to achieve maximum compression. Oracle recommends you to create scripts or ETL to support direct path insert rather than resorting to regular maintenance. For more details, see <span class="italic">Oracle Healthcare Foundation Programmer's Guide</span>.</p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="BGBHFGIH"></a>
+<div id="OHCIG175" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">A.2.3</span> Cohort Data Model</h3>
+<p>See <span class="italic">Oracle Health Sciences Translational Research Center Installation Guide</span> for Exadata specific configurable partitioning and parallel options.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BGBFHIBC"></a>
+<div id="OHCIG176" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">A.2.4</span> Omics Loaders</h3>
+<ul>
+<li>
+<p>Run the result files in parallel to achieve maximum performance.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You can execute maximum 4gVCF loaders on a single Exa node.</div>
+</li>
+<li>
+<p>For better storage savings, load more than 60 samples or 200 million rows per result table. Small sample sets may not compress up to 90%. Run the post processing script, <code dir="ltr">load_exadata.sh</code>, at the end of the day after loading a minimum of 60 samples or more than 200 million rows for high compression using HCC.</p>
+</li>
+<li>
+<p>See <a href="dm_installation.htm#BABFECCB">Data Model Installation</a> for Exadata specific configurable partitioning and parallel options.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="appendix" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment75">
+<tr>
+<td class="cellalignment85">
+<table class="cellalignment80">
+<tr>
+<td class="cellalignment79"><a href="mt_troubleshooting.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment79"><a href="appendix_b.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment87">
+<table class="cellalignment78">
+<tr>
+<td class="cellalignment79"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment79"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment79"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment79"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

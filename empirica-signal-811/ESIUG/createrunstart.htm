@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-US" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Creating a data mining run</title>
+<link rel="StyleSheet" href="Empirica.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Working with data mining runs\nCreating a data mining run");
+addAvenueInfo("Working with Data Mining Runs","compoundJobs.htm","generalrunoptions.htm");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("About_WebVDME.htm", "", "&gt;", "Overview", "About_WebVDME_1.htm");
+document.write("<a href=\"About_Data_Mining_Runs.htm\">Working with data mining runs<\/a> &gt; Creating a data mining run<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('About_WebVDME.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Creating a data mining run</h1>
+<p>To create a data mining run, you start by selecting the type of run 
+ and the data configuration to use. After these selections, you specify 
+ a series of parameters that tell the application how to restrict or combine 
+ data, and which types of statistics to compute. You then submit the run 
+ and it is executed in batch mode. When the run is complete, you can view 
+ the results in tabular or graphical format.</p>
+<p>If you have superuser permissions, you can <a href="runMakeInputFile.htm">create 
+ a run definition file</a> to execute MGPS or logistic regression data 
+ mining runs from outside of the application. To do so, use the <span class="Button">Create 
+ Definition File</span> <span class="Button" style="font-weight: normal;">link</span>. 
+ For more information about executing data mining runs externally, contact 
+ Oracle.</p>
+<p class="Note"><span class="Button">Note:</span> If you have exceeded 
+ the disk space quota for your username, an error message appears when 
+ you attempt to create a run. To proceed, delete one or more of your existing 
+ runs or contact your system administrator to increase your quota.</p>
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">1.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Click the <span class="Button">Data Mining Runs</span> 
+ tab.</p>
+<p class="ListContinue1">The Data Mining Runs page appears.</p>
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">2.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Click <span class="Button">Create Run</span>.</p>
+<p class="ListContinue1">The Create Data Mining Run page appears.</p>
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">3.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Select the type of run to create:</p>
+<ul style="list-style: disc;">
+	<li><p class="ListNumber2"><span style="font-weight: bold;">MGPS data 
+	 mining run</span>—Includes options for RGPS, PRR, and IC</p></li>
+	<li style="font-weight: bold;"><p class="ListNumber2" style="font-weight: bold;">Logistic 
+	 regression data mining run</p></li>
+</ul>
+<p class="ListNote1"><span style="font-weight: bold;">Note:</span> Once 
+ you have selected a run type and continued to the next page, you cannot 
+ change the run type.</p>
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">4.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>If you selected Logistic regression (LR) data 
+ mining run, select the LR Type:</p>
+<ul style="list-style: disc;">
+	<li><p class="ListNumber2"><span style="font-weight: bold;">Extended</span>—Uses the best alpha computational 
+	 model</p></li>
+	<li><p class="ListNumber2"><span style="font-weight: bold;">Standard</span>—Uses 0.5 as the alpha value for 
+	 every response.</p></li>
+</ul>
+<p class="ListContinue1">For more information, see <a href="Logistic_Regression_Computations.htm">Logistic 
+ regression computations</a>.</p>
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">5.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="cfgSelectConfigPopup.htm">Select a data 
+ configuration</a>.</p>
+<p class="ListContinue1">The configuration references source data and determines 
+ which variables you can select for use in the run. Click <span class="Button">Browse</span> 
+ to select from a descriptive list of data configurations.</p>
+<p class="ListNote1"><span class="Button">Note:</span> For a logistic regression 
+ data mining run, Oracle recommends a data configuration that includes 
+ concomitant drugs, such as an AERS S+C configuration. For more information, 
+ see <a href="Logistic_Regression_Computations.htm">Logistic regression 
+ computations</a>.</p>
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">6.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>To limit the run to cases that meet specified 
+ criteria only, check <span class="Button">Define database restriction</span>.</p>
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">7.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Click <span class="Button">Next</span>.</p>
+<p class="ListContinue1">The page that displays next depends on the selections 
+ you have made so far:</p>
+<ul style="margin-top: 0px; margin-bottom: 0px; list-style: rh-list;">
+	<li class="NumBullet1">If you selected a data configuration that supports 
+	 <a href="Timestamped_Data.htm">timestamped data</a>, the Select As 
+	 Of Date page appears so that you can <a href="rerunAsOfDate.htm">specify 
+	 the As Of date</a>.</li>
+</ul>
+<ul style="margin-top: 0px; margin-bottom: 0px; list-style: rh-list;">
+	<li class="NumBullet1">If you checked Define Database Restriction, 
+	 the <a href="extractlimit.htm">Define Database Restriction page</a> 
+	 appears.</li>
+</ul>
+<ul style="margin-top: 0px; margin-bottom: 0px; list-style: rh-list;">
+	<li class="NumBullet1">For an MGPS run, the <a href="extractexpert.htm">Select 
+	 Variables page</a> appears.</li>
+</ul>
+<ul style="margin-top: 0px; margin-bottom: 0px; list-style: rh-list;">
+	<li class="NumBullet1">For a logistic regression run, the <a href="lrSelectVariables.htm">Select 
+	 Variables page</a> appears.</li>
+</ul>
+<p>&#160;</p>
+<p>
+
+<a href="javascript:void(0);" onclick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) &gt;=2 &amp;&amp; typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'_blank','Data Mining Runs page','Data_Mining_Runs_page.htm');return false;" title=" Related Topics"><span style="font-family:Verdana;font-size:10pt;font-weight:normal;font-style:normal;text-decoration:none"><nobr>  Related Topics </nobr></span></a>
+
+
+ </p>
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="margin-bottom: 0pt;">Copyright © 2002, 2018, Oracle and/or 
+	 its affiliates. All rights reserved. </p>
+	<p style="text-align: right; margin-top: 0pt; margin-bottom: 0pt;">Help 
+	 Build 8.1.1</p>
+</div>
+<script type="text/javascript" language="JavaScript">//<![CDATA[
+if (parseInt(navigator.appVersion) >= 3 && typeof (WritePopupMenuLayer) == "function")
+  WritePopupMenuLayer();
+//]]></script><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

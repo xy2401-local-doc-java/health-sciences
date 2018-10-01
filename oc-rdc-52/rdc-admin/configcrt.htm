@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Configuring Custom Review Types</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2017-08-28T1:5:39Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Oracle&reg; Clinical Remote Data Capture Onsite Administrator's Guide" />
+<meta name="dcterms.identifier" content="E86391-01" />
+<meta name="dcterms.isVersionOf" content="RDCAG" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;1996, 2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="discrep.htm" title="Previous" type="text/html" />
+<link rel="Next" href="runtime.htm" title="Next" type="text/html" />
+<link rel="alternate" href="RDCAG.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="RDCAG.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="RDCAG.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">11/26</span> <!-- End Header -->
+<div id="RDCAG225" class="chapter"><a id="CIHFAFEJ"></a>
+<h1 class="chapter"><span class="secnum">5</span> Configuring Custom Review Types</h1>
+<p>To facilitate centralized monitoring in RDC, you can create custom review types, which are similar to the predefined Verify and Approve review types. By defining custom review types, you enable and can track reviews performed by users with a specific role, such as data manager, safety expert, or adjudicator.</p>
+<p>You specify default custom review requirements at the installation, study, or DCI level, which can require that all, none, or some custom review types be performed on CRFs. You can define custom review types in the CUSTOM REVIEW TYPES installation codelist in Oracle Clinical together with a privilege for each, and then assign each privilege to the appropriate reviewer.</p>
+<p>This chapter includes the following topics:</p>
+<ul>
+<li>
+<p><a href="#CIHEHCII">Section 5.1, "Review Statuses for Custom Review Types"</a></p>
+</li>
+<li>
+<p><a href="#A2504993">Section 5.2, "Define Custom Review Type Requirements"</a></p>
+</li>
+<li>
+<p><a href="#A134477573">Section 5.3, "Finding CRFs with the Review Not Required (RN) Status Set by Users"</a></p>
+</li>
+<li>
+<p><a href="#A134485190">Section 5.4, "Viewing Audit History for Changes in Custom Review Requirements"</a></p>
+</li>
+<li>
+<p><a href="#CIHJGBDB">Section 5.5, "Add Custom Review Types"</a></p>
+</li>
+<li>
+<p><a href="#A2503118">Section 5.6, "Assign Custom Review Type Privileges to Users"</a></p>
+</li>
+<li>
+<p><a href="#CIHCGDJA">Section 5.7, "Define Custom Review Type Activities"</a></p>
+</li>
+</ul>
+<a id="CIHEHCII"></a>
+<div id="RDCAG227" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">5.1</span> Review Statuses for Custom Review Types</h2>
+<p>Each review type you define can have four possible review statuses assigned to CRFs:</p>
+<ul>
+<li>
+<p>Review Required</p>
+</li>
+<li>
+<p>Review Not Required</p>
+</li>
+<li>
+<p>Awaiting Re-review</p>
+</li>
+<li>
+<p>Review Complete</p>
+</li>
+</ul>
+<p>CRF icons also display a review status indicator. See the section "Custom Review Status Icons" in Appendix A of the <a class="olink RDCOG" href="../rdc-user/toc.htm"><span class="italic">Oracle Clinical Remote Data Capture Classic Data Entry User's Guide</span></a>.</p>
+</div>
+<!-- class="sect1" -->
+<a id="A2504993"></a>
+<div id="RDCAG647" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">5.2</span> Define Custom Review Type Requirements</h2>
+<p>You can define a default requirement for custom reviews at the installation, study, GLIB DCI, and study DCI level. The multi-level requirements can specify that all, none, or some custom review types are required by default for CRFs at a particular level. The default applies to entered CRFs with no explicitly set review status.</p>
+<p>After you define custom review requirements, RDC users can search for CRFs requiring review and can see indicators on the CRF icon for the review status of CRFs; see <a href="#CIHEHCII">Review Statuses for Custom Review Types</a>.</p>
+<div id="RDCAG648" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref103"></a>
+<h3 class="sect2"><span class="secnum">5.2.1</span> Set Custom Review Requirement for the Installation</h3>
+<p>The installation-wide requirement applies for all entered CRFs that do not have a review status that was explicitly set by a user.</p>
+<ol>
+<li>
+<p>Log in to Oracle Clinical as an administrator.</p>
+</li>
+<li>
+<p>Navigate to <span class="bold">Admin</span> and then <span class="bold">DCI Form Local Database Settings</span>.</p>
+</li>
+<li>
+<p>At the bottom, expand the <span class="bold">Default DCI Custom Review Requirements</span> option by clicking the plus sign.</p>
+</li>
+<li>
+<p>For the setting <span class="bold">Allow CRF status change to RN when review is required?</span>, specify <code dir="ltr">Y</code> or <code dir="ltr">N</code> in the Value column.</p>
+<p>A value of <code dir="ltr">Y</code> allows reviewers to change the CRF review status to Review not Required even when the installation setting, which you set in the next step, is set to require custom reviews.</p>
+</li>
+<li>
+<p>For the setting <span class="bold">Custom Reviews are Required</span>, specify <code dir="ltr">Y</code> or <code dir="ltr">N</code> in the Value column.</p>
+<p>A value of <code dir="ltr">Y</code> requires that all custom review types be performed for all CRFs.</p>
+</li>
+<li>
+<p>Click <span class="bold">Save</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<div id="RDCAG649" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref104"></a>
+<h3 class="sect2"><span class="secnum">5.2.2</span> Set the Custom CRF Review Requirement for a Study</h3>
+<p>You can set specific custom review requirements for CRFs in a study that are different the installation-wide requirement for a particular study. This requirement applies for all entered CRFs in the study that do not have a review status that was explicitly set by a user.</p>
+<ol>
+<li>
+<p>Log in to Oracle Clinical as an administrator.</p>
+</li>
+<li>
+<p>Expand the <span class="bold">Design</span> node and select <span class="bold">DCI Form Local Study Settings</span>.</p>
+</li>
+<li>
+<p>Select the study or switch to the study for which you want to set the requirement.</p>
+</li>
+<li>
+<p>At the bottom, expand the <span class="bold">Default DCI Custom Review Requirements</span> group of settings by clicking the plus icon to its left.</p>
+</li>
+<li>
+<p>For the setting <span class="bold">Allow CRF status change to RN when review is required?</span>, specify <code dir="ltr">Y</code> or <code dir="ltr">N</code> in the Value column.</p>
+<p>A value of <code dir="ltr">Y</code> allows reviewers to change the CRF review status to Review not Required even when the study setting, which you set in the next step, is set to require custom reviews.</p>
+</li>
+<li>
+<p>For the setting <span class="bold">Custom Reviews are Required</span>, specify <code dir="ltr">Y</code> or <code dir="ltr">N</code> in the Value column.</p>
+<p>A value of <code dir="ltr">Y</code> requires that all custom review types be performed for all CRFs in a study.</p>
+</li>
+<li>
+<p>Click <span class="bold">Save</span>.</p>
+</li>
+</ol>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If you specify custom review requirements for a study DCI, updates to the study-level custom review requirements will not override the study DCI. If you want to enforce the study-level requirement in such a DCI, you have to manually change the study DCI custom review requirements. See <a href="#CIHEAGCB">Set Custom Review Requirement for a Study DCI</a> for instructions.</div>
+<p class="subhead2"><a id="RDCAG650"></a>Enforce the Installation-wide Custom Review Requirement for CRFs in a Study</p>
+<p>If a study has a custom review requirement defined, the installation-wide default is not enforced for that study. You can apply the installation default to clear the user-defined requirement for the study.</p>
+<ol>
+<li>
+<p>Log in to Oracle Clinical as an administrator.</p>
+</li>
+<li>
+<p>Expand the <span class="bold">Design</span> node and select <span class="bold">DCI Form Local Study Settings</span>.</p>
+</li>
+<li>
+<p>Select the study or switch to the study for which you want to edit the requirement.</p>
+</li>
+<li>
+<p>At the bottom, expand the <span class="bold">Default DCI Custom Review Requirements</span> group of settings by clicking the plus icon to its left.</p>
+</li>
+<li>
+<p>For the setting <span class="bold">Allow CRF status change to RN when review is required?</span>, select the checkbox <span class="bold">Inherit From Local DB Setting</span>. The column Local DB Value shows the inherited value.</p>
+</li>
+<li>
+<p>For the setting <span class="bold">Custom Reviews are Required</span>, select the checkbox <span class="bold">Inherit From Local DB Setting</span>. The column Local DB Value shows the inherited value.</p>
+</li>
+<li>
+<p>Click <span class="bold">Save</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<div id="RDCAG651" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref105"></a>
+<h3 class="sect2"><span class="secnum">5.2.3</span> Set Custom Review Requirement for a GLIB DCI</h3>
+<p>You can set a different custom review requirement than the default that is defined at the installation or study level, which may require all or none of the available review types for all CRFs. At the individual DCI level, you can refine the requirement by setting all, none, or only some custom review types to be required for CRFs of the DCI. This requirement applies for all entered CRFs of the DCI that do not have a review status that was explicitly set by a user.</p>
+<ol>
+<li>
+<p>Log in to Oracle Clinical as a user with privileges to work in the Glib subsystem.</p>
+</li>
+<li>
+<p>Expand the <span class="bold">Glib</span> node, then expand <span class="bold">DCIs DCMs Procedures</span>, and then select <span class="bold">DCIs</span>.</p>
+</li>
+<li>
+<p>Select the <span class="bold">Review Requirements</span> tab.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+The checkbox <span class="bold">Allow CRF status change to RN when review is required?</span> at the top of the tab is read-only and indicates the inherited installation setting. You can specify a different setting for individual custom review types in step <a href="#CIHGHIGB">7</a>.</div>
+</li>
+<li>
+<p>Query in the DCI Name field for the DCI for which you want to set the custom review requirements.</p>
+</li>
+<li>
+<p>Click in the <span class="bold">Custom Reviews Required</span> field for that DCI to open the Reviews Required dialog box.</p>
+</li>
+<li>
+<p>Select (highlight) all the review types that should be required for CRFs in this DCI.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+Clicking a single review type drops the current selection and selects only that review type. Use Shift+click, Ctrl+click, or the controls below the list to select or deselect multiple review types.</div>
+</li>
+<li id="CIHGHIGB">
+<p>Make sure that <span class="bold">Allow Override RN Status</span> is checked for only those selected (required) review types for which you want to allow reviewers to set the review status to Review not Required (RN).</p>
+</li>
+<li>
+<p>Click <span class="bold">Save</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CIHEAGCB"></a>
+<div id="RDCAG652" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">5.2.4</span> Set Custom Review Requirement for a Study DCI</h3>
+<p>You can set a different custom review requirement than the default that is defined for the installation or study DCI. This requirement applies to all entered CRFs in the study DCI that do not have a review status that was explicitly set by a user.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+You can specify custom review requirements for any DCI, whether active, provisional, or retired. You may want to define requirements even for a retired DCI in case a CRF, entered against the retired DCI, is updated.</div>
+<ol>
+<li>
+<p>Log in to Oracle Clinical as a user with privileges to work in the Definition subsystem.</p>
+</li>
+<li>
+<p>Expand the <span class="bold">Definition</span> node, then expand <span class="bold">DCIs</span>, and then select <span class="bold">DCIs</span>.</p>
+</li>
+<li>
+<p>Select or switch to the study to which the DCI belongs.</p>
+</li>
+<li>
+<p>Select the <span class="bold">Review Requirements</span> tab.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+The checkbox <span class="bold">Allow CRF status change to RN when review is required?</span> at the top of the tab is read-only and indicates the inherited installation or study setting, if one is defined. You can specify a different setting for individual custom review types in step <a href="#CIHGHIGB">7</a>.</div>
+</li>
+<li>
+<p>Query in the DCI Name field for the DCI for which you want to set the custom review requirements.</p>
+</li>
+<li>
+<p>Click in the <span class="bold">Custom Reviews Required</span> field for that DCI to open the Reviews Required dialog box.</p>
+</li>
+<li>
+<p>Select (highlight) all the review types that should be required for this DCI.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+Clicking a single review type drops the current selection and selects only that review type. Use Shift+click, Ctrl+click, or the controls below the list to select or deselect multiple review types.</div>
+</li>
+<li>
+<p>Make sure that <span class="bold">Allow Override RN Status</span> is checked for only those selected (required) review types for which you want to allow reviewers to set the review status to Review not Required (RN).</p>
+</li>
+<li>
+<p>Click <span class="bold">Save</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="A134477573"></a>
+<div id="RDCAG653" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">5.3</span> Finding CRFs with the Review Not Required (RN) Status Set by Users</h2>
+<p>CRFs for which the review status has been set to Review not Required by users are not affected by changes in the custom review requirements, defined in Oracle Clinical. To find such CRFs and determine if they would require review based on the new requirements you can use:</p>
+<ul>
+<li>
+<p>The option <span class="bold">Explicitly set RN status</span> from the Review Status filter in the Search pane.</p>
+</li>
+<li>
+<p>The metrics for <span class="bold">Explicitly set RN status</span> in the Patient Summary, Study Site Summary, or Single Patient Casebooks page.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect1" -->
+<a id="A134485190"></a>
+<div id="RDCAG654" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">5.4</span> Viewing Audit History for Changes in Custom Review Requirements</h2>
+<p>While it is possible to review audit history for those cases where a user explicitly changes the review status of a CRF, the status of a CRF may also change as a result of changes in Custom Review Requirements at the DCI level will appear in the review status history. Only changes at the installation or study level will not appear in the review status history.</p>
+<p>To view audit history for changes in the Custom Review requirements, you can query the columns crt_list and allow_crt_rn in the DCIS and DCIS$JN tables. For details about these columns, see the <span class="italic">Oracle Clinical Stable Interface Technical Reference Manual</span>.</p>
+<div id="RDCAG655" class="example">
+<p class="titleinexample"><a id="sthref106"></a>Example 5-1 Query to find DCIs for which the CRT requirement has changed</p>
+<pre dir="ltr">
+column dci_id format 999999999
+column allow_crt_rn format a10
+column crt_list format a30
+set pages 1
+set lines 200
+select before.dci_id, before.allow_crt_rn, after.allow_crt_rn
+  from (select row_number () over (order by JN_TIMESTAMP) r_num, dci_id, allow_crt_rn from dcis$jn) before 
+  join (select row_number () over (order by JN_TIMESTAMP) r_num, dci_id, allow_crt_rn from dcis$jn) after 
+    on before.R_NUM = after.R_NUM+1 
+ where before.dci_id = after.dci_id 
+   and before.allow_crt_rn != after.allow_crt_rn;
+   
+select before.dci_id, before.crt_list, after.crt_list
+  from (select row_number () over (order by JN_TIMESTAMP) r_num, dci_id, crt_list from dcis$jn) before 
+  join (select row_number () over (order by JN_TIMESTAMP) r_num, dci_id, crt_list from dcis$jn) after 
+    on before.R_NUM = after.R_NUM+1 
+ where before.dci_id = after.dci_id 
+   and before.crt_list != after.crt_list;
+</pre></div>
+<!-- class="example" --></div>
+<!-- class="sect1" -->
+<a id="CIHJGBDB"></a>
+<div id="RDCAG226" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">5.5</span> Add Custom Review Types</h2>
+<p>You create custom review types and their corresponding privileges in the CUSTOM REVIEW TYPES installation codelist in Oracle Clinical. This codelist comprises all user-defined review types and the privilege required for each of the review types.</p>
+<p>You can define up to 444 custom review types for a DCI.</p>
+<ol>
+<li>
+<p>Log in to Oracle Clinical as an administrator.</p>
+</li>
+<li>
+<p>Navigate to <span class="bold">Admin</span>, <span class="bold">Reference Codelists</span>, and select <span class="bold">Installation Codelists</span>.</p>
+</li>
+<li>
+<p>In the Maintain Installation Codelist window, query for the CUSTOM REVIEW TYPES codelist.</p>
+</li>
+<li id="CIHGEBCI">
+<p>In the Reference Codelist Values section, fill in the Long Value field with a name for the new custom review type, such as <code dir="ltr">SAFETY_REVIEW</code> or <code dir="ltr">DM_REVIEW</code>.</p>
+</li>
+<li>
+<p>Fill in the Short Value field with a name for the privilege required to perform that type of review, such as <code dir="ltr">SAFEREV</code> or <code dir="ltr">DMREV</code>.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The Short Value field accepts up to 8 characters.</div>
+</li>
+<li>
+<p>To activate the custom review type, select the <span class="bold">Active</span> checkbox.</p>
+</li>
+<li id="CIHEHHEI">
+<p>Optionally, you can store details about the custom review type in the Description field.</p>
+</li>
+<li>
+<p>Repeat steps <a href="#CIHGEBCI">4</a> through <a href="#CIHEHHEI">7</a> to add more custom review types, as necessary.</p>
+</li>
+<li>
+<p>Click <span class="bold">Save</span> after you have finished defining custom review types.</p>
+</li>
+</ol>
+<div id="RDCAG656" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref107"></a>
+<h3 class="sect2"><span class="secnum">5.5.1</span> Deactivate Custom Review Types</h3>
+<p>If you deactivate a custom review type from the CUSTOM REVIEW TYPES reference codelist in Oracle Clinical, the change takes effect as follows:</p>
+<ul>
+<li>
+<p>In RDC, the inactive custom review type is available for search but with suffix (<code dir="ltr">inactive</code>). However, the calculation of the CRT icon will not consider the inactive custom review type.</p>
+</li>
+<li>
+<p>In RDC Data Entry window, reviewers with privileges for the inactive custom review type and one or more active custom review types (so that they can still change review statuses) can view audit history for the inactive custom review type, which appears prefixed by (<code dir="ltr">inactive</code>).</p>
+</li>
+</ul>
+<ol>
+<li>
+<p>Log in to Oracle Clinical as an administrator.</p>
+</li>
+<li>
+<p>Navigate to <span class="bold">Admin</span>, <span class="bold">Reference Codelists</span>, and select <span class="bold">Installation Codelists</span>.</p>
+</li>
+<li>
+<p>In the Maintain Installation Codelist window, query for the CUSTOM REVIEW TYPES codelist.</p>
+</li>
+<li>
+<p>Under Reference Codelist Values, find the review type that you want to retire and deselect the <span class="bold">Active</span> checkbox.</p>
+</li>
+<li>
+<p>Click <span class="bold">Save</span>.</p>
+</li>
+<li>
+<p>If the custom review type is explicitly required based on the study DCI or GLIB DCI review requirement, the study manager or global librarian must also access the Maintain Study DCIs or Maintain GLIB DCIs form, respectively, at which point the inactive custom review type is removed, and then save changes. If this was the only custom review type that was required for the DCI, the DCI then inherits the study or installation default requirement, as applicable.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="A2503118"></a>
+<div id="RDCAG657" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">5.6</span> Assign Custom Review Type Privileges to Users</h2>
+<p>A CRF has multiple review statuses at any given time, one for each custom review type. The current review status for a custom review type (see <a href="#CIHEHCII">Review Statuses for Custom Review Types</a>) and the corresponding review status indicator on the CRF icon are visible to users who have the privilege for that review type. You define the privilege together with the custom review type; for details, see <a href="#CIHJGBDB">Add Custom Review Types</a>.</p>
+<p>For example, having the custom review types SAFETY_REVIEW and DM_REVIEW, if safety review is complete and DM review is not complete for a CRF, the same CRF appears as having the review status Review Complete (RC on the CRF icon) to users with the privilege for SAFETY_REVIEW, and it appears with the status Review Required (RQ on the CRF icon) to users who have the privilege for DM_REVIEW.</p>
+<p>You can assign privileges from Study Security or Site Security in the RDC Administration Tool. See <a href="security.htm#CHDIICFB">"Assigning Study and Site Security Privileges"</a> for instructions.</p>
+<p>You can also assign privileges from Oracle Clinical. See the <a class="olink OCADG" href="../oc-admin/toc.htm"><span class="italic">Oracle Clinical Administrator's Guide</span></a> for details.</p>
+</div>
+<!-- class="sect1" -->
+<a id="CIHCGDJA"></a>
+<div id="RDCAG228" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">5.7</span> Define Custom Review Type Activities</h2>
+<p>You can leverage custom review types by including them in custom activities. Using the REVIEW_TYPE and REVIEW_STATUS parameters of the rdc_zf_surround_activitiy.setSearchCondition procedure, you can create or edit a procedural activity to search by custom review values. See <a href="activities.htm#CHDJEIAJ">"Creating and Maintaining Customized Activities"</a> for instructions.</p>
+<p>For more information, see:</p>
+<ul>
+<li>
+<p>&rdquo;Performing Custom Reviews&rdquo; in the <a class="olink RDCOG376" href="../rdc-user/custom_reviews.htm#RDCOG376"><span class="italic">Oracle Clinical Remote Data Capture User's Guide</span></a></p>
+</li>
+<li>
+<p><a href="security.htm#CHDJAGDF">"Securing Remote Data Capture"</a></p>
+</li>
+</ul>
+</div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment104">
+<tr>
+<td class="cellalignment113">
+<table class="cellalignment109">
+<tr>
+<td class="cellalignment108"><a href="discrep.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment108"><a href="runtime.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;1996, 2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment116">
+<table class="cellalignment107">
+<tr>
+<td class="cellalignment108"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment108"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment108"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment108"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

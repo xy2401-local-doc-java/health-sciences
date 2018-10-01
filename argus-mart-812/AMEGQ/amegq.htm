@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Oracle&reg; Argus Mart Extensibility Guide</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2017-10-04T2:42:36Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Argus Mart Extensibility Guide" />
+<meta name="dcterms.identifier" content="E88814-01" />
+<meta name="dcterms.isVersionOf" content="AMEGQ" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Prev" href="toc.htm" title="Previous" type="text/html" />
+<link rel="alternate" href="AMEGQ.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="AMEGQ.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="AMEGQ.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">2/2</span> <!-- End Header -->
+<div class="letterstyle">
+<h1>Oracle&reg; Argus Mart</h1>
+<p class="booktitle">Extensibility Guide</p>
+<p><span class="revnumber">Release 8.1.1</span></p>
+<p class="invpartnumber">E88814-01</p>
+<p class="date">September 2017</p>
+<p>This document contains information that helps a database expert to extend Argus Mart data structure or logic for custom data.</p>
+<div id="AMEGQ101" class="sect1"><!-- infolevel="all" infotype="General" --><a id="sthref1"></a>
+<h2 class="sect1"><span class="secnum">1</span> Assumptions</h2>
+<p>This guide assumes the following:</p>
+<ul>
+<li>
+<p>Argus Mart (AM) is dependent on Argus Safety (AS).</p>
+</li>
+<li>
+<p>You should avoid executing any such functionality that may be implemented in a simpler and more general way in Argus Safety.</p>
+</li>
+<li>
+<p>It is not necessary to wrap PL/SQL components of the ETL.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect1" -->
+<div id="AMEGQ102" class="sect1"><!-- infolevel="all" infotype="General" --><a id="sthref2"></a>
+<h2 class="sect1"><span class="secnum">2</span> Introduction to Argus Mart ETL</h2>
+<p>Argus Mart is a data source for analysis and reporting in medical product safety and pharmacovigilance. The primary data is the adverse event cases managed by the Argus Safety application. Argus Mart consists of one or more data marts and the software to <code dir="ltr">Extract</code> the source data from Argus Safety; <code dir="ltr">Transform</code> the data, and <code dir="ltr">Load</code> it into the Argus Mart data marts. The two sets of tables used in Argus Mart are:</p>
+<ul>
+<li>
+<p>Reporting Mart (RM)</p>
+</li>
+<li>
+<p>Signal Mart (SM)</p>
+</li>
+</ul>
+<p>The data can be customized before or after fetching data from Argus Safety database with the help of ETL Hooks. The next section comprises the details about ETL Hooks.</p>
+</div>
+<!-- class="sect1" -->
+<div id="AMEGQ103" class="sect1"><!-- infolevel="all" infotype="General" --><a id="sthref3"></a>
+<h2 class="sect1"><span class="secnum">3</span> ETL Hooks</h2>
+<p>ETL Hooks are the custom procedures that are used to extend the existing functionality or behavior of the Argus Mart ETL.</p>
+<p>ETL Hooks can be executed to perform actions while fetching data from the source database to the destination database, as required by the users.</p>
+<p>The data fetched from Argus Safety database can be modified before or after uploading the data into the Argus Mart database. You can populate customized (non-standard/user-defined) columns to the standard RM and SM tables. Besides, you can also populate customized table(s).</p>
+<p>For more information on populating customized columns or tables, refer to <a href="#CHDECDAG">Section 5, "Customizing Tables"</a>.</p>
+<p>ETL Hooks perform these actions at different stages of both initial and incremental ETL.</p>
+<p>The ODI Load Plan lists all the ETL scenarios, as shown below:</p>
+<div id="AMEGQ104" class="figure">
+<p class="titleinfigure"><a id="sthref4"></a>Figure 1 ODI Load Plan</p>
+<img width="1023" height="435" src="img/odiloadplan.jpg" alt="Surrounding text describes Figure 1 ." /><br /></div>
+<!-- class="figure" -->
+<div id="AMEGQ105" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref5"></a>
+<h3 class="sect2"><span class="secnum">3.1</span> List of Argus Mart ETL Hooks</h3>
+<p>Argus Mart comprises the following ETL Hooks:</p>
+<ul>
+<li>
+<p>CUSTOM ROUTINE BEFORE STAGE TABLES POPULATION: This hook can be executed before populating the Staging tables.</p>
+</li>
+<li>
+<p>CUSTOM ROUTINE BEFORE REPORTING TABLES POPULATION: This hook can be executed before populating the Reporting tables (or RM tables).</p>
+</li>
+<li>
+<p>CUSTOM ROUTINE AFTER REPORTING TABLES POPULATION: This hook can be executed after populating the Reporting tables (or RM tables).</p>
+</li>
+<li>
+<p>CUSTOM ROUTINE BEFORE SIGNAL HELPER TABLES POPULATION: This hook can be executed before populating the Signal Helper tables.</p>
+</li>
+<li>
+<p>CUSTOM ROUTINE AFTER SIGNAL HELPER TABLES POPULATION: This hook can be executed after populating the Signal Helper tables.</p>
+</li>
+<li>
+<p>CUSTOM ROUTINE AFTER ETL: This hook can be executed after running the initial or incremental ETL (post-ETL commit).</p>
+</li>
+</ul>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+ETL hooks CUSTOM ROUTINE BEFORE SIGNAL HELPER TABLES POPULATION and CUSTOM ROUTINE AFTER SIGNAL HELPER TABLES POPULATION are executed only when any case revision is being processed for SM tables in the current ETL run.</div>
+</div>
+<!-- class="sect2" -->
+<div id="AMEGQ106" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref6"></a>
+<h3 class="sect2"><span class="secnum">3.2</span> Viewing Argus Safety User Interface</h3>
+<p>ETL Hooks help in customizing the existing ETL to suit your requirements through Argus Safety user interface.</p>
+<p>Follow the steps given below to view the Argus Safety user interface:</p>
+<ol>
+<li>
+<p>Log in to the Argus Safety application.</p>
+</li>
+<li>
+<p>From the menu bar, click <span class="bold">Argus Console</span>.</p>
+<p>The menu bar updates for Argus Console.</p>
+</li>
+<li>
+<p>From the new menu bar, click <span class="bold">System Configuration</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">System Management (Common Profile Switches)</span>.</p>
+<p>On the left hand side of the screen, a list of all system-managed common profile switches appears.</p>
+</li>
+<li>
+<p>Expand the Common Profile folder and click <span class="bold">Argus Mart</span>.</p>
+<p>The <span class="bold">Modify Argus Mart</span> page appears.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+ETL hooks are the global-level switches, visible on Argus Safety Console when you are logged-in through the default enterprise. These switches are visible only after installing and creating Argus Mart schema.</div>
+</li>
+</ol>
+<div id="AMEGQ107" class="figure">
+<p class="titleinfigure"><a id="sthref7"></a>Figure 2 Argus Safety User Interface</p>
+<img width="993" height="697" src="img/etlhooks.jpg" alt="Surrounding text describes Figure 2 ." /><br /></div>
+<!-- class="figure" --></div>
+<!-- class="sect2" -->
+<div id="AMEGQ108" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref8"></a>
+<h3 class="sect2"><span class="secnum">3.3</span> Executing ETL Hooks</h3>
+<p>The ETL Hooks can be executed at different staging levels.</p>
+<ol>
+<li>
+<p>Before populating the reporting tables, execute CUSTOM ROUTINE BEFORE STAGE TABLES POPULATION, and/or CUSTOM ROUTINE BEFORE REPORTING TABLES POPULATION.</p>
+</li>
+<li>
+<p>Before populating the signal tables, execute ETL Hooks CUSTOM ROUTINE AFTER REPORTING TABLES POPULATION, CUSTOM ROUTINE BEFORE SIGNAL HELPER TABLES POPULATION, and/or CUSTOM ROUTINE AFTER SIGNAL HELPER TABLES POPULATION.</p>
+</li>
+<li>
+<p>After populating reporting and signal tables and before populating the results, execute CUSTOM ROUTINE AFTER ETL.</p>
+</li>
+</ol>
+<div id="AMEGQ109" class="figure">
+<p class="titleinfigure"><a id="sthref9"></a>Figure 3 Sequence of ETL Hook Execution</p>
+<img width="625" height="327" src="img/etlexecution.jpg" alt="Surrounding text describes Figure 3 ." /><br /></div>
+<!-- class="figure" -->
+<p>Follow the steps given below to execute an ETL Hook:</p>
+<ol>
+<li>
+<p>On the <span class="bold">Modify Argus Mart</span> page, enter a procedure name in the text box relevant to the ETL Hook execution stage. The ETL type can be initial or incremental where the customized data will be fetched. The ETL Hook will look for the database object that matches the procedure name.</p>
+<p>A procedure name denotes the ETL Hook that comprises the custom procedure, or steps. Based on the stage (initial or incremental) where this procedure is being called, the data is modified before sending it to the destination tables.</p>
+</li>
+<li>
+<p>If the database object (or procedure) is found, the ETL is executed as follows:</p>
+<ul>
+<li>
+<p>If the ETL executes without any errors, then move to the next procedure.</p>
+</li>
+<li>
+<p>If the ETL executes with errors, then log the error(s) and exit.</p>
+<p>When executing ETL, if there is any error while populating the staging schema tables, error(s) are logged in the table ETL_STAGE_LOG, whereas while populating the mart schema tables, error(s) are logged in the table ETL_MART_LOG.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>If the database object (or procedure) is not found, then log the error(s) and fail the ETL. In this case, the ETL may be executed if you have explicitly created an exception-handling for such cases to absorb any exceptions and move on to the next procedure.</p>
+<p>Optionally, to resolve this issue, create a procedure of that name, provide an existing procedure name, or remove the configuration.</p>
+</li>
+</ol>
+<div class="infoboxnotewarn">
+<p class="notep1">WARNING:</p>
+<ul>
+<li>
+<p class="warnsp">You should not modify the existing data or names of the objects. Although additional objects can be created, all changes should first be tested on a test environment, before implementing them in a production environment.</p>
+</li>
+<li>
+<p class="warnsp">No data commit should be done within ETL Hooks.</p>
+</li>
+</ul>
+</div>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<div id="AMEGQ110" class="sect1"><!-- infolevel="all" infotype="General" --><a id="sthref10"></a>
+<h2 class="sect1"><span class="secnum">4</span> Configuring Flexible Data Re-categorization Code List</h2>
+<p>Flexible Data Re-categorization is an Argus Safety functionality through which users can define code list display values (LM tables) in different languages.</p>
+<p>Argus Safety maintains this data in the tables CODE_LIST_MASTER, CODE_LIST_CODE_ATTRIBUTES, and CODE_LIST_DETAIL_DISCRETE for supported languages.</p>
+<p>The Argus Mart ETL populates the code list data in the tables RM_CODE_LIST_MASTER, RM_CODE_LIST_CODE_ATTRIBUTES, and RM_CODE_LIST_DETAIL_DISCRETE, which are used for processing the SM table columns.</p>
+<p>Based on the applicable language, the SM table fields are divided into the following categories:</p>
+<ul>
+<li>
+<p><span class="bold">LI - Language Independent fields</span>: These fields are applicable for first-human language, or second-human language parameters. The values are the same, irrespective of the language code.</p>
+</li>
+<li>
+<p><span class="bold">FL - First Language fields</span>: These fields are populated on the basis of the Argus Mart Common Profile Switch FIRST_HUMAN_LANGUAGE, which is present in Argus Console.</p>
+<p>The default value of this switch is <span class="bold">en</span>. As a result, the default language in which these fields will be populated is English.</p>
+<p>If the user configures this switch with any other available language and if its corresponding data is also present in the Flexible Data Re-categorization code list tables, these first language fields will contain data as per the configured language.</p>
+</li>
+<li>
+<p><span class="bold">SL - Second Language fields</span>: These fields are populated on the basis of the Argus Mart Common Profile Switch SECOND_HUMAN_LANGUAGE, which is present in Argus Console.</p>
+<p>The default value of this switch is NULL. This implies that the second language fields will be populated in the SM tables only after this switch is configured.</p>
+<p>If the user configures this switch with any other configured language (like German), and:</p>
+<ul>
+<li>
+<p>If its corresponding data is also present in the Flexible Data Re-categorization code list tables, these second language fields will contain data as per the configured language.</p>
+</li>
+<li>
+<p>If its corresponding data is not available in the Flexible Data Re-categorization code list tables, these second language fields will contain data as per the English language.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="bold">EN - English fields</span>: These fields are always populated for only the English language.</p>
+</li>
+<li>
+<p><span class="bold">J - Japanese fields</span>: These fields are applicable only if the second-human language parameter is set to Japanese language.</p>
+</li>
+<li>
+<p><span class="bold">EN_ABBRV</span>: These fields use the EN_ABBRV language for the specified code list.</p>
+</li>
+<li>
+<p><span class="bold">SM:</span> These fields use the SM language for the specified code list.</p>
+</li>
+</ul>
+<p>The following is an example to configure a code list display value in a new language for an already existing code in Argus Safety:</p>
+<div id="AMEGQ111" class="example">
+<p class="titleinexample"><a id="sthref11"></a>Example 1 Configuring Flexible Data Re-categorization</p>
+<p>For a code list GENDER, data in the table CODE_LIST_DETAIL_DISCRETE for code 1 is available in the following four decode contexts (languages):</p>
+</div>
+<!-- class="example" -->
+<div id="AMEGQ112" class="figure">
+<p class="titleinfigure"><a id="sthref12"></a>Figure 4 Original Decode Contexts (Languages)</p>
+<img width="756" height="107" src="img/flex1.jpg" alt="Surrounding text describes Figure 4 ." /><br /></div>
+<!-- class="figure" -->
+<p>To configure the same code 1 in the code list GENDER for a new language such as GERMAN (decode context <span class="bold">ge</span>), populate the table CODE_LIST_DETAIL_DISCRETE with required values in the GERMAN language.</p>
+<pre dir="ltr">
+INSERT INTO CODE_LIST_DETAIL_DISCRETE (CODE_LIST_ID, DECODE_CONTEXT, CODE, DISPLAY_VALUE, PREFERRED, SORT, LAST_UPDATE_TIME, ENTERPRISE_ID) VALUES ( 'GENDER', 'ge', 1, 'm&auml;nnlich', 0, null, sysdate, 1);
+</pre>
+<div id="AMEGQ113" class="figure">
+<p class="titleinfigure"><a id="sthref13"></a>Figure 5 New Decode Contexts (Languages)</p>
+<img width="756" height="124" src="img/flex2.jpg" alt="Surrounding text describes Figure 5 ." /><br /></div>
+<!-- class="figure" --></div>
+<!-- class="sect1" -->
+<a id="CHDECDAG"></a>
+<div id="AMEGQ114" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">5</span> Customizing Tables</h2>
+<p>You can customize RM and SM tables.</p>
+<div id="AMEGQ115" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref14"></a>
+<h3 class="sect2"><span class="secnum">5.1</span> Customizing RM Tables</h3>
+<div id="AMEGQ116" class="sect3"><a id="sthref15"></a>
+<h4 class="sect3"><span class="secnum">5.1.1</span> Populating a Column Added in the Argus Safety table</h4>
+<p>You can populate new column(s) to existing RM tables that are added to the Argus Safety tables.</p>
+<p><span class="bold">To populate the new column</span>:</p>
+<ol>
+<li>
+<p>Check mapping between the source and the target tables, through the table <span class="italic">ETL_SIGNAL_TABLE_MAPPING</span>.</p>
+</li>
+<li>
+<p>Based on the mapping between the Argus Safety and RM tables, fetch the desired column in the RM table through ETL Hooks.</p>
+</li>
+</ol>
+<p>There can be different source types to fetch data into tables at initial or incremental stages, such as:</p>
+<ul>
+<li>
+<p>ATOS - Argus Safety to Staging tables</p>
+</li>
+<li>
+<p>DTOS - DLP to Staging tables</p>
+</li>
+<li>
+<p>STORM - Staging to RM tables</p>
+</li>
+<li>
+<p>STOSM - PRE_SM to SM Tables</p>
+</li>
+</ul>
+<div id="AMEGQ117" class="example">
+<p class="titleinexample"><a id="sthref16"></a>Example 2 Populating a new column in the RM table</p>
+<p>Follow the steps given below to populate a new column in the table RM_CASE_MASTER:</p>
+<ol>
+<li>
+<p>Check the mapping between RM_CASE_MASTER, and the source table (SDLP_CASE_MASTER) to fetch columns from the staging table into the RM table. In this case, the source type is STORM.</p>
+</li>
+<li>
+<p>Check the source table for target table (SDLP_CASE_MASTER), where columns are fetched from Argus Safety into the staging table. In this case, the source type can be ATOS/DTOS.</p>
+<div id="AMEGQ118" class="figure">
+<p class="titleinfigure"><a id="sthref17"></a>Figure 6 Populating New Columns in the RM Table</p>
+<img width="676" height="252" src="img/addnewtablecolumn.jpg" alt="Surrounding text describes Figure 6 ." /><br /></div>
+<!-- class="figure" --></li>
+<li>
+<p>Once the mapping of the tables has been identified, fetch these column(s) from Argus Safety/DLP into Argus Mart, as required.</p>
+</li>
+</ol>
+</div>
+<!-- class="example" --></div>
+<!-- class="sect3" -->
+<div id="AMEGQ119" class="sect3"><a id="sthref18"></a>
+<h4 class="sect3"><span class="secnum">5.1.2</span> Populating a Calculated Column in RM</h4>
+<p>You can populate customized calculated column(s) to the existing RM tables that do not exist in the Argus Safety database. You can also populate column(s) which are calculated on the basis of the existing columns in a table.</p>
+<p>To populate such custom columns, create a procedure, and use ETL Hooks to execute them.</p>
+<div id="AMEGQ120" class="example">
+<p class="titleinexample"><a id="sthref19"></a>Example 3 Creating a custom procedure</p>
+<p>Creating a procedure called P_UPD_RM_CASE_PAT_INFO, to populate a new column called PAT_FULL_NAME in the table RM_CASE_PAT_INFO. The value of this column is calculated, and populated from the existing columns of RM_CASE_PAT_INFO. Here, we concatenate three columns PAT_INITIALS, PAT_FIRSTNAME, and PAT_LASTNAME to populate this value as PAT_FULL_NAME.</p>
+<ol>
+<li>
+<p>Create a procedure called P_UPD_RM_CASE_PAT_INFO.</p>
+</li>
+<li>
+<p>In the table RM_CASE_PAT_INFO, populate a new column called PAT_FULL_NAME.</p>
+<p>The value of this column is calculated, and populated from the existing columns of RM_CASE_PAT_INFO.</p>
+</li>
+<li>
+<p>Concatenate three columns PAT_INITIALS, PAT_FIRSTNAME, and PAT_LASTNAME to populate this value as PAT_FULL_NAME.</p>
+<div id="AMEGQ121" class="figure">
+<p class="titleinfigure"><a id="sthref20"></a>Figure 7 Creating Custom Procedure</p>
+<img width="683" height="228" src="img/customroutine.jpg" alt="Surrounding text describes Figure 7 ." /><br /></div>
+<!-- class="figure" --></li>
+<li>
+<p>Once this procedure is created, call this procedure using ETL Hook PRE_REPORTING_TABLES_POPULATION.</p>
+<p>The ETL Hook will populate this new column PAT_FULL_NAME in SDLP_CASE_PAT_INFO.</p>
+</li>
+</ol>
+</div>
+<!-- class="example" --></div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<div id="AMEGQ122" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref21"></a>
+<h3 class="sect2"><span class="secnum">5.2</span> Customizing SM Tables</h3>
+<p>When using ETL Hooks to populate data into SM tables, it is recommended to use RM tables as the source, with join(s) to the chunk table ETL_SM_CASES_TO_PROCESS_CHUNK.</p>
+<p>Do not use RM Views such as V_ETL_CASE_MASTER, because each view is joined individually to the chunk table. This can lead to sluggish performance of the application if ETL Hook extracts data from the multiple views.</p>
+<div id="AMEGQ123" class="example">
+<p class="titleinexample"><a id="sthref22"></a>Example 4 Populating data into SM tables using the chunk table</p>
+<p>In the example given below, two RM tables RM_CASE_MASTER and RM_CASE_PAT_INFO have been joined with the chunk table ETL_SM_CASES_TO_PROCESS_CHUNK to fetch data into the SM table with the help of the ETL Hooks.</p>
+</div>
+<!-- class="example" -->
+<div id="AMEGQ124" class="figure">
+<p class="titleinfigure"><a id="sthref23"></a>Figure 8 Populating Data into SM tables using Chunk Table</p>
+<img width="685" height="192" src="img/chunktable.jpg" alt="Surrounding text describes Figure 8 ." /><br /></div>
+<!-- class="figure" -->
+<div id="AMEGQ125" class="sect3"><a id="sthref24"></a>
+<h4 class="sect3"><span class="secnum">5.2.1</span> Defining a New Column in SM table</h4>
+<p>New column(s) can be added before or after fetching data into SM tables. The columns to be added into SM can have simple or complex calculations.</p>
+<ul>
+<li>
+<p>Simple calculation-based columns: SM Views are created based on Argus Safety tables. When a customized column having simple calculations is to be added in an SM table, these calculations are done on SM Views, such as:</p>
+<ul>
+<li>
+<p>select &lt;column-name&gt; from &lt;table-name&gt; table where &lt;column-name&gt; DateOfBirth = '1990';</p>
+</li>
+<li>
+<p>The definition of these SM Views is based on RM tables and is not updated automatically. When calculations are done, make sure to update the views, to reflect the changes. Once SM Views are updated, use ETL Hooks to fetch this column(s) into SM table, as required.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Complex calculation-based columns: <span class="italic">PRE_SM</span> table is a set of tables that comprises the staging data for SM tables. You can perform complex calculations on these tables and then fetch them into SM tables using ETL Hooks.</p>
+</li>
+</ul>
+<p>The basic procedure to define a new column is the same for both simple and complex calculation-based column(s) - SM View and PRE_SM tables.</p>
+<p>Simple and complex calculations are segregated to improve performance of execution of the data.</p>
+</div>
+<!-- class="sect3" -->
+<div id="AMEGQ126" class="sect3"><a id="sthref25"></a>
+<h4 class="sect3"><span class="secnum">5.2.2</span> Populating a Custom UVT table</h4>
+<p>The Argus Mart ETL maintains Unique Value Tables (UVT) for first-human language and second-human language, as defined in the system. The UVTs contain the list of distinct values available for categorical data items in the case data.</p>
+<p>To populate a custom UVT table, you must first check the source and target table mapping from the table <span class="italic">ETL_UVT_SM_MAPPING</span>.</p>
+<p>Fetch the data from the source table into the target table as per the mapping done above.</p>
+<div id="AMEGQ127" class="example">
+<p class="titleinexample"><a id="sthref26"></a>Example 5 Populating a custom UVT table</p>
+<p>Follow the steps given below to populate a column in the table UVT_GENDER:</p>
+<ol>
+<li>
+<p>Check the mapping between the source table PRE_SM_CASE and the target table UVT_GENDER from the table ETL_UVT_SM_MAPPING.</p>
+<div id="AMEGQ128" class="figure">
+<p class="titleinfigure"><a id="sthref27"></a>Figure 9 Populating Custom UVT Table</p>
+<img width="791" height="224" src="img/uvt.jpg" alt="Surrounding text describes Figure 9 ." /><br /></div>
+<!-- class="figure" --></li>
+<li>
+<p>After mapping the tables and their related columns, you can populate the column(s), as required.</p>
+</li>
+</ol>
+</div>
+<!-- class="example" --></div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<div id="AMEGQ129" class="sect1"><a id="sthref28"></a>
+<h2 class="sect1"><span class="secnum">6</span> Customizing Table for CLOB columns</h2>
+<p>To reduce the time taken to load the CLOB data from Argus Safety source tables to Argus Mart stage tables, add or modify the data in the table ETL_SPLIT_CLOB_COLUMN_MAP available in Argus Mart schema.</p>
+<p>With this customization, the ETL fetches only the first 32767 bytes of the source CLOB column to the respective column of the stage table. The value in the source CLOB column splits into twenty five VARCHAR2 columns at the source before moving the data to the respective stage column. Hence, reduced loading time of these tables, and reduced ETL time.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+<ul>
+<li>
+<p>Enabling this feature fetches only the first 32767 bytes of the data from the source CLOB column to the respective stage table column. The rest of the data is not copied.</p>
+</li>
+<li>
+<p>Enable this feature purely based on your own discretion.</p>
+</li>
+</ul>
+</div>
+<p>The following are the table details to enable or disable this customization:</p>
+<div class="inftblinformal">
+<table class="cellalignment60" summary="Table Structure to Enable/Disable CLOB columns" dir="ltr">
+<thead>
+<tr class="cellalignment50">
+<th class="cellalignment61" id="r1c1-t6">COLUMN NAME</th>
+<th class="cellalignment61" id="r1c2-t6">DATA TYPE (LENGTH)</th>
+<th class="cellalignment61" id="r1c3-t6">DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r2c1-t6" headers="r1c1-t6">TABLE_NAME</td>
+<td class="cellalignment56" headers="r2c1-t6 r1c2-t6">VARCHAR2 (30)</td>
+<td class="cellalignment56" headers="r2c1-t6 r1c3-t6">Defines Argus Safety source table name from which data is populated in to Argus Mart stage table. For example, DLP_CASE_NARRATIVE.</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r3c1-t6" headers="r1c1-t6">COLUMN_NAME</td>
+<td class="cellalignment56" headers="r3c1-t6 r1c2-t6">VARCHAR2 (30)</td>
+<td class="cellalignment56" headers="r3c1-t6 r1c3-t6">Defines the name of the CLOB column&nbsp; present in the source table. For example, ABBREV_NARRATIVE.</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r4c1-t6" headers="r1c1-t6">ENABLE_YN</td>
+<td class="cellalignment56" headers="r4c1-t6 r1c2-t6">VARCHAR2 (1)</td>
+<td class="cellalignment56" headers="r4c1-t6 r1c3-t6">Defines the values for this column.
+<p>Y&mdash;The feature is enabled</p>
+<p>N&mdash;The feature is disabled</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" -->
+<p>Besides, as part of the Factory Data, the following columns of the table ETL_SPLIT_CLOB_COLUMN_MAP are disabled by default (ENABLE_YN = N):</p>
+<div class="inftblinformal">
+<table class="cellalignment60" summary="Default Disabled Columns" dir="ltr">
+<thead>
+<tr class="cellalignment50">
+<th class="cellalignment61" id="r1c1-t7">TABLE_NAME</th>
+<th class="cellalignment61" id="r1c2-t7">COLUMN_NAME</th>
+<th class="cellalignment61" id="r1c3-t7">ENABLE_YN</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r2c1-t7" headers="r1c1-t7">CMN_REG_REPORTS</td>
+<td class="cellalignment56" headers="r2c1-t7 r1c2-t7">NULLIFICATION_REASON</td>
+<td class="cellalignment56" headers="r2c1-t7 r1c3-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r3c1-t7" headers="r1c1-t7" rowspan="3">DLP_CASE_ASSESS</td>
+<td class="cellalignment56" headers="r3c1-t7 r1c2-t7">BFARM_MANUAL_TEXT</td>
+<td class="cellalignment56" headers="r3c1-t7 r1c3-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r4c1-t7" headers="r3c1-t7 r1c1-t7">EVALUATION</td>
+<td class="cellalignment56" headers="r3c1-t7 r4c1-t7 r1c2-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r5c1-t7" headers="r3c1-t7 r1c1-t7">EVALUATION_J</td>
+<td class="cellalignment56" headers="r3c1-t7 r5c1-t7 r1c2-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r6c1-t7" headers="r1c1-t7" rowspan="2">DLP_CASE_DOSE_REGIMENS</td>
+<td class="cellalignment56" headers="r6c1-t7 r1c2-t7">DOSE_DESCRIPTION</td>
+<td class="cellalignment56" headers="r6c1-t7 r1c3-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r7c1-t7" headers="r6c1-t7 r1c1-t7">DOSE_DESCRIPTION_J</td>
+<td class="cellalignment56" headers="r6c1-t7 r7c1-t7 r1c2-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r8c1-t7" headers="r1c1-t7" rowspan="10">DLP_CASE_EU_DEVICE</td>
+<td class="cellalignment56" headers="r8c1-t7 r1c2-t7">CORRECTIVE_ACTION</td>
+<td class="cellalignment56" headers="r8c1-t7 r1c3-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r9c1-t7" headers="r8c1-t7 r1c1-t7">CORRECTIVE_ACTION_FINAL</td>
+<td class="cellalignment56" headers="r8c1-t7 r9c1-t7 r1c2-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r10c1-t7" headers="r8c1-t7 r1c1-t7">COUNTRIES_OF_DISTRIBUTION</td>
+<td class="cellalignment56" headers="r8c1-t7 r10c1-t7 r1c2-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r11c1-t7" headers="r8c1-t7 r1c1-t7">CURRENT_DEV_LOCATIONS</td>
+<td class="cellalignment56" headers="r8c1-t7 r11c1-t7 r1c2-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r12c1-t7" headers="r8c1-t7 r1c1-t7">FURTHER_INVESTIGATION</td>
+<td class="cellalignment56" headers="r8c1-t7 r12c1-t7 r1c2-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r13c1-t7" headers="r8c1-t7 r1c1-t7">INDENTIF</td>
+<td class="cellalignment56" headers="r8c1-t7 r13c1-t7 r1c2-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r14c1-t7" headers="r8c1-t7 r1c1-t7">INVESTIGATION_RESULT</td>
+<td class="cellalignment56" headers="r8c1-t7 r14c1-t7 r1c2-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r15c1-t7" headers="r8c1-t7 r1c1-t7">MANUFACTURER_COMMENTS</td>
+<td class="cellalignment56" headers="r8c1-t7 r15c1-t7 r1c2-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r16c1-t7" headers="r8c1-t7 r1c1-t7">PROJECTED_TIMING</td>
+<td class="cellalignment56" headers="r8c1-t7 r16c1-t7 r1c2-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r17c1-t7" headers="r8c1-t7 r1c1-t7">PROJECTED_TIMING_FINAL</td>
+<td class="cellalignment56" headers="r8c1-t7 r17c1-t7 r1c2-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r18c1-t7" headers="r1c1-t7" rowspan="2">DLP_CASE_EVENT</td>
+<td class="cellalignment56" headers="r18c1-t7 r1c2-t7">DETAILS</td>
+<td class="cellalignment56" headers="r18c1-t7 r1c3-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r19c1-t7" headers="r18c1-t7 r1c1-t7">DETAILS_J</td>
+<td class="cellalignment56" headers="r18c1-t7 r19c1-t7 r1c2-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r20c1-t7" headers="r1c1-t7" rowspan="2">DLP_CASE_FOLLOWUP</td>
+<td class="cellalignment56" headers="r20c1-t7 r1c2-t7">JUSTIFICATION</td>
+<td class="cellalignment56" headers="r20c1-t7 r1c3-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r21c1-t7" headers="r20c1-t7 r1c1-t7">JUSTIFICATION_J</td>
+<td class="cellalignment56" headers="r20c1-t7 r21c1-t7 r1c2-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r22c1-t7" headers="r1c1-t7" rowspan="2">DLP_CASE_JUSTIFICATIONS</td>
+<td class="cellalignment56" headers="r22c1-t7 r1c2-t7">J_TEXT</td>
+<td class="cellalignment56" headers="r22c1-t7 r1c3-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r23c1-t7" headers="r22c1-t7 r1c1-t7">J_TEXT_J</td>
+<td class="cellalignment56" headers="r22c1-t7 r23c1-t7 r1c2-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r24c1-t7" headers="r1c1-t7" rowspan="4">DLP_CASE_LAB_DATA</td>
+<td class="cellalignment56" headers="r24c1-t7 r1c2-t7">COMMENTS</td>
+<td class="cellalignment56" headers="r24c1-t7 r1c3-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r25c1-t7" headers="r24c1-t7 r1c1-t7">COMMENTS_J</td>
+<td class="cellalignment56" headers="r24c1-t7 r25c1-t7 r1c2-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r26c1-t7" headers="r24c1-t7 r1c1-t7">NOTES</td>
+<td class="cellalignment56" headers="r24c1-t7 r26c1-t7 r1c2-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r27c1-t7" headers="r24c1-t7 r1c1-t7">NOTES_J</td>
+<td class="cellalignment56" headers="r24c1-t7 r27c1-t7 r1c2-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r28c1-t7" headers="r1c1-t7" rowspan="2">DLP_CASE_NARRATIVE</td>
+<td class="cellalignment56" headers="r28c1-t7 r1c2-t7">ABBREV_NARRATIVE</td>
+<td class="cellalignment56" headers="r28c1-t7 r1c3-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r29c1-t7" headers="r28c1-t7 r1c1-t7">ABBREV_NARRATIVE_J</td>
+<td class="cellalignment56" headers="r28c1-t7 r29c1-t7 r1c2-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r30c1-t7" headers="r1c1-t7" rowspan="2">DLP_CASE_NOTES_ATTACH</td>
+<td class="cellalignment56" headers="r30c1-t7 r1c2-t7">NOTES</td>
+<td class="cellalignment56" headers="r30c1-t7 r1c3-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r31c1-t7" headers="r30c1-t7 r1c1-t7">NOTES_J</td>
+<td class="cellalignment56" headers="r30c1-t7 r31c1-t7 r1c2-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r32c1-t7" headers="r1c1-t7" rowspan="2">DLP_CASE_PAT_HIST</td>
+<td class="cellalignment56" headers="r32c1-t7 r1c2-t7">NOTE</td>
+<td class="cellalignment56" headers="r32c1-t7 r1c3-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r33c1-t7" headers="r32c1-t7 r1c1-t7">NOTE_J</td>
+<td class="cellalignment56" headers="r32c1-t7 r33c1-t7 r1c2-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r34c1-t7" headers="r1c1-t7" rowspan="2">DLP_CASE_PAT_INFO</td>
+<td class="cellalignment56" headers="r34c1-t7 r1c2-t7">NOTES</td>
+<td class="cellalignment56" headers="r34c1-t7 r1c3-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r35c1-t7" headers="r34c1-t7 r1c1-t7">NOTES_J</td>
+<td class="cellalignment56" headers="r34c1-t7 r35c1-t7 r1c2-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r36c1-t7" headers="r1c1-t7" rowspan="3">DLP_CASE_PROD_DEVICES</td>
+<td class="cellalignment56" headers="r36c1-t7 r1c2-t7">NARRATIVE_TEXT</td>
+<td class="cellalignment56" headers="r36c1-t7 r1c3-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r37c1-t7" headers="r36c1-t7 r1c1-t7">PRELIMINARY_COMMENTS</td>
+<td class="cellalignment56" headers="r36c1-t7 r37c1-t7 r1c2-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r38c1-t7" headers="r36c1-t7 r1c1-t7">PRELIMINARY_COMMENTS_J</td>
+<td class="cellalignment56" headers="r36c1-t7 r38c1-t7 r1c2-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r39c1-t7" headers="r1c1-t7" rowspan="17">DLP_CASE_PRODUCT</td>
+<td class="cellalignment56" headers="r39c1-t7 r1c2-t7">COMMENTS_TIMEFRAME</td>
+<td class="cellalignment56" headers="r39c1-t7 r1c3-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r40c1-t7" headers="r39c1-t7 r1c1-t7">GENERIC_NAME</td>
+<td class="cellalignment56" headers="r39c1-t7 r40c1-t7 r1c2-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r41c1-t7" headers="r39c1-t7 r1c1-t7">GENERIC_NAME_J</td>
+<td class="cellalignment56" headers="r39c1-t7 r41c1-t7 r1c2-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r42c1-t7" headers="r39c1-t7 r1c1-t7">NOTES</td>
+<td class="cellalignment56" headers="r39c1-t7 r42c1-t7 r1c2-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r43c1-t7" headers="r39c1-t7 r1c1-t7">NOTES_J</td>
+<td class="cellalignment56" headers="r39c1-t7 r43c1-t7 r1c2-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r44c1-t7" headers="r39c1-t7 r1c1-t7">QC_ANALYSIS_CAT_TEXT</td>
+<td class="cellalignment56" headers="r39c1-t7 r44c1-t7 r1c2-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r45c1-t7" headers="r39c1-t7 r1c1-t7">QC_ANALYSIS_CAT_TEXT_J</td>
+<td class="cellalignment56" headers="r39c1-t7 r45c1-t7 r1c2-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r46c1-t7" headers="r39c1-t7 r1c1-t7">QC_ANAL_SUMMARY_TEXT</td>
+<td class="cellalignment56" headers="r39c1-t7 r46c1-t7 r1c2-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r47c1-t7" headers="r39c1-t7 r1c1-t7">QC_ANAL_SUMMARY_TEXT_J</td>
+<td class="cellalignment56" headers="r39c1-t7 r47c1-t7 r1c2-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r48c1-t7" headers="r39c1-t7 r1c1-t7">QC_COMMENT</td>
+<td class="cellalignment56" headers="r39c1-t7 r48c1-t7 r1c2-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r49c1-t7" headers="r39c1-t7 r1c1-t7">QC_COMMENT_J</td>
+<td class="cellalignment56" headers="r39c1-t7 r49c1-t7 r1c2-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r50c1-t7" headers="r39c1-t7 r1c1-t7">QC_COMPLAINT_CAT_TEXT</td>
+<td class="cellalignment56" headers="r39c1-t7 r50c1-t7 r1c2-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r51c1-t7" headers="r39c1-t7 r1c1-t7">QC_COMPLAINT_CAT_TEXT_J</td>
+<td class="cellalignment56" headers="r39c1-t7 r51c1-t7 r1c2-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r52c1-t7" headers="r39c1-t7 r1c1-t7">QC_RESULT</td>
+<td class="cellalignment56" headers="r39c1-t7 r52c1-t7 r1c2-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r53c1-t7" headers="r39c1-t7 r1c1-t7">QC_RESULT_J</td>
+<td class="cellalignment56" headers="r39c1-t7 r53c1-t7 r1c2-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r54c1-t7" headers="r39c1-t7 r1c1-t7">REASON_DOWNGRADE</td>
+<td class="cellalignment56" headers="r39c1-t7 r54c1-t7 r1c2-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r55c1-t7" headers="r39c1-t7 r1c1-t7">RETRO_INFECTION</td>
+<td class="cellalignment56" headers="r39c1-t7 r55c1-t7 r1c2-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r56c1-t7" headers="r1c1-t7" rowspan="2">DLP_CASE_REPORTERS</td>
+<td class="cellalignment56" headers="r56c1-t7 r1c2-t7">NOTES</td>
+<td class="cellalignment56" headers="r56c1-t7 r1c3-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r57c1-t7" headers="r56c1-t7 r1c1-t7">NOTES_J</td>
+<td class="cellalignment56" headers="r56c1-t7 r57c1-t7 r1c2-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r58c1-t7" headers="r1c1-t7" rowspan="2">DLP_CASE_ROUTING</td>
+<td class="cellalignment56" headers="r58c1-t7 r1c2-t7">COMMENT_TXT</td>
+<td class="cellalignment56" headers="r58c1-t7 r1c3-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r59c1-t7" headers="r58c1-t7 r1c1-t7">COMMENT_TXT_J</td>
+<td class="cellalignment56" headers="r58c1-t7 r59c1-t7 r1c2-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r60c1-t7" headers="r1c1-t7" rowspan="2">DLP_CASE_STUDY</td>
+<td class="cellalignment56" headers="r60c1-t7 r1c2-t7">STUDY_DESC</td>
+<td class="cellalignment56" headers="r60c1-t7 r1c3-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r61c1-t7" headers="r60c1-t7 r1c1-t7">STUDY_DESC_J</td>
+<td class="cellalignment56" headers="r60c1-t7 r61c1-t7 r1c2-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r62c1-t7" headers="r1c1-t7" rowspan="2">LM_LABELED_TERMS</td>
+<td class="cellalignment56" headers="r62c1-t7 r1c2-t7">NOTES</td>
+<td class="cellalignment56" headers="r62c1-t7 r1c3-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r63c1-t7" headers="r62c1-t7 r1c1-t7">NOTES_J</td>
+<td class="cellalignment56" headers="r62c1-t7 r63c1-t7 r1c2-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r64c1-t7" headers="r1c1-t7" rowspan="2">LM_PRODUCT</td>
+<td class="cellalignment56" headers="r64c1-t7 r1c2-t7">PROD_GENERIC_NAME</td>
+<td class="cellalignment56" headers="r64c1-t7 r1c3-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r65c1-t7" headers="r64c1-t7 r1c1-t7">PROD_GENERIC_NAME_J</td>
+<td class="cellalignment56" headers="r64c1-t7 r65c1-t7 r1c2-t7">N</td>
+</tr>
+<tr class="cellalignment50">
+<td class="cellalignment56" id="r66c1-t7" headers="r1c1-t7">RPT_ROUTING</td>
+<td class="cellalignment56" headers="r66c1-t7 r1c2-t7">COMMENT_TXT</td>
+<td class="cellalignment56" headers="r66c1-t7 r1c3-t7">N</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" -->
+<p class="subhead2"><a id="AMEGQ130"></a>To enable this feature:</p>
+<ul>
+<li>
+<p>For the columns available in the table ETL_SPLIT_CLOB_COLUMN_MAP as part of the factory data, update the column value for ENABLYE_YN as <span class="bold">Y</span> for the required column. For example:</p>
+<pre dir="ltr">
+UPDATE ETL_SPLIT_CLOB_COLUMN_MAP
+   SET ENABLYE_YN = 'Y'
+WHERE TABLE_NAME = '&lt;TABLE_NAME&gt;'
+   AND COLUMN_NAME = '&lt;COLUMN_NAME&gt;'
+</pre></li>
+<li>
+<p>For new columns that are not available in the table ETL_SPLIT_CLOB_COLUMN_MAP as part of the factory data, create new entry in this table with the column value for ENABLYE_YN as <span class="bold">Y</span> for the required column. For example:</p>
+<pre dir="ltr">
+INSERT INTO ETL_SPLIT_CLOB_COLUMN_MAP
+       (TABLE_NAME , COLUMN_NAME , ENABLYE_YN)
+VALUES ('&lt;TABLE_NAME&gt;, '&lt;COLUMN_NAME&gt;', 'Y');
+COMMIT;
+</pre></li>
+</ul>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Enabling this feature only affects the data that is fetched from Argus Safety Source to Argus Mart in the Next ETL. It does not affects the existing data in the MART. (It does not triggers the re-load of data for the respective CLOB columns.)</div>
+<p class="subhead2"><a id="AMEGQ131"></a>To disable this feature:</p>
+<p>Set the column value for ENABLYE_YN as <span class="bold">N</span> for the required column. For example:</p>
+<pre dir="ltr">
+UPDATE ETL_SPLIT_CLOB_COLUMN_MAP
+   SET ENABLYE_YN = 'N'
+WHERE TABLE_NAME = '&lt;TABLE_NAME&gt;'
+   AND COLUMN_NAME = '&lt;COLUMN_NAME&gt;'
+</pre>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Disabling this feature only affects the data that is fetched from Argus Safety Source to Argus Mart in the Next ETL. It does not affects the existing data in the MART. (It does not triggers the re-load of data for the respective CLOB columns.)</div>
+</div>
+<!-- class="sect1" -->
+<div id="AMEGQ132" class="sect1"><a id="sthref29"></a>
+<h2 class="sect1"><span class="secnum">7</span> Documentation Accessibility</h2>
+<p>For information about Oracle's commitment to accessibility, visit the Oracle Accessibility Program website at <code dir="ltr"><a href="http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=docacc">http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=docacc</a></code>.</p>
+<p class="subhead2"><a id="sthref30"></a>Access to Oracle Support</p>
+<p>Oracle customers that have purchased support have access to electronic support through My Oracle Support. For information, visit <code dir="ltr"><a href="http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=info">http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=info</a></code> or visit <code dir="ltr"><a href="http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=trs">http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=trs</a></code> if you are hearing impaired.</p>
+</div>
+<!-- class="sect1" -->
+<a id="sthref31"></a>
+<hr />
+<p>Oracle Argus Mart Security Configuration Guide, Release 8.1.1</p>
+<p>E88814-01</p>
+<p>Copyright &copy; 2017,&nbsp;Oracle and/or its affiliates. All rights reserved.</p>
+<p>This software and related documentation are provided under a license agreement containing restrictions on use and disclosure and are protected by intellectual property laws. Except as expressly permitted in your license agreement or allowed by law, you may not use, copy, reproduce, translate, broadcast, modify, license, transmit, distribute, exhibit, perform, publish, or display any part, in any form, or by any means. Reverse engineering, disassembly, or decompilation of this software, unless required by law for interoperability, is prohibited.</p>
+<p>The information contained herein is subject to change without notice and is not warranted to be error-free. If you find any errors, please report them to us in writing.</p>
+<p>If this is software or related documentation that is delivered to the U.S. Government or anyone licensing it on behalf of the U.S. Government, then the following notice is applicable:</p>
+<p>U.S. GOVERNMENT END USERS: Oracle programs, including any operating system, integrated software, any programs installed on the hardware, and/or documentation, delivered to U.S. Government end users are "commercial computer software" pursuant to the applicable Federal Acquisition Regulation and agency-specific supplemental regulations. As such, use, duplication, disclosure, modification, and adaptation of the programs, including any operating system, integrated software, any programs installed on the hardware, and/or documentation, shall be subject to license terms and license restrictions applicable to the programs. No other rights are granted to the U.S. Government.</p>
+<p>This software or hardware is developed for general use in a variety of information management applications. It is not developed or intended for use in any inherently dangerous applications, including applications that may create a risk of personal injury. If you use this software or hardware in dangerous applications, then you shall be responsible to take all appropriate fail-safe, backup, redundancy, and other measures to ensure its safe use. Oracle Corporation and its affiliates disclaim any liability for any damages caused by use of this software or hardware in dangerous applications.</p>
+<p>Oracle and Java are registered trademarks of Oracle and/or its affiliates. Other names may be trademarks of their respective owners.</p>
+<p>Intel and Intel Xeon are trademarks or registered trademarks of Intel Corporation. All SPARC trademarks are used under license and are trademarks or registered trademarks of SPARC International, Inc. AMD, Opteron, the AMD logo, and the AMD Opteron logo are trademarks or registered trademarks of Advanced Micro Devices. UNIX is a registered trademark of The Open Group.</p>
+<p>This software or hardware and documentation may provide access to or information about content, products, and services from third parties. Oracle Corporation and its affiliates are not responsible for and expressly disclaim all warranties of any kind with respect to third-party content, products, and services unless otherwise set forth in an applicable agreement between you and Oracle. Oracle Corporation and its affiliates will not be responsible for any loss, costs, or damages incurred due to your access to or use of third-party content, products, or services, except as set forth in an applicable agreement between you and Oracle.</p>
+</div>
+<!-- class="letterstyle" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment49">
+<tr>
+<td class="cellalignment56">
+<table class="cellalignment54">
+<tr>
+<td class="cellalignment53"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment58">
+<table class="cellalignment59">
+<tr>
+<td class="cellalignment53"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment53"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment53"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment53"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

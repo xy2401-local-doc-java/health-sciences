@@ -1,0 +1,151 @@
+&#xfeff;<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="EN" xmlns="http://www.w3.org/1999/xhtml" xml:lang="EN">
+<head>
+<title> Migrating an existing installation to this release </title>
+<meta name="Generator" content="Author-it" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="Keywords" content=""/>
+<script language="javascript" type="text/javascript" charset="UTF-8" src="dhtml_toc.js"></script>
+<script language="javascript" type="text/javascript" charset="UTF-8" src="open_parent.js"></script>
+<script language="javascript" type="text/javascript" charset="UTF-8" src="dhtml_load.js"></script>
+<script language="javascript" type="text/javascript" charset="UTF-8" src="dhtml_search.js"></script>
+<link rel="stylesheet" type="text/css" href="newwave.css"/>
+<link rel="stylesheet" type="text/css" href="index_stylesheet.css"/>
+<base target="CONTENT"/>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body onload="loadParent();;bodyLoad();;;if (isTOCLoaded()) {expand('45610');highlight('214566')}" text="#000000" link="#0000A0" alink="#008000" vlink="#FF0000">
+	<div id="searchResultsNone"></div>
+	<div id="content" style="padding-bottom: 50px;">
+		<table summary="" class="relatedtopics aboveheading" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td width= "18">
+<p class="bodytext"><a href="213558.htm" target="_self"><img width="34" height="34" src="125.gif" alt="Previous Topic" vspace="0" hspace="0" align="bottom" border="0" /></a></p></td>
+<td width= "18">
+<p class="bodytext"><a href="216256.htm" target="_self"><img width="33" height="34" src="124.gif" alt="Next Topic" vspace="0" hspace="0" align="bottom" border="0" /></a></p></td>
+<td width= "48">
+<p class="bodytext"><a href="javascript:expand('45610');highlight('214566')" onclick="loadTOC()" target="_self"><img width="165" height="27" src="122.gif" alt="Book Contents" vspace="0" hspace="0" align="bottom" border="0" /></a></p></td>
+</tr>
+</table>
+<h2 class="heading2">Migrating an existing installation to this release</h2>
+<p class="bodytext">Use this checklist to migrate an existing 1.3.8.1 or earlier InForm Adapter installation to InForm Adapter 6.2.</p>
+<p class="tablespacerwide"><span class="tablesummary">Steps to migrate to this release</span></p>
+<table summary="" class="tableintopic" width="552" cellpadding="2" cellspacing="0" border="0" style="border-collapse:collapse">
+<tr align="left" valign="top">
+<th width="42"><p class="tableheadingskipnumbering">Step</p>
+</th>
+<th width="288"><p class="tableheadingskipnumbering">Task</p>
+</th>
+<th width="222"><p class="tableheadingskipnumbering">For details, see...</p>
+</th>
+</tr>
+<tr align="left" valign="top">
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="42"><p class="tablebodytext">1</p>
+</td>
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="288"><ul class="tablelistbullet"><li class="tablelistbullet">If you are using Central Coding, stop the job scheduler. </li><li class="tablelistbullet">If you are using CIS, stop the scheduled synchronization for the study. </li><li class="tablelistbullet">If you are using ODM, stop any scheduled jobs that call the ODM Export interface.</li></ul></td>
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="222"><p class="tablebodytextskipnumbering">Central Coding <em class="emphasis">User Guide</em>.</p>
+<p class="tablebodytextskipnumbering">CIS <em class="emphasis">Administration Guide</em>.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="42"><p class="tablebodytext">2</p>
+</td>
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="288"><p class="tablebodytext">Install InForm Adapter 6.2 on the InForm 6.2 server.</p>
+</td>
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="222"><p class="tablebodytextskipnumbering"><a id="h189603" class="jumptemplate-noheadingtext" title="Installation overview" href="213243.htm" target="_self">Installation overview</a>.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="42"><p class="tablebodytext">3</p>
+</td>
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="288"><p class="tablebodytext">Migrate the InForm study to InForm 6.2.</p>
+</td>
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="222"><p class="tablebodytextskipnumbering">InForm <em class="emphasis">Upgrade and Migration Guide</em>.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="42"><p class="tablebodytext">4</p>
+</td>
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="288"><p class="tablebodytext">Register the server adapter for the migrated study in the InForm Adapter database.</p>
+</td>
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="222"><p class="tablebodytextskipnumbering"><a id="h189716" class="jumptemplate-noheadingtext" title="Register a server adapter" href="214320.htm" target="_self">Register a server adapter</a>.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="42"><p class="tablebodytext">5</p>
+</td>
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="288"><p class="tablebodytext">Register the migrated study in the InForm Adapter database.</p>
+</td>
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="222"><p class="tablebodytextskipnumbering"><a id="h189655" class="jumptemplate-noheadingtext" title="Register a study" href="213569.htm" target="_self">Register a study</a>.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="42"><p class="tablebodytext">6</p>
+</td>
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="288"><p class="tablebodytext">If you are using Central Coding:</p>
+<ul class="tablelistbullet"><li class="tablelistbullet">Configure a certificate for InForm Adapter authentication.</li><li class="tablelistbullet">Add the adapter for the migrated study.</li><li class="tablelistbullet">Add the migrated study and associate it with the new adapter.</li></ul></td>
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="222"><p class="tablebodytext">Central Coding <em class="emphasis">Installation Guide</em>.</p>
+<p class="tablebodytext">Central Coding <em class="emphasis">User Guide</em>.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="42"><p class="tablebodytext">7</p>
+</td>
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="288"><p class="tablebodytext">If you are using CIS, configure it to work with  InForm Adapter 6.2:</p>
+<ul class="tablelistbullet"><li class="tablelistbullet">Register the new InForm Adapter in CIS.</li><li class="tablelistbullet">Remove synchronization connections with the old adapter and create synchronization connections with the new adapter.</li></ul></td>
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="222"><p class="tablebodytext">CIS <em class="emphasis">Administration Guide</em>.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="42"><p class="tablebodytext">8</p>
+</td>
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="288"><p class="tablebodytext">Migrate security settings from the old environment.</p>
+</td>
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="222"><p class="tablebodytextskipnumbering"><a id="h216257" class="jumptemplate-noheadingtext" title="Migrate security settings from the old environment" href="216256.htm" target="_self">Migrate security settings from the old environment</a>.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="42"><p class="tablebodytext">9</p>
+</td>
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="288"><p class="tablebodytext">After you migrate all the studies to the new environment, decommission the studies from the old environment.</p>
+</td>
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="222"><p class="tablebodytextskipnumbering"><a id="h127164" class="jumptemplate-noheadingtext" title="Decommission a study" href="214321.htm" target="_self">Decommission a study</a>.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="42"><p class="tablebodytext">10</p>
+</td>
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="288"><ul class="tablelistbullet"><li class="tablelistbullet">If you are using Central Coding, start the job scheduler. </li><li class="tablelistbullet">If you are using ODM, start any scheduled jobs that call the ODM Export interface.</li></ul></td>
+<td style="border-top:1px solid #010101;border-bottom:1px solid #010101;" width="222"><p class="tablebodytextskipnumbering">&nbsp;</p>
+</td>
+</tr>
+
+</table>
+<p class="tablespacerwide"></p>
+
+		
+	</div>
+	<div id="feedback"><a href="mailto:inform_doc_feedback_grp@oracle.com?Subject=Comments about the InForm Adapter 6.2 Installation Guide - Migrating an existing installation to this release" target="_top"><img width="24" height="108" src="feedback.gif" alt="Send Feedback"></a>
+	</div>
+	
+	<div id="foot">		
+			<ul style="padding: 0;">
+				<li class="footer" style="padding: 0 7px 0 0;"><a href="217485.htm">Access to Oracle Support</a></li>
+				<li class="footer"><a href="http://www.oracle.com/pls/topic/lookup?ctx=acc&id=docacc" target="_blank">Accessibility</a></li>
+				<li class="footer" style="border-right-style: none;"><a href="217488.htm">Legal Notices</a></li>
+			</ul>
+			<p style="font-size:12px;">Copyright &copy; 2018 Oracle and/or its affiliates. All rights reserved.</p>
+	</div>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>
+<footer>
+</footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+<script>$(document).foundation();</script>
+</body>
+</html>

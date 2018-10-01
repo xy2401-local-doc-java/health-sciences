@@ -1,0 +1,305 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="MS-HKWD" content="retained properties" />
+<meta name="generator" content="Adobe RoboHelp 2017" />
+<title>About Properties</title>
+<link rel="File-List" href="wizard3_files/filelist.xml" type="" />
+<link rel="Edit-Time-Data" href="wizard3_files/editdata.mso" type="" />
+<link rel="StyleSheet" href="Empirica.css" type="text/css" />
+ <link rel="StyleSheet" href="Empirica.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body lang="EN-US" xml:lang="EN-US" style="tab-interval: .5in;"><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Properties\nAbout Properties");
+addAvenueInfo("Managing Advanced Properties","","");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\">");
+AddMasterBreadcrumbs("About_WebVDME.htm", "", "&gt;", "Overview", "home.htm");
+document.write("<a href=\"About_Properties.htm\">Properties<\/a> &gt; About Properties<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('About_WebVDME.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>About Properties</h1>
+<p>Properties include a variety of definitions that are needed to perform analysis and review of safety data. For example, they determine:</p>
+<ul>
+<li class="Bullet1">How data is organized into subgroups based on dosing categories and other factors, such as age or sex.</li>
+<li class="Bullet1">How data is organized into time frames.</li>
+<li class="Bullet1">How clinical significance is assessed.</li>
+</ul>
+<p>In general, you should define properties before a study or study pool becomes available for use. If the study or pool is available for use and you need to set properties, ensure that no users are currently using the study or pool when you modify the properties.</p>
+<p>Test identifiers for the study are inherited from the application level when the study is registered. However, they can't be examined (and possibly overridden) before the study has been loaded.</p>
+<p>A default time frame, Study Reference Period, is created when a study or pool is loaded.</p>
+<p>You cannot set properties for a study or pool if either of the following are true:</p>
+<ul>
+<li class="Bullet1">The status of the study or pool is not Ready to Use.</li>
+<li class="Bullet1">The study or pool is part of any run type in the Run History that is currently running or is scheduled to run.</li>
+</ul>
+<p class="Note"><span style="font-weight: bold;">Note:</span> Setting certain properties &mdash;time frames, test identifiers, and flag variables&mdash;queues one or more automatic screening runs for the study or pool. These queued runs may inhibit your rapidly setting properties in sequence.</p>
+<p>For example, you may want to create two time frames and set test identifiers for a newly loaded study. Creating the first time frame will queue an automatic screening run which, while queued or running, will inhibit your setting any other properties (the second time frame, or test identifiers) for the study.<span style="mso-spacerun: yes;">&nbsp;</span></p>
+<p>To avoid this delay, the following sequence is recommended:</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">1.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Create the first time frame.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">2.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>On the Run History tab, <a href="Cancelling_Deleting_a_Run.htm">c<u>ancel</u></a> the automatic screening run queued for the study.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">3.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Create the second time frame.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">4.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>On the Run History tab, <a href="Cancelling_Deleting_a_Run.htm">c<u>ancel</u></a> the automatic screening run queued for the study.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">5.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Set test identifiers.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">6.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="text-indent: -.25in; mso-list: l0 level2 lfo1;">Allow all automatic screening runs to complete.</span><span style="text-indent: -.25in; mso-list: l0 level2 lfo1; mso-spacerun: yes;">&nbsp;</span><span style="text-indent: -.25in; mso-list: l0 level2 lfo1;">&nbsp;If you examine the Run History tab at this point, you will find an automatic screening run queued for each named time frame, plus an extra run for the &lsquo;-None-&lsquo; time frame.</span><span style="text-indent: -.25in; mso-list: l0 level2 lfo1; mso-spacerun: yes;">&nbsp;</span><span style="text-indent: -.25in; mso-list: l0 level2 lfo1;">&nbsp;This collection of runs must be allowed to complete, else the issue list will be out-of-date.</span></p>
+
+<h2>Property levels</h2>
+<p>Some properties can be set only at the study or study pool level. Other properties can be set at the study or study pool level, at the level of an application, or globally. The following table indicates the levels at which each type of property can be defined:</p>
+<br />
+<table summary="" summary="" class="Empirica" cellspacing="0px" width="100%">
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<col style="width: 20%;" />
+<tr class="t1st">
+<td>
+<p class="TableHeader">Property</p>
+</td>
+<td>
+<p class="TableHeader">Study Level</p>
+</td>
+<td>
+<p class="TableHeader">Pool Level</p>
+</td>
+<td>
+<p class="TableHeader">Application Level</p>
+</td>
+<td>
+<p class="TableHeader">Global Level</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td>
+<p class="TableBody"><a href="scrBreakdownCreate.htm">Category breakdowns</a></p>
+</td>
+<td>
+<p class="TableBody">X</p>
+</td>
+<td>
+<p class="TableBody">X</p>
+</td>
+<td>
+<p class="TableBody">&nbsp;</p>
+</td>
+<td>
+<p class="TableBody">&nbsp;</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td>
+<p class="TableBody"><a href="analysisWindowConfigure.htm">Time frames</a></p>
+</td>
+<td>
+<p class="TableBody">X</p>
+</td>
+<td>
+<p class="TableBody">X</p>
+</td>
+<td>
+<p class="TableBody">&nbsp;</p>
+</td>
+<td>
+<p class="TableBody">&nbsp;</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td>
+<p class="TableBody"><a href="propMeddraTermsListEdit.htm">Event lists</a></p>
+</td>
+<td>
+<p class="TableBody">X</p>
+</td>
+<td>
+<p class="TableBody">X</p>
+</td>
+<td>
+<p class="TableBody">X</p>
+</td>
+<td>
+<p class="TableBody">X</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td>
+<p class="TableBody"><a href="propLabTestIdentification.htm">Test identifiers</a></p>
+</td>
+<td>
+<p class="TableBody">X</p>
+</td>
+<td>
+<p class="TableBody">&nbsp;</p>
+</td>
+<td>
+<p class="TableBody">X</p>
+</td>
+<td>
+<p class="TableBody">X</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td>
+<p class="TableBody"><a href="propDerivedFlagDefinitions.htm">Flag variables</a></p>
+</td>
+<td>
+<p class="TableBody">X</p>
+</td>
+<td>
+<p class="TableBody">&nbsp;</p>
+</td>
+<td>
+<p class="TableBody">&nbsp;</p>
+</td>
+<td>
+<p class="TableBody">&nbsp;</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td>
+<p class="TableBody"><a href="describeStudyVisitsForDomain.htm">Study visit descriptions</a></p>
+</td>
+<td>
+<p class="TableBody">X</p>
+</td>
+<td>
+<p class="TableBody">&nbsp;</p>
+</td>
+<td>
+<p class="TableBody">&nbsp;</p>
+</td>
+<td>
+<p class="TableBody">&nbsp;</p>
+</td>
+</tr>
+</table>
+<p>For test identifiers, the relationship among test identifiers defined at different levels is as follows:</p>
+<ul>
+<li class="Bullet1">When an application is first registered, a copy of the global-level test identifiers is associated with the application. Subsequent changes to global-level test identifiers do not affect the application-level test identifiers. Subsequent changes to the application-level test identifiers do not affect the global-level properties.</li>
+<li class="Bullet1">When a study or pool is first registered, a copy of the application-level test identifiers is associated with the study or pool. Subsequent changes to application-level test identifiers do not affect the study-level or pool-level properties. Subsequent changes to the study-level or pool-level test identifiers do not affect the application-level properties.</li>
+</ul>
+<p>You can also explicitly copy test identifiers from the global level to the application level, or from the application level to the study level or pool level.</p>
+ <div style="width: 100%; position: relative;" id="footer">
+	<p style="margin-top: 20pt; color: #808080;">Copyright &copy; 2002, 2017, 
+	 Oracle and/or its affiliates. All rights reserved.</p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>
+<footer>
+</footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+
+</body>
+</html>
+<footer>
+</footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+<script>$(document).foundation();</script>
+</body>
+</html>

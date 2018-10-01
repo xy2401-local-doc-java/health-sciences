@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Using the Argus Unblinding Generic Software</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2017-10-02T9:30:15Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Argus Unblinding User's Guide" />
+<meta name="dcterms.identifier" content="E87521-01" />
+<meta name="dcterms.isVersionOf" content="AEOAK" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2016, 2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Prev" href="preface.htm" title="Previous" type="text/html" />
+<link rel="alternate" href="AEOAK.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="AEOAK.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="AEOAK.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">4/4</span> <!-- End Header -->
+<div id="AEOAK110" class="chapter"><a id="BCGBEDCF"></a>
+<h1 class="chapter"><span class="secnum">1</span> Using the Argus Unblinding Generic Software</h1>
+<p>This chapter provides information about using the Argus Unblinding generic software and includes discussions of the following:</p>
+<ul>
+<li>
+<p><a href="#BCGFIDDJ">Logging into Argus Unblinding and Starting a Profile Configuration</a></p>
+</li>
+<li>
+<p><a href="#BCGIEDFC">Configuring a New Argus Unblinding Profile</a></p>
+</li>
+<li>
+<p><a href="#BCGFFIJF">Copying Profiles</a></p>
+</li>
+<li>
+<p><a href="#BCGCDIGA">Modifying Profiles</a></p>
+</li>
+<li>
+<p><a href="#BCGBFHHI">Deleting Profiles</a></p>
+</li>
+<li>
+<p><a href="#BCGFDEJA">Executing the Argus Unblinding Profile</a></p>
+</li>
+<li>
+<p><a href="#BCGHECAE">Using the Argus Unblinding Report Viewer</a></p>
+</li>
+<li>
+<p><a href="#BCGBJDIC">Exiting from Argus Unblinding</a></p>
+</li>
+</ul>
+<a id="BCGFIDDJ"></a>
+<div id="AEOAK111" class="sect1">
+<h2 class="sect1">Logging into Argus Unblinding and Starting a Profile Configuration</h2>
+<p>You must have specific access rights before you can log in to the Argus Unblinding Application. If you have difficulty logging in to the application, consult your System Administrator to verify that you have the following:</p>
+<ul>
+<li>
+<p>Allow Closures of Cases access</p>
+</li>
+<li>
+<p>Allow Locking of Cases access</p>
+</li>
+<li>
+<p>Allow Unblinding of Cases access</p>
+</li>
+<li>
+<p>Membership in the End of Study Unblinding group</p>
+</li>
+</ul>
+<p>Use the following procedure to log in to Argus Unblinding:</p>
+<ol>
+<li>
+<p>Select <span class="bold">Start</span> =&gt; <span class="bold">Programs</span> =&gt; <span class="bold">Oracle</span> =&gt; <span class="bold">End of Study Unblinding</span>.</p>
+<img width="1080" height="768" src="img/startprogs.gif" alt="Surrounding text describes startprogs.gif." /><br /></li>
+<li>
+<p>When the <span class="bold">log in</span> window opens:</p>
+<img width="637" height="324" src="img/login.gif" alt="Surrounding text describes login.gif." /><br />
+<ul>
+<li>
+<p>Enter the user name in the User Name field.</p>
+</li>
+<li>
+<p>Enter the user password in the Password field.</p>
+</li>
+<li>
+<p>Enter the name of the database where Argus Generic is installed in the Database field.</p>
+</li>
+<li>
+<p>Click Login.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>When the Argus Unblinding application opens, choose <span class="bold">Argus Unblinding</span><span class="bold">=&gt; Configure Argus Unblinding</span>.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+In a Multi-tenancy install, select Enterprise after the Argus Unblinding login screen. This does not appear in a single-tenancy install.</div>
+</li>
+<li>
+<p>Argus Unblinding opens the <span class="bold">Configure Argus Unblinding: Select Argus Unblinding Profile</span> window.</p>
+<img width="577" height="269" src="img/selectprof.gif" alt="Surrounding text describes selectprof.gif." /><br />
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+An asterisk ( * ) next to a profile name indicates that the profile configuration is incomplete and cannot be executed.</div>
+<ul>
+<li>
+<p>Click New Argus Unblinding to create a new Argus Unblinding profile.</p>
+</li>
+<li>
+<p>Click Copy to copy an existing Argus Unblinding profile.</p>
+</li>
+<li>
+<p>Click Modify to modify an existing Argus Unblinding profile.</p>
+</li>
+<li>
+<p>Click Delete to delete an existing profile.</p>
+</li>
+<li>
+<p>Click Close to close the current window.</p>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<div id="AEOAK112" class="sect1"><!-- infolevel="all" infotype="General" --><a id="sthref9"></a>
+<h2 class="sect1">Logging into a Multi-tenant Installation</h2>
+<p>When you log into the Argus Unblinding tool in a multi-tenant installation, a pop-up prompts you to choose the Enterprise for which the data is displayed in the Argus Unblinding tool.</p>
+<ul>
+<li>
+<p>The drop-down menu in the following pop-up displays an alphabetically-sorted list of Enterprise Short Names for all the active Enterprises that the user has access to as &rdquo;Enterprise User&rdquo; in Console =&gt; User Management.</p>
+<img width="315" height="133" src="img/enterprise.gif" alt="Surrounding text describes enterprise.gif." /><br />
+<ul>
+<li>
+<p>The default value is blank when the pop-up initially displays.</p>
+</li>
+<li>
+<p>The OK button is only enabled when a non-blank value is selected.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>If you only have access to one Enterprise, the pop-up does not display and Argus Unblinding tool loads the data for that Enterprise automatically.</p>
+</li>
+<li>
+<p>If you are configured as an "Enterprise User", there are no active Enterprises, the system displays a message box with the OK button enabled, and the following message: &rdquo;There are no active Enterprises for the User for the Argus Unblinding tool&rdquo;.</p>
+</li>
+</ul>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Enterprise switching without re-login is not provided in the Argus Unblinding Tool. If you need to switch to a different Enterprise partition, you must logout and then login again for the other Enterprise.</div>
+<div id="AEOAK113" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref10"></a>
+<h3 class="sect2">Enterprise Short Name</h3>
+<p>The Argus Unblinding window header displasy the Enterprise Short Name based on the <span class="bold">Display Enterprise Short Name in Application Header</span> option in common profile switches.If this option is not selected, the Argus Unblinding window header will not display the Enterprise Short Name and uses the existing following format:</p>
+<p><span class="bold">Argus Unblinding [&lt;User Full Name&gt; Log on to &lt;Database Name&gt;]</span></p>
+<p>If this option is selected, the Argus Unblinding window header appends the Enterprise Short Name along with the database name using a hyphen, as shown:</p>
+<p><span class="bold">Argus Unblinding [&lt;User Full Name&gt; Log on to &lt;Database Name&gt; - &lt;Enterprise Short Name&gt;]</span></p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BCGIEDFC"></a>
+<div id="AEOAK114" class="sect1">
+<h2 class="sect1">Configuring a New Argus Unblinding Profile</h2>
+<p>Configuring a new Argus Unblinding profile requires several procedures as follows:</p>
+<ul>
+<li>
+<p>Configuring a Study Definition</p>
+</li>
+<li>
+<p>Loading Randomization Data</p>
+</li>
+<li>
+<p>Mapping Treatment Codes to Products</p>
+</li>
+<li>
+<p>Configuring Dosage Details for treatments and study projects</p>
+</li>
+</ul>
+<div id="AEOAK115" class="sect2"><a id="sthref11"></a>
+<h3 class="sect2">Configuring a Study Definition</h3>
+<p>You configure a study definition on the <span class="bold">Study Definition</span> tab of the <span class="bold">Configure Argus Unblinding Profile</span> dialog box. Table 4-1lists the fields/controls on the tab and describes the function of each one.</p>
+<img width="998" height="562" src="img/configstudy.gif" alt="Surrounding text describes configstudy.gif." /><br />
+<p>The following table describes Study Definition Tab Fields and Controls:</p>
+<div class="inftblinformal">
+<table class="cellalignment21" summary="Study Definition Fields" dir="ltr">
+<thead>
+<tr class="cellalignment11">
+<th class="cellalignment22" id="r1c1-t5">Field/Control</th>
+<th class="cellalignment22" id="r1c2-t5">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment11">
+<td class="cellalignment17" id="r2c1-t5" headers="r1c1-t5">Study Number</td>
+<td class="cellalignment17" headers="r2c1-t5 r1c2-t5">Enables you to select a specific study.
+<p>You can select a study <span class="bold">only</span> if the <span class="bold">Study is eligible for Unblinding</span> option is selected in Argus.</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment17" id="r3c1-t5" headers="r1c1-t5">Include Cases</td>
+<td class="cellalignment17" headers="r3c1-t5 r1c2-t5">Restricts the selection of cases to All, Suspected, or Non-Suspected according to
+<p>Case Assessment values for Causality.</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment17" id="r4c1-t5" headers="r1c1-t5">Schedule Expedited Reports</td>
+<td class="cellalignment17" headers="r4c1-t5 r1c2-t5">Enables you to all/partial/no reporting rules for the case being unblinded.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment17" id="r5c1-t5" headers="r1c1-t5">Expedited Reports Group</td>
+<td class="cellalignment17" headers="r5c1-t5 r1c2-t5">Enables you to replace the group for all reports scheduled for this profile.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment17" id="r6c1-t5" headers="r1c1-t5">Pending Workflow State</td>
+<td class="cellalignment17" headers="r6c1-t5 r1c2-t5">Replaces the case state for all cases processed by this profile that have an unsubmitted report as part of the case.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment17" id="r7c1-t5" headers="r1c1-t5">Closed Workflow State</td>
+<td class="cellalignment17" headers="r7c1-t5 r1c2-t5">Defines the workflow state to be used for closed cases.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment17" id="r8c1-t5" headers="r1c1-t5">Case Narrative Text</td>
+<td class="cellalignment17" headers="r8c1-t5 r1c2-t5">Enables you to enter relevant information about the case.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment17" id="r9c1-t5" headers="r1c1-t5">Search&hellip;</td>
+<td class="cellalignment17" headers="r9c1-t5 r1c2-t5">Enables you to search for a particular study.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment17" id="r10c1-t5" headers="r1c1-t5">Agencies</td>
+<td class="cellalignment17" headers="r10c1-t5 r1c2-t5">This button is enabled only if the Select Regulatory Agencies option button has been selected.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment17" id="r11c1-t5" headers="r1c1-t5">Save</td>
+<td class="cellalignment17" headers="r11c1-t5 r1c2-t5">Enables you to save the profile.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment17" id="r12c1-t5" headers="r1c1-t5">Close</td>
+<td class="cellalignment17" headers="r12c1-t5 r1c2-t5">Enables you to close the profile.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" -->
+<p>If you select <span class="bold">Select Regulatory Agencies</span> in the <span class="bold">Schedule Expedited Reports</span> field when you are configuring a study definition, Argus Unblinding also displays the <span class="bold">Select Regulatory Agencies</span> dialog box. This dialog displays all the Reporting Rules in the Argus Application, grouped by Rule Country, Agency Country, Agency and the Report Form Name. The column headers can be stretched to make the column wider to display more data. Table 4-2 lists and describes the fields and controls in this dialog box.</p>
+<img width="871" height="453" src="img/selectregu.gif" alt="Surrounding text describes selectregu.gif." /><br />
+<p>The following table describes Select Regulatory Agency Dialog Box Fields and Controls:</p>
+<div class="inftblinformal">
+<table class="cellalignment21" summary="Regulatory Agency Fields" dir="ltr">
+<thead>
+<tr class="cellalignment11">
+<th class="cellalignment22" id="r1c1-t6">Field/Control</th>
+<th class="cellalignment22" id="r1c2-t6">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment11">
+<td class="cellalignment17" id="r2c1-t6" headers="r1c1-t6">Select</td>
+<td class="cellalignment17" headers="r2c1-t6 r1c2-t6">Enables you to select the reporting rules this profile is to execute.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment17" id="r3c1-t6" headers="r1c1-t6">Save</td>
+<td class="cellalignment17" headers="r3c1-t6 r1c2-t6">Saves the reporting rules and closes the dialog box.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment17" id="r4c1-t6" headers="r1c1-t6">Cancel</td>
+<td class="cellalignment17" headers="r4c1-t6 r1c2-t6">Closes the dialog box without saving data.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment17" id="r5c1-t6" headers="r1c1-t6">Sort</td>
+<td class="cellalignment17" headers="r5c1-t6 r1c2-t6">Sorts the data according to the options selected in the Sort by Column 1, Sort by Column 2, and Sort by Column 3.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" -->
+<p>To configure a Study Definition:</p>
+<ol>
+<li>
+<p>In the Argus Unblinding Unblinding software, choose <span class="bold">Argus Unblinding</span> &gt; <span class="bold">Configure Argus Unblinding</span>.</p>
+</li>
+<li>
+<p>When the <span class="bold">Configure Argus Unblinding: Select Argus Unblinding Profile</span> window opens:</p>
+<img width="577" height="269" src="img/selectprof.gif" alt="Surrounding text describes selectprof.gif." /><br />
+<ul>
+<li>
+<p>Click New Argus Unblinding to create a new Argus Unblinding profile.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>When the Study Definition tab opens. Enter data as required. Click Save to go to the next tab within the configuration.</p>
+<ul>
+<li>
+<p>Type the study ID in the Study Number field.</p>
+</li>
+<li>
+<p>Select the cases to include by clicking the appropriate option button in the Include Cases field.</p>
+</li>
+<li>
+<p>Select the appropriate option button in the Schedule Expedited Reports field.</p>
+</li>
+<li>
+<p>Select the appropriate group from the Expedited Reports Group drop-down list.</p>
+</li>
+<li>
+<p>Select the workflow state from the Pending Workflow State drop-down list.</p>
+</li>
+<li>
+<p>Select the workflow state for all closed cases from the Closed Workflow State drop-down list.</p>
+</li>
+<li>
+<p>Type any relevant data in the Case Narrative Text field.</p>
+</li>
+<li>
+<p>Click Save to safe the Study Definition.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>If you chose Select Regulatory Agencies in the Schedule Expedited Reports field in the preceding step, the system displays the Select Regulatory Agencies dialog box.</p>
+<ul>
+<li>
+<p>Click in the appropriate checkboxes to select one or more Agency/Rule.</p>
+</li>
+<li>
+<p>Click Save.</p>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<div id="AEOAK116" class="sect2"><a id="sthref12"></a>
+<h3 class="sect2">Loading Randomization Data</h3>
+<p>You can load randomization data for the Argus Unblinding profile from the <span class="bold">Patient Randomization Data</span> tab. Table 4-3lists and describes the fields and controls on the tab.</p>
+<p>The following table describes Patient Randomization Data Tab Fields and Controls:</p>
+<div class="inftblinformal">
+<table class="cellalignment21" summary="Randomization Data" dir="ltr">
+<thead>
+<tr class="cellalignment11">
+<th class="cellalignment22" id="r1c1-t7">Field/Control</th>
+<th class="cellalignment22" id="r1c2-t7">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment11">
+<td class="cellalignment17" id="r2c1-t7" headers="r1c1-t7">Data File</td>
+<td class="cellalignment17" headers="r2c1-t7 r1c2-t7">Enables you to select the data file to load.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment17" id="r3c1-t7" headers="r1c1-t7">Load Data</td>
+<td class="cellalignment17" headers="r3c1-t7 r1c2-t7">Clicking this button loads data into the Randomization Data Tables.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment17" id="r4c1-t7" headers="r1c1-t7">Validate Data</td>
+<td class="cellalignment17" headers="r4c1-t7 r1c2-t7">Clicking this button validates the data and generates a report that you can access through the Report Viewer.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment17" id="r5c1-t7" headers="r1c1-t7">Save</td>
+<td class="cellalignment17" headers="r5c1-t7 r1c2-t7">Enables you to save the data on the tab.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment17" id="r6c1-t7" headers="r1c1-t7">Close</td>
+<td class="cellalignment17" headers="r6c1-t7 r1c2-t7">Enables you to close the tab without saving the data.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" -->
+<p>To load randomization data for the profile</p>
+<ol>
+<li>
+<p>In the <span class="bold">Configure Argus Unblinding Profile</span> dialog box, click the <span class="bold">Patient Randomization Data</span> tab.</p>
+<img width="996" height="559" src="img/patrandomdata.gif" alt="Surrounding text describes patrandomdata.gif." /><br /></li>
+<li>
+<p>When the <span class="bold">Patient Randomization Data</span> tab opens:</p>
+<ul>
+<li>
+<p>Click Browse and select the appropriate Excel data file to load.</p>
+</li>
+<li>
+<p>Click Save.</p>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<div id="AEOAK117" class="sect2"><a id="sthref13"></a>
+<h3 class="sect2">Mapping Treatment Codes to Study Products</h3>
+<p>On the <span class="bold">Product Mapping</span> tab, you can map treatment codes from the Randomization Data to Study Products.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+This release is intended to un-blind only Drug based Studies. Vaccine and Device based studies <span class="bold">are not</span> supported. Argus Unblinding <span class="bold">will not</span> show Products with Device and Vaccine licenses on the Profile configuration (Treatment Code to Study Product Mapping).</div>
+<p>The following table lists and describes the fields and controls on the <span class="bold">Product Mapping</span> tab.</p>
+<div class="inftblinformal">
+<table class="cellalignment21" summary="Field Descriptions" dir="ltr">
+<thead>
+<tr class="cellalignment11">
+<th class="cellalignment22" id="r1c1-t9">Field/Control</th>
+<th class="cellalignment22" id="r1c2-t9">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment11">
+<td class="cellalignment17" id="r2c1-t9" headers="r1c1-t9">Add</td>
+<td class="cellalignment17" headers="r2c1-t9 r1c2-t9">Enables you to:
+<p>Add a new treatment code to study product mapping</p>
+<p>Unblind a treatment code for multiple study products.</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment17" id="r3c1-t9" headers="r1c1-t9">Delete</td>
+<td class="cellalignment17" headers="r3c1-t9 r1c2-t9">Deletes the current row in the table.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment17" id="r4c1-t9" headers="r1c1-t9">Saves</td>
+<td class="cellalignment17" headers="r4c1-t9 r1c2-t9">Saves the current profile with the new data.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment17" id="r5c1-t9" headers="r1c1-t9">Close</td>
+<td class="cellalignment17" headers="r5c1-t9 r1c2-t9">Closes the Configure Argus Unblinding Profile dialog box.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" -->
+<p>To configure product mapping</p>
+<ol>
+<li>
+<p>Click the <span class="bold">Product Mapping</span> tab.</p>
+<img width="1053" height="593" src="img/prodmapping.gif" alt="Surrounding text describes prodmapping.gif." /><br /></li>
+<li>
+<p>When the <span class="bold">Product Mapping</span> tab opens:</p>
+<ul>
+<li>
+<p>Select the appropriate treatment code for each study product from the Treatment Code drop-down.</p>
+</li>
+<li>
+<p>Click Save to proceed to the Dosage tab.</p>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<div id="AEOAK118" class="sect2"><a id="sthref14"></a>
+<h3 class="sect2">Configuring Dosage</h3>
+<p>You can enter dosage details for each treatment and study product on the <span class="bold">Dosage</span> tab.</p>
+<p>The following table describes the Dosage Tab Fields and Controls:</p>
+<div class="inftblinformal">
+<table class="cellalignment21" summary="Field Descriptions" dir="ltr">
+<thead>
+<tr class="cellalignment11">
+<th class="cellalignment22" id="r1c1-t10">Field/Control</th>
+<th class="cellalignment22" id="r1c2-t10">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment11">
+<td class="cellalignment17" id="r2c1-t10" headers="r1c1-t10">Available Items</td>
+<td class="cellalignment17" headers="r2c1-t10 r1c2-t10">Contains a list of available dosage records for the profile.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment17" id="r3c1-t10" headers="r1c1-t10">Dosage Options</td>
+<td class="cellalignment17" headers="r3c1-t10 r1c2-t10">Enables you to select how you want to handle the dosage
+<p>Add to Existing Dosages - Add a specified dosage amount to the current dosage.</p>
+<p>Replace All by Following Dosages - Replace the current dosage with a new dosage.</p>
+<p>Remove All Existing Dosages - Remove all dosages from the selected dosage record.</p>
+<p>No Changes to Dosages - Do not make any changes.</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment17" id="r4c1-t10" headers="r1c1-t10">Dosage Details</td>
+<td class="cellalignment17" headers="r4c1-t10 r1c2-t10">Enter the details regarding the dosages for the selected dosage record.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment17" id="r5c1-t10" headers="r1c1-t10">Add</td>
+<td class="cellalignment17" headers="r5c1-t10 r1c2-t10">Enables you to add a dosage record.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment17" id="r6c1-t10" headers="r1c1-t10">Modify</td>
+<td class="cellalignment17" headers="r6c1-t10 r1c2-t10">Enables you to modify an existing dosage record.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment17" id="r7c1-t10" headers="r1c1-t10">Delete</td>
+<td class="cellalignment17" headers="r7c1-t10 r1c2-t10">Enables you to delete an existing dosage record.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment17" id="r8c1-t10" headers="r1c1-t10">Delete All</td>
+<td class="cellalignment17" headers="r8c1-t10 r1c2-t10">Enables you to delete all dosage information</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment17" id="r9c1-t10" headers="r1c1-t10">Save</td>
+<td class="cellalignment17" headers="r9c1-t10 r1c2-t10">Saves the dosage information.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment17" id="r10c1-t10" headers="r1c1-t10">Close</td>
+<td class="cellalignment17" headers="r10c1-t10 r1c2-t10">Closes the Dosage tab without saving the data.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" -->
+<p>To configure dosage:</p>
+<ol>
+<li>
+<p>Click the <span class="bold">Dosage</span> tab.</p>
+<img width="1054" height="593" src="img/dosage.gif" alt="Surrounding text describes dosage.gif." /><br /></li>
+<li>
+<p>When the <span class="bold">Dosage</span> tab opens:</p>
+<ul>
+<li>
+<p>Select the appropriate dosage record from the Available Items list.</p>
+</li>
+<li>
+<p>Select the appropriate option from the Dosage Options list.</p>
+</li>
+<li>
+<p>Add. Modify, Delete, or Delete All the dosage as required.</p>
+</li>
+<li>
+<p>Click Save.</p>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BCGFFIJF"></a>
+<div id="AEOAK119" class="sect1">
+<h2 class="sect1">Copying Profiles</h2>
+<p>A profile can be copied to another profile from the Profile Configuration Screen. The following restrictions apply when copying the profile:</p>
+<ul>
+<li>
+<p>Only one profile with a specific <span class="bold">Study</span> and <span class="bold">Include Cases</span> option (Suspected, Non- Suspected or All) can exist in the database.</p>
+</li>
+<li>
+<p>A profile with <span class="bold">ALL</span> as the <span class="bold">Include Cases</span> option cannot be copied to any other profile. <span class="bold">ALL</span> includes Suspected and Non-Suspected case.</p>
+</li>
+<li>
+<p>When copying a profile where the Include Cases option is <span class="bold">Suspected</span>, the system automatically creates another profile with the <span class="bold">Non-Suspected</span> flag is checked (assuming the same study with Non-Suspected option did not exist before).</p>
+</li>
+<li>
+<p>When the system copies a profiles where the Include Cases option is <span class="bold">Non-Suspected</span>, the system automatically creates another profile with the <span class="bold">Suspected</span> flag checked (assuming the same study with Suspected option did not exist before)</p>
+</li>
+</ul>
+<p>Use the following procedure to copy an existing profile:</p>
+<ol>
+<li>
+<p>Select <span class="bold">Start</span> =&gt; <span class="bold">Programs</span> =&gt; <span class="bold">Oracle</span> =&gt; <span class="bold">End of Study Unblinding</span> =&gt; <span class="bold">End of Study Unblinding</span>.</p>
+</li>
+<li>
+<p>When the <span class="bold">log in</span> window opens:</p>
+<img width="637" height="324" src="img/login.gif" alt="Surrounding text describes login.gif." /><br />
+<ul>
+<li>
+<p>Enter the user name in the User Name field.</p>
+</li>
+<li>
+<p>Enter the user password in the Password field.</p>
+</li>
+<li>
+<p>Enter the name of the database where Argus Generic is installed in the Database field.</p>
+</li>
+<li>
+<p>Click <span class="bold">Login</span>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>When the Argus Unblinding application opens, choose <span class="bold">Argus Unblinding</span><span class="bold">=&gt; Configure Argus Unblinding.</span></p>
+</li>
+<li>
+<p>Argus Unblinding opens the <span class="bold">Configure Argus Unblinding: Select Argus Unblinding Profile</span> window.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+An asterisk ( * ) next to a profile name indicates that the profile configuration is incomplete and cannot be executed.</div>
+<img width="577" height="269" src="img/selectprof.gif" alt="Surrounding text describes selectprof.gif." /><br />
+<ul>
+<li>
+<p>Click Copy to copy an existing Argus Unblinding profile.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>The system copies the profile.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="BCGCDIGA"></a>
+<div id="AEOAK120" class="sect1">
+<h2 class="sect1">Modifying Profiles</h2>
+<p>A profile can be modified from the Profile Configuration Screen. You can modify parameters on all tabs except on the <span class="bold">Study Definition</span> tab. On that tab, you can modify all parameters except the following:</p>
+<ul>
+<li>
+<p>Study Number</p>
+</li>
+<li>
+<p>Include Cases</p>
+</li>
+</ul>
+<p>To modify a profile:</p>
+<ol>
+<li>
+<p>Select <span class="bold">Start</span> =&gt; <span class="bold">Programs</span> =&gt; <span class="bold">Oracle</span> =&gt; <span class="bold">End of Study Unblinding</span> =&gt; <span class="bold">End of Study Unblinding</span>.</p>
+</li>
+<li>
+<p>When the <span class="bold">log in</span> window opens:</p>
+<ul>
+<li>
+<p>Enter the user name in the User Name field.</p>
+</li>
+<li>
+<p>Enter the user password in the Password field.</p>
+</li>
+<li>
+<p>Enter the name of the database where Argus Generic is installed in the Database field.</p>
+</li>
+<li>
+<p>Click Login.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>When the Argus Unblinding application opens, choose <span class="bold">Argus Unblinding</span><span class="bold">=&gt;=&gt; Configure Argus Unblinding.</span></p>
+</li>
+<li>
+<p>Argus Unblinding opens the <span class="bold">Configure Argus Unblinding: Select Argus Unblinding Profile</span> window.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+An asterisk ( * ) next to a profile name indicates that the profile configuration is incomplete and cannot be executed.</div>
+<ul>
+<li>
+<p>Click Modify to make changes to an existing Argus Unblinding profile.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>When the system opens the Configure Argus Unblinding Profile dialog box:</p>
+<ul>
+<li>
+<p>Modify the data on the various tabs as necessary.</p>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="BCGBFHHI"></a>
+<div id="AEOAK121" class="sect1">
+<h2 class="sect1">Deleting Profiles</h2>
+<p>You can delete a profile. When deleting a profile, be aware of the following restrictions:</p>
+<ul>
+<li>
+<p>If there is a past attempt to unblind cases with the same profile, the system will not allow you to delete the profile.</p>
+</li>
+<li>
+<p>Profiles are only deleted logically. An EP_DELETED column in the Argus Unblinding_PROFILE table which, when not null, indicates that this profile has been deleted</p>
+</li>
+</ul>
+<p>Use the following procedure to delete a profile:</p>
+<ol>
+<li>
+<p>Select <span class="bold">Start</span> =&gt; <span class="bold">Programs</span> =&gt; <span class="bold">Oracle</span> =&gt; <span class="bold">End of Study Unblinding</span> =&gt; <span class="bold">End of Study Unblinding</span>.</p>
+</li>
+<li>
+<p>When the <span class="bold">log in</span> window opens:</p>
+<ul>
+<li>
+<p>Enter the user name in the User Name field.</p>
+</li>
+<li>
+<p>Enter the user password in the Password field.</p>
+</li>
+<li>
+<p>Enter the name of the database where Argus Generic is installed in the Database field.</p>
+</li>
+<li>
+<p>Click Login.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>When the Argus Unblinding application opens, choose Argus Unblinding=&gt; Configure Argus Unblinding.Argus Unblinding opens the Configure Argus Unblinding: Select Argus Unblinding Profile window.</p>
+</li>
+<li>
+<p>Argus Unblinding opens the Configure Argus Unblinding: Select Argus Unblinding Profile window.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+An asterisk ( * ) next to a profile name indicates that the profile configuration is incomplete and cannot be executed.</div>
+<ul>
+<li>
+<p>Click Delete to delete an existing Argus Unblinding profile.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>The system deletes the profile.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="BCGFDEJA"></a>
+<div id="AEOAK122" class="sect1">
+<h2 class="sect1">Executing the Argus Unblinding Profile</h2>
+<p>When you run an Argus Unblinding profile, you select <span class="bold">Execution Options</span> from the <span class="bold">Argus Unblinding Execution Options</span> dialog box. Table 4-6 lists and describes the function of each execution option.</p>
+<p>The following table describes Argus Unblinding Execution Options:</p>
+<div class="inftblinformal">
+<table class="cellalignment21" summary="Field Descriptions" dir="ltr">
+<thead>
+<tr class="cellalignment11">
+<th class="cellalignment22" id="r1c1-t14">Option</th>
+<th class="cellalignment22" id="r1c2-t14">Function</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment11">
+<td class="cellalignment17" id="r2c1-t14" headers="r1c1-t14">Unblinded Report</td>
+<td class="cellalignment17" headers="r2c1-t14 r1c2-t14">Generates an Unblinded report.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment17" id="r3c1-t14" headers="r1c1-t14">Argus Unblinding Process</td>
+<td class="cellalignment17" headers="r3c1-t14 r1c2-t14">Executes the profile against the Argus database.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment17" id="r4c1-t14" headers="r1c1-t14">Exception Report</td>
+<td class="cellalignment17" headers="r4c1-t14 r1c2-t14">Generates an exception for the last execution.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment17" id="r5c1-t14" headers="r1c1-t14">Batch Case Closing</td>
+<td class="cellalignment17" headers="r5c1-t14 r1c2-t14">Performs batch case closing for cases selected under this profile.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment17" id="r6c1-t14" headers="r1c1-t14">Update</td>
+<td class="cellalignment17" headers="r6c1-t14 r1c2-t14">Updates the Argus data when you run the profile.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment17" id="r7c1-t14" headers="r1c1-t14">Dry Run</td>
+<td class="cellalignment17" headers="r7c1-t14 r1c2-t14">Generates and reviews log files before updating the Argus data.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment17" id="r8c1-t14" headers="r1c1-t14">Advanced</td>
+<td class="cellalignment17" headers="r8c1-t14 r1c2-t14">Enables you to specify an Advanced Condition to restrict the cases processed by each execution.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" -->
+<ol>
+<li>
+<p>To execute a profileSelect <span class="bold">Start</span> =&gt; <span class="bold">Programs</span> =&gt; <span class="bold">Oracle</span> =&gt; <span class="bold">End of Study Unblinding</span> =&gt; <span class="bold">End of Study Unblinding</span>.</p>
+</li>
+<li>
+<p>When the <span class="bold">log in</span> window opens:</p>
+<ul>
+<li>
+<p>Enter the user name in the User Name field.</p>
+</li>
+<li>
+<p>Enter the user password in the Password field.</p>
+</li>
+<li>
+<p>Enter the name of the database where Argus Generic is installed in the Database field.</p>
+</li>
+<li>
+<p>Click Login.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>When the Argus Unblinding application opens, choose <span class="bold">Argus Unblinding</span><span class="bold">=&gt; Execute Argus Unblinding.</span></p>
+</li>
+<li>
+<p>When the <span class="bold">Argus Unblinding Execution Options</span> window opens:</p>
+<img width="612" height="394" src="img/eosuexecop.gif" alt="Surrounding text describes eosuexecop.gif." /><br />
+<ul>
+<li>
+<p>Check <span class="bold">Argus Unblinding Process</span> and select the <span class="bold">Dry Run</span> radio button.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+</ul>
+</li>
+</ol>
+<div id="AEOAK123" class="sect2"><a id="sthref15"></a>
+<h3 class="sect2">Error Messages</h3>
+<p>When executing an Argus Unblinding profile you may receive error messages under certain conditions.</p>
+<div id="AEOAK124" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref16"></a>
+<h4 class="sect3">Error Message: Protocol Number Mismatch</h4>
+<p><span class="bold">Error Message:</span> !! Critical Error Detected !!</p>
+<p><span class="bold">Error Display</span>:</p>
+<img width="1072" height="504" src="img/eosuerror.gif" alt="Surrounding text describes eosuerror.gif." /><br />
+<p><span class="bold">Reason for Error:</span> The Study information (Protocol Number) does not match Study definition under List Maintenance.</p>
+<p>As shown in the image above, a Case <span class="bold">CASE REF 07</span> shows protocol number <span class="bold">ABC</span> where the protocol number <span class="bold">Project Argus Unblinding 01</span> is used in study information. The Argus Unblinding software shows a maximum of four (4) cases followed by an SQL statement to help the user to capture all Cases with mismatched data. The User can then update the data in the database and re-execute the profile.</p>
+<p><span class="bold">Resolution:</span> Update the protocol number in list maintenance or update the Case Data (CASE_STUDY.PROTOCOL_NUM) with the matching PROTOCOL ID from the Clinical Study information and re-execute the profile</p>
+<p><span class="bold">Comment:</span> This message was introduced to prevent the system from hanging indefinitely when there is a data mismatch.</p>
+</div>
+<!-- class="sect3" -->
+<div id="AEOAK125" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref17"></a>
+<h4 class="sect3">Error Message: No SQL for Advanced Condition</h4>
+<p><span class="bold">Error Message:</span> Critical Error - Advance Condition&hellip;</p>
+<p>Error Display:</p>
+<img width="808" height="219" src="img/eosuerror2.gif" alt="Surrounding text describes eosuerror2.gif." /><br />
+<p><span class="bold">Reason for Error:</span> The where clause (CFG_ADV_COND.WHERE_CLAUSE) required to execute the Argus Unblinding software with an advanced condition (defined on the <span class="bold">Argus Unblinding Execution Options</span> dialog box to filter the number of cases being processed) is missing.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<div id="AEOAK126" class="sect2"><a id="sthref18"></a>
+<h3 class="sect2">Exception Report Messages</h3>
+<p>The software generates an exception report for cases that cannot be Unblinded. The following is a list of possible errors that can be associated with failed cases:</p>
+<ul>
+<li>
+<p>Case is in use by User &lt;XYZ&gt;. To release lock, request the user to login and logout.</p>
+</li>
+<li>
+<p>Case is unlocked or open.</p>
+</li>
+<li>
+<p>The Randomization data is missing for the Country, Study, Center, and Randomization Number.</p>
+</li>
+<li>
+<p>The Patient Exposure drug could not be located in LM_STUDIES.</p>
+</li>
+<li>
+<p>Case Narrative is larger than 32KB.</p>
+</li>
+<li>
+<p>There was an Oracle Error during breaking of the Blind. &lt;Oracle Error Message&gt;</p>
+</li>
+<li>
+<p>Failed in PROCESS_CASE. Oracle Text is &lt;Oracle Error Message&gt;</p>
+</li>
+<li>
+<p>Duplicate entries in Randomization Data (Country+Study+Center+Rand#) are matching the Case Data.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BCGHECAE"></a>
+<div id="AEOAK127" class="sect1">
+<h2 class="sect1">Using the Argus Unblinding Report Viewer</h2>
+<p>Use the Argus Unblinding Report Viewer to select and view unblinded reports. Table 4-7 lists and describes the fields and controls on the <span class="bold">Report Viewer</span> dialog box.</p>
+<p>The following table describes Argus Unblinding Report Viewer Fields and Controls:</p>
+<div class="inftblinformal">
+<table class="cellalignment21" summary="Field Descriptions" dir="ltr">
+<thead>
+<tr class="cellalignment11">
+<th class="cellalignment22" id="r1c1-t15">Field/Control</th>
+<th class="cellalignment22" id="r1c2-t15">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment11">
+<td class="cellalignment17" id="r2c1-t15" headers="r1c1-t15">View</td>
+<td class="cellalignment17" headers="r2c1-t15 r1c2-t15">Opens the report in Microsoft Word.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment17" id="r3c1-t15" headers="r1c1-t15">Print</td>
+<td class="cellalignment17" headers="r3c1-t15 r1c2-t15">Prints the report to the printer.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment17" id="r4c1-t15" headers="r1c1-t15">Close</td>
+<td class="cellalignment17" headers="r4c1-t15 r1c2-t15">Closes the current window.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" -->
+<p>Use the following procedure to use the Argus Unblinding Report Viewer:</p>
+<ol>
+<li>
+<p>Select <span class="bold">Start</span> =&gt; <span class="bold">Programs</span> =&gt; <span class="bold">Oracle</span> =&gt; <span class="bold">End of Study Unblinding</span> =&gt; <span class="bold">End of Study Unblinding</span>.</p>
+</li>
+<li>
+<p>When the <span class="bold">log in</span> window opens:</p>
+<ul>
+<li>
+<p>Enter the user name in the User Name field.</p>
+</li>
+<li>
+<p>Enter the user password in the Password field.</p>
+</li>
+<li>
+<p>Enter the name of the database where Argus Generic is installed in the Database field.</p>
+</li>
+<li>
+<p>Click Login.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>When the Argus Unblinding application opens, choose <span class="bold">Argus Unblinding</span><span class="bold">=&gt; Report Viewer.</span></p>
+</li>
+<li>
+<p>When the <span class="bold">Report Viewer</span> dialog box opens:</p>
+<img width="553" height="552" src="img/repview.gif" alt="Surrounding text describes repview.gif." /><br />
+<ul>
+<li>
+<p>Select a report to view from the list at the bottom of the dialog box.</p>
+</li>
+<li>
+<p>Click View&hellip; to view the report in Microsoft Word.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p class="subhead2"><a id="AEOAK128"></a>Argus Unblinding Updates</p>
+<p>Argus Unblinding does not pick up a case that is globally or locally unlocked. These cases are logged in the exception report as today but with the failure reason modified to say "Case is unlocked (globally and/or locally) or open".</p>
+<p>The unblinded report includes these cases under one of the following three corresponding sections retaining the existing functionality:</p>
+<p>Not Locked and Not Closed Blinded Suspected cases</p>
+<p>Not Locked and Not Closed Blinded Not-Suspected cases</p>
+<p>Not Locked and Not Closed Cases Un-blinded (during study) cases</p>
+<p>Argus Unblinding does not pick up a case that is pending local or global report submission. Argus Unblinding used to abort when a report was pending submission. This has been fixed to skip the case when pending submission and log in the exception report with the failure reason "Case is pending report submission".</p>
+<p>The "unblinded report" includes these cases under one of the following three new sections:</p>
+<p>Pending Report Submission Blinded Suspected cases</p>
+<p>Pending Report Submission Blinded Not-Suspected cases</p>
+<p>Pending Report Submission Cases Un-blinded (during study) cases</p>
+<p>Once unblinding is complete for a Local PRPT Case, system shall continue to perform global lock as with existing functionality but shall not perform any local lock and hence shall not generate any local reports. It is expected that the customer shall manually local lock the case after local data entry, license selections and assessments.</p>
+<p>Note that the system shall determine the local reports based on the Local Reports Configuration and the reporting rules that were selected in the Argus Unblinding configuration.</p>
+<p>Note that these cases shall also be not be picked by Batch Case Closing Module.</p>
+<p>The unblinded report "un-blinded report" shall include these Local PRPT Case that had been unblinded but not been locally locked by the system after unblinding, under the following new section. Note that a case may appear in only one of the sections in the Unblinded report. So a case listed under this new section shall not appear under the existing "Suspected Cases which were Un-blinded following the study end" section (or any other section).</p>
+<p>Batch Case Closing Module shall retain the existing functionality and shall check both local and global reports if they are pending generation to determine if a case can be closed.</p>
+</div>
+<!-- class="sect1" -->
+<a id="BCGBJDIC"></a>
+<div id="AEOAK129" class="sect1">
+<h2 class="sect1">Exiting from Argus Unblinding</h2>
+<p>You can exit from the Argus Unblinding application by doing either of the following:</p>
+<ul>
+<li>
+<p>Select <span class="bold">File</span> =&gt; <span class="bold">Exit</span>.</p>
+</li>
+<li>
+<p>Press <span class="bold">ALT+F4</span>.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect1" -->
+<div id="AEOAK130" class="sect1"><!-- infolevel="all" infotype="General" --><a id="sthref19"></a>
+<h2 class="sect1">Uninstalling Client Software</h2>
+<p>Use Windows <span class="bold">Add or Remove Programs</span> under Control Panel to remove the Argus Unblinding client from machine.</p>
+</div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment10">
+<tr>
+<td class="cellalignment17">
+<table class="cellalignment15">
+<tr>
+<td class="cellalignment14"><a href="preface.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2016, 2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment19">
+<table class="cellalignment20">
+<tr>
+<td class="cellalignment14"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment14"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment14"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment14"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

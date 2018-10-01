@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>View data listings and create discrepancies</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2018-05-23T12:36:10Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Health Sciences Data Management Workbench Data Review Guide" />
+<meta name="dcterms.identifier" content="E96069-01" />
+<meta name="dcterms.isVersionOf" content="DMWDR" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2017, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="dm_basics.htm" title="Previous" type="text/html" />
+<link rel="Next" href="discrepancies.htm" title="Next" type="text/html" />
+<link rel="alternate" href="DMWDR.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="DMWDR.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="DMWDR.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">5/9</span> <!-- End Header -->
+<div id="DMWDR345" class="chapter"><a id="BACHBAAJ"></a>
+<h1 class="chapter"><span class="secnum">2</span> View data listings and create discrepancies</h1>
+<p class="subhead1"><a id="CHDEFJHC"></a><a id="DMWDR183"></a>What do you want to do?</p>
+<ul>
+<li>
+<p><a href="#CHDEFBAA">Choose a listing type and view data</a></p>
+</li>
+<li>
+<p><a href="#CHDDDBIH">Search for data</a></p>
+</li>
+<li>
+<p><a href="#CHDBHFGE">Review data</a></p>
+</li>
+<li>
+<p><a href="#BACGBDIH">Create discrepancies</a></p>
+</li>
+<li>
+<p><a href="#BACEFJEI">Export data to Excel or CSV</a></p>
+</li>
+<li>
+<p><a href="#BACGABBG">Create a custom listing</a></p>
+</li>
+</ul>
+<p class="subhead1"><a id="DMWDR185"></a>What do you want to know?</p>
+<ul>
+<li>
+<p><a href="filters.htm#A133917316">How do I find...?</a> (what kind of filter to use for what)</p>
+</li>
+<li>
+<p><a href="#BEICFDFF">Listings FAQs</a></p>
+</li>
+<li>
+<p><a href="#BEICCICD">Flag FAQs</a></p>
+</li>
+<li>
+<p><a href="#BEIGDFGB">Data lineage FAQs</a></p>
+</li>
+</ul>
+<p><img width="54" height="22" src="img/icon_video.gif" alt="Text Show me How! is a video link." /> <code dir="ltr"><a href="https://apexapps.oracle.com/pls/apex/f?p=44785:265:0::::P265_CONTENT_ID:18970">Show me how!</a><a href=""></a></code></p>
+<a id="CHDEFBAA"></a>
+<div id="DMWDR186" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Choose a listing type and view data</h2>
+<ul>
+<li>
+<p><a href="#BACCFAGC">Default listings</a> show current data in a table.</p>
+</li>
+<li>
+<p><a href="#BACEHDBH">Validation check listings</a> show records that include a discrepancy identified by a validation check.</p>
+</li>
+<li>
+<p><a href="#BACEGEII">Custom listings</a> show records that satisfy criteria that you or others set.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+You may need to <span class="bold">scroll down</span> to see Validation Check Listings and Custom Listings in the left pane.</div>
+<a id="BACCFAGC"></a>
+<div id="DMWDR99773" class="sect2">
+<h3 class="sect2">Default listings</h3>
+<ol>
+<li>
+<p>Click the Data Management icon <img width="23" height="27" src="img/data_mgmt_icon.gif" alt="Icon shows sheets of paper" /> at the top of any page.</p>
+</li>
+<li>
+<p>Select Data Review.</p>
+</li>
+<li>
+<p>Make sure the <span class="bold">Listings</span> tab is open.</p>
+</li>
+<li>
+<p>Select a <a href="glossary.htm#CBAJCIGJ">clinical data model</a> from the <span class="bold">Model Name</span> drop-down list.</p>
+</li>
+<li>
+<p>Under <span class="bold">Default Listings</span>, select a listing.</p>
+<p>To narrow the choice you can enter part of a listing (table) name in the <span class="bold">Search Default Listings</span> field and press Enter.</p>
+</li>
+</ol>
+<pre dir="ltr">
+</pre>
+<p><span class="italic">Back to</span> <a href="#CHDEFJHC"><span class="xreftitleitalic">What do you want to do?</span></a></p>
+</div>
+<!-- class="sect2" -->
+<a id="BACEHDBH"></a>
+<div id="DMWDR349" class="sect2">
+<h3 class="sect2">Validation check listings</h3>
+<ol>
+<li>
+<p>Click the Data Management icon <img width="23" height="27" src="img/data_mgmt_icon.gif" alt="Icon shows sheets of paper" /> at the top of any page.</p>
+</li>
+<li>
+<p>Select Data Review.</p>
+</li>
+<li>
+<p>Make sure the <span class="bold">Listings</span> tab is open.</p>
+</li>
+<li>
+<p>Select a <a href="glossary.htm#CBAJCIGJ">clinical data model</a> from the <span class="bold">Model Name</span> drop-down list.</p>
+</li>
+<li>
+<p>Select <span class="bold">Validation Check Listings</span> from the bottom of the left pane.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+You can choose to show disabled listings. Listings are disabled if a table they read from is not used in the study.</div>
+</li>
+<li>
+<p>Expand the node of a validation check batch.</p>
+</li>
+<li>
+<p>Select one validation check in the batch to see:</p>
+<ul>
+<li>
+<p>All records with discrepancies identified by the validation check.</p>
+</li>
+<li>
+<p>Any other discrepancies on the records.</p>
+</li>
+</ul>
+<p>If a data item has been fixed and the discrepancy closed, the record is not displayed.</p>
+</li>
+</ol>
+<p>Validation checks run in batches as configured in the Home page.</p>
+<p><span class="italic">Back to</span> <a href="#CHDEFJHC"><span class="xreftitleitalic">What do you want to do?</span></a></p>
+</div>
+<!-- class="sect2" -->
+<a id="BACEGEII"></a>
+<div id="DMWDR350" class="sect2">
+<h3 class="sect2">Custom listings</h3>
+<ol>
+<li>
+<p>Click the Data Management icon <img width="23" height="27" src="img/data_mgmt_icon.gif" alt="Icon shows sheets of paper" /> at the top of any page.</p>
+</li>
+<li>
+<p>Select Data Review.</p>
+</li>
+<li>
+<p>Make sure the <span class="bold">Listings</span> tab is open.</p>
+</li>
+<li>
+<p>Select a <a href="glossary.htm#CBAJCIGJ">clinical data model</a> from the <span class="bold">Model Name</span> drop-down list.</p>
+</li>
+<li>
+<p>Select <span class="bold">Custom Listings</span> at the bottom of the left pane.</p>
+</li>
+<li>
+<p>Do one of the following:</p>
+<ul>
+<li>
+<p><span class="bold">To view a saved listing</span>, select it in the Custom Listings pane. The current data appears on the right.</p>
+</li>
+<li>
+<p><span class="bold">To copy a saved custom listing</span>, click the <img width="18" height="19" src="img/icon_more_actions.gif" alt="Icon shows a cog." /> <span class="bold">More Actions</span> icon in the Custom pane, then click <span class="bold">Copy Custom Listings</span>. You can modify the copy.</p>
+</li>
+<li>
+<p><span class="bold">To create your own listing</span>, click the <img width="16" height="17" src="img/icon_add.gif" alt="Icon is a plus sign." /> <span class="bold">Add</span> icon. See <a href="#BACGABBG">"Create a custom listing"</a>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+You can choose to show disabled listings. Listings are disabled if a table they read from is not used in the study.</div>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+<span class="bold">To view deleted InForm data</span> create a custom listing but do not install it. The system displays all records that meet the criteria, including deleted records. After you install it the deleted rows are not displayed.</div>
+</li>
+</ul>
+</li>
+</ol>
+<p><span class="italic">Back to</span> <a href="#CHDEFJHC"><span class="xreftitleitalic">What do you want to do?</span></a></p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CHDDDBIH"></a>
+<div id="DMWDR187" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Search for data</h2>
+<ul>
+<li>
+<p><a href="#CHDJBHIB">Use the Find feature</a> to search for column values.</p>
+</li>
+<li>
+<p><a href="filters.htm#CIHIHECJ">Use filters to find data and discrepancies</a> to filter in additional ways, save filters and filter groups, and use public filters.</p>
+</li>
+</ul>
+<a id="CHDJBHIB"></a>
+<div id="DMWDR10022" class="sect2">
+<h3 class="sect2">Use the Find feature</h3>
+<p>Use the Find feature to search on column values in the current records.</p>
+<ol>
+<li>
+<p>Click the Data Management icon <img width="23" height="27" src="img/data_mgmt_icon.gif" alt="Icon shows sheets of paper" /> at the top of any page.</p>
+</li>
+<li>
+<p>Select Data Review.</p>
+</li>
+<li>
+<p>Make sure the <span class="bold">Listings</span> tab is open.</p>
+</li>
+<li>
+<p>Select a <a href="glossary.htm#CBAJCIGJ">clinical data model</a> from the <span class="bold">Model Name</span> drop-down list.</p>
+</li>
+<li>
+<p>In the left panel, select <span class="bold">Default</span>, <span class="bold">Validation Check</span>, or <span class="bold">Custom</span> and then select a listing.</p>
+</li>
+<li>
+<p>From the Filters drop-down list, select <span class="bold">Find</span>.</p>
+</li>
+<li>
+<p>To find records that satisfy at least one Find criterion, select <span class="bold">Any</span>.</p>
+<p>To find records that satisfy all Find criteria, select <span class="bold">All</span>.</p>
+</li>
+<li>
+<p>Enter or select column values to search for.</p>
+</li>
+<li>
+<p>To use number, character, or date operators on each column, click <span class="bold">Advanced</span>.</p>
+<p>To add criteria to a field already used, click <span class="bold">Add Fields</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Search</span>.</p>
+</li>
+</ol>
+<p><span class="italic">Back to</span> <a href="#CHDEFJHC"><span class="xreftitleitalic">What do you want to do?</span></a></p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CHDBHFGE"></a>
+<div id="DMWDR188" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Review data</h2>
+<ul>
+<li>
+<p><a href="#BACFEBCA">View discrepancies in the Listings page</a></p>
+</li>
+<li>
+<p><a href="#BACECFDC">Show all discrepancies on one data item</a></p>
+</li>
+<li>
+<p><a href="#CHDIIHEF">View discrepancy details</a></p>
+</li>
+<li>
+<p><a href="#BACJIHHH">Assign and remove flags</a></p>
+</li>
+<li>
+<p><a href="#BACGCABJ">Show flags assigned to a record</a></p>
+</li>
+<li>
+<p><a href="#BACGIFEJ">View data lineage</a></p>
+</li>
+<li>
+<p><a href="#BACDFIIA">View data in InForm or another system</a></p>
+</li>
+<li>
+<p><a href="#BEIBJEAD">Reprocess discrepancies that failed to be sent to InForm</a></p>
+</li>
+</ul>
+<p>See <a href="#BEICFDFF">"Listings FAQs"</a>.</p>
+<a id="BACFEBCA"></a>
+<div id="DMWDR10438" class="sect2">
+<h3 class="sect2">View discrepancies in the Listings page</h3>
+<p><a id="DMWDR189"></a><span class="subhead3">Discrepancy Indicators&nbsp;</span>Records with one or more discrepancies have a <img width="10" height="25" src="img/yellow_rectangle.gif" alt="Icon is a yellow rectangle." /> yellow rectangle on the left and the word <span class="bold">Yes</span> in the DISCREPANCY_EXISTS column.</p>
+<p>Data items with discrepancies are highlighted in yellow. You may need to scroll to the right to see them.</p>
+<p><a id="DMWDR190"></a><span class="subhead3">State Icons&nbsp;</span>Hover over the icon to see the discrepancy's state. If a data item has multiple discrepancies, the system displays the state icon for the discrepancy that requires the most work to resolve. In order: Open, Candidate, Answered, Cancelled, Closed.</p>
+<p><a id="DMWDR191"></a><span class="subhead3">Discrepancy Filter Indicator&nbsp;</span>If you have applied a discrepancy-type filter, data items with discrepancies that meet the filter criteria have a <img width="19" height="17" src="img/icon_star.gif" alt="Icon is a star." /><span class="bold">Star</span> icon.</p>
+<p><span class="italic">Back to</span> <a href="#CHDBHFGE"><span class="xreftitleitalic">Review data</span></a></p>
+</div>
+<!-- class="sect2" -->
+<a id="BACECFDC"></a>
+<div id="DMWDR354" class="sect2">
+<h3 class="sect2">Show all discrepancies on one data item</h3>
+<ol>
+<li>
+<p>Click the Data Management icon <img width="23" height="27" src="img/data_mgmt_icon.gif" alt="Icon shows sheets of paper" /> at the top of any page.</p>
+</li>
+<li>
+<p>Select Data Review.</p>
+</li>
+<li>
+<p>Make sure the <span class="bold">Listings</span> tab is open.</p>
+</li>
+<li>
+<p>Select a <a href="glossary.htm#CBAJCIGJ">clinical data model</a> from the <span class="bold">Model Name</span> drop-down list.</p>
+</li>
+<li>
+<p>In the left panel, select <span class="bold">Default</span>, <span class="bold">Validation Check</span>, or <span class="bold">Custom</span> and then select a listing.</p>
+</li>
+<li>
+<p>Select the data item.</p>
+</li>
+<li>
+<p>Right-click and select <span class="bold">Show All Discrepancies</span>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+To view details or act on one of the discrepancies, right-click the data item, and click <span class="bold">Go to Discrepancies</span>.</div>
+</li>
+</ol>
+<p><span class="italic">Back to</span> <a href="#CHDBHFGE"><span class="xreftitleitalic">Review data</span></a></p>
+</div>
+<!-- class="sect2" -->
+<a id="CHDIIHEF"></a>
+<div id="DMWDR192" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">View discrepancy details</h3>
+<ol>
+<li>
+<p>Click the Data Management icon <img width="23" height="27" src="img/data_mgmt_icon.gif" alt="Icon shows sheets of paper" /> at the top of any page.</p>
+</li>
+<li>
+<p>Select Data Review.</p>
+</li>
+<li>
+<p>Make sure the <span class="bold">Listings</span> tab is open.</p>
+</li>
+<li>
+<p>Select a <a href="glossary.htm#CBAJCIGJ">clinical data model</a> from the <span class="bold">Model Name</span> drop-down list.</p>
+</li>
+<li>
+<p>In the left panel, select <span class="bold">Default</span>, <span class="bold">Validation Check</span>, or <span class="bold">Custom</span> and then select a listing.</p>
+</li>
+<li>
+<p>Select one or more data items with a discrepancy.</p>
+</li>
+<li>
+<p>Right-click and select <span class="bold">Go to Discrepancies</span>.</p>
+</li>
+<li>
+<p>Select one discrepancy and see its details in the lower panes.</p>
+</li>
+</ol>
+<p><span class="italic">Back to</span> <a href="#CHDBHFGE"><span class="xreftitleitalic">Review data</span></a></p>
+</div>
+<!-- class="sect2" -->
+<a id="BACJIHHH"></a>
+<div id="DMWDR356" class="sect2">
+<h3 class="sect2">Assign and remove flags</h3>
+<p>Use flags to help track and move the data review process. You can filter by flag in the Listings and Discrepancies pages. See <a href="#BEICCICD">"Flag FAQs"</a>.</p>
+<div id="DMWDR99908" class="sect3"><a id="sthref6"></a>
+<h4 class="sect3">Assign a flag to a record</h4>
+<ol>
+<li>
+<p>Click the Data Management icon <img width="23" height="27" src="img/data_mgmt_icon.gif" alt="Icon shows sheets of paper" /> at the top of any page.</p>
+</li>
+<li>
+<p>Select Data Review.</p>
+</li>
+<li>
+<p>Make sure the <span class="bold">Listings</span> tab is open.</p>
+</li>
+<li>
+<p>Select a <a href="glossary.htm#CBAJCIGJ">clinical data model</a> from the <span class="bold">Model Name</span> drop-down list.</p>
+</li>
+<li>
+<p>In the left panel, select <span class="bold">Default</span>, <span class="bold">Validation Check</span>, or <span class="bold">Custom</span> and then select a listing.</p>
+</li>
+<li>
+<p>Select a record by clicking one of the small rectangles on the left side of the row.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+To assign the same flag to multiple records, select the records by pressing the Shift or Ctrl key while clicking the rectangles.</div>
+</li>
+<li>
+<p>Right-click and select <span class="bold">Mark Flags</span>.</p>
+</li>
+<li>
+<p>Select the flag to assign.</p>
+</li>
+<li>
+<p>Click the flag state to assign.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+If a data load has completed while you were viewing the page, a message appears telling you to refresh the page, and the flag is not assigned. Click the <img width="19" height="17" src="img/icon_refresh.gif" alt="Icon is a near circular arrow." /> <span class="bold">Refresh</span> icon and check the data. If the flag still applies, assign it again.</div>
+</li>
+</ol>
+<p><span class="italic">Back to</span> <a href="#CHDBHFGE"><span class="xreftitleitalic">Review data</span></a></p>
+</div>
+<!-- class="sect3" -->
+<div id="DMWDR99909" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref7"></a>
+<h4 class="sect3">Remove a flag</h4>
+<ol>
+<li>
+<p>Click the Data Management icon <img width="23" height="27" src="img/data_mgmt_icon.gif" alt="Icon shows sheets of paper" /> at the top of any page.</p>
+</li>
+<li>
+<p>Select Data Review.</p>
+</li>
+<li>
+<p>Make sure the <span class="bold">Listings</span> tab is open.</p>
+</li>
+<li>
+<p>Select a <a href="glossary.htm#CBAJCIGJ">clinical data model</a> from the <span class="bold">Model Name</span> drop-down list.</p>
+</li>
+<li>
+<p>In the left panel, select <span class="bold">Default</span>, <span class="bold">Validation Check</span>, or <span class="bold">Custom</span> and then select a listing.</p>
+</li>
+<li>
+<p>Select one or more records by clicking one of the small rectangles on the left side of each row.</p>
+</li>
+<li>
+<p>Right-click and select <span class="bold">Mark Flags</span>, then the assigned flag, then <span class="bold">Clear Flag</span>.</p>
+<p>You cannot remove flags assigned in InForm. InForm flags have the prefix <code dir="ltr">Inf_</code>.</p>
+</li>
+</ol>
+<p><span class="italic">Back to</span> <a href="#CHDBHFGE"><span class="xreftitleitalic">Review data</span></a></p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BACGCABJ"></a>
+<div id="DMWDR888" class="sect2">
+<h3 class="sect2">Show flags assigned to a record</h3>
+<p>Flagged records have an icon on the left for the highest priority flag currently applied:</p>
+<ul>
+<li>
+<p><img width="18" height="20" src="img/flag_high_icon.gif" alt="Icon is three red horizontal bars." /> High priority flag</p>
+</li>
+<li>
+<p><img width="20" height="15" src="img/flag_med_icon.gif" alt="Icon is two orange horizontal bars." /> Medium priority flag</p>
+</li>
+<li>
+<p><img width="23" height="11" src="img/flag_low_icon.gif" alt="small solid green square" /> Low priority flag</p>
+</li>
+</ul>
+<p>To see which flags are applied to a record:</p>
+<ol>
+<li>
+<p>Click the Data Management icon <img width="23" height="27" src="img/data_mgmt_icon.gif" alt="Icon shows sheets of paper" /> at the top of any page.</p>
+</li>
+<li>
+<p>Select Data Review.</p>
+</li>
+<li>
+<p>Make sure the <span class="bold">Listings</span> tab is open.</p>
+</li>
+<li>
+<p>Select a flagged record by clicking one of the small rectangles on the left side of the row.</p>
+</li>
+<li>
+<p>Right-click and select <span class="bold">Show Flags</span>.</p>
+</li>
+</ol>
+<p><span class="italic">Back to</span> <a href="#CHDEFJHC"><span class="xreftitleitalic">What do you want to do?</span></a></p>
+</div>
+<!-- class="sect2" -->
+<a id="BACGIFEJ"></a>
+<div id="DMWDR10187" class="sect2">
+<h3 class="sect2">View data lineage</h3>
+<ol>
+<li>
+<p>Click the Data Management icon <img width="23" height="27" src="img/data_mgmt_icon.gif" alt="Icon shows sheets of paper" /> at the top of any page.</p>
+</li>
+<li>
+<p>Select Data Review.</p>
+</li>
+<li>
+<p>Make sure the <span class="bold">Listings</span> tab is open.</p>
+</li>
+<li>
+<p>Select a <a href="glossary.htm#CBAJCIGJ">clinical data model</a> from the <span class="bold">Model Name</span> drop-down list.</p>
+</li>
+<li>
+<p>In the left panel, select <span class="bold">Default Listings</span>, <span class="bold">Validation Check Listings</span>, or <span class="bold">Custom Listings</span> and then select a listing.</p>
+</li>
+<li>
+<p>Click on a data item.</p>
+</li>
+<li>
+<p>Right-click and select <span class="bold">View Data Lineage</span>.</p>
+</li>
+<li>
+<p>Select one:</p>
+<ul>
+<li>
+<p><span class="bold">View Source Data</span> to see upstream data that contributed to the selected data item.</p>
+</li>
+<li>
+<p><span class="bold">View Target Data</span> to see downstream data that the selected data item contributes to. Target data is not available in the Validation Check Listings page.</p>
+</li>
+<li>
+<p><span class="bold">View Preferred Path</span> If there are multiple source data items, one must be designated as <span class="italic">preferred</span> when the discrepancy is created, by either a validation check or a person. The system applies the discrepancy to the data items in the preferred path.</p>
+</li>
+</ul>
+</li>
+</ol>
+<div id="DMWDR352" class="sect3"><a id="sthref8"></a>
+<h4 class="sect3">Data lineage display</h4>
+<p>The selected data item is in the top row.</p>
+<ol>
+<li>
+<p>Expand the node in the Name column.</p>
+<ul>
+<li>
+<p>If you selected View Source Data, the system displays the data item(s) that contributed to the current item in the immediate upstream clinical data models.</p>
+</li>
+<li>
+<p>If you selected View Target Data, the system displays the data item(s) that this item contributes to in the immediate downstream clinical data model(s).</p>
+</li>
+<li>
+<p>If you selected View <a href="glossary.htm#CBABBBJA">preferred path</a>, the system displays the one source data item designated as the preferred one.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Expand the node of the immediate source or target, if any, to see the next source or target data item, and so on.</p>
+</li>
+</ol>
+<p>For each data item, the window displays:</p>
+<ul>
+<li>
+<p><span class="bold">Name</span>: Displayed as <span class="italic">data_model_name.table_name.column_name</span>.</p>
+<p>An <span class="bold">asterisk (*)</span> means the system cannot display a data item and the rest of its path. This may be because:</p>
+<ul>
+<li>
+<p>The data item has been deleted or unmapped.</p>
+</li>
+<li>
+<p>You do not have privileges to view the data item.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="bold">Is Masked</span>: A <span class="bold">$</span> means the table contains masked data. This particular data item may not be masked.</p>
+</li>
+<li>
+<p><span class="bold">Is Staging</span>: A <span class="bold">#</span> means the data item is in a staging table used in an intermediate transformation, not in a clinical data model table.</p>
+</li>
+<li>
+<p><span class="bold">Value</span>: The data value.</p>
+</li>
+<li>
+<p>If the data originated in InForm, click the <span class="bold">View Data in InForm</span> icon to open InForm and see the data in context there.</p>
+</li>
+<li>
+<p><span class="bold">Preferred Path</span>:</p>
+<ul>
+<li>
+<p><span class="bold">Yes</span> if the data item is on the <a href="glossary.htm#CBABBBJA">preferred path</a> or the only path.</p>
+</li>
+<li>
+<p><span class="bold">No</span> if there are multiple paths and the data item is not on the preferred one.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="bold">Primary Key</span>: The primary key values of the record, in column order as <span class="italic">column1_name</span>:<span class="italic">column1_value</span>,<span class="italic">column2_name</span>:<span class="italic">column2_value</span> and so on.</p>
+</li>
+</ul>
+<p>See <a href="#BEIGDFGB">"Data lineage FAQs"</a>.</p>
+<p><span class="italic">Back to</span> <a href="#CHDEFJHC"><span class="xreftitleitalic">What do you want to do?</span></a></p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BACDFIIA"></a>
+<div id="DMWDR10188" class="sect2">
+<h3 class="sect2">View data in InForm or another system</h3>
+<ol>
+<li>
+<p>Click the Data Management icon <img width="23" height="27" src="img/data_mgmt_icon.gif" alt="Icon shows sheets of paper" /> at the top of any page.</p>
+</li>
+<li>
+<p>Select Data Review.</p>
+</li>
+<li>
+<p>Make sure the <span class="bold">Listings</span> tab is open.</p>
+</li>
+<li>
+<p>Select a <a href="glossary.htm#CBAJCIGJ">clinical data model</a> from the <span class="bold">Model Name</span> drop-down list.</p>
+</li>
+<li>
+<p>In the left panel, select <span class="bold">Default Listings</span>, <span class="bold">Validation Check Listings</span>, or <span class="bold">Custom Listing</span> and then select a table, validation check, or custom listing.</p>
+</li>
+<li>
+<p>Select a data item that originated in InForm.</p>
+</li>
+<li>
+<p>Right-click and select <span class="bold">View Data in External Source</span>.</p>
+</li>
+<li>
+<p>Log in to InForm or whatever EDC system the data came from.</p>
+<p>If the selected DMW data item has more than one source data item, the system displays the one on the <a href="glossary.htm#CBABBBJA">preferred path</a>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+If you see a discrepancy in DMW that should have been sent to InForm or another source but wasn't, it may be that the process of sending the discrepancy to InForm failed. You can check this and fix it on the Home page. See <a href="#BEIBJEAD">Reprocess discrepancies that failed to be sent to InForm</a>.</div>
+</li>
+</ol>
+<p><span class="italic">Back to</span> <a href="#CHDEFJHC"><span class="xreftitleitalic">What do you want to do?</span></a></p>
+</div>
+<!-- class="sect2" -->
+<a id="BEIBJEAD"></a>
+<div id="DMWDR194" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Reprocess discrepancies that failed to be sent to InForm</h3>
+<ol>
+<li>
+<p>Go to the <img width="26" height="25" src="img/home_icon.gif" alt="Icon is a house." /> <span class="bold">Home</span> page, <span class="bold">Validation Checks</span> tab.</p>
+</li>
+<li>
+<p>Click the <img width="21" height="21" src="img/icon_failed_send_discs.gif" alt="Icon shows an X iin a red circle with arrow and !." /> <span class="bold">Failed to send Discrepancies</span> icon in the upper right corner.</p>
+<p>For each source data system, DMW displays counts for the selected study and lifecycle stage:</p>
+<ul>
+<li>
+<p><span class="bold">Processing for</span><span class="bolditalic">System</span> shows the number of validation check discrepancies currently being sent to the system.</p>
+</li>
+<li>
+<p><span class="bold">Failed Processing for</span><span class="bolditalic">System</span> shows the number of discrepancies that should have been sent to the system but weren't.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>If any discrepancies failed to be sent, click the <img width="19" height="21" src="img/icon_reprocess_discs.gif" alt="Icon shows a refresh arrow and exclamation point." /> <span class="bold">Reprocess Discrepancies</span> icon to send them again. Click the <img width="19" height="17" src="img/icon_refresh.gif" alt="Icon is a near circular arrow." /> <span class="bold">Refresh</span> icon to see progress.</p>
+</li>
+</ol>
+<p><span class="italic">Back to</span> <a href="#CHDEFJHC"><span class="xreftitleitalic">What do you want to do?</span></a></p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BACGBDIH"></a>
+<div id="DMWDR355" class="sect1">
+<h2 class="sect1">Create discrepancies</h2>
+<ol>
+<li>
+<p>Click the Data Management icon <img width="23" height="27" src="img/data_mgmt_icon.gif" alt="Icon shows sheets of paper" /> at the top of any page.</p>
+</li>
+<li>
+<p>Select Data Review.</p>
+</li>
+<li>
+<p>Make sure the <span class="bold">Listings</span> tab is open.</p>
+</li>
+<li>
+<p>Select a <a href="glossary.htm#CBAJCIGJ">clinical data model</a> from the <span class="bold">Model Name</span> drop-down list.</p>
+</li>
+<li>
+<p>In the left panel, select <span class="bold">Default</span>, <span class="bold">Validation Check</span>, or <span class="bold">Custom</span> listings and then select a table, validation check, or custom listing.</p>
+</li>
+<li>
+<p>Select the data item(s) to create a discrepancy on. You can select multiple data items if they all have the same problem.</p>
+</li>
+<li>
+<p>Right-click and select <span class="bold">Create Discrepancy</span>.</p>
+</li>
+<li>
+<p>Fill in the fields.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tips:</p>
+Hover over field names with dotted lines for information about the field.
+<p><span class="bold">Discrepancy Count</span> displays the number of discrepancies currently open on the same data item.</p>
+</div>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+</ol>
+<p><span class="italic">Back to</span> <a href="#CHDEFJHC"><span class="xreftitleitalic">What do you want to do?</span></a></p>
+</div>
+<!-- class="sect1" -->
+<a id="BACEFJEI"></a>
+<div id="DMWDR889" class="sect1">
+<h2 class="sect1">Export data to Excel or CSV</h2>
+<p>Select an option from the <span class="bold">Export</span> drop-down list:</p>
+<ul>
+<li>
+<p><span class="bold">Export All to Excel</span> generates an .xls file that includes all data that satisfies the current filters (if any).</p>
+</li>
+<li>
+<p><span class="bold">Export Current Page to Excel</span> generates an .xls file that includes the currently visible data.</p>
+</li>
+<li>
+<p><span class="bold">Export All to CSV</span> generates a comma-delimited text file that includes all data that satisfies the current filters (if any).</p>
+</li>
+<li>
+<p><span class="bold">Export Current Page to CSV</span> generates a comma-delimited text file that includes the currently visible data.</p>
+</li>
+</ul>
+<p><span class="italic">Back to</span> <a href="#CHDEFJHC"><span class="xreftitleitalic">What do you want to do?</span></a></p>
+</div>
+<!-- class="sect1" -->
+<a id="BACGABBG"></a>
+<div id="DMWDR387" class="sect1">
+<h2 class="sect1">Create a custom listing</h2>
+<p><img width="54" height="22" src="img/icon_video.gif" alt="Text Show me How! is a video link." /> <code dir="ltr"><a href="https://apexapps.oracle.com/pls/apex/f?p=44785:265:0::::P265_CONTENT_ID:21823">Show me how!</a><a href=""></a></code></p>
+<a id="BACDDADD"></a>
+<div id="DMWDR1014" class="sect2">
+<h3 class="sect2">Define query details</h3>
+<ol>
+<li>
+<p>Click the Data Management icon <img width="23" height="27" src="img/data_mgmt_icon.gif" alt="Icon shows sheets of paper" /> at the top of any page.</p>
+</li>
+<li>
+<p>Select Data Review.</p>
+</li>
+<li>
+<p>Make sure the <span class="bold">Listings</span> tab is open.</p>
+</li>
+<li>
+<p>Select a <a href="glossary.htm#CBAJCIGJ">clinical data model</a> from the <span class="bold">Model Name</span> drop-down list.</p>
+</li>
+<li>
+<p>Select <span class="bold">Custom Listings</span> at the bottom of the left pane.</p>
+</li>
+<li>
+<p>Click the <img width="16" height="17" src="img/icon_add.gif" alt="Icon is a plus sign." /> <span class="bold">Add</span> icon.</p>
+</li>
+<li>
+<p>Enter a <span class="bold">name</span> and <span class="bold">description</span> for the new custom listing.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+Make the name 25 characters or less to avoid scrolling to read the name.</div>
+</li>
+<li>
+<p>Select <span class="bold">Mark as Public</span> to enable all data reviewers to use this custom listing.</p>
+</li>
+<li>
+<p>Select <span class="bold">Authorize access to this listing for users without Blind Break rights</span> if you know that only nonblinded data will be displayed in the listing, even though at least one source table contains blinded data. Take care to select columns that do not contain blinded data.</p>
+<p>If any source table is blinded in any way and this setting is not selected, the system blinds the entire target table, so that only users with Blind Break privileges can view any data.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+</ol>
+<p><span class="bold">Next</span>: <a href="#BACJJCCF">Select columns to display</a></p>
+<p><span class="italic">Back to</span> <a href="#BACGABBG"><span class="xreftitleitalic">Create a custom listing</span></a> <span class="italic">steps</span></p>
+</div>
+<!-- class="sect2" -->
+<a id="BACJJCCF"></a>
+<div id="DMWDR1015" class="sect2">
+<h3 class="sect2">Select columns to display</h3>
+<p>Identify the columns to display in the listing and write an expression to change data display (if needed, for example, to mask blinded data, or to append a string to all values in the column, or to concatenate two column values in a single column).</p>
+<ol>
+<li>
+<p>Drag the tables or columns you want to display from the Source pane into the Selected Columns tab.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+To select multiple columns, use Ctrl+click or Shift+click.</div>
+<p>Tables and columns that are marked Not Used in the transformation that writes to this model are not displayed here.</p>
+</li>
+<li>
+<p>If you need an <span class="bold">Expression</span> to operate on a column(s) to affect the way data is displayed, you must create a 3-character <span class="bold">Table Alias</span> for its source table in the <a href="#BACIJEHF">Define table aliases</a> tab, then select it from this drop-down list.</p>
+</li>
+<li>
+<p>Enter the <span class="bold">Column Header for Display</span> in the Custom Listings page.</p>
+</li>
+<li>
+<p>Enter a <span class="bold">Sort Order</span> number to determine the column's display order relative to other columns.</p>
+</li>
+<li>
+<p>Select Ascending (<span class="bold">ASC</span>) or Descending (<span class="bold">DESC</span>) <span class="bold">Sort Type</span> for the data display.</p>
+</li>
+<li>
+<p>If you need an <span class="bold">Expression</span> to operate on the column in the SELECT clause, do one:</p>
+<ul>
+<li>
+<p>Enter the expression in the <span class="bold">Expression</span> field.</p>
+<p>If you need to use a function and you write the expression in free text, open the <span class="bold">Select Packages</span> tab and select the packages you will use. This enables the system to generate the query code.</p>
+</li>
+<li>
+<p>Click the <img width="19" height="20" src="img/icon_modify_criteria.gif" alt="Icon shows letters and a pencil." /> <span class="bold">Modify Expression</span> icon to <a href="#BEIBEBIE">Use the Expression Builder</a>. You can edit code generated by the Expression Builder in this field afterward.</p>
+</li>
+</ul>
+<p>To write an expression that operates on multiple columns, add all columns in the expression to the same row in the Selected Columns tab:</p>
+<ol>
+<li>
+<p>Add one column to Selected Columns and highlight it there.</p>
+</li>
+<li>
+<p>Select the additional column(s) in the Source pane and click the <img width="20" height="19" src="img/icon_arrow.gif" alt="Icon is an arrow." /><span class="bold">Use in Expression</span> icon in the Source pane.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If you select a column that contains masked data, write an expression for the column to mask values.</div>
+</li>
+</ol>
+</li>
+</ol>
+<p><span class="bold">Next:</span> <a href="#BACIJEHF">Define table aliases</a>.</p>
+<p><span class="italic">Back to</span> <a href="#BACGABBG"><span class="xreftitleitalic">Create a custom listing</span></a> <span class="italic">steps</span></p>
+</div>
+<!-- class="sect2" -->
+<a id="BACIJEHF"></a>
+<div id="DMWDR390" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Define table aliases</h3>
+<p>Table aliases are required only if you are using a self-join or writing a SELECT expression on a table column.</p>
+<ol>
+<li>
+<p>In the <span class="bold">Define Table Alias</span> tab, select the table from the drop-down list.</p>
+</li>
+<li>
+<p>Enter an alias. <span class="bold">The alias cannot be longer than three characters.</span></p>
+<p>The system displays the alias in the Selected Columns tab.</p>
+</li>
+<li>
+<p>If you need another alias, click the <img width="16" height="17" src="img/icon_add.gif" alt="Icon is a plus sign." /><span class="bold">Add Table Alias</span> icon.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+</ol>
+<p><span class="bold">Next:</span> <a href="#BACDFFEG">Specify and test criteria</a>.</p>
+<p><span class="italic">Back to</span> <a href="#BACGABBG"><span class="xreftitleitalic">Create a custom listing</span></a> <span class="italic">steps</span></p>
+</div>
+<!-- class="sect2" -->
+<a id="BACDFFEG"></a>
+<div id="DMWDR392" class="sect2">
+<h3 class="sect2">Specify and test criteria</h3>
+<p>Specify the data condition the listing will look for.</p>
+<ol>
+<li>
+<p>Select the <span class="bold">Criteria</span> tab.</p>
+</li>
+<li>
+<p>Build the WHERE clause to determine which records appear in the listing. Click the <img width="19" height="20" src="img/icon_modify_criteria.gif" alt="Icon shows letters and a pencil." /> <span class="bold">Add or Modify Criteria</span> icon and <a href="#BEIBEBIE">Use the Expression Builder</a>.</p>
+</li>
+<li>
+<p>In the custom listing Query Details pane, view and test the generated code:</p>
+<ul>
+<li>
+<p>Click <span class="bold">View Source</span>. The system generates and displays the PL/SQL code.</p>
+</li>
+<li>
+<p>Click <span class="bold">Test</span>: The system generates PL/SQL code, validates it, and displays either an error message or the records retrieved.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+</ol>
+<p><span class="bold">Next:</span> <a href="#BACCBJBF">Save and install a custom listing</a>.</p>
+<p><span class="italic">Back to</span> <a href="#BACGABBG"><span class="xreftitleitalic">Create a custom listing</span></a> <span class="italic">steps</span></p>
+</div>
+<!-- class="sect2" -->
+<a id="BACCBJBF"></a>
+<div id="DMWDR394" class="sect2">
+<h3 class="sect2">Save and install a custom listing</h3>
+<ol>
+<li>
+<p>In the Custom Listings pane, select the listing.</p>
+</li>
+<li>
+<p>Click the <img width="18" height="19" src="img/icon_more_actions.gif" alt="The icons represents a gear." /><span class="bold">More Actions</span> icon, then:</p>
+<ul>
+<li>
+<p>Click the <img width="19" height="20" src="img/icon_save_as_query.gif" alt="Icon is a folded paper with a CD." /><span class="bold">Save as Query</span> icon to save the listing for use in another session. For new queries, the Save operation includes installation.</p>
+</li>
+<li>
+<p>Click the <img width="19" height="20" src="img/icon_install.gif" alt="Icon is a box with an arrow." /><span class="bold">Install Custom Listing</span> icon to install the listing. This is required only for copied queries.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p><span class="italic">Back to</span> <a href="#CHDEFJHC"><span class="xreftitleitalic">What do you want to do?</span></a></p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BACFIGGD"></a>
+<div id="DMWDR395" class="sect1">
+<h2 class="sect1">Copy a custom listing</h2>
+<ol>
+<li>
+<p>Click the Data Management icon <img width="23" height="27" src="img/data_mgmt_icon.gif" alt="Icon shows sheets of paper" /> at the top of any page.</p>
+</li>
+<li>
+<p>Select Data Review.</p>
+</li>
+<li>
+<p>Make sure the <span class="bold">Listings</span> tab is open.</p>
+</li>
+<li>
+<p>Select <span class="bold">Custom</span> at the bottom of the left pane.</p>
+</li>
+<li>
+<p>Click the <img width="18" height="19" src="img/icon_more_actions.gif" alt="The icons represents a gear." /><span class="bold">More Actions</span> icon, then click <img width="17" height="19" src="img/icon_copy.gif" alt="Icon shows two sheets of paper." /><span class="bold">Copy Custom Listings</span>.</p>
+</li>
+<li>
+<p>Select a project (or other study grouping).</p>
+</li>
+<li>
+<p>Select a model.</p>
+</li>
+<li>
+<p>Select one or more custom listings within the model.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>. The system searches the current model for the tables and columns that the selected custom listings read from.</p>
+<ul>
+<li>
+<p>If the tables or columns do not exist, the Copy operation fails with an error message.</p>
+</li>
+<li>
+<p>If they exist but are marked Not Used in the transformation that writes to the model, the system copies the listings as disabled.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p><span class="italic">Back to</span> <a href="#CHDEFJHC"><span class="xreftitleitalic">What do you want to do?</span></a></p>
+</div>
+<!-- class="sect1" -->
+<a id="BEIBEBIE"></a>
+<div id="DMWDR105" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Use the Expression Builder</h2>
+<p>There are two ways to add an expression, with different advantages:</p>
+<ul>
+<li>
+<p><span class="bold">Use the Expression Builder user interface</span>. This more cumbersome process makes the transformations, validation checks, and custom listings that use it easier to copy and map in the new study.</p>
+</li>
+<li>
+<p><span class="bold">Enter code as free text directly in the Expression Text field</span>. This is a simpler process for a programmer but results in a less easily reusable transformation, validation check, or custom listing.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Important:</p>
+<ul>
+<li>
+<p>If you reference a static package or function <span class="bold">in free text</span>, you must select it in the <span class="bold">Selected Packages tab</span>.</p>
+</li>
+<li>
+<p>In free text, <span class="bold">use just the column name</span>, not the table.column format, <span class="bold">unless</span> you need to use an alias, as in a self-join. In that case the alias.column format is required.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+<p>To use the Expression Builder:</p>
+<ol>
+<li>
+<p>In the Expression Criteria pane, select the following as needed to build the expression from left to right.</p>
+<ul>
+<li>
+<p><span class="bold">Add Group</span> to add the parentheses () that surround a phrase in an expression or group smaller units of logic.</p>
+</li>
+<li>
+<p><span class="bold">Add Item</span> to add a unit of logic smaller than a group.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>To add a phrase within a group, click the parentheses ().</p>
+<p>To add a phrase outside a group, click <span class="bold">Expression</span>.</p>
+</li>
+<li>
+<p>To add an item, in the Expression Item pane select either <span class="bold">Column</span>, <span class="bold">Function</span> (for functions written by your company), or <span class="bold">Standard Function</span> (for Oracle SQL functions).</p>
+<p><span class="bold">To create an expression using column values</span>:</p>
+<ol>
+<li>
+<p>For Item Type, select <span class="bold">Column</span>.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Select Column</span> icon.</p>
+<p>In the Select Column window, you can filter above any of the attribute columns to find the table column you want. Select a column and click <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>If needed, select an operator from the list.</p>
+</li>
+<li>
+<p>If needed, enter a data value. The system encloses the value you enter in single quotes.</p>
+</li>
+<li>
+<p>If needed, select a conjunction from the list.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+If you select a conjunction within a group, it appears within the group, at the end. If you need a conjunction outside the group, click <span class="bold">Expression</span> above, then select the conjunction.</div>
+</li>
+<li>
+<p>Click <span class="bold">Add</span>. The system generates the SQL expression and displays it in the Expression Text pane.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You can edit the generated code in the Expression Text pane, but if you do, you cannot continue to build the expression in the user interface. See <a href="#BEIDAAFI">"To make a correction in the Expression Builder"</a> to continue in the user interface.</div>
+<p>Click <span class="bold">Validate</span> to check the generated code.</p>
+</li>
+</ol>
+<p><span class="bold">To use a function in your library</span>:</p>
+<ol>
+<li>
+<p>For Item Type, select <span class="bold">Function</span>. The Select Function window appears, displaying a list of Oracle functions.</p>
+</li>
+<li>
+<p>Select a function and click <span class="bold">OK</span>.</p>
+</li>
+</ol>
+<p><span class="bold">To use a standard SQL function</span>:</p>
+<ol>
+<li>
+<p>For Item Type, select <span class="bold">Standard Function</span>.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Select Standard Function</span> icon. A search window appears. To filter, enter all or part of the name in the field above. You can use the wildcard <code dir="ltr">%</code>.</p>
+</li>
+<li>
+<p>Select a function and click <span class="bold">OK</span>.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Define additional groups and items to complete the expression as necessary.</p>
+</li>
+<li>
+<p>Click <span class="bold">Save</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Validate</span>. The system validates the code and displays any errors or warnings.</p>
+</li>
+</ol>
+<p><a id="BEIDAAFI"></a><a id="DMWDR117"></a><span class="subhead3">To make a correction in the Expression Builder&nbsp;</span></p>
+<ol>
+<li>
+<p>Select the faulty item in the Expression Criteria pane. An Update button appears in the Expression Item pane.</p>
+</li>
+<li>
+<p>Make your changes in the Expression Item pane and click <span class="bold">Update</span>.</p>
+</li>
+</ol>
+<p>For more information, see:</p>
+<ul>
+<li>
+<p><a href="#BEIBIDJF">Pass data as input parameter values</a></p>
+</li>
+<li>
+<p><a href="#BEIEDGJI">Pass constant values</a></p>
+</li>
+</ul>
+<a id="BEIBIDJF"></a>
+<div id="DMWDR106" class="sect2">
+<h3 class="sect2">Pass data as input parameter values</h3>
+<p>Use curly brackets ("{" and "}") as delimiters and the fully qualified format (<code dir="ltr"><span class="codeinlineitalic">model.table.column</span></code>) to indicate input parameter values to SQL functions or custom functions in the expression. The default input is the column value if no metadata is specified after the column name.</p>
+<p>For example, to calculate a subject's age from his date of birth:</p>
+<pre dir="ltr">
+round((sysdate - {Review.LAB_SRC.dob})/365)
+</pre>
+<p>where <code dir="ltr">Review</code> is the data model name, <code dir="ltr">LAB_SRC</code> is the table name, and <code dir="ltr">dob</code> is the column name. No metadata follows the column name, so by default the system passes the Date of Birth (dob) data value to the expression.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BEIEDGJI"></a>
+<div id="DMWDR107" class="sect2">
+<h3 class="sect2">Pass constant values</h3>
+<p>You can hard-code a value for a target column using an expression that contains only a constant value or by calling a SQL function based on constants, for example:</p>
+<pre dir="ltr">
+round(3.14 * power(10, 2))
+</pre></div>
+<!-- class="sect2" -->
+<img width="19" height="19" src="img/icon_qbe.gif" alt="Icon is a funnel in front of data." /></div>
+<!-- class="sect1" -->
+<div id="DMWDR195" class="sect1"><!-- infolevel="all" infotype="General" --><a id="sthref9"></a>
+<h2 class="sect1">FAQs</h2>
+<ul>
+<li>
+<p><a href="#BEICFDFF">Listings FAQs</a></p>
+</li>
+<li>
+<p><a href="#BEICCICD">Flag FAQs</a></p>
+</li>
+<li>
+<p><a href="#BEIGDFGB">Data lineage FAQs</a></p>
+</li>
+</ul>
+<a id="BEICFDFF"></a>
+<div id="DMWDR196" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Listings FAQs</h3>
+<ul>
+<li>
+<p><a href="#BACJFIAH">What is a clinical data model?</a></p>
+</li>
+<li>
+<p><a href="#BACHIDIJ">One of the rows says "Yes" under the Discrepancy_Exists Column, but no cells are highlighted yellow. Where is the discrepancy?</a></p>
+</li>
+<li>
+<p><a href="#BACDEBFG">How can I see only open validation check discrepancies when I am viewing a Validation Check listing?</a></p>
+</li>
+<li>
+<p><a href="#BACIABEA">What is a disabled listing?</a></p>
+</li>
+<li>
+<p><a href="#BACHEHIE">Where can I copy a custom listing from?</a></p>
+</li>
+<li>
+<p><a href="#BACJJJCJ">What happens if I modify a Table Alias?</a></p>
+</li>
+<li>
+<p><a href="#BACFBJJD">How can I view blinded data?</a></p>
+</li>
+<li>
+<p><a href="#BACIBFJJ">How can I resend data that needs coding to TMS?</a></p>
+</li>
+</ul>
+<a id="BACJFIAH"></a>
+<div id="DMWDR197" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">What is a clinical data model?</h4>
+<p>A clinical data model is a logical set of tables of study data. They were either loaded together into DMW from a single source or they contain data transformed by your study configurator for a purpose such as data review or analysis.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BACHIDIJ"></a>
+<div id="DMWDR198" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">One of the rows says "Yes" under the Discrepancy_Exists Column, but no cells are highlighted yellow. Where is the discrepancy?</h4>
+<p>An active discrepancy filter has probably identified a discrepancy in a column that is not displayed.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BACDEBFG"></a>
+<div id="DMWDR200" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">How can I see only open validation check discrepancies when I am viewing a Validation Check listing?</h4>
+<p>You can apply a <a href="filters.htm#A3695414">Discrepancy States and Tags filter</a> showing only open discrepancies. However, you will see all records with any open discrepancies, even if the discrepancy raised by the validation check on the record has been manually closed, and even if the column with the open discrepancy is not displayed in the listing.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BACIABEA"></a>
+<div id="DMWDR396" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">What is a disabled listing?</h4>
+<p>Listings are disabled if a table they read from is not used in the study.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BACHEHIE"></a>
+<div id="DMWDR397" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Where can I copy a custom listing from?</h4>
+<p>You can copy custom listings from another study or from a different clinical data model in the same study. The system checks if the required source tables are available in the current model.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BACJJJCJ"></a>
+<div id="DMWDR398" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">What happens if I modify a Table Alias?</h4>
+<p>If you are creating the listing and modify the alias after defining an expression or criterion that refers to the original alias, you must update the expression or criterion manually before saving.</p>
+<p>If you are modifying a saved listing and modify an alias, the system will update the expression or criterion when you save, as long as the expression or criterion was originally created using the Expression Builder.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BACFBJJD"></a>
+<div id="DMWDR202" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">How can I view blinded data?</h4>
+<p>When you choose a listing that contains blinded data and you have privileges to view it, DMW will ask you to confirm that you want to access the blinded data.</p>
+<p>After clicking Yes, you can use the padlock icon in the top right of the table to toggle between viewing real, blinded data and viewing the masking values (or, in the case where a whole table or row is blinded, seeing no data).</p>
+</div>
+<!-- class="sect3" -->
+<a id="BACIBFJJ"></a>
+<div id="DMWDR108" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">How can I resend data that needs coding to TMS?</h4>
+<p>If you make structural changes like updating a dictionary or adding columns to hold derived data from TMS, you can send all data that has been designated as needing coding by running the Force Rederivation job.</p>
+<ol>
+<li>
+<p>Go to the <img width="26" height="25" src="img/home_icon.gif" alt="Icon is a house." /> <span class="bold">Home</span> page.</p>
+</li>
+<li>
+<p>Select a study.</p>
+</li>
+<li>
+<p>Click the <img width="15" height="17" src="img/icon_modify.gif" alt="Icon shows a pencil." /><span class="bold">Modify</span> icon in the Studies pane.</p>
+</li>
+<li>
+<p>Click the <span class="bold">TMS</span> tab.</p>
+</li>
+<li>
+<p>Click <span class="bold">Force Rederivation</span> to run Rederivation once, immediately.</p>
+</li>
+<li>
+<p>A confirmation message appears because the job may take a long time. You can still work while it runs. Click <span class="bold">OK</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BEICCICD"></a>
+<div id="DMWDR205" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Flag FAQs</h3>
+<ul>
+<li>
+<p><a href="#BACIDGBB">Why can't I assign a flag?</a></p>
+</li>
+<li>
+<p><a href="#BACEDGBI">Can the flags I assign be seen in InForm?</a></p>
+</li>
+<li>
+<p><a href="#BACEDBGE">I wish a different flag were available.</a></p>
+</li>
+<li>
+<p><a href="#BACJJEIJ">Why can't I change some flags?</a></p>
+</li>
+<li>
+<p><a href="#BACJJEIJ">Why can't I change some flags?</a></p>
+</li>
+</ul>
+<a id="BACIDGBB"></a>
+<div id="DMWDR208" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Why can't I assign a flag?</h4>
+<p>The Assign Flags function is available only if flags have been defined for the current data model type and if you have the privileges required to assign flags.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BACEDGBI"></a>
+<div id="DMWDR209" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Can the flags I assign be seen in InForm?</h4>
+<p>No. DMW flags stay in DMW.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BACEDBGE"></a>
+<div id="DMWDR399" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">I wish a different flag were available.</h4>
+<p>Your administrator creates the flags you can assign in DMW.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BACJJEIJ"></a>
+<div id="DMWDR214" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Why can't I change some flags?</h4>
+<p>Flags that start with <code dir="ltr">Inf_</code> are CRF form and section states imported from InForm as flags. After the <code dir="ltr">Inf_</code> the name is the same as in InForm. You cannot change these flag assignments in DMW. Each of these flags has two states: Yes an No (Y and N).</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BEIGDFGB"></a>
+<div id="DMWDR216" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Data lineage FAQs</h3>
+<ul>
+<li>
+<p><a href="#BACFGAEA">What is data lineage?</a></p>
+</li>
+<li>
+<p><a href="#BACDCECH">When I create a discrepancy against a data item, how does that affect the data lineage?</a></p>
+</li>
+<li>
+<p><a href="#BACCJBGJ">Why does the wrong source data item have the discrepancy?</a></p>
+</li>
+</ul>
+<a id="BACFGAEA"></a>
+<div id="DMWDR217" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">What is data lineage?</h4>
+<p>A single data item, such as a subject's weight, appears in DMW first as loaded from InForm or another system and then in subsequent <span class="italic">downstream</span> <a href="glossary.htm#CBAJCIGJ">clinical data model</a>s. DMW maintains tracks each data item as it appears in each model.</p>
+<p>The column name may change from one model to the next, for example from WT to WEIGHT, and the value may be converted to different units and used to derive other values, such as Body Mass Index (BMI).</p>
+</div>
+<!-- class="sect3" -->
+<a id="BACDCECH"></a>
+<div id="DMWDR219" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">When I create a discrepancy against a data item, how does that affect the data lineage?</h4>
+<p>The system immediately displays the discrepancy against the corresponding data items upstream and downstream.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BACCJBGJ"></a>
+<div id="DMWDR220" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Why does the wrong source data item have the discrepancy?</h4>
+<p>When a data item like a derived BMI has more than one source data item, the validation check must designate a single column as the one against which to create the discrepancy, even if it is impossible to know in advance which one is faulty. A BMI that is out of range might be due to a bad value for height, weight, or unit, but one of them must be preselected. However, all relevant values can be displayed.</p>
+<p>See also <a href="discrepancies.htm#BABIBEAH">"Why is a query on a different item in InForm than in DMW?"</a>.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment27">
+<tr>
+<td class="cellalignment34">
+<table class="cellalignment32">
+<tr>
+<td class="cellalignment31"><a href="dm_basics.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment31"><a href="discrepancies.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2017, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment36">
+<table class="cellalignment30">
+<tr>
+<td class="cellalignment31"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment31"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment31"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment31"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

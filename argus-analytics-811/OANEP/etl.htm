@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Extract Transform Load Programs</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2017-10-04T8:20:59Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Argus Analytics User's Guide" />
+<meta name="dcterms.identifier" content="E88812-01" />
+<meta name="dcterms.isVersionOf" content="OANEP" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Prev" href="part2.htm" title="Previous" type="text/html" />
+<link rel="Next" href="rpd_dw.htm" title="Next" type="text/html" />
+<link rel="alternate" href="OANEP.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="OANEP.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="OANEP.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+                    <script>var w=window;if(w.performance||w.mozPerformance||w.msPerformance||w.webkitPerformance){var d=document;AKSB=w.AKSB||{},AKSB.q=AKSB.q||[],AKSB.mark=AKSB.mark||function(e,_){AKSB.q.push(["mark",e,_||(new Date).getTime()])},AKSB.measure=AKSB.measure||function(e,_,t){AKSB.q.push(["measure",e,_,t||(new Date).getTime()])},AKSB.done=AKSB.done||function(e){AKSB.q.push(["done",e])},AKSB.mark("firstbyte",(new Date).getTime()),AKSB.prof={custid:"322179",ustr:"",originlat:"0",clientrtt:"1",ghostip:"23.212.3.15",ipv6:false,pct:"10",clientip:"45.78.37.67",requestid:"22780e1",region:"32996",protocol:"",blver:14,akM:"dsca",akN:"ae",akTT:"O",akTX:"1",akTI:"22780e1",ai:"206465",ra:"false",pmgn:"",pmgi:"",pmp:"",qc:""},function(e){var _=d.createElement("script");_.async="async",_.src=e;var t=d.getElementsByTagName("script"),t=t[t.length-1];t.parentNode.insertBefore(_,t)}(("https:"===d.location.protocol?"https:":"http:")+"//ds-aksb-a.akamaihd.net/aksb.min.js")}</script>
+                    <script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">9/16</span> <!-- End Header -->
+<div id="OANEP594" class="chapter"><a id="CBHHAIFG"></a>
+<h1 class="chapter"><span class="secnum">4</span> Extract Transform Load Programs</h1>
+<p>To load data from the source systems to the data mart, Oracle Argus Analytics uses Extract Transform and Load (ETL) programs that</p>
+<ul>
+<li>
+<p>Identify and read desired data from different data source systems,</p>
+</li>
+<li>
+<p>Clean and format data uniformly, and</p>
+</li>
+<li>
+<p>Write it to the target data mart.</p>
+</li>
+</ul>
+<p>In Oracle Argus Analytics, Oracle Argus Safety is the source system for which Oracle provides pre-defined ETL.</p>
+<a id="CBHEBDFG"></a>
+<div id="OANEP595" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">4.1</span> ETL Architecture</h2>
+<p>Figure 4-1 displays the ETL process delivered with Oracle Argus Analytics.</p>
+<div id="OANEP596" class="figure">
+<p class="titleinfigure"><a id="sthref46"></a>Figure 4-1 The Oracle Argus Analytics ETL Architecture</p>
+<img width="798" height="581" src="img/opva_arch.jpg" alt="Surrounding text describes Figure 4-1 ." /><br /></div>
+<!-- class="figure" -->
+<p>Oracle Argus Analytics has ETLs defined in the following two technology flavors:</p>
+<ul>
+<li>
+<p>Informatica</p>
+</li>
+<li>
+<p>Oracle Data Integrator (ODI)</p>
+</li>
+</ul>
+<p>Set up as a recurring job in DAC/ODI, the Extraction, Transformation, and Load process (ETL) is designed to periodically capture targeted metrics (dimension and fact data) from multiple Safety databases, transform and organize them for efficient query, and populate the star-schema tables.</p>
+<p>While the Oracle Argus Analytics data model supports data extraction from multiple sources, Oracle Argus Analytics includes only source-dependent extract (SDE) mappings (in case of Informatica)/ODI for the Oracle Argus Safety database. However, you can also define SDE mappings from additional external sources that write to the appropriate staging tables. Note that you are responsible for resolving any duplicate records that may be created as a consequence.</p>
+<p>The SDE programs map the transactional data to staging tables, in which the data must conform to a standardized format, effectively merging the data from multiple, disparate database sources. This is the architectural feature that accommodates external database sourcing.</p>
+<p>The staged data is transformed using the source-independent loads (SILs) to star-schema tables, where such data are organized for efficient query by the Oracle BI Server.</p>
+<p>There is one SDE mapping for each target table, which extracts data from the source system and loads it to the staging tables. SDEs have the following features:</p>
+<ul>
+<li>
+<p>Incremental Submission Mode: Oracle Argus Analytics-supplied ETL uses timestamps and journal tables in the source transactional system to optimize periodic loads.</p>
+</li>
+<li>
+<p>Bulk and Normal Load (for Informatica ETLs only): <span class="italic">Bulk load</span> uses block transfers to expedite loading of large data volume. It is intended for use during initial data mart population. Bulk load is faster, if data volume is sufficiently large. However, if load is interrupted (for example, disk space is exhausted, power failure), load cannot be restarted in the middle; you must restart the load.</p>
+<p><span class="italic">Normal load</span> writes one record at a time. It is intended to be used for updates to the data mart, once population has been completed. Normal load is faster, if data volume is sufficiently small. You can also restart load if the load is interrupted.</p>
+<p>Setting Bulk or Normal load option should be done at Workflow session in Informatica. Perform the following steps to set the load option:</p>
+<ol>
+<li>
+<p>Navigate to Session in a workflow and edit the task properties.</p>
+</li>
+<li>
+<p>Navigate to the Mappings subtab and select <span class="bold">'Bulk/Normal</span>' under Target Load type.</p>
+</li>
+<li>
+<p>Save the workflow.</p>
+</li>
+</ol>
+</li>
+</ul>
+<p>There is one SIL mapping/interface for each target table. The SIL extracts the normalized data from the staging table and inserts it into the data mart star-schema target table. SILs have the following attributes:</p>
+<ul>
+<li>
+<p>Concerning changes to dimension values over time, Oracle Argus Analytics overwrites old values with new ones. This strategy is termed as <span class="italic">Slowly Changing Dimension approach 1</span>.</p>
+</li>
+<li>
+<p>Oracle Argus Analytics's data model includes aggregate tables and a number of indexes, designed to minimize query time.</p>
+</li>
+<li>
+<p>By default, bulk load is disabled for all SILs for incremental load (in case of Informatica ETLs only).</p>
+</li>
+<li>
+<p>The results of each ETL execution is logged by Informatica/ODI. The logs hold information about errors encountered, during execution.</p>
+<p>Informatica provides the following four error tables:</p>
+<ul>
+<li>
+<p>PMERR_DATA</p>
+</li>
+<li>
+<p>PMERR_MSG</p>
+</li>
+<li>
+<p>PMERR_SESS</p>
+</li>
+<li>
+<p>PMERR_TRANS</p>
+</li>
+</ul>
+<p>For ODI, the EL$_&lt;TABLE_NAME&gt; will store the erroneous data rows per table. Example: For W_PRODUCT_D ETL the error table is EL$_W_PRODUCT_D.</p>
+<p>During ETL execution, records which fail to be inserted in the target table (for example, some records violate a constraint) are placed in the Informatica PowerCenter error tables/ODI error tables, as mentioned above. You can review which records did not make it into the data mart, and decide on appropriate action with respect to them.</p>
+</li>
+</ul>
+<div id="OANEP600" class="sect2"><a id="sthref47"></a>
+<h3 class="sect2"><span class="secnum">4.1.1</span> Oracle Argus Analytics Hierarchy</h3>
+<p>Figure 4-2 displays the Oracle Argus Analytics hierarchy using DAC:</p>
+<div id="OANEP996" class="figure">
+<p class="titleinfigure"><a id="sthref48"></a>Figure 4-2 Oracle Argus Analytics Hierarchy using DAC</p>
+<img width="491" height="288" src="img/domain_hier.gif" alt="Surrounding text describes Figure 4-2 ." /><br /></div>
+<!-- class="figure" -->
+<p>Oracle Argus Analytics follows the hierarchy using DAC, as listed below:</p>
+<ul>
+<li>
+<p>CONTAINER (OPVA_Datawarehouse) - A single container that holds all objects used for Oracle Argus Analytics.</p>
+</li>
+<li>
+<p>EXECUTION PLAN (Oracle Argus Analytics Data Mart Load) - A data transformation plan defined on subject areas that needs to be transformed at certain frequencies of time. An execution plan is defined based on business requirements for when the data mart needs to be loaded. Single Execution Plan to Load Complete Warehouse.</p>
+</li>
+<li>
+<p>SUBJECT AREAS - A logical grouping of tables related to a particular subject or application context. It also includes the tasks that are associated with the tables, as well as the tasks required to load the tables. Subject areas are assigned to execution plans, which can be scheduled for full or incremental loads.</p>
+</li>
+<li>
+<p>TASK GROUPS - This is a group of tasks that should be run in a given order.</p>
+</li>
+<li>
+<p>TASKS - A unit of work for loading one or more tables. A task comprises the following: source and target tables, phase, execution type, truncate properties, and commands for full or incremental loads. A single Informatica workflow.</p>
+</li>
+</ul>
+<p>Figure 4-3 displays the Oracle Argus Analytics hierarchy using:</p>
+<div id="OANEP601" class="figure">
+<p class="titleinfigure"><a id="sthref49"></a>Figure 4-3 Oracle Argus Analytics Hierarchy for ODI</p>
+<img width="955" height="543" src="img/hierarchy.jpg" alt="Surrounding text describes Figure 4-3 ." /><br /></div>
+<!-- class="figure" -->
+<p>Oracle Argus Analytics follows the hierarchy for ODI, as listed below:</p>
+<ul>
+<li>
+<p>ODI REPOSITORY - ODI Master and Work repository, which holds all the ODI objects for Oracle Argus Analytics ETL.</p>
+</li>
+<li>
+<p>PROJECT - A collection of all Argus Analytics-related ODI ETL objects.</p>
+</li>
+<li>
+<p>KNOWLEDGE MODULE - Templates of PLSQL code used in Interfaces/Mappings to achieve a specific ETL flow.</p>
+</li>
+<li>
+<p>LOAD PLAN - ETL execution plan, which holds a pre-defined ordered set of scenarios to load the warehouse appropriately.</p>
+</li>
+<li>
+<p>SCENARIO - The generated executable (and uneditable) code of the objects in ODI like Package, Procedure, Interfaces/Mappings, and Variables. Scenarios can be considered as frozen versions of the code at the time of generation, with subsequent updates of the relevant unit of code not affecting it.</p>
+</li>
+<li>
+<p>PACKAGE - An ordered set of Interfaces/Mappings, Procedures, variables and packages as well to be executed in a defined manner.</p>
+</li>
+<li>
+<p>INTERFACE/MAPPING - Executable ETL code for loading the target tables.</p>
+</li>
+<li>
+<p>PROCEDURE - Modularized executable code for loading the target tables.</p>
+</li>
+<li>
+<p>VARIABLE - Used for making code path decisions based on the user input provided while executing Load Plans.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BABIGAAJ"></a>
+<div id="OANEP602" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">4.2</span> Executing the ETL Execution Plans in Informatica</h2>
+<p>To load data from the source to their target tables in the data mart, run the Execution Plan packaged with Oracle Argus Analytics. Perform the following tasks in DAC:</p>
+<ol>
+<li>
+<p>Navigate to the <span class="bold">Execute</span> view.</p>
+</li>
+<li>
+<p>Select <span class="bold">Oracle Argus Analytics Warehouse</span> execution plan.</p>
+</li>
+<li>
+<p>Set the parameter values under the <span class="bold">Parameter</span> tab.</p>
+</li>
+<li>
+<p>Build the execution plan.</p>
+</li>
+<li>
+<p>Click <span class="bold">Run</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<div id="OANEP997" class="sect1"><!-- infolevel="all" infotype="General" --><a id="sthref50"></a>
+<h2 class="sect1"><span class="secnum">4.3</span> Parameters Used by Informatica ETLs</h2>
+<p>The following parameters are used by Informatica ETLs:</p>
+<ol>
+<li>
+<div id="OANEP998" class="tblformal">
+<p class="titleintable"><a id="sthref51"></a><a id="sthref52"></a>Table 4-1 Informatica ETL Parameters</p>
+<table class="cellalignment13" title="Informatica ETL Parameters" summary="Informatica ETL Parameters" dir="ltr">
+<thead>
+<tr class="cellalignment2">
+<th class="cellalignment14" id="r1c1-t2">Parameters</th>
+<th class="cellalignment14" id="r1c2-t2">Description</th>
+<th class="cellalignment14" id="r1c3-t2">Allowed Values</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r2c1-t2" headers="r1c1-t2">
+<p>$$p_config_days</p>
+</td>
+<td class="cellalignment8" headers="r2c1-t2 r1c2-t2">
+<p>Reduces the incremental extract window by the specified number of days. E.g.: Extract all changed rows between LAST_EXTRACT_DATE and (SYSDATE - $$p_config_days)</p>
+</td>
+<td class="cellalignment8" headers="r2c1-t2 r1c3-t2">
+<p>Integers</p>
+<p>Recommended value:</p>
+<p>0</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r3c1-t2" headers="r1c1-t2">
+<p>$$p_enterprise_id</p>
+</td>
+<td class="cellalignment8" headers="r3c1-t2 r1c2-t2">
+<p>The specific Enterprise ID to run the ETL for</p>
+</td>
+<td class="cellalignment8" headers="r3c1-t2 r1c3-t2">
+<p>-1: Runs the Incremental ETL for the entire Warehouse</p>
+<p>0: Runs the Incremental ETL for all the enterprises the user ($$p_user_name) has access to.</p>
+<p>Integer Value [1,2,3, etc]: Runs the Incremental ETL for the specified Enterprise only.</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r4c1-t2" headers="r1c1-t2">
+<p>$$p_etl_proc_id</p>
+</td>
+<td class="cellalignment8" headers="r4c1-t2 r1c2-t2">
+<p>The unique Identifier for the ETL Process that is run and it takes its value by default from DAC or from ODI</p>
+</td>
+<td class="cellalignment8" headers="r4c1-t2 r1c3-t2">
+<p>Do not change or specify any other value. Please leave it unmodified.</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r5c1-t2" headers="r1c1-t2">
+<p>$$p_include_pseudo_state_flag</p>
+</td>
+<td class="cellalignment8" headers="r5c1-t2 r1c2-t2">
+<p>The parameter defines whether to include the workflow states present between the Locking record and the Unlocking record of a case in the Case Workflow State Fact table.</p>
+</td>
+<td class="cellalignment8" headers="r5c1-t2 r1c3-t2">
+<p>Default value is 1.</p>
+<p>1: Include the Workflow States between Locking and Unlocking records of the case.</p>
+<p>0: Exclude the Workflow States between Locking and Unlocking records of the case.</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r6c1-t2" headers="r1c1-t2">
+<p>$$p_last_extract_date</p>
+</td>
+<td class="cellalignment8" headers="r6c1-t2 r1c2-t2">
+<p>System-defined value for defining the start date of the extract window for Incremental Data or the last time the ETL ran successfully for the enterprise specified</p>
+</td>
+<td class="cellalignment8" headers="r6c1-t2 r1c3-t2">
+<p>Do not change</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r7c1-t2" headers="r1c1-t2">
+<p>$$p_override_last_extract_date</p>
+</td>
+<td class="cellalignment8" headers="r7c1-t2 r1c2-t2">
+<p>Specify a Date value in the format MM/DD/RRRR in case you want to override the last extract date for the Incremental Data.</p>
+</td>
+<td class="cellalignment8" headers="r7c1-t2 r1c3-t2">
+<p>Date Values such as 01/01/1999 or 12/23/2007</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r8c1-t2" headers="r1c1-t2">
+<p>$$p_rekey_fact</p>
+</td>
+<td class="cellalignment8" headers="r8c1-t2 r1c2-t2">
+<p>To rekey fact tables in case data in the W_HS_MAPPING_S defined for match and merge has changed</p>
+</td>
+<td class="cellalignment8" headers="r8c1-t2 r1c3-t2">
+<p>0: Will not rekey the Fact tables</p>
+<p>1: Will rekey the Fact tables</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r9c1-t2" headers="r1c1-t2">
+<p>$$p_user_name</p>
+</td>
+<td class="cellalignment8" headers="r9c1-t2 r1c2-t2">
+<p>The user name which the Incremental ETL shall use to set the VPD Context for the specified enterprise in the parameter: $$p_enterprise_id. This value should be passed inside single quotes: such as 'username'.</p>
+</td>
+<td class="cellalignment8" headers="r9c1-t2 r1c3-t2">
+<p>Default Value: 'admin'</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r10c1-t2" headers="r1c1-t2">
+<p>$$START_DATE</p>
+</td>
+<td class="cellalignment8" headers="r10c1-t2 r1c2-t2">
+<p>The start date of the days to populate from in the W_DAY_D/PVA_DAY table. It should be in the format: MM/DD/RRRR</p>
+</td>
+<td class="cellalignment8" headers="r10c1-t2 r1c3-t2">
+<p>Default Value: 01/01/1980</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r11c1-t2" headers="r1c1-t2">
+<p>$$END_DATE</p>
+</td>
+<td class="cellalignment8" headers="r11c1-t2 r1c2-t2">
+<p>The end date of the days to populate till in the W_DAY_D/PVA_DAY table. It should be in the format: MM/DD/RRRR</p>
+</td>
+<td class="cellalignment8" headers="r11c1-t2 r1c3-t2">
+<p>Default Value: 01/01/2020</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" --></li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="CIHBIGCH"></a>
+<div id="OANEP999" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">4.4</span> Executing the ETL Load Plans in ODI</h2>
+<p>To load data from the source to their target tables in the data mart, run the Load Plan packaged with Oracle Argus Analytics ODI.</p>
+<p>Perform the following tasks in ODI Studio:</p>
+<ol>
+<li>
+<p>Navigate to the <span class="bold">Operator</span> tab.</p>
+</li>
+<li>
+<p>In the <span class="bold">Load Plans and Scenarios</span> sections, right-click the <span class="bold">Load Plan: LP_FL_AN</span> for full loads or <span class="bold">LP_IL_AN</span> for Incremental Loads option and select <span class="bold">Execute/Run</span>.</p>
+</li>
+<li>
+<p>Provide the values for the Load Plan variables, as mentioned in the table below.</p>
+<div id="OANEP1000" class="tblformal">
+<p class="titleintable"><a id="sthref53"></a><a id="sthref54"></a>Table 4-2 ODI Parameters</p>
+<table class="cellalignment13" title="ODI Parameters" summary="ODI Parameters" dir="ltr">
+<thead>
+<tr class="cellalignment2">
+<th class="cellalignment14" id="r1c1-t3">Parameters</th>
+<th class="cellalignment14" id="r1c2-t3">Load Type</th>
+<th class="cellalignment14" id="r1c3-t3">Description</th>
+<th class="cellalignment14" id="r1c4-t3">Allowed Values</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r2c1-t3" headers="r1c1-t3">
+<p>VAR_ALN_PERIOD_FROM_DATE</p>
+</td>
+<td class="cellalignment8" headers="r2c1-t3 r1c2-t3">
+<p>Full Load</p>
+</td>
+<td class="cellalignment8" headers="r2c1-t3 r1c3-t3">
+<p>The start date of the days to populate from in the W_DAY_D/PVA_DAY table. It should be in the format: MM/DD/RRRR</p>
+</td>
+<td class="cellalignment8" headers="r2c1-t3 r1c4-t3">
+<p>Date values such as:</p>
+<p>01/01/1980</p>
+<p>Recommended value:</p>
+<p>01/01/1980</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r3c1-t3" headers="r1c1-t3">
+<p>VAR_ALN_PERIOD_TO_DATE</p>
+</td>
+<td class="cellalignment8" headers="r3c1-t3 r1c2-t3">
+<p>Full Load</p>
+</td>
+<td class="cellalignment8" headers="r3c1-t3 r1c3-t3">
+<p>The end date of the days to populate till in the W_DAY_D/PVA_DAY table. It should be in the format: MM/DD/RRRR</p>
+</td>
+<td class="cellalignment8" headers="r3c1-t3 r1c4-t3">
+<p>Date values such as: 12/31/2019</p>
+<p>Recommended Value: 12/31/2019</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r4c1-t3" headers="r1c1-t3">
+<p>VAR_INT_TRUNCATE_STAGE</p>
+</td>
+<td class="cellalignment8" headers="r4c1-t3 r1c2-t3">
+<p>Both</p>
+</td>
+<td class="cellalignment8" headers="r4c1-t3 r1c3-t3">
+<p>This variable is used to decide whether to truncate the stage table or not and is useful in multiple Argus Safety DB support</p>
+</td>
+<td class="cellalignment8" headers="r4c1-t3 r1c4-t3">
+<p>Valid values:0: Does not truncate Stage table1: Truncate Stage tableShould be specified as 1 always in case of Single Argus Safety Instance as source information</p>
+<p>Recommended Value: 1</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r5c1-t3" headers="r1c1-t3">
+<p>VAR_INT_COLLECT_STATISTICS</p>
+</td>
+<td class="cellalignment8" headers="r5c1-t3 r1c2-t3">
+<p>Both</p>
+</td>
+<td class="cellalignment8" headers="r5c1-t3 r1c3-t3">
+<p>This variable is used to decide whether the statistics of the target tables need to be collected or not.</p>
+</td>
+<td class="cellalignment8" headers="r5c1-t3 r1c4-t3">
+<p>Default Value: 1</p>
+<p>Values Accepted: 0,1</p>
+<p>0: Load Plans will not collect statistics</p>
+<p>1: Load Plans will collect statistics after loading data</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r6c1-t3" headers="r1c1-t3">
+<p>VAR_ALN_ENTERPRISE</p>
+</td>
+<td class="cellalignment8" headers="r6c1-t3 r1c2-t3">
+<p>Both</p>
+</td>
+<td class="cellalignment8" headers="r6c1-t3 r1c3-t3">
+<p>The specific Enterprise ID to run the ETL for.</p>
+</td>
+<td class="cellalignment8" headers="r6c1-t3 r1c4-t3">
+<p>-1: Runs the ETL for the entire Warehouse0: Runs the ETL for all the enterprises the user ($$p_user_name) has access toInteger Value [1,2,3, etc]: Runs the Incremental ETL for the specified Enterprise only.</p>
+<p><span class="bold">Note:</span> For Full Load, this value has to be -1.</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r7c1-t3" headers="r1c1-t3">
+<p>VAR_ALN_ERROR_REJECT_LIMIT</p>
+</td>
+<td class="cellalignment8" headers="r7c1-t3 r1c2-t3">
+<p>Both</p>
+</td>
+<td class="cellalignment8" headers="r7c1-t3 r1c3-t3">
+<p>This variable is used to set the number of rows that will be tracked in the respective error tables prior to aborting the ETL in case of errors.</p>
+</td>
+<td class="cellalignment8" headers="r7c1-t3 r1c4-t3">
+<p>Valid Values:Positive Integer numbers: (E.g. 0, 100, 1000, etc.)UNLIMITED: All the error records are logged</p>
+<p>Recommended Value: UNLIMITED</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r8c1-t3" headers="r1c1-t3">
+<p>VAR_ALN_USER_NAME</p>
+</td>
+<td class="cellalignment8" headers="r8c1-t3 r1c2-t3">
+<p>Both</p>
+</td>
+<td class="cellalignment8" headers="r8c1-t3 r1c3-t3">
+<p>The user name for which the ETL shall use to set the VPD Context for the specified enterprise in the parameter: VAR_ALN_ENTERPRISE. This value should be passed inside single quotes: such as 'username'.</p>
+</td>
+<td class="cellalignment8" headers="r8c1-t3 r1c4-t3">
+<p>Default value: 'admin'</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r9c1-t3" headers="r1c1-t3">
+<p>VAR_INT_RAISE_ERROR</p>
+</td>
+<td class="cellalignment8" headers="r9c1-t3 r1c2-t3">
+<p>Both</p>
+</td>
+<td class="cellalignment8" headers="r9c1-t3 r1c3-t3">
+<p>Setting this variable to 0 or 1 will appropriately either stop a Load Plan/Interfaces/Mappings or continue the same when data errors are encountered during the load.</p>
+</td>
+<td class="cellalignment8" headers="r9c1-t3 r1c4-t3">
+<p>0: Do not raise data error when encountered during ETLs1: Raise data error when encountered during ETLs</p>
+<p>Recommended Value: 1</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r10c1-t3" headers="r1c1-t3">
+<p>VAR_INT_CONFIG_DAYS</p>
+</td>
+<td class="cellalignment8" headers="r10c1-t3 r1c2-t3">
+<p>Incremental Load</p>
+</td>
+<td class="cellalignment8" headers="r10c1-t3 r1c3-t3">
+<p>Reduces the incremental extract window by the specified number of days. Example: Extract all changed rows between LAST_EXTRACT_DATE and (SYSDATE - $$p_config_days)</p>
+</td>
+<td class="cellalignment8" headers="r10c1-t3 r1c4-t3">
+<p>Integers</p>
+<p>Recommended Value: 0</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r11c1-t3" headers="r1c1-t3">
+<p>VAR_INT_REKEY_FACT</p>
+</td>
+<td class="cellalignment8" headers="r11c1-t3 r1c2-t3">
+<p>Incremental Load</p>
+</td>
+<td class="cellalignment8" headers="r11c1-t3 r1c3-t3">
+<p>To rekey fact tables in case data in the W_HS_MAPPING_S defined for match and merge has changed</p>
+</td>
+<td class="cellalignment8" headers="r11c1-t3 r1c4-t3">
+<p>0: Will not rekey the Fact tables 1: Will rekey the Fact tables</p>
+<p>Recommended Value: 0</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r12c1-t3" headers="r1c1-t3">
+<p>VAR_INT_OVERRIDE_LAST_EXTRACT_DATE</p>
+</td>
+<td class="cellalignment8" headers="r12c1-t3 r1c2-t3">
+<p>Incremental Load</p>
+</td>
+<td class="cellalignment8" headers="r12c1-t3 r1c3-t3">
+<p>Specify a Date value in the format MM/DD/RRRR if you want to override the last extract date for the Incremental Data for the specific ETL run. This will cause reload of data in the warehouse that are present in the given incremental extract window.</p>
+</td>
+<td class="cellalignment8" headers="r12c1-t3 r1c4-t3">
+<p>Date values such as:01/01/1900 or 12/23/2012</p>
+<p>Recommended Value: NULL (Change this with discretion)</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r13c1-t3" headers="r1c1-t3">
+<p>VAR_INT_INCLUDE_PSEUDO_ST_CODE_FLG</p>
+</td>
+<td class="cellalignment8" headers="r13c1-t3 r1c2-t3">
+<p>Both</p>
+</td>
+<td class="cellalignment8" headers="r13c1-t3 r1c3-t3">
+<p>The parameter defines whether to include the workflow states present between the Locking record and the Unlocking record of a case in the Case Workflow State Fact table.</p>
+</td>
+<td class="cellalignment8" headers="r13c1-t3 r1c4-t3">
+<p>Date values is 1.1: Include the Workflow States between Locking and Unlocking records of the case.0: Exclude the Workflow States between Locking and Unlocking records of the case.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" --></li>
+<li>
+<p>Click <span class="bold">OK</span> to run the Load Plan.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="BABJGBHI"></a>
+<div id="OANEP603" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">4.5</span> Customizing an ETL Execution Plan (Informatica)/Load Plan (ODI)</h2>
+<p>When you customize an ETL Execution Plan (Informatica)/Load Plan (ODI), it is your responsibility to maintain version control over changes to ETL mappings/interfaces.</p>
+<p>Oracle recommends that you carefully track the changes you make to Oracle-supplied ETL so that you can re-apply these changes in subsequent releases.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The ETL Execution Plans that extract data for the data mart fact tables assume that the dimensions to which each fact is related are up-to-date at the time the fact ETL Execution Plans are executed. This assumption is the basis for certain fact calculations that would provide erroneous results if the assumption were not true.
+<p>As shipped, Oracle Argus Analytics ETL workflows ensure this interlock by executing the ETL for related dimensions immediately before running the ETL for a fact.<br />
+This is standard data mart management practice, but especially important, given the interdependence of the dimensions and the fact. The need to execute dimension ETL immediately before corresponding fact ETL, and the danger of not doing it, is emphasized here because it is possible (though discouraged) to modify these shipped workflows.</p>
+</div>
+</div>
+<!-- class="sect1" -->
+<a id="BABIFGGG"></a>
+<div id="OANEP604" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">4.6</span> Creating an ETL Execution Plan (Informatica Only)</h2>
+<p>Though Oracle Argus Analytics includes ETL Execution Plans for extracting data from Oracle Argus Safety to Oracle Argus Analytics data mart, you may want to create your own ETL to extract data from other data sources.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The value of DATASOURCE_NUM_ID is set to 1 for Oracle Argus Safety and is taken from the view VW_DATASOURCE present in the Argus Analytics Source Schema. Update this view to change the DATASOURCE_NUM_ID number, only if desired.
+<p>Also, ensure that this change (if needed) is done prior to running the Full Load for Argus Analytics. By default, we advise not to change this value (view).</p>
+</div>
+<p><span class="bold">See Also:</span></p>
+<ul>
+<li>
+<p><span class="italic">Informatica PowerCenter Online Help</span></p>
+</li>
+</ul>
+<p>To add one or more tables or columns along with the associated ETL Execution Plans to populate data into these tables, perform the following tasks:</p>
+<ol>
+<li>
+<p>Create the new source and target table metadata inside Informatica.</p>
+</li>
+<li>
+<p>Work in Informatica PowerCenter and create the ETL components (transformation or workflow) for this program.</p>
+</li>
+<li>
+<p>Create the required workflow for this mapping.</p>
+</li>
+<li>
+<p>Connect to DAC and create a new task for this new mapping.</p>
+</li>
+<li>
+<p>Synchronize the task.</p>
+</li>
+<li>
+<p>Add the task to subject area.</p>
+</li>
+<li>
+<p>Build the Execution Plan (Oracle Argus Analytics Data Mart Load).</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="CIHGIGEJ"></a>
+<div id="OANEP1001" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">4.7</span> Creating an ETL Load Plan (ODI Only)</h2>
+<p>Though Oracle Argus Analytics includes ETL Load Plans for extracting data from Oracle Argus Safety to Oracle Argus Analytics data mart, you may want to create your own ETL Interfaces/Mappings to extract data from other data sources.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The value of DATASOURCE_NUM_ID is set to 1 for Oracle Argus Safety and is taken from the view VW_DATASOURCE present in the Argus Analytics Source Schema (AN_SRC). Update this view to change the DATASOURCE_NUM_ID number, only if desired.
+<p>Also, ensure that this change (if needed) is done prior to running the Full Load for Argus Analytics. By default, we advise not to change this value (view).</p>
+</div>
+<p><span class="bold">See Also:</span></p>
+<ul>
+<li>
+<p><span class="italic">Oracle &reg; Fusion Middleware Developer's Guide for Oracle Data Integrator 11g/12c</span></p>
+</li>
+</ul>
+<p>To add one or more tables or columns along with the associated ETL Load Plans to populate data into these tables, perform the following tasks:</p>
+<ol>
+<li>
+<p>Create the new Datastore for source and target table metadata inside the appropriate ODI Models.</p>
+</li>
+<li>
+<p>Work in ODI Studio and create the ETL components (Interface/Mapping and its Scenario) for this program to populate the table or column appropriately.</p>
+</li>
+<li>
+<p>Edit or create an existing Load Plan.</p>
+</li>
+<li>
+<p>Add the scenario generated at the appropriate hierarchical level and position where it needs to be executed, in the Load Plan.</p>
+</li>
+<li>
+<p>Save the Load Plan.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="BABBFBJB"></a>
+<div id="OANEP605" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">4.8</span> Modifying an ETL Execution Plan (Informatica Only)</h2>
+<p>You may also want to modify an existing ETL to meet your reporting requirements.</p>
+<p><span class="bold">See Also:</span></p>
+<ul>
+<li>
+<p><span class="italic">Informatica PowerCenter Online Help</span></p>
+</li>
+</ul>
+<p>To modify an ETL without any changes to the associated tables or columns, perform the following tasks:</p>
+<ol>
+<li>
+<p>Identify the Execution Plan that needs to be modified in Informatica repository.</p>
+</li>
+<li>
+<p>Open and Modify the ETLs (transformation and/or workflow).</p>
+</li>
+<li>
+<p>Test and save the changes in repository.</p>
+</li>
+<li>
+<p>Connect to DAC and navigate to the corresponding task.</p>
+</li>
+<li>
+<p>Right-click the task and synchronize it.</p>
+</li>
+<li>
+<p>Navigate to the execution plan and execute ETL to verify the changes.</p>
+</li>
+</ol>
+<p>To modify one or more tables or columns without any changes to the associated ETL programs (typically to widen a column):</p>
+<ol>
+<li>
+<p>Change the table/view properties, as required.</p>
+</li>
+<li>
+<p>Save the mapping and refresh the workflow.</p>
+</li>
+<li>
+<p>Connect to DAC and navigate to corresponding task and refresh it.</p>
+</li>
+</ol>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If the changes to the tables or columns are not compatible with the table that is installed in the data mart schema, you will get a warning while making the change. For example, if you are reducing the length of a number column from 15 to 10, the change is not compatible with the data existing in the table.</div>
+</div>
+<!-- class="sect1" -->
+<a id="CIHDDEFF"></a>
+<div id="OANEP1002" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">4.9</span> Modifying an ETL Load Plan (ODI Only)</h2>
+<p>You may also want to modify an existing ETL to meet your reporting requirements.</p>
+<p><span class="bold">See Also:</span></p>
+<ul>
+<li>
+<p><span class="italic">Oracle &reg; Fusion Middleware Developer's Guide for Oracle Data Integrator 11g/12c</span></p>
+</li>
+</ul>
+<p>To modify an ETL Load Plan without any changes to the associated tables or columns, perform the following tasks:</p>
+<ol>
+<li>
+<p>Identify the Load Plan that needs to be modified in Informatica repository.</p>
+</li>
+<li>
+<p>Identify the Interface/Mapping or Package in the Load Plan that you intend to modify.</p>
+</li>
+<li>
+<p>Open and modify the ETLs (Interface/Mapping/Procedure) in ODI Studio under the Project ArgusAnalytics111.</p>
+</li>
+<li>
+<p>Test and save the changes in ODI Studio.</p>
+</li>
+<li>
+<p>Verify that the changes made have been applied successfully.</p>
+</li>
+<li>
+<p>Regenerate the associated scenario with the Interface/Mapping/Procedure.</p>
+</li>
+<li>
+<p>Connect to DAC and navigate to the corresponding task.</p>
+</li>
+</ol>
+<p>To modify one or more tables or columns without any changes to the associated ETL programs (typically to widen a column):</p>
+<ol>
+<li>
+<p>Change the table/view properties, as required.</p>
+</li>
+<li>
+<p>Save the Interface/Mapping and regenerate the associated scenario in ODI Studio.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="BABEIEJE"></a>
+<div id="OANEP606" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">4.10</span> Scheduling an ETL Execution Plan (Informatica Only)</h2>
+<p>When you submit an Execution Plan for execution in DAC, you can schedule it execute at regular intervals.</p>
+<p>To schedule an Execution Plan, perform the following tasks:</p>
+<ol>
+<li>
+<p>Navigate to the <span class="bold">Scheduler</span> tab within the <span class="bold">Execute</span> view.</p>
+</li>
+<li>
+<p>Create a new schedule plan.</p>
+</li>
+<li>
+<p>Enter the required details and click <span class="bold">Save</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="CIHJBHFF"></a>
+<div id="OANEP1003" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">4.11</span> Scheduling an ETL Load Plan (ODI Only)</h2>
+<p>When you submit a Load Plan for execution in DAC, you can schedule it execute at regular intervals.</p>
+<p>To schedule a Load Plan, perform the following tasks:</p>
+<ol>
+<li>
+<p>In the ODI Studio, navigate to the <span class="bold">Load Plans and Scenarios</span> section in the <span class="bold">Operator</span> tab.</p>
+</li>
+<li>
+<p>Expand the Load Plan that you wish to schedule.</p>
+</li>
+<li>
+<p>Right-click on the <span class="bold">Scheduling</span> tree node and select <span class="bold">New Scheduling</span>.</p>
+</li>
+<li>
+<p>Enter the required details and click <span class="bold">Save</span>.</p>
+</li>
+<li>
+<p>Restart the associated Physical Agent with the Load Plan (default value: PA_AN).</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="CIHJJGBB"></a>
+<div id="OANEP1004" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">4.12</span> Customizable User Exits in Oracle Argus Analytics ETLs</h2>
+<p>The VW_CONFIGURABLE_TARGET_DAYS view, and the VW_CONFIGURABLE_DUESOON_DAYS view can be used to customize some of the attribute values used in Oracle Argus Analytics as per organization requirements.</p>
+<p>The views VW_CONFIGURABLE_TARGET_DAYS and VW_CONFIGURABLE_DUESOON_DAYS are used in the source code for the views Pending Cases Fact and Pending Reports Fact present in the Current Metrics of Oracle Argus Analytics and in the ETL SDE views.</p>
+<p>These objects are available in the AN_SRC schema created on the Argus Safety DB Instance, specified during Oracle Argus Analytics Installation.</p>
+<div id="OANEP1005" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref55"></a>
+<h3 class="sect2"><span class="secnum">4.12.1</span> VW_CONFIGURABLE_TARGET_DAYS</h3>
+<p>The VW_CONFIGURABLE_TARGET_DAYS view is similar to this function. This view, by default, returns 10 days for a serious case and 30 days if the case is not serious, as per the enterprise present. It can be modified accordingly, as per organizational requirements.</p>
+<div id="OANEP1006" class="tblformal">
+<p class="titleintable"><a id="sthref56"></a><a id="sthref57"></a>Table 4-3 Oracle Argus Analytics Presentation Catalog Attributes Affected - Lock Target Days</p>
+<table class="cellalignment13" title="Oracle Argus Analytics Presentation Catalog Attributes Affected - Lock Target Days" summary="This table lists some of the scenarios and the related necessary adjustments." dir="ltr">
+<thead>
+<tr class="cellalignment2">
+<th class="cellalignment14" id="r1c1-t8">ID</th>
+<th class="cellalignment14" id="r1c2-t8">Fact</th>
+<th class="cellalignment14" id="r1c3-t8">Column</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r2c1-t8" headers="r1c1-t8">
+<p>M-CVH01</p>
+</td>
+<td class="cellalignment8" headers="r2c1-t8 r1c2-t8">
+<p>Case Version</p>
+</td>
+<td class="cellalignment8" headers="r2c1-t8 r1c3-t8">
+<p>Lock Target Days</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r3c1-t8" headers="r1c1-t8">
+<p>M-PC04</p>
+</td>
+<td class="cellalignment8" headers="r3c1-t8 r1c2-t8">
+<p>Pending Cases</p>
+</td>
+<td class="cellalignment8" headers="r3c1-t8 r1c3-t8">
+<p>Lock Target Days</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" -->
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Refer to the <a href="catalog.htm#CEGFGJDE">Facts and Sources in Oracle Argus Analytics Presentation Catalog</a> for the other attributes that are dependent on the attributes mentioned in the above table.</div>
+</div>
+<!-- class="sect2" -->
+<div id="OANEP1007" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref58"></a>
+<h3 class="sect2"><span class="secnum">4.12.2</span> VW_CONFIGURABLE_DUESOON_DAYS</h3>
+<p>The VW_CONFIGURABLE_DUESOON_DAYS view is similar to this function. This view is used in the Pending Cases Fact and Pending Reports Fact views present in the Current Metrics. It can be modified accordingly, as per organizational requirements.</p>
+<div id="OANEP1008" class="tblformal">
+<p class="titleintable"><a id="sthref59"></a><a id="sthref60"></a>Table 4-4 Oracle Argus Analytics Presentation Catalog Attributes Affected - Due Soon Days</p>
+<table class="cellalignment13" title="Oracle Argus Analytics Presentation Catalog Attributes Affected - Due Soon Days" summary="This table lists some of the scenarios and the related necessary adjustments." dir="ltr">
+<thead>
+<tr class="cellalignment2">
+<th class="cellalignment14" id="r1c1-t10">ID</th>
+<th class="cellalignment14" id="r1c2-t10">Fact</th>
+<th class="cellalignment14" id="r1c3-t10">Column</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r2c1-t10" headers="r1c1-t10">
+<p>M-PC06</p>
+</td>
+<td class="cellalignment8" headers="r2c1-t10 r1c2-t10">&nbsp;</td>
+<td class="cellalignment8" headers="r2c1-t10 r1c3-t10">
+<p>Lock Due Soon Date</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r3c1-t10" headers="r1c1-t10">
+<p>M-PC02</p>
+</td>
+<td class="cellalignment8" headers="r3c1-t10 r1c2-t10">
+<p>Pending Cases</p>
+</td>
+<td class="cellalignment8" headers="r3c1-t10 r1c3-t10">
+<p>Earliest Exp Report Due Soon Date</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r4c1-t10" headers="r1c1-t10">
+<p>M-PC06</p>
+</td>
+<td class="cellalignment8" headers="r4c1-t10 r1c2-t10">
+<p>Pending Cases</p>
+</td>
+<td class="cellalignment8" headers="r4c1-t10 r1c3-t10">
+<p>Lock Due Soon Date</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r5c1-t10" headers="r1c1-t10">
+<p>M-PC09</p>
+</td>
+<td class="cellalignment8" headers="r5c1-t10 r1c2-t10">
+<p>Pending Cases</p>
+</td>
+<td class="cellalignment8" headers="r5c1-t10 r1c3-t10">
+<p>State Due Soon Date - I</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r6c1-t10" headers="r1c1-t10">
+<p>M-PC12</p>
+</td>
+<td class="cellalignment8" headers="r6c1-t10 r1c2-t10">
+<p>Pending Cases</p>
+</td>
+<td class="cellalignment8" headers="r6c1-t10 r1c3-t10">
+<p>State Due Soon Date - II</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r7c1-t10" headers="r1c1-t10">
+<p>M-PC16</p>
+</td>
+<td class="cellalignment8" headers="r7c1-t10 r1c2-t10">
+<p>Pending Cases</p>
+</td>
+<td class="cellalignment8" headers="r7c1-t10 r1c3-t10">
+<p># Unlocked Cases w Expedited Report Due Soon</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r8c1-t10" headers="r1c1-t10">
+<p>M-PC19</p>
+</td>
+<td class="cellalignment8" headers="r8c1-t10 r1c2-t10">
+<p>Pending Cases</p>
+</td>
+<td class="cellalignment8" headers="r8c1-t10 r1c3-t10">
+<p># Unlocked Cases Due Soon</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r9c1-t10" headers="r1c1-t10">
+<p>M-PC22</p>
+</td>
+<td class="cellalignment8" headers="r9c1-t10 r1c2-t10">
+<p>Pending Cases</p>
+</td>
+<td class="cellalignment8" headers="r9c1-t10 r1c3-t10">
+<p># Unlocked Cases w State Due Soon - I</p>
+</td>
+</tr>
+<tr class="cellalignment2">
+<td class="cellalignment8" id="r10c1-t10" headers="r1c1-t10">
+<p>M-PC25</p>
+</td>
+<td class="cellalignment8" headers="r10c1-t10 r1c2-t10">
+<p>Pending Cases</p>
+</td>
+<td class="cellalignment8" headers="r10c1-t10 r1c3-t10">
+<p># Unlocked Cases w State Due Soon - II</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" -->
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Refer to the <a href="catalog.htm#CEGFGJDE">Facts and Sources in Oracle Argus Analytics Presentation Catalog</a> for the other attributes that are dependent on the attributes mentioned in the above table.</div>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment1">
+<tr>
+<td class="cellalignment8">
+<table class="cellalignment6">
+<tr>
+<td class="cellalignment5"><a href="part2.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment5"><a href="rpd_dw.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment10">
+<table class="cellalignment4">
+<tr>
+<td class="cellalignment5"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment5"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment5"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment5"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

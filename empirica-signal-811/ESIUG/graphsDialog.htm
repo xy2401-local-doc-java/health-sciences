@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-US" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Choosing a data mining results graph</title>
+<link rel="StyleSheet" href="Empirica.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body page-style="x-size: Letter;" page-frame-style="margin-top: 0.25in; margin-bottom: 0.25in; margin-left: 0.5in; margin-right: 0.5in;"><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Viewing data mining results\nViewing results graphs\nChoosing a data mining results graph");
+addAvenueInfo("Working with Run Results","caseSeriesEntry.htm","palettesDialog.htm");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("About_WebVDME.htm", "", "&gt;", "Overview", "About_WebVDME_1.htm");
+document.write("<a href=\"About_Data_Mining_Run_Results.htm\">Viewing data mining results<\/a> &gt; <a href=\"graphsDialog.htm\">Viewing results graphs<\/a> &gt; Choosing a data mining results graph<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('About_WebVDME.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Choosing a data mining results graph</h1>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">1.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Click the <span class="Button">Data Mining Results</span> tab.</p>
+
+<p class="ListContinue1">The Select Criteria page appears.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">2.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>In the <span class="Button">Run Nam</span>e field, <a href="runResultsFilter.htm">select the run</a> from the drop-down list.&#160;You can also click <span class="Button">Browse</span> next to the Run Name field to <a href="runChooserRight.htm">find and select a run</a>.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">3.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Specify at least <a href="runResultsFilter.htm">one drug term</a> or one event term. &#160;For graphs to be available, you can specify no more than 200 drug terms or 200 event terms.</p>
+
+<p class="ListContinue1"><span class="Button">Notes:</span></p>
+<ul>
+<li class="NumBullet3">The limit of 200 is based on terms that are actually in the results.</li>
+<li class="NumBullet3">The limit of 200 is the number of terms remaining after applying restrictions on the Select Criteria page. For example, If you specify 300 PTs and EBGM &gt; 5, and there are fewer than 200 drug-event combinations for which EBGM &gt; 5, graphs are available.</li>
+<li class="NumBullet3">You can display a sector map only if you specify no more than 5 drugs (that are actually in the results). The limit of 5 applies regardless of restrictions on the Select Criteria page.</li>
+<li class="NumBullet3">For MGPS runs, if you select the terms at a higher level in the hierarchy than the level at which data mining was performed (for example, you specify an HLGT and data mining was performed on PTs), typically the run includes more than 200 PTs.</li>
+</ul>
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">4.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Click <span class="Button">Choose graph</span>. &#160;</p>
+
+<p class="ListContinue1">The Choose Graph page appears, listing graph types that are suited to the data mining run and your selection criteria..</p>
+<p class="ListContinue1">The following headings appear:</p>
+<ul>
+<li class="NumBullet1"><span class="Button">Review a drug and its associations with other items (drugs or events)</span>—These graphs focus on a particular drug or drugs that you specified on the Select Criteria page. For example, suppose that you are interested in all the events associated with DrugA. You select DrugA on the Select Criteria page and then choose a graph in order to review results for the events associated with DrugA.</li>
+<li class="NumBullet1"><span class="Button">Review an event and its associations with other items (drugs or events)</span>—These graphs focus on a particular event or events that you specified on the Select Criteria page. For example, suppose that you are interested in all the drugs associated with Event1. You select Event1 on the Select Criteria page and then choose a graph in order to review results for the drugs associated with Event1.</li>
+</ul>
+<p class="ListBulletNote1"><span class="Button">Note:</span> If you are viewing results of a three-dimensional run and you specify 2 as the dimension (on the <a href="runResultsFilter.htm">Select Criteria page</a>), you can view graphs for the two-dimensional combinations in the results.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">5.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>If you want to <a href="palettesDialog.htm">modify the graph key</a> (for all graphs), click <span class="Button">Set Graph Cutpoint and Palette Choices</span>.</p>
+
+<p class="ListContinue1">The Graph Cutpoints and Palette Choices page appears. See <a href="palettesDialog.htm">Setting graph cutpoints and color choices</a> for more information.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">6.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Click <span class="Button">Save</span> to return to the Choose Graph page.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">7.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Choose a graph type and click its link.</p>
+
+<p class="ListContinue1">A graph display options page appears for the selected graph type.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">8.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="text-indent: -30px;">Specify graph display options and click</span> <span class="Button" style="text-indent: -30px;">Display</span><span style="text-indent: -30px;">. For information about setting display options, see:</span></p>
+
+<ul>
+<li class="NumBullet1"><a href="barGraphDialog.htm">Viewing a bar graph</a></li>
+<li class="NumBullet1"><a href="confGraphDialog.htm">Viewing a confidence interval graph</a></li>
+<li class="NumBullet1"><a href="discreteMapGraphDialog.htm">Viewing a discrete map graph</a></li>
+<li class="NumBullet1"><a href="cumulativeMapGraphDialog.htm">Viewing a cumulative map graph</a></li>
+<li class="NumBullet1"><a href="nestGraphDialog.htm">Viewing a nested confidence interval graph</a></li>
+<li class="NumBullet1"><a href="hierGraphDialog.htm">Viewing a hierarchy graph</a></li>
+<li class="NumBullet1"><a href="overlapGraphDialog.htm">Viewing an overlap graph</a></li>
+<li class="NumBullet1"><a href="sectorMapGraphDialog.htm">Viewing a sector map graph</a></li>
+</ul>
+<p class="ListContinue1">The graph appears on the right side of the page.</p>
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="margin-bottom: 0pt;">Copyright © 2002, 2018, Oracle and/or 
+	 its affiliates. All rights reserved. </p>
+	<p style="text-align: right; margin-top: 0pt; margin-bottom: 0pt;">Help 
+	 Build 8.1.1</p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

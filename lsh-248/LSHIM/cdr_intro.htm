@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Overview</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="description" content="This guide introduces Oracle Life Sciences Data Hub and contains information you need to design your Oracle LSH implementation to fill your company's needs." />
+<meta name="dcterms.created" content="2018-05-18T12:50:30Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Life Sciences Data Hub Implementation Guide" />
+<meta name="dcterms.identifier" content="E95828-01" />
+<meta name="dcterms.isVersionOf" content="LSHIM" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2011, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="pref.htm" title="Previous" type="text/html" />
+<link rel="Next" href="impl_intro.htm" title="Next" type="text/html" />
+<link rel="alternate" href="LSHIM.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="LSHIM.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="LSHIM.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">4/12</span> <!-- End Header -->
+<div id="LSHIM117" class="chapter"><a id="CHDHIDHG"></a>
+<h1 class="chapter"><span class="secnum">1</span> Overview</h1>
+<p>This section includes information on the following topics:</p>
+<ul>
+<li>
+<p><a href="#CHDIDGEF">About the Oracle Life Sciences Data Hub</a></p>
+</li>
+<li>
+<p><a href="#BABJCEJB">Loading Data</a></p>
+</li>
+<li>
+<p><a href="#BGBFEBDB">Storing Data</a></p>
+</li>
+<li>
+<p><a href="#BABEIFCF">Operating on Data</a></p>
+</li>
+<li>
+<p><a href="#CHDGJDJB">Reporting Data</a></p>
+</li>
+<li>
+<p><a href="#CHDCBFEJ">Automating Multiple Processes</a></p>
+</li>
+<li>
+<p><a href="#BABFFJBA">Viewing Data</a></p>
+</li>
+<li>
+<p><a href="#CHDDCCHD">Transferring Data Out of the Oracle Life Sciences Data Hub</a></p>
+</li>
+<li>
+<p><a href="#CHDEDHHE">Validating Object Definitions and Instances</a></p>
+</li>
+<li>
+<p><a href="#CHDGABGH">Reusing Object Definitions</a></p>
+</li>
+<li>
+<p><a href="#CHDGEBAB">Migrating Existing Programs, Data Sets, and Tables from Other Systems</a></p>
+</li>
+</ul>
+<a id="CHDIDGEF"></a>
+<div id="LSHIM118" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">About the Oracle Life Sciences Data Hub</h2>
+<p>The Oracle Life Sciences Data Hub (Oracle LSH) is a powerful and flexible data integration and statistical analysis tool. It is closely integrated with several external tools, notably the Oracle Business Intelligence Suite and SAS and can also be integrated with other tools using the Oracle LSH Adapter Toolkit. Oracle LSH allows you to load and analyze data from diverse systems, including clinical data management and remote data capture systems.</p>
+<p>Oracle LSH is designed to help you comply with pharmaceutical industry regulations: it maintains an audit trail of data transactions, stores all programs and tables as database objects under version control, and provides tools for validating these objects and, by extension, the data they touch within Oracle LSH. Using labeled or timestamp-based data snapshots and program versions, you can recreate submitted data.</p>
+<p>However, the Oracle Life Sciences Data Hub is not restricted to use with clinical data; you can use it to store and analyze financial, administrative, or any other kind of data as well.</p>
+<p>Oracle LSH's functionality covers three basic areas:</p>
+<ul>
+<li>
+<p><a href="#CHDGEHHF">Data Storage</a></p>
+</li>
+<li>
+<p><a href="#CHDFBCAI">Data Manipulation</a></p>
+</li>
+<li>
+<p><a href="#CHDHBHEC">Information Retrieval</a></p>
+</li>
+</ul>
+<p><a id="CHDGEHHF"></a><a id="LSHIM119"></a><span class="subhead3">Data Storage&nbsp;</span>Oracle LSH serves as a single repository of data originating in other systems, including Oracle, SAS, or any system from which you can produce a text file. You set up a connection with each source data system and load or refresh the data you specify as necessary.</p>
+<p>Through the connection Oracle LSH can read the data sets or tables you use in external SAS or Oracle systems and reproduce them automatically in Oracle LSH before loading data into them. You can continue to use these structures in Oracle LSH or adopt new industry standards such as CDISC and LOINC and move your current data into tables based on standards. If those standards change over time, you can adjust your Oracle LSH tables accordingly.</p>
+<p>Oracle LSH maintains data blinds on the tables you specify and allows blind breaks and unblinding with a combination of security privileges.</p>
+<p>Oracle LSH maintains an audit trail on data and maintains version control over all programs and other objects that manipulate data. In addition, for each report output produced in Oracle LSH, the system maintains a record of all the programs and other objects that manipulated the data displayed in the report beginning when the source data entered Oracle LSH.</p>
+<p>You can use Oracle LSH to integrate data in many ways. For example:</p>
+<ul>
+<li>
+<p>Create a single data repository for your company and a company you have acquired, even though the acquired company uses a different clinical data management system.</p>
+</li>
+<li>
+<p>Compare data from any number of ongoing and closed studies.</p>
+</li>
+<li>
+<p>View and analyze data collected in a system that is now obsolete.</p>
+</li>
+</ul>
+<p><a id="CHDFBCAI"></a><a id="LSHIM120"></a><span class="subhead3">Data Manipulation&nbsp;</span>To combine, analyze, and report on the data you load into Oracle LSH, you write programs. These programs can be developed in SAS, Oracle PL/SQL, or Oracle Reports.</p>
+<p>Each of these development environments is closely integrated with Oracle LSH. Oracle LSH stores the program code under version control. When you run a program in Oracle LSH, the system sends the job to the appropriate engine for execution. If the program writes data to tables, Oracle LSH tables receive the data. If the program generates a report, you can view the report, as well as the program's log file, through Oracle LSH.</p>
+<p>If you are currently using SAS to analyze clinical data, you can upload your programs, macros, and formats and continue using them in Oracle LSH. If you have SAS installed on your personal computer, you can open SAS directly from Oracle LSH and view Oracle LSH source data.</p>
+<p>You can combine a series of programs into a single executable process; for example, automatically load fresh data into Oracle LSH at regular intervals, generate a report on the new data after each load, and send an email notification that the report is ready to the appropriate personnel.</p>
+<p><a id="CHDHBHEC"></a><a id="LSHIM121"></a><span class="subhead3">Information Retrieval&nbsp;</span>You can retrieve information from the data repository in several ways:</p>
+<ul>
+<li>
+<p><span class="bold">Reports</span>. Write programs to generate reports&mdash;including tabulations, figures, and listings&mdash;on data.</p>
+</li>
+<li>
+<p><span class="bold">Report Sets</span>. Create formal sets of reports suitable for submission to regulatory agencies with a single table of contents, configurable page numbering, and hyperlinks. Using Oracle XML Publisher, you can create custom templates for these reports for A4- or US letter-sized paper with graphics and watermarks, and produce a single or multivolume PDF output.</p>
+</li>
+<li>
+<p><span class="bold">Data Visualizations</span>. Oracle LSH is integrated with Oracle Business Intelligence Enterprise Edition so that you can create ad hoc visualizations of Oracle LSH data in either tool, subject to Oracle LSH security requirements.</p>
+</li>
+<li>
+<p><span class="bold">Data Marts</span>. To send data out of Oracle LSH&mdash;to a partner organization or for longterm storage, for example&mdash;create Oracle LSH Data Marts, files of potentially very large amounts of data, in several possible formats including Oracle Export, SAS transport (XPORT and CPORT), SAS data sets, or text files.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect1" -->
+<div id="LSHIM122" class="sect1"><!-- infolevel="all" infotype="General" --><a id="sthref5"></a>
+<h2 class="sect1">Developing Programs and Applications</h2>
+<p>To support the functionality outlined above, Oracle LSH supports a definitional methodology. Each time you write a program in Oracle LSH you must also <span class="italic">define</span> the program as an <span class="italic">object</span>, create an <span class="italic">instance</span> of the object definition, and <span class="italic">install</span> it in the database so that it can interact with data. You can reuse a definition by creating multiple instances of it.</p>
+<p>Oracle LSH has seven predefined primary object types: Tables (which are equivalent to SAS data sets and Oracle tables), Load Sets, Programs, Workflows, Report Sets, Data Marts, and Business Areas (the basis for data visualizations). Each object type interacts in a predefined way with the internal system to accomplish a particular data handling task as described later in this chapter.</p>
+<p>You can develop libraries of standard object definitions that you have validated and declared suitable for reuse. You can then use these library definitions as modular building blocks to accomplish different business tasks, called <span class="italic">applications</span> in Oracle LSH.</p>
+<p><a id="LSHIM123"></a><span class="subhead3">Example&nbsp;</span>To develop an application whose purpose is to produce a set of adverse event reports for Study 01, you could do the following:</p>
+<ul>
+<li>
+<p>Create a Load Set definition to load the adverse event and demography data sets for Study 01 from your SAS system into Oracle LSH.</p>
+</li>
+<li>
+<p>(Optional) Create CDISC-compliant adverse event and demography Oracle LSH Table definitions and a SAS Program definition to write adverse event data into the CDISC adverse event table and demography data into the CDISC demography table.</p>
+</li>
+<li>
+<p>Write Program definitions that pull data from the adverse event and demography tables and generate reports (listings, figures, and tables).</p>
+</li>
+</ul>
+<p>You can create instances of the same object definitions in a different Work Area to quickly create the same application for Study 02, and again for Study 03, and so on.</p>
+<p><a id="LSHIM124"></a><span class="subhead3">Advantages&nbsp;</span>Although this definitional approach initially requires more work, it has the following advantages:</p>
+<ul>
+<li>
+<p><span class="bold">Regulatory Compliance</span>. Oracle LSH helps your company comply with industry regulations by maintaining version control over all definitional objects, and enabling you to set and meet criteria for validating all objects (see <a href="#CHDEDHHE">"Validating Object Definitions and Instances"</a>).</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You can recreate submitted (or other) data by running the same version of the program(s) that you originally used to generate the submitted data on the data that was current at that time, using a labeled or timestamp-based data snapshot.</div>
+</li>
+<li>
+<p><span class="bold">Reuse</span>. You can reuse object definitions, reducing work and increasing consistency. You can create new instances of existing object definitions or you can copy object definitions and modify them as necessary (see <a href="#CHDGABGH">"Reusing Object Definitions"</a>).</p>
+</li>
+<li>
+<p><span class="bold">Security</span>. You can develop a security system to control access to, and operations on, objects and outputs,which are stored as objects (see <a href="sec.htm#CIHJIIBI">Chapter 4, "Designing a Security System"</a>).</p>
+</li>
+<li>
+<p><span class="bold">Classification</span>. You can develop a classification system and classify objects and outputs accordingly. Classification allows you to label the many objects and outputs created in the course of a clinical trial to make them easier to find through searching and browsing (see <a href="class.htm#CHDGCFDE">Chapter 5, "Designing a Classification System for Searching and Browsing"</a>).</p>
+</li>
+</ul>
+<p>The following sections describe each data handling stage and the object type(s) predefined for use in each stage. Further information on object definition is included in <a href="org.htm#BGBFAHGA">Chapter 3, "Designing an Organizational Structure"</a> and in "Applications User Interface" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Application Developer's Guide</span></span>.</p>
+</div>
+<!-- class="sect1" -->
+<a id="BABJCEJB"></a>
+<div id="LSHIM125" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Loading Data</h2>
+<p>You can load data into Oracle LSH from a variety of sources:</p>
+<ul>
+<li>
+<p><span class="bold">Oracle Databases, including Oracle Clinical</span>. To load data from any Oracle system, you must enter connection information for the external system into Oracle LSH, including a username and password (encrypted in Oracle LSH) with access to the data in the external system that you want to load, so that Oracle LSH can connect directly to the source data system. You can require user-specific connections or allow the use of shared connections.</p>
+</li>
+<li>
+<p><span class="bold">SAS</span>. To load data from a SAS system, you must have access to SAS data set, CPort, or XPort files.</p>
+</li>
+<li>
+<p><span class="bold">Text Files</span>. Oracle LSH also handles loading data from fixed-format or delimited text files, but in this case you must manually define the target table in Oracle LSH before loading data. You must have access to the text file.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You can convert a spreadsheet to a comma-delimited text file and load its data into Oracle LSH.</div>
+</li>
+</ul>
+<p><a id="CHDIHDEH"></a><a id="LSHIM126"></a><span class="subhead3">Definitional Object: Load Set&nbsp;</span>The Oracle LSH definitional object used in loading data is called a Load Set. In addition to loading data, the Load Set reproduces the meta-data of the external Oracle table or SAS data set in Oracle LSH.</p>
+<p>Once defined, Load Sets are saved and each subsequent time they are run they update the data in Oracle LSH to reflect changes in the source data. You can schedule a Load Set to run at regular intervals to refresh data.</p>
+<p>If the external system is an Oracle database you can define the Load Set as a view against the source table or data set. This means that without actually loading the data into Oracle LSH you can browse the data dynamically in the external system as if it were a database view.</p>
+<p><a id="CHDDGFJI"></a><a id="LSHIM127"></a><span class="subhead3">Adapters&nbsp;</span>Each Load Set has a Type attribute setting corresponding to its source data system (or, in the case of Oracle Clinical, the type of data or meta-data being loaded). Each Load Set type is based on a different predefined adapter that includes the set of programs necessary to copy the data structures and load data and determines the parameters you must set.</p>
+<p>Adapters serve as the interface between Oracle LSH and each external system, ensuring that Oracle LSH handles the incoming data and meta-data correctly. If you upgrade to a new version of an external system (for example, SAS), you may also need to upgrade the relevant adapter, but you do not need to upgrade Oracle LSH. If you install a new version of Oracle LSH, it includes any required new versions of the predefined adapters.</p>
+<p>Oracle LSH includes the following adapters, each of which is designed especially to load data from one type of external system into Oracle LSH:</p>
+<ul>
+<li>
+<p><span class="bold">Oracle Database</span>. Loads data and meta-data from one or more tables in any Oracle database.</p>
+</li>
+<li>
+<p><span class="bold">SAS</span>. Loads data and meta-data from a SAS file.</p>
+</li>
+<li>
+<p><span class="bold">Text</span>. Loads data from one text file into an Oracle LSH table you define to match the data structure in the files.</p>
+</li>
+<li>
+<p><span class="bold">Oracle Clinical</span>. Although you could use the Oracle Database adapter to load data from Oracle Clinical, Oracle LSH includes a set of adapters to handle Oracle Clinical data more intelligently, as follows:</p>
+<ul>
+<li>
+<p><span class="bold">Global Library</span>. Loads meta-data&mdash;Questions, Discrete Value Groups (DVGs), and Question Groups&mdash;that you have defined in the Oracle Clinical Global Library and converts them to Oracle LSH Variables, Parameters with LOVs, and Tables.</p>
+</li>
+<li>
+<p><span class="bold">Data Extract Oracle Views</span>. Converts the DX Oracle Views you have defined in Oracle Clinical to Oracle LSH Table instances, and either loads their data or serves as a pass-through view.</p>
+</li>
+<li>
+<p><span class="bold">Data Extract SAS Views</span>. Converts the DX SAS Views you have defined in Oracle Clinical to Oracle LSH Table instances and loads their data into Oracle LSH.</p>
+</li>
+<li>
+<p><span class="bold">Study Data</span>. Loads study-specific, non-patient data such as discrepancies, Data Clarification Forms (DCFs), page tracking and patient status information.</p>
+</li>
+<li>
+<p><span class="bold">Study Design and Definition</span>. Loads study-specific meta-data including Data Collection Modules (DCMs) and Data Collection Instruments (DCIs).</p>
+</li>
+<li>
+<p><span class="bold">Labs</span>. Loads lab-related data, including Labs, Panels, Units, and Ranges.</p>
+</li>
+<li>
+<p><span class="bold">Stable Interface Tables</span>. Loads data from any Oracle Clinical table that is part of the stable interface as described in the <span class="italic">Oracle Clinical Release 4.5 Stable Interface Guide</span>.</p>
+</li>
+<li>
+<p><span class="bold">Randomization</span>. Loads blinded treatment codes and dummy data. Blinded data remains blinded in Oracle LSH.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>For further information on Load Sets, see "Defining Load Sets" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Application Developer's Guide</span></span>.</p>
+</div>
+<!-- class="sect1" -->
+<a id="BGBFEBDB"></a>
+<div id="LSHIM129" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Storing Data</h2>
+<p>Oracle LSH allows you to store data from a variety of external systems in a single repository.</p>
+<p>Oracle LSH allows you to blind data and to break the blind or permanently unblind the data with a combination of security privileges. Blinded data you load from Oracle Clinical is automatically blinded in Oracle LSH. For other source data systems, the first time you load data that should be blinded you must specify that the target Oracle LSH table be blinded. See <a href="sec.htm#CIHGIBFF">"Security for Blinded Data"</a> for further information.</p>
+<p><a id="LSHIM130"></a><span class="subhead3">Definitional Object: Table&nbsp;</span>Oracle LSH uses a definitional object called a Table to store data. All Oracle LSH Table instances include characteristics of both standard Oracle database tables and SAS data sets. Therefore you can load data from either system into an Oracle LSH Table instance, and you can write a program that combines data from both systems into a single Oracle LSH Table instance.</p>
+<p>Oracle LSH can create Tables with the same structure as the Oracle tables or SAS data sets in your source data systems.</p>
+<p>If you are not already using industry standards such as CDISC or LOINC, you can define Tables that conform to those standards and write programs in Oracle LSH to move your current data into them.</p>
+<p><a id="BABEACGJ"></a><a id="LSHIM131"></a><span class="subhead3">Work Areas&nbsp;</span>All data storage, manipulation and viewing in Oracle LSH must be performed in Work Areas. In a Work Area you create instances of Load Sets, Programs, Tables, and any other definitional objects that are required to accomplish a particular business purpose, and install the Work Area in the database.</p>
+<p>When you install a Work Area for the first time, Oracle LSH creates a database schema and creates a database object from each object instance in the Work Area. Oracle LSH stores the data you load or write to Table instances in the Work Area in the corresponding database tables in the schema.</p>
+<p>You can use Work Areas to create your development, quality control, and production environments. When you are ready for formal testing of the Programs and other objects you have created in the development Work Area, you can clone the development Work Area to create the quality control Work Area and install the same objects to a new schema, load fresh data, and run tests. Then clone the quality control Work Area, install it and load production data to create your production Oracle LSH environment. Oracle LSH supports this usage by enforcing a number of rules; see <a href="valsops.htm#BACDDGIF">"Work Area Usage Intent and Validation Status"</a> for further information.</p>
+<p><a id="CHDJJEFG"></a><a id="LSHIM132"></a><span class="subhead3">Audit Trail&nbsp;</span>Oracle LSH can store data in a manner that is compliant with industry regulations: with an audit trail of every change to every record.</p>
+<p>Whether or not Oracle LSH maintains an audit trail on the records in a particular Table instance depends on the <a href="#CHDIHGDI">Data Processing</a> type you define for the Table instance. In most cases when a record is deleted it remains in the database associated with an end timestamp and an additional row explicitly recording the deletion. It is therefore possible to reconstruct the data in a given Table instance as it was at any point in time.</p>
+<p><a id="CHDIHGDI"></a><a id="LSHIM133"></a><span class="subhead3">Data Processing&nbsp;</span>Oracle LSH can use several different methods to process data internally when you run a Program that writes data to a table. The method used depends on the setting of an attribute of the target Table instance, not the Program, though the Program type must be compatible. The way Oracle LSH handles record deletion and auditing in a table depends on the processing mode specified for the Table instance.</p>
+<p>The data processing types available are:</p>
+<ul>
+<li>
+<p><span class="bold">Reload</span>. Reload processing requires a target Table instance with a primary or unique key defined. Each time you run a Load Set or a Program whose target Table instances have the Reload processing type, Oracle LSH processes all data, comparing the primary or unique key of each incoming record with the primary or unique key of existing records. The system updates records that have changed since the last load, inserts new records, and updates the refresh timestamp of all records. Reload processing is always audited. Reload processing is appropriate for use with Load Sets and with SAS Programs that write to tables.</p>
+<p>If you specify Full Reload processing at runtime, the system also soft-deletes all records that are no longer present in the source. If you choose Incremental Reload, the system does not delete any records, making the processing go faster.</p>
+</li>
+<li>
+<p><span class="bold">Transactional</span>. Transactional processing is appropriate for use with Oracle Reports and PL/SQL Programs. The Program's source code includes explicit Insert, Update, and Delete statements. You can specify whether or not you want the data changes to be audited. If you choose to audit, the system performs soft-deletions only; deleted data remains in the database associated with an end timestamp.</p>
+</li>
+<li>
+<p><span class="bold">Staging</span>. Staging processing is appropriate for internal use with any Program type. The system deletes, or appears to delete, all data from the Table instance immediately before each Program execution. You can specify whether or not you want to use auditing. If you choose to audit, the system leaves all records in the Table instance, but future executions of the same Program cannot see them. If you choose not to audit, the data is hard-deleted and cannot be reconstructed later.</p>
+</li>
+</ul>
+<p>See "Execution and Data Handling" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Application Developer's Guide</span></span> for further information.</p>
+<p><a id="LSHIM134"></a><span class="subhead3">Snapshots&nbsp;</span>Using the audit information, you can create and name a snapshot recreating the state of data in an Oracle LSH schema at any given point in time. When you run an executable in Oracle LSH, by default it runs on the most current data in the source Table instance(s). However, you can specify a previous data snapshot if you prefer.</p>
+<p><a id="LSHIM135"></a><span class="subhead3">Data File Storage&nbsp;</span>Oracle LSH provides two ways to store data in files:</p>
+<ul>
+<li>
+<p><span class="bold">Original Source System Data Files</span>. Oracle LSH places data loaded from files (SAS and text) into the Oracle LSH Table instances specified in the Load Set so that the data can be operated on within Oracle LSH. However, you can choose to also store the original data file in the Oracle LSH database, with classifications and security requirements. This option is available only for Load Sets that load data contained in files.</p>
+</li>
+<li>
+<p><span class="bold">Oracle LSH Data Marts</span>. You can create a Data Mart containing data from any Oracle LSH Table instances in one of several formats: SAS Transport, Oracle Export, or text. You can transfer a Data Mart to an external system or leave it in Oracle LSH for long-term storage.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect1" -->
+<a id="BABEIFCF"></a>
+<div id="LSHIM136" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Operating on Data</h2>
+<p>After you load data into Oracle LSH, you can combine, transform and analyze the data as necessary.</p>
+<p><a id="LSHIM137"></a><span class="subhead3">Definitional Object: Program&nbsp;</span>To manipulate data in Oracle LSH, you must create a definitional object called a Program.</p>
+<p>You can upload SAS or PL/SQL source code you have already developed or write new programs in PL/SQL, Oracle Reports, and SAS (if you purchase SAS). Oracle LSH stores the source code in Oracle LSH under version control. When you run the program, Oracle LSH launches the appropriate engine to run the code.</p>
+<p>For further information, see "Defining Programs" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Application Developer's Guide</span></span>.</p>
+</div>
+<!-- class="sect1" -->
+<a id="CHDGJDJB"></a>
+<div id="LSHIM138" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Reporting Data</h2>
+<p>Three Oracle LSH primary definitional objects can report data. Programs can generate report outputs (tabulations, figures, and listings) directly. Report Sets and Workflows can generate report outputs because they contain Programs.</p>
+<p>For information on Workflows, see <a href="#CHDCBFEJ">"Automating Multiple Processes"</a>.</p>
+<p><a id="CHDIFIJF"></a><a id="LSHIM139"></a><span class="subhead3">Definitional Object: Program&nbsp;</span>Oracle LSH Programs are the primary means of reporting data as well as transforming data. To create a report in Oracle LSH, you must create or reuse an Oracle LSH Program definition that includes source code to produce the report(s) you want and a Planned Output definition for each report to be generated by the Program. You can view report outputs as files online or print them.</p>
+<p>For further information, see "Defining Programs" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Application Developer's Guide</span></span>.</p>
+<p><a id="CHDHHHGD"></a><a id="LSHIM140"></a><span class="subhead3">Definitional Object: Report Set&nbsp;</span>A Report Set is a definitional object whose purpose is to present a set of reports and text narratives divided into logical chapters and sections, with a single table of contents and hyperlinks. You can use Oracle XML Publisher to create templates with watermarks and graphics and generate a single- or multi-volume integrated PDF file containing all the reports.</p>
+<p>For further information, see "Defining Report Sets" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Application Developer's Guide</span></span>.</p>
+</div>
+<!-- class="sect1" -->
+<a id="CHDCBFEJ"></a>
+<div id="LSHIM141" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Automating Multiple Processes</h2>
+<p>Oracle LSH uses the Oracle Workflow product to enable you to link any number of executable objects&mdash;Load Sets, Programs, Report Sets, and Data Marts&mdash;into a single complex object executed as a whole. You define the sequence of the executables, which may include branching, and the necessary conditions, if any, to pass from one to the next.</p>
+<p><a id="LSHIM142"></a><span class="subhead3">Definitional Object: Workflow&nbsp;</span>For example, you can create a Workflow to load data from two systems, wait until both loads are successfully completed, and then run a Program that writes data from both systems into a single set of combined Tables and generates a Report Set on the combined data.</p>
+<p>You can also insert Notifications into a Workflow. Notifications are sent to recipients you specify either to simply inform them of something, such as the fact that the Workflow has just generated a report on fresh data, or to request their approval, for example of a load of lab data before the data is included in a statistics analysis report generated later in the Workflow. In the case of approval requests, the Workflow waits for a response. You define the next Workflow step in the case of both an approval and a rejection.</p>
+<p>For further information, see "Defining Workflows" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Application Developer's Guide</span></span>.</p>
+</div>
+<!-- class="sect1" -->
+<a id="BABFFJBA"></a>
+<div id="LSHIM143" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Viewing Data</h2>
+<p>There are several ways to see data stored in Oracle LSH:</p>
+<ul>
+<li>
+<p><a href="#CHDDCHDB">Reports</a></p>
+</li>
+<li>
+<p><a href="#CHDFIHDF">Visualizations</a></p>
+</li>
+<li>
+<p><a href="#CEGIFFCA">User Interface</a></p>
+</li>
+<li>
+<p><a href="#CHDCFCCH">Integrated Development Environment</a></p>
+</li>
+</ul>
+<p><a id="CHDDCHDB"></a><a id="LSHIM144"></a><span class="subhead3">Reports&nbsp;</span>Report outputs of Programs display Oracle LSH data. These may be generated directly by an Oracle LSH Program or as part of a Report Set or Workflow (see <a href="#CHDGJDJB">"Reporting Data"</a>). Anyone with the necessary security privileges can execute a particular Program, Report Set, or Workflow to generate the report on current data, or simply view a previously generated report, either onscreen or printed. For further information, see "Defining Programs" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Application Developer's Guide</span></span>.</p>
+<p><a id="CHDFIHDF"></a><a id="LSHIM145"></a><span class="subhead3">Visualizations&nbsp;</span>Oracle LSH is designed to integrate with data visualization tools that allow users without programming skills to perform ad hoc, interactive explorations of data in tabular or graphical format.</p>
+<p>Oracle LSH includes a user interface for defining Business Areas, Table Descriptors, Joins, and Hierarchies that determine what Oracle LSH data is available to visualizations. Security for the data displayed by visualizations is determined by the security requirements of the corresponding Business Area instance in Oracle LSH.</p>
+<p>For further information, see "Defining Business Areas for Visualizations" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Application Developer's Guide</span></span>.</p>
+<p><a id="CEGIFFCA"></a><a id="LSHIM146"></a><span class="subhead3">User Interface&nbsp;</span>Through the Oracle LSH user interface you can browse data in a single Table instance; either the current data or a snapshot. You can select the columns you want to view, limit the data displayed with a Where clause and order the display of data with an Order By clause. If you have the required security privileges, you can see real, blinded data if you choose to. For further information, see "Common Development Tasks" in the<span class="italic"><span class="italic">Oracle Life Sciences Data Hub Application Developer's Guide</span></span>.</p>
+<p><a id="CHDCFCCH"></a><a id="LSHIM147"></a><span class="subhead3">Integrated Development Environment&nbsp;</span>Users with the necessary privileges can query data in Oracle LSH Tables through a Program instance, working in an integrated development environment (IDE) such as SAS or SQL Developer. For further information, see "Defining Tables" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Application Developer's Guide</span></span>.</p>
+</div>
+<!-- class="sect1" -->
+<a id="CHDDCCHD"></a>
+<div id="LSHIM149" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Transferring Data Out of the Oracle Life Sciences Data Hub</h2>
+<p>You may want to transfer Oracle LSH data to a partner, regulatory agency, or data storage facility.</p>
+<p><a id="LSHIM150"></a><span class="subhead3">Definitional Object: Data Mart&nbsp;</span>To transfer data out of Oracle LSH you can create a definitional object called a Data Mart. Oracle LSH supports several formats, including fixed length or delimited text, SAS Transport (XPORT or CPORT), SAS Data Sets, or Oracle Export. To reduce the size of these export files the executable can optionally compress them into a zipped file.</p>
+<p>To transfer the Data Mart to another system, use FTP or email.</p>
+<p>You can also use Data Marts for secure but inaccessible long-term storage within Oracle LSH. For further information on Data Marts, see "Defining Data Marts" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Application Developer's Guide</span></span></p>
+</div>
+<!-- class="sect1" -->
+<a id="CHDEDHHE"></a>
+<div id="LSHIM152" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Validating Object Definitions and Instances</h2>
+<p>Pharmaceutical regulatory agencies require that you certify that data submitted to them for approval of a drug is valid. Oracle LSH cannot certify that data entering Oracle LSH from a different system is valid. You must validate incoming data in the source system.</p>
+<p>However, Oracle LSH allows you to validate all definitional objects that interact with data within Oracle LSH, and to publish a report coversheet that records the validation status of all objects that touched the report's source data in Oracle LSH, so that you can certify that data remained valid within Oracle LSH.</p>
+<p>In addition, Oracle LSH allows you to manually validate report outputs in a Report Set and to reuse the validated outputs even though other reports in the same Report Set are still being developed and must be regenerated.</p>
+<p><a id="LSHIM153"></a><span class="subhead3">Validation Status&nbsp;</span>Oracle LSH allows you to associate a validation status&mdash;Development, Quality Control, Production, or Retired&mdash;with an object or output. You must determine your own criteria for promoting an object or output to a new validation status.</p>
+<p>Oracle LSH uses object validation statuses and Work Area usage intent values to enforce rules for development, quality control, and production environments.</p>
+<p><a id="LSHIM154"></a><span class="subhead3">Validation Documentation&nbsp;</span>Oracle LSH allows you to associate job IDs and documents with an object to record the object's validation progress. For example, you may decide that requirements specifications for an object such as a Report Set are required for its promotion from Development to Quality Control. You can associate a pointer to the requirements specifications document with the Report Set definition. For promotion to both Quality Control and Production, your criteria may include successful execution of an object such as a Program. In the Program definition you can include a link to the ID of the job that successfully executed the Program.</p>
+<p>For further information, see <a href="valsops.htm#BACBBABC">Chapter 6, "Validating Objects and Outputs"</a>.</p>
+</div>
+<!-- class="sect1" -->
+<a id="CHDGABGH"></a>
+<div id="LSHIM155" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Reusing Object Definitions</h2>
+<p>As you begin to use Oracle LSH, you must define many new objects (though you can use tables, views, data sets, and programs that you have already developed in an external Oracle or SAS system as the basis for Oracle LSH Tables and Programs). But as time goes by, you will be able to reuse existing object definitions more and more, building up libraries of valid object definitions approved for reuse. For example, if you develop and test an enrollment Report Set for one study, you may be able to use the same Report Set definition, with modifications if necessary, for another study.</p>
+<p><a id="LSHIM156"></a><span class="subhead3">Object Definitions and Instances&nbsp;</span>Object definitions are stored in a Library, either in an Application Area or a Domain. To use an object definition of any type&mdash;Table, Program, Load Set, for example&mdash;you must create an instance of it in a Work Area and install the instance to the database.</p>
+<p>The instance is itself a defined object. Oracle LSH includes a predefined object instance type corresponding to each primary definitional object type: Table instance, Load Set instance, Program instance, Report Set instance, Workflow instance, Data Mart instance, and Business Area instance. An instance object contains only a pointer to the definition, a name, description, and, depending on the object type, may have a few other characteristics.</p>
+<p>Secondary object types, such as Source Code and Parameter, also have a corresponding predefined object instance type: Source Code instance, Parameter instance. For information on primary and secondary Oracle LSH object definitions and instances, see the chapter on each primary object type in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Application Developer's Guide</span></span>. Also see <a href="obj_types.htm#BABHIEJG">Appendix A, "Object Types with Operations"</a> and <a href="obj_own.htm#CACGAJBJ">Appendix B, "Object Ownership"</a>.</p>
+<p><a id="LSHIM157"></a><span class="subhead3">How to Reuse Object Definitions&nbsp;</span>There are several ways to reuse object definitions:</p>
+<ul>
+<li>
+<p><span class="bold">Create a new instance of an existing definition</span>. For example, if you have a standard Demography Table, you can use it in multiple studies simply by creating a new instance of it for each study. No additional validation of the definition is necessary.</p>
+</li>
+<li>
+<p><span class="bold">Copy a definition and modify it as necessary</span>. If a new study requires an extra column in the Demography Table, for example, you can copy the standard Demography Table definition and add a column to it for use in the new study. You must revalidate the definition, but the definition process is simpler than recreating the whole Table.</p>
+</li>
+<li>
+<p><span class="bold">Modify an existing definition</span>. If you discover a bug in a Program, for example, that should be fixed in all instances of the Program, you can modify the definition (if you have the necessary privileges) working through an instance of the Program. You can upgrade any or all instances of the original Program to the fixed version of the definition by running a job. (If you have the necessary privileges, you can also modify the definition directly in the Library. However, you cannot run the Program without creating an instance of it in a Work Area.)</p>
+<p>This method is also appropriate for modifying standard company definitions as they require change over time. For example, you may decide to add the new column to your standard Demography Table. In that case, you can create a new instance of the standard Table and add the column to the standard Table definition through the new instance.</p>
+<p>Existing instances of the original standard Demographic Table continue to point to the original version. You can upgrade any or all of them to the new definition if you so choose.</p>
+</li>
+</ul>
+<p><a id="LSHIM158"></a><span class="subhead3">Developing Standard Objects and Modular Applications&nbsp;</span>You can reduce the amount of time required to develop Oracle LSH applications by developing standard object definitions and reusing them as much as possible. To encourage programmers to reuse standard definitions, make it clear which definitions are standard by storing them in a special library (for example, a Standards Domain) and/or classifying them as Standard, for example.</p>
+<p>Following are a few strategies for developing standards in object definition:</p>
+<ul>
+<li>
+<p>Develop standard Table definitions. If you have a standard set of Tables, with standard data types and lengths for corresponding columns in different Tables, then you can easily reuse the same Table definition at different points in the data flow, and write standard Programs to read from and write to the standard Tables.</p>
+<p>You can develop your own company standards or use external standards. For example, if you plan to submit drug approval applications to the FDA using the CDISC data model, you may want to use the CDISC standards as your company standards and use Oracle LSH Programs to convert your existing data.</p>
+<p>The standard data model you use must be compatible with the data model of the source system(s) you use.</p>
+</li>
+<li>
+<p>Define more Programs with a smaller scope instead of fewer Programs with a larger scope. You can then use the smaller-scope Programs as modules in multiple applications.</p>
+<p>For example, rather than define a single Program to combine data from different studies and then analyze the data, define two separate Programs, one to combine data and the other to analyze data. Both Programs are reusable in more situations. You can reuse the combining Program before different analytical Programs, and you can reuse the analytical Program, perhaps with minor modifications, on data from either a single study or multiple studies, for example.</p>
+<p>You can include a series of Programs in a single Workflow, so that you can run all the Programs in a single process.</p>
+</li>
+<li>
+<p>Make executable object definitions more reusable by defining Parameters to control the data to be processed</p>
+<p>For example, if you want to use the same Program to generate a Demography Report in several different studies, create a Parameter to contain the study name. You can either make the Study Parameter enterable by the user who runs the report, or, in the Execution Setup for each instance, bind the Study Parameter to the value appropriate for each study.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect1" -->
+<a id="CHDGEBAB"></a>
+<div id="LSHIM159" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Migrating Existing Programs, Data Sets, and Tables from Other Systems</h2>
+<p>In Oracle LSH you can continue to use programs, data sets, and tables you have developed for use in other systems. Although this feature may be particularly useful as you begin to use Oracle LSH, you can continue to upload external programs, data sets, and tables and convert them to Oracle LSH Programs and Tables at any time.</p>
+<p>Load Sets can convert Oracle tables and views, or SAS data sets, to Oracle LSH Tables, as well as load the data they contain or point to into Oracle LSH. Load Sets also automatically convert your Oracle Clinical Global Library definitions to Oracle LSH definitional objects and load any Oracle Clinical stable interface tables and data you choose. For further information, see "DefiningLoad Sets" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Application Developer's Guide</span></span>.</p>
+<p>You can upload SAS source code files, including macros and formats, into Oracle LSH Source Code definitions. For further information, "Defining Programs" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Application Developer's Guide</span></span>.</p>
+</div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment56">
+<tr>
+<td class="cellalignment63">
+<table class="cellalignment61">
+<tr>
+<td class="cellalignment60"><a href="pref.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment60"><a href="impl_intro.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2011, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment65">
+<table class="cellalignment59">
+<tr>
+<td class="cellalignment60"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment60"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment60"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment60"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

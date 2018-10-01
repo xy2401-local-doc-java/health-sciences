@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>Oracle&reg; Health Sciences mHealth Connector Cloud Service Integrating the Client Library with a Mobile Application</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1091" />
+<meta name="dcterms.created" content="2018-06-07T9:30:17Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Health Sciences mHealth Connector Cloud Service Integrating the Client Library with a Mobile Application" />
+<meta name="dcterms.identifier" content="E97297-01" />
+<meta name="dcterms.isVersionOf" content="MHCCS" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"   src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"   src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript"  src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript"  src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript"  src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript"  src="../dcommon/js/foundation.min.js"></script>
+<script type="application/javascript"  src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript"  src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript"  src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="application/javascript"  src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="application/javascript"  src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="application/javascript"  src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="application/javascript"  src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<!-- End Header -->
+<div class="letterstyle">
+<h1>Oracle&reg; Health Sciences mHealth Connector Cloud Service</h1>
+<p class="booktitle">Integrating the Client Library with a Mobile Application</p>
+<p><span class="revnumber">Release 1.2</span></p>
+<p class="invpartnumber">E97297-01</p>
+<p class="date">June 2018</p>
+<p class="subhead1"><a id="MHCCS101"></a>Contents</p>
+<ul>
+<li>
+<p><a href="#CHEIBAJI">Introduction</a></p>
+</li>
+<li>
+<p><a href="#CACHFDJF">Prerequisites</a></p>
+</li>
+<li>
+<p><a href="#CACHHHGA">API Flow</a></p>
+</li>
+<li>
+<p><a href="#CHEJDCFC">Working with the iOS Version of the mHealth Connector Cloud Service Client Library</a></p>
+</li>
+<li>
+<p><a href="#CHEGJIFD">Working with the Android Version of the mHealth Connector Cloud Service Client Library</a></p>
+</li>
+<li>
+<p><a href="#CHECEBGJ">Secure Development Guidelines</a></p>
+</li>
+<li>
+<p><a href="#CHEDCJFJ">Documentation Accessibility</a></p>
+</li>
+</ul>
+<a id="CHEIBAJI"></a>
+<div id="MHCCS102" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Introduction</h2>
+<p>This document outlines the steps to integrate the Oracle Health Sciences mHealth Connector Cloud Service Client Library (Client Library) with a mobile application. Mobile application developers can use this library to send data collected by a mobile application to mHealth Connector Cloud Service (mHealth Connector). Instructions for both iOS and Android applications follow.</p>
+<p>If you are interested in connecting to mHealth Connector, please contact your Oracle sales representative or Contact Oracle Health Sciences at: healthsciences_ww_grp@oracle.com.</p>
+<p>You can also visit the Oracle Health Sciences website at: <a href="https://www.oracle.com/industries/health-sciences/index.html">https://www.oracle.com/industries/health-sciences/index.html</a></p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+This library does not have the capability to capture clinical data directly from a medical device.</div>
+</div>
+<!-- class="sect1" -->
+<a id="CACHFDJF"></a>
+<div id="MHCCS103" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Prerequisites</h2>
+<ol>
+<li>
+<p>The mHealth Connector instance must be provisioned and online. Please contact your assigned project coordinator to receive the mHealth Connector URL and login credentials.</p>
+</li>
+<li>
+<p>A mobile device must be registered with mHealth Connector before using this library to transmit device data. Registration returns two identifiers&mdash;activationId and shared secret. The customer's mobile application, which uses mHealth mobile client libraries, must set these parameters via the Client Library API to activate the device in mHealth Connector. Once activated, the mobile application will act as a gateway between medical devices and mHealth Connector.</p>
+<p>Mobile devices must be registered for each app built using this framework (even every target for an Xcode project). Please contact your assigned project coordinator for mobile device pre-registration, who, in turn, will send the activationId and shared secret to be used in the app.</p>
+</li>
+<li>
+<p>Before using a specific mobile device with the Client Library, the device data model must be created in mHealth Connector. Work with your project coordinator to define the device data model.</p>
+<p>The registered device data model has a unique URN, Uniform Resource Name, identifying a name of a web resource. The device data model establishes a template for the messages sent from a mobile application to mHealth Connector. If the data sent from a mobile application does not conform to the message format defined in the device data model, mHealth Connector cannot route the message to the correct mHealth Connector application.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="CACHHHGA"></a>
+<div id="MHCCS104" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">API Flow</h2>
+<p><a href="#CHEHJCFA">Figure 1</a> shows the steps and order in which device data models are added.</p>
+<div id="MHCCS105" class="figure">
+<p class="titleinfigure"><a id="CHEHJCFA"></a>Figure 1 mHealth Connector Cloud Service Client Library API Flow</p>
+<img width="957" height="240" src="./img/api_flow.png" alt="Surrounding text describes Figure 1 ." /><br /></div>
+<!-- class="figure" --></div>
+<!-- class="sect1" -->
+<a id="CHEJDCFC"></a>
+<div id="MHCCS106" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Working with the iOS Version of the mHealth Connector Cloud Service Client Library</h2>
+<p>This section describes importing the Client Library to an iOS-based application and the APIs to use to send data collected from a mobile application to mHealth Connector. For Android-based applications, see <a href="#CHEGJIFD">Working with the Android Version of the mHealth Connector Cloud Service Client Library</a>.</p>
+<div id="MHCCS107" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref1"></a>
+<h3 class="sect2">Technical Requirements</h3>
+<p>The following section assumes that Xcode 8.x is installed and ready to use. The Client Library supports iOS 9.x and higher.</p>
+</div>
+<!-- class="sect2" -->
+<div id="MHCCS108" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref2"></a>
+<h3 class="sect2">Importing the mHealth Connector Cloud Service Client to the iOS Application</h3>
+<ol>
+<li>
+<p>Open the Xcode project and navigate to the project target.</p>
+</li>
+<li>
+<p>From the General tab, add <span class="italic">HsIoTLib.framework</span> as an embedded library.</p>
+<p><a href="#CIHFIGCE">Figure 2</a> shows adding <span class="italic">HsIoTLib.framework</span> as an embedded library from the General tab.</p>
+<div id="MHCCS133" class="figure">
+<p class="titleinfigure"><a id="CIHFIGCE"></a>Figure 2 Add HsIoTLib.framework as Embedded Library</p>
+<img width="903" height="520" src="./img/fig2.png" alt="Surrounding text describes Figure 2 ." /><br /></div>
+<!-- class="figure" --></li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<div id="MHCCS111" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref3"></a>
+<h3 class="sect2">Using the mHealth Connector Cloud Service Client Library API</h3>
+<p>To initialize the library and send the data to mHealth Connector, the mobile application must call the Client Library API methods in the order listed below.</p>
+<div id="MHCCS112" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref4"></a>
+<h4 class="sect3">Initialization Steps</h4>
+<ol>
+<li>
+<p>(Optional) Set up all methods parameters through the device bootstrap method call. You will do this once. All parameters will be saved in the KeyChain and provide the information needs for steps 2 - 4. If you do not make this optional call, methods parameters are sent to the user and must be entered manually in steps 2 - 4, below.</p>
+<p><span class="bold">Method:</span></p>
+<p><span class="syntaxinlinebold">IotAccessManager.sharedInstance.deviceBootstrap(_ DTHUrl: String, accessID: String, OneTimePassword: String, completed: (_ err: String?) -&gt; (Void))</span></p>
+<p><span class="bold">Arguments:</span></p>
+<ul>
+<li>
+<p><span class="bold">DTHUrl</span>&mdash;DTH service given URL. This is the deviceBootstrap webservice URL</p>
+</li>
+<li>
+<p><span class="bold">accessID</span>&mdash;Specific patient access ID.</p>
+</li>
+<li>
+<p><span class="bold">OneTimePassword</span>&mdash;OTP value provided for the user access ID.</p>
+</li>
+<li>
+<p><span class="bold">completed</span>&mdash;On completion, closure is called. If the bootstrap call fails, the err string contains an error message; otherwise the value is nil.</p>
+</li>
+</ul>
+<p><span class="bold">Return type</span>: Void</p>
+<p><span class="bold">Example:</span></p>
+<pre dir="ltr">
+HsIoTLib.IotAccessManager.sharedInstance.deviceBootstrap(DTHurl!, accessID: clientID!, OneTimePassword: OTP!) { err in
+            
+    guard err == nil else {
+        print("Bootstrap failed!")
+        DispatchQueue.main.async {
+            let alert = UIAlertController.init(title: nil, message: "Device Bootstrap Failed!", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction.init(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            
+            self.present(alert, animated: true, completion: nil)
+        }
+        return
+    }
+    
+    DispatchQueue.main.async {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "HsIoTLib")
+        let iotDetail = KeyChainSwift.sharedInstance.dictionaryForKey("DEVICE_BOOTSTRAP_FOR_ACCESSID_\(clientID!)")
+        //uses KVC to set viewController property value
+        vc?.setValue(iotDetail, forKey: "bootstrapIoTData")
+        self.navigationController?.pushViewController(vc!, animated: true)
+    }
+}
+</pre></li>
+<li>
+<p>Set mHealth Connector hostname and port as provided by your project coordinator.</p>
+<p><span class="bold">Method:</span></p>
+<p><span class="syntaxinlinebold">IotAccessManager.sharedInstance.setHost(host: String, port: Int) throws</span></p>
+<p><span class="bold">Arguments:</span></p>
+<ul>
+<li>
+<p><span class="bold">host</span>&mdash;mHealth Connector Cloud Service hostname</p>
+</li>
+<li>
+<p><span class="bold">port</span>&mdash;Port number</p>
+</li>
+</ul>
+<p><span class="bold">Return type</span>: Void</p>
+<p><span class="bold">Exceptions:</span> This method may return the following errors:</p>
+<ul>
+<li>
+<p>HsIoTError.InvalidPort</p>
+</li>
+<li>
+<p>HsIoTError.InvalidHostname</p>
+</li>
+<li>
+<p>HsIoTError.InsecureTranportProtocol</p>
+</li>
+</ul>
+<p><span class="bold">Example:</span></p>
+<pre dir="ltr">
+do {
+try HsIoTLib.IotAccessManager.sharedInstance.setHost("https://myinstance-myidentitydomain.iot.us.oraclecloud.com", port: 443)
+                                        } catch let err {
+                                    print("connecting to host error")
+                                    print(err)
+                                        }
+</pre></li>
+<li>
+<p>Set the device data model.</p>
+<p>Use the appendToDeviceModels API to configure device data models supported by the mobile application. Repeat this call for each device data model URN supported by your mobile application. Obtain a unique URN for each device data model from your project coordinator.</p>
+<p>If your mobile application can send messages for different device data models, ensure that all the device models URNs are added before calling the <span class="bold">send</span> method. See <a href="#CIHJAACF">Data Transmission</a>. Device data model URNs added by this method will be used when a mobile application is activated to communicate with the mHealth Connector Cloud Service.</p>
+<p><span class="bold">Method:</span></p>
+<p><span class="syntaxinlinebold">IotAccessManager.sharedInstance.setHost(_ host:String, port: Int) IotAccessManager.sharedInstance.appendToDeviceModels(_ deviceModelUrn: String)</span></p>
+<p><span class="bold">Argument:</span> Device data model URN string</p>
+<p><span class="bold">Return:</span> Void</p>
+<p><span class="bold">Example:</span> Set device data models</p>
+<p>The example sets up the application with two device models: "urn:oraclehs:iot:devices:pulseoxy" and "urn:oraclehs:iot:devices:bloodpressure"</p>
+<pre dir="ltr">
+IotAccessManager.sharedInstance.appendToDeviceModels("urn:oraclehs:iot:devices: pulseoxy")
+IotAccessManager.sharedInstance.appendToDeviceModels("urn:oraclehs:iot:devices: bloodpressure")
+</pre></li>
+<li>
+<p>Configure mobile device bootstrap parameters.</p>
+<p>Use the <span class="bold">setUserInfo</span> method to set clinical trial identifier, patient identifier, and mHealth Connector pseudo device information (activationId, shared secret received as part of the device registration step in mHealth Connector). When called, this method will try to activate the device by making an HTTPS connection with the mHealth Connector host configured with the <span class="bold">setHost</span> method.</p>
+<p><span class="bold">Method:</span></p>
+<p><span class="syntaxinlinebold">IotAccessManager.sharedInstance.setUserInfo(_ patientId:String, deviceID activationId:String, sharedSecret: String, trialID:String)</span></p>
+<p><span class="bold">Arguments:</span></p>
+<ul>
+<li>
+<p><span class="bold">UserId</span>&mdash;Patient Identifier String. This value will be included in every device data message sent to mHealth Connector. Patient identifier does not contain Personal Identifiable Information (PII).</p>
+</li>
+<li>
+<p><span class="bold">ActivationId</span>&mdash;Pseudo device activationId (also known as hardwareId) returned by mHealth Connector from device registration. (Your project coordinator will assist in device data model registration in mHealth Connector and will supply the device activationId and shared secret.)</p>
+</li>
+<li>
+<p><span class="bold">SharedSecret</span>&mdash;Pseudo device shared secret returned by mHealth Connector from device registration step. This is used by the Client Library to establish an initial trust relationship between the mobile device and mHealth Connector. (Your project coordinator will assist in device data model registration in mHealth Connector and will supply the activationId and shared secret.)</p>
+</li>
+<li>
+<p><span class="bold">TrialId</span>&mdash;Clinical trial identifier. This value will be included in every device data message sent to mHealth Connector.</p>
+</li>
+</ul>
+<p><span class="bold">Return:</span> Void</p>
+<p><span class="bold">Exceptions:</span> This method may return the following errors:</p>
+<ul>
+<li>
+<p>HsIoTError.InvalidArgumentPatientId</p>
+</li>
+<li>
+<p>HsIoTError.InvalidArgumentActivationId</p>
+</li>
+<li>
+<p>HsIoTError.InvalidArgumentSharedSecret</p>
+</li>
+<li>
+<p>HsIoTError.InvalidArgumentTrialId</p>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<a id="CIHJAACF"></a>
+<div id="MHCCS113" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Data Transmission</h4>
+<p>To send data from your mobile application to mHealth Connector, use the <span class="bold">send</span> method in the IoTAccessManager class.</p>
+<p>The data must be in JSON format (key-value pairs) and conform to the message structure and message format for a message URN defined in a device model set via the <span class="bold">appendToDeviceModels</span> method. When called, this method will transmit the message to mHealth Connector.</p>
+<p>Any message not containing the key audit attributes listed below will result in a message format error.</p>
+<ul>
+<li>
+<p>KEY_YEAR</p>
+</li>
+<li>
+<p>KEY_MONTH</p>
+</li>
+<li>
+<p>KEY_DAY</p>
+</li>
+<li>
+<p>KEY_HOURS</p>
+</li>
+<li>
+<p>KEY_MINUTES</p>
+</li>
+<li>
+<p>KEY_SECONDS</p>
+</li>
+<li>
+<p>KEY_DID</p>
+</li>
+<li>
+<p>KEY_SN</p>
+</li>
+</ul>
+<p>When this method is called, the Client Library will add two attributes to the message if they are not present already:</p>
+<ul>
+<li>
+<p>KEY_TRIALID &mdash;trialId value set in <span class="bold">setUserInfo</span> method.</p>
+</li>
+<li>
+<p>KEY_UID&mdash;userId value set in <span class="bold">setUserInfo</span> method.</p>
+</li>
+</ul>
+<p><span class="bold">Method:</span></p>
+<p><span class="syntaxinlinebold">IotAccessManager.sharedInstance.send(_ msgData:String?, msgFormat:String?, callback: @escaping (String?)-&gt;Void)</span></p>
+<p><span class="bold">Arguments:</span></p>
+<ul>
+<li>
+<p><span class="bold">dataMsg</span>&mdash;JSON payload as string.</p>
+</li>
+<li>
+<p><span class="bold">msgFormat</span> &mdash;Message URN. This value must match the message URN specified in the device data model created in the mHealth Connector instance.</p>
+</li>
+<li>
+<p><span class="bold">callback</span>&mdash;The caller will get error notification through this method.</p>
+</li>
+</ul>
+<p>If the message is missing key attributes, as indicated above, or does not conform to JSON syntax, the result string includes the error description. A nil value for result string indicates that the message was sent successfully to mHealth Connector.</p>
+<p><span class="bold">Return:</span> Void</p>
+<p><span class="bold">Example:</span> The example shows a JSON message for a pulse oximeter medical device.</p>
+<ul>
+<li>
+<p><span class="bold">dataMsg:</span></p>
+<pre dir="ltr">
+"{\"KEY_PULSE\":511,\"KEY_SP02\":\"127\",\"KEY_UID\":\"Myuid\",
+\"KEY_DID\":\"pulseoxy\",\"KEY_SN\":\"pulseoxy\",
+\"KEY_YEAR\":2017,\"KEY_MONTH\":1,\"KEY_DAY\":3,\"KEY_HOURS\":18,
+\"KEY_MINUTES\":25,\"KEY_SECONDS\":23,\"KEY_TRIALID\":\"mhealth\"}"
+</pre></li>
+<li>
+<p><span class="bold">msgFormat:</span></p>
+<pre dir="ltr">
+ "urn:oraclehs:iot:device:data:hsgbupulseoxystrm3:mhealth" 
+</pre>
+<p>After giving the data format information to the project coordinator, you get back a message URN and a device model URN. The one included here is the message URN.</p>
+</li>
+</ul>
+<p>Once the <span class="bold">send</span> method is called for a message, the Client Library will attempt to send the message to mHealth Connector. If the Client Library is not able to make an internet connection, <span class="bold">send</span> will return an error message in <span class="bold">callback</span> method.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<div id="MHCCS114" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref5"></a>
+<h3 class="sect2">Troubleshooting</h3>
+<ul>
+<li>
+<p>To activate a new device, valid URL, port, activationId, and shared secret are necessary. For already activated devices, however, only valid activationId, URL, and port are necessary. Once a device is activated, device model URN, trialId, and shared secret are not validated.</p>
+</li>
+<li>
+<p>If the host is set incorrectly, after activating the device, your mobile application will not be able to send the messages as it cannot reach the host.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CHEGJIFD"></a>
+<div id="MHCCS115" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Working with the Android Version of the mHealth Connector Cloud Service Client Library</h2>
+<p>This section describes importing the mHealth Connector Cloud Service Client Library to an Android-based application and the APIs to use to send data collected from a medical device to mHealth Connector Cloud Service. For iOS-based applications, see <a href="#CHEJDCFC">Working with the iOS Version of the mHealth Connector Cloud Service Client Library</a>.</p>
+<div id="MHCCS116" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref6"></a>
+<h3 class="sect2">Technical Requirements</h3>
+<p>Android Studio 2.x and Android SDK Platform-tools 23.1.0 or above must be installed. The Client Library is supported in Android OS versions 6 and above.</p>
+</div>
+<!-- class="sect2" -->
+<div id="MHCCS117" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref7"></a>
+<h3 class="sect2">Importing the mHealth Connector Cloud Service Client to the Android Application</h3>
+<ol>
+<li>
+<p>Open Android Studio.</p>
+</li>
+<li>
+<p>Create a folder named <span class="italic">assets</span> in the <span class="italic">app/src/main</span> folder.</p>
+</li>
+<li>
+<p>Add a file named <span class="italic">trustedAssets.properties</span> with the following content:</p>
+<pre dir="ltr">
+oracle.iot.client.trustedAssetsStore=%s.bks
+oracle.iot.client.trustedAssetsStorePassword=%s
+oracle.iot.client.trustedAssetsStoreRw=%s.RW.bks
+oracle.iot.client.trustedAssetsStoreRwPassword=%s
+</pre>
+<p><a href="#CBACIJEH">Figure 3</a> shows adding the <span class="italic">trustedAssets.properties</span> file to the <span class="italic">app/main/src</span> folder within the <span class="italic">assets</span> folder.</p>
+<div id="MHCCS118" class="figure">
+<p class="titleinfigure"><a id="CBACIJEH"></a>Figure 3 Create a resources folder and file named trustedAssets.properties</p>
+<img width="504" height="200" src="./img/add_hiotlib_android.jpg" alt="Surrounding text describes Figure 3 ." /><br /></div>
+<!-- class="figure" --></li>
+<li>
+<p>Open the File Manager and locate the mHealth Connector Cloud Service Client Library, <span class="italic">hsiotlib-release.aar,</span> and rename it to <span class="italic">hsiotlib-v.1.0.aar</span>.</p>
+</li>
+<li>
+<p>Right click <span class="italic">hsiotlib-v.1.0.aar</span> and click <span class="bold">Copy</span> (see <a href="#CHEFCBCJ">Figure 4</a>).</p>
+<div id="MHCCS119" class="figure">
+<p class="titleinfigure"><a id="CHEFCBCJ"></a>Figure 4 Select and Copy <span class="bold">hsiotlib-v.1.0.aar</span></p>
+<img width="217" height="288" src="./img/copy_hsiotlib.jpg" alt="Surrounding text describes Figure 4 ." /><br /></div>
+<!-- class="figure" --></li>
+<li>
+<p>Open Android Studio and select the <span class="italic">libs</span> folder, located under the <span class="italic">app</span> folder.</p>
+</li>
+<li>
+<p>From the Edit menu, select <span class="bold">Paste</span> (see <a href="#CHEEFAHA">Figure 5</a>).</p>
+<div id="MHCCS120" class="figure">
+<p class="titleinfigure"><a id="CHEEFAHA"></a>Figure 5 From the Edit Menu, Select Paste</p>
+<img width="488" height="352" src="./img/paste-lib.jpg" alt="Surrounding text describes Figure 5 ." /><br /></div>
+<!-- class="figure" -->
+<p>The Client Library, <span class="italic">hsiotlib-v.1.0.aar,</span> is copied to the <span class="italic">app/libs</span> folder (see <a href="#CHECBFEG">Figure 6</a>).</p>
+<div id="MHCCS121" class="figure">
+<p class="titleinfigure"><a id="CHECBFEG"></a>Figure 6 <span class="italic">mHealth Connector Cloud Service Client Library Copied to app/libs Folder</span></p>
+<img width="312" height="367" src="./img/hsiotlibr_to_app_lib.jpg" alt="Surrounding text describes Figure 6 ." /><br /></div>
+<!-- class="figure" -->
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The Client Library, <span class="italic">hsiotlib-v.1.0.aar,</span> can also be copied to the <span class="italic">app/libs</span> folder using File Manager.</div>
+</li>
+<li>
+<p>To add Internet Permission to the app, open the file, <span class="italic">AndroidManifest.xml</span>, in the <span class="italic">app/src/main</span> folder.</p>
+</li>
+<li>
+<p>Add the following line to this file before the &lt;Application tag. See <a href="#CHEGEDFB">Figure 7</a>.</p>
+<pre dir="ltr">
+        &lt;uses-permission androd:name="android.permission.INTERNET"/&gt;
+</pre>
+<div id="MHCCS122" class="figure">
+<p class="titleinfigure"><a id="CHEGEDFB"></a>Figure 7 Add Internet Permission to the App</p>
+<img width="504" height="255" src="./img/internet_permission.jpg" alt="Surrounding text describes Figure 7 ." /><br /></div>
+<!-- class="figure" --></li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<div id="MHCCS123" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref8"></a>
+<h3 class="sect2">Using the mHealth Connector Cloud Service Client Library API</h3>
+<p>To initialize the Client Library and send the data to mHealth Connector, the mobile device must call Client Library API methods in the order listed below.</p>
+<div id="MHCCS124" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref9"></a>
+<h4 class="sect3">Initialization Steps</h4>
+<ol>
+<li>
+<p>(Optional) Set up all methods parameters through the device bootstrap method call. You will do this once. All parameters will be saved in the KeyChain and provide the information needs for steps 2 - 4. If you do not make this optional call, methods parameters are sent to the user and must be entered manually in steps 2 - 4, below.</p>
+<p><span class="bold">Method:</span></p>
+<p><span class="syntaxinlinebold">IotAccessManager.getSharedInstance().deviceBootstrap(final String dthUrl, final String clientID, final String oneTimePassword, final Context ctx, final DeviceBootstrapCallback callback)</span></p>
+<p><span class="bold">Arguments:</span></p>
+<ul>
+<li>
+<p><span class="bold">dthUrl</span>&mdash;DTH service given URL This is the deviceBootstrap webservice URL</p>
+</li>
+<li>
+<p><span class="bold">clientID</span>&mdash;Specific patient access ID</p>
+</li>
+<li>
+<p><span class="bold">oneTimePassword</span>&mdash;OTP value provided for the user access ID</p>
+</li>
+<li>
+<p><span class="bold">ctx</span>&mdash;Android application context</p>
+</li>
+<li>
+<p><span class="bold">callback</span>&mdash;On completion, callback method "void status(boolean isSuccess, String msg)"</p>
+</li>
+</ul>
+<p><span class="bold">Return type</span>: Void</p>
+<p><span class="bold">Example:</span></p>
+<pre dir="ltr">
+IotAccessManager.getSharedInstance().deviceBootstrap(DTHurl, accessID, OTP, this.getApplicationContext(), new DeviceBootstrapCallback() {
+    public void status(boolean isSuccess, String msg) {
+ 
+        if (isSuccess) {
+            Log.d(TAG,"deviceBootstrap successful");
+            Log.d(TAG, msg);
+ 
+            try {
+                JSONObject json = new JSONObject(msg);
+ 
+                Intent int1 = new Intent(this, MainActivity.class);
+        int1.putExtra("accessid", accessID);
+        startActivity(int1);
+            } catch (Exception ex) {
+ 
+            }
+        } else {
+            Log.d(TAG,"deviceBootstrap unsuccessful");
+            Log.d(TAG,msg);
+ 
+            Helper.ShowAlert(this, "deviceBootstrap unsuccessful", "E");
+        }
+    }
+});
+</pre></li>
+<li>
+<p>Set the mHealth Connector hosturl and port.</p>
+<p><span class="bold">Method:</span></p>
+<p><span class="syntaxinlinebold">getSharedInstance</span><span class="syntaxinlinebold">IotAccessManager.().setHost(Host, Port)</span></p>
+<p><span class="bold">Arguments:</span></p>
+<ul>
+<li>
+<p><span class="bold">host</span>&mdash;mHealth Connector hosturl. It must be in the format, <span class="italic">https://server.domain.com</span>.</p>
+</li>
+<li>
+<p><span class="bold">port</span>&mdash;mHealth Connector port number. It must be an integer value.</p>
+</li>
+</ul>
+<p><span class="bold">Return:</span> Void</p>
+<p><span class="bold">Exception:</span> This method may return the following error:</p>
+<ul>
+<li>
+<p>IllegalArgumentException</p>
+</li>
+</ul>
+<p><span class="bold">Example:</span> Set up mHealth Connector host and port.</p>
+<pre dir="ltr">
+IotAccessManager.getSharedInstance().setHost( "https://myinstance-myidentitydomain.iot.us.oraclecloud.com" ,443);
+</pre></li>
+<li>
+<p>Set the device data model.</p>
+<p>Use the <span class="bold">appendToDeviceModels</span> API to configure device data models supported by the mobile application. Repeat this call for each device data model URN supported by your mobile application. Obtain a unique URN for each device data model from your project coordinator.</p>
+<p>If your mobile application can send messages for different device data models, ensure that all the device model URNs are added before calling the <span class="bold">send</span> method. See <a href="#CIHECJHF">Data Transmission</a>. Device data model URNs added by this method will be used when a mobile application is activated to communicate with the mHealth Connector.</p>
+<p><span class="bold">Method:</span></p>
+<p><span class="syntaxinlinebold">IotAccessManager.getSharedInstance().appendToDeviceModels(String deviceModelUrn)</span></p>
+<p><span class="bold">Argument:</span> Device data model URN string</p>
+<p><span class="bold">Return:</span> Void</p>
+<p><span class="bold">Example:</span> Set device data models:</p>
+<p>The example sets up the application with two device models: "urn:oraclehs:iot:devices:pulseoxy" and "urn:oraclehs:iot:devices:bloodpressure"</p>
+<pre dir="ltr">
+IotAccessManager.getSharedInstance().appendToDeviceModels("urn:oraclehs:iot:d
+evices:pulseoxy")
+ 
+IotAccessManager.getSharedInstance().appendToDeviceModels("urn:oraclehs:iot:d evices:bloodpressure")
+</pre></li>
+<li>
+<p>Configure mobile device bootstrap parameters.</p>
+<p>Use the <span class="bold">setup</span> method to set clinical trial identifier, patient identifier, and mHealth Connector pseudo device information (activationId, shared secret received as part of device registration step in mHealth Connector). When called, this method will try to activate the device making an HTTPS connection with the mHealth Connector host configured using the <span class="bold">setHost</span> method. Therefore, call it from a background thread.</p>
+<p><span class="bold">Method:</span></p>
+<p><span class="syntaxinlinebold">IotAccessManager.getSharedInstance().setup(String userId, String regId(activationId), String sharedSecret, String trialID, applicationContext)</span></p>
+<p><span class="bold">Arguments:</span></p>
+<ul>
+<li>
+<p><span class="bold">UserId</span>&mdash;Patient Identifier String. This value will be included in every device data message sent to mHealth Connector. Patient identifier does not contain Personal Identifiable Information (PII).</p>
+</li>
+<li>
+<p><span class="bold">ActivationId</span>&mdash;Pseudo device activationId (also known as hardwareId) returned by mHealth Connector from device registration. (Your project coordinator will assist in device data model registration in mHealth Connector, and will supply the device activationId and shared secret.)</p>
+</li>
+<li>
+<p><span class="bold">SharedSecret</span>&mdash;Pseudo device shared secret returned by mHealth Connector from device registration. This is used by the Client Library to establish an initial trust relationship between the mobile device and mHealth Connector. (Your project coordinator will assist in device data model registration in mHealth Connector Cloud Service, and will supply the device activationId and shared secret.)</p>
+</li>
+<li>
+<p><span class="bold">TrialId</span>&mdash;Clinical trial identifier. This value will be included in every device data message sent to mHealth Connector.</p>
+</li>
+<li>
+<p><span class="bold">applicationContext</span>&mdash;Android application context.</p>
+</li>
+</ul>
+<p><span class="bold">Return:</span> String</p>
+<ul>
+<li>
+<p>Null return value indicates successful activation of a device.</p>
+</li>
+<li>
+<p>Non-null string indicates an error. Possible values are:</p>
+<ul>
+<li>
+<p><span class="bold">AlreadyActivatedDevice</span>&mdash;This indicates that the device was previously activated but mHealth Connector could not locate the device private key. This is a common situation when the application is removed and reinstalled on the mobile device.</p>
+</li>
+<li>
+<p><span class="bold">DeviceActivationFailed</span>&mdash;Not null returned value represent a device activation failed.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><span class="bold">Example:</span> Set bootstrap parameters</p>
+<pre dir="ltr">
+String result= IotAccessManager.getSharedInstance().setup("PatientId-10101", "testActivationId01", "testSharedSecret01", "testTrial01", applicationContext);
+if (result == null) {
+Log.i(TAG,"device registration successful");
+} else {
+Log.i(TAG,"device registration unsuccessful-"+result);
+}
+</pre></li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<a id="CIHECJHF"></a>
+<div id="MHCCS125" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Data Transmission</h4>
+<p>To send data from your mobile application to mHealth Connector, use the <span class="bold">send</span> method in the IoTAccessManager class.</p>
+<p>The data must be in JSON format (key-value pairs) and conform to the message structure and message format for a message URN defined in a device model set via the <span class="bold">appendToDeviceModels</span> method. When called, this method will transmit the message to mHealth Connector.</p>
+<p>Any message not containing the key audit attributes listed below will result in a message format error.</p>
+<ul>
+<li>
+<p>KEY_YEAR</p>
+</li>
+<li>
+<p>KEY_MONTH</p>
+</li>
+<li>
+<p>KEY_DAY</p>
+</li>
+<li>
+<p>KEY_HOURS</p>
+</li>
+<li>
+<p>KEY_MINUTES</p>
+</li>
+<li>
+<p>KEY_SECONDS</p>
+</li>
+<li>
+<p>KEY_DID</p>
+</li>
+<li>
+<p>KEY_SN</p>
+</li>
+</ul>
+<p>When this method is called, the Client Library will add two attributes to the message if they are not present already:</p>
+<ul>
+<li>
+<p>KEY_TRIALID &mdash;trialId value set in <span class="bold">setup</span> method.</p>
+</li>
+<li>
+<p>KEY_UID&mdash;userId value set in <span class="bold">setup</span> method.</p>
+</li>
+</ul>
+<p><span class="bold">Method:</span></p>
+<p><span class="syntaxinlinebold">IotAccessManager.getSharedInstance().send(string dataFormat, string dataMsg, SendMessageCallback sendMessageCallback) throws JSON Exception</span></p>
+<p><span class="bold">Arguments:</span></p>
+<ul>
+<li>
+<p><span class="bold">dataFormat</span>&mdash;Message URN. This value must match the message URN specified in the device data model created in the mHealth Connector instance.</p>
+</li>
+<li>
+<p><span class="bold">dataMsg</span>&mdash;JSON payload as string.</p>
+</li>
+<li>
+<p><span class="bold">sendMessageCallback</span>&mdash;The caller will get error notification through this method.</p>
+</li>
+</ul>
+<p><span class="bold">Return:</span> Void</p>
+<p><span class="bold">Exceptions:</span></p>
+<ul>
+<li>
+<p>IllegalArgumentException</p>
+</li>
+<li>
+<p>JSONException</p>
+</li>
+</ul>
+<p><span class="bold">Example:</span> The example shows a JSON message for a pulse oximeter medical device.</p>
+<ul>
+<li>
+<p><span class="bold">dataMsg:</span></p>
+<pre dir="ltr">
+"{\"KEY_PULSE\":511,\"KEY_SP02\":\"127\",\"KEY_UID\":\"Myuid\",
+\"KEY_DID\":\"pulseoxy\",\"KEY_SN\":\"pulseoxy\",
+\"KEY_YEAR\":2017,\"KEY_MONTH\":1,\"KEY_DAY\":3,\"KEY_HOURS\":18,
+\"KEY_MINUTES\":25,\"KEY_SECONDS\":23,\"KEY_TRIALID\":\"mhealth\"}"
+</pre></li>
+<li>
+<p><span class="bold">dataFormat:</span></p>
+<pre dir="ltr">
+ "urn:oraclehs:iot:device:data:hsgbupulseoxystrm3:mhealth" 
+</pre></li>
+<li>
+<p><span class="bold">Android Code Snippet:</span></p>
+</li>
+</ul>
+<pre dir="ltr">
+   //method to send the message to mHealth Connector Cloud Service
+public void onClickFlushMessage(View v) {
+IotAccessManager.getSharedInstance().send(getMessageUrn.getText().toString()
+                    +":"+etTrialId.getText().toString(), this.dataMsg2, sendMessageCallback);
+                          }
+ 
+                              // Callback method used by the send
+public oracle.hs.iot.iotint.SendMessageCallback sendMessageCallback = new oracle.hs.iot.iotint.SendMessageCallback() {
+        public void messageStatus(boolean isSuccess, String msg) {
+            Log.d(TAG, msg);
+        }
+};
+</pre></div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<div id="MHCCS126" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref10"></a>
+<h3 class="sect2">Troubleshooting</h3>
+<ul>
+<li>
+<p>To activate a new device, valid URL, port, trialId, device model URN, activationId, and shared secret are necessary. For already activated devices, however, only valid activationId, URL, and port are necessary. Once a device is activated, device model URN, trialId, and shared secret are not validated.</p>
+</li>
+<li>
+<p>If the host is set incorrectly, after activating the device, your mobile application will not be able to send the messages as it cannot reach the host.</p>
+</li>
+<li>
+<p>If you uninstall your mobile application from a mobile device after the device is activated, you need to activate the device again using a new activationId and shared secret.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CHECEBGJ"></a>
+<div id="MHCCS127" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Secure Development Guidelines</h2>
+<p>This section provides guidelines and recommendations for using and developing mobile applications using the mHealth Connector Cloud Service Client Library API published by the mHealth Connector Cloud Service platform. The following are recommended practices for secure usage of this API.</p>
+<div id="MHCCS128" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref11"></a>
+<h3 class="sect2">Access Control</h3>
+<p>mHealth Connector Cloud Service assumes that the invoker has the permissions to access every requested resource and representation or entity returned. Therefore, call mHealth Connector Cloud Service Client Library methods after authenticating the mobile application user.</p>
+</div>
+<!-- class="sect2" -->
+<div id="MHCCS129" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref12"></a>
+<h3 class="sect2">Securely Storing mHealth Connector Cloud Service Bootstrap Parameters</h3>
+<p>Mobile application must ensure that all mHealth Connector Cloud Service bootstrap parameters are stored securely (on the device or any back-end service) by the mobile application.</p>
+</div>
+<!-- class="sect2" -->
+<div id="MHCCS130" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref13"></a>
+<h3 class="sect2">Data Transmission Security</h3>
+<p>Mobile application must use a secure communication channel (TLS 1.2 or above) for communication with back-end services.</p>
+</div>
+<!-- class="sect2" -->
+<div id="MHCCS131" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref14"></a>
+<h3 class="sect2">Using Known Vulnerable Components</h3>
+<p>The mHealth Connector Cloud Service Client Library is constantly updated with the latest security fixes and patches. Oracle recommends that developers using the mHealth Connector Cloud Service Client Library do the same.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CHEDCJFJ"></a>
+<div id="MHCCS132" class="sect1">
+<h2 class="sect1">Documentation Accessibility</h2>
+<p>For information about Oracle's commitment to accessibility, visit the Oracle Accessibility Program website at <code dir="ltr"><a href="http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=docacc">http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=docacc</a></code>.</p>
+<p class="subhead2"><a id="sthref15"></a>Access to Oracle Support</p>
+<p>Oracle customers that have purchased support have access to electronic support through My Oracle Support. For information, visit <code dir="ltr"><a href="http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=info">http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=info</a></code> or visit <code dir="ltr"><a href="http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=trs">http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=trs</a></code> if you are hearing impaired.</p>
+</div>
+<!-- class="sect1" -->
+<a id="sthref16"></a>
+<hr />
+<p>Integrating the Client Library with a Mobile Application, Release 1.2</p>
+<p>Part Number E97297-01</p>
+<p>Copyright &copy; 2018,&nbsp;Oracle and/or its affiliates. All rights reserved.</p>
+<p>This software and related documentation are provided under a license agreement containing restrictions on use and disclosure and are protected by intellectual property laws. Except as expressly permitted in your license agreement or allowed by law, you may not use, copy, reproduce, translate, broadcast, modify, license, transmit, distribute, exhibit, perform, publish, or display any part, in any form, or by any means. Reverse engineering, disassembly, or decompilation of this software, unless required by law for interoperability, is prohibited.</p>
+<p>The information contained herein is subject to change without notice and is not warranted to be error-free. If you find any errors, please report them to us in writing.</p>
+<p>If this is software or related documentation that is delivered to the U.S. Government or anyone licensing it on behalf of the U.S. Government, then the following notice is applicable:</p>
+<p>U.S. GOVERNMENT END USERS: Oracle programs, including any operating system, integrated software, any programs installed on the hardware, and/or documentation, delivered to U.S. Government end users are "commercial computer software" pursuant to the applicable Federal Acquisition Regulation and agency-specific supplemental regulations. As such, use, duplication, disclosure, modification, and adaptation of the programs, including any operating system, integrated software, any programs installed on the hardware, and/or documentation, shall be subject to license terms and license restrictions applicable to the programs. No other rights are granted to the U.S. Government.</p>
+<p>This software or hardware is developed for general use in a variety of information management applications. It is not developed or intended for use in any inherently dangerous applications, including applications that may create a risk of personal injury. If you use this software or hardware in dangerous applications, then you shall be responsible to take all appropriate fail-safe, backup, redundancy, and other measures to ensure its safe use. Oracle Corporation and its affiliates disclaim any liability for any damages caused by use of this software or hardware in dangerous applications.</p>
+<p>Oracle and Java are registered trademarks of Oracle and/or its affiliates. Other names may be trademarks of their respective owners.</p>
+<p>Intel and Intel Xeon are trademarks or registered trademarks of Intel Corporation. All SPARC trademarks are used under license and are trademarks or registered trademarks of SPARC International, Inc. AMD, Opteron, the AMD logo, and the AMD Opteron logo are trademarks or registered trademarks of Advanced Micro Devices. UNIX is a registered trademark of The Open Group.</p>
+<p>This software or hardware and documentation may provide access to or information about content, products, and services from third parties. Oracle Corporation and its affiliates are not responsible for and expressly disclaim all warranties of any kind with respect to third-party content, products, and services unless otherwise set forth in an applicable agreement between you and Oracle. Oracle Corporation and its affiliates will not be responsible for any loss, costs, or damages incurred due to your access to or use of third-party content, products, or services, except as set forth in an applicable agreement between you and Oracle.</p>
+</div>
+<!-- class="letterstyle" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment1">
+<tr>
+<td class="cellalignment6">&nbsp;</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment8">
+<table class="cellalignment4">
+<tr>
+<td class="cellalignment5"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment5"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment5"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment5"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

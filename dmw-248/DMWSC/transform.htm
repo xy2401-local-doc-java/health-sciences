@@ -1,0 +1,2231 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Set up data transformations</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2018-05-25T8:12:51Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Health Sciences Data Management Workbench Study Setup Guide" />
+<meta name="dcterms.identifier" content="E96067-01" />
+<meta name="dcterms.isVersionOf" content="DMWSC" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2017, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="libraries.htm" title="Previous" type="text/html" />
+<link rel="Next" href="validation.htm" title="Next" type="text/html" />
+<link rel="alternate" href="DMWSC.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="DMWSC.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="DMWSC.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">7/12</span> <!-- End Header -->
+<div id="DMWSC246" class="chapter"><a id="CFHHGEDB"></a>
+<h1 class="chapter"><span class="secnum">4</span> Set up data transformations</h1>
+<p class="subhead1"><a id="DMWSC99949"></a>What do you want to do?</p>
+<ol>
+<li>
+<p><a href="#BABCJIBC">Map at the clinical data model level</a></p>
+</li>
+<li>
+<p><a href="#BABCEIBC">Map at the table level</a></p>
+<ul>
+<li>
+<p><a href="#BABEDHDA">Use side transformations</a> so many people can work in parallel</p>
+</li>
+<li>
+<p><a href="#BABGEGAD">Copy table transformations</a></p>
+</li>
+<li>
+<p><a href="#BABJFIFA">Use Automap</a></p>
+</li>
+<li>
+<p><a href="#BABEBEDH">Map tables manually</a>, including <a href="#BABBBACH">Direct</a>, <a href="#BABBACBI">Join</a>, <a href="#BABIJDFB">Union</a>, <a href="#BABDDJGB">Pivot</a>, <a href="#BABHDHCI">Unpivot</a>, or <a href="#BABGHCGD">Custom</a> mappings. DMW generates code for all but custom mappings.</p>
+</li>
+<li>
+<p><a href="#BABDECBC">Mark target tables and columns as Not Used</a></p>
+</li>
+<li>
+<p><a href="#BABGIHAH">Create a self-join</a></p>
+</li>
+<li>
+<p><a href="#BABDFAFE">Authorize target table data for nonprivileged users</a></p>
+</li>
+<li>
+<p><a href="#BABGAEGB">Use a custom program</a></p>
+</li>
+<li>
+<p><a href="#BABCDBAC">Add expressions on mapped sources</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#BABBIICC">Map at the column level</a>, including writing expressions</p>
+</li>
+<li>
+<p><a href="#BABGGABJ">Cascade blinding and masking</a></p>
+</li>
+<li>
+<p><a href="#A134935349">Install a transformation</a></p>
+</li>
+<li>
+<p><a href="#BABDDDCF">Run transformations and view history</a></p>
+</li>
+</ol>
+<p class="subhead1"><a id="DMWSC99950"></a>What do you want to know?</p>
+<ul>
+<li>
+<p><a href="sc_adv_topics.htm#A3218509">Automatic triggering of transformations and validation checks</a></p>
+</li>
+<li>
+<p><a href="#BABDAFJI">Upgrade transformations to synchronize with models</a></p>
+</li>
+<li>
+<p><a href="sc_adv_topics.htm#BABCICDE">Validation status and lifecycle stages</a></p>
+</li>
+</ul>
+<p><a href="#BABFBDGA">FAQs</a></p>
+<div id="DMWSC99951" class="figure">
+<p class="titleinfigure"><a id="sthref20"></a>Figure 4-1 Transformation Example: BMI Calculation</p>
+<img width="726" height="467" src="img/bmi_1.jpg" alt="Description of Figure 4-1 follows" /><br />
+<a id="sthref21" href="img_text/bmi_1.htm">Description of ''Figure 4-1 Transformation Example: BMI Calculation''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p>The diagram shows consecutive clinical data models Source, All Sites, Review, and Analysis. Subjects' weight is collected at each visit and mapped from the source model to each subsequent model, merging data from all sites in a union to the All Sites model, and converting the units from pounds to kilos in the Review model. Subjects' height is collected during the initial visit. To calculate the BMI in the Analysis model, Height is mapped from the source model and Weight is mapped from the Review model. The calculation is performed as an expression on the target column.</p>
+<a id="BABCJIBC"></a>
+<div id="DMWSC870" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Map at the clinical data model level</h2>
+<p><img width="54" height="22" src="img/icon_video.gif" alt="Text Show me how! is a video link." /> <code dir="ltr"><a href="https://apexapps.oracle.com/pls/apex/f?p=44785:265:0::::P265_CONTENT_ID:21775">Show me how!</a><a href=""></a></code></p>
+<ol>
+<li>
+<p>Click the Study Configuration icon <img width="29" height="25" src="img/study_config_icon.gif" alt="Icon shows a wrench and a screwdriver, crossed." /> at the top of any page and then click the <span class="bold">Transformations</span> tab.</p>
+</li>
+<li>
+<p>In the Data Models pane on the left, select the clinical data model the transformation will write data into.</p>
+<p>The system displays its tables in both the Target Tables and Source Tables panes so that you can use the target tables as a source for side models.</p>
+</li>
+<li>
+<p>Click the <img width="23" height="20" src="img/icon_add_rem_models.gif" alt="Icon has a plus sign and a minus sign and rows of data." /><span class="bold">Add or Remove Source Model</span> icon in the Source Tables pane.</p>
+<ol>
+<li>
+<p>Select one or more models to feed data into the transformation's target model.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+Reference models are listed after the study models. See <a href="dmw_programs.htm#BABJEBBH">"Set up reference data"</a>.</div>
+</li>
+<li>
+<p>For each, select the <span class="bold">Can Trigger</span> checkbox if you want the completion of a job updating data in the source model to trigger the execution of this transformation.</p>
+</li>
+<li>
+<p>Click <span class="bold">Save</span>.</p>
+</li>
+</ol>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+If many people are working on the same transformation, <a href="#BABEDHDA">Use side transformations</a>.</div>
+<p><span class="bold">Next:</span> <a href="#BABCEIBC">Map at the table level</a>.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+A tilde (~) displayed next to an input model means the model was deleted while the transformation was checked in. When you check out the transformation, the deleted model is no longer displayed at all.</div>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="BABEDHDA"></a>
+<div id="DMWSC10090" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Use side transformations</h2>
+<p>To allow many people to work on a transformation at the same time, each person can create a <span class="italic">side model</span> with one target table to work on in a corresponding <span class="italic">side transformation</span>.</p>
+<a id="BABFJEFE"></a>
+<div id="DMWSC10050" class="sect2">
+<h3 class="sect2">Create a side transformation</h3>
+<ol>
+<li>
+<p>Check out the transformation if it is not already checked out.</p>
+</li>
+<li>
+<p>In the Target Tables pane of the Transformation tab, select the target table(s) you want to work on. Use Ctrl+click or Shift+click to select multiple tables.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tips:</p>
+A target table can be in only one side model at a time. An icon next to the table name indicates a table already in a side model. Hover over the icon to see who is working on it.
+<p>You can select a table marked Not Used. It is marked Used when you merge back to the main transformation.</p>
+</div>
+</li>
+<li>
+<p>Click the <img width="19" height="19" src="img/icon_create_side_model.gif" alt="Icon shows a shaded circle with 3 lines pointing out." /><span class="bold">Create Side Model</span> icon. You may need to click the <span class="bold">&gt;&gt;</span> icon to see it. It is not enabled until you select a table.</p>
+</li>
+<li>
+<p>Enter a name for the side model. Do <span class="bold">not</span> use the string <code dir="ltr">$TEMP</code>.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>Select one or more source tables, then select the target table, and then click the <img width="19" height="21" src="img/icon_map.gif" alt="icon shows 2 data sheets with a 2-way arrow." /><span class="bold">Map</span> icon in the target table's row.</p>
+<p>You can <a href="#BABJFIFA">Use Automap</a> before or after mapping manually.</p>
+</li>
+<li>
+<p>Select a <span class="bold">Transformation Type</span>: <a href="#BABBBACH">Direct</a>, <a href="#BABBACBI">Join</a>, <a href="#BABIJDFB">Union</a>, <a href="#BABDDJGB">Pivot</a>, <a href="#BABHDHCI">Unpivot</a>, or <a href="#BABGHCGD">Custom</a>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+Even if you are using a custom program, select the actual type of transformation your program performs: Direct, Join, Union, Pivot, or Unpivot. Use Custom only if your program cannot support data lineage tracing.</div>
+</li>
+<li>
+<p>Map the target table and columns; see <a href="#BABCEIBC">"Map at the table level"</a> and <a href="#BABBIICC">"Map at the column level"</a>.</p>
+</li>
+<li>
+<p>(Optional) Cascade blinding or define tables and columns as Not Used. When the side transformation is merged back into the main transformation, the blinding and Not Used attributes are applied to the tables in the main transformation.</p>
+<p>Any validation checks or custom listings dependent on tables or columns marked as Not Used are disabled when the side transformation is merged with the main transformation.</p>
+</li>
+<li>
+<p><span class="bold">Check In</span> the side model.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+You can now run the side transformation from the Home page without affecting the main transformation. You can see data in the target tables in the Listings page.</div>
+</li>
+</ol>
+<p><span class="bold">Next:</span> <a href="#BABJGBGG">Merge a side transformation with the main transformation</a>.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABJGBGG"></a>
+<div id="DMWSC10051" class="sect2">
+<h3 class="sect2">Merge a side transformation with the main transformation</h3>
+<p>When you merge the side model with the main model, any blinding and Not Used values are merged with the target model.</p>
+<ol>
+<li>
+<p>Go to the main transformation for the target model.</p>
+</li>
+<li>
+<p>Check out the main transformation.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+If another user has the main transformation checked out, you cannot merge the side model into it. Either wait until you can check out the main transformation or ask the person who has checked it out to merge your side model.</div>
+</li>
+<li>
+<p>Select <span class="bold">Copy from Side Model</span> from the <span class="bold">Actions</span> drop-down list.</p>
+</li>
+<li>
+<p>Select the side model and click <span class="bold">Next</span>.</p>
+<p>If any tables have been modified since you created the side model, the system displays a message and you can choose to include the tables in the copy or not.</p>
+<ul>
+<li>
+<p>If you continue, the side model tables overwrite the main model tables.</p>
+</li>
+<li>
+<p>If you cancel the copy operation, you can upgrade the side model to reflect changes made in the main model.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Select the side model and click the <span class="bold">Delete Side Model</span> icon. You get a warning if it has not been merged with the main transformation.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BABCEIBC"></a>
+<div id="DMWSC871" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Map at the table level</h2>
+<p><img width="54" height="22" src="img/icon_video.gif" alt="Text Show me how! is a video link." /> <code dir="ltr"><a href="https://apexapps.oracle.com/pls/apex/f?p=44785:265:0::::P265_CONTENT_ID:21775">Show me how!</a><a href=""></a></code></p>
+<p>You must specify how to handle every table in the target model: either mark it Not Used or map it to one or more source tables.</p>
+<p>You can work many ways:</p>
+<ul>
+<li>
+<p><a href="#BABGEGAD">Copy table transformations</a></p>
+</li>
+<li>
+<p><a href="#BABJFIFA">Use Automap</a></p>
+</li>
+<li>
+<p><a href="#BABEBEDH">Map tables manually</a></p>
+</li>
+<li>
+<p><a href="#BABDECBC">Mark target tables and columns as Not Used</a></p>
+</li>
+<li>
+<p><a href="#BABGIHAH">Create a self-join</a></p>
+</li>
+<li>
+<p><a href="#BABDFAFE">Authorize target table data for nonprivileged users</a></p>
+</li>
+<li>
+<p><a href="#BABCDBAC">Add expressions on mapped sources</a></p>
+</li>
+<li>
+<p><a href="#BABCIJHH">Use staging tables</a></p>
+</li>
+<li>
+<p><a href="#BABCIJJE">View source code</a></p>
+</li>
+<li>
+<p><a href="#BABJHADC">Validate mappings</a></p>
+</li>
+<li>
+<p><a href="#BABDJHGG">Unmap tables</a></p>
+</li>
+</ul>
+<a id="BABGEGAD"></a>
+<div id="DMWSC10092" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Copy table transformations</h3>
+<p>If a transformation between the same or very similar source and target tables exists in a different study, you can copy it and do most of the mapping automatically.</p>
+<ol>
+<li>
+<p>Select target tables that are the same or similar to the target table mappings you plan to copy.</p>
+</li>
+<li>
+<p>Select <span class="bold">Copy from Another Transformation</span> from the <span class="bold">Actions</span> drop-down list.</p>
+</li>
+<li>
+<p>Specify the transformation to copy: Select a project (or other study grouping) from the drop-down list, then select a study, then the model that is the target of the transformation to be copied.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+When a transformation is copied from an external transformation or as part of applying a study template, authorized tables are always copied into the new transformation as Not Authorized. If any of the source tables are blinded, the target table must be either blinded or re-<span class="italic">authorized</span> if it does not contain blinded data.</div>
+</li>
+<li>
+<p>Click <span class="bold">Next</span>. The system validates the Copy and displays details including any errors or warnings detected by the validation:</p>
+<ul>
+<li>
+<p>For <span class="bold">pivot</span> and <span class="bold">unpivot</span> transformations, if metadata differences exist, the system displays an error. If the differences are on the source side, they must be resolved manually. If the differences are on the target side, you can run synchronization to resolve the differences and then copy. See <a href="#BABGIBFA">"I noticed the tables in the target model changed. Why?"</a>.</p>
+</li>
+<li>
+<p>For <span class="bold">union</span> and <span class="bold">join</span> transformations, if some of the source tables or columns in the union do not exist in the copied-to study, those mappings are not included and a warning is displayed. If only one table exists in the copied-to study, the union or join map is converted to a direct map and a warning is displayed.</p>
+</li>
+<li>
+<p>For <span class="bold">custom</span> transformations, if metadata differences exist, the system displays an error. If the differences are on the source side, they must be resolved manually. If the differences are on the target side, you can run synchronization to resolve the differences and then copy. See <a href="#BABGIBFA">"I noticed the tables in the target model changed. Why?"</a>.</p>
+</li>
+<li>
+<p>For <span class="bold">column mappings that use expressions</span>, if all the column references do not exist in the current source tables, the missing column references are removed from the expression.</p>
+</li>
+</ul>
+<p>You can't copy transformations with errors, but you can copy those with warnings.</p>
+</li>
+<li>
+<p>Select mappings to copy, and click <span class="bold">Accept Selected Mappings</span>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+If the source and target tables in the copied transformation have more columns than the tables in the current model, mark those columns Not Used.</div>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BABJFIFA"></a>
+<div id="DMWSC1042" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Use Automap</h3>
+<p>The Automap process searches for tables in source models to map to tables in the target model. It creates only direct 1:1 mappings. It does not change existing manual mappings. After running it,you select the mappings you want to use.</p>
+<ol>
+<li>
+<p>Select target tables to map by clicking the table rows in the Target Tables pane.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+For best performance, select ten tables or fewer.
+<p>You can use the Automap icon at the top of the page to map all tables, but it will be slower.</p>
+</div>
+</li>
+<li>
+<p>Select <span class="bold">Automap Selected Tables</span> from the <span class="bold">Map</span> drop-down list in the Target Tables pane.</p>
+</li>
+</ol>
+<p>See FAQ <a href="#BABGCGCJ">"How does Automap work?"</a>.</p>
+<div id="DMWSC1089" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref22"></a>
+<h4 class="sect3">Accept or reject suggested mappings</h4>
+<ol>
+<li>
+<p>Review all table and column mappings.</p>
+<p>The Type column shows the type of logic used to find the source column: Name Match, Alias Match, Datatype Match, or Partial Name/Alias Match.</p>
+</li>
+<li>
+<p>Deselect any you do not want.</p>
+</li>
+<li>
+<p>Click <span class="bold">Accept Selected Mappings</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BABEBEDH"></a>
+<div id="DMWSC1043" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Map tables manually</h3>
+<p>First, <a href="#BABCJIBC">Map at the clinical data model level</a>.</p>
+<p>To map at the table level:</p>
+<ol>
+<li>
+<p>Select one or more source tables.</p>
+</li>
+<li>
+<p>Select one target table.</p>
+</li>
+<li>
+<p>Click the <img width="19" height="21" src="img/icon_map.gif" alt="icon shows 2 data sheets with a 2-way arrow." /><span class="bold">Map</span> icon in the target table's row.</p>
+</li>
+<li>
+<p>If you are using a custom program, select the program.</p>
+</li>
+<li>
+<p>Select a <span class="bold">Transformation Type</span>: <a href="#BABBBACH">Direct</a>, <a href="#BABBACBI">Join</a>, <a href="#BABIJDFB">Union</a>, <a href="#BABDDJGB">Pivot</a>, <a href="#BABHDHCI">Unpivot</a>, or <a href="#BABGHCGD">Custom</a>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+Even if you are using a custom program, select the type of transformation your program performs. Use Custom only if your program cannot support data lineage tracing.</div>
+</li>
+<li>
+<p>If you specify a <a href="#BABBACBI">Join</a>, <a href="#BABDDJGB">Pivot</a>, or <a href="#BABHDHCI">Unpivot</a>, the system displays an icon. Click the icon and supply details.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+Keep the primary key intact in the target table. Include SubjID in the primary key.</div>
+</li>
+<li>
+<p><span class="bold">Authorize</span>: When one or more source tables contains blinded data, by default the target table is completely blinded and only users with Blind Break privileges can view any data in the table.</p>
+<ul>
+<li>
+<p>To allow users without Blind Break privileges to see some of the table's data but keep other data hidden, modify the target table to mask values in the appropriate columns, rows, or cells. Do this in the Clinical Data Model page; see <a href="datamodel.htm#BABIBEAG">"Set up data blinding in tables"</a>.</p>
+</li>
+<li>
+<p>If you are certain that the target table will contain only nonblinded data, select the checkbox in the <span class="bold">Authorize</span> column to allow users without Blind Break privileges to view all data in the target table. This authorization is audited.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="bold">Save</span>. You must save before mapping columns.</p>
+</li>
+</ol>
+<p><span class="bold">Next:</span> <a href="#BABBIICC">Map at the column level</a>.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABDECBC"></a>
+<div id="DMWSC1041" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Mark target tables and columns as Not Used</h3>
+<p>See <a href="#BABGAAEE">"What happens when I mark tables and columns as Not Used?"</a>.</p>
+<div id="DMWSC99952" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref23"></a>
+<h4 class="sect3">Explicitly mark as Not Used</h4>
+<ol>
+<li>
+<p>Select a single table or column.</p>
+</li>
+<li>
+<p>Select <span class="bold">Mark as Not Used</span> from the <span class="bold">Mark</span> drop-down in the table or column pane.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<div id="DMWSC99953" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref24"></a>
+<h4 class="sect3">Mark mapping as Complete</h4>
+<p>To mark <span class="bold">all remaining unmapped columns in a single table</span> as Not Used:</p>
+<ol>
+<li>
+<p>Go to the Column Mapping page for a single table.</p>
+</li>
+<li>
+<p>Select <span class="bold">Mark as Complete</span> from the <span class="bold">Mark</span> drop-down.</p>
+</li>
+</ol>
+<pre dir="ltr">
+</pre>
+<p>To mark <span class="bold">all remaining unmapped tables</span> as Not Used:</p>
+<ol>
+<li>
+<p>Go to the main transformation page.</p>
+</li>
+<li>
+<p>Select <span class="bold">Mark as Complete</span> from the <span class="bold">Actions</span> drop-down.</p>
+<p>You can then select <span class="bold">Cascade Mark as Not Used</span> to mark as Not Used any table or column in a downstream model that is mapped to a table or column that is marked Not Used in the target model.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BABGIHAH"></a>
+<div id="DMWSC10139" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Create a self-join</h3>
+<ol>
+<li>
+<p>Select the table in the Source Tables pane and the Target Tables pane and click the <img width="19" height="21" src="img/icon_map.gif" alt="Icon shows 2 data sheets with a 2-way arrow." /><span class="bold">Map</span> icon.</p>
+</li>
+<li>
+<p>Enter an alias for each occurrence and save.</p>
+</li>
+<li>
+<p>Select a transformation type of Join for the target table.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Join</span> icon and define the join. See <a href="#BABBACBI">"Join"</a>.</p>
+</li>
+<li>
+<p>Click the <img width="19" height="21" src="img/icon_map.gif" alt="Icon shows 2 data sheets with a 2-way arrow." /><span class="bold">Map Column</span> icon for the target table. See <a href="#BABBIICC">"Map at the column level"</a>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BABDFAFE"></a>
+<div id="DMWSC10263" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Authorize target table data for nonprivileged users</h3>
+<p>If you are certain that one or all target tables do not contain any unmasked blinded data, so users without special blinding privileges should be able to view all data in the table, <span class="italic">authorize</span> the table(s).</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+Before authorizing, modify all target tables that do contain data that should be hidden by masking values in the appropriate columns, rows, or cells. Do this in the Clinical Data Model page. See <a href="datamodel.htm#BABIBEAG">"Set up data blinding in tables"</a>.</div>
+<p>To authorize a single table:</p>
+<ol>
+<li>
+<p>Select the table.</p>
+</li>
+<li>
+<p>Select its <span class="bold">Authorize</span> checkbox.</p>
+</li>
+<li>
+<p>Save the transformation.</p>
+</li>
+</ol>
+<pre dir="ltr">
+</pre>
+<p>To authorize all target tables:</p>
+<ol>
+<li>
+<p>Select <span class="bold">Authorize Target Tables</span> from the <span class="bold">Actions</span> drop-down.</p>
+</li>
+<li>
+<p>Save the transformation.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+You cannot <span class="italic">undo</span> authorization for all tables at once.</div>
+</li>
+</ol>
+<pre dir="ltr">
+</pre>
+<p>To undo authorization:</p>
+<ol>
+<li>
+<p>Select the table.</p>
+</li>
+<li>
+<p>Deselect its <span class="bold">Authorize</span> checkbox.</p>
+</li>
+<li>
+<p>Save the transformation.</p>
+</li>
+</ol>
+<p>For more information, see <a href="sc_adv_topics.htm#BABCDGJC">"Data blinding and authorization"</a>.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABCDBAC"></a>
+<div id="DMWSC1004" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Add expressions on mapped sources</h3>
+<p>To generate a WHERE clause to filter by column value on the source table(s), restricting the set of source data that participates in the transformation:</p>
+<ol>
+<li>
+<p>Select the target table.</p>
+</li>
+<li>
+<p>If needed, add an alias for the source table.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The Logical Name field shows alternate names for the table defined in the data model. These values are used in automapping.</div>
+</li>
+<li>
+<p>In the Mapped Sources tab, click the icon in the <span class="bold">Source Filters</span> column and write an expression, either as free text or using the Expression Builder. See <a href="dmw_programs.htm#BABFACFB">Use the Expression Builder</a>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Important:</p>
+<ul>
+<li>
+<p>If you reference a static package or function in free text, you must select it in the <span class="bold">Selected Packages tab</span>.</p>
+</li>
+<li>
+<p>In free text, <span class="bold">use just the column name</span>, not the table.column format, <span class="bold">unless</span> you need to use an alias, as in a self-join. In that case the alias.column format is required.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>If you reference a static package in free text, you must select it in the Selected Packages tab.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BABCIJHH"></a>
+<div id="DMWSC1044" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Use staging tables</h3>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Staging tables are a complex solution intended to address specific situations that many customers do not experience. Before implementing staging tables please contact Oracle Support for guidance on when it is appropriate to leverage this feature.</div>
+<ol>
+<li>
+<p>Select <span class="bold">Create Staging Table</span> from the <span class="bold">Actions</span> drop-down list.</p>
+</li>
+<li>
+<p>Enter a name for the table.</p>
+</li>
+<li>
+<p><span class="bold">Supports Duplicate</span>: Normally this should not be selected. See <a href="sc_adv_topics.htm#CIHJBGAD">"Supporting duplicate primary key values in a load"</a>.</p>
+</li>
+<li>
+<p>For each source table:</p>
+<ol>
+<li>
+<p>In the Source pane, select the source model from the drop-down list.</p>
+</li>
+<li>
+<p>Select source table columns that you need for the Select or Where clause or Join. You can use Shift+click or Ctrl+click to select multiple columns.</p>
+</li>
+<li>
+<p>Click the <img width="16" height="17" src="img/icon_add.gif" alt="Icon is a plus sign." /><span class="bold">Add</span> icon.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Select the checkbox for each column that should be part of the primary key.</p>
+</li>
+<li>
+<p><span class="bold">Save</span>. The system checks out the target clinical data model and adds the staging table to it.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+You may need to make changes to the staging table; for example, associating a column with a codelist for use as a pivot column. If so, navigate to the target model in the Clinical Data Models page, where the staging table is displayed. Make the changes, install the model, then return to the transformation.</div>
+<div class="infoboxnotealso">
+<p class="notep1">Tips:</p>
+You can map one or more staging tables to another, if two intermediate stages are required. You cannot self-join a staging table. The system maintains data lineage tracing through the staging layer.</div>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BABCIJJE"></a>
+<div id="DMWSC10264" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">View source code</h3>
+<p>To view generated PL/SQL source code for a table mapping:</p>
+<ol>
+<li>
+<p>Select the table.</p>
+</li>
+<li>
+<p>From the <span class="bold">Actions</span> drop-down, select <span class="bold">View Source</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BABJHADC"></a>
+<div id="DMWSC277" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Validate mappings</h3>
+<p>To validate selected mappings:</p>
+<ol>
+<li>
+<p>Select one or more target tables.</p>
+</li>
+<li>
+<p>From the Map drop-down in the Target Tables pane, select <span class="bold">Validate Mappings</span>.</p>
+</li>
+</ol>
+<p>To validate all mappings in the transformation:</p>
+<ol>
+<li>
+<p>From the Map drop-down at the top of the page, select <span class="bold">Validate Mappings</span>.</p>
+</li>
+</ol>
+<p>To see error messages, hover over the table or column's mapping status icon. See <a href="#CHDEAEFC">What does this transformation validation error message mean?</a>.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABDJHGG"></a>
+<div id="DMWSC99954" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Unmap tables</h3>
+<ol>
+<li>
+<p>Select one or more target tables.</p>
+</li>
+<li>
+<p>From the Target Tables <span class="bold">Map</span> drop-down, select <span class="bold">Unmap</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BABBIICC"></a>
+<div id="DMWSC872" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Map at the column level</h2>
+<p>First, <a href="#BABCEIBC">Map at the table level</a>.</p>
+<p><img width="54" height="22" src="img/icon_video.gif" alt="Text Show me how! is a video link." /> <code dir="ltr"><a href="https://apexapps.oracle.com/pls/apex/f?p=44785:265:0::::P265_CONTENT_ID:21822">Show me how!</a><a href=""></a></code></p>
+<ol>
+<li>
+<p>In the Target Tables pane, select the target table, then click the <span class="bold">Map Column</span> icon.</p>
+</li>
+<li>
+<p>(Optional) Select one or more target columns, then select <span class="bold">Automap Selected Columns</span> from the Map drop-down. The system suggests mappings to matching source columns, if any.</p>
+</li>
+<li>
+<p>Select one or more source columns to map to a single target column, select the target column, and click the <span class="bold">Map</span> icon in the target column's row.</p>
+</li>
+<li>
+<p>To write an expression operating on the target column data as part of the Select clause, do <span class="bold">one</span> of the following:</p>
+<ul>
+<li>
+<p>Enter free text either in the <span class="bold">Expressions</span> field, using normal SQL syntax (without curly brackets).</p>
+<div class="infoboxnotealso">
+<p class="notep1">Important:</p>
+<ul>
+<li>
+<p>If you reference a static package or function in free text, you must select it in the <span class="bold">Selected Packages tab</span>.</p>
+</li>
+<li>
+<p>In free text, <span class="bold">use just the column name</span>, not the table.column format, <span class="bold">unless</span> you need to use an alias, as in a self-join. In that case the alias.column format is required.</p>
+</li>
+<li>
+<p>Create table aliases in the Mapped Sources tab to use in free text expressions.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Click the <img width="15" height="17" src="img/icon_modify.gif" alt="Icon shows a pencil." /><span class="bold">Add or Modify Expression</span> icon to <a href="dmw_programs.htm#BABFACFB">Use the Expression Builder</a>. which generates code using curly brackets.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Important:</p>
+Only one syntax style can be supported in a single table mapping.</div>
+</li>
+</ul>
+</li>
+<li>
+<p>If you create a Many-to-1 column mapping, you must select one of the source columns as the <a href="glossary.htm#CBAIGEHA">preferred path</a> in the Mapped Sources tab.</p>
+</li>
+<li>
+<p>Continue until all columns are either mapped or marked as Not Used.</p>
+</li>
+<li>
+<p><span class="bold">Save</span>.</p>
+</li>
+<li>
+<p>From the <span class="bold">Install</span> drop-down, select either Install or Full Install. See <a href="#A134935349">"Install a transformation"</a>.</p>
+</li>
+</ol>
+<p>To run the transformation, go to the Home page.</p>
+</div>
+<!-- class="sect1" -->
+<a id="BABGGABJ"></a>
+<div id="DMWSC10052" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Cascade blinding and masking</h2>
+<p>You can apply the blinding settings of source tables and columns to the target tables and columns they are mapped to using the Cascade Blinding feature for tables and the Cascade Masking feature for columns.</p>
+<p>Use the <span class="bold">View</span> drop-down to display columns in the Source Tables or Columns pane with blinding-related information:</p>
+<p>You must complete all the mappings first.</p>
+<a id="BABHFBJF"></a>
+<div id="DMWSC10053" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Cascade blinding to downstream tables</h3>
+<ol>
+<li>
+<p>In the Table Mapping pane, click <span class="bold">Cascade Blinding</span> from the <span class="bold">Actions</span> drop-down list.</p>
+<p>The Cascade Blinded Tables window displays all blinded source tables, the target table they are mapped to, and the type of blinding.</p>
+<ul>
+<li>
+<p>If a source table has <span class="italic">column-level</span> blinding, you can select or deselect individual columns for cascade blinding.</p>
+</li>
+<li>
+<p>If a source table has <span class="italic">row-level</span> blinding, you must enter blinding criteria for the target table in the Clinical Data Model page. If you don't, the whole target table is blinded.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Accept the cascade operation. Either:</p>
+<ul>
+<li>
+<p>Select a target table and click <span class="bold">Accept</span>.</p>
+</li>
+<li>
+<p>Check <span class="bold">Select All</span> at the top of the window and click <span class="bold">Accept</span>.</p>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BABFBJDE"></a>
+<div id="DMWSC10054" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Cascade masking to downstream columns</h3>
+<p>Masking substitutes a dummy value for real, sensitive, data.</p>
+<ol>
+<li>
+<p>In the Column Mapping pane, click <span class="bold">Cascade Masking</span>.</p>
+<p>The Cascade Blinded Columns window displays all blinded source columns, the target column they are mapped to, and the type of blinding.</p>
+<p>If a source column has <span class="italic">cell-level</span> masking, the target column will have <span class="italic">column-level</span> masking until you specify masking criteria in the Clinical Data Models page.</p>
+</li>
+<li>
+<p>Accept the cascade operation. Either:</p>
+<ul>
+<li>
+<p>Select a target table and click <span class="bold">Accept</span>.</p>
+</li>
+<li>
+<p>Check <span class="bold">Select All</span> at the top of the window and click <span class="bold">Accept</span>.</p>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BABBJCDA"></a>
+<div id="DMWSC253" class="sect1">
+<h2 class="sect1">Table transformation types</h2>
+<p>The system generates program code based on your specifications for the following transformation types (except Custom):</p>
+<ul>
+<li>
+<p><a href="#BABBBACH">Direct</a></p>
+</li>
+<li>
+<p><a href="#BABBACBI">Join</a></p>
+</li>
+<li>
+<p><a href="#BABIJDFB">Union</a></p>
+</li>
+<li>
+<p><a href="#BABDDJGB">Pivot</a></p>
+</li>
+<li>
+<p><a href="#BABHDHCI">Unpivot</a></p>
+</li>
+<li>
+<p><a href="#BABGHCGD">Custom</a></p>
+</li>
+</ul>
+<p>For more information on joins, unions, pivots, and unpivots, see <span class="italic">Oracle&reg; Database SQL Language Reference 11g Release 2 (11.2)</span>.</p>
+<a id="BABBBACH"></a>
+<div id="DMWSC254" class="sect2">
+<h3 class="sect2">Direct</h3>
+<p>One or more source tables feed data to a single target table. Column maps in a direct table relation may have a 1-to-1 or Many-to-1 relation.</p>
+<ol>
+<li>
+<p>Select the source and target tables, then select a Transformation Type of <span class="bold">Direct</span>.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Map Column</span> icon.</p>
+</li>
+<li>
+<p>For each target column <span class="bold">either</span>:</p>
+<ul>
+<li>
+<p>Select the source column(s) and click the <span class="bold">Map</span> icon.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Mark as Not Used</span> icon.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Save.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BABBACBI"></a>
+<div id="DMWSC255" class="sect2">
+<h3 class="sect2">Join</h3>
+<p><img width="54" height="22" src="img/icon_video.gif" alt="Text Show me how! is a video link." /> <code dir="ltr"><a href="https://apexapps.oracle.com/pls/apex/f?p=44785:265:0::::P265_CONTENT_ID:23172">Show me how!</a><a href=""></a></code></p>
+<p>Two or more source tables feed data to a single target table in a join relationship with a join condition. Column maps in a join relation may have a 1-to-1 or Many-to-1 relation.</p>
+<ol>
+<li>
+<p>Select the source tables and target table and click the <span class="bold">Map</span> icon, then select a Transformation Type of <span class="bold">Join</span>.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Join</span> icon.</p>
+</li>
+<li>
+<p>Click the <img width="16" height="17" src="img/icon_add.gif" alt="Icon is a plus sign." /><span class="bold">Add</span> icon.</p>
+</li>
+<li>
+<p>Select Table 1 (left) and Table 2 (right, also known as the foreign key table) to be joined.</p>
+</li>
+<li>
+<p>Specify if it is to be an outer join on either the left or right side. Leave the checkbox unselected to create an inner join. See <a href="#BABIAGHG">Join Types</a> below.</p>
+</li>
+<li>
+<p>To join more than two tables, click the <img width="16" height="17" src="img/icon_add.gif" alt="Icon is a plus sign." /><span class="bold">Add</span> icon again and define the next join. Also follow the next steps for each pair of tables.</p>
+</li>
+<li>
+<p>Click the <img width="16" height="17" src="img/icon_add.gif" alt="Icon is a plus sign." /><span class="bold">Add</span> icon in the <span class="bold">Join Details</span> pane.</p>
+</li>
+<li>
+<p>Create the join condition for the Where clause by selecting a column from each table and the operator required.</p>
+<p>To specify additional Join conditions on other columns, click the <img width="16" height="17" src="img/icon_add.gif" alt="Icon is a plus sign." /><span class="bold">Add</span> icon in the Join Details pane again as many times as required.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Map Column</span> icon.</p>
+</li>
+<li>
+<p>For each unmapped target column <span class="bold">either</span>:</p>
+<ul>
+<li>
+<p>Select the source column(s) and click the <span class="bold">Map</span> icon.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Mark as Not Used</span> icon.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Save.</p>
+</li>
+</ol>
+<p class="subhead2"><a id="BABIAGHG"></a><a id="DMWSC99955"></a>Join Types</p>
+<p>An <span class="italic">inner join</span> (sometimes called a <span class="italic">simple join</span>) returns only those rows that satisfy the join condition.</p>
+<p>An <span class="italic">outer join</span> extends the result of a simple join. An outer join returns all rows that satisfy the join condition and also returns some or all of those rows from one table for which no rows from the other satisfy the join condition:</p>
+<ul>
+<li>
+<p>A <span class="italic">left outer join</span> returns returns all rows from Table 1 and only rows meeting the join condition from Table 2. Rows in Table 1 that do not have a corresponding row in Table 2 have null values in the columns from Table 2.</p>
+</li>
+<li>
+<p>A <span class="italic">right outer join</span> returns returns all rows from Table 2 and only rows meeting the join condition from Table 1. Rows in Table 2 that do not have a corresponding row in Table 1 have null values in the columns from Table 1.</p>
+</li>
+<li>
+<p>A <span class="italic">full outer join</span> returns all rows from both or all tables. Rows in either table that do not have a corresponding row in the other table have null values in the columns from the other table.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="BABIJDFB"></a>
+<div id="DMWSC256" class="sect2">
+<h3 class="sect2">Union</h3>
+<p><img width="54" height="22" src="img/icon_video.gif" alt="Text Show me how! is a video link." /> <code dir="ltr"><a href="https://apexapps.oracle.com/pls/apex/f?p=44785:265:0::::P265_CONTENT_ID:23173">Show me how!</a><a href=""></a></code></p>
+<p>All the data in two or more tables is fed into a single target table that is a superset of all columns in the sources. The source tables should have some overlapping content, such as two versions of a Vital Signs form or two lab vendors providing results for the same subject visit.</p>
+<ol>
+<li>
+<p>Select the source tables and target table and click the <span class="bold">Map</span> icon</p>
+</li>
+<li>
+<p>Select <span class="bold">Union</span> from the <span class="bold">Type</span> drop-down.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Map Column</span> icon.</p>
+</li>
+<li>
+<p>Select each target column in turn and do one of the following:</p>
+<ul>
+<li>
+<p>Select the source column(s) and click <span class="bold">Map</span>.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If only one source column is mapped to a target column, the system adds a null in the code for the other table(s). For example:
+<pre dir="ltr">
+insert into tgt_table1 
+(col1, col2, col3)
+select col1, col2, col3 
+from table1
+union all
+select col1, col2, null
+from table2; 
+</pre></div>
+</li>
+<li>
+<p>Click the <span class="bold">Mark as Not Used</span> icon.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Save.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BABDDJGB"></a>
+<div id="DMWSC257" class="sect2">
+<h3 class="sect2">Pivot</h3>
+<p><img width="54" height="22" src="img/icon_video.gif" alt="Text Show me how! is a video link." /> <code dir="ltr"><a href="https://apexapps.oracle.com/pls/apex/f?p=44785:265:0::::P265_CONTENT_ID:23174">Show me how!</a><a href=""></a></code></p>
+<p>A pivot converts a source table with a tall, skinny structure of few columns and many rows, such as lab data or ODM, into a target table that represents the same data in a more horizontal (short, fat) structure with more columns and fewer rows, based on the value in a pivot column, which must be associated with a codelist. See <a href="#BABHGFCE">Pivot Example</a>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+For pivots to work correctly the source table must have a primary key that includes the pivot column plus the <span class="bold">minimum</span> number of columns required to ensure that each record is unique.
+<p>If there are more columns in the key than that, the resulting table may have too many rows with target column values sparsely populated among them rather than having fewer rows with a value in each column.</p>
+</div>
+<ol>
+<li>
+<p>Select the source and target tables and click the <span class="bold">Map</span> icon, then select a Transformation Type of <span class="bold">Pivot</span>.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Pivot</span> icon.</p>
+</li>
+<li>
+<p>Query for and select the pivot column. It must be associated with a codelist.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Map Column</span> icon.</p>
+</li>
+<li>
+<p>In the <span class="bold">View</span> drop-down, select <span class="bold">Columns</span> and then select <span class="bold">Filter Value</span>.</p>
+</li>
+<li>
+<p>Scroll over to the <span class="bold">Filter Value</span> column. For each pivoted column in the target table, select the pivot column value to identify the row in the source table from which to get the value for the target column.</p>
+</li>
+<li>
+<p>Save.</p>
+</li>
+</ol>
+<p><a id="DMWSC10310"></a><span class="subhead3">Pivots and InForm Repeating Itemsets&nbsp;</span>In InForm, the primary key includes an internal index column called itemsetindex. In DMW, this internal column must be removed and replaced with the pivot column, which is associated with a codelist. To do this, create an intermediate direct transformation to remove itemsetindex and any other unneeded internal columns and add the pivot column to the primary key. Use the resulting table as the source table for the pivot transformation.</p>
+<p><a id="BABHGFCE"></a><a id="DMWSC262"></a><span class="subhead3">Pivot Example&nbsp;</span>Lab results are shipped one per row, but the review data model requires one row containing all lab results for each patient at the same visit.</p>
+<div id="DMWSC263" class="tblformal">
+<p class="titleintable"><a id="sthref25"></a><a id="sthref26"></a>Table 4-1 Source table in pivot example (tall, skinny table)</p>
+<table class="cellalignment53" title="Source table in pivot example (tall, skinny table)" summary="This table is described in the surrounding text." dir="ltr">
+<thead>
+<tr class="cellalignment40">
+<th class="cellalignment51" id="r1c1-t25">SubjID</th>
+<th class="cellalignment51" id="r1c2-t25">Date</th>
+<th class="cellalignment51" id="r1c3-t25">Visit</th>
+<th class="cellalignment51" id="r1c4-t25">Test</th>
+<th class="cellalignment51" id="r1c5-t25">Unit</th>
+<th class="cellalignment51" id="r1c6-t25">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r2c1-t25" headers="r1c1-t25">
+<p>972</p>
+</td>
+<td class="cellalignment46" headers="r2c1-t25 r1c2-t25">
+<p>03262112</p>
+</td>
+<td class="cellalignment46" headers="r2c1-t25 r1c3-t25">
+<p>5</p>
+</td>
+<td class="cellalignment46" headers="r2c1-t25 r1c4-t25">
+<p>IG</p>
+</td>
+<td class="cellalignment46" headers="r2c1-t25 r1c5-t25">
+<p>mh/dl</p>
+</td>
+<td class="cellalignment46" headers="r2c1-t25 r1c6-t25">
+<p>853</p>
+</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r3c1-t25" headers="r1c1-t25">
+<p>972</p>
+</td>
+<td class="cellalignment46" headers="r3c1-t25 r1c2-t25">
+<p>03262112</p>
+</td>
+<td class="cellalignment46" headers="r3c1-t25 r1c3-t25">
+<p>5</p>
+</td>
+<td class="cellalignment46" headers="r3c1-t25 r1c4-t25">
+<p>Lith</p>
+</td>
+<td class="cellalignment46" headers="r3c1-t25 r1c5-t25">
+<p>null</p>
+</td>
+<td class="cellalignment46" headers="r3c1-t25 r1c6-t25">
+<p>neg</p>
+</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r4c1-t25" headers="r1c1-t25">
+<p>972</p>
+</td>
+<td class="cellalignment46" headers="r4c1-t25 r1c2-t25">
+<p>03262112</p>
+</td>
+<td class="cellalignment46" headers="r4c1-t25 r1c3-t25">
+<p>5</p>
+</td>
+<td class="cellalignment46" headers="r4c1-t25 r1c4-t25">
+<p>PTH</p>
+</td>
+<td class="cellalignment46" headers="r4c1-t25 r1c5-t25">
+<p>pg/mL</p>
+</td>
+<td class="cellalignment46" headers="r4c1-t25 r1c6-t25">
+<p>285</p>
+</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r5c1-t25" headers="r1c1-t25">
+<p>989</p>
+</td>
+<td class="cellalignment46" headers="r5c1-t25 r1c2-t25">
+<p>03312112</p>
+</td>
+<td class="cellalignment46" headers="r5c1-t25 r1c3-t25">
+<p>3</p>
+</td>
+<td class="cellalignment46" headers="r5c1-t25 r1c4-t25">
+<p>IG</p>
+</td>
+<td class="cellalignment46" headers="r5c1-t25 r1c5-t25">
+<p>mh/dl</p>
+</td>
+<td class="cellalignment46" headers="r5c1-t25 r1c6-t25">
+<p>824</p>
+</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r6c1-t25" headers="r1c1-t25">
+<p>989</p>
+</td>
+<td class="cellalignment46" headers="r6c1-t25 r1c2-t25">
+<p>03312112</p>
+</td>
+<td class="cellalignment46" headers="r6c1-t25 r1c3-t25">
+<p>3</p>
+</td>
+<td class="cellalignment46" headers="r6c1-t25 r1c4-t25">
+<p>Lith</p>
+</td>
+<td class="cellalignment46" headers="r6c1-t25 r1c5-t25">
+<p>null</p>
+</td>
+<td class="cellalignment46" headers="r6c1-t25 r1c6-t25">
+<p>pos</p>
+</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r7c1-t25" headers="r1c1-t25">
+<p>989</p>
+</td>
+<td class="cellalignment46" headers="r7c1-t25 r1c2-t25">
+<p>03312112</p>
+</td>
+<td class="cellalignment46" headers="r7c1-t25 r1c3-t25">
+<p>3</p>
+</td>
+<td class="cellalignment46" headers="r7c1-t25 r1c4-t25">
+<p>PTH</p>
+</td>
+<td class="cellalignment46" headers="r7c1-t25 r1c5-t25">
+<p>pg/mL</p>
+</td>
+<td class="cellalignment46" headers="r7c1-t25 r1c6-t25">
+<p>290</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" -->
+<p>The Test column, which contains the lab test name in the source table, is the pivot column. It is associated with a codelist whose values are IG, Lith, and PTH. The source columns Unit and Value are also pivoted. The columns SubjID, Date, and Visit are not pivoted.</p>
+<div id="DMWSC264" class="tblformalwide">
+<p class="titleintable"><a id="sthref27"></a><a id="BABJABFI"></a>Table 4-2 Target Table in Pivot Example (Short, Fat Table)</p>
+<table class="cellalignment50" title="Target Table in Pivot Example (Short, Fat Table)" summary="This table is described in the surrounding text." dir="ltr">
+<thead>
+<tr class="cellalignment40">
+<th class="cellalignment51" id="r1c1-t26">SubjID</th>
+<th class="cellalignment51" id="r1c2-t26">Date</th>
+<th class="cellalignment51" id="r1c3-t26">Visit</th>
+<th class="cellalignment51" id="r1c4-t26">IG</th>
+<th class="cellalignment51" id="r1c5-t26">IG_Unit</th>
+<th class="cellalignment51" id="r1c6-t26">Lith</th>
+<th class="cellalignment51" id="r1c7-t26">Lith_Unit</th>
+<th class="cellalignment51" id="r1c8-t26">PTH</th>
+<th class="cellalignment51" id="r1c9-t26">PTH_Unit</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r2c1-t26" headers="r1c1-t26">
+<p>972</p>
+</td>
+<td class="cellalignment46" headers="r2c1-t26 r1c2-t26">
+<p>03262112</p>
+</td>
+<td class="cellalignment46" headers="r2c1-t26 r1c3-t26">
+<p>5</p>
+</td>
+<td class="cellalignment46" headers="r2c1-t26 r1c4-t26">
+<p>853</p>
+</td>
+<td class="cellalignment46" headers="r2c1-t26 r1c5-t26">
+<p>mh/dl</p>
+</td>
+<td class="cellalignment46" headers="r2c1-t26 r1c6-t26">
+<p>neg</p>
+</td>
+<td class="cellalignment46" headers="r2c1-t26 r1c7-t26">
+<p>null</p>
+</td>
+<td class="cellalignment46" headers="r2c1-t26 r1c8-t26">
+<p>285</p>
+</td>
+<td class="cellalignment46" headers="r2c1-t26 r1c9-t26">
+<p>pg/mL</p>
+</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r3c1-t26" headers="r1c1-t26">
+<p>989</p>
+</td>
+<td class="cellalignment46" headers="r3c1-t26 r1c2-t26">
+<p>03312112</p>
+</td>
+<td class="cellalignment46" headers="r3c1-t26 r1c3-t26">
+<p>3</p>
+</td>
+<td class="cellalignment46" headers="r3c1-t26 r1c4-t26">
+<p>824</p>
+</td>
+<td class="cellalignment46" headers="r3c1-t26 r1c5-t26">
+<p>mh/dl</p>
+</td>
+<td class="cellalignment46" headers="r3c1-t26 r1c6-t26">
+<p>pos</p>
+</td>
+<td class="cellalignment46" headers="r3c1-t26 r1c7-t26">
+<p>null</p>
+</td>
+<td class="cellalignment46" headers="r3c1-t26 r1c8-t26">
+<p>290</p>
+</td>
+<td class="cellalignment46" headers="r3c1-t26 r1c9-t26">
+<p>pg/mL</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformalwide" --></div>
+<!-- class="sect2" -->
+<a id="BABHDHCI"></a>
+<div id="DMWSC261" class="sect2">
+<h3 class="sect2">Unpivot</h3>
+<p><img width="54" height="22" src="img/icon_video.gif" alt="Text Show me how! is a video link." /> <code dir="ltr"><a href="https://apexapps.oracle.com/pls/apex/f?p=44785:265:0::::P265_CONTENT_ID:23175">Show me how!</a><a href=""></a></code></p>
+<p>An unpivot converts a source table with a short, fat structure of many columns and few rows into a target table that represents the same data in a tall, skinny structure with more rows and fewer columns, based on the value in an unpivot column, which must be associated with a codelist. Unpivot transformations are used for tables where multiple columns collect the same data, such as the same assessment repeated in each section of a CRF. See <a href="#BABHFJAB">Unpivot example</a>.</p>
+<p>To create an Unpivot transformation:</p>
+<ol>
+<li>
+<p>Select the source and target tables and click the <span class="bold">Map</span> icon, then select a Transformation Type of <span class="bold">Unpivot</span>.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Unpivot</span> icon.</p>
+</li>
+<li>
+<p>Query for and select the unpivot column from the target table columns. It must be associated with a codelist.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Map Column</span> icon.</p>
+</li>
+<li>
+<p>For each pivoted column, select the target column and all the source columns that will feed data to it, and click <span class="bold">Map</span>. When appropriate, you can copy a mapping with its filter value. See Step 8 for more information.</p>
+<p>You can use the following pseudo-expressions without quotes:</p>
+<ul>
+<li>
+<p>To populate a target column with codelist values, add the following pseudo-expression to the column mapping expression:</p>
+<pre dir="ltr">
+$UNPIVOT$CODEVALUE
+</pre>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+A column that uses the pseudo-expression $UNPIVOT$CODEVALUE cannot be used as a pivot column.</div>
+</li>
+<li>
+<p>By default, rows with null values for all target columns are suppressed. To include them in the target table, add the following pseudo-expression to the unpivot column mapping expression:</p>
+<pre dir="ltr">
+$UNPIVOT$INCLUDENULLS
+</pre></li>
+</ul>
+</li>
+<li>
+<p>In the Mapped Sources tab, <span class="bold">Filter Value</span> field, for each pivoted column in the source table, select the pivot column value to identify the row in the target table into which to put the source column value.</p>
+</li>
+<li>
+<p>If you have multiple target columns that map to the same source columns and have the same filter value, you can map one of them, then select it and click the <span class="bold">Copy Map To</span> icon. Select the target column and click <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>Save.</p>
+</li>
+</ol>
+<p><a id="BABHFJAB"></a><a id="DMWSC258"></a><span class="subhead3">Unpivot example&nbsp;</span>Multiple observations are collected in an InForm CRF using sections rather than itemsets. A flat form is created with three sections, one section for each time point in that visit for a blood draw. In InForm this is one CRF instance and one record but the standard review data model in use requires that these be three separate records.</p>
+<p>Metadata values, the section name in this case, should be inserted as data in the corresponding row for that section.</p>
+<p>Certain values in the flat section&mdash;the subject ID, visit, and date&mdash;should repeat on each row. These are the nonpivoted columns and the source column must be mapped to the target column.</p>
+<p>The Section (Sect) column in the source table is the pivot column. It is associated with a codelist containing the values 0hr, 1hr, and 2hr.</p>
+<p>Multiple columns in the source table&mdash;for example Sect1_Test, Sect2_Test, and Sect3_Test, map to a single column in the target table: Test.</p>
+<div id="DMWSC259" class="tblformalwide">
+<p class="titleintable"><a id="sthref28"></a><a id="sthref29"></a>Table 4-3 Source table columns in unpivot example (short, fat table)</p>
+<table class="cellalignment50" title="Source table columns in unpivot example (short, fat table)" summary="This table is described in the surrounding text." dir="ltr">
+<thead>
+<tr class="cellalignment40">
+<th class="cellalignment51" id="r1c1-t28">SubjID</th>
+<th class="cellalignment51" id="r1c2-t28">Date</th>
+<th class="cellalignment51" id="r1c3-t28">Visit</th>
+<th class="cellalignment51" id="r1c4-t28">Sect</th>
+<th class="cellalignment51" id="r1c5-t28">Sect1_Test</th>
+<th class="cellalignment51" id="r1c6-t28">Sect1_Unit</th>
+<th class="cellalignment51" id="r1c7-t28">Sect1_Value</th>
+<th class="cellalignment51" id="r1c8-t28">Sect</th>
+<th class="cellalignment51" id="r1c9-t28">Sect2_Test</th>
+<th class="cellalignment51" id="r1c10-t28">Sect2_Unit</th>
+<th class="cellalignment51" id="r1c11-t28">Sect2_ Value</th>
+<th class="cellalignment51" id="r1c12-t28">Sect</th>
+<th class="cellalignment51" id="r1c13-t28">Sect3_Test</th>
+<th class="cellalignment51" id="r1c14-t28">Sect3_Unit</th>
+<th class="cellalignment51" id="r1c15-t28">Sect3_Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r2c1-t28" headers="r1c1-t28">
+<p>509</p>
+</td>
+<td class="cellalignment46" headers="r2c1-t28 r1c2-t28">
+<p>01082112</p>
+</td>
+<td class="cellalignment46" headers="r2c1-t28 r1c3-t28">
+<p>1</p>
+</td>
+<td class="cellalignment46" headers="r2c1-t28 r1c4-t28">
+<p>0hr</p>
+</td>
+<td class="cellalignment46" headers="r2c1-t28 r1c5-t28">
+<p>Hb</p>
+</td>
+<td class="cellalignment46" headers="r2c1-t28 r1c6-t28">
+<p>gl</p>
+</td>
+<td class="cellalignment46" headers="r2c1-t28 r1c7-t28">
+<p>8</p>
+</td>
+<td class="cellalignment46" headers="r2c1-t28 r1c8-t28">
+<p>1hr</p>
+</td>
+<td class="cellalignment46" headers="r2c1-t28 r1c9-t28">
+<p>Hb</p>
+</td>
+<td class="cellalignment46" headers="r2c1-t28 r1c10-t28">
+<p>gl</p>
+</td>
+<td class="cellalignment46" headers="r2c1-t28 r1c11-t28">
+<p>8</p>
+</td>
+<td class="cellalignment46" headers="r2c1-t28 r1c12-t28">
+<p>2hr</p>
+</td>
+<td class="cellalignment46" headers="r2c1-t28 r1c13-t28">
+<p>Hb</p>
+</td>
+<td class="cellalignment46" headers="r2c1-t28 r1c14-t28">
+<p>gl</p>
+</td>
+<td class="cellalignment46" headers="r2c1-t28 r1c15-t28">
+<p>9</p>
+</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r3c1-t28" headers="r1c1-t28">
+<p>598</p>
+</td>
+<td class="cellalignment46" headers="r3c1-t28 r1c2-t28">
+<p>02092112</p>
+</td>
+<td class="cellalignment46" headers="r3c1-t28 r1c3-t28">
+<p>1</p>
+</td>
+<td class="cellalignment46" headers="r3c1-t28 r1c4-t28">
+<p>0hr</p>
+</td>
+<td class="cellalignment46" headers="r3c1-t28 r1c5-t28">
+<p>Hb</p>
+</td>
+<td class="cellalignment46" headers="r3c1-t28 r1c6-t28">
+<p>gl</p>
+</td>
+<td class="cellalignment46" headers="r3c1-t28 r1c7-t28">
+<p>8</p>
+</td>
+<td class="cellalignment46" headers="r3c1-t28 r1c8-t28">
+<p>1hr</p>
+</td>
+<td class="cellalignment46" headers="r3c1-t28 r1c9-t28">
+<p>Hb</p>
+</td>
+<td class="cellalignment46" headers="r3c1-t28 r1c10-t28">
+<p>gl</p>
+</td>
+<td class="cellalignment46" headers="r3c1-t28 r1c11-t28">
+<p>9</p>
+</td>
+<td class="cellalignment46" headers="r3c1-t28 r1c12-t28">
+<p>2hr</p>
+</td>
+<td class="cellalignment46" headers="r3c1-t28 r1c13-t28">
+<p>Hb</p>
+</td>
+<td class="cellalignment46" headers="r3c1-t28 r1c14-t28">
+<p>gl</p>
+</td>
+<td class="cellalignment46" headers="r3c1-t28 r1c15-t28">
+<p>10</p>
+</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r4c1-t28" headers="r1c1-t28">
+<p>613</p>
+</td>
+<td class="cellalignment46" headers="r4c1-t28 r1c2-t28">
+<p>02112112</p>
+</td>
+<td class="cellalignment46" headers="r4c1-t28 r1c3-t28">
+<p>1</p>
+</td>
+<td class="cellalignment46" headers="r4c1-t28 r1c4-t28">
+<p>0hr</p>
+</td>
+<td class="cellalignment46" headers="r4c1-t28 r1c5-t28">
+<p>Hb</p>
+</td>
+<td class="cellalignment46" headers="r4c1-t28 r1c6-t28">
+<p>gl</p>
+</td>
+<td class="cellalignment46" headers="r4c1-t28 r1c7-t28">
+<p>9</p>
+</td>
+<td class="cellalignment46" headers="r4c1-t28 r1c8-t28">
+<p>1hr</p>
+</td>
+<td class="cellalignment46" headers="r4c1-t28 r1c9-t28">
+<p>Hb</p>
+</td>
+<td class="cellalignment46" headers="r4c1-t28 r1c10-t28">
+<p>gl</p>
+</td>
+<td class="cellalignment46" headers="r4c1-t28 r1c11-t28">
+<p>10</p>
+</td>
+<td class="cellalignment46" headers="r4c1-t28 r1c12-t28">
+<p>2hr</p>
+</td>
+<td class="cellalignment46" headers="r4c1-t28 r1c13-t28">
+<p>Hb</p>
+</td>
+<td class="cellalignment46" headers="r4c1-t28 r1c14-t28">
+<p>gl</p>
+</td>
+<td class="cellalignment46" headers="r4c1-t28 r1c15-t28">
+<p>10</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformalwide" -->
+<p>The system generates a row in the target table for each value in the codelist per set of nonpivoted values (SubjID, Date, and Visit) and populates the Section column in the target table with the codelist values as shown in <a href="#BABGAGCC">Table 4-4, "Target table columns in unpivot example (tall, skinny table)"</a>.</p>
+<div id="DMWSC260" class="tblformal">
+<p class="titleintable"><a id="sthref30"></a><a id="BABGAGCC"></a>Table 4-4 Target table columns in unpivot example (tall, skinny table)</p>
+<table class="cellalignment53" title="Target table columns in unpivot example (tall, skinny table)" summary="This table is described in the surrounding text." dir="ltr">
+<thead>
+<tr class="cellalignment40">
+<th class="cellalignment51" id="r1c1-t29">SubjID</th>
+<th class="cellalignment51" id="r1c2-t29">Date</th>
+<th class="cellalignment51" id="r1c3-t29">Visit</th>
+<th class="cellalignment51" id="r1c4-t29">Section</th>
+<th class="cellalignment51" id="r1c5-t29">Test</th>
+<th class="cellalignment51" id="r1c6-t29">Unit</th>
+<th class="cellalignment51" id="r1c7-t29">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r2c1-t29" headers="r1c1-t29">
+<p>509</p>
+</td>
+<td class="cellalignment46" headers="r2c1-t29 r1c2-t29">
+<p>01082112</p>
+</td>
+<td class="cellalignment46" headers="r2c1-t29 r1c3-t29">
+<p>1</p>
+</td>
+<td class="cellalignment46" headers="r2c1-t29 r1c4-t29">
+<p>0hr</p>
+</td>
+<td class="cellalignment46" headers="r2c1-t29 r1c5-t29">
+<p>Hb</p>
+</td>
+<td class="cellalignment46" headers="r2c1-t29 r1c6-t29">
+<p>gl</p>
+</td>
+<td class="cellalignment46" headers="r2c1-t29 r1c7-t29">
+<p>8</p>
+</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r3c1-t29" headers="r1c1-t29">
+<p>509</p>
+</td>
+<td class="cellalignment46" headers="r3c1-t29 r1c2-t29">
+<p>01082112</p>
+</td>
+<td class="cellalignment46" headers="r3c1-t29 r1c3-t29">
+<p>1</p>
+</td>
+<td class="cellalignment46" headers="r3c1-t29 r1c4-t29">
+<p>1hr</p>
+</td>
+<td class="cellalignment46" headers="r3c1-t29 r1c5-t29">
+<p>Hb</p>
+</td>
+<td class="cellalignment46" headers="r3c1-t29 r1c6-t29">
+<p>gl</p>
+</td>
+<td class="cellalignment46" headers="r3c1-t29 r1c7-t29">
+<p>8</p>
+</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r4c1-t29" headers="r1c1-t29">
+<p>509</p>
+</td>
+<td class="cellalignment46" headers="r4c1-t29 r1c2-t29">
+<p>01082112</p>
+</td>
+<td class="cellalignment46" headers="r4c1-t29 r1c3-t29">
+<p>1</p>
+</td>
+<td class="cellalignment46" headers="r4c1-t29 r1c4-t29">
+<p>2hr</p>
+</td>
+<td class="cellalignment46" headers="r4c1-t29 r1c5-t29">
+<p>Hb</p>
+</td>
+<td class="cellalignment46" headers="r4c1-t29 r1c6-t29">
+<p>gl</p>
+</td>
+<td class="cellalignment46" headers="r4c1-t29 r1c7-t29">
+<p>9</p>
+</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r5c1-t29" headers="r1c1-t29">
+<p>598</p>
+</td>
+<td class="cellalignment46" headers="r5c1-t29 r1c2-t29">
+<p>02092112</p>
+</td>
+<td class="cellalignment46" headers="r5c1-t29 r1c3-t29">
+<p>1</p>
+</td>
+<td class="cellalignment46" headers="r5c1-t29 r1c4-t29">
+<p>0hr</p>
+</td>
+<td class="cellalignment46" headers="r5c1-t29 r1c5-t29">
+<p>Hb</p>
+</td>
+<td class="cellalignment46" headers="r5c1-t29 r1c6-t29">
+<p>gl</p>
+</td>
+<td class="cellalignment46" headers="r5c1-t29 r1c7-t29">
+<p>8</p>
+</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r6c1-t29" headers="r1c1-t29">
+<p>598</p>
+</td>
+<td class="cellalignment46" headers="r6c1-t29 r1c2-t29">
+<p>02092112</p>
+</td>
+<td class="cellalignment46" headers="r6c1-t29 r1c3-t29">
+<p>1</p>
+</td>
+<td class="cellalignment46" headers="r6c1-t29 r1c4-t29">
+<p>1hr</p>
+</td>
+<td class="cellalignment46" headers="r6c1-t29 r1c5-t29">
+<p>Hb</p>
+</td>
+<td class="cellalignment46" headers="r6c1-t29 r1c6-t29">
+<p>gl</p>
+</td>
+<td class="cellalignment46" headers="r6c1-t29 r1c7-t29">
+<p>9</p>
+</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r7c1-t29" headers="r1c1-t29">
+<p>598</p>
+</td>
+<td class="cellalignment46" headers="r7c1-t29 r1c2-t29">
+<p>02092112</p>
+</td>
+<td class="cellalignment46" headers="r7c1-t29 r1c3-t29">
+<p>1</p>
+</td>
+<td class="cellalignment46" headers="r7c1-t29 r1c4-t29">
+<p>2hr</p>
+</td>
+<td class="cellalignment46" headers="r7c1-t29 r1c5-t29">
+<p>Hb</p>
+</td>
+<td class="cellalignment46" headers="r7c1-t29 r1c6-t29">
+<p>gl</p>
+</td>
+<td class="cellalignment46" headers="r7c1-t29 r1c7-t29">
+<p>9</p>
+</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r8c1-t29" headers="r1c1-t29">
+<p>613</p>
+</td>
+<td class="cellalignment46" headers="r8c1-t29 r1c2-t29">
+<p>02112112</p>
+</td>
+<td class="cellalignment46" headers="r8c1-t29 r1c3-t29">
+<p>1</p>
+</td>
+<td class="cellalignment46" headers="r8c1-t29 r1c4-t29">
+<p>0hr</p>
+</td>
+<td class="cellalignment46" headers="r8c1-t29 r1c5-t29">
+<p>Hb</p>
+</td>
+<td class="cellalignment46" headers="r8c1-t29 r1c6-t29">
+<p>gl</p>
+</td>
+<td class="cellalignment46" headers="r8c1-t29 r1c7-t29">
+<p>9</p>
+</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r9c1-t29" headers="r1c1-t29">
+<p>613</p>
+</td>
+<td class="cellalignment46" headers="r9c1-t29 r1c2-t29">
+<p>02112112</p>
+</td>
+<td class="cellalignment46" headers="r9c1-t29 r1c3-t29">
+<p>1</p>
+</td>
+<td class="cellalignment46" headers="r9c1-t29 r1c4-t29">
+<p>1hr</p>
+</td>
+<td class="cellalignment46" headers="r9c1-t29 r1c5-t29">
+<p>Hb</p>
+</td>
+<td class="cellalignment46" headers="r9c1-t29 r1c6-t29">
+<p>gl</p>
+</td>
+<td class="cellalignment46" headers="r9c1-t29 r1c7-t29">
+<p>10</p>
+</td>
+</tr>
+<tr class="cellalignment40">
+<td class="cellalignment46" id="r10c1-t29" headers="r1c1-t29">
+<p>613</p>
+</td>
+<td class="cellalignment46" headers="r10c1-t29 r1c2-t29">
+<p>02112112</p>
+</td>
+<td class="cellalignment46" headers="r10c1-t29 r1c3-t29">
+<p>1</p>
+</td>
+<td class="cellalignment46" headers="r10c1-t29 r1c4-t29">
+<p>2hr</p>
+</td>
+<td class="cellalignment46" headers="r10c1-t29 r1c5-t29">
+<p>Hb</p>
+</td>
+<td class="cellalignment46" headers="r10c1-t29 r1c6-t29">
+<p>gl</p>
+</td>
+<td class="cellalignment46" headers="r10c1-t29 r1c7-t29">
+<p>10</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" --></div>
+<!-- class="sect2" -->
+<a id="BABGHCGD"></a>
+<div id="DMWSC265" class="sect2">
+<h3 class="sect2">Custom</h3>
+<p>Select a Transformation Type of Custom only if you need a custom program AND it performs operations on data in such a way that it is not possible to track all data items in the source model that contributed to each data item in the target model.</p>
+<p>Otherwise, even if you use a custom program, select the type of transformation it actually performs: join, union, pivot, or unpivot. The system then generates the code required for data lineage tracing. See <a href="sc_adv_topics.htm#A1097920">"How the system tracks data lineage"</a></p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BABGAEGB"></a>
+<div id="DMWSC99879" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Use a custom program</h2>
+<p><img width="54" height="22" src="img/icon_video.gif" alt="Text Show me how! is a video link." /> <code dir="ltr"><a href="https://apexapps.oracle.com/pls/apex/f?p=44785:265:0::::P265_CONTENT_ID:23364">Show me how!</a><a href=""></a></code></p>
+<p>If the logic you need for a table mapping is too complex to do in the user interface for generated transformations, use a custom program. For example:</p>
+<ul>
+<li>
+<p>To perform data aggregation, case statements, or complex calculations.</p>
+</li>
+<li>
+<p>To use 1-to-many or many-to-many column mappings.</p>
+</li>
+<li>
+<p>To call an API to set a flag on records that meet specified criteria; see the <span class="italic">Oracle Health Sciences Life Sciences Warehouse Application Programming Interface Guide</span> for information on APIs for Oracle LSH and DMW, and see "Sample Program that Calls the API to Set a Flag" on page&nbsp;6-9.</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+If you use multiple custom programs with the same name for different target tables in the transformation, the programs must all be in the same location. In other words, they must be the same program. These conflicts can arise if the custom program is part of a template and therefore part of the study created from the template, for example.
+<p>If you reference two custom programs with the same name in different locations, installation ends with a warning and the conflicting packages are listed in the installation log file. The validation process, which must be run before installation, marks all mappings with conflicting package names as Invalid in the UI, and gives the full path for each. You must resolve the conflicts and reinstall the transformation before execution can succeed.</p>
+</div>
+<p>You must create custom programs in LSH. See <a href="dmw_programs.htm#A1098312">"Create custom programs"</a>.</p>
+<ol>
+<li>
+<p>Select the source and target tables and click the <span class="bold">Map</span> icon.</p>
+</li>
+<li>
+<p>In the <span class="bold">Type</span> column, select the type of transformation that the custom program actually performs, if possible: <span class="bold">Direct</span>, <span class="bold">Join</span>, <span class="bold">Union</span>, <span class="bold">Pivot</span>, or <span class="bold">Unpivot</span>.</p>
+<p>Select <span class="bold">Custom</span> <span class="italic">only if</span> the code does not do one of these. <span class="italic">Data lineage tracing does not work if you select Custom.</span></p>
+</li>
+<li>
+<p>Click the <img width="21" height="19" src="img/icon_select_cust_prg.png" alt="Icon shows a gear and folders." /><span class="bold">Select Custom Program</span> icon. Search for the program you want. Use the Query By Example fields above the columns. If they are not displayed, click the <img width="19" height="19" src="img/icon_qbe.gif" alt="Icon is a funnel and table." /> <span class="bold">Query By Example</span> icon.</p>
+</li>
+<li>
+<p>Select a program and click <span class="bold">OK</span>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+You can open the Static Packages tab and use the drop-down to display either <span class="italic">all</span> packages, only those that are <span class="italic">already selected</span> in the transformation, or all <span class="italic">except</span> those already selected.</div>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="A134935349"></a>
+<div id="DMWSC10266" class="sect1">
+<h2 class="sect1">Install a transformation</h2>
+<p>After creating or modifying a transformation, you must <span class="italic">install</span> it to make it usable.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+<span class="bold">Before installing a transformation for the first time</span>, check if another user has checked out the target model and if so, ask that user or an administrator to check it in. The installation process checks out target tables to add auxiliary columns if they have not already been added, and cannot do so if the model is checked out by a user different from the user who is installing the transformation. The transformation installation fails.</div>
+<ol>
+<li>
+<p>In the Study Configuration page, navigate to the transformation, select it, and select one of the following from the Install drop-down:</p>
+<ul>
+<li>
+<p><span class="bold">Install</span> upgrades all tables and programs without deleting any data.</p>
+</li>
+<li>
+<p><span class="bold">Full Install</span> drops and replaces all tables and programs, <span class="bold">deleting all data</span>. Full installation is not available in the Production lifecycle.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+The options are active only if the transformation is installable:
+<ul>
+<li>
+<p>The Version and the Installable Version must be the same.</p>
+</li>
+<li>
+<p>See <a href="sc_adv_topics.htm#BABFHEJI">"Transformation installation requirements"</a>.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li>
+<p>To see the updated job status in the <span class="bold">Install Status</span> field, click the <img width="19" height="17" src="img/icon_refresh.gif" alt="Icon is a near circular arrow." /> <span class="bold">Refresh</span> icon.</p>
+</li>
+<li>
+<p>To see the log file:</p>
+<ol>
+<li>
+<p>Go to the Home page, Transformations tab.</p>
+</li>
+<li>
+<p>From the <span class="bold">Model</span> drop-down list, select the source clinical data model.</p>
+</li>
+<li>
+<p>In the <span class="bold">Target Model</span> pane, select the model.</p>
+</li>
+<li>
+<p>Click the icon in the <span class="bold">Install Job Log</span> column in the same row.</p>
+</li>
+</ol>
+</li>
+</ol>
+<p>For more information, see See <a href="sc_adv_topics.htm#BABHJHEF">"What happens during installation?"</a>.</p>
+</div>
+<!-- class="sect1" -->
+<a id="BABDAFJI"></a>
+<div id="DMWSC99960" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Upgrade transformations to synchronize with models</h2>
+<p>If there have been metadata changes in a clinical data model&mdash;for example, an increase of column length&mdash;that affect a transformation or validation check, the system sets the transformation or validation check to <span class="bold">Upgrade Required</span>. You must run the upgrade job to synchronize the transformation or validation check with the model.</p>
+<ul>
+<li>
+<p>If the main transformation is checked in, check it out. This automatically upgrades the main transformation and in some cases side transformations too.</p>
+</li>
+<li>
+<p>If either the main transformation or a side transformation is checked out and its Upgrade Required flag is set to Yes, run the Upgrade job. The Upgrade job for the main transformation may automatically upgrade the side transformation or it may set the side transformation's Upgrade Required flag to Yes, in which case you must run the Upgrade job for the side transformation.</p>
+</li>
+<li>
+<p>If columns or tables have been removed, mappings may be broken. You must fix these manually.</p>
+</li>
+<li>
+<p>After upgrade, install the transformation. You can make other changes before installing.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect1" -->
+<a id="BABDDDCF"></a>
+<div id="DMWSC109" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Run transformations and view history</h2>
+<ul>
+<li>
+<p><a href="#BABCEBAF">Run a transformation</a></p>
+</li>
+<li>
+<p><a href="#BABFFEEH">View run history</a></p>
+</li>
+</ul>
+<a id="BABCEBAF"></a>
+<div id="DMWSC110" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Run a transformation</h3>
+<p>To run or schedule a transformation:</p>
+<ol>
+<li>
+<p>Go to the <img width="26" height="25" src="img/home_icon.gif" alt="Icon is a house." /> <span class="bold">Home</span> page, <span class="bold">Transformations</span> tab.</p>
+</li>
+<li>
+<p>Select a transformation and click the <span class="bold">Submit Job</span> icon.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+The <span class="bold">Submit Job</span> icon is not active if the selected transformation has not been installed. Check the Install Status column.
+<p>If the installation status of the transformation is Warning, you may still be able to run the batch. Check the installation log file.</p>
+</div>
+</li>
+<li>
+<p>Enter values:</p>
+<ul>
+<li>
+<p><span class="bold">Submission Mode</span>: Select one:</p>
+<ul>
+<li>
+<p><span class="bold">Full</span> mode includes data deletion. Use Full mode only if you are confident that you are reloading all current data.</p>
+</li>
+<li>
+<p><span class="bold">Incremental</span> is faster and does not include data deletion.</p>
+</li>
+</ul>
+<p>If you are submitting a transformation for a single table and the table is defined with Unit of Work processing, select:</p>
+<ul>
+<li>
+<p><span class="bold">Full UOW</span> includes data deletion. Use Full UOW only if you are confident that you are reloading all current data for each subject or subject visit that has any data included.</p>
+</li>
+<li>
+<p><span class="bold">Incremental UOW</span> is faster and does not include data deletion.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+Set up regular Incremental loads at frequent intervals and do Full loads at longer intervals.</div>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="bold">Force Execution</span>: Select if you want to run the job even though the source data currency, parameter values, and the version number of the program(s) have not changed since the last run. The system uses <span class="bold">Full mode</span> regardless of the Submission Mode setting. Full mode includes data deletion.</p>
+<p>If not selected and all the conditions are the same as the last run, the system does not execute the job and returns a status of Success.</p>
+</li>
+<li>
+<p><span class="bold">Submission Type</span>:</p>
+<ul>
+<li>
+<p><span class="bold">Immediate</span> Run the job once, as soon as possible.</p>
+</li>
+<li>
+<p><span class="bold">Scheduled</span> Set up a regular schedule.</p>
+</li>
+<li>
+<p><span class="bold">Deferred</span> Run the job once, at a future time.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="bold">Trigger Downstream Transformations and Validation Checks</span>: Select to make this job trigger validation checks on the target model and transformations from the target model to all others that come after it, in sequence. This can happen only if the source models are set up to trigger downstream processes.</p>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BABFFEEH"></a>
+<div id="DMWSC111" class="sect2">
+<h3 class="sect2">View run history</h3>
+<ol>
+<li>
+<p>Go to the <img width="26" height="25" src="img/home_icon.gif" alt="Icon is a house." /> <span class="bold">Home</span> page, <span class="bold">Transformations</span> tab.</p>
+</li>
+<li>
+<p>To view all jobs, click the <img width="21" height="20" src="img/icon_view_full_job_hist.gif" alt="Icon shows a clock and a report." /> <span class="bold">View Full Job History</span> icon.</p>
+<p>To view only recent jobs again, click the <img width="19" height="20" src="img/icon_recent_jobs_only.gif" alt="Icon shows a funnel and a report." /> <span class="bold">View Recent Jobs Only</span> icon.</p>
+</li>
+</ol>
+<p>Transformations are displayed by the name of their target clinical data model.</p>
+<ul>
+<li>
+<p><span class="bold">To view table transformations</span>, click a transformation's node.</p>
+</li>
+<li>
+<p><span class="bold">To view run history and pending jobs</span>, select a transformation in the upper pane.</p>
+</li>
+<li>
+<p><span class="bold">To view log files</span>, click the icon in the column for the type of job:</p>
+<ul>
+<li>
+<p><span class="bold">Log</span>: The most recent manually submitted job.</p>
+</li>
+<li>
+<p><span class="bold">Triggered Job Log</span>: The most recent triggered job.</p>
+</li>
+<li>
+<p><span class="bold">Install Job Log</span>: The most recent installation of the transformation.</p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BABFBDGA"></a>
+<div id="DMWSC99961" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">FAQs</h2>
+<ul>
+<li>
+<p><a href="#BABFJEGC">Why can't I check out my transformation?</a></p>
+</li>
+<li>
+<p><a href="#BABBFGDC">Why can't I merge my side transformation?</a></p>
+</li>
+<li>
+<p><a href="#BABDEEAB">Why does it say Upgrade Required when I know the data model hasn't changed?</a></p>
+</li>
+<li>
+<p><a href="#BABGIBFA">I noticed the tables in the target model changed. Why?</a></p>
+</li>
+<li>
+<p><a href="#BABGAAEE">What happens when I mark tables and columns as Not Used?</a></p>
+</li>
+<li>
+<p><a href="#BABBABIC">Can I display mappings in a spreadsheet?</a></p>
+</li>
+<li>
+<p><a href="#BABGCGCJ">How does Automap work?</a></p>
+</li>
+<li>
+<p><a href="#BABCDFBD">Where are custom programs stored?</a></p>
+</li>
+<li>
+<p><a href="#BABJAAIA">Can I use a side model like any other model?</a></p>
+</li>
+<li>
+<p><a href="#BABGIJHH">Why doesn't a data load automatically trigger this transformation?</a></p>
+</li>
+<li>
+<p><a href="#BABGIEAG">Why can't I trigger other transformations when I run this one?</a></p>
+</li>
+<li>
+<p><a href="#CHDEAEFC">What does this transformation validation error message mean?</a></p>
+</li>
+</ul>
+<a id="BABFJEGC"></a>
+<div id="DMWSC99962" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Why can't I check out my transformation?</h3>
+<p>It may be because its target clinical data model is checked out by a different user.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABBFGDC"></a>
+<div id="DMWSC99963" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Why can't I merge my side transformation?</h3>
+<p>It may be because you haven't checked it in. More likely it's because someone else checked out the model-level transformation and only that person can merge side models/transformations.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABDEEAB"></a>
+<div id="DMWSC99964" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Why does it say Upgrade Required when I know the data model hasn't changed?</h3>
+<p>When a transformation is checked out, its target clinical data model is also checked out. But if the transformation checkout is undone, the model checkout is not automatically undone. To undo the model checkout, go to the model and undo the checkout there. Otherwise the transformation is set to Upgrade Required, and the new model version is no different from the old.</p>
+<p>When the transformation is checked in, the target model is not automatically checked in, but the transformation is set to Upgrade Required.</p>
+<p>Checking out the model with the transformation enables the Cascade Blinding and Cascade Masking features because blinding and masking are properties of the model and the cascade operation is done from the transformation.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABGIBFA"></a>
+<div id="DMWSC10138" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">I noticed the tables in the target model changed. Why?</h3>
+<p>When copying transformations from another study or model, the synchronization job modifies the tables in the current model so that they match the table metadata being copied, including adding, modifying, and removing columns.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABGAAEE"></a>
+<div id="DMWSC99965" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">What happens when I mark tables and columns as Not Used?</h3>
+<ul>
+<li>
+<p>Any mappings to the table or column are deleted.</p>
+</li>
+<li>
+<p>The transformation's status can be Complete without mapping the table or column. Completeness is required for validation and installation.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Columns populated by TMS are never included in calculating completeness even if they are marked Used.</div>
+</li>
+<li>
+<p>Validation checks and custom listings that are dependent on a table or column marked Not Used are disabled. If you later mark the table or column as Used, you must manually reenable the validation checks and custom listings.</p>
+</li>
+<li>
+<p>The table or column is not visible in the Listings pages.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="BABBABIC"></a>
+<div id="DMWSC99966" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Can I display mappings in a spreadsheet?</h3>
+<p>Yes.</p>
+<ul>
+<li>
+<p>For table mappings, select <span class="bold">Export All to Excel</span> from the <span class="bold">Actions</span> drop-down in the Target Tables pane.</p>
+</li>
+<li>
+<p>For column mappings, click the <img width="21" height="20" src="img/icon_disc_export.gif" alt="Icon shows a paper with an X and and arrow out." /><span class="bold">Export All to Excel</span> icon in the Target Columns pane.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="BABGCGCJ"></a>
+<div id="DMWSC99967" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">How does Automap work?</h3>
+<p>Automap uses the following matches to suggest mappings:</p>
+<ul>
+<li>
+<p>Name</p>
+</li>
+<li>
+<p>Alias</p>
+</li>
+<li>
+<p>Data type</p>
+</li>
+<li>
+<p>Partial name</p>
+</li>
+<li>
+<p>Partial alias</p>
+</li>
+</ul>
+<p>If you select a target table that is already mapped, the existing mapping remains.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABCDFBD"></a>
+<div id="DMWSC99969" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Where are custom programs stored?</h3>
+<p>All custom programs for both validation checks and transformations are stored in the DMW_UTILS domain/namespace in the database. There may be subdomains to organize the programs by therapeutic area or other logical grouping.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABJAAIA"></a>
+<div id="DMWSC10091" class="sect2">
+<h3 class="sect2">Can I use a side model like any other model?</h3>
+<p>Side models are intended for temporary use only and have limitations:</p>
+<ul>
+<li>
+<p>Side models cannot be used as source models for other transformations.</p>
+</li>
+<li>
+<p>If a validation check raises discrepancies on data in a side model, lineage tracing is not enabled and the discrepancies do not appear in the source model.</p>
+</li>
+<li>
+<p>Side models are not visible in the Study Configuration page.</p>
+</li>
+<li>
+<p>Side models and transformations cannot have a higher validation status than Development.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="BABGIJHH"></a>
+<div id="DMWSC99970" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Why doesn't a data load automatically trigger this transformation?</h3>
+<p>Set up the source model(s) to trigger:</p>
+<ol>
+<li>
+<p>In the main Transformation page, click the <img width="23" height="20" src="img/icon_add_rem_models.gif" alt="Icon shows lines and a plus and minus sign." /><span class="bold">Add or Remove Source Model</span> icon.</p>
+</li>
+<li>
+<p>Select <span class="bold">Can Trigger</span> for each, and <span class="bold">Save</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BABGIEAG"></a>
+<div id="DMWSC99971" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Why can't I trigger other transformations when I run this one?</h3>
+<p>Set up triggering in the target model:</p>
+<ol>
+<li>
+<p>Navigate to the target model.</p>
+</li>
+<li>
+<p>In the main Transformation page, click the <img width="23" height="20" src="img/icon_add_rem_models.gif" alt="Icon shows lines and a plus and minus sign." /><span class="bold">Add or Remove Source Model</span> icon.</p>
+</li>
+<li>
+<p>Select <span class="bold">Can Trigger</span> for each, and <span class="bold">Save</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CHDEAEFC"></a>
+<div id="DMWSC1091" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">What does this transformation validation error message mean?</h3>
+<p>The validation error messages you may see are, in alphabetical order:</p>
+<ul>
+<li>
+<p>DME_XFMVAL_AUTH_YES_ERR: One or more source tables is blinded and the target table is not blinded. You must either set the target table's Authorize flag to Yes if you know that it will not contain any of the sensitive, blinded data from the source tables, or go back to the clinical data model and set the target table's blinding attributes appropriately. Special privileges are required for either action.</p>
+</li>
+<li>
+<p>DME_XFMVAL_COL_DATATYPE_ERR: The data type of the source and target columns must be the same.</p>
+</li>
+<li>
+<p>DME_XFMVAL_COL_LEN_TRUNC_ERR: To prevent data loss, the target column must have a length equal to or greater than the source columns.</p>
+</li>
+<li>
+<p>DME_XFMVAL_COL_NOSRC_ERR: Mapping required. Add one or more source columns or specify a constant value or mark as Not Used.</p>
+</li>
+<li>
+<p>DME_XFMVAL_COL_NOTRGT_ERR: Each column mapping must have one target column.</p>
+</li>
+<li>
+<p>DME_XFMVAL_COL_SRC_TRGT_SAME: A column cannot be mapped to itself.</p>
+</li>
+<li>
+<p>DME_XFMVAL_ERROR_NOT_FOUND: All mappings are valid.</p>
+</li>
+<li>
+<p>DME_XFMVAL_MOD_CYLIC_TAB_ERR: This model has circular table mappings.</p>
+</li>
+<li>
+<p>DME_XFMVAL_MOD_SRC_NOTFOUND: A model mapping must have at least one source model.</p>
+</li>
+<li>
+<p>DME_XFMVAL_MOD_SRC_TRGT_SAME : A model cannot be mapped to itself.</p>
+</li>
+<li>
+<p>DME_XFMVAL_MOD_TAB_INVALID: A model mapping must have valid table mappings.</p>
+</li>
+<li>
+<p>DME_XFMVAL_MOD_TAB_NOTFOUND: A model mapping must have at least one table mapping.</p>
+</li>
+<li>
+<p>DME_XFMVAL_MOD_TRGT_NOT_ONE: A model mapping must have one target model.</p>
+</li>
+<li>
+<p>DME_XFMVAL_NOTNULLCOL_HARDCOD: Not null columns in the target table must be mapped to either a source column or a constant value.</p>
+</li>
+<li>
+<p>DME_XFMVAL_NOTNULLCOL_NOMAPERR: Mapping required. Not null columns in the target table cannot be left unmapped.</p>
+</li>
+<li>
+<p>DME_XFMVAL_PRMCOLS_HARDCOD: All primary key columns in the target table cannot be mapped to a constant value.</p>
+</li>
+<li>
+<p>DME_XFMVAL_PRMCOLS_UNMAPPED: Mapping Required. All primary key columns in the target table are unmapped.</p>
+</li>
+<li>
+<p>DME_XFMVAL_PRMCOL_HARDCOD_ERR: Primary key column in the target table cannot be mapped both to source column or to a constant value simultaneously.</p>
+</li>
+<li>
+<p>DME_XFMVAL_PRMCOL_MAP_ERR: Primary key column in the target table must be either mapped to source column or to a constant value.</p>
+</li>
+<li>
+<p>DME_XFMVAL_PRMCOL_NOMAPERR: Mapping Required. Primary key column in the target table cannot be left unmapped.</p>
+</li>
+<li>
+<p>DME_XFMVAL_TAB_DIR_MULTSRC_ER: Table mappings of type Direct can have only one source table.</p>
+</li>
+<li>
+<p>DME_XFMVAL_TAB_JOIN_ONESRC_ERR: Table mappings of type Join must have at least two source tables.</p>
+</li>
+<li>
+<p>DME_XFMVAL_TAB_NOCOLMAP_ERR: Table mappings must have at least one column mapping.</p>
+</li>
+<li>
+<p>DME_XFMVAL_TAB_NOSRC_ERR: Each table mapping must have at least one source table.</p>
+</li>
+<li>
+<p>DME_XFMVAL_TAB_NOTRGT_ERR: Each table mapping must have one target table.</p>
+</li>
+<li>
+<p>DME_XFMVAL_TAB_SRC_TRGT_SAME: A table cannot be mapped to itself.</p>
+</li>
+<li>
+<p>DME_XFMVAL_TAB_UNION_ONESRC_ER: Table mappings of type Union must have at least two source tables.</p>
+</li>
+<li>
+<p>DME_XFMVAL_XFORM_TYPE_ERR : Incorrect Table Map Type. It can be Direct, Join, Union, Pivot or Unpivot.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment39">
+<tr>
+<td class="cellalignment46">
+<table class="cellalignment49">
+<tr>
+<td class="cellalignment43"><a href="libraries.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment43"><a href="validation.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2017, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment48">
+<table class="cellalignment42">
+<tr>
+<td class="cellalignment43"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment43"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment43"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment43"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

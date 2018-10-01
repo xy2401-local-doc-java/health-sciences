@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-US" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Specifying content details</title>
+<link rel="StyleSheet" href="Empirica.css" type="text/css" />
+<script type="text/javascript" language="JavaScript1.2" src="./ehlpdhtm.js"></script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Working with reports\nCreating report definitions\nSpecifying content details");
+addAvenueInfo("Working with Reports","ctEditDataSource.htm","ctPreviewCompositeTable.htm");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("About_WebVDME.htm", "", "&gt;", "Overview", "About_WebVDME_1.htm");
+document.write("<a href=\"About_Reports.htm\">Working with reports<\/a> &gt; <a href=\"ctSelectSubjectList.htm\">Creating report definitions<\/a> &gt; Specifying content details<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('About_WebVDME.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+
+
+
+<h1><a name="MiniTOCBookMark1"></a>Specifying content details</h1>
+<p align="left" style="font-family:Verdana;font-size:11pt;font-weight: normal;font-style: italic;text-decoration: none;" >In&#160;this&#160;section&#160;<a class="dropspot" href="javascript:TextPopup(this)" id="MTHotSpot49342" ><span class="MTText" style="display: none;" >Show</span><span class="MTText" >Hide</span></a></p>
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+TextPopupInit('MTHotSpot49342', 'MTPOPUP49342');
+//]]></script>
+<div align="left" class="droptext" id="MTPOPUP49342" >
+ <ul style="text-align:left; list-style-type: disc;font-family:Verdana;font-size:10pt;font-weight: normal;font-style: normal;text-decoration: underline;"  >
+  <li style="margin-top: 1px;"><a href="#MiniTOCBookMark2" style="font-family:Verdana;font-size:10pt;font-weight: normal;font-style: normal;text-decoration: underline;">Aggregation methods for text or date variables</a>
+</li>
+  <li style="margin-top: 1px;"><a href="#MiniTOCBookMark3" style="font-family:Verdana;font-size:10pt;font-weight: normal;font-style: normal;text-decoration: underline;">Aggregation methods for numeric variables</a>
+</li>
+ </ul>
+</div>
+<p>Content details specify how to display values of an <a href="Report_Structure.htm" id="a1">analysis variable</a>; that is, the aggregation method for values. For example, you may want to show an actual value, a count of records with a value, a percentage of records with the value, and so on. You can specify multiple aggregation methods for an analysis variable; each aggregation method is represented in the report.</p>
+<p>When you add an analysis variable to a report, the term Value appears by default as the aggregation method:</p>
+<p><img src="reporta.gif" alt="Value appears as a default aggregation methods for an analysis variable." style="border: none;" width="144" height="66" border="0" /></p>
+<p>Value stands for First value, which is the default aggregation method. (It is used when no other aggregation method is selected.) When you change the aggregation method, an abbreviation of that aggregation method appears in the table cell. For example, if you select Count as the aggregation method, N appears in the table cell:</p>
+<p><img src="reportb.gif" alt="Abbreviation appears as an aggregation method for an analysis variable." style="border: none;" width="135" height="63" border="0" /></p>
+<p style="font-weight: bold;">Notes:</p>
+<ul>
+<li class="Bullet1">If the source table for a column or row can include multiple records per case, the count and unique count for the column or row can differ.</li>
+<li class="Bullet1">Percentages in the columns or rows can add up to greater than 100 percent. For example,the breakdown variable is PT severity. Adverse events data can include multiple records per case. Suppose that each of 10 cases has an event with the severity Mild, an event with the severity Moderate, and an event with the severity Severe. The count of cases with each severity is 10. The count of cases with any severity will also be 10. So the percentage of cases with each severity will be 10/10, which is 100%. The total of percentages for each severity would be 300%.</li>
+</ul>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">1.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>On the <a href="ctEdit.htm">Edit Report Columns page</a>, highlight the aggregation method that appears in the table cell below the analysis variable. You must click the aggregation method, not the column heading. You can choose more than one aggregation method for a variable.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">2.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Next to <span class="Button">Content Details</span>, click <span class="Button">Select</span>.</p>
+
+<p class="ListContinue1">The Content Details dialog box appears.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">3.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Select the desired aggregation methods and percentages. Available aggregation methods depend on the data type of a variable.</p>
+
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">4.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Click <span class="Button">OK</span>.</p>
+
+<h2><a name="MiniTOCBookMark2"></a><span style="font-weight: bold;">Aggregation methods for text or date variables</span></h2>
+<p>For an analysis variable with a data type of text or date, check one or more of the following check boxes. The abbreviation appears in the report column heading.</p>
+<p>&#160;</p>
+<table class="Empirica" style="vertical-align: top; margin-left: 7pt;" cellspacing="0px" width="100%">
+<col style="width: 24.341%;" />
+<col style="width: 11.927%;" />
+<col style="width: 63.722%;" />
+<tr class="t1st">
+<td>
+<p class="TableHeader">Check box</p>
+</td>
+<td>
+<p class="TableHeader">Abbreviation</p>
+</td>
+<td>
+<p class="TableHeader">Meaning</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td>
+<p class="TableBody">Count</p>
+</td>
+<td>
+<p class="TableBody">N</p>
+</td>
+<td>
+<p class="TableBody">The number of non-NULL values.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td>
+<p class="TableBody">Count (Unique)</p>
+</td>
+<td>
+<p class="TableBody">N (U)</p>
+</td>
+<td>
+<p class="TableBody">The number of unique non-NULL values.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td>
+<p class="TableBody">Row %</p>
+</td>
+<td>
+<p class="TableBody">Row %</p>
+</td>
+<td>
+<p class="TableBody">Count of non-unique values for the row and column/Count of non-unique values for the row for all columns. (There must be a column for All.)</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td>
+<p class="TableBody">Column %</p>
+</td>
+<td>
+<p class="TableBody">Column %</p>
+</td>
+<td>
+<p class="TableBody">Count of non-unique values for the column and row/Count of non-unique values for the column for all rows. (There must be a row for All.)</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td>
+<p class="TableBody">Overall %</p>
+</td>
+<td>
+<p class="TableBody">Overall %</p>
+</td>
+<td>
+<p class="TableBody">Count of non-unique values for the column and row/Count of non-unique values for all columns and all rows. (There must be a column for All and a row for All.)</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td>
+<p class="TableBody">Row % (Unique)</p>
+</td>
+<td>
+<p class="TableBody">Row % (U)</p>
+</td>
+<td>
+<p class="TableBody">Count of unique values for the row and column/Count of unique values for the row for all columns. (There must be a column for All.)</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td>
+<p class="TableBody">Column % (Unique)</p>
+</td>
+<td>
+<p class="TableBody">Col % (U)</p>
+</td>
+<td>
+<p class="TableBody">Count of unique values for the column and row/Count of unique values for the column for all rows. (There must be a row for All.)</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td>
+<p class="TableBody">Overall % (Unique)</p>
+</td>
+<td>
+<p class="TableBody">% (U)</p>
+</td>
+<td>
+<p class="TableBody">Count of unique values for the column and row/Count of unique values for all columns and all rows. (There must be a column for All and a row for All.)</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td>
+<p class="TableBody">All values</p>
+</td>
+<td>
+<p class="TableBody">ALL</p>
+</td>
+<td>
+<p class="TableBody">All values, including null values, separated by commas. Null values are shown as blanks, so you may see a list of values like "DrugA, , DrugC".</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td>
+<p class="TableBody">All values (excluding NULLs)</p>
+</td>
+<td>
+<p class="TableBody">All</p>
+</td>
+<td>
+<p class="TableBody">All values except null values, separated by commas.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td>
+<p class="TableBody">Unique values</p>
+</td>
+<td>
+<p class="TableBody">ALL (U)</p>
+</td>
+<td>
+<p class="TableBody">Unique values (in ascending order), including NULL values, separated by commas. Null values are represented in the list by the string "null".</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td>
+<p class="TableBody">Unique values (excluding NULL)</p>
+</td>
+<td>
+<p class="TableBody">All (U)</p>
+</td>
+<td>
+<p class="TableBody">Unique values (in ascending order), excluding NULL values, separated by commas.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td>
+<p class="TableBody">Unique values and counts</p>
+</td>
+<td>
+<p class="TableBody">ALL (N)</p>
+</td>
+<td>
+<p class="TableBody">Unique values (in ascending order), including NULL values, separated by commas; after each value is the count of the value. Null values are represented in the list by the string "null".</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td>
+<p class="TableBody">Unique values and counts (Excluding NULL)</p>
+</td>
+<td>
+<p class="TableBody">All (N)</p>
+</td>
+<td>
+<p class="TableBody">Unique values (in ascending order), excluding NULL values, separated by commas; after each value is the count of the value.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td>
+<p class="TableBody">First value</p>
+</td>
+<td>
+<p class="TableBody">Value</p>
+</td>
+<td>
+<p class="TableBody">First non-NULL value from the database (for the case series or query being used). If you do not specify an aggregation method, this method is used by default.</p>
+</td>
+</tr>
+</table>
+<h2><a name="MiniTOCBookMark3"></a><span style="font-weight: bold;">Aggregation methods for numeric variables</span></h2>
+<p>For an analysis variable with a data type of number, check one or more of the following check boxes. The abbreviation appears in the report column heading.</p>
+<p class="Note"><span style="font-weight: bold;">Note:</span> If a case is counted in multiple columns or rows, a count in the All column or row is not necessarily the same as the total of counts in other columns or rows of the report. Also, percentages in the columns or rows can add up to greater than 100 percent.</p>
+<p>&#160;</p>
+<table class="Empirica" style="vertical-align: top; margin-left: 7pt;" cellspacing="0px" width="100%">
+<col style="width: 12.29%;" />
+<col style="width: 13.898%;" />
+<col style="width: 73.061%;" />
+<tr class="t1st">
+<td>
+<p class="TableHeader">Check box</p>
+</td>
+<td>
+<p class="TableHeader">Abbreviation</p>
+</td>
+<td>
+<p class="TableHeader">Meaning</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td>
+<p class="TableBody">Count</p>
+</td>
+<td>
+<p class="TableBody">N</p>
+</td>
+<td>
+<p class="TableBody">The number of non-NULL values.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td>
+<p class="TableBody">Count (Unique)</p>
+</td>
+<td>
+<p class="TableBody">N (U)</p>
+</td>
+<td>
+<p class="TableBody">The number of unique non-NULL values.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td>
+<p class="TableBody">Row %</p>
+</td>
+<td>
+<p class="TableBody">Row %</p>
+</td>
+<td>
+<p class="TableBody">Count of non-unique values for the row and column/Count of non-unique values for the row for all columns. (There must be a column for All.)</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td>
+<p class="TableBody">Column %</p>
+</td>
+<td>
+<p class="TableBody">Col %</p>
+</td>
+<td>
+<p class="TableBody">Count of non-unique values for the column and row/Count of non-unique values for the column for all rows. (There must be a row for All.)</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td>
+<p class="TableBody">Overall %</p>
+</td>
+<td>
+<p class="TableBody">%</p>
+</td>
+<td>
+<p class="TableBody">Count of non-unique values for the column and row/Count of non-unique values for all columns and all rows. (There must be a column for All and a row for All.)</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td>
+<p class="TableBody">Row % (Unique)</p>
+</td>
+<td>
+<p class="TableBody">Row % (U)</p>
+</td>
+<td>
+<p class="TableBody">Count of unique values for the row and column/Count of unique values for the row for all columns. (There must be a column for All.)</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td>
+<p class="TableBody">Column % (Unique)</p>
+</td>
+<td>
+<p class="TableBody">Col % (U)</p>
+</td>
+<td>
+<p class="TableBody">Count of unique values for the column and row/Count of unique values for the column for all rows. (There must be a row for All.)</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td>
+<p class="TableBody">Overall % (Unique)</p>
+</td>
+<td>
+<p class="TableBody">% (U)</p>
+</td>
+<td>
+<p class="TableBody">Count of unique values for the column and row/Count of unique values for all columns and all rows. (There must be a column for All and a row for All.)</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td>
+<p class="TableBody">Sum</p>
+</td>
+<td>
+<p class="TableBody">Sum</p>
+</td>
+<td>
+<p class="TableBody">The sum of the values.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td>
+<p class="TableBody">Mean</p>
+</td>
+<td>
+<p class="TableBody">Mean</p>
+</td>
+<td>
+<p class="TableBody">The mean of the values.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td>
+<p class="TableBody">Median</p>
+</td>
+<td>
+<p class="TableBody">Median</p>
+</td>
+<td>
+<p class="TableBody">The median of the values.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td>
+<p class="TableBody">Standard Deviation</p>
+</td>
+<td>
+<p class="TableBody">SD</p>
+</td>
+<td>
+<p class="TableBody">The standard deviation of the values.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td>
+<p class="TableBody">1st Quartile</p>
+</td>
+<td>
+<p class="TableBody">Q1</p>
+</td>
+<td>
+<p class="TableBody">The first quartile of the values.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td>
+<p class="TableBody">3rd Quartile</p>
+</td>
+<td>
+<p class="TableBody">Q3</p>
+</td>
+<td>
+<p class="TableBody">The third quartile of the values.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td>
+<p class="TableBody">Min</p>
+</td>
+<td>
+<p class="TableBody">Min</p>
+</td>
+<td>
+<p class="TableBody">The minimum value.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td>
+<p class="TableBody">Max</p>
+</td>
+<td>
+<p class="TableBody">Max</p>
+</td>
+<td>
+<p class="TableBody">The maximum value.</p>
+</td>
+</tr>
+</table>
+<p>For example, suppose that a report includes counts like this:</p>
+<p><img src="table1.jpg" alt="Sample of aggregation methods for numeric variables: sample report" style="border: none;" width="280" height="125" border="0" /></p>
+<p>If you replace the counts in the report with row, column, and overall percentages, the report display changes to this:</p>
+<p><img src="table.jpg" alt="Sample of aggregation methods for numeric variables: sample report with counts replaced with row, column, and overall percentages" style="border: none;" width="634" height="201" border="0" /></p>
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="margin-bottom: 0pt;">Copyright © 2002, 2018, Oracle and/or 
+	 its affiliates. All rights reserved. </p>
+	<p style="text-align: right; margin-top: 0pt; margin-bottom: 0pt;">Help 
+	 Build 8.1.1</p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

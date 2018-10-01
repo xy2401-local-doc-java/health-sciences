@@ -1,0 +1,82 @@
+&#xfeff;<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="EN" xmlns="http://www.w3.org/1999/xhtml" xml:lang="EN">
+<head>
+<title> Randomization FAQs </title>
+<meta name="Generator" content="Author-it" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="Keywords" content=""/>
+<script language="javascript" type="text/javascript" charset="UTF-8" src="dhtml_toc.js"></script>
+<script language="javascript" type="text/javascript" charset="UTF-8" src="open_parent.js"></script>
+<script language="javascript" type="text/javascript" charset="UTF-8" src="dhtml_load.js"></script>
+<script language="javascript" type="text/javascript" charset="UTF-8" src="dhtml_search.js"></script>
+<link rel="stylesheet" type="text/css" href="newwave.css"/>
+<link rel="stylesheet" type="text/css" href="index_stylesheet.css"/>
+<base target="CONTENT"/>
+<script language="javascript" type="text/javascript" src="dhtml_popup.js"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body onload="loadParent();;bodyLoad();;;if (isTOCLoaded()) {expand('207469');highlight('217518')}" text="#000000" link="#0000A0" alink="#008000" vlink="#FF0000">
+	<div id="searchResultsNone"></div>
+	<div id="content" style="padding-bottom: 50px;">
+		<table summary="" class="relatedtopics aboveheading" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<td width= "18">
+<p class="bodytext"><a href="213748.htm" target="_self"><img width="34" height="34" src="125.gif" alt="Previous Topic" vspace="0" hspace="0" align="bottom" border="0" /></a></p></td>
+<td width= "18">
+<p class="bodytext"><a href="213729.htm" target="_self"><img width="33" height="34" src="124.gif" alt="Next Topic" vspace="0" hspace="0" align="bottom" border="0" /></a></p></td>
+<td width= "48">
+<p class="bodytext"><a href="javascript:expand('207469');highlight('217518')" onclick="loadTOC()" target="_self"><img width="165" height="27" src="122.gif" alt="Book Contents" vspace="0" hspace="0" align="bottom" border="0" /></a></p></td>
+</tr>
+</table>
+<h2 class="heading2">Randomization FAQs</h2>
+<p class="bodytext"><a id="h213735" class="prattblock" title="Can I determine what happens when the next randomization number is associated with a code for a kit type that is not in stock at a site?" href="javascript:toggleBlock('213735')" target="_self">Can I determine what happens when the next randomization number is associated with a code for a kit type that is not in stock at a site?</a></p>
+<div id="d213735" class="expandingblock" style="display:none"><p class="bodytext">Yes. You must determine this requirement when you <a id="h210437" class="jumptemplate-noheadingtext" title="Create a randomization design" href="207453.htm" target="_self">create a randomization design</a>, typically after consulting a standard operating procedure (SOP) at your organization. </p>
+<p class="bodytext">If you allow sites to randomize when the required kit type is not in stock (sometimes known as forced randomization), you also must determine whether the randomization number that you skipped over is assigned to another subject.</p>
+<p class="bodytext">When a site randomizes even though a required kit type is not in stock, information about the forced randomization appears in the Randomization List (Unblinded) report. The letter Y appears in the Restricted to Available Kits column.</p>
+</div><p class="bodytext"><a id="h217519" class="prattblock" title="What are my options for randomizing subjects?" href="javascript:toggleBlock('217519')" target="_self">What are my options for randomizing subjects?</a></p>
+<div id="d217519" class="expandingblock" style="display:none"><p class="bodytext">You can use simple or stratified randomization. You can create blocks in the list and assign them either dynamically or statically to sites or countries. For stratified randomization, subjects are grouped during the randomization event to maintain a balance of treatment arms. For both simple and stratified randomization, you can create blocks in the list and assign them to sites, countries, or regions.</p>
+<p class="bodytext">You choose from the following algorithms for randomizing subjects.</p>
+<p class="subheading">Central randomization</p>
+<ul class="listbullet"><li class="listbullet"><strong class="specialbold">When a subject is randomized, </strong>Clinical One selects the next treatment arm in a central randomization list. </li></ul><p class="subheading">Site Blocked Dynamic randomization</p>
+<ul class="listbullet"><li class="listbullet"><strong class="specialbold">When a subject is randomized, </strong>Clinical One selects the next treatment arm from the block assigned to the site.</li><li class="listbullet"><strong class="specialbold">How blocks of randomization numbers are assigned: </strong>Clinical One dynamically allocates blocks of randomization numbers to sites.</li><li class="listbullet"><strong class="specialbold">When a block is exhausted by a site,</strong> the next available block is allocated to the site. </li><li class="listbullet"><strong class="specialbold">Benefits: </strong>This type of randomization helps you balance treatment arms within a site while minimizing gaps between blocks.</li></ul><p class="subheading">Site Blocked Fixed randomization</p>
+<ul class="listbullet"><li class="listbullet"><strong class="specialbold">When a subject is randomized, </strong>Clinical One selects the next treatment arm from a block assigned to the site.</li><li class="listbullet"><strong class="specialbold">How blocks of randomization numbers are assigned: </strong>You assign blocks to each site when you create the randomization list.</li><li class="listbullet"><strong class="specialbold">When a block is exhausted by a site, </strong>Clinical One selects the next treatment arm in the next block that is allocated to the site. If all blocks allocated to a site are exhausted, a randomization failure occurs. </li><li class="listbullet"><strong class="specialbold">Benefits: </strong>This type of randomization helps you balance treatment arms within a site.</li><li class="listbullet"><strong class="specialbold">Drawbacks: </strong>You must pre-allocate blocks of randomization numbers to sites when you create the randomization list, and if all blocks are exhausted, a randomization failure occurs. Additionally, gaps between blocks can occur when sites don't use randomization numbers as expected.</li></ul><p class="subheading">Country Blocked Dynamic randomization</p>
+<ul class="listbullet"><li class="listbullet"><strong class="specialbold">When a subject is randomized, </strong>Clinical One selects the next treatment arm from the block assigned to the site's country. </li><li class="listbullet"><strong class="specialbold">How blocks of randomization numbers are assigned: </strong>Clinical One dynamically allocates blocks of randomization numbers to countries.</li><li class="listbullet"><strong class="specialbold">When a block is exhausted by a country,</strong> the next available block is allocated to the country.</li><li class="listbullet"><strong class="specialbold">Benefits: </strong>This type of randomization helps you balance treatment arms within a country while minimizing gaps between blocks.</li></ul><p class="subheading">Country Blocked Fixed randomization</p>
+<ul class="listbullet"><li class="listbullet"><strong class="specialbold">When a subject is randomized, </strong>Clinical One selects the next treatment arm from a block assigned to the site's country.</li><li class="listbullet"><strong class="specialbold">How blocks of randomization numbers are assigned: </strong>You assign blocks to each site when you create the randomization list.</li><li class="listbullet"><strong class="specialbold">When a block is exhausted by a country, </strong>Clinical One selects the next treatment arm in the next block that is allocated to the site's country. If all blocks allocated to a country are exhausted, a randomization failure occurs. </li><li class="listbullet"><strong class="specialbold">Benefits: </strong>This type of randomization helps you balance treatment arms within a country.</li><li class="listbullet"><strong class="specialbold">Drawbacks: </strong>You must pre-allocate blocks of randomization numbers to countries when you create the randomization list, and if all blocks are exhausted, a randomization failure occurs. Additionally, gaps between blocks can occur when sites don't use randomization numbers as expected.</li></ul><p class="subheading">Central Stratified randomization</p>
+<ul class="listbullet"><li class="listbullet"><strong class="specialbold">When a subject is randomized, </strong>Clinical One selects the next treatment arm in a central randomization list based on strata. </li><li class="listbullet"><strong class="specialbold">Benefits: </strong>This type of randomization is useful when you want to balance treatment arms within stratum groups.</li></ul><p class="subheading">Site Blocked Dynamic Stratified randomization</p>
+<ul class="listbullet"><li class="listbullet"><strong class="specialbold">When a subject is randomized, </strong>Clinical One selects the next treatment arm from the block assigned to the site.</li><li class="listbullet"><strong class="specialbold">How blocks of randomization numbers are assigned: </strong>Clinical One dynamically allocates blocks of randomization numbers to stratum groups at each site.</li><li class="listbullet"><strong class="specialbold">When a block is exhausted by a stratum group at the site,</strong> the next available block is allocated to the stratum group at the site. </li><li class="listbullet"><strong class="specialbold">Benefits: </strong>This type of randomization is useful when you want to balance treatment arms within the stratum groups in each site.</li></ul><p class="subheading">Country Blocked Dynamic Stratified randomization</p>
+<ul class="listbullet"><li class="listbullet"><strong class="specialbold">When a subject is randomized,</strong> Clinical One selects the next treatment arm from the block assigned to the country.</li><li class="listbullet"><strong class="specialbold">How blocks of randomization numbers are assigned:</strong> Clinical One dynamically allocates blocks of randomization numbers to stratum groups at each country.</li><li class="listbullet"><strong class="specialbold">When a block is exhausted by a stratum group at the country,</strong> the next available block is allocated to the stratum group at the country.</li><li class="listbullet"><strong class="specialbold">Benefits:</strong> This type of randomization is useful when you want to balance treatment arms within the stratum groups in each country.</li></ul></div><p class="bodytext"><a id="h213737" class="prattblock" title="If I block my randomization list by site or country, how are blocks assigned?" href="javascript:toggleBlock('213737')" target="_self">If I block my randomization list by site or country, how are blocks assigned?</a></p>
+<div id="d213737" class="expandingblock" style="display:none"><ul class="listbullet"><li class="listbullet">With dynamic assignment, Clinical One assigns a block to a given site during randomization.<p class="listcontinue">We recommend using dynamic assignment. This type of randomization uses the numbers in the list more efficiently and can help reduce having large sections of unassigned numbers.</p>
+<p class="listcontinue">For instance, for site-blocked randomization, Clinical One assigns the first block to the first site that enrolls a subject. Subsequent subjects who enroll at the site are randomized using the numbers in that block until all numbers are used. Clinical One assigns another block to the site after all numbers are used and another subject enrolls.</p>
+</li><li class="listbullet">With static assignment, a statistician assigns blocks to sites or countries in the randomization list.<p class="listcontinue">Static assignment can sometimes lead to randomization failures that are difficult to troubleshoot.</p>
+</li></ul></div><p class="bodytext"><a id="h213738" class="prattblock" title="How many times can I randomize in a study?" href="javascript:toggleBlock('213738')" target="_self">How many times can I randomize in a study?</a></p>
+<div id="d213738" class="expandingblock" style="display:none"><p class="bodytext">You can randomize one time in a study.</p>
+</div><p class="bodytext"><a id="h213740" class="prattblock" title="Can I randomize subjects without dispensing kits to them?" href="javascript:toggleBlock('213740')" target="_self">Can I randomize subjects without dispensing kits to them?</a></p>
+<div id="d213740" class="expandingblock" style="display:none"><p class="bodytext">Yes. If you're not dispensing kits, you don't have to <a id="h210439" class="jumptemplate-noheadingtext" title="Create a kit type" href="207461.htm" target="_self">create kit types</a> or <a id="h210440" class="jumptemplate-noheadingtext" title="Define the dispensation schedule" href="207463.htm" target="_self">define the dispensation schedule</a>.</p>
+</div>
+
+		
+	</div>
+	<div id="feedback"><a href="mailto:clinical_one_doc_feedback_us_grp@oracle.com?Subject=Comments about the Clinical One 1.1.1 Information for Sponsor and CRO Users - Randomization FAQs" target="_top"><img width="24" height="108" src="feedback.gif" alt="Send Feedback"></a>
+	</div>
+	
+	<div id="foot">		
+			<ul style="padding: 0;">
+				<li class="footer" style="padding: 0 7px 0 0;"><a href="217485.htm">Access to Oracle Support</a></li>
+				<li class="footer"><a href="http://www.oracle.com/pls/topic/lookup?ctx=acc&id=docacc" target="_blank">Accessibility</a></li>
+				<li class="footer" style="border-right-style: none;"><a href="217488.htm">Legal Notices</a></li>
+			</ul>
+			<p style="font-size:12px;">Copyright &copy; 2017, 2018 Oracle and/or its affiliates. All rights reserved.</p>
+	</div>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>
+<footer>
+</footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+<script>$(document).foundation();</script>
+</body>
+</html>

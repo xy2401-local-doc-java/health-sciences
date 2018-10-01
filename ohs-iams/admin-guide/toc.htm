@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>Oracle&reg; Health Sciences Identity and Access Management Service Administrator Guide</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="description" content="This guide provides instructions for organization-wide delegated administrators to manage user accounts and user access to your Oracle Health Sciences applications and studies that are hosted in Global Business Unit Cloud Services (GBUCS)." />
+<meta name="dcterms.created" content="2018-06-15T4:57:12Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Health Sciences Identity and Access Management Service Administrator Guide" />
+<meta name="dcterms.identifier" content="E95436-01" />
+<meta name="dcterms.isVersionOf" content="IAMSA" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2017, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"   src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"   src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="alternate" href="IAMSA.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="IAMSA.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="IAMSA.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript"  src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript"  src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript"  src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript"  src="../dcommon/js/foundation.min.js"></script>
+<script type="application/javascript"  src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript"  src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript"  src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="application/javascript"  src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="application/javascript"  src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="application/javascript"  src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="application/javascript"  src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<!-- End Header -->
+<div class="letterstyle">
+<h1>Oracle&reg; Health Sciences Identity and Access Management Service</h1>
+<p class="booktitle">Administrator Guide</p>
+<p><span class="revnumber">Release 1.4.2</span></p>
+<p class="invpartnumber">E95436-01</p>
+<p class="date">June 2018</p>
+<p><a id="IAMSA101"></a>This guide provides instructions for organization-wide delegated administrators to manage user accounts and user access to your Oracle Health Sciences applications and studies that are hosted in Global Business Unit Cloud Services (GBUCS). The operations described in this guide are performed from an organization-specific instance of the Oracle Health Sciences Identity and Access Management Service (OHSIAMS) <span class="bold">Oracle Identity Self Service</span> console.</p>
+<p>The delegated administrator manages users and privileges for your hosted Oracle Health Sciences products, except InForm. InForm administrators create and manage user accounts in Oracle&reg; Health Sciences User Management Tool (UMT).</p>
+<a id="BABBGIIH"></a>
+<div id="IAMSA102" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">1</span> Create a user account</h2>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+If you need to create or update multiple accounts, it may be easier to use Bulk Import. See <a href="#BABGCBDE">Perform user operations in bulk</a> for details.</div>
+<p>Oracle users can no longer be created or disabled in UMT and OHSIAMS. They are now required to request access in Oracle's corporate Identity Manager (OIM), which gets synchronized in OHSIAMS and into UMT.</p>
+<ol>
+<li>
+<p>Under the <span class="bold">Administration</span> menu on the left, click <span class="bold">Users</span>.</p>
+</li>
+<li>
+<p>Under the Search Results heading, click <span class="bold">Create</span>.</p>
+</li>
+<li>
+<p>Fill in the fields with the new user's information.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+In the <span class="bold">Organization</span> field, type your ShortOrgId.
+<p>If you don't know your ShortOrgId:</p>
+<ol>
+<li>
+<p>Click the search icon <img width="15" height="16" src="img/image008.gif" alt="Depicts the search icon, a magnifying glass." /> next to the Organization field.</p>
+</li>
+<li>
+<p>Click <span class="bold">Search</span> to do a blank search.</p>
+</li>
+<li>
+<p>In the Search Results, select the row where Company appears in the Type column.</p>
+</li>
+<li>
+<p>Click <span class="bold">Select</span>.</p>
+</li>
+</ol>
+</div>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+If you specify an email address, the system generates an initial password and emails it to the user, so there is no need to fill in the password fields.</div>
+</li>
+<li>
+<p>Click <span class="bold">Submit</span> in the top right of the page.</p>
+<p>A confirmation message appears and you are redirected to the User Details page for the new user.</p>
+</li>
+<li>
+<p>Assign roles to the user, as appropriate. For instructions, see <a href="#BABGADGF">Assign roles</a>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="BABGADGF"></a>
+<div id="IAMSA104" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">2</span> Assign roles</h2>
+<p>Assign roles to users to grant them access to applications or studies and, if available, to grant privileges in the target application.</p>
+<p><span class="bold">What do you want to do?</span></p>
+<ul>
+<li>
+<p><a href="#BABIAJGA">Assign one or more roles to the same user</a></p>
+</li>
+<li>
+<p><a href="#BABFJAGH">Assign the same role to multiple users</a></p>
+</li>
+<li>
+<p><a href="#BABJCICH">Assign multiple roles to multiple users</a></p>
+</li>
+<li>
+<p><a href="#BABHGHIA">Role FAQs</a></p>
+</li>
+</ul>
+<a id="BABIAJGA"></a>
+<div id="IAMSA106" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">2.1</span> Assign one or more roles to the same user</h3>
+<p>Use these instructions when you created a new user and you need to assign roles to that user, or when you need to assign an additional role to an existing user.</p>
+<p>To assign roles to a user:</p>
+<ol>
+<li>
+<p>Navigate to the User Details page for the user.</p>
+<ol>
+<li>
+<p>Under <span class="bold">Administration</span> in the menu on the left, click <span class="bold">Users</span>.</p>
+</li>
+<li>
+<p>For the <span class="bold">Display Name</span>:</p>
+<ul>
+<li>
+<p>From the list, select <span class="bold">Equals</span>.</p>
+</li>
+<li>
+<p>Type the user name in the field.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Search</span> on the right.</p>
+</li>
+<li>
+<p>In the Search Results section, click the link in the <span class="bold">User Login</span> column to open the User Details page.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Select the <span class="bold">Roles</span> tab.</p>
+</li>
+<li>
+<p>From the <span class="bold">Actions</span> list, select <span class="bold">Request</span>. The Catalog page opens.</p>
+</li>
+<li>
+<p>For each role you want to assign:</p>
+<ol>
+<li>
+<p>Type the role name in the search box and press <span class="bold">Enter</span> or click <img width="18" height="17" src="img/image005.gif" alt="Icon that shows an arrow pointing to the right." /> to search. See the <a href="#BABHGHIA">Role FAQs</a> for help.</p>
+</li>
+<li>
+<p>In the search results, select the role you want to assign.</p>
+</li>
+<li>
+<p>Click <span class="bold">Add to cart</span> at the right end of the row.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Click <span class="bold">Checkout</span> in the top right corner of the page.</p>
+</li>
+<li>
+<p>Review the roles in the cart.</p>
+<p>You can click <span class="bold">Remove</span> to the right of a role to exclude it from the cart.</p>
+</li>
+<li>
+<p>Click <span class="bold">Submit</span> in the top right.</p>
+<p>The Request Summary page opens and a confirmation message appears at the top of the screen. If approval is active for any of the roles, the role is only assigned after the corresponding request is approved.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BABFJAGH"></a>
+<div id="IAMSA107" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">2.2</span> Assign the same role to multiple users</h3>
+<p>If you need to grant access to a broad group of users, you can allow users to request access themselves using self-service registration. This method is useful when, for example, your organization has acquired a new Health Sciences application or opened a new study. For details, see <a href="#BABGFCDA">Set up self-service registration</a>.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABJCICH"></a>
+<div id="IAMSA108" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">2.3</span> Assign multiple roles to multiple users</h3>
+<p>You can use Bulk Import to submit multiple user operations at the same time, including creating or terminating users, or assigning and removing roles. See <a href="#BABGCBDE">Perform user operations in bulk</a> for details.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABHGHIA"></a>
+<div id="IAMSA105" class="sect2">
+<h3 class="sect2"><span class="secnum">2.4</span> Role FAQs</h3>
+<p class="subhead2"><a id="IAMSA145"></a><a id="sthref1"></a>What application roles do I need to assign to users?</p>
+<p>Every user needs the basic role that is associated with the Oracle Health Sciences application they need to work in. The role name includes your company ShortOrgId, in the format <span class="italic">ShortOrgId</span>.<span class="italic">basic_role</span>.</p>
+<p>Additionally, if an Oracle Health Sciences application delegates role management to OHSIAMS, you must also grant those application roles that users need to work in the application. These role names include your company ShortOrgId and the basic role, in the format <span class="italic">ShortOrgId</span>.<span class="italic">basic_role</span>_<span class="italic">app_role</span>. For details about specific application roles, see the documentation for the application.</p>
+<p class="subhead2"><a id="IAMSA146"></a><a id="sthref2"></a>How do I know if an Oracle Health Sciences application delegates role administration to OHSIAMS?</p>
+<p>See the documentation for the application for details.</p>
+<p class="subhead2"><a id="IAMSA147"></a><a id="sthref3"></a>How do you assign application roles if the application does not delegate role management to OHSIAMS?</p>
+<p>For such cases, you assign application roles from the application itself.</p>
+<p class="subhead2"><a id="IAMSA148"></a><a id="sthref4"></a>Why are the ALL USERS, Approver, User Viewer, User Administrator, or Role Authorizer roles assigned to a user and what do they do?</p>
+<p>These roles are specific to OHSIAMS and they control privileges that users have in the OHSIAMS Oracle Identity Self Service application.</p>
+<p>ALL USERS: assigned to all accounts by default.</p>
+<p>Approver: grants the right to access the Pending Approvals page, to claim, approve, or reject access requests for those roles where approval is active. See <a href="#BABGHJIA">Request and assign the Approver role</a> for details. This role is not available by default. If you are using approval for a role, submit a request to Oracle Support to ask that they add the role for your organization.</p>
+<p>User Viewer, User Administrator, and Role Authorizer: assigned only to delegated administrators by Oracle staff to grant required privileges in OHSIAMS Oracle Identity Self Service.</p>
+<p class="subhead2"><a id="IAMSA149"></a><a id="sthref5"></a>What roles do I need to assign to users of My Oracle Bookmarks?</p>
+<p>If your organization uses My Oracle Bookmarks, three additional roles are available in OHSIAMS Oracle Identity Self Service that control users' privileges in My Oracle Bookmarks.</p>
+<p>The full role names include the ShortOrgId, in the format <span class="italic">ShortOrgId</span>.FNTD_BIZ_SERVICE_<span class="bolditalic">app_role_name</span>, where <span class="italic">app_role_name</span> appears only for the application roles.</p>
+<p>FNTD_BIZ_SERVICE_FD_SP_USER: Assign this application role if you want the user, often a sponsor user, to see all application tiles, including those with Site Access turned off. This role is useful if you have reporting applications or other tools that are not broadly used within your organization and only a few users need to have access to them. You can turn Site Access off for these applications and assign this role to users who work in those applications.</p>
+<p>FNTD_BIZ_SERVICE_FD_SP_ADMIN: Assign this application role to users of organizations, often a sponsor administrator, who manage the applications used to conduct clinical trials. Users with this role can perform high-level maintenance in My Oracle Bookmarks. They can add or edit the company name, view all application tiles, turn Site Access on or off for application tiles, view the study details page, and add or edit the description, therapeutic area, and program for studies.</p>
+<p>For details about My Oracle Bookmarks, see the section on enhancements introduced in release 1.4.1.1 in the <span class="italic">Oracle Health Sciences Identity and Access Management Service Release Notes</span> on My Oracle Support, article ID <span class="bold">1964916.1</span>.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<div id="IAMSA109" class="sect1"><!-- infolevel="all" infotype="General" --><a id="sthref6"></a>
+<h2 class="sect1"><span class="secnum">3</span> Update user accounts</h2>
+<p>You can update user accounts in OHSIAMS Oracle Identity Self Service to change user information, assign or remove roles, or to update account status.</p>
+<a id="BABJDDCE"></a>
+<div id="IAMSA110" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">3.1</span> View or edit user details</h3>
+<p>To find a user in Oracle Identity Self Service so that you can view or edit user details:</p>
+<ol>
+<li>
+<p>Under <span class="bold">Administration</span> in the menu on the left, click <span class="bold">Users</span>.</p>
+</li>
+<li>
+<p>For the <span class="bold">Display Name</span>:</p>
+<ul>
+<li>
+<p>From the list, select <span class="bold">Equals</span>.</p>
+</li>
+<li>
+<p>Type the user name in the field.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Search</span> on the right.</p>
+</li>
+<li>
+<p>In the Search Results section, click the link in the <span class="bold">User Login</span> column to open the User Details page.</p>
+</li>
+</ol>
+<p>User information is grouped under tabs in the User Details page. Select a tab to view or update information.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABBHJGC"></a>
+<div id="IAMSA111" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">3.2</span> Update a user's name, email address, or user login</h3>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You cannot update the account information for Oracle users. It can be updated <span class="italic">only</span> in corporate OIM. However, you can update the contact information of an Oracle user.</div>
+<p>To update the information associated with a user account:</p>
+<ol>
+<li>
+<p>Navigate to the User Details page:</p>
+<ol>
+<li>
+<p>Under <span class="bold">Administration</span> in the menu on the left, click <span class="bold">Users</span>.</p>
+</li>
+<li>
+<p>For the <span class="bold">Display Name</span>:</p>
+<ul>
+<li>
+<p>From the list, select <span class="bold">Equals</span>.</p>
+</li>
+<li>
+<p>Type the user name in the field.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Search</span> on the right.</p>
+</li>
+<li>
+<p>In the Search Results section, click the link in the <span class="bold">User Login</span> column to open the User Details page.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>In the top left, click <span class="bold">Modify User</span>.</p>
+</li>
+<li>
+<p>Update the following fields as necessary:</p>
+<ul>
+<li>
+<p>First Name</p>
+</li>
+<li>
+<p>Last Name</p>
+</li>
+<li>
+<p>E-mail</p>
+</li>
+<li>
+<p>User Login</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Submit</span> in the top right.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BABGBFIJ"></a>
+<div id="IAMSA112" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">3.3</span> Reset a password</h3>
+<p>To manually reset the password for a user account:</p>
+<ol>
+<li>
+<p>Navigate to the User Details page.</p>
+<ol>
+<li>
+<p>Under <span class="bold">Administration</span> in the menu on the left, click <span class="bold">Users</span>.</p>
+</li>
+<li>
+<p>For the <span class="bold">Display Name</span>:</p>
+<ul>
+<li>
+<p>From the list, select <span class="bold">Equals</span>.</p>
+</li>
+<li>
+<p>Type the user name in the field.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Search</span> on the right.</p>
+</li>
+<li>
+<p>In the Search Results section, click the link in the <span class="bold">User Login</span> column to open the User Details page.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>In the row of controls at the top of the page, click <span class="bold">Reset Password</span>.</p>
+</li>
+<li>
+<p>Select <span class="bold">Auto-generate the Password</span>.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Although it is not recommended, you can manually define a new password:
+<p>Select Manually change the Password, fill in the password fields, and select the checkbox E-mail the new password to the user.</p>
+</div>
+</li>
+<li>
+<p>Click <span class="bold">Reset Password</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<div id="IAMSA113" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref7"></a>
+<h3 class="sect2"><span class="secnum">3.4</span> Remove roles</h3>
+<p>If a user no longer needs access or privileges in an application or when the user leaves the company, we recommend that you remove unnecessary roles.</p>
+<p>To remove roles for a user account:</p>
+<ol>
+<li>
+<p>Navigate to the User Details page.</p>
+<ol>
+<li>
+<p>Under <span class="bold">Administration</span> in the menu on the left, click <span class="bold">Users</span>.</p>
+</li>
+<li>
+<p>For the <span class="bold">Display Name</span>:</p>
+<ul>
+<li>
+<p>From the list, select <span class="bold">Equals</span>.</p>
+</li>
+<li>
+<p>Type the user name in the field.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Search</span> on the right.</p>
+</li>
+<li>
+<p>In the Search Results section, click the link in the <span class="bold">User Login</span> column to open the User Details page.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Select the <span class="bold">Roles</span> tab.</p>
+</li>
+<li>
+<p>Click <span class="bold">Remove Roles</span>.</p>
+</li>
+<li>
+<p>In the dialog box, select all the checkboxes and click <span class="bold">Revoke</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<div id="IAMSA114" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref8"></a>
+<h3 class="sect2"><span class="secnum">3.5</span> Lock an account</h3>
+<p>When a delegated administrator explicitly locks an account, the user cannot use the <span class="bold">Forgot Password</span> link to regain access. Lock a user account to prevent the user from logging in before you disable the account for termination of employment or for other reasons.</p>
+<ol>
+<li>
+<p>Navigate to the User Details page.</p>
+<ol>
+<li>
+<p>Under <span class="bold">Administration</span> in the menu on the left, click <span class="bold">Users</span>.</p>
+</li>
+<li>
+<p>For the <span class="bold">Display Name</span>:</p>
+<ul>
+<li>
+<p>From the list, select <span class="bold">Equals</span>.</p>
+</li>
+<li>
+<p>Type the user name in the field.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Search</span> on the right.</p>
+</li>
+<li>
+<p>In the Search Results section, click the link in the <span class="bold">User Login</span> column to open the User Details page.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>In the row of controls at the top of the page, click <span class="bold">Lock Account</span>.</p>
+</li>
+<li>
+<p>In the confirmation dialog, click <span class="bold">Lock</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<div id="IAMSA115" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref9"></a>
+<h3 class="sect2"><span class="secnum">3.6</span> Unlock an account</h3>
+<p>If the account was explicitly locked by a delegated administrator, you need to unlock the account before it can be used again. Users who lock their accounts by entering an incorrect password too many times can use the <span class="bold">Forgot Password</span> link on the login page to reset their passwords and unlock their account.</p>
+<p>Before unlocking an account, check the reason for which it was locked in the first place and check that the person asking to have the account unlocked is the owner. To ensure system security, we recommend that you establish a process to confirm the requester's identity.</p>
+<ol>
+<li>
+<p>Navigate to the User Details page.</p>
+<ol>
+<li>
+<p>Under <span class="bold">Administration</span> in the menu on the left, click <span class="bold">Users</span>.</p>
+</li>
+<li>
+<p>For the <span class="bold">Display Name</span>:</p>
+<ul>
+<li>
+<p>From the list, select <span class="bold">Equals</span>.</p>
+</li>
+<li>
+<p>Type the user name in the field.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Search</span> on the right.</p>
+</li>
+<li>
+<p>In the Search Results section, click the link in the <span class="bold">User Login</span> column to open the User Details page.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>In the row of controls at the top of the page, click <span class="bold">Unlock Account</span>.</p>
+</li>
+<li>
+<p>In the confirmation dialog, click <span class="bold">Unlock</span>.</p>
+</li>
+<li>
+<p>Reset the password. See <a href="#BABGBFIJ">Reset a password</a> for details.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<div id="IAMSA116" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref10"></a>
+<h3 class="sect2"><span class="secnum">3.7</span> Terminate or reinstate accounts</h3>
+<p>We recommend that you terminate a user account when the user is no longer employed by your company.</p>
+<p><span class="bold">To terminate a user account:</span></p>
+<ol>
+<li>
+<p>Navigate to the User Details page for the user account.</p>
+<ol>
+<li>
+<p>Under <span class="bold">Administration</span> in the menu on the left, click <span class="bold">Users</span>.</p>
+</li>
+<li>
+<p>For the <span class="bold">Display Name</span>:</p>
+<ul>
+<li>
+<p>From the list, select <span class="bold">Equals</span>.</p>
+</li>
+<li>
+<p>Type the user name in the field.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Search</span> on the right.</p>
+</li>
+<li>
+<p>In the Search Results section, click the link in the <span class="bold">User Login</span> column to open the User Details page.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Click the <span class="bold">Lock Account</span> button to prevent the account from being used.</p>
+</li>
+<li>
+<p>In the Lock Account confirmation dialog box, click <span class="bold">Lock</span>.</p>
+</li>
+<li>
+<p>Select the <span class="bold">Roles</span> tab.</p>
+</li>
+<li>
+<p>Click <span class="bold">Remove Roles</span>.</p>
+</li>
+<li>
+<p>In the dialog box, select all the checkboxes and click <span class="bold">Revoke</span>.</p>
+<p>The message <span class="italic">Selected Roles are removed successfully</span> appears at the bottom if the operation succeeded.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If you need to remove delegated administrator roles from this account, contact Oracle Support for assistance.</div>
+</li>
+<li>
+<p>Click the <span class="bold">x</span> button in the top right corner to close the dialog box.</p>
+</li>
+<li>
+<p>On the User Details page, click the <span class="bold">Disable User</span> button.</p>
+</li>
+<li>
+<p>On the Disable Users page, click <span class="bold">Submit</span> in the top right.</p>
+<p>The message <span class="italic">Successfully completed the operation</span> appears after the user has been disabled.</p>
+</li>
+</ol>
+<p><span class="bold">To reinstate a user account that was terminated:</span></p>
+<ol>
+<li>
+<p>Navigate to the User Details page.</p>
+<ol>
+<li>
+<p>Under <span class="bold">Administration</span> in the menu on the left, click <span class="bold">Users</span>.</p>
+</li>
+<li>
+<p>For the <span class="bold">Display Name</span>:</p>
+<ul>
+<li>
+<p>From the list, select <span class="bold">Equals</span>.</p>
+</li>
+<li>
+<p>Type the user name in the field.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Search</span> on the right.</p>
+</li>
+<li>
+<p>In the Search Results section, click the link in the <span class="bold">User Login</span> column to open the User Details page.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Click the <span class="bold">Enable User</span> button.</p>
+</li>
+<li>
+<p>Update user information, if necessary. See <a href="#BABBHJGC">Update a user's name, email address, or user login</a> for details.</p>
+</li>
+<li>
+<p>Assign roles to the user. See <a href="#BABGADGF">Assign roles</a> for details.</p>
+</li>
+<li>
+<p>Reset the account password. See <a href="#BABGBFIJ">Reset a password</a> for details.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<div id="IAMSA117" class="sect1"><!-- infolevel="all" infotype="General" --><a id="sthref11"></a>
+<h2 class="sect1"><span class="secnum">4</span> Role settings</h2>
+<p>Basic roles allow users to access your company resources: applications or studies. You can configure these roles as described in this section.</p>
+<a id="BABCIAEB"></a>
+<div id="IAMSA118" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">4.1</span> Open the role page</h3>
+<p>To view or edit a role, search for it and open the role page:</p>
+<ol>
+<li>
+<p>Under the <span class="bold">Administration</span> menu on the left, click <span class="bold">Roles</span>.</p>
+</li>
+<li>
+<p>In the Search section, for <span class="bold">Display Name</span>:</p>
+<ul>
+<li>
+<p>From the list, select <span class="bold">Equals</span>.</p>
+</li>
+<li>
+<p>In the field, type the role name, without the ShortOrgId.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Search</span>.</p>
+</li>
+<li>
+<p>In the Search Results, click the link in the <span class="bold">Display Name</span> column to open the role page.</p>
+</li>
+</ol>
+<p>Role information is grouped under tabs. Select a tab to view or edit the information.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABIDDEA"></a>
+<div id="IAMSA119" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">4.2</span> Set the unauthorized access page for an application or study</h3>
+<p>You can edit a role to choose what type of page is displayed in the browser when an unauthorized user tries to access the application or study that is associated with the role.</p>
+<ol>
+<li>
+<p>Open the role page.</p>
+<ol>
+<li>
+<p>Under the <span class="bold">Administration</span> menu on the left, click <span class="bold">Roles</span>.</p>
+</li>
+<li>
+<p>In the Search section, for <span class="bold">Display Name</span>:</p>
+<ul>
+<li>
+<p>From the list, select <span class="bold">Equals</span>.</p>
+</li>
+<li>
+<p>In the field, type the role name, without the ShortOrgId.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Search</span>.</p>
+</li>
+<li>
+<p>In the Search Results, click the link in the <span class="bold">Display Name</span> column to open the role page.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>In the row of icons near the top of the page, click <span class="bold">Set Unauthorized Access Page</span>.</p>
+</li>
+<li>
+<p>Select one of the following:</p>
+<ul>
+<li>
+<p><span class="bold">Authorization Error Page</span>: Displays a message indicating that the user does not have access to the resource.</p>
+</li>
+<li>
+<p><span class="bold">Resource Not Found Page</span>: Displays a message indicating that the page does not exist.</p>
+</li>
+<li>
+<p><span class="bold">Authorization Request Page</span>: Displays the self-service registration page where the user can submit a request for access. See <a href="#BABGFCDA">Set up self-service registration</a> for details.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Submit</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">x</span> to close the dialog box.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BABJBDBG"></a>
+<div id="IAMSA139" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">4.3</span> Set up approval for a role</h3>
+<p>By default, roles are assigned to the target user immediately after the request is submitted. For basic roles, which control access to the application or study, you can activate approval so that the role can only be assigned to a user if the request is approved. Users who have the Approver role can approve or reject access requests.</p>
+<p>With approval active for a role, an approval request is created when:</p>
+<ul>
+<li>
+<p>You assign the role from OHSIAMS Oracle Identity Self Service.</p>
+</li>
+<li>
+<p>A user submits an access request for the associated application or study through self-service registration (see <a href="#BABGFCDA">Set up self-service registration</a>).</p>
+</li>
+</ul>
+<a id="BABGHJIA"></a>
+<div id="IAMSA121" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><span class="secnum">4.3.1</span> Request and assign the Approver role</h4>
+<p>The Approver role is added to your organization on request. This role is required to use approval.</p>
+<p>Users who have the Approver role will be able to approve or reject access requests for roles where approval is active. These users cannot process their own access requests, so we recommend that you assign the role to a user who would not submit access requests or assign it to more than one user.</p>
+<ol>
+<li>
+<p>Submit a request to Oracle Support to create the Approver role for your organization.</p>
+</li>
+<li>
+<p>After the role is available, assign it to one or more users in your organization. See <a href="#BABIAJGA">Assign one or more roles to the same user</a> for instructions.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<a id="BABJCHEF"></a>
+<div id="IAMSA140" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><span class="secnum">4.3.2</span> Activate approval for a role</h4>
+<ol>
+<li>
+<p>If you haven't already, assign the Approver role to at least one user so that user can approve valid requests to grant the role. See <a href="#BABGHJIA">Request and assign the Approver role</a> for details.</p>
+</li>
+<li>
+<p>Open the role page.</p>
+<ol>
+<li>
+<p>Under the <span class="bold">Administration</span> menu on the left, click <span class="bold">Roles</span>.</p>
+</li>
+<li>
+<p>In the Search section, for <span class="bold">Display Name</span>:</p>
+<ul>
+<li>
+<p>From the list, select <span class="bold">Equals</span>.</p>
+</li>
+<li>
+<p>In the field, type the role name, without the ShortOrgId.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Search</span>.</p>
+</li>
+<li>
+<p>In the Search Results, click the link in the <span class="bold">Display Name</span> column to open the role page.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>In the row of controls at the top of the page, click <span class="bold">Set Approval Options</span>.</p>
+</li>
+<li>
+<p>In the dialog box, select <span class="bold">Activate Approval</span>.</p>
+</li>
+<li>
+<p>If you want requesting users to receive a notification once the access request is approved or rejected, select <span class="bold">Notify the user on request status</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Submit</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">x</span> to close the dialog box.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<a id="BABCIIIJ"></a>
+<div id="IAMSA127" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><span class="secnum">4.3.3</span> Deactivate approval</h4>
+<div class="infoboxnotewarn">
+<p class="notep1">Warning:</p>
+<p class="warnsp">If self-service registration is active for this role and you deactivate approval, all access requests submitted by users through self-service registration will be approved instantly, granting the requesting user access to the associated application or study.</p>
+<p class="warnsp">If this is not your intent, deactivate self-service registration before deactivating approval so that only delegated administrators can assign the role.</p>
+</div>
+<ol>
+<li>
+<p>Open the role page.</p>
+<ol>
+<li>
+<p>Under the <span class="bold">Administration</span> menu on the left, click <span class="bold">Roles</span>.</p>
+</li>
+<li>
+<p>In the Search section, for <span class="bold">Display Name</span>:</p>
+<ul>
+<li>
+<p>From the list, select <span class="bold">Equals</span>.</p>
+</li>
+<li>
+<p>In the field, type the role name, without the ShortOrgId.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Search</span>.</p>
+</li>
+<li>
+<p>In the Search Results, click the link in the <span class="bold">Display Name</span> column to open the role page.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>In the row of controls at the top of the page, click <span class="bold">Set Approval Options</span>.</p>
+</li>
+<li>
+<p>In the dialog box, select <span class="bold">Deactivate Approval</span> and click <span class="bold">Submit</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">x</span> to close the dialog box.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<div id="IAMSA123" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref12"></a>
+<h4 class="sect3"><span class="secnum">4.3.4</span> Approve or reject access requests</h4>
+<p>Users who have the Approver role can see and approve or reject access requests. These requests are created when:</p>
+<ul>
+<li>
+<p>A delegated administrator assigns a role to a user if approval is active for the role.</p>
+</li>
+<li>
+<p>A user submits a request through self-service registration. See <a href="#BABGFCDA">Set up self-service registration</a> for details.</p>
+</li>
+</ul>
+<div id="IAMSA141" class="sect4"><a id="sthref13"></a>
+<h5 class="sect4"><span class="secnum">4.3.4.1</span> Customize columns on the Pending Approvals page</h5>
+<p>The information that is displayed on this page by default appears to be the identical for all requests, making it difficult to tell requests apart. We recommend that you customize the columns on the Pending Approvals page to include additional user identification and other information you need so you can decide if you want to approve or reject a request.</p>
+<p>You can create your own custom view for the Pending Approvals page by specifying the columns you want to see in it.</p>
+<ol>
+<li>
+<p>Under the <span class="bold">Requests</span> menu on the left, click <span class="bold">Pending Approvals</span>.</p>
+</li>
+<li>
+<p>On the Pending Approvals page, click the <span class="bold">Add View</span> icon <img width="18" height="19" src="img/image004.gif" alt="green plus icon" /> on the toolbar.</p>
+</li>
+<li>
+<p>On the <span class="bold">Definition</span> tab, edit the <span class="bold">Name</span> field to give your view a name.</p>
+</li>
+<li>
+<p>Select the task types that appear in your view:</p>
+<ol>
+<li>
+<p>To the right of Task Type, click the search icon <img width="15" height="16" src="img/image008.gif" alt="magnifying glass icon" />.</p>
+</li>
+<li>
+<p>Holding down the <span class="bold">Ctrl</span> key, select <span class="bold">RoleLevelApprovalFlow</span> and <span class="bold">RoleLevelApprovalFlowNoMail</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Select the columns that appear in your view:</p>
+<ol>
+<li>
+<p>Select the <span class="bold">Display</span> tab.</p>
+</li>
+<li>
+<p>Move columns from the <span class="bold">Available</span> list to the <span class="bold">Selected</span> list to add them to your view.</p>
+<p>Suggested columns:</p>
+<ul>
+<li>
+<p><span class="bold">Title</span>: Contains the link to the Request Details page.</p>
+</li>
+<li>
+<p><span class="bold">Requester</span>: Displays the requesting user's full name, including the ShortOrgId.</p>
+</li>
+<li>
+<p><span class="bold">RequesterDisplayName</span>: Shows the requesting user's display name.</p>
+</li>
+<li>
+<p><span class="bold">RequestID</span>: OHSIAMS unique identifier for the access request.</p>
+</li>
+<li>
+<p><span class="bold">Acquired By</span>: Shows the display name of the Approver who claimed the request, useful if there are multiple users with the Approver role in your organization.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+</ol>
+</li>
+</ol>
+<p>Your new view is available from the <span class="bold">Views</span> menu, under <span class="bold">My Views</span>. This view is only visible to you, other users can't see it.</p>
+</div>
+<!-- class="sect4" -->
+<div id="IAMSA143" class="sect4"><a id="sthref14"></a>
+<h5 class="sect4"><span class="secnum">4.3.4.2</span> Approve or reject a pending request</h5>
+<p>Approving a request grants the requested role to the target user.</p>
+<ol>
+<li>
+<p>Under the <span class="bold">Requests</span> menu on the left, click <span class="bold">Pending Approvals</span>.</p>
+</li>
+<li>
+<p>If you have a custom view, select it under <span class="bold">My Views</span> on the left.</p>
+</li>
+<li>
+<p>If multiple users in your organization have the Approver role, you must claim a pending request before you can approve or reject it. Otherwise skip this step.</p>
+<ol>
+<li>
+<p>Under the <span class="bold">Requests</span> menu on the left, click <span class="bold">Pending Approvals</span>.</p>
+</li>
+<li>
+<p>If you have a custom view, select it under <span class="bold">My Views</span> on the left.</p>
+</li>
+<li>
+<p>Highlight the row of the request.</p>
+</li>
+<li>
+<p>From the <span class="bold">Actions</span> list at the top of the page, select <span class="bold">Claim</span>.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Double-click the row of the request.</p>
+</li>
+<li>
+<p>Add a comment (optional to approve, but required to reject):</p>
+<ol>
+<li>
+<p>Select the <span class="bold">Approval</span> tab.</p>
+</li>
+<li>
+<p>In the upper right of the Comments text box, click <span class="bold">Create</span>.</p>
+</li>
+<li>
+<p>Type your comment and click <span class="bold">OK</span>.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>In the top right of the page, click <span class="bold">Approve</span> or <span class="bold">Reject</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect4" --></div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BABGFCDA"></a>
+<div id="IAMSA120" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">4.4</span> Set up self-service registration</h3>
+<p>Self-service registration is a convenient way to provide multiple users with the ability to request and gain access to new resources, such as a new study or a new application instance.</p>
+<div id="IAMSA122" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref15"></a>
+<h4 class="sect3"><span class="secnum">4.4.1</span> Activate self-service registration</h4>
+<p>When self-service registration is active for a role, unauthorized users who navigate to the application or study that is associated with the role can submit an access request.</p>
+<ol>
+<li>
+<p>Open the role page.</p>
+<ol>
+<li>
+<p>Under the <span class="bold">Administration</span> menu on the left, click <span class="bold">Roles</span>.</p>
+</li>
+<li>
+<p>In the Search section, for <span class="bold">Display Name</span>:</p>
+<ul>
+<li>
+<p>From the list, select <span class="bold">Equals</span>.</p>
+</li>
+<li>
+<p>In the field, type the role name, without the ShortOrgId.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Search</span>.</p>
+</li>
+<li>
+<p>In the Search Results, click the link in the <span class="bold">Display Name</span> column to open the role page.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>If you want users' access requests to be reviewed and approved before granting the role, activate approval for this role. Approval is inactive by default. See <a href="#BABJCHEF">Activate approval for a role</a> for instructions.</p>
+<p>If you want all requests to be automatically approved, skip this step. If approval is already active for the target role and you don't want to use it, you can deactivate it. See <a href="#BABCIIIJ">Deactivate approval</a> for details.</p>
+</li>
+<li>
+<p>In the row of icons near the top of the page, click <span class="bold">Set Unauthorized Access Page</span>.</p>
+</li>
+<li>
+<p>Select <span class="bold">Authorization Request Page</span> and click <span class="bold">Submit</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">x</span> to close the dialog box.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<div id="IAMSA144" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref16"></a>
+<h4 class="sect3"><span class="secnum">4.4.2</span> Deactivate self-service registration</h4>
+<p>To deactivate self-service registration, set the unauthorized access page to something other than Authorization Request Page. For details, see <a href="#BABIDDEA">Set the unauthorized access page for an application or study</a>.</p>
+<p>Also review the current approval setting for the role to make sure it is set as required. See <a href="#BABJBDBG">Set up approval for a role</a> for details.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<div id="IAMSA128" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref17"></a>
+<h3 class="sect2"><span class="secnum">4.5</span> Grant external access to company applications or studies</h3>
+<p>Access to your company resources is controlled through organization-specific roles. Roles that correspond to your organization's applications or studies are only visible to users within your organization. If you need to make a resource available to users from other organizations&mdash;for Oracle employees to provide assistance, for example&mdash;you can publish the role externally so that it can be assigned to users outside of your organization. These users are called <span class="italic">external members</span> in relation to the role.</p>
+<div id="IAMSA129" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref18"></a>
+<h4 class="sect3"><span class="secnum">4.5.1</span> Allow another organization to view and assign one of your organization's roles</h4>
+<p>After you make a role visible to an external organization, delegated administrators for the external organization can see the role and can assign it to users in their organization.</p>
+<div class="infoboxnotewarn">
+<p class="notep1">Warning:</p>
+<p class="warnsp">You cannot undo this operation by yourself. To remove a role from an external organization, you must submit a request to Oracle Support.</p>
+</div>
+<ol>
+<li>
+<p>Open the role page.</p>
+<ol>
+<li>
+<p>Under the <span class="bold">Administration</span> menu on the left, click <span class="bold">Roles</span>.</p>
+</li>
+<li>
+<p>In the Search section, for <span class="bold">Display Name</span>:</p>
+<ul>
+<li>
+<p>From the list, select <span class="bold">Equals</span>.</p>
+</li>
+<li>
+<p>In the field, type the role name, without the ShortOrgId.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Search</span>.</p>
+</li>
+<li>
+<p>In the Search Results, click the link in the <span class="bold">Display Name</span> column to open the role page.</p>
+</li>
+</ol>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+We recommend that you make sure that approval is active for this role before making it available to external organizations. That way, when someone wants to assign the role to one of their users, this will create a request that must be approved by your organization to assign the role. See <a href="#BABJCHEF">Activate approval for a role</a> for details.</div>
+</li>
+<li>
+<p>In the row of controls at the top of the role page, click <span class="bold">Publish Role to External Organization</span>.</p>
+</li>
+<li>
+<p>Select the checkboxes for the organizations to which you want to make the role available.</p>
+</li>
+<li>
+<p>Click <span class="bold">Submit</span>. A confirmation message appears at the bottom of the dialog box.</p>
+</li>
+<li>
+<p>Click <span class="bold">x</span> to close the dialog box.</p>
+</li>
+</ol>
+<p>After the role is published, notify your point of contact in the external organization that the role is visible and that their delegated administrator can assign it to users, as needed.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If self-service registration is active for this role, users from the external organization can request access by going to your company link for the application or study. For details, see <a href="#BABGFCDA">Set up self-service registration</a>.</div>
+<p>If approval is active for the role, you must approve the request to grant the role to the external user. If approval is not active, the role is granted automatically when the external delegated administrator assigns it to their users. See <a href="#BABJCHEF">Activate approval for a role</a> for details.</p>
+</div>
+<!-- class="sect3" -->
+<div id="IAMSA130" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref19"></a>
+<h4 class="sect3"><span class="secnum">4.5.2</span> View and remove external member access to a role</h4>
+<p>To view external members for a role that was published externally and remove the role from user accounts that belong to external organizations:</p>
+<ol>
+<li>
+<p>Open the role page.</p>
+<ol>
+<li>
+<p>Under the <span class="bold">Administration</span> menu on the left, click <span class="bold">Roles</span>.</p>
+</li>
+<li>
+<p>In the Search section, for <span class="bold">Display Name</span>:</p>
+<ul>
+<li>
+<p>From the list, select <span class="bold">Equals</span>.</p>
+</li>
+<li>
+<p>In the field, type the role name, without the ShortOrgId.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Search</span>.</p>
+</li>
+<li>
+<p>In the Search Results, click the link in the <span class="bold">Display Name</span> column to open the role page.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Select the <span class="bold">Members</span> tab.</p>
+</li>
+<li>
+<p>In the row of controls at the top of the tab, click <span class="bold">External Members</span>.</p>
+<p>The External Members dialog box lists all users from external organizations to which the role is assigned.</p>
+</li>
+<li>
+<p>Select the checkboxes for those users that you want to remove and click <span class="bold">Remove</span>.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+This removes the role from external members, but the role continues to be visible to the external organization and can still be assigned to their users. To remove the role from the external organization, submit a request to Oracle Support.</div>
+</li>
+<li>
+<p>Click <span class="bold">x</span> to close the dialog box.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BABGCBDE"></a>
+<div id="IAMSA131" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">5</span> Perform user operations in bulk</h2>
+<p>If you need to create or terminate multiple users and grant or remove roles for multiple users, use the Bulk Import feature to upload all user operations using a spreadsheet and the system executes them for you.</p>
+<p>During a bulk import, you can do any or all of the following:</p>
+<ul>
+<li>
+<p>Create users.</p>
+</li>
+<li>
+<p>Authorize users (assign roles), including new users created in the same file.</p>
+</li>
+<li>
+<p>Deauthorize users (remove roles).</p>
+</li>
+<li>
+<p>Disable (terminate) users, including users deauthorized in the same file.</p>
+</li>
+</ul>
+<p class="subhead2"><a id="IAMSA132"></a>Use Bulk Import</p>
+<ol>
+<li>
+<p>If necessary, download the bulk import file template. See <a href="#BABGFFAJ">Get the template</a> for details.</p>
+</li>
+<li>
+<p>Create a bulk import file. See <a href="#BABICEHD">Add operations to the template</a> and <a href="#BABHGECA">Check for errors</a> for details.</p>
+</li>
+<li>
+<p>Import data. See <a href="#BABHBGBJ">Import data</a> for details.</p>
+</li>
+</ol>
+<a id="BABGFFAJ"></a>
+<div id="IAMSA133" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">5.1</span> Get the template</h3>
+<p>A spreadsheet template for the bulk import file is available in Oracle Identity Self Service. You can download it and reuse it as necessary to create bulk import files.</p>
+<p>To download the template:</p>
+<ol>
+<li>
+<p>Under the <span class="bold">Administration</span> menu on the left, click <span class="bold">Bulk Import</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Import a File</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Help</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Download Sample File</span> to download and save the template file locally.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BABICEHD"></a>
+<div id="IAMSA134" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">5.2</span> Add operations to the template</h3>
+<p>Add the details for the user operations you want to execute to a CSV or TXT file.</p>
+<ol>
+<li>
+<p>Create a copy of the template file or of a previous import file and rename it for the current import. See <a href="#BABGFFAJ">Get the template</a> or <a href="#BABHAEII">Review and reuse previous import files</a> for details.</p>
+</li>
+<li>
+<p>Open the file using Microsoft Excel or a text editor, such as Notepad.</p>
+</li>
+<li>
+<p>Enter data using one row for each command, as follows:</p>
+<ul>
+<li>
+<p>For each row, add the required data, as expected for each type of operation.</p>
+</li>
+<li>
+<p>If using the template, replace the placeholder text (surrounded with angled brackets) with values for the target user operation.</p>
+</li>
+<li>
+<p>Details for some placeholders:</p>
+<ul>
+<li>
+<p><code dir="ltr">&lt;organization id&gt;</code>: Your company ShortOrgId.</p>
+</li>
+<li>
+<p><code dir="ltr">&lt;user login&gt;</code>: Name with which the user logs in, without the ShortOrgId.</p>
+</li>
+<li>
+<p><code dir="ltr">&lt;email id&gt;</code>: Email address associated with the target account.</p>
+</li>
+<li>
+<p><code dir="ltr">&lt;role name&gt;</code>: The name of the role you are granting or removing, including the ShortOrgId as a prefix. For example, <code dir="ltr">mypharma.Approver</code>.</p>
+</li>
+<li>
+<p><code dir="ltr">&lt;middle name&gt;</code>: User's middle name, optional. If you do not supply a middle name leave the cell in the spreadsheet blank (or, if using a text editor, delete the placeholder but leave the comma).</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>For further details on correctly filling in the import file, see <a href="#BABHGECA">Check for errors</a>.</p>
+</li>
+<li>
+<p>Save the file in CSV or TXT format.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BABHGECA"></a>
+<div id="IAMSA135" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">5.3</span> Check for errors</h3>
+<p>Review the file to make sure that the format and content are correct. If a command does not pass validation, it will not execute.</p>
+<p>Hints to prevent validation errors:</p>
+<ul>
+<li>
+<p>The file must not include angle brackets (&lt;&gt;). Replace the angle brackets and text in the template file with your data.</p>
+</li>
+<li>
+<p>Each operation description must begin on a new line and start with the command name.</p>
+</li>
+<li>
+<p>There should be no spaces before or after values.</p>
+</li>
+<li>
+<p>If you use a text editor, check that:</p>
+<ul>
+<li>
+<p>All values for an operation are on the same line.</p>
+</li>
+<li>
+<p>There are no spaces between a value and the comma before or after it.</p>
+</li>
+<li>
+<p>Each value is followed by a comma, except for the final value in a row.</p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="BABHBGBJ"></a>
+<div id="IAMSA136" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">5.4</span> Import data</h3>
+<p>When your bulk import file is ready, upload it. The system reads the commands and executes them.</p>
+<ol>
+<li>
+<p>Under the <span class="bold">Administration</span> menu on the left, click <span class="bold">Bulk Import</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Import a File</span>.</p>
+</li>
+<li>
+<p>On the Upload File page, click <span class="bold">Browse</span>.</p>
+</li>
+<li>
+<p>Navigate to your bulk import file, select it, and click <span class="bold">Open</span>.</p>
+<p>The file name appears in the <span class="bold">Select a file</span> field.</p>
+</li>
+<li>
+<p>Click <span class="bold">Upload</span>.</p>
+<p>After the file is uploaded, the Confirm Data to import page opens, showing a preview of the uploaded commands.</p>
+</li>
+<li>
+<p>Review the commands for accuracy.</p>
+<p>If the <span class="bold">Import</span> button is inactive, it means that one or more commands are not valid. In this case:</p>
+<ol>
+<li>
+<p>Identify the error: A red X icon <img width="15" height="15" src="img/image006.gif" alt="red X icon" /> in the <span class="bold">Status</span> column indicates that the operation is not valid. Check the <span class="bold">Message</span> column for information about the error.</p>
+</li>
+<li>
+<p>Correct the errors in your bulk import file. Work with Oracle Support, if necessary, to correct the errors.</p>
+</li>
+<li>
+<p>Restart the process to upload the corrected file.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>If the commands are correct, click <span class="bold">Import</span>.</p>
+</li>
+<li>
+<p>On the Result Details page, review the <span class="bold">Status</span> column for all entries:</p>
+<ul>
+<li>
+<p>A green checkmark <img width="16" height="16" src="img/image007.gif" alt="green checkmark icon" /> appears for successful operations.</p>
+</li>
+<li>
+<p>A red X <img width="15" height="15" src="img/image006.gif" alt="red X icon" /> appears for operations that were not valid and were not executed. Check the <span class="bold">Message</span> column for details about the error. Hold your cursor over a cell to see the full message.</p>
+<p>You can also download the processed import file to view the full text of all messages. See <a href="#BABHAEII">Review and reuse previous import files</a> for details.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>To complete the operations that failed to execute:</p>
+<ul>
+<li>
+<p>If only a few operations failed, manually perform the remaining operations.</p>
+</li>
+<li>
+<p>If a large number of operations failed, resubmit the bulk import file with only those operations that failed, after correcting the errors. See <a href="#BABHGECA">Section 5.3, "Check for errors"</a> for additional information or contact Oracle Support for assistance.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="BABHAEII"></a>
+<div id="IAMSA137" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">5.5</span> Review and reuse previous import files</h3>
+<p>You can review all previous imports for your organization and download the bulk import file that was used.</p>
+<ol>
+<li>
+<p>Under the <span class="bold">Administration</span> menu on the left, click <span class="bold">Bulk Import</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">View Imported Files</span>.</p>
+</li>
+<li>
+<p>In the <span class="bold">File Name</span> column, click the item you want to review.</p>
+<p>The Result Data page opens, showing the import details.</p>
+</li>
+<li>
+<p>To download the file, click <span class="bold">Export</span> and save it locally.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<div id="IAMSA138" class="sect1"><a id="sthref20"></a>
+<h2 class="sect1"><span class="secnum">6</span> Documentation Accessibility</h2>
+<p>For information about Oracle's commitment to accessibility, visit the Oracle Accessibility Program website at <code dir="ltr"><a href="http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=docacc">http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=docacc</a></code>.</p>
+<p class="subhead2"><a id="sthref21"></a>Access to Oracle Support</p>
+<p>Oracle customers that have purchased support have access to electronic support through My Oracle Support. For information, visit <code dir="ltr"><a href="http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=info">http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=info</a></code> or visit <code dir="ltr"><a href="http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=trs">http://www.oracle.com/pls/topic/lookup?ctx=acc&amp;id=trs</a></code> if you are hearing impaired.</p>
+</div>
+<!-- class="sect1" -->
+<a id="sthref22"></a>
+<hr />
+<p>Oracle Health Sciences Identity and Access Management Service Administrator Guide, Release 1.4.2</p>
+<p>E95436-01</p>
+<p>Copyright &copy; 2017, 2018,&nbsp;Oracle and/or its affiliates. All rights reserved.</p>
+<p>This software and related documentation are provided under a license agreement containing restrictions on use and disclosure and are protected by intellectual property laws. Except as expressly permitted in your license agreement or allowed by law, you may not use, copy, reproduce, translate, broadcast, modify, license, transmit, distribute, exhibit, perform, publish, or display any part, in any form, or by any means. Reverse engineering, disassembly, or decompilation of this software, unless required by law for interoperability, is prohibited.</p>
+<p>The information contained herein is subject to change without notice and is not warranted to be error-free. If you find any errors, please report them to us in writing.</p>
+<p>If this is software or related documentation that is delivered to the U.S. Government or anyone licensing it on behalf of the U.S. Government, then the following notice is applicable:</p>
+<p>U.S. GOVERNMENT END USERS: Oracle programs, including any operating system, integrated software, any programs installed on the hardware, and/or documentation, delivered to U.S. Government end users are "commercial computer software" pursuant to the applicable Federal Acquisition Regulation and agency-specific supplemental regulations. As such, use, duplication, disclosure, modification, and adaptation of the programs, including any operating system, integrated software, any programs installed on the hardware, and/or documentation, shall be subject to license terms and license restrictions applicable to the programs. No other rights are granted to the U.S. Government.</p>
+<p>This software or hardware is developed for general use in a variety of information management applications. It is not developed or intended for use in any inherently dangerous applications, including applications that may create a risk of personal injury. If you use this software or hardware in dangerous applications, then you shall be responsible to take all appropriate fail-safe, backup, redundancy, and other measures to ensure its safe use. Oracle Corporation and its affiliates disclaim any liability for any damages caused by use of this software or hardware in dangerous applications.</p>
+<p>Oracle and Java are registered trademarks of Oracle and/or its affiliates. Other names may be trademarks of their respective owners.</p>
+<p>Intel and Intel Xeon are trademarks or registered trademarks of Intel Corporation. All SPARC trademarks are used under license and are trademarks or registered trademarks of SPARC International, Inc. AMD, Opteron, the AMD logo, and the AMD Opteron logo are trademarks or registered trademarks of Advanced Micro Devices. UNIX is a registered trademark of The Open Group.</p>
+<p>This software or hardware and documentation may provide access to or information about content, products, and services from third parties. Oracle Corporation and its affiliates are not responsible for and expressly disclaim all warranties of any kind with respect to third-party content, products, and services unless otherwise set forth in an applicable agreement between you and Oracle. Oracle Corporation and its affiliates will not be responsible for any loss, costs, or damages incurred due to your access to or use of third-party content, products, or services, except as set forth in an applicable agreement between you and Oracle.</p>
+</div>
+<!-- class="letterstyle" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment1">
+<tr>
+<td class="cellalignment7">&nbsp;</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2017, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment9">
+<table class="cellalignment4">
+<tr>
+<td class="cellalignment5"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment5"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment5"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment5"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

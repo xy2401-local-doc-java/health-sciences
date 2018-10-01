@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Quick Study Setup</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Get ready for study verification or study go live."/>   
+
+        <script src="common/js/lib/jquery.min.js"></script>
+        <script src="common/js/lib/jquery-ui.min.js"></script>
+
+        <script src="common/js/lib/TweenMax.min.js"></script>
+        <script src="common/js/lib/jquery.gsap.min.js"></script>
+        <script src="common/js/lib/CSSPlugin.min.js"></script> 
+        <script src="common/js/lib/ScrollMagic.min.js"></script>
+        <!----- <script src="common/js/lib/animation.gsap.js"></script> ------>
+        <script src="common/js/lib/jquery.ScrollMagic.js"></script>
+        <script src="common/js/lib/debug.addIndicators.min.js"></script>
+
+        <link href="common/js/lib/jquery-ui.css" rel="stylesheet" type="text/css">
+
+        <link href="common/css/scrolling_gs.css" rel="stylesheet" type="text/css" id="StyleSheet">
+        <link href="common/css/popup.css" rel="stylesheet" type="text/css">
+
+        <script src="common/js/scrolling.js"></script>
+
+        <style type="text/css" media="print">
+            BODY {display:none;visibility:hidden;}
+        </style>
+
+        <script>
+            var mode = "";
+            $(window).on("resize", function () {
+                if ($(window).width() > 1000) {
+                    //Desktop mode
+                    mode = setMode(mode, "DESKTOP", function () {
+                        $("#StyleSheet").attr("href", "common/css/scrolling_gs.css");
+                        $(".phone").hide();
+                        $(".tablet").hide();
+                        $(".desktop").show();
+                    });
+                } else if ($(window).width() > 700) {
+                    //portrait mode
+                    mode = setMode(mode, "TAB", function () {
+                        $("#StyleSheet").attr("href", "common/css/scrolling-tab_gs.css");
+                        $(".phone").hide();
+                        $(".desktop").hide();
+                        $(".tablet").show();
+                    });
+                } else {
+                    //Phone mode
+                    mode = setMode(mode, "PHONE", function () {
+                        $("#StyleSheet").attr("href", "common/css/scrolling-phone_gs.css");
+                        $(".tablet").hide();
+                        $(".desktop").hide();
+                        $(".phone").show();
+                    });
+                }
+            });
+            $(window).trigger("resize");
+            function setMode(m1, m2, callback) {
+                if (m1 !== m2) {
+                    callback();
+                }
+                return m2;
+            }
+        </script>
+
+        <!-- Version: August 2017 -->
+
+    <script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+    <body>
+
+    <logo>
+        <img src="common/images/o-redbadge-digital-master_HS.png" style="max-width: 175px;">
+    </logo>
+
+    <header id="side-header">
+        <div class="h0" id="bigTitle">Clinical One</div>
+        <h1 id="title-trigger" >Quick Study Setup</h1>
+    </header>
+
+<div class="sidebargrey"></div>
+        
+    <nav>
+        <div class="displayPopup" style= "max-width:150px; height:auto;" title="Overview" data-popup="overview">
+            <p><a href="#overview" style="text-decoration: none; color: white;">Overview</a></p>
+        </div>
+    </nav>
+
+	<nav2>
+	<p><a href="Quick_Study_Setup.pdf" target="_blank">Download PDF</a>
+	</p>
+	</nav2>
+	
+    <article>
+		
+        <section>
+			
+			<div class="getstarted">
+				<p style="padding-left: 25px;"><a href="https://docs.oracle.com/health-sciences/clinical-one/index.html" alt="Click to return to the Oracle Help Center" title="Click to return to the Oracle Help Center" style="text-decoration: none; color: #1f92ac;" target=_blank><img src="common/images/check.png" alt="check mark" style="vertical-align: text-top; transform: scaleX(-1); max-height: 20px;"> Back to Oracle Help Center</a></p>
+				<br>
+				<p style="margin-left: 50px;">With the exception of the one-time setup tasks, you do the other tasks to:</p><br>
+				<ul style="margin-left: 100px; margin-right:100px;">
+					<li>Prepare for <strong>study verification</strong>: Perform these tasks for <strong>Testing mode</strong> when the study version is in the <strong>Testing container</strong>.</li><br>
+					<li>Prepare for <strong> study go-live</strong>: Perform these tasks for <strong>Production and Training modes</strong> when the study version is in the <strong>Approved container</strong>.</li>
+				</ul>
+				<br>
+
+			</div>
+            <div class="overview">
+                <h3>User accounts, depots, and sites (one-time setup for all modes)</h3>
+                <ul class="breadcrumb">
+					<li><a href="#step1"><b>1. </b>Add users at the sponsor or CRO</a></li>
+					<li><a href="#step2"><b>2. </b>Add depots</a></li>
+					<li><a href="#step3"><b>3. </b>Add sites</a></li>
+					<li><a href="#step4"><b>4. </b>Add site and depot users</a></li>
+                </ul>
+                <br>
+				<h3>Study settings</h3>
+                <ul class="breadcrumb">
+					<li><a href="#step5"><b>5. </b>Specify subject settings</a></li>
+                    <li><a href="#step6"><b>6. </b>Specify supply settings</a></li>
+                    <li><a href="#step7"><b>7. </b>Create a randomization list and kit list</a></li>
+                    <li><a href="#step8"><b>8. </b>Create lots to manage kit expiration dates</a></li>
+					<li><a href="#step9"><b>9. </b>Create label groups</a></li>
+                </ul>
+                <br>
+                <h3>Final steps</h3>
+                <ul class="breadcrumb">
+                    <li><a href="#step10"><b>10. </b>Activate depots</a></li>
+                    <li><a href="#step11"><b>11. </b>Release kits to depots</a></li>
+					<li><a href="#step12"><b>12. </b>Assign a study version and resupply strategy to sites</a></li>
+                    <li><a href="#step13"><b>13. </b>Activate sites</a></li>
+                </ul>
+                <br>
+            </div>
+             
+        </section>
+
+	    <section id="navTrigger" class="anim">
+            <H2 data-overview="step1Overview">User accounts, depots, and sites (one-time setup for all modes)</H2>		
+
+            <div class="white_box" id="step1">
+                <h4><span class="lrg_number_circle">1</span>Add users at the sponsor or CRO (done by several users)</h4><br>
+                <div><img src="images/Add_users.png" class="img_right displayPopup" style="" title="Users tab" alt="Users tab" data-popup="popup1"></div>
+                <p  style="margin-left: 0px;">Users' roles determine the <a href="https://docs.oracle.com/health-sciences/clinical-one/sponsor-cro-information/217353.htm" target="_blank" alt="Open the documentation." title="Open the documentation.">reports</a> and <a href="https://docs.oracle.com/health-sciences/clinical-one/sponsor-cro-information/217354.htm" target="_blank" alt="Open the documentation." title="Open the documentation."> notifications</a> they see.</p><br>
+				<div class="check_circle">1.</div>
+                <p>On the Home page, click study settings <img src="images/Settings_icon.gif" style="max-height: 20px; vertical-align: text-top;" title="Study settings icon" alt="Study settings icon, a cog"> and select <strong>Open Settings</strong>.</p><br>
+                <div class="check_circle">2.</div>
+                <p>Click the <strong>Users</strong> tab.</p><br>
+                <div class="check_circle" style="height: 15px;">3.</div>
+                <p>Click <strong>Create User</strong> and fill in the fields, then add a:</p>
+				<div class="check_circle" style="height: 15px; margin-left: 50px; margin-bottom: 0px;">a.</div>				
+                <p><a href="https://docs.oracle.com/health-sciences/clinical-one/sponsor-cro-information/217317.htm" target="_blank" alt="Open the documentation." title="Open the documentation.">site and user manager</a> (done by the study creator or a global user manager).</p>
+				<div class="check_circle" style="height: 15px; margin-left: 50px; margin-bottom: 0px;">b.</div>
+                <p><a href="https://docs.oracle.com/health-sciences/clinical-one/sponsor-cro-information/217318.htm" target="_blank" alt="Open the documentation." title="Open the documentation.">clinical supply manager</a> (done by the site and user manager).</p>
+				<div class="check_circle" style="height: 15px; margin-left: 50px; margin-bottom: 0px;">c.</div>
+				<p><a href="https://docs.oracle.com/health-sciences/clinical-one/sponsor-cro-information/217775.htm" target="_blank" alt="Open the documentation." title="Open the documentation.">randomization manager</a> (done by the site and user manager).</p>		
+				<div class="check_circle" style="height: 15px; margin-left: 50px; margin-bottom: 0px;">d.</div>
+              <p><a href="https://docs.oracle.com/health-sciences/clinical-one/sponsor-cro-information/217321.htm" target="_blank" alt="Open the documentation." title="Open the documentation.">study designer</a> (done by the global user manager who is also a site and user manager).</p>	
+				<div class="check_circle" style="height: 15px; margin-left: 50px; margin-bottom: 0px;">e.</div>
+                <p><a href="https://docs.oracle.com/health-sciences/clinical-one/sponsor-cro-information/217322.htm" target="_blank" alt="Open the documentation." title="Open the documentation.">study manager</a> (done by the site and user manager).</p>
+				<div class="check_circle" style="height: 15px; margin-left: 50px; margin-bottom: 0px;">f.</div>
+               <p><a href="https://docs.oracle.com/health-sciences/clinical-one/sponsor-cro-information/217323.htm" target="_blank" alt="Open the documentation." title="Open the documentation.">clinical research associate (CRA)</a> (done by the site and user manager).</p>		
+				<div class="check_circle" style="height: 15px; margin-left: 50px; margin-bottom: 0px;">g.</div>
+               <p><a href="https://docs.oracle.com/health-sciences/clinical-one/sponsor-cro-information/217324.htm" target="_blank" alt="Open the documentation." title="Open the documentation.">data manager</a> (done by the site and user manager).</p>			
+				<div class="check_circle" style="height: 15px; margin-left: 50px; margin-bottom: 0px;">h.</div>
+                <p><a href="https://docs.oracle.com/health-sciences/clinical-one/sponsor-cro-information/217325.htm" target="_blank" alt="Open the documentation." title="Open the documentation.">safety monitor</a> (done by the site and user manager).</p><br>
+              
+                 <p style="font-size: 10pt;"><a href="http://apexapps.oracle.com/pls/apex/f?p=44785:265:0::::P265_CONTENT_ID:19016" target="_blank"><img src="common/images/youtube_blue.png" alt="YouTube logo" style="vertical-align: baseline;"> Watch training</a>.</p>
+            </div>
+			
+		
+			<div class="white_box" id="step2">
+                <h4><span class="lrg_number_circle">2</span>Add depots (done by clinical supply manager)</h4><br>
+                <div><img src="images/7_Add depots.png" class="img_right displayPopup" title="Depots tab" alt="Depots tab" data-popup="popup6"></div>
+				<p style="margin-left: 0px;">You typically create all depots when you're preparing for study verification, though you can create Production and Training depots later when you’re preparing for study go-live.</p><br>
+                <div class="check_circle">1.</div>
+                <p>Click the <strong>Depots</strong> tab.</p><br>
+                <div class="check_circle">2.</div>
+                <p>On the left, select a mode, and create depots for all modes.</p><br>
+				<p><strong>Tip:</strong> If you're getting the study ready for verification in Testing mode, you can activate your Testing depots now.</p><br>
+				<p style="font-size: 10pt;"><a href="https://docs.oracle.com/health-sciences/clinical-one/sponsor-cro-information/207385.htm" target="_blank">Read step-by-step help</a> or <a href="https://apexapps.oracle.com/pls/apex/f?p=44785:265:0::::P265_CONTENT_ID:19019" target="_blank"><img src="common/images/youtube_blue.png" alt="YouTube logo" style="vertical-align: baseline;"> watch training</a>.</p><br>
+            </div>
+			
+			<div class="white_box" id="step3" >
+                <h4><span class="lrg_number_circle">3</span>Add sites (done by site manager)</h4><br>
+                <div><img src="images/8_Add sites.png" class="img_right displayPopup" title="Sites tab" alt="Sites tab" data-popup="popup7"></div>
+				<p style="margin-left:0px;">You typically create all sites when you're preparing for study verification, though you can create Production and Training sites later when you're preparing for study go-live.</p><br>
+                <div class="check_circle">1.</div>
+                <p>Click the <strong>Sites</strong> tab.</p><br>
+                <div class="check_circle">2.</div>
+                <p>On the left, select a mode, and create sites for all modes.</p><br>
+                <p style="font-size: 10pt;"><a href="https://docs.oracle.com/health-sciences/clinical-one/sponsor-cro-information/207376.htm" target="_blank">Read step-by-step help</a> or <a href="https://apexapps.oracle.com/pls/apex/f?p=44785:265:0::::P265_CONTENT_ID:19018" target="_blank"><img src="common/images/youtube_blue.png" alt="YouTube logo" style="vertical-align:baseline"> watch training</a>.</p><br>
+            </div>
+			
+			<div class="white_box" id="step4">
+                <h4><span class="lrg_number_circle">4</span>Add site and depot users (done by site and user manager)</h4><br>
+				<div><img src="images/Add_users.png" class="img_right displayPopup"   title="Users tab" alt="Users tab" data-popup="popup1"></div>
+				<div class="check_circle">1.</div>
+				<p>On the Home page, click study settings <img src="images/Settings_icon.gif" style="max-height: 20px; vertical-align: text-top;" title="Study settings icon" alt="Study settings icon, a cog"> and select <strong>Open Settings</strong>.</p><br>
+                <div class="check_circle">2.</div>
+                <p>Click the <strong>Users</strong> tab.</p><br>
+                <div class="check_circle">3.</div>
+				<p>Add <a href="https://docs.oracle.com/health-sciences/clinical-one/sponsor-cro-information/217786.htm" target="_blank" alt="Open the documentation." title="Open the documentation.">site</a> and <a href="https://docs.oracle.com/health-sciences/clinical-one/sponsor-cro-information/217787.htm" target="_blank" alt="Open the documentation." title="Open the documentation.">depot</a> users.</p><br>			
+				<p style="font-size: 10pt;"><a href="https://apexapps.oracle.com/pls/apex/f?p=44785:265:0::::P265_CONTENT_ID:19016" target="_blank"><img src="common/images/youtube_blue.png" alt="YouTube logo" style="vertical-align:baseline"> Watch training</a>.</p><br>
+            </div>
+			
+			
+			<p style="page-break-after:always;"></p>
+			
+		</section>
+
+			
+		<section id="navTrigger" class="anim">
+            <h2 data-overview="step2Overview">Study settings</h2> 
+			
+			<div class="white_box" id="step5">
+                <h4><span class="lrg_number_circle">5</span>Specify subject settings (done by study manager)</h4><br>
+                <div><img src="images/Specify_subject_settings.png" class="img_right displayPopup"   title="Subject Settings tab" alt="Subject Settings tab" data-popup="popup4"></div>
+				<div class="check_circle">1.</div>
+                <p>On the Home page, click study settings <img src="images/Settings_icon.gif" style="max-height: 20px; vertical-align: text-top;" title="Study settings icon" alt="Study settings icon, a cog"> and select <strong>Open Settings</strong>.</p><br>
+                <div class="check_circle">2.</div>
+                <p>Click the <strong>Subject Settings</strong> tab.</p><br>
+                <div class="check_circle">3.</div>
+                <p><strong>Specify subject settings:</strong> On the left, select a mode, and fill in the fields.</p>
+				<p><strong>Tip:</strong> If the study version is in the Testing container, define settings for Testing. If the study version is in the Approved container, define settings for both Production and Training.</p><br>
+                <p style="font-size: 10pt;">Read step-by-step help for <a href="https://docs.oracle.com/health-sciences/clinical-one/sponsor-cro-information/209753.htm" target="_blank">study verification</a> or <a href="https://docs.oracle.com/health-sciences/clinical-one/sponsor-cro-information/211930.htm" target="_blank">study go-live</a>, or <a href="https://apexapps.oracle.com/pls/apex/f?p=44785:265:0::::P265_CONTENT_ID:19581" target="_blank"><img src="common/images/youtube_blue.png" alt="YouTube logo" style="vertical-align:baseline"> watch training</a>.</p>
+            </div>
+			
+            <div class="white_box" id="step6">
+                <h4><span class="lrg_number_circle">6</span>Specify supply settings, create resupply strategies, and create blinded groups (done by clinical supply manager)</h4><br>
+                <div><img src="images/Specify_supply_settings.png" class="img_right displayPopup" title="Supply Settings tab" alt="Supply Settings tab" data-popup="popup5"></div>
+                <div class="check_circle">1.</div>
+                
+                <p>On the Home page, click study settings <img src="images/Settings_icon.gif" style="max-height: 20px; vertical-align: text-top;" title="Study settings icon" alt="Study settings icon, a cog"> and select <strong>Open Settings</strong>.</p><br>
+				<div class="check_circle">2.</div>
+                <p>Click the <strong>Supply Settings</strong> tab.</p><br>
+                <div class="check_circle">3.</div>
+                <p><strong> Specify supply settings:</strong> On the left, select a mode, and fill in the fields.</p><br>
+				<p><strong>Tip:</strong> If you're working to verify the study in Testing mode, define settings for Testing. If you're preparing to go live with the study in Production mode, define settings for both Production and Training. (We won't keep telling you this, we promise.)</p><br>
+                <p style="font-size: 10pt;">Read step-by-step help for <a href="https://docs.oracle.com/health-sciences/clinical-one/sponsor-cro-information/207395.htm" target="_blank">study verification</a> or <a href="https://docs.oracle.com/health-sciences/clinical-one/sponsor-cro-information/211928.htm" target="_blank">study go-live</a>, or <a href="https://apexapps.oracle.com/pls/apex/f?p=44785:265:0::::P265_CONTENT_ID:19582" target="_blank"><img src="common/images/youtube_blue.png" alt="YouTube logo" style="vertical-align:baseline"> watch training</a>.</p><br>
+			    <div class="check_circle">4.</div>
+                <p><strong>Create resupply strategies:</strong> On the right, select <strong>Min/Max Resupply</strong> or <strong>Predictive Resupply</strong>.</p>
+				<p style="font-size: 10pt;">Read step-by-step help for <a href="https://docs.oracle.com/health-sciences/clinical-one/sponsor-cro-information/210347.htm" target="_blank">study verification</a> or <a href="https://docs.oracle.com/health-sciences/clinical-one/sponsor-cro-information/211916.htm" target="_blank">study go-live</a>, or <a href="https://apexapps.oracle.com/pls/apex/f?p=44785:265:0::::P265_CONTENT_ID:20893" target="_blank"><img src="common/images/youtube_blue.png" alt="YouTube logo" style="vertical-align:baseline"> watch training</a>.</p><br>
+			    <div class="check_circle">5. </div>
+                <p><strong> Create blinded groups:</strong> On the right, select <strong>Blinded Groups</strong>.</p>
+				<p style="font-size: 10pt;">Read step-by-step help for <a href="https://docs.oracle.com/health-sciences/clinical-one/sponsor-cro-information/210349.htm" target="_blank">study verification</a> or <a href="https://docs.oracle.com/health-sciences/clinical-one/sponsor-cro-information/211986.htm" target="_blank">study go-live</a>, or <a href="https://apexapps.oracle.com/pls/apex/f?p=44785:265:0::::P265_CONTENT_ID:19582" target="_blank"><img src="common/images/youtube_blue.png" alt="YouTube logo" style="vertical-align:baseline"> watch training</a>.</p><br>
+            </div>
+			
+			<div class="white_box" id="step7" style="height: 750px;">
+                <h4><span class="lrg_number_circle">7</span>Create a randomization list (done by randomization list manager) and a kit list (done by clinical supply manager)</h4><br>
+                
+                <div style="display: inline-block; float: right;">
+                    <img src="images/Create_randomization_list.png" class="img_right displayPopup" title="Randomizations tab" alt="Randomizations tab" data-popup="popup9A">
+                    
+                    <img src="images/Create_kit_list.png" class="img_right displayPopup" style="clear: both;" title="Kits tab" alt="Kits tab" data-popup="popup9B">
+                 </div>
+                                
+                <div class="check_circle">1.</div>
+                <p>On the Home page, click the pencil button <img src="images/Pencil_icon.gif" style="max-height: 20px; vertical-align: text-top;" title="Pencil icon" alt="Edit study icon, a pencil">.</p><br>
+                <div class="check_circle">2.</div>
+                <p>Click the study version below Testing (for study verification) or the study version below Approved (for study go-live).</p><br>
+				<div class="check_circle">3.</div>
+                <p>Along the top, click <strong>Study Supplies</strong>.</p><br>
+				<div class="check_circle">4.</div>
+				<p><strong>Create a randomization list:</strong> Either upload or generate it.</p>
+				<p style="font-size: 10pt;">Read step-by-step help for <a href="https://docs.oracle.com/health-sciences/clinical-one/sponsor-cro-information/207458.htm" target="_blank">study verification</a> or <a href="https://docs.oracle.com/health-sciences/clinical-one/sponsor-cro-information/211551.htm" target="_blank">study go-live</a>, or <a href="https://apexapps.oracle.com/pls/apex/f?p=44785:265:0::::P265_CONTENT_ID:19584" target="_blank"><img src="common/images/youtube_blue.png" alt="YouTube logo" style="vertical-align: baseline;"> watch training</a>.</p><br>
+				<div class="check_circle">5.</div>
+                <p><strong>Create a kit list:</strong> Click the <strong>Kits</strong> tab, and upload or generate a kit list.</p><br>
+				<p style="font-size: 10pt;">Read step-by-step help for <a href="https://docs.oracle.com/health-sciences/clinical-one/sponsor-cro-information/207464.htm" target="_blank">study verification</a> or <a href="https://docs.oracle.com/health-sciences/clinical-one/sponsor-cro-information/211552.htm" target="_blank">study go-live</a>, or <a href="https://apexapps.oracle.com/pls/apex/f?p=44785:265:0::::P265_CONTENT_ID:19584" target="_blank"><img src="common/images/youtube_blue.png" alt="YouTube logo" style="vertical-align: baseline;"> watch training</a>.</p><br>
+            </div>
+
+            <div class="white_box" id="step8">
+                <h4><span class="lrg_number_circle">8</span>Create lots, assign kits to them, and combine them as needed (done by clinical supply managers)</h4><br>
+                <div><img src="images/Create_lots.png" class="img_right displayPopup" title="Inventory tab" alt="Inventory tab" data-popup="popup10"></div>
+                <div class="check_circle">1.</div>
+                <p>On the Home page, click either the Testing Mode button <img src="images/Beaker_icon.gif" style="max-height: 20px; vertical-align: text-top;" title="Testing mode icon" alt="Testing mode icon, a beaker"> (for study verification) or the name of the study (for study go-live).</p><br>
+                <div class="check_circle">2.</div>
+                <p>Along the top, click <strong>Supplies</strong>.</p><br>
+                <div class="check_circle">3.</div>
+                <p>Click the <strong>Inventory</strong> tab.</p><br>
+				<div class="check_circle">4.</div>
+                <p><strong>Create lots:</strong> In <strong>Lots</strong>, on the right, create manufacturing lots (and blinded lots, if needed).</p>
+				<p style="font-size: 10pt;">Read step-by-step help for <a href="https://docs.oracle.com/health-sciences/clinical-one/sponsor-cro-information/209182.htm" target="_blank">study verification</a> or <a href="https://docs.oracle.com/health-sciences/clinical-one/sponsor-cro-information/211815.htm" target="_blank">study go-live</a>, or <a href="https://apexapps.oracle.com/pls/apex/f?p=44785:265:0::::P265_CONTENT_ID:19583" target="_blank"><img src="common/images/youtube_blue.png" alt="YouTube logo" style="vertical-align: baseline;"> watch training</a>.</p><br>
+                <div class="check_circle">5.</div>
+                <p><strong>Assign kits to manufacturing lots:</strong> Filter and select kits, and add them to lots.</p>
+				<p style="font-size: 10pt;">Read step-by-step help for <a href="https://docs.oracle.com/health-sciences/clinical-one/sponsor-cro-information/207483.htm" target="_blank">study verification</a> or <a href="https://docs.oracle.com/health-sciences/clinical-one/sponsor-cro-information/211820.htm" target="_blank">study go-live</a>, or <a href="https://apexapps.oracle.com/pls/apex/f?p=44785:265:0::::P265_CONTENT_ID:19583" target="_blank"><img src="common/images/youtube_blue.png" alt="YouTube logo" style="vertical-align: baseline;"> watch training</a>.</p><br>
+				<div class="check_circle">6.</div>
+                <p><strong>If using blinded lots, combine manufacturing lots into blinded lots:</strong> Drag manufacturing lots into blinded lots.</p>
+				<p style="font-size: 10pt;">Read step-by-step help for <a href="https://docs.oracle.com/health-sciences/clinical-one/sponsor-cro-information/210745.htm" target="_blank">study verification</a> or <a href="https://docs.oracle.com/health-sciences/clinical-one/sponsor-cro-information/211825.htm" target="_blank">study go-live</a>, or <a href="https://apexapps.oracle.com/pls/apex/f?p=44785:265:0::::P265_CONTENT_ID:19583" target="_blank"><img src="common/images/youtube_blue.png" alt="YouTube logo" style="vertical-align: baseline;"> watch training</a>.</p><br>
+            </div>
+
+            <div class="white_box" id="step9" style="height:375px;" >
+                <h4><span class="lrg_number_circle">9</span>Create label groups, and assign kits to them (done by clinical supply manager)</h4><br>
+                <div><img src="images/Create_label_groups.png" class="img_right displayPopup"   title="Inventory tab" alt="Inventory tab" data-popup="popup11"></div>
+                <div class="check_circle">1.</div>
+                <p>Stay on the Inventory tab and expand <strong>Label Groups</strong> on the right.</p><br>
+                <div class="check_circle">2.</div>
+                <p><strong>Create label groups:</strong> If the study requires them.</p><br>
+				<div class="check_circle">3.</div>
+                <p><strong>Assign kits to the label groups:</strong> Select a kit type, filter and select kits, and select the label group on the right.</p>
+				<p style="font-size: 10pt;">Read step-by-step help for <a href="https://docs.oracle.com/health-sciences/clinical-one/sponsor-cro-information/210348.htm" target="_blank">study verification</a> or <a href="https://docs.oracle.com/health-sciences/clinical-one/sponsor-cro-information/211810.htm" target="_blank">study go-live</a>, or <a href="https://apexapps.oracle.com/pls/apex/f?p=44785:265:0::::P265_CONTENT_ID:19585" target="_blank"><img src="common/images/youtube_blue.png" alt="YouTube logo" style="vertical-align: baseline;"> watch training</a>.</p><br>
+            </div>
+
+        </section>
+
+        <section id="navTrigger" class="anim">
+            <h2 data-overview="step3Overview">Final steps</h2> 
+        
+		 <div class="white_box" id="step10" style="height:375px;">
+                <h4><span class="lrg_number_circle">10</span>Activate depots (done by clinical supply manager)</h4><br>
+                <div><img src="images/13_Activate depots.png" class="img_right displayPopup" title="Depots tab" alt="Depots tab" data-popup="popup12"></div>
+                <div class="check_circle">1.</div>
+                <p>On the Home page, click study settings <img src="images/Settings_icon.gif" style="width: 25px; vertical-align: text-top;" title="Study settings icon" alt="Study settings icon, a cog">, and select <strong>Open Settings</strong>.</p><br>
+                <div class="check_circle">2.</div>
+                <p>Click the <strong>Depots</strong> tab.</p><br>
+                <div class="check_circle">3.</div>
+                <p>On the left, select a mode, and activate depots for the mode.</p>
+				<p>If you're preparing for study verification, you may have already activated depots for Testing mode.</p><br>
+                <p style="font-size: 10pt;">Read step-by-step help for <a href="https://docs.oracle.com/health-sciences/clinical-one/sponsor-cro-information/211706.htm" target="_blank">study verification</a> or <a href="https://docs.oracle.com/health-sciences/clinical-one/sponsor-cro-information/210604.htm" target="_blank">study go-live</a>, or <a href="https://apexapps.oracle.com/pls/apex/f?p=44785:265:0::::P265_CONTENT_ID:19019" target="_blank"><img src="common/images/youtube_blue.png" alt="YouTube logo" style="vertical-align: baseline;"> watch training</a>.</p>
+            </div>
+
+            <div class="white_box" id="step11">
+                <h4><span class="lrg_number_circle">11</span>Release kits to depots (done by clinical supply manager)</h4><br>
+                <div><img src="images/Release_kits.png" class="img_right displayPopup" title="Inventory tab" alt="Inventory tab" data-popup="popup13"></div>
+                <div class="check_circle">1.</div>
+                <p>On the Home page, click the pencil button <img src="images/Pencil_icon.gif" style="max-width: 25px; vertical-align: text-top;" title="Pencil icon" alt="Edit study icon, a pencil"> for your study.</p><br>
+				<div class="check_circle">2.</div>
+                <p>On the Testing version (for study verification) or the Approved version (for study go-live), click the menu button <img src="images/Menu_icon.gif" valign="center" style="max-width: 10px;" title="Menu icon" alt="Menu icon, three stacked horizontal dashes"> and select <strong>View Study Design</strong>.</p><br>
+				<div class="check_circle">3.</div>
+                <p>Along the top, click <strong>Supplies</strong>, and click the <strong>Inventory</strong> tab.</p><br>
+                <div class="check_circle">4.</div>
+                <p>Click the kit type to release.</p><br>
+                <div class="check_circle">5.</div>
+                <p>Select the kits to release, update the fields in Kit Settings (including changing their statuses to Available), and update the kits.</p>
+				<p style="font-size: 10pt;">Read step-by-step help for <a href="https://docs.oracle.com/health-sciences/clinical-one/sponsor-cro-information/209817.htm" target="_blank">study verification</a> or <a href="https://docs.oracle.com/health-sciences/clinical-one/sponsor-cro-information/211807.htm" target="_blank">study go-live</a>, or <a href="https://apexapps.oracle.com/pls/apex/f?p=44785:265:0::::P265_CONTENT_ID:19586" target="_blank"><img src="common/images/youtube_blue.png" alt="YouTube logo" style="vertical-align: baseline;"> watch training</a>.</p><br>
+            </div>
+			
+			<div class="white_box" id="step12">
+                <h4><span class="lrg_number_circle">12</span>Assign a study version and resupply strategy to each site (done by site manager)</h4><br>
+                <div><img src="images/15_Assign a study version and resupply strategy.png" class="img_right displayPopup" title="Sites tab" alt="Sites tab" data-popup="popup14"></div>
+                <div class="check_circle">1.</div>
+                <p>On the Home page, click study settings <img src="images/Settings_icon.gif" style="max-width: 25px; vertical-align: text-top;" title="Study settings icon" alt="Study settings icon, a cog"> and select <strong>Open Settings</strong>.</p><br>
+                <div class="check_circle">2.</div>
+                <p>Click the <strong>Sites</strong> tab.</p><br>
+                <div class="check_circle">3.</div>
+                <p>On the left, select a mode.</p><br>
+                <div class="check_circle">4.</div>
+                <p><strong>Select a study version for each site:</strong> In the <strong>Study Version</strong> column.</p>
+				<p style="font-size: 10pt;">Read step-by-step help for <a href="https://docs.oracle.com/health-sciences/clinical-one/sponsor-cro-information/212241.htm" target="_blank">study verification</a> or <a href="https://docs.oracle.com/health-sciences/clinical-one/sponsor-cro-information/212245.htm" target="_blank">study go-live</a>, or <a href="https://apexapps.oracle.com/pls/apex/f?p=44785:265:0::::P265_CONTENT_ID:19587" target="_blank"><img src="common/images/youtube_blue.png" alt="YouTube logo" style="vertical-align: baseline;"> watch training</a>.</p><br>
+				<div class="check_circle">5.</div>
+                <p><strong>Select a resupply strategy for each site:</strong> In the <strong>Resupply Strategy</strong> column.</p>
+				<p style="font-size: 10pt;">Read step-by-step help for <a href="https://docs.oracle.com/health-sciences/clinical-one/sponsor-cro-information/211707.htm" target="_blank">study verification</a> or <a href="https://docs.oracle.com/health-sciences/clinical-one/sponsor-cro-information/213265.htm" target="_blank">study go-live</a>, or <a href="https://apexapps.oracle.com/pls/apex/f?p=44785:265:0::::P265_CONTENT_ID:19018" target="_blank"><img src="common/images/youtube_blue.png" alt="YouTube logo" style="vertical-align: baseline;"> watch training</a>.</p><br>
+            </div>
+
+            <div class="white_box" id="step13">
+                <h4><span class="lrg_number_circle">13</span>Activate sites (done by site manager)</h4><br>
+                <div><img src="images/16_Activate sites.png" class="img_right displayPopup"   title="Sites tab" alt="Sites tab" data-popup="popup15"></div>
+				<div><p>This makes the study ready for verification or go-live.</p><br></div>
+                <div class="check_circle">1.</div>
+                <p>On the Home page, click study settings <img src="images/Settings_icon.gif" style="max-width: 25px; vertical-align: text-top;" title="Study settings icon" alt="Study settings icon, a cog"> and select <strong>Open Settings</strong>.</p><br>
+                <div class="check_circle">2.</div>
+                <p>Click the <strong>Sites</strong> tab.</p><br>
+                <div class="check_circle">3.</div>
+                <p>Activate each site that's ready for either study verification or study go-live.</p>
+				<p style="font-size: 10pt;">Read step-by-step help for <a href="https://docs.oracle.com/health-sciences/clinical-one/sponsor-cro-information/211707.htm" target="_blank">study verification</a> or <a href="https://docs.oracle.com/health-sciences/clinical-one/sponsor-cro-information/210185.htm" target="_blank">study go-live</a>, or <a href="https://apexapps.oracle.com/pls/apex/f?p=44785:265:0::::P265_CONTENT_ID:19018" target="_blank"><img src="common/images/youtube_blue.png" alt="YouTube logo" style="vertical-align: baseline;"> watch training</a>.</p><br>
+				
+				<div class="check_circle">4.</div>
+				<p>Having problems in the study? We can help!</p>
+				<p style="font-size: 10pt;">Read troubleshooting tips for <a href="https://docs.oracle.com/health-sciences/clinical-one/sponsor-cro-information/212759.htm" target="_blank">study verification</a> or <a href="https://docs.oracle.com/health-sciences/clinical-one/sponsor-cro-information/213859.htm" target="_blank">study go-live.</a></p><br>
+            </div>
+        </section>
+
+        <!-- DO NOT EDIT -->
+        <section class="anim2">
+            <div class="white_box2">
+                <h4><img src="common/images/green_check.png" valign="center" alt="green checkmark">&nbsp;You're now ready for study verification or study go-live!</h4>
+            </div>
+        </section>
+
+        <p  style="page-break-before:always;"></p> 
+
+        <section class="anim">        
+            <h6>Find out more about <strong>Clinical One</strong></h6>
+            <div class="info_box" >
+
+                <!--
+                Links table - left column: Update the links below with service-specific versions. Note that this column is displayed 
+                over the right column defined below when the viewport size <1000px.
+                -->
+                <div class="bottomTableLeft">
+					<span class="h7" data-highlight="6">Get more information</span>
+                    <p> See <a href="https://docs.oracle.com/health-sciences/clinical-one/index.html" target="_blank"> Oracle Health Sciences Clinical One,</a> and review the books for <a href="https://docs.oracle.com/health-sciences/clinical-one/sponsor-cro-information/index.htm" target="_blank">sponsor users,</a> <a href="https://docs.oracle.com/health-sciences/clinical-one/site-information/index.htm" target="_blank">site users,</a> and <a href="https://docs.oracle.com/health-sciences/clinical-one/depot-information/index.htm" target="_blank">depot users,</a> on the Oracle Help Center.</p>
+                    
+                    <span class="h7" data-highlight="5">Other resources</span>
+                    <p><span data-highlight="4">Read <a href="https://docs.oracle.com/health-sciences/clinical-one/clinicalone-sponsorfaqs.htm" target="_blank">frequently asked questions</a> on the Oracle Help Center.<br>
+					Watch <a href="https://docs.oracle.com/health-sciences/clinical-one/clinicalone-training.htm" target="_blank">short training videos</a> on the Oracle Help Center.</span></p>
+                </div>
+
+                <!--
+                Links table - right column: Update the links below with service-specific versions. Note that this column is displayed 
+                under the left column defined above when the viewport size <1000px.
+                -->
+                <div class="bottomTableRight">
+                    <span class="h7" data-highlight="5">Contact Support</span>
+                    <p><span data-highlight="4">For assistance, contact <a href="https://www.oracle.com/us/support/contact/health-sciences-cloud-support/index.html" target="_blank">Clinical One Cloud Service Support</a>.</span></p>
+                </div>
+				<div class="bottomTableRight">
+					<span class="h7" data-highlight="5">Can't find what you need?</span>
+					<p><span data-highlight="4">Write to us at <a href="mailto:clinical_one_doc_feedback_us_grp@oracle.com?subject=Clinical%20One%20Documentation%20Suggestion">clinical_one_doc_feedback_us_grp@oracle.com</a>.</span></p>
+				</div>
+            </div>
+            <p>&nbsp;</p>
+
+            <!--
+            Footer: Leave the footer section as-is - do not update any links.
+            -->
+            <footer>
+                <div class="footlink"><a href="http://www.oracle.com/corporate/index.html" target="_blank">About Oracle</a> </div>
+                <div class="footlink"><a href="http://www.oracle.com/us/corporate/contact/index.html" target="_blank">Contact Us</a> </div>
+                <div class="footlink"><a href="http://www.oracle.com/us/legal/index.html" target="_blank">Legal Notices</a> </div>
+                <div class="footlink"><a href="http://www.oracle.com/us/legal/terms/index.html" target="_blank">Terms of Use</a> </div>
+                <div class="footlink"><a href="http://www.oracle.com/us/legal/privacy/index.html" target="_blank">Your Privacy Rights</a> </div>
+                <br>
+                <div class="footlink"><a href="http://www.oracle.com/pls/topic/lookup?ctx=cpyr&id=en">Copyright © 2017, Oracle and/or its affiliates. All rights reserved.</a></div>
+            </footer>
+
+
+        </section>
+
+    </article>
+
+
+    <!--
+    Popups: The following sections define the popups to be displayed when the thumbnails are clicked in the main steps 
+    - also the overview summary displayed when the overview tab is clicked.
+    -->
+
+    <!--
+    Overview popup: Update the titles of the stages and steps in this section. If adding steps or stages, you must adhere to the 
+    step numbering in the jumpTo() calls.
+    -->
+    <div class="overview" class="popup" id="overview">
+                <h3>User accounts, depots, and sites (one-time setup for all modes)</h3>
+                <ul class="breadcrumb">
+					<li><a href="#step1"><b>1. </b>Add users at the sponsor or CRO</a></li>
+					<li><a href="#step2"><b>2. </b>Add depots</a></li>
+					<li><a href="#step3"><b>3. </b>Add sites</a></li>
+					<li><a href="#step4"><b>4. </b>Add site and depot users</a></li>
+                </ul>
+                <br>
+				<h3>Study settings</h3>
+                <ul class="breadcrumb">
+					<li><a href="#step5"><b>5. </b>Specify subject settings</a></li>
+                    <li><a href="#step6"><b>6. </b>Specify supply settings</a></li>
+                    <li><a href="#step7"><b>7. </b>Create a randomization list and kit list</a></li>
+                    <li><a href="#step8"><b>8. </b>Create lots to manage kit expiration dates</a></li>
+					<li><a href="#step9"><b>9. </b>Create label groups</a></li>
+                </ul>
+                <br>
+                <h3>Final steps</h3>
+                <ul class="breadcrumb">
+                    <li><a href="#step10"><b>10. </b>Activate depots</a></li>
+                    <li><a href="#step11"><b>11. </b>Release kits to depots</a></li>
+					<li><a href="#step12"><b>12. </b>Assign a study version and resupply strategy to sites</a></li>
+                    <li><a href="#step13"><b>13. </b>Activate sites</a></li>
+                </ul>
+                <br>
+            </div>
+
+    <!--
+    Thumbnail popups: The following divs define the popup images displayed when the corresponding thumbnail images are clicked. Ensure
+    the id is the same as the one defined for the thumbnail in the steps above, and the image references and alt tags are updated.
+    -->
+    <div id="popup1" class="popup">
+        <img src="images/Add_users.png" alt="Users tab">
+    </div>
+
+ <div id="popup2" class="popup">
+		<p style="font-size: 11pt;">This table provides a quick overview of the tasks that users with each role can perform.<br><strong>Assign one or more of these roles as needed to provide each team member with appropriate access.</stong></p><br>
+        <table style="border-collapse: collapse;">
+					<tr id="H" style="border: 1px solid #5FBFDB;">
+						<th style="border: 1px solid #5FBFDB; padding: 3px; background-color: #d6ecf7;">&#x25BC; Tasks \ Roles &#x25B6;</th>
+						<th style="border: 1px solid #5FBFDB; padding: 3px; background-color: #d6ecf7;">Study <br>Manager</th>
+						<th style="border: 1px solid #5FBFDB; padding: 3px; background-color: #d6ecf7;">CRA</th>
+						<th style="border: 1px solid #5FBFDB; padding: 3px; background-color: #d6ecf7;">Data <br>Manager</th>
+						<th style="border: 1px solid #5FBFDB; padding: 3px; background-color: #d6ecf7;">Subject <br>Transfer</th>
+						<th style="border: 1px solid #5FBFDB; padding: 3px; background-color: #d6ecf7;">Code View <br>(Unblinding)</th>
+						<th style="border: 1px solid #5FBFDB; padding: 3px; background-color: #d6ecf7;">Shipment <br>Notification</th>
+						<th style="border: 1px solid #5FBFDB; padding: 3px; background-color: #d6ecf7;">Subject Transfer <br>Notification</th>
+					</tr>
+					<tr id="1" style="border: 1px solid #5FBFDB;">
+						<td style="border: 1px solid #5FBFDB; padding: 3px; background-color: #d6ecf7; font-weight: bold;">Update <br>study settings</td>
+						<td style="border: 1px solid #5FBFDB; padding: 3px; text-align: center;">X</td>
+						<td style="border: 1px solid #5FBFDB; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; padding: 3px;"></td>
+					</tr>
+					<tr id="2" style="border: 1px solid #5FBFDB;">
+						<td style="border: 1px solid #5FBFDB; padding: 3px; background-color: #d6ecf7; font-weight: bold;">Update <br>subject settings</td>
+						<td style="border: 1px solid #5FBFDB; padding: 3px; text-align: center;">X</td>
+						<td style="border: 1px solid #5FBFDB; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; padding: 3px;"></td>
+					</tr>
+					<tr id="3" style="border: 1px solid #5FBFDB;">
+						<td style="border: 1px solid #5FBFDB; padding: 3px; background-color: #d6ecf7; font-weight: bold;">View <br>subject data</td>
+						<td style="border: 1px solid #5FBFDB; padding: 3px; text-align: center;">X</td>
+						<td style="border: 1px solid #5FBFDB; padding: 3px; text-align: center;">X</td>
+						<td style="border: 1px solid #5FBFDB; padding: 3px; text-align: center;">X</td>
+						<td style="border: 1px solid #5FBFDB; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; padding: 3px;"></td>
+					</tr>
+					<tr id="4" style="border: 1px solid #5FBFDB;">
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px; background-color: #d6ecf7; font-weight: bold;">View <br>site inventory</td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px; text-align: center;">X</td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px;"></td>
+					</tr>
+					<tr id="5" style="border: 1px solid #5FBFDB;">
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px; background-color: #d6ecf7; font-weight: bold;">Transfer subject <br>to another site</td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px; text-align: center;">X</td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px;"></td>
+					</tr>
+					<tr id="6" style="border: 1px solid #5FBFDB;">
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px; background-color: #d6ecf7; font-weight: bold;">Do a code view <br>(unblinding)<br><em style="font-style: normal; font-size: 7.5pt;">For pharmacovigilance only</em></td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px; text-align: center;">X</td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px;"></td>
+					</tr>
+					<tr id="7" style="border: 1px solid #5FBFDB;">
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px; background-color: #d6ecf7; font-weight: bold;">Receive the <br>shipment notification</td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px; text-align: center;">X</td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px;"></td>
+					</tr>
+					<tr id="8" style="border: 1px solid #5FBFDB;">
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px; background-color: #d6ecf7; font-weight: bold;">Receive the subject <br>transfer notification</td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px; text-align: center;">X</td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px; text-align: center;">X</td>
+					</tr>
+				</table>
+    </div>
+   
+
+<!-----POPUP 3 is same as POPUP 1_3 --->
+
+
+ <div id="popup4" class="popup">
+        <img src="images/Specify_subject_settings.png" alt="Subject Settings tab">
+    </div> 
+
+    <div id="popup5" class="popup">
+        <img src="images/Specify_supply_settings.png" alt="Supply Settings tab">
+    </div> 
+
+    <div id="popup6" class="popup">
+        <img src="images/7_Add depots.png" alt="Depots tab">
+    </div>
+
+    <div id="popup7" class="popup">
+        <img src="images/8_Add sites.png" alt="Sites tab">
+    </div>
+
+  <div id="popup8" class="popup">
+        
+		<p style="font-size: 12pt;">This table provides a quick overview of the tasks that users with each role can perform.<br><strong>Assign one or more of these roles as needed to provide each site user with appropriate access.</strong></p><br>
+		<p style="font-size: 10pt; max-width: 600px;"><strong>Note:</strong> A code break might result in a subject being withdrawn from a study; you specify this requirement in Subject Settings. A code view is usually done by safety personnel, and can also be used in an open label study so that site users can view randomization and kit details.</p><br>
+        <table style="border: 1px solid #5FBFDB; border-collapse: collapse;">
+					<tr id="H" style="border: 1px solid #5FBFDB;">
+						<th style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px; background-color: #d6ecf7">&#x25BC; Tasks \ Roles &#x25B6;</th>
+						<th style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px; background-color: #d6ecf7">Blinded<br>Site User</th>
+						<th style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px; background-color: #d6ecf7">Blinded Site<br>Inventory User</th>
+						<th style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px; background-color: #d6ecf7">Code <br>Break</th>
+						<th style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px; background-color: #d6ecf7">Shipment <br>Notification</th>
+						<th style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px; background-color: #d6ecf7">Subject Transfer <br>Notification</th>
+					</tr>
+					<tr id="1" style="border: 1px solid #5FBFDB;">
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px; font-weight: bold; background-color: #d6ecf7">Edit subject data</td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px; text-align: center;">X</td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px;"></td>
+					</tr>
+					<tr id="2" style="border: 1px solid #5FBFDB;">
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px; font-weight: bold; background-color: #d6ecf7">Receive and update<br>shipments and kits</td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px; text-align: center;">X</td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px;"></td>
+					</tr>
+					<tr id="3" style="border: 1px solid #5FBFDB;">
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px; font-weight: bold; background-color: #d6ecf7">Do a code break<br>(Unmask/unblind<br>a subject)</td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px; text-align: center;">X</td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px;"></td>
+					</tr>
+					
+					<tr id="7" style="border: 1px solid #5FBFDB;">
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px; font-weight: bold; background-color: #d6ecf7">Receive the <br>shipment notification</td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px; text-align: center;">X</td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px;"></td>
+					</tr>
+					<tr id="8" style="border: 1px solid #5FBFDB;">
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px; font-weight: bold; background-color: #d6ecf7">Receive the subject <br>transfer notification</td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px;"></td>
+						<td style="border: 1px solid #5FBFDB; border-collapse: collapse; padding: 3px; text-align: center;">X</td>
+					</tr>
+				</table>
+    </div>
+
+    <div id="popup9A" class="popup">
+        <img src="images/Create_randomization_list.png" alt="Randomizations tab">
+    </div>
+
+<div id="popup9B" class="popup">
+        <img src="images/Create_kit_list.png" alt="Kits tab">
+    </div>
+
+ <div id="popup10" class="popup">
+        <img src="images/Create_lots.png" alt="Inventory tab">
+    </div>
+
+    <div id="popup11" class="popup">
+        <img src="images/Create_label_groups.png" alt="Inventory tab">
+    </div>
+
+    <div id="popup12" class="popup">
+        <img src="images/13_Activate depots.png" alt="Depots tab">
+    </div>
+ <div id="popup13" class="popup">
+        <img src="images/Release_kits.png" alt="Inventory tab">
+    </div>
+ <div id="popup14" class="popup">
+        <img src="images/15_Assign a study version and resupply strategy.png" alt="Sites tab">
+    </div>
+ <div id="popup15" class="popup">
+        <img src="images/16_Activate sites.png" alt="Sites tab">
+    </div>
+
+    <script language="javascript">
+        var s_prefix = "Infographic";
+        if (typeof (document.title) != "undefined") {
+            var s_pageName = s_prefix + ":" + document.title};
+    </script>
+    <script type="text/javascript" src="https://www.oracleimg.com/us/assets/metrics/ora_docs.js"></script>
+</body>
+</html>

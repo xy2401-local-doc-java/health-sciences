@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Argus Insight Compatibility</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2017-09-29T13:48:45Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Argus Safety BIP Aggregate Reporting User's Guide" />
+<meta name="dcterms.identifier" content="E87488-01" />
+<meta name="dcterms.isVersionOf" content="AEOAN" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2016, 2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="reportingalgorithms.htm" title="Previous" type="text/html" />
+<link rel="Next" href="pbrerspecs.htm" title="Next" type="text/html" />
+<link rel="alternate" href="AEOAN.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="AEOAN.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="AEOAN.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">10/15</span> <!-- End Header -->
+<div id="AEOAN182" class="chapter"><a id="CHDEAFEH"></a>
+<h1 class="chapter"><span class="secnum">5</span> Argus Insight Compatibility</h1>
+<p>The BIP reporting framework is designed to be compatible with Argus Insight.</p>
+<ul>
+<li>
+<p>All references to <span class="italic">hitlist</span> in Argus Safety have been changed to Case Series to keep it in sync with Argus Insight terminology.</p>
+</li>
+<li>
+<p>All temporary tables required for data population in the aggregate reports are maintained in a separate schema within the Argus Safety database instance. You can access these tables through the Argus Insight DBLink, with the help of proper database grants and privileges.</p>
+</li>
+<li>
+<p>You can use the same BI Publisher server for Argus Safety and Argus Insight reports. For more configuration information required for running both these products on the same BI Publisher server, refer to the <span class="italic">Argus Safety Installation Guide</span>.</p>
+</li>
+<li>
+<p>You can use the same reporting server for Argus Analytics (OBIEE), Argus Safety, and Argus Insight (BIP).</p>
+</li>
+</ul>
+<div id="AEOAN183" class="sect1"><!-- infolevel="all" infotype="General" --><a id="sthref78"></a>
+<h2 class="sect1"><span class="secnum">5.1</span> Configuring Changes for Argus Insight RPD Integration</h2>
+<p>Argus Insight has introduced an RPD for data analysis of aggregate case series generated using Argus Safety aggregate reports. Argus Insight requires preservation of temp table data so it can be copied into the Argus Insight or Mart database using the ETL process. When aggregate case series data from temp tables is available in the Argus Insight or Mart database, you can use OBIEE RPD to analyze this data using different dimensions and case count measures.</p>
+<p>Make the following configuration changes in Argus Console for persisting the BIP temp table data so that the data can be used with OBIEE RPD:</p>
+<ol>
+<li>
+<p>Go to System Configuration -&gt; System Management (Common Profile Switches) -&gt; Reporting-&gt;BIP Aggregate Reporting.</p>
+</li>
+<li>
+<p>Under the BIP Common User and BIP Common User Password rows, add two common profile entries to the system for defining whether to persist data in BIP temp tables, and the number of days for which data should be persisted in these temp tables.</p>
+</li>
+</ol>
+<div id="AEOAN184" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref79"></a>
+<h3 class="sect2"><span class="secnum">5.1.1</span> Common Profile Entries</h3>
+<p>Profile switches must be added under BIP Common User and BIP Common User Password rows. The following information is available for these profile switches:</p>
+<div id="AEOAN185" class="tblformalwidekeymax">
+<p class="titleintable"><a id="sthref80"></a><a id="sthref81"></a>Table 5-1 Common Profile Entries</p>
+<table class="cellalignment75" title="Common Profile Entries" summary="Common profile entries" dir="ltr">
+<thead>
+<tr class="cellalignment63">
+<th class="cellalignment70" id="r1c1-t2">Field Label</th>
+<th class="cellalignment70" id="r1c2-t2">Default and Possible Values</th>
+<th class="cellalignment70" id="r1c3-t2">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment63">
+<td class="cellalignment71" id="r2c1-t2" headers="r1c1-t2">
+<p>Persist data in BIP Aggregate Temp Tables</p>
+</td>
+<td class="cellalignment71" headers="r2c1-t2 r1c2-t2">
+<p>Default: No</p>
+<p>Yes</p>
+<p>No</p>
+</td>
+<td class="cellalignment71" headers="r2c1-t2 r1c3-t2">
+<p><span class="bold">Yes</span>: System persists or stores the data of BIP aggregate temp tables for all the case series generated for aggregate reports generation.</p>
+<p><span class="bold">No</span>: System does not persist data of BIP Aggregate Temp tables.</p>
+</td>
+</tr>
+<tr class="cellalignment63">
+<td class="cellalignment71" id="r3c1-t2" headers="r1c1-t2">
+<p>Number of days for which data of BIP Aggregate Temp Tables should be persisted</p>
+</td>
+<td class="cellalignment71" headers="r3c1-t2 r1c2-t2">
+<p>Default: NULL</p>
+<p>Data of BIP Temp tables is persisted for the number of days defined in this configuration. After the configured period (Number of days from the last modified date of case series), a database or system job purges the data that is no longer required (defined separately). You can override the number of days for persisting data of a particular aggregate case series while generating the report through the BIP Console.</p>
+</td>
+<td class="cellalignment71" headers="r3c1-t2 r1c3-t2">
+<p>-</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformalwidekeymax" -->
+<ul>
+<li>
+<p>If <span class="bold">Persist data in BIP Aggregate Temp Tables</span> is set to <span class="bold">No</span>, the system does not persist data of BIP temp tables.</p>
+</li>
+<li>
+<p>If <span class="bold">Persist data in BIP Aggregate Temp Tables</span> is set to <span class="bold">Yes</span> and <span class="bold">Number of days for which data of BIP Aggregate Temp Tables should be persisted</span> is not defined, the system throws an error message when you save the value of these configurations. The following message appears:</p>
+</li>
+</ul>
+<p><span class="italic">Please enter the number of days for which data of BIP Temp Tables should be persisted</span>.</p>
+<ul>
+<li>
+<p>In a multi-tenant environment, you can view these configuration entries on the enterprise level.</p>
+</li>
+<li>
+<p>As part of data persistence and purging, two parameters have been added in BIP aggregate reports for overriding the default value. For example, you can choose not to persist data for a draft report run even if the default value is set to persist BIP temp table data. The following parameters have been added in aggregate reports:</p>
+<ul>
+<li>
+<p>Persist data of Temp Tables</p>
+</li>
+<li>
+<p>Number of Days for Data Persistence</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>For more information on these two parameters, refer <a href="appendixa.htm#BABEDEJB">Appendix A, "Report Parameters and their Definitions"</a>.</p>
+</div>
+<!-- class="sect2" -->
+<div id="AEOAN186" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref82"></a>
+<h3 class="sect2"><span class="secnum">5.1.2</span> Data Purging</h3>
+<p>A data purging is required to remove the data that exceeds the duration specified in the persistence parameters. The purge operation is handled using a database job that is created during the installation of the application.</p>
+<p>The data is purged if the current date exceeds report date plus the persistence duration specified while running the report.</p>
+<p>After data is purged from the Argus BIP temp tables, the purge is reflected in the Argus Mart database after completion of the ETL process.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment62">
+<tr>
+<td class="cellalignment71">
+<table class="cellalignment67">
+<tr>
+<td class="cellalignment66"><a href="reportingalgorithms.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment66"><a href="pbrerspecs.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2016, 2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment73">
+<table class="cellalignment65">
+<tr>
+<td class="cellalignment66"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment66"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment66"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment66"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

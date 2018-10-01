@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Incremental ETL: ODI Studio</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2017-10-04T10:27:25Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Argus Mart Installation and Administration Guide" />
+<meta name="dcterms.identifier" content="E84912-01" />
+<meta name="dcterms.isVersionOf" content="AMUGQ" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2011, 2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Prev" href="rebuildcase.htm" title="Previous" type="text/html" />
+<link rel="Next" href="administeretlodiconsole.htm" title="Next" type="text/html" />
+<link rel="alternate" href="AMUGQ.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="AMUGQ.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="AMUGQ.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">17/22</span> <!-- End Header -->
+<div id="AMUGQ722" class="chapter"><a id="BGBHAIFE"></a>
+<h1 class="chapter"><span class="secnum">12</span> Incremental ETL: ODI Studio</h1>
+<p>This chapter describes the steps required to administer the ETL process using the Oracle Data Integrator Studio (ODI Studio).</p>
+<a id="CEGBJBHE"></a>
+<div id="AMUGQ723" class="sect1">
+<h2 class="sect1"><span class="secnum">12.1</span> Scheduling Incremental ETL</h2>
+<p>The <span class="bold">AM.zip</span> file contains pre-configured ETL scheduling in <span class="bold">Inactive</span> mode.</p>
+<p>The Incremental ETL is used to load the delta data. You can execute an Incremental ETL either by executing Load Plan <span class="bold">LP_INC_AM</span>, or scheduling an ETL to run at the configured time interval.</p>
+<p>To schedule a Load Plan, execute the following steps:</p>
+<ol>
+<li>
+<p>In the <span class="bold">Designer</span> tab, navigate to <span class="bold">Load Plans and Scenarios</span> section and expand <span class="bold">LP_INC_AM</span> (Load Plan for Incremental ETL).</p>
+</li>
+<li>
+<p>Right-click <span class="bold">Scheduling</span> and select <span class="bold">New Scheduling</span>.</p>
+<div id="AMUGQ724" class="figure">
+<p class="titleinfigure"><a id="sthref80"></a>Figure 12-1 Scheduling ETL</p>
+<img width="347" height="158" src="img/newsched.jpg" alt="Surrounding text describes Figure 12-1 ." /><br /></div>
+<!-- class="figure" -->
+<p>The <span class="bold">Load Plan Scheduling</span> dialog box appears.</p>
+<div id="AMUGQ725" class="figure">
+<p class="titleinfigure"><a id="sthref81"></a>Figure 12-2 Scheduling the Load Plan Dialog Box</p>
+<img width="688" height="586" src="img/sched2.jpg" alt="Surrounding text describes Figure 12-2 ." /><br /></div>
+<!-- class="figure" -->
+<p>You can set options given in the <span class="bold">Status</span> and <span class="bold">Execution</span> sections, according to the requirements to schedule the Load Plan.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="CEGEHBDH"></a>
+<div id="AMUGQ726" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">12.2</span> Monitoring Incremental ETL Process</h2>
+<p>The process of monitoring the Incremental ETL using the Oracle Database Integrator Studio is same as the process of monitoring the Initial ETL.</p>
+<p>For step-by-step information related to monitoring the Incremental ETL process using the ODI Studio, see <a href="etldata.htm#BGBJJCCI">Section 7.2, "Monitoring Initial ETL Process: ODI Studio."</a></p>
+</div>
+<!-- class="sect1" -->
+<a id="CBHJADFE"></a>
+<div id="AMUGQ727" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">12.3</span> Managing Incremental ETL Process</h2>
+<p>This section describes the steps required to manage the Incremental ETL process using the Oracle Database Integrator Studio.</p>
+<a id="CBHFAAGG"></a>
+<div id="AMUGQ728" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">12.3.1</span> Running the Incremental ETL</h3>
+<ol>
+<li>
+<p>Open the Oracle Data Integrator Studio, and click <span class="bold">Connect to Repository</span>.</p>
+<p>The <span class="bold">Oracle Data Integrator Login</span> dialog box appears.</p>
+</li>
+<li>
+<p>In the <span class="bold">Oracle Data Integrator Login</span> window:</p>
+<ol>
+<li>
+<p>From the <span class="bold">Login Name</span> drop-down list, select the ODI Work Repository name.</p>
+</li>
+<li>
+<p>In the <span class="bold">User</span> field, enter the name of the ODI user.</p>
+</li>
+<li>
+<p>In the <span class="bold">Password</span> field, enter the password for the ODI user.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+<p>The <span class="bold">Oracle Data Integrator</span> screen.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>From the left pane, select the <span class="bold">Operator</span> tab.</p>
+</li>
+<li>
+<p>Expand the <span class="bold">Load Plans and Scenarios</span> section.</p>
+<div id="AMUGQ729" class="figure">
+<p class="titleinfigure"><a id="sthref82"></a>Figure 12-3 Load Plans and Scenarios</p>
+<img width="441" height="451" src="img/sc_003.jpg" alt="Surrounding text describes Figure 12-3 ." /><br /></div>
+<!-- class="figure" -->
+<p>The <span class="bold">LP_INC_AM</span> option represents the load plan for the Incremental ETL process for Argus Mart.</p>
+</li>
+<li>
+<p>Right-click the <span class="bold">LP_INC_AM</span> option.</p>
+<p>The drop-down menu appears.</p>
+<div id="AMUGQ730" class="figure">
+<p class="titleinfigure"><a id="sthref83"></a>Figure 12-4 Executing the Incremental ETL</p>
+<img width="359" height="578" src="img/sc_004.jpg" alt="Surrounding text describes Figure 12-4 ." /><br /></div>
+<!-- class="figure" --></li>
+<li>
+<p>Click <span class="bold">Run</span>.</p>
+<p>The <span class="bold">Start Load Plan</span> dialog box appears.</p>
+<div id="AMUGQ731" class="figure">
+<p class="titleinfigure"><a id="sthref84"></a>Figure 12-5 Start Load Plan Window</p>
+<img width="490" height="426" src="img/sc_007.jpg" alt="Surrounding text describes Figure 12-5 ." /><br /></div>
+<!-- class="figure" --></li>
+<li>
+<p>In the <span class="bold">Start Load Plan</span> screen:</p>
+<ol>
+<li>
+<p>From the <span class="bold">Context</span> drop-down list., select <span class="bold">CTX_ARGUSMART</span>.</p>
+</li>
+<li>
+<p>From the <span class="bold">Logical Agent</span> drop-down list, select <span class="bold">LA_AM</span>.</p>
+</li>
+<li>
+<p>From the <span class="bold">Log Level</span> drop-down list, select a level.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+<p>The <span class="bold">Information</span> dialog box with the <span class="italic">Load Plan Started</span> confirmation message appears.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+<p>You can verify the status of the ETL process by navigating to the <span class="bold">Load Plan Executions</span> section and expanding the <span class="bold">Load Plan</span> folder. You can view the status of the Load Plan in <span class="bold">Green</span> color with tilted <span class="bold">s</span>, which signifies that the ETL session is in progress.</p>
+<div id="AMUGQ732" class="figure">
+<p class="titleinfigure"><a id="sthref85"></a>Figure 12-6 Status of the Load Plan</p>
+<img width="360" height="292" src="img/sc_009.jpg" alt="Surrounding text describes Figure 12-6 ." /><br /></div>
+<!-- class="figure" --></li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CBHFDJCC"></a>
+<div id="AMUGQ733" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">12.3.2</span> Stopping the Incremental ETL</h3>
+<ol>
+<li>
+<p>Right-click the Load Plan, which you want to stop, in the <span class="bold">Load Plan</span> folder of the <span class="bold">Load Plan Executions</span> section. This displays a menu, as shown in the following figure:</p>
+<div id="AMUGQ734" class="figure">
+<p class="titleinfigure"><a id="sthref86"></a>Figure 12-7 Stopping the Incremental ETL</p>
+<img width="422" height="421" src="img/sc_010.jpg" alt="Surrounding text describes Figure 12-7 ." /><br /></div>
+<!-- class="figure" --></li>
+<li>
+<p>Select <span class="bold">Stop Normal</span>. This displays the <span class="bold">Stop Load Plan</span> dialog box.</p>
+<div id="AMUGQ735" class="figure">
+<p class="titleinfigure"><a id="sthref87"></a>Figure 12-8 Selecting the Physical Agent</p>
+<img width="316" height="154" src="img/stoploadplan1.jpg" alt="Surrounding text describes Figure 12-8 ." /><br /></div>
+<!-- class="figure" --></li>
+<li>
+<p>Select <span class="bold">PA_AM</span> from the <span class="bold">Physical Agent</span> drop-down list.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>. This stops the execution of the Load Plan.</p>
+<p>You can verify the status of the ETL process by navigating to the <span class="bold">Load Plan Executions</span> section and expanding the <span class="bold">Load Plan</span> folder. You can view the status of the Load Plan in <span class="bold">Red</span> color with the X symbol, which signifies that the ETL session is not in progress, as highlighted in the following figure:</p>
+<div id="AMUGQ736" class="figure">
+<p class="titleinfigure"><a id="sthref88"></a>Figure 12-9 Stopped Incremental ETL Session</p>
+<img width="363" height="288" src="img/sc_012.jpg" alt="Surrounding text describes Figure 12-9 ." /><br /></div>
+<!-- class="figure" -->
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You must verify in Argus Mart database if the ETL session has been successfully ended after this step.</div>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CBHGHEJD"></a>
+<div id="AMUGQ737" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">12.3.3</span> Restarting the Incremental ETL</h3>
+<p>Restarting the Incremental ETL process enables you to start the ETL process from the last execution step where it was stopped or failed.</p>
+<ol>
+<li>
+<p>Right-click the Load Plan, which you want to restart, in the <span class="bold">Load Plan</span> folder of the <span class="bold">Load Plan Executions</span> section. This displays a menu, as shown in the following figure:</p>
+<div id="AMUGQ738" class="figure">
+<p class="titleinfigure"><a id="sthref89"></a>Figure 12-10 Restarting the Incremental ETL</p>
+<img width="368" height="422" src="img/sc_013.jpg" alt="Surrounding text describes Figure 12-10 ." /><br /></div>
+<!-- class="figure" --></li>
+<li>
+<p>Click <span class="bold">Restart</span>. This displays the <span class="bold">Restart Load Plan</span> dialog box.</p>
+</li>
+<li>
+<p>Select <span class="bold">PA_AM</span> from the <span class="bold">Physical Agent</span> drop-down list.</p>
+</li>
+<li>
+<p>Select the required log level from the <span class="bold">Log Level</span> drop-down list.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>. This displays the <span class="bold">Information</span> dialog box with the <span class="bold">Load Plan restarted</span> message.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+<p>This adds another Load Plan, with the same name as that of the stopped ETL, in the <span class="bold">Load Plan</span> folder of the <span class="bold">Load Plan Executions</span> section. However, this instance of the ETL Process is in Green color, which signifies that the ETL is in progress, as highlighted in the following figure:</p>
+<div id="AMUGQ739" class="figure">
+<p class="titleinfigure"><a id="sthref90"></a>Figure 12-11 Restarted Load Plan</p>
+<img width="359" height="306" src="img/sc_017.jpg" alt="Surrounding text describes Figure 12-11 ." /><br /></div>
+<!-- class="figure" -->
+<p>Once the ETL process is complete, the Load Plan is displayed in Green color with a completed symbol, as highlighted in the following figure:</p>
+<div id="AMUGQ740" class="figure">
+<p class="titleinfigure"><a id="sthref91"></a>Figure 12-12 Completed Load Plan</p>
+<img width="359" height="306" src="img/sc_018.jpg" alt="Surrounding text describes Figure 12-12 ." /><br /></div>
+<!-- class="figure" --></li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CBHIBDBC"></a>
+<div id="AMUGQ741" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">12.3.4</span> Processing a Stopped or a Failed ETL</h3>
+<p>The complete ETL process is divided into two major phases: Staging and Mart. The Mart phase starts only when the Staging phase is complete.</p>
+<p>If an ETL process fails, you have the option of continuing the process from the failed step or executing it again from the beginning of ETL.</p>
+<p>This section explains the steps to resume a failed ETL from the failed step and to execute it again from the beginning of ETL.</p>
+<p>This section comprises the following sub-sections:</p>
+<ul>
+<li>
+<p><a href="#CBHIAGGH">Continuing the Failed Incremental ETL</a></p>
+</li>
+<li>
+<p><a href="#CBHBIHEH">Restarting the Failed Incremental ETL</a></p>
+</li>
+</ul>
+<a id="CBHIAGGH"></a>
+<div id="AMUGQ742" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><span class="secnum">12.3.4.1</span> Continuing the Failed Incremental ETL</h4>
+<p>If the last execution step of the failed or stopped ETL belongs to the Staging phase, the ETL resumes from the failed or stopped point, as shown in the following figure:</p>
+<div id="AMUGQ743" class="figure">
+<p class="titleinfigure"><a id="sthref92"></a>Figure 12-13 Staging Phase: Incremental ETL Resumes from Failed or Stopped Point</p>
+<img width="973" height="157" src="img/staging.jpg" alt="Surrounding text describes Figure 12-13 ." /><br /></div>
+<!-- class="figure" -->
+<p>If the last execution step of the failed or stopped ETL belongs to the Mart phase, the ETL resumes from the first step of the Mart phase and not from the failed or stopped point.</p>
+<div id="AMUGQ744" class="figure">
+<p class="titleinfigure"><a id="sthref93"></a>Figure 12-14 Mart Phase: Incremental ETL Resumes from the First Step of Mart</p>
+<img width="971" height="167" src="img/martstage.jpg" alt="Surrounding text describes Figure 12-14 ." /><br /></div>
+<!-- class="figure" -->
+<p>The process to continue the failed Incremental ETL from the failed step is exactly the same as that of the process of restarting the Incremental ETL after stopping it.</p>
+<p>See the <a href="#CBHGHEJD">Restarting the Incremental ETL</a> section for the step-by-step procedure to continue the failed Incremental ETL from the failed step.</p>
+</div>
+<!-- class="sect3" -->
+<a id="CBHBIHEH"></a>
+<div id="AMUGQ745" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><span class="secnum">12.3.4.2</span> Restarting the Failed Incremental ETL</h4>
+<p>The process to restart the failed Incremental ETL from the beginning is exactly the same as that of the process of running the Incremental ETL.</p>
+<p>However, before restarting the ETL, you must log on to the Oracle SQL Developer or SQLPlus (or SQL Prompt) using the Argus ETL User credentials and execute the following statements:</p>
+<p>EXEC pkg_sm_stage_util.p_set_cmn_profile_value ('DATABASE', 'ODI_ETL_STATUS', '0');EXEC pkg_sm_stage_util.p_set_cmn_profile_value ('DATABASE', 'ETL_SM_ITERATION_NUMBER', NULL);</p>
+<p>COMMIT;</p>
+<p>To verify the successful execution of these statements, you can execute the following Select statements:</p>
+<ul>
+<li>
+<p>SELECT * FROM rm_cmn_profile_global WHERE KEY = 'ODI_ETL_STATUS';</p>
+<p>The entry for the <span class="bold">Value</span> column must be <span class="bold">0</span> after executing this statement.</p>
+<div id="AMUGQ746" class="figure">
+<p class="titleinfigure"><a id="sthref94"></a>Figure 12-15 Select Statement 1 to Verify Successful Execution</p>
+<img width="373" height="103" src="img/select3.jpg" alt="Surrounding text describes Figure 12-15 ." /><br /></div>
+<!-- class="figure" --></li>
+<li>
+<p>SELECT * FROM rm_cmn_profile_global WHERE KEY = 'ETL_SM_ITERATION_NUMBER';</p>
+<p>The entry for the <span class="bold">Value</span> column must be blank after executing this statement.</p>
+<div id="AMUGQ747" class="figure">
+<p class="titleinfigure"><a id="sthref95"></a>Figure 12-16 Select Statement 2 to Verify Successful Execution</p>
+<img width="609" height="162" src="img/select2.jpg" alt="Surrounding text describes Figure 12-16 ." /><br /></div>
+<!-- class="figure" --></li>
+</ul>
+<p>See the <a href="#CBHFAAGG">Running the Incremental ETL</a> section for the step-by-step procedure to restart the failed Incremental ETL from the beginning of ETL.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment1">
+<tr>
+<td class="cellalignment8">
+<table class="cellalignment6">
+<tr>
+<td class="cellalignment5"><a href="rebuildcase.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment5"><a href="administeretlodiconsole.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2011, 2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment10">
+<table class="cellalignment4">
+<tr>
+<td class="cellalignment5"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment5"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment5"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment5"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

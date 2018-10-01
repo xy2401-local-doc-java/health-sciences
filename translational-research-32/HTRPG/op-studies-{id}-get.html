@@ -1,0 +1,3489 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- saved from url=(0023)https://docs.oracle.com -->
+        <title>REST API for Oracle Healthcare Translational Research - Retrieve Studies for a Study Identifier</title>
+        <link rel="stylesheet" href="/sp_common/rest-template/ohc-rest-template/css/rest.css">
+        <script>
+            document.write('<style type="text/css">');
+            document.write('body > .noscript, body > .noscript ~ * { opacity: 0; }');
+            document.write('</style>');
+        </script>
+        <script data-main="/sp_common/rest-template/ohc-rest-template/js/rest-config" src="/sp_common/rest-template/requirejs/require.js"></script>
+        <script>
+            if(window.require === undefined) {
+                document.write('<script data-main="sp_common/rest-template/ohc-rest-template/js/rest-config" src="sp_common/rest-template/requirejs/require.js"><\/script>');
+                document.write('<link href="sp_common/rest-template/ohc-rest-template/css/rest.css" rel="stylesheet">');
+            }
+        </script>
+        <meta name="description" content="The Oracle Healthcare Translational Research (OHTR) REST API provides optimized access to the clinical and genomic data stored within OHTR.">
+        <meta property="og:site_name" content="Oracle Help Center">
+        <meta property="og:title" content="REST API for Oracle Healthcare Translational Research">
+        <meta property="og:description" content="The Oracle Healthcare Translational Research (OHTR) REST API provides optimized access to the clinical and genomic data stored within OHTR.">
+        <meta name="generator" content="Oracle REST API Publisher">
+        <link rel="shortcut icon" href="/sp_common/rest-template/ohc-common/img/favicon.ico">
+        <meta name="application-name" content="REST API for Oracle Healthcare Translational Research">
+        <link type="application/swagger+json" title="Swagger 2.0" href="swagger.json" rel="alternate">
+        <link rel="prev" href="api-Studies.html" title="Previous" type="text/html">
+        <link rel="next" href="op-studies-get.html" title="Next" type="text/html">
+    <script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+    <body>
+        <div class="noscript alert alert-danger text-center" role="alert">
+            <a class="pull-left" href="api-Studies.html"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous</a>
+            <a class="pull-right" href="op-studies-get.html">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+            <span class="fa fa-exclamation-triangle" aria-hidden="true"></span> JavaScript must be enabled to correctly display this content
+        </div>
+        <article>
+
+            
+            <header>
+
+                <ol class="breadcrumb">
+                    <li><a href="index.html">REST API for Oracle Healthcare Translational Research</a></li>
+                    <li>Tasks</li>
+                    
+                    <li class="active">
+                        
+                        <a href="api-Studies.html">Studies</a>
+                        
+                    </li>
+                    
+                </ol>
+                
+                <p class="draftsubtitle"></p>
+                
+                <h2>Retrieve Studies for a Study Identifier</h2>
+                <div>
+                    <div class="label label-get text-uppercase">get</div>
+                    <p style="word-break: break-word;"><strong>/HSDataService-web/api/3.2.0/studies/{id}</strong></p>
+                </div>
+            </header>
+            <section>
+
+                <div class="description">This endpoint supports the retrieval of Studies for single Study Row ID passed. It returns Study information like Name, Description, Start Date, End Date and other Study associated information. </div>
+
+                <div role="tabpanel">
+
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs hidden-print" role="tablist">
+                        <li role="presentation" class="active"><a href="#request" aria-controls="request" role="tab" data-toggle="tab"><span class="hidden-xs glyphicon glyphicon-log-in" aria-hidden="true"></span> Request</a></li>
+                        <li role="presentation"><a href="#response" aria-controls="response" role="tab" data-toggle="tab"><span class="hidden-xs glyphicon glyphicon-log-out" aria-hidden="true"></span> Response</a></li>
+                        
+                        <li role="presentation"><a href="#examples" aria-controls="examples" role="tab" data-toggle="tab"><span class="hidden-xs glyphicon glyphicon-edit" aria-hidden="true"></span> Examples</a></li>
+                        
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane fade active in" id="request">
+                            <h3 class="visible-print-block">Request</h3>
+                            
+
+                            
+                            
+                            <div class="panel panel-default">
+                                <div class="panel-heading">Supported Media Types</div>
+                                <div class="panel-body">
+                                    <ul class="list-group">
+                                        
+                                        <li class="list-group-item">application/json</li>
+                                        
+                            
+                            
+                                        <li class="list-group-item">application/xml</li>
+                                                    
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            
+
+                            
+                            <div class="panel panel-default">
+                                <div class="panel-heading">Path Parameters</div>
+                                <div style="padding-bottom: 0px; padding-top: 0px" class="panel-body">
+                                    <div class="schema-container">
+                                    <dl style="margin-bottom: 0px" class="schema-properties">
+                                        
+                                        <dt>id</dt>
+                                        <dd>
+                                            
+
+
+<div>Type: <code>integer</code> (<code>int64</code>)</div>
+
+
+
+
+
+
+
+<div>Required: <code>true</code></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>Study Row ID</div>
+
+
+<div class="panel-group" role="tablist" aria-multiselectable="true">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        </dd>
+                                        
+                                    </dl>
+                                        
+                                   </div>
+                                </div>
+                            </div>
+                            
+
+                            
+                            
+                            
+
+                            
+                            
+
+                            
+
+
+                            
+
+
+
+                            
+
+
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="response">
+                            <h3 class="visible-print-block">Response</h3>
+
+                            
+                            
+                            <div class="panel panel-default">
+                                <div class="panel-heading">Supported Media Types</div>
+                                <div class="panel-body">
+                                    <ul class="list-group">
+                                        
+                                        <li class="list-group-item">application/json</li>
+                                        
+                            
+                            
+                                        <li class="list-group-item">application/xml</li>
+                                                    
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            
+
+
+
+                            
+                            <div class="panel panel-default">
+
+                                <div class="panel-heading">200 Response <span class="glyphicon glyphicon-ok-sign response-symbol" data-response-code="200" aria-hidden="true"></span></div>
+                                <div class="panel-body">
+                                    successful operation
+                                </div>
+
+                                
+                                
+
+                                
+                                <div class="panel panel-default">
+
+                                    <div class="panel-heading">Body</div>
+                                    <div class="panel-body">
+                                        
+                                        <div>Model for a Clinical Study details.</div>
+                                        
+
+                                        <div class="schema-container">
+                                        
+                                        <div id="200-definitions-Study" class="panel panel-default swagger-schema">
+<div class="panel-heading">Root Schema : Study</div>
+<div class="panel-body">
+
+    
+
+
+<div>Type: <code>object</code></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>Model for a Clinical Study details.</div>
+
+
+<div class="panel-group" role="tablist" aria-multiselectable="true">
+
+
+
+
+
+
+
+
+<div class="panel panel-default schema-panel">
+  <div class="panel-heading" role="tab" id="collapseListGroupHeading-200-definitions-Study-properties">
+    <a role="button" data-toggle="alt-collapse" href="#collapseListGroup-200-definitions-Study-properties" aria-expanded="false" aria-controls="collapseListGroup-200-definitions-Study-properties">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Properties
+    </a>
+  </div>
+  <div id="collapseListGroup-200-definitions-Study-properties" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapseListGroupHeading-200-definitions-Study-properties" aria-expanded="false">
+    <dl class="list-group schema-properties">
+        
+        <dt>identifier</dt>
+        <dd>
+            
+            <div>Type: <code>object</code>  <a href="#200-definitions-Identifier" role="button" class="btn btn-default btn-sm">Identifier</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>Identifier assigned by a given system</div>
+
+            
+        </dd>
+        
+        <dt>principalInvestigator</dt>
+        <dd>
+            
+            <div>Type: <code>object</code>  <a href="#200-definitions-Practitioner" role="button" class="btn btn-default btn-sm">Practitioner</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>Model for a Practitioner, i.e. a person who is directly or indirectly involved in the provisioning of healthcare with a formal responsibility.</div>
+
+            
+        </dd>
+        
+        <dt>resourceType</dt>
+        <dd>
+            
+            
+<div>Type: <code>string</code></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>API resource type. it's included if Response is not paginated.</div>
+
+
+
+            
+        </dd>
+        
+        <dt>studyDescription</dt>
+        <dd>
+            
+            
+<div>Type: <code>string</code></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>Clinical Study description.</div>
+
+
+
+            
+        </dd>
+        
+        <dt>studyEndDate</dt>
+        <dd>
+            
+            
+<div>Type: <code>string</code> (<code>date-time</code>)</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+        </dd>
+        
+        <dt>studyId</dt>
+        <dd>
+            
+            
+<div>Type: <code>string</code></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>Clinical Study identifier.</div>
+
+
+
+            
+        </dd>
+        
+        <dt>studyName</dt>
+        <dd>
+            
+            
+<div>Type: <code>string</code></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>Clinical Study name.</div>
+
+
+
+            
+        </dd>
+        
+        <dt>studyPhenotype</dt>
+        <dd>
+            
+            <div>Type: <code>object</code>  <a href="#200-definitions-StudyPhenotype" role="button" class="btn btn-default btn-sm">StudyPhenotype</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>Model for a clinical study standardized Phenotype.</div>
+
+            
+        </dd>
+        
+        <dt>studySpecimens</dt>
+        <dd>
+            
+            <div>Type: <code>object</code>  <a href="#200-definitions-LinkedReference" role="button" class="btn btn-default btn-sm">LinkedReference</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+        </dd>
+        
+        <dt>studyStartDate</dt>
+        <dd>
+            
+            
+<div>Type: <code>string</code> (<code>date-time</code>)</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+        </dd>
+        
+        <dt>studySubjects</dt>
+        <dd>
+            
+            <div>Type: <code>object</code>  <a href="#200-definitions-LinkedReference" role="button" class="btn btn-default btn-sm">LinkedReference</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+        </dd>
+        
+    </dl>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+</div>
+                                        
+                                        <div id="200-definitions-Identifier" class="panel panel-default swagger-schema">
+<div class="panel-heading">Nested Schema : Identifier</div>
+<div class="panel-body">
+
+    
+
+
+<div>Type: <code>object</code></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>Identifier assigned by a given system</div>
+
+
+<div class="panel-group" role="tablist" aria-multiselectable="true">
+
+
+
+
+
+
+
+
+<div class="panel panel-default schema-panel">
+  <div class="panel-heading" role="tab" id="collapseListGroupHeading-200-definitions-Identifier-properties">
+    <a role="button" data-toggle="alt-collapse" href="#collapseListGroup-200-definitions-Identifier-properties" aria-expanded="false" aria-controls="collapseListGroup-200-definitions-Identifier-properties">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Properties
+    </a>
+  </div>
+  <div id="collapseListGroup-200-definitions-Identifier-properties" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapseListGroupHeading-200-definitions-Identifier-properties" aria-expanded="false">
+    <dl class="list-group schema-properties">
+        
+        <dt>system</dt>
+        <dd>
+            
+            
+<div>Type: <code>string</code></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>System which assigned this identifier</div>
+
+
+
+            
+        </dd>
+        
+        <dt>value</dt>
+        <dd>
+            
+            
+<div>Type: <code>string</code></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>Identifier value</div>
+
+
+
+            
+        </dd>
+        
+    </dl>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+</div>
+                                        
+                                        <div id="200-definitions-Practitioner" class="panel panel-default swagger-schema">
+<div class="panel-heading">Nested Schema : Practitioner</div>
+<div class="panel-body">
+
+    
+
+
+<div>Type: <code>object</code></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>Model for a Practitioner, i.e. a person who is directly or indirectly involved in the provisioning of healthcare with a formal responsibility.</div>
+
+
+<div class="panel-group" role="tablist" aria-multiselectable="true">
+
+
+
+
+
+
+
+
+<div class="panel panel-default schema-panel">
+  <div class="panel-heading" role="tab" id="collapseListGroupHeading-200-definitions-Practitioner-properties">
+    <a role="button" data-toggle="alt-collapse" href="#collapseListGroup-200-definitions-Practitioner-properties" aria-expanded="false" aria-controls="collapseListGroup-200-definitions-Practitioner-properties">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Properties
+    </a>
+  </div>
+  <div id="collapseListGroup-200-definitions-Practitioner-properties" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapseListGroupHeading-200-definitions-Practitioner-properties" aria-expanded="false">
+    <dl class="list-group schema-properties">
+        
+        <dt>address</dt>
+        <dd>
+            
+            <div>Type: <code>object</code>  <a href="#200-definitions-Address" role="button" class="btn btn-default btn-sm">Address</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>Model for a postal address.</div>
+
+            
+        </dd>
+        
+        <dt>identifier</dt>
+        <dd>
+            
+            <div>Type: <code>object</code>  <a href="#200-definitions-CdmIdentifier" role="button" class="btn btn-default btn-sm">CdmIdentifier</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>Identifier assigned by a given system</div>
+
+            
+        </dd>
+        
+        <dt>name</dt>
+        <dd>
+            
+            <div>Type: <code>object</code>  <a href="#200-definitions-HumanName" role="button" class="btn btn-default btn-sm">HumanName</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>Model for a name of a human with text and parts information.</div>
+
+            
+        </dd>
+        
+        <dt>speciality</dt>
+        <dd>
+            
+            <div>Type: <code>object</code>  <a href="#200-definitions-CodeableConcept" role="button" class="btn btn-default btn-sm">CodeableConcept</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>Model that represents a value as a reference to one or more terminologies or ontologies or defined by the provision of text.</div>
+
+            
+        </dd>
+        
+        <dt>specimenAliasIssuerFlag</dt>
+        <dd>
+            
+            
+<div>Type: <code>string</code></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>The flag that indicates that this Service Provider has issued Specimen Alias(es).</div>
+
+
+
+            
+        </dd>
+        
+        <dt>telecom</dt>
+        <dd>
+            
+            <div>Type: <code>object</code>  <a href="#200-definitions-Telecom" role="button" class="btn btn-default btn-sm">Telecom</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+        </dd>
+        
+        <dt>type</dt>
+        <dd>
+            
+            <div>Type: <code>object</code>  <a href="#200-definitions-CodeableConcept" role="button" class="btn btn-default btn-sm">CodeableConcept</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>Model that represents a value as a reference to one or more terminologies or ontologies or defined by the provision of text.</div>
+
+            
+        </dd>
+        
+    </dl>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+</div>
+                                        
+                                        <div id="200-definitions-StudyPhenotype" class="panel panel-default swagger-schema">
+<div class="panel-heading">Nested Schema : StudyPhenotype</div>
+<div class="panel-body">
+
+    
+
+
+<div>Type: <code>object</code></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>Model for a clinical study standardized Phenotype.</div>
+
+
+<div class="panel-group" role="tablist" aria-multiselectable="true">
+
+
+
+
+
+
+
+
+<div class="panel panel-default schema-panel">
+  <div class="panel-heading" role="tab" id="collapseListGroupHeading-200-definitions-StudyPhenotype-properties">
+    <a role="button" data-toggle="alt-collapse" href="#collapseListGroup-200-definitions-StudyPhenotype-properties" aria-expanded="false" aria-controls="collapseListGroup-200-definitions-StudyPhenotype-properties">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Properties
+    </a>
+  </div>
+  <div id="collapseListGroup-200-definitions-StudyPhenotype-properties" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapseListGroupHeading-200-definitions-StudyPhenotype-properties" aria-expanded="false">
+    <dl class="list-group schema-properties">
+        
+        <dt>identifier</dt>
+        <dd>
+            
+            <div>Type: <code>object</code>  <a href="#200-definitions-Identifier" role="button" class="btn btn-default btn-sm">Identifier</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>Identifier assigned by a given system</div>
+
+            
+        </dd>
+        
+        <dt>type</dt>
+        <dd>
+            
+            <div>Type: <code>object</code>  <a href="#200-definitions-Coding" role="button" class="btn btn-default btn-sm">Coding</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>Model for a reference to a code defined by a terminology system.</div>
+
+            
+        </dd>
+        
+    </dl>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+</div>
+                                        
+                                        <div id="200-definitions-LinkedReference" class="panel panel-default swagger-schema">
+<div class="panel-heading">Nested Schema : LinkedReference</div>
+<div class="panel-body">
+
+    
+
+
+<div>Type: <code>object</code></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel-group" role="tablist" aria-multiselectable="true">
+
+
+
+
+
+
+
+
+<div class="panel panel-default schema-panel">
+  <div class="panel-heading" role="tab" id="collapseListGroupHeading-200-definitions-LinkedReference-properties">
+    <a role="button" data-toggle="alt-collapse" href="#collapseListGroup-200-definitions-LinkedReference-properties" aria-expanded="false" aria-controls="collapseListGroup-200-definitions-LinkedReference-properties">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Properties
+    </a>
+  </div>
+  <div id="collapseListGroup-200-definitions-LinkedReference-properties" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapseListGroupHeading-200-definitions-LinkedReference-properties" aria-expanded="false">
+    <dl class="list-group schema-properties">
+        
+        <dt>display</dt>
+        <dd>
+            
+            
+<div>Type: <code>string</code></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+        </dd>
+        
+        <dt>reference</dt>
+        <dd>
+            
+            
+<div>Type: <code>string</code></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+        </dd>
+        
+    </dl>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+</div>
+                                        
+                                        <div id="200-definitions-Address" class="panel panel-default swagger-schema">
+<div class="panel-heading">Nested Schema : Address</div>
+<div class="panel-body">
+
+    
+
+
+<div>Type: <code>object</code></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>Model for a postal address.</div>
+
+
+<div class="panel-group" role="tablist" aria-multiselectable="true">
+
+
+
+
+
+
+
+
+<div class="panel panel-default schema-panel">
+  <div class="panel-heading" role="tab" id="collapseListGroupHeading-200-definitions-Address-properties">
+    <a role="button" data-toggle="alt-collapse" href="#collapseListGroup-200-definitions-Address-properties" aria-expanded="false" aria-controls="collapseListGroup-200-definitions-Address-properties">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Properties
+    </a>
+  </div>
+  <div id="collapseListGroup-200-definitions-Address-properties" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapseListGroupHeading-200-definitions-Address-properties" aria-expanded="false">
+    <dl class="list-group schema-properties">
+        
+        <dt>city</dt>
+        <dd>
+            
+            
+<div>Type: <code>string</code></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>Name of city, town etc.</div>
+
+
+
+            
+        </dd>
+        
+        <dt>country</dt>
+        <dd>
+            
+            <div>Type: <code>object</code>  <a href="#200-definitions-CodeableConcept" role="button" class="btn btn-default btn-sm">CodeableConcept</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>Model that represents a value as a reference to one or more terminologies or ontologies or defined by the provision of text.</div>
+
+            
+        </dd>
+        
+        <dt>district</dt>
+        <dd>
+            
+            
+<div>Type: <code>string</code></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>District name (aka county).</div>
+
+
+
+            
+        </dd>
+        
+        <dt>line</dt>
+        <dd>
+            
+            <div>Type: <code>array</code>  <a href="#200-definitions-Address-properties-line" role="button" class="btn btn-default btn-sm">line</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>Street name, number, direction & P.O. Box etc.</div>
+
+            
+        </dd>
+        
+        <dt>postalCode</dt>
+        <dd>
+            
+            
+<div>Type: <code>string</code></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>Postal code for area.</div>
+
+
+
+            
+        </dd>
+        
+        <dt>state</dt>
+        <dd>
+            
+            <div>Type: <code>object</code>  <a href="#200-definitions-CodeableConcept" role="button" class="btn btn-default btn-sm">CodeableConcept</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>Model that represents a value as a reference to one or more terminologies or ontologies or defined by the provision of text.</div>
+
+            
+        </dd>
+        
+    </dl>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+</div>
+                                        
+                                        <div id="200-definitions-CdmIdentifier" class="panel panel-default swagger-schema">
+<div class="panel-heading">Nested Schema : CdmIdentifier</div>
+<div class="panel-body">
+
+    
+
+
+<div>Type: <code>object</code></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>Identifier assigned by a given system</div>
+
+
+<div class="panel-group" role="tablist" aria-multiselectable="true">
+
+
+
+
+
+
+
+
+<div class="panel panel-default schema-panel">
+  <div class="panel-heading" role="tab" id="collapseListGroupHeading-200-definitions-CdmIdentifier-properties">
+    <a role="button" data-toggle="alt-collapse" href="#collapseListGroup-200-definitions-CdmIdentifier-properties" aria-expanded="false" aria-controls="collapseListGroup-200-definitions-CdmIdentifier-properties">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Properties
+    </a>
+  </div>
+  <div id="collapseListGroup-200-definitions-CdmIdentifier-properties" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapseListGroupHeading-200-definitions-CdmIdentifier-properties" aria-expanded="false">
+    <dl class="list-group schema-properties">
+        
+        <dt>system</dt>
+        <dd>
+            
+            
+<div>Type: <code>string</code></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>System which assigned this identifier</div>
+
+
+
+            
+        </dd>
+        
+        <dt>value</dt>
+        <dd>
+            
+            
+<div>Type: <code>string</code></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>Identifier value</div>
+
+
+
+            
+        </dd>
+        
+    </dl>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+</div>
+                                        
+                                        <div id="200-definitions-HumanName" class="panel panel-default swagger-schema">
+<div class="panel-heading">Nested Schema : HumanName</div>
+<div class="panel-body">
+
+    
+
+
+<div>Type: <code>object</code></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>Model for a name of a human with text and parts information.</div>
+
+
+<div class="panel-group" role="tablist" aria-multiselectable="true">
+
+
+
+
+
+
+
+
+<div class="panel panel-default schema-panel">
+  <div class="panel-heading" role="tab" id="collapseListGroupHeading-200-definitions-HumanName-properties">
+    <a role="button" data-toggle="alt-collapse" href="#collapseListGroup-200-definitions-HumanName-properties" aria-expanded="false" aria-controls="collapseListGroup-200-definitions-HumanName-properties">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Properties
+    </a>
+  </div>
+  <div id="collapseListGroup-200-definitions-HumanName-properties" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapseListGroupHeading-200-definitions-HumanName-properties" aria-expanded="false">
+    <dl class="list-group schema-properties">
+        
+        <dt>family</dt>
+        <dd>
+            
+            
+<div>Type: <code>string</code></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>Family name (often called 'Surname').</div>
+
+
+
+            
+        </dd>
+        
+        <dt>given</dt>
+        <dd>
+            
+            <div>Type: <code>array</code>  <a href="#200-definitions-HumanName-properties-given" role="button" class="btn btn-default btn-sm">given</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>Given names (not always 'first'). Includes middle names.</div>
+
+            
+        </dd>
+        
+        <dt>text</dt>
+        <dd>
+            
+            
+<div>Type: <code>string</code></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>Text representation of the full name.</div>
+
+
+
+            
+        </dd>
+        
+    </dl>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+</div>
+                                        
+                                        <div id="200-definitions-CodeableConcept" class="panel panel-default swagger-schema">
+<div class="panel-heading">Nested Schema : CodeableConcept</div>
+<div class="panel-body">
+
+    
+
+
+<div>Type: <code>object</code></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>Model that represents a value as a reference to one or more terminologies or ontologies or defined by the provision of text.</div>
+
+
+<div class="panel-group" role="tablist" aria-multiselectable="true">
+
+
+
+
+
+
+
+
+<div class="panel panel-default schema-panel">
+  <div class="panel-heading" role="tab" id="collapseListGroupHeading-200-definitions-CodeableConcept-properties">
+    <a role="button" data-toggle="alt-collapse" href="#collapseListGroup-200-definitions-CodeableConcept-properties" aria-expanded="false" aria-controls="collapseListGroup-200-definitions-CodeableConcept-properties">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Properties
+    </a>
+  </div>
+  <div id="collapseListGroup-200-definitions-CodeableConcept-properties" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapseListGroupHeading-200-definitions-CodeableConcept-properties" aria-expanded="false">
+    <dl class="list-group schema-properties">
+        
+        <dt>coding</dt>
+        <dd>
+            
+            <div>Type: <code>array</code>  <a href="#200-definitions-CodeableConcept-properties-coding" role="button" class="btn btn-default btn-sm">coding</a></div>
+
+
+
+
+
+
+
+
+<div>Read Only: <code>true</code></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>Code(s) defined by a terminology system.</div>
+
+            
+        </dd>
+        
+        <dt>text</dt>
+        <dd>
+            
+            
+<div>Type: <code>string</code></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>Plain text representation of the concept.</div>
+
+
+
+            
+        </dd>
+        
+    </dl>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+</div>
+                                        
+                                        <div id="200-definitions-Telecom" class="panel panel-default swagger-schema">
+<div class="panel-heading">Nested Schema : Telecom</div>
+<div class="panel-body">
+
+    
+
+
+<div>Type: <code>object</code></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel-group" role="tablist" aria-multiselectable="true">
+
+
+
+
+
+
+
+
+<div class="panel panel-default schema-panel">
+  <div class="panel-heading" role="tab" id="collapseListGroupHeading-200-definitions-Telecom-properties">
+    <a role="button" data-toggle="alt-collapse" href="#collapseListGroup-200-definitions-Telecom-properties" aria-expanded="false" aria-controls="collapseListGroup-200-definitions-Telecom-properties">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Properties
+    </a>
+  </div>
+  <div id="collapseListGroup-200-definitions-Telecom-properties" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapseListGroupHeading-200-definitions-Telecom-properties" aria-expanded="false">
+    <dl class="list-group schema-properties">
+        
+        <dt>use</dt>
+        <dd>
+            
+            <div>Type: <code>object</code>  <a href="#200-definitions-CodeableConcept" role="button" class="btn btn-default btn-sm">CodeableConcept</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>Model that represents a value as a reference to one or more terminologies or ontologies or defined by the provision of text.</div>
+
+            
+        </dd>
+        
+        <dt>value</dt>
+        <dd>
+            
+            
+<div>Type: <code>string</code></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>Telecom Value</div>
+
+
+
+            
+        </dd>
+        
+    </dl>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+</div>
+                                        
+                                        <div id="200-definitions-Address-properties-line" class="panel panel-default swagger-schema">
+<div class="panel-heading">Nested Schema : line</div>
+<div class="panel-body">
+
+    
+
+
+<div>Type: <code>array</code></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>Street name, number, direction & P.O. Box etc.</div>
+
+
+<div class="panel-group" role="tablist" aria-multiselectable="true">
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-default schema-panel">
+  <div class="panel-heading" role="tab" id="collapseListGroupHeading-200-definitions-Address-properties-line-items">
+    <a role="button" data-toggle="alt-collapse" href="#collapseListGroup-200-definitions-Address-properties-line-items" aria-expanded="false" aria-controls="collapseListGroup-200-definitions-Address-properties-line-items">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Items
+    </a>
+  </div>
+  <div id="collapseListGroup-200-definitions-Address-properties-line-items" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapseListGroupHeading-200-definitions-Address-properties-line-items" aria-expanded="false">
+    <ul class="list-group schema-items">
+        
+        <li class="list-group-item">
+        
+        
+<div>Type: <code>string</code></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        </li>
+        
+    </ul>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+</div>
+                                        
+                                        <div id="200-definitions-HumanName-properties-given" class="panel panel-default swagger-schema">
+<div class="panel-heading">Nested Schema : given</div>
+<div class="panel-body">
+
+    
+
+
+<div>Type: <code>array</code></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>Given names (not always 'first'). Includes middle names.</div>
+
+
+<div class="panel-group" role="tablist" aria-multiselectable="true">
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-default schema-panel">
+  <div class="panel-heading" role="tab" id="collapseListGroupHeading-200-definitions-HumanName-properties-given-items">
+    <a role="button" data-toggle="alt-collapse" href="#collapseListGroup-200-definitions-HumanName-properties-given-items" aria-expanded="false" aria-controls="collapseListGroup-200-definitions-HumanName-properties-given-items">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Items
+    </a>
+  </div>
+  <div id="collapseListGroup-200-definitions-HumanName-properties-given-items" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapseListGroupHeading-200-definitions-HumanName-properties-given-items" aria-expanded="false">
+    <ul class="list-group schema-items">
+        
+        <li class="list-group-item">
+        
+        
+<div>Type: <code>string</code></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        </li>
+        
+    </ul>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+</div>
+                                        
+                                        <div id="200-definitions-CodeableConcept-properties-coding" class="panel panel-default swagger-schema">
+<div class="panel-heading">Nested Schema : coding</div>
+<div class="panel-body">
+
+    
+
+
+<div>Type: <code>array</code></div>
+
+
+
+
+
+
+
+
+
+
+
+<div>Read Only: <code>true</code></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>Code(s) defined by a terminology system.</div>
+
+
+<div class="panel-group" role="tablist" aria-multiselectable="true">
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-default schema-panel">
+  <div class="panel-heading" role="tab" id="collapseListGroupHeading-200-definitions-CodeableConcept-properties-coding-items">
+    <a role="button" data-toggle="alt-collapse" href="#collapseListGroup-200-definitions-CodeableConcept-properties-coding-items" aria-expanded="false" aria-controls="collapseListGroup-200-definitions-CodeableConcept-properties-coding-items">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Items
+    </a>
+  </div>
+  <div id="collapseListGroup-200-definitions-CodeableConcept-properties-coding-items" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapseListGroupHeading-200-definitions-CodeableConcept-properties-coding-items" aria-expanded="false">
+    <ul class="list-group schema-items">
+        
+        <li class="list-group-item">
+        
+        <div>Type: <code>object</code>  <a href="#200-definitions-Coding" role="button" class="btn btn-default btn-sm">Coding</a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>Model for a reference to a code defined by a terminology system.</div>
+
+        
+        </li>
+        
+    </ul>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+</div>
+                                        
+                                        <div id="200-definitions-Coding" class="panel panel-default swagger-schema">
+<div class="panel-heading">Nested Schema : Coding</div>
+<div class="panel-body">
+
+    
+
+
+<div>Type: <code>object</code></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>Model for a reference to a code defined by a terminology system.</div>
+
+
+<div class="panel-group" role="tablist" aria-multiselectable="true">
+
+
+
+
+
+
+
+
+<div class="panel panel-default schema-panel">
+  <div class="panel-heading" role="tab" id="collapseListGroupHeading-200-definitions-Coding-properties">
+    <a role="button" data-toggle="alt-collapse" href="#collapseListGroup-200-definitions-Coding-properties" aria-expanded="false" aria-controls="collapseListGroup-200-definitions-Coding-properties">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Properties
+    </a>
+  </div>
+  <div id="collapseListGroup-200-definitions-Coding-properties" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapseListGroupHeading-200-definitions-Coding-properties" aria-expanded="false">
+    <dl class="list-group schema-properties">
+        
+        <dt>code</dt>
+        <dd>
+            
+            
+<div>Type: <code>string</code></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>Symbol in syntax defined by the system.</div>
+
+
+
+            
+        </dd>
+        
+        <dt>description</dt>
+        <dd>
+            
+            
+<div>Type: <code>string</code></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>Description defined by the system.</div>
+
+
+
+            
+        </dd>
+        
+        <dt>display</dt>
+        <dd>
+            
+            
+<div>Type: <code>string</code></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>Representation defined by the system.</div>
+
+
+
+            
+        </dd>
+        
+        <dt>sysId</dt>
+        <dd>
+            
+            
+<div>Type: <code>string</code></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>Identity of the terminology system.</div>
+
+
+
+            
+        </dd>
+        
+        <dt>sysName</dt>
+        <dd>
+            
+            
+<div>Type: <code>string</code></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>Name of the terminology system.</div>
+
+
+
+            
+        </dd>
+        
+        <dt>sysVersion</dt>
+        <dd>
+            
+            
+<div>Type: <code>string</code></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>Version of the system - if relevant.</div>
+
+
+
+            
+        </dd>
+        
+    </dl>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+</div>
+                                        
+                                        </div>
+
+                                        
+                                    </div>
+                                </div>
+                                
+
+                            </div>
+                            
+                            <div class="panel panel-default">
+
+                                <div class="panel-heading">400 Response <span class="glyphicon glyphicon-alert response-symbol" data-response-code="400" aria-hidden="true"></span></div>
+                                <div class="panel-body">
+                                    Invalid parameters supplied
+                                </div>
+
+                                
+                                
+
+                                
+
+                            </div>
+                            
+                            <div class="panel panel-default">
+
+                                <div class="panel-heading">404 Response <span class="glyphicon glyphicon-alert response-symbol" data-response-code="404" aria-hidden="true"></span></div>
+                                <div class="panel-body">
+                                    Studies were not found
+                                </div>
+
+                                
+                                
+
+                                
+
+                            </div>
+                            
+
+
+                        </div>
+                        
+                        <div role="tabpanel" class="tab-pane fade" id="examples">
+                            <h3>Examples</h3>
+                            <div class="body conbody"> 
+ <div class="section">
+  <p class="p">The following example submits a GET request.</p> 
+ </div> 
+ <div class="section">
+  <h3 class="title sectiontitle">API URL</h3>
+  <pre class="pre">http://localhost:7001/HSDataService-web/api/3.2.0/studies/2</pre> 
+ </div> 
+ <div class="section">
+  <h3 class="title sectiontitle">Example of Response Body</h3>
+  <p class="p">The following example shows the contents of the response body in JSON format:</p> 
+  <pre class="pre">{
+  "resourceType": "Study",
+  "identifier": {
+    "system": "CDM",
+    "value": "2"
+  },
+  "studyId": "NCT02085388",
+  "studyName": "Effect Of Obesity Surgery on Gene Expression Profile",
+  "studyDescription": "Gene expression profiling (whole genome analysis, with first interest in FTO and BDNF expression) to assess changes in gene expression before vs. after surgery, and to associate gene expression with weight loss after surgery.",
+  "studyStartDate": "01/17/2015",
+  "studyEndDate": "01/06/2017",
+  "principalInvestigator": {
+    "identifier": {
+      "system": "CDM",
+      "value": "NCT02085388:SPI"
+    },
+    "type": {
+      "coding": [
+        {
+          "code": "STUDY-PI",
+          "display": "Study PI",
+          "description": "Study Principal Investigator",
+          "sysId": "SVCPRV_TYP_CD_SYS",
+          "sysName": "Service Provider System",
+          "sysVersion": "2"
+        }
+      ]
+    },
+    "name": {
+      "text": "Sarah Jane Smith",
+      "family": "Smith",
+      "given": [
+        "Sarah",
+        "Jane"
+      ]
+    },
+    "telecom": {
+      "value": "sara.j.smith@somecompany.com",
+      "use": {
+        "coding": [
+          {
+            "code": "EMAIL",
+            "display": "Email",
+            "description": "Company email",
+            "sysId": "CONTACT_INFO_TYPE_CD_SYS_ID2",
+            "sysName": "CONTACT_INFO_TYPE_CD_SYS_NAME2",
+            "sysVersion": "CONTACT_INFO_TYPE_CD_SYS_VER2"
+          }
+        ]
+      }
+    },
+    "specimenAliasIssuerFlag": "Y"
+  },
+  "studyPhenotype": {
+    "identifier": {
+      "system": "CDM",
+      "value": "2"
+    },
+    "type": {
+      "code": "E66",
+      "display": "Overweight and obesity",
+      "description": "Includes: E66.0-Obesity due to excess calories; E66.3-Overweight; E66.8-Other obesity; E66.9-Obesity, unspecified",
+      "sysId": "EHA_CUSTOM_CD_SYS",
+      "sysName": "EHA Custom Code System",
+      "sysVersion": "1"
+    }
+  },
+  "studySubjects": {
+    "reference": "/HSDataService-web/api/3.2.0/studies/2/subjects"
+  },
+  "studySpecimens": {
+    "reference": "/HSDataService-web/api/3.2.0/studies/2/specimens"
+  }
+}</pre> 
+ </div> 
+</div>
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+            </section>
+
+            
+        </article>
+    </body>
+</html>

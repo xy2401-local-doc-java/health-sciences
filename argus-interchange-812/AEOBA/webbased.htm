@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Configuring the Interchange Mapping Utility</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2018-02-13T11:0:58Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Argus Interchange User's Guide" />
+<meta name="dcterms.identifier" content="E93463-01" />
+<meta name="dcterms.isVersionOf" content="AEOBA" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Prev" href="config.htm" title="Previous" type="text/html" />
+<link rel="Next" href="e2bcheck.htm" title="Next" type="text/html" />
+<link rel="alternate" href="AEOBA.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="AEOBA.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="AEOBA.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">6/10</span> <!-- End Header -->
+<div id="AEOBA123" class="chapter"><a id="sthref14"></a>
+<h1 class="chapter"><span class="secnum">3</span> Configuring the Interchange Mapping Utility</h1>
+<p>This chapter provides information on configuring web-based Argus Interchange.</p>
+<a id="BHCJACCI"></a>
+<div id="AEOBA124" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Web-based Interchange Mapping</h2>
+<p>This section contains the following sections:</p>
+<ul>
+<li>
+<p><a href="#CBDFAIHI">Navigating to Interchange Mapping</a></p>
+</li>
+<li>
+<p><a href="#BEICCEGI">Message and Acknowledgement Profiles</a></p>
+</li>
+<li>
+<p><a href="#CBDJBGEB">Managing Profiles</a></p>
+</li>
+<li>
+<p><a href="#CBDCBGJG">Comparing Profiles</a></p>
+</li>
+<li>
+<p><a href="#CBDFFJHG">ICSR Codes Translation</a></p>
+</li>
+<li>
+<p><a href="#CBDDGJJB">Viewing the Audit Log</a></p>
+</li>
+<li>
+<p><a href="#CHDHDDAA">ICSR Extensions</a></p>
+</li>
+</ul>
+<a id="CBDFAIHI"></a>
+<div id="AEOBA125" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Navigating to Interchange Mapping</h3>
+<p>This section provides information on navigating to the Interchange Mapping menu.</p>
+<p>To navigate to the Interchange Mapping menu:</p>
+<ol>
+<li>
+<p>Open <span class="bold">Argus Console</span>.</p>
+</li>
+<li>
+<p>Go to System Configuration -&gt;Interchange Mapping.</p>
+<img width="1002" height="288" src="img/navigate.gif" alt="Surrounding text describes navigate.gif." /><br /></li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BEICCEGI"></a>
+<div id="AEOBA197" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Message and Acknowledgement Profiles</h3>
+<p>Argus Interchange Mapping provides the following standard Message and Acknowledgement profiles:</p>
+<ul>
+<li>
+<p>ICH-ICSR V2.1 MESSAGE TEMPLATE</p>
+</li>
+<li>
+<p>ICH-ICSR V2.1 MESSAGE TEMPLATE - EMA</p>
+</li>
+<li>
+<p>ICH-ICSR V2.1 MESSAGE TEMPLATE - FDA</p>
+</li>
+<li>
+<p>ICH-ICSR V3.0 MESSAGE TEMPLATE</p>
+</li>
+<li>
+<p>ICH-ICSR V3.0 MESSAGE TEMPLATE - EMA</p>
+</li>
+<li>
+<p>ICH-ICSR V3.0 ACKNOWLEDGMENT TEMPLATE &ndash; EMA</p>
+</li>
+<li>
+<p>ICH-ICSR V1.1 ACKNOWLEDGEMENT TEMPLATE</p>
+</li>
+<li>
+<p>ICH-ICSR V1.1 ACKNOWLEDGEMENT TEMPLATE - EMA</p>
+</li>
+<li>
+<p>ICH-ICSR V1.1 ACKNOWLEDGEMENT TEMPLATE - FDA</p>
+</li>
+<li>
+<p>CBER EVAERS V1.0 MESSAGE TEMPLATE</p>
+</li>
+<li>
+<p>CDRH eMDR V1.0 MESSAGE TEMPLATE</p>
+</li>
+</ul>
+<p class="subhead2"><a id="AEOBA198"></a>New Import profiles for EMA &amp; PMDA E2B (R3)</p>
+<p>Two new Import profiles for EMA &amp; PMDA E2B (R3) are now available.</p>
+<ul>
+<li>
+<p>A new EMA (R3) profile with OOTH Export and Import mappings with all standard features such as Copy, Edit, Print and Audit.</p>
+</li>
+<li>
+<p>A new EMA (R3) acknowledgement with default mappings and with all standard features such as Copy, Edit, Print and Audit.</p>
+</li>
+</ul>
+<p>All conformance rules are added to the OOTB EMA (R3) profile.</p>
+<p>Low level Ack generation is supported for EMA (R3) import using physical media.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CBDJBGEB"></a>
+<div id="AEOBA126" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Managing Profiles</h3>
+<p>This section provides information about working with profiles and includes discussions of the following:</p>
+<ul>
+<li>
+<p>Defining a Profile</p>
+</li>
+<li>
+<p>Printing a Profile</p>
+</li>
+<li>
+<p>Copying a Profile</p>
+</li>
+<li>
+<p>Deleting a Profile</p>
+</li>
+</ul>
+<div id="AEOBA127" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref15"></a>
+<h4 class="sect3">Defining a Profile</h4>
+<p>This section describes viewing or modifying the rules of a profile in the Interchange Mapping. You can view profile details by selecting a Profile from the Interchange Mapping screen.</p>
+<img width="1004" height="592" src="img/newtransmit.gif" alt="Surrounding text describes newtransmit.gif." /><br />
+<p>On selecting a Profile from the drop-down, the system displays the following information:</p>
+<ul>
+<li>
+<p>The tree view structure of ICSR elements</p>
+</li>
+<li>
+<p>The Transmit and Receive tabs</p>
+</li>
+</ul>
+<p>The following notes are displayed at the bottom of the screen:</p>
+<ul>
+<li>
+<p>When a profile provided as part of the factory data is selected, <span class="italic">* Profile Type is TEMPLATE. All Fields are Read-only</span>.</p>
+</li>
+<li>
+<p>When a custom profile is selected, <span class="italic">* Profile Type is User DEFINED. Fields with white background are editable</span>.</p>
+</li>
+</ul>
+<div id="AEOBA128" class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref16"></a>
+<h5 class="sect4">Using the Transmit Tab</h5>
+<p>Use the following procedure to view details on the Transmit Tab:</p>
+<ol>
+<li>
+<p>Select a profile from the Profile drop-down list.</p>
+</li>
+<li>
+<p>Click <span class="bold">Transmit</span>.</p>
+</li>
+</ol>
+<p>The following table lists and describes fields on the Transmit tab:</p>
+<div class="inftblinformal">
+<table class="cellalignment17" summary="The following tables lists and describes the items on the Transmit tab." dir="ltr">
+<thead>
+<tr class="cellalignment11">
+<th class="cellalignment18" id="r1c1-t2">Item</th>
+<th class="cellalignment18" id="r1c2-t2">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r2c1-t2" headers="r1c1-t2">Adverse Event Database Select Statement</td>
+<td class="cellalignment19" headers="r2c1-t2 r1c2-t2">Enables you to enter and view the SQL logic used to extract the value of the selected element of the profile from the AE database.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r3c1-t2" headers="r1c1-t2">ICSR check checkbox</td>
+<td class="cellalignment19" headers="r3c1-t2 r1c2-t2">Indicates whether the selected profile is used in the ICSR check functionality in Argus.
+<p>The ICSR check function validates E2B reports based on the validation rules defined for the profiles.</p>
+<p>Only profiles that have the ICSR checkbox selected are used for validation.</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r4c1-t2" headers="r1c1-t2">Blind in PMDA AE Paper Report</td>
+<td class="cellalignment19" headers="r4c1-t2 r1c2-t2">Select this check box if the selected profile must be blind in the PMDA AE Paper Report.
+<p>This check box is available only for PMDA E2B R2 Profiles for Japanese user and if the Japanese version is enabled.</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r5c1-t2" headers="r1c1-t2">Configured Transmit Logic</td>
+<td class="cellalignment19" headers="r5c1-t2 r1c2-t2">This drop-down lists the descriptive names (alphabetical order) for all the configured Transmit Mapping logic for the particular element across all the HL7 based ICSR profiles. The first value is blank and the last value is (Add New). This drop-down value is available for editing for all custom profiles and is read-only for OOTB Template profile.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" --></div>
+<!-- class="sect4" -->
+<div id="AEOBA129" class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref17"></a>
+<h5 class="sect4">Using the Conformance Rules Tab</h5>
+<p>A new tab <span class="italic">Conformance Rules</span> is now available to users for the E2B (R3) based ICSR Profiles, that is, EMA, and PMDA. The Japanese DTD tab is not available to PMDA E2B (R3).</p>
+<p>The tab allows user to configure the following parameters against each ICSR Element node for which data is transmitted (as it is applicable only for E2B export logic). It is available only for the ICSR Element Nodes (except for the Message &amp; Batch Header tags - N) for which data is transmitted and is not available for parent element, as the attributes specific to validations are applicable only at root element level.</p>
+<p>This configuration remains un-editable (read only) for all out-of-the-box E2B (R3) based ICSR template profiles (EMA, PMDA) but is allowed to be edited for custom/copied profiles. (The configuration data for out-of-the-box mapping profiles is available with the mapping of that profile).</p>
+<p>The Conformance Rules tab data is also copied to the new profile when user copies any existing ICSR profile.</p>
+<p>Editing Conformance rules is allowed only for custom profiles.</p>
+<p>The following is the Conformance Tab for PMDA profile:</p>
+<img width="1050" height="452" src="img/conforrpmda.jpg" alt="Surrounding text describes conforrpmda.jpg." /><br />
+<p>To configure the validations rule against the ICSR element, following fields have been made available to user under the Conformance Rules tab:</p>
+<div class="inftblinformal">
+<table class="cellalignment17" summary="descriptions" dir="ltr">
+<thead>
+<tr class="cellalignment11">
+<th class="cellalignment18" id="r1c1-t3"><span class="bold">Field</span></th>
+<th class="cellalignment18" id="r1c2-t3"><span class="bold">Type</span></th>
+<th class="cellalignment18" id="r1c3-t3"><span class="bold">Description</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r2c1-t3" headers="r1c1-t3">Field Name / Field Name (J)</td>
+<td class="cellalignment19" headers="r2c1-t3 r1c2-t3">Textbox
+<p>Length:255 AN</p>
+</td>
+<td class="cellalignment19" headers="r2c1-t3 r1c3-t3">Field Name/Label of the Case form or Console UI field to which the element's mapping logic corresponds to is specified in this field.
+<p>EMA: English</p>
+<p>PMDA: Japanese</p>
+<p>For PMDA E2B (R3): Refer Mapping xls &gt;&nbsp;Mapping(Sheet) &gt;&nbsp; UI Field Name(J)</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r3c1-t3" headers="r1c1-t3">Field Location</td>
+<td class="cellalignment19" headers="r3c1-t3 r1c2-t3">Textbox
+<p>Length:255 AN</p>
+</td>
+<td class="cellalignment19" headers="r3c1-t3 r1c3-t3">UI Fields Location/path of the Case form or Console UI field to which the element's mapping logic corresponds to is specified in this field.
+<p>EMA: English</p>
+<p>PMDA: Japanese</p>
+<p>For PMDA E2B (R3): Refer Mapping xls &gt; Mapping (Sheet) &gt;&nbsp;UI Field Name(J)</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r4c1-t3" headers="r1c1-t3">Data Type</td>
+<td class="cellalignment19" headers="r4c1-t3 r1c2-t3">Drop-down list</td>
+<td class="cellalignment19" headers="r4c1-t3 r1c3-t3">This drop-down list has the following options in the below specified order:
+<p>Blank (Default)</p>
+<p>Country</p>
+<p>Date/Time</p>
+<p>E2B Code</p>
+<p>MedDRA Term/Code</p>
+<p>MedDRA Version</p>
+<p>Text</p>
+<p>For PMDA E2B (R3): Refer Mapping xls &gt; Mapping(Sheet) &gt; PMDA Data Type DTD (R3)</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r5c1-t3" headers="r1c1-t3">Data Length</td>
+<td class="cellalignment19" headers="r5c1-t3 r1c2-t3">Textbox
+<p>Length: 9 chars</p>
+</td>
+<td class="cellalignment19" headers="r5c1-t3 r1c3-t3">This text box allows user to enter only Numeric Values
+<p>For PMDA E2B (R3): Refer Mapping xls &gt;&nbsp;Mapping(Sheet) &gt;&nbsp; PMDA Length DTD (R3)</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r6c1-t3" headers="r1c1-t3">Mandatory Along with</td>
+<td class="cellalignment19" headers="r6c1-t3 r1c2-t3">Drop-down list</td>
+<td class="cellalignment19" headers="r6c1-t3 r1c3-t3">This drop-down list contains the DTD_ELEMENT names that are present under the same parent of the selected element (except the selected element itself), with blank as the first and the default option
+<p>Format: DTD_ELEMENT(DATA_ELEMENT)</p>
+<p>Display Order: Same as they are listed in the Element navigation tree on the left</p>
+<p>For PMDA E2B (R3): Refer Mapping xls &gt; Mapping(Sheet) &gt; Mandatory Along with</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r7c1-t3" headers="r1c1-t3">Allowed Value Check Required</td>
+<td class="cellalignment19" headers="r7c1-t3 r1c2-t3">Checkbox</td>
+<td class="cellalignment19" headers="r7c1-t3 r1c3-t3">This checkbox is left unchecked by default
+<p>For PMDA E2B (R3): Refer Mapping xls &gt;&nbsp;Mapping(Sheet) &gt;&nbsp; Allowed Values</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r8c1-t3" headers="r1c1-t3">Allowed Values</td>
+<td class="cellalignment19" headers="r8c1-t3 r1c2-t3">Button</td>
+<td class="cellalignment19" headers="r8c1-t3 r1c3-t3">Clicking this button opens up <span class="italic">Allowed value configuration</span> Dialog for configuring the allowed values for the selected elements against that profile
+<p>This button is enabled only if <span class="italic">Allowed Value Check Required</span> checkbox is checked</p>
+<p>For PMDA E2B (R3): Refer Mapping xls &gt;&nbsp;Mapping (Sheet) &gt;&nbsp; Allowed Values</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r9c1-t3" headers="r1c1-t3">Primary Validation Category</td>
+<td class="cellalignment19" headers="r9c1-t3 r1c2-t3">Drop-down list</td>
+<td class="cellalignment19" headers="r9c1-t3 r1c3-t3">This drop-down list is available for EMA profiles only.
+<p>The following option is listed in the drop-down list in the below specified order:</p>
+<p>Blank (Default)</p>
+<p>Mandatory</p>
+<p>Conditional Mandatory</p>
+<p>Do not enter</p>
+<p>Other Fatal Validation</p>
+<p>Optional</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r10c1-t3" headers="r1c1-t3">Additional Validations</td>
+<td class="cellalignment19" headers="r10c1-t3 r1c2-t3">Button</td>
+<td class="cellalignment19" headers="r10c1-t3 r1c3-t3">On clicking this button <span class="italic">Additional Validation Configuration</span> Dialog opens up, this Dialog enables users to configure the SQL based validations for the element.
+<p>This button is available for EMA.</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r11c1-t3" headers="r1c1-t3"><span class="bold">PMDA Specific</span></td>
+<td class="cellalignment19" headers="r11c1-t3 r1c2-t3">&nbsp;</td>
+<td class="cellalignment19" headers="r11c1-t3 r1c3-t3">&nbsp;</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r12c1-t3" headers="r1c1-t3">Reporting Category</td>
+<td class="cellalignment19" headers="r12c1-t3 r1c2-t3">Label</td>
+<td class="cellalignment19" headers="r12c1-t3 r1c3-t3">All Reporting Category (R3) Codes (AA, AB, AC, AD, AE, AF, AG, DA, DB, DC, DD, DE, DF, DG, BC, BD) as configured in the Reporting_category (flex code list) are listed here, along with Nullification.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r13c1-t3" headers="r1c1-t3">Reporting Category Description</td>
+<td class="cellalignment19" headers="r13c1-t3 r1c2-t3">Label</td>
+<td class="cellalignment19" headers="r13c1-t3 r1c3-t3">Description of the corresponding Reporting Category is listed here.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r14c1-t3" headers="r1c1-t3">Primary Validation Category</td>
+<td class="cellalignment19" headers="r14c1-t3 r1c2-t3">Drop-down list</td>
+<td class="cellalignment19" headers="r14c1-t3 r1c3-t3">This drop-down list is available for PMDA profile only.
+<p>The following option is listed in the drop-down list in the below specified order:</p>
+<p>Blank (Default)</p>
+<p>Mandatory</p>
+<p>Mandatory for Completion Report</p>
+<p>Conditional Mandatory for Completion Report</p>
+<p>Conditional Mandatory</p>
+<p>Do not Enter</p>
+<p>Other Fatal Validation</p>
+<p>Optional</p>
+<p>For PMDA E2B (R3): Refer Mapping xls &gt;&nbsp;Mapping (Sheet) &gt;&nbsp; Reporting Category wise Conformance</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r15c1-t3" headers="r1c1-t3">Additional Validations</td>
+<td class="cellalignment19" headers="r15c1-t3 r1c2-t3">Button</td>
+<td class="cellalignment19" headers="r15c1-t3 r1c3-t3">On clicking this button <span class="italic">Additional Validation Configuration</span>, the Dialog opens. This Dialog enables users to configure the SQL based validations for the element.
+<p>Available button available against each Reporting Category.</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r16c1-t3" headers="r1c1-t3">Save</td>
+<td class="cellalignment19" headers="r16c1-t3 r1c2-t3">Button</td>
+<td class="cellalignment19" headers="r16c1-t3 r1c3-t3">On clicking the Save button, the changes are committed to Data base and audit logged.
+<p>This committing of data includes any changes done in the <span class="italic">Allowed Value Configuration</span> and <span class="italic">Additional Validation Configuration</span> Dialogs as well.</p>
+<p>On clicking the Save button, the application logic validates that there exists a Primary category for the ICSR Element</p>
+<ul>
+<li>
+<p>In case of Non-PMDA profile: Element Level</p>
+</li>
+<li>
+<p>In case of PMDA: Reporting category level</p>
+</li>
+</ul>
+<p>If there exists a row with primary category as blank, the application displays an error message: <span class="italic">Please select a Primary Validation category for the element</span> Title: <span class="italic">ICSR Validation</span> with OK Button.</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r17c1-t3" headers="r1c1-t3">Print</td>
+<td class="cellalignment19" headers="r17c1-t3 r1c2-t3">Button</td>
+<td class="cellalignment19" headers="r17c1-t3 r1c3-t3">On clicking the print button, the application prints all the Conformance rule tab data.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" -->
+<p><span class="bold">The Allowed Values Configuration Dialog</span></p>
+<img width="793" height="575" src="img/allvalcnfg.jpg" alt="Surrounding text describes allvalcnfg.jpg." /><br />
+<p>On clicking <span class="italic">Allowed Values</span>, the <span class="italic">Allowed Values Configuration</span> Dialog (modal Dialog) opens. The <span class="italic">Allowed Values Configuration</span> Dialog lets users View, Add, Update, Delete and Associate/De-associate the Codes and Description attribute of the Allowed values for the particular ICSR element for that profile.</p>
+<p>Description for fields/buttons on the Allowed Values Configuration Dialog:</p>
+<div id="AEOBA130" class="tblformal">
+<p class="titleintable"><a id="sthref18"></a><a id="sthref19"></a>Table 3-1 Allowed Values Configuration Dialog fields</p>
+<table class="cellalignment20" title="Allowed Values Configuration Dialog fields" summary="config dial" dir="ltr">
+<tbody>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r1c1-t4">
+<p>Code textbox</p>
+</td>
+<td class="cellalignment19">
+<p>This is a textbox where user enters the Code value that is being transmitted in the ICSR report. For example, E2B R3 Codes, ISO code and so on.</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r2c1-t4">
+<p>Description textbox</p>
+</td>
+<td class="cellalignment19" headers="r2c1-t4">
+<p>This is a textbox where user enters the description against the Code that is being transmitted in the ICSR report.</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r3c1-t4">
+<p>Description (J) textbox</p>
+</td>
+<td class="cellalignment19" headers="r3c1-t4">
+<p>This is a textbox where user enters the Japanese description against the Code that is being transmitted in the ICSR report. This is visible only to J user (when J module is enabled) and only for PMDA Profile</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r4c1-t4">
+<p>Edit button</p>
+</td>
+<td class="cellalignment19" headers="r4c1-t4">
+<p>On clicking the edit button, the Code and Description textboxes become enabled for user to edit</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r5c1-t4">
+<p>Associate drop-down list</p>
+</td>
+<td class="cellalignment19" headers="r5c1-t4">
+<p>User associates or de-associates a validation against an element for the profile by selecting an option from the drop-down list.</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r6c1-t4">
+<p>Add button</p>
+</td>
+<td class="cellalignment19" headers="r6c1-t4">
+<p>On clicking the Add button, a new row is added to the grid, with Code, Description text boxes and Associate drop-down list enabled by default.</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r7c1-t4">
+<p>Delete button</p>
+</td>
+<td class="cellalignment19" headers="r7c1-t4">
+<p>Deleted button is disabled by default, and is enabled only if user selects a user created custom allowed value row in the grid</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" -->
+<p><span class="bold">The Additional Validation Configuration Dialog</span></p>
+<img width="991" height="661" src="img/addvalcnfg.gif" alt="Surrounding text describes addvalcnfg.gif." /><br />
+<p>Clicking <span class="italic">Additional Validations</span> displays the <span class="italic">Additional Validation Configuration</span> Dialog which lets the user View, Add, Update, Delete, Associate/De-associate, categorize and mark a validation to be Primary for the ICSR element of that profile.</p>
+<p>If user marks any validation as Primary, the Associated drop-down list is disabled by default.</p>
+<p>On unchecking the <span class="italic">Primary Validation</span> checkbox, the Primary validation checkbox for all other validations and the Associate and Validation Category drop-down lists for this particular validation are enabled.</p>
+<p>For EMA profiles, the Additional Validation can be configured at the element level, whereas for the PMDA profile the validation can be configured individually against each reporting category for that element.</p>
+<p>The OOTB validations are only allowed to be Associate, Disassociate, categorized or marked as primary for the element, and the Edit button always remains disabled for all such OOTB validations.</p>
+<p>Description for fields/buttons on the Additional Values Configuration Dialog:</p>
+<div id="AEOBA131" class="tblformal">
+<p class="titleintable"><a id="sthref20"></a><a id="sthref21"></a>Table 3-2 Additional Values Configuration Dialog fields</p>
+<table class="cellalignment20" title="Additional Values Configuration Dialog fields" summary="chap 3" dir="ltr">
+<tbody>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r1c1-t5">
+<p>Message Text area</p>
+</td>
+<td class="cellalignment19">
+<p>In this text area, the user specifies the message that is printed in the validation report in case of a failure validation.</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r2c1-t5">
+<p>Message (J) Text area</p>
+</td>
+<td class="cellalignment19" headers="r2c1-t5">
+<p>In this text area, the user specifies the Japanese message that is printed in the validation report in case of a failure validation. This is visible only to J user (when J module is enabled) and only for PMDA Profile.</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r3c1-t5">
+<p>Validation SQL Text area</p>
+</td>
+<td class="cellalignment19" headers="r3c1-t5">
+<p>In this text area, the user specifies the SQL condition for the validation that is executed in order to run this particular validation.</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r4c1-t5">
+<p>Edit button</p>
+</td>
+<td class="cellalignment19" headers="r4c1-t5">
+<p>On clicking the edit button, the Message and Validation SQL text areas becomes enabled for user to edit.</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r5c1-t5">
+<p>Associate Drop-down list</p>
+</td>
+<td class="cellalignment19" headers="r5c1-t5">
+<p>Lets the user associate or de-associate the allowed value for an element for the profile and has the following set of values:</p>
+<p>(R3) profiles that supports both Export &amp; Import, that is, EMA (R3)</p>
+<p>a. Blank (Validation not associated with this profile)</p>
+<p>b. Transmit (Validation only applicable during export)</p>
+<p>c. Receive (Validation only applicable during Import)</p>
+<p>d. Transmit &amp; Receive (Validation applicable for both Export &amp; Import)</p>
+<p>(R3) profiles that support Export but do not support the Import</p>
+<p>a. Blank (Validation not associated with this profile)</p>
+<p>b. Transmit (Validation only applicable during export)</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r6c1-t5">
+<p>Validation Category</p>
+</td>
+<td class="cellalignment19" headers="r6c1-t5">
+<p>User specifies the category of validation by selecting an option from this drop-down list.</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r7c1-t5">
+<p>Primary Validation checkbox</p>
+</td>
+<td class="cellalignment19" headers="r7c1-t5">
+<p>User marks a validation as primary validation against an element for the profile by checking this checkbox.</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r8c1-t5">
+<p>Add button</p>
+</td>
+<td class="cellalignment19" headers="r8c1-t5">
+<p>On clicking the Add button, a new row is added to the grid, with Message, Description text areas, Associate drop-down list and Validation Type drop-down list (blank) enabled by default.</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r9c1-t5">
+<p>Delete button</p>
+</td>
+<td class="cellalignment19" headers="r9c1-t5">
+<p>Deleted button is disabled by default, and is enabled only if user selects a user created custom validations row in the grid.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" --></div>
+<!-- class="sect4" -->
+<div id="AEOBA132" class="sect4"><!-- infolevel="all" infotype="General" --><a id="sthref22"></a>
+<h5 class="sect4">Using the Receive Tab</h5>
+<p>Use the following procedure to view details on the Receive Tab:</p>
+<ol>
+<li>
+<p>Select a profile from the Profile drop-down list.</p>
+</li>
+<li>
+<p>Click <span class="bold">Receive</span>.</p>
+</li>
+</ol>
+<p>The following table lists and describes the fields on the Receive tab:</p>
+<div class="inftblinformal">
+<table class="cellalignment17" summary="The following tables lists and describes the items on the Transmit tab." dir="ltr">
+<thead>
+<tr class="cellalignment11">
+<th class="cellalignment18" id="r1c1-t6">Item</th>
+<th class="cellalignment18" id="r1c2-t6">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r2c1-t6" headers="r1c1-t6">Import Mapping Logic: PL/SQL Code</td>
+<td class="cellalignment19" headers="r2c1-t6 r1c2-t6">Enables you to enter and view the PL/SQL code to be processed for the selected element of the profile during the import.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r3c1-t6" headers="r1c1-t6">Enable Post-Save checkbox</td>
+<td class="cellalignment19" headers="r3c1-t6 r1c2-t6">Enabled for Template and Custom profiles and is a profile level switch. When this checkbox is marked, then post-save routines are executed while importing an ICSR message.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r4c1-t6" headers="r1c1-t6">Extended ICSR</td>
+<td class="cellalignment19" headers="r4c1-t6 r1c2-t6">Enabled only for Custom profiles and is a profile level switch.
+<p>When this checkbox is marked, the profile is considered as an Extended ICSR Profile (ICSR+ Profile).</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r5c1-t6" headers="r1c1-t6">Current Element is part of Primary Key</td>
+<td class="cellalignment19" headers="r5c1-t6 r1c2-t6">When this checkbox is marked, this field is treated as part of the Primary key. Values in Primary keys are used for matching data in an existing case while importing Follow-up reports.
+<p>Based on the results, either a new record is created or an existing record is updated.</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r6c1-t6" headers="r1c1-t6">Select AE column as a part of Primary Key</td>
+<td class="cellalignment19" headers="r6c1-t6 r1c2-t6">Displays the Argus Case Form Database column name to which the current primary key E2B element is mapped.
+<p>This relationship compares the E2B element from the incoming follow-up report to the related Case Form database column name value in the target case to identify matching records in repeater sections.</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r7c1-t6" headers="r1c1-t6">Always Import for Initial/Follow-up reports</td>
+<td class="cellalignment19" headers="r7c1-t6 r1c2-t6">Governs the default UI behavior of the Import checkbox that appears against each element in the E2B Difference Report screen. If this checkbox is checked for an element, the corresponding checkbox on the E2B Difference Report screen also appears as checked and disabled. By enforcing the behavior of always importing that element, the user cannot uncheck the checkbox on the E2B difference screen.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r8c1-t6" headers="r1c1-t6">Configured Receive Logic</td>
+<td class="cellalignment19" headers="r8c1-t6 r1c2-t6">This drop-down lists the descriptive names (alphabetical order) for all the configured Import Mapping logic for the particular element across all the HL7 based ICSR profiles. The first value is blank and the last value is (Add New). This drop-down value is available for editing for all custom profiles and is read-only for OOTB Template profile.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" --></div>
+<!-- class="sect4" --></div>
+<!-- class="sect3" -->
+<div id="AEOBA133" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref23"></a>
+<h4 class="sect3">Using the Follow-up Receive Tab</h4>
+<p>A new tab <span class="bold">Follow-up Receive</span>, for configuring certain configuration attributes for the ICSR profile that are specific for the Follow-up imports of the ICSR file has been introduced. This tab is available be available for the (R3) based ICSR profiles that support the import (currently applicable for EMA and PMDA (R3)).</p>
+<img width="1006" height="557" src="img/Follow-upreceive.gif" alt="Surrounding text describes Follow-upreceive.gif." /><br />
+<p>To configure the validations rule against the ICSR element, following fields have been made available to user under the Follow-up Receive tab:</p>
+<div class="inftblinformal">
+<table class="cellalignment17" summary="tab" dir="ltr">
+<thead>
+<tr class="cellalignment11">
+<th class="cellalignment18" id="r1c1-t7"><span class="bold">Field</span></th>
+<th class="cellalignment18" id="r1c2-t7"><span class="bold">Type</span></th>
+<th class="cellalignment18" id="r1c3-t7"><span class="bold">Description</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r2c1-t7" headers="r1c1-t7">ICSR Follow-up case identification logic</td>
+<td class="cellalignment19" headers="r2c1-t7 r1c2-t7">Text Area</td>
+<td class="cellalignment19" headers="r2c1-t7 r1c3-t7">Profile level logic to identify the Follow-up case against the incoming ICSR.
+<p>OOTB default logic: Current Argus embedded logic</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r3c1-t7" headers="r1c1-t7">Custom comparison logic</td>
+<td class="cellalignment19" headers="r3c1-t7 r1c2-t7">Text Area
+<p>Default : Blank</p>
+</td>
+<td class="cellalignment19" headers="r3c1-t7 r1c3-t7">Profile level option to specify the logic to customize the OOTB PK driven Difference report data such that user can define a PL/SQL block with this section to control the Difference report data that will be further used during the case acceptance.
+<p>The order of execution for the Custom logic is that, first all the embedded OOTB system logic to build the comparison data are executed with application of Default deletes, and then once the embedded logic for Difference report execution is completed the configured custom comparison logic is invoked and the result of that custom logic is reflected on the difference report UI and further will be consumed during case data acceptance.</p>
+<p>The Configured custom logic is executed under the same DB user level access right as application does for import mapping SQL logic. Validate that under the same access right user is able to update, insert and delete the data of the Difference report table.</p>
+<p>Any changes to the custom logic are audit logged and are supported in the copy profile and print as well.</p>
+<p>Application provides all the possible Bind variable that this custom logic would require in order to define the business specific logic.</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r4c1-t7" headers="r1c1-t7">PK Element configuration</td>
+<td class="cellalignment19" headers="r4c1-t7 r1c2-t7">Download (Button)</td>
+<td class="cellalignment19" headers="r4c1-t7 r1c3-t7">This button facilitates the user to configure the PK's for identifying the repeater records in the ICSR file, so that those can be used while building the Difference report such that, if for a repeater record the configured PK elements are same in the incoming ICSR and the ICSR from the Case data then that record shall be treated as the same record.
+<p>On clicking of the Download button application will export a CSV file with all the PK's for that profile as per the attached sample.</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r5c1-t7" headers="r1c1-t7">PK Element configuration</td>
+<td class="cellalignment19" headers="r5c1-t7 r1c2-t7">Upload (Button)</td>
+<td class="cellalignment19" headers="r5c1-t7 r1c3-t7">On clicking the upload button the standard Argus upload dialogue appears
+<p>with fowling title and label:</p>
+<p>Title: ICSR Mapping Utility</p>
+<p>Label: ICSR PK Element Configuration</p>
+<p>Allowed File Types: CSV</p>
+<p>As soon as user uploads the CSV file with the application executes a validation over the uploaded file to in order to validate that the uploaded CSV file is as per the application expectations.</p>
+<ul>
+<li>
+<p>Profile: column lists only the name of the profile for which file is getting uploaded. In case of any mismatch an error is pushed into Val_error column (&lt;Profile Name&gt; is different than the current profile).</p>
+</li>
+<li>
+<p>PARENT_ELEMENT: The data in this column is validated to list down only those elements which have child elements to them in the current profile. In case of any incorrect entry an error is pushed into Val_error column (&lt;Parent Element&gt; is not a valid Parent element as per the current profile).</p>
+</li>
+<li>
+<p>DTD_ELEMENT: The data in this column is validated to list down only those elements are true child elements i.e. they are the exact root node of the xml. In case of any incorrect entry an error is pushed into Val_error column (&lt;DTD Element&gt; is not a valid Child element as per the current profile).</p>
+</li>
+<li>
+<p>DTD_ELEMENT: The data in this column is validated that the elements belongs to the Parent element as per the current profile. i.e. DRUGCHARACTERIZATION - Parent element is "DRUG" as per the EMA R3 OOTB Profile whereas in the uploaded CSV the parent for the same is mentioned as DRUGINDICATIONR3 then the error is pushed to the VAL_Error column (&lt;DTD Element&gt; doesn't belong to &lt;Parent Element&gt; as per the current profile).</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r6c1-t7" headers="r1c1-t7">&nbsp;</td>
+<td class="cellalignment19" headers="r6c1-t7 r1c2-t7">&nbsp;</td>
+<td class="cellalignment19" headers="r6c1-t7 r1c3-t7">
+<ul>
+<li>DEFAULT_DELETE: The data in this column is validated to see if it contains any value other than "Y" or "N". Where "Y" denotes that the repeater element will be marked for Deletion by default in case of no match with the incoming file. And "N" denotes that that the repeater block will not be marked for deletion by default. In case of any other value in the columns the error is pushed to the VAL_Error column (Incorrect value. Value should be either "Y" or "N").</li>
+<li>
+<p>DEFAULT_DELETE: The data in this column is validated to see the same value exist for all the rows for a particular PARENT_ELEMENT i.e. for all the rows for a particular parent element the value for DEFAULT_DELETE should be same. In case of validation failure the error is pushed to the VAL_Error column (All the values corresponding to &lt;PARENT_ELEMENT&gt; should be same).</p>
+</li>
+<li>
+<p>None of the four columns "PROFILE", "PARENT_ELEMENT", "DTD_ELEMENT" &amp; "DEFAULT_DELETE" are blank for either of the row. In cases any of them is blank the error is pushed to the VAL_ERROR column(&lt;Column Name(comma separated)&gt; cannot be blank).</p>
+</li>
+<li>
+<p>As soon as user upload the CSV file all the above validation is executed and in case there are any errors the file with the error listed in VAL_ERROR column is pushed to user from the browser (all these operations shall be performed within the upload user action). Also, if there are any validation errors the uploaded file data is not reflected into the DB configurations i.e. only a file without any validation errors can be committed to DB.</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r7c1-t7" headers="r1c1-t7">&nbsp;</td>
+<td class="cellalignment19" headers="r7c1-t7 r1c2-t7">&nbsp;</td>
+<td class="cellalignment19" headers="r7c1-t7 r1c3-t7">
+<ul>
+<li>All the changes to the PK's are audit logged.
+<p>The VAL_ERROR column is only present in CSV file only when there are any errors to the uploading file. It is not be present in the normal downloaded or uploaded file.</p>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" --></div>
+<!-- class="sect3" -->
+<div id="AEOBA134" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref24"></a>
+<h4 class="sect3">Printing a Profile</h4>
+<p>Use the following procedure to print a profile.</p>
+<ol>
+<li>
+<p>Select the profile to print from the Profile list.</p>
+</li>
+<li>
+<p>Click <span class="bold">Print</span>. This prints a PDF of the selected profile.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<div id="AEOBA135" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref25"></a>
+<h4 class="sect3">Copying a Profile</h4>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The Copy Profile option can be used to create custom ICSR profiles with customized Export / Import mapping logic for any ICSR element. However, any new changes / fixes applied to factory ICSR profiles are not automatically applied on the custom ICSR profiles. Hence, the custom profile logic may get obsolete by any Argus Safety version upgrade which has changes / fixes applied to factory ICSR profiles. In such a scenario, customers should re-create their custom ICSR profile again, by copying the new factory ICSR profile and applying their custom Export / Import mapping logic manually.</div>
+<p>Use the following procedure to copy a profile.</p>
+<ol>
+<li>
+<p>Select the profile to copy from the Profile list.</p>
+</li>
+<li>
+<p>Click <span class="bold">Copy Profile</span>, to open the Copy Profile dialog box.</p>
+</li>
+<li>
+<p>Type the profile name in the To Profile field, and click <span class="bold">Save</span>.</p>
+<img width="618" height="320" src="img/copy.gif" alt="Surrounding text describes copy.gif." /><br /></li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<div id="AEOBA136" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref26"></a>
+<h4 class="sect3">Deleting a Profile</h4>
+<p>You can only delete profiles created or modified in the Interchange Mapping interface. You cannot delete Template profiles.</p>
+<p>Use the following procedure to delete a profile.</p>
+<ol>
+<li>
+<p>Select a custom profile to delete from the Profile list. The system enables the Delete button.</p>
+<img width="1009" height="589" src="img/delete.gif" alt="Surrounding text describes delete.gif." /><br /></li>
+<li>
+<p>Click <span class="bold">Delete</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Yes</span> to confirm.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CBDCBGJG"></a>
+<div id="AEOBA137" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Comparing Profiles</h3>
+<p>You can compare two DTD profiles to find element-level differences in their Transmit section only. Select a source profile in the left pane and a target profile in the right pane and run the Compare Profiles utility to generate the differences. Compare Profiles also lets you update the SQL statements (at the element level) of the Destination Profile elements with those of the Source Profile.</p>
+<p>To compare profiles:</p>
+<ol>
+<li>
+<p>On the Argus Interchange Mapping menu, click Compare Profiles.</p>
+</li>
+<li>
+<p>When the system opens the Compare Profiles dialog box, use the items in the Compare Profiles dialog to compare profiles.</p>
+<img width="994" height="629" src="img/compare.gif" alt="Surrounding text describes compare.gif." /><br /></li>
+<li>
+<p>Enter the data in the files.</p>
+</li>
+</ol>
+<div id="AEOBA138" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref27"></a>
+<h4 class="sect3">Comparing Profile Dialog Box Fields</h4>
+<p>The following table lists and describes the fields on the Compare Profile dialog box.</p>
+<div class="inftblinformal">
+<table class="cellalignment17" summary="The following table lists and describes the fields in the Compare Profile dialog box." dir="ltr">
+<thead>
+<tr class="cellalignment11">
+<th class="cellalignment18" id="r1c1-t9">Item</th>
+<th class="cellalignment18" id="r1c2-t9">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r2c1-t9" headers="r1c1-t9">Source Profile drop-down</td>
+<td class="cellalignment19" headers="r2c1-t9 r1c2-t9">Is used for selecting a source profile from the available profiles configured in the system.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r3c1-t9" headers="r1c1-t9">Destination Profile drop-down</td>
+<td class="cellalignment19" headers="r3c1-t9 r1c2-t9">Displays the profiles with the same version and type (message/acknowledgement) as the ones in the Source profile.
+<p>Note: The source profile is to be selected before selecting the destination profile. The destination profile is disabled if you have not selected the source profile.</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r4c1-t9" headers="r1c1-t9">Show Difference Only</td>
+<td class="cellalignment19" headers="r4c1-t9 r1c2-t9">Displays those nodes that contain different SQL statements between the source and destination profiles when this checkbox is checked.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r5c1-t9" headers="r1c1-t9">Compare</td>
+<td class="cellalignment19" headers="r5c1-t9 r1c2-t9">Compares the differences between the source and destination profiles when this button is clicked.
+<p>Note: The elements that are different in the Source and Destination profiles are displayed in a light gray background color.</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r6c1-t9" headers="r1c1-t9">Source Profile pane</td>
+<td class="cellalignment19" headers="r6c1-t9 r1c2-t9">Displays the source profile and its elements in a tree structure. When you click on any of the elements, the corresponding SQL statements are displayed on the source profile textbox, which is on the left-corner below the Source Profile pane.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r7c1-t9" headers="r1c1-t9">Destination Profile pane</td>
+<td class="cellalignment19" headers="r7c1-t9 r1c2-t9">Displays the destination profile and its elements in a tree structure. When you click on any of the elements, the corresponding SQL statements are displayed on the Destination profile textbox, which is on the right-corner below the Destination Profile pane.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r8c1-t9" headers="r1c1-t9">Print</td>
+<td class="cellalignment19" headers="r8c1-t9 r1c2-t9">Prints all the SQL statements of the source and the destination profile with differences highlighted.
+<p>Note: If there are no differences between the source and destination profiles, the following pop-up message appears: "No differences found and no report is printed."</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r9c1-t9" headers="r1c1-t9">Update</td>
+<td class="cellalignment19" headers="r9c1-t9 r1c2-t9">Updates the individual SQL statements related to each element. Clicking the Update button also updates SQL statements in the destination profile.
+<p>Note: The Update button is enabled when the nodes with different SQL statements are clicked.</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r10c1-t9" headers="r1c1-t9">Update All</td>
+<td class="cellalignment19" headers="r10c1-t9 r1c2-t9">Updates all the differences in SQL statements across all the elements between the source and destination profiles.
+<p>Note: When a user clicks the Update All button, the following pop-up message appears: "Are you sure you want to update all the SQL statements in Destination Profile with Source Profile?" Clicking Yes updates all the SQL statements whereas clicking No does not update.</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r11c1-t9" headers="r1c1-t9">Close</td>
+<td class="cellalignment19" headers="r11c1-t9 r1c2-t9">Closes the Compare Profiles window.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" -->
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The Update and Update All buttons are never enabled when the profile selected from the Destination Profile is of the type template.</div>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CBDFFJHG"></a>
+<div id="AEOBA139" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">ICSR Codes Translation</h3>
+<p>ICSR Codes Translation enables you to configure rules to translate the ICSR codes and values in the incoming ICSR reports, which come from different trading partners to preferred values in the AE system during case creation.</p>
+<p>Go to Argus Console -&gt; System Configuration -&gt; Interchange Mapping -&gt; ICSR Translation Codes to open the ICSR Code Translation screen.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Argus Console -&gt; Interchange Mapping -&gt; ICSR Code Translation has been enhanced to list all (R3) elements in addition to the existing elements in the DTD Element Name drop-down list as specified in Codelist Translation column of the Import Mapping xls. The values in this drop-down list are filtered based on what is selected in the newly added ICSR Type drop-down list, that is, if (R2) is selected, then all (R2) elements are listed and if (R3) is selected, all (R3) elements are listed.</div>
+<div id="AEOBA140" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref28"></a>
+<h4 class="sect3">Configuring ICSR Codes Translation</h4>
+<p>Use the following procedure to configure ICSR Codes Translation.</p>
+<ol>
+<li>
+<p>Select the Agency Name from the drop-down list box to display the Elements and their descriptions.</p>
+</li>
+<li>
+<p>Click on the respective field to edit the Element Name, Input Value, Output Value, and Element Description.</p>
+</li>
+<li>
+<p>Click <span class="bold">Save</span> to save your changes.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<div id="AEOBA141" class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref29"></a>
+<h4 class="sect3">ICSR Codes Translation Fields</h4>
+<img width="1239" height="759" src="img/icsrcode.jpg" alt="Surrounding text describes icsrcode.jpg." /><br />
+<p>The following table lists and describes the fields on the ICSR Codes Translation screen.</p>
+<div class="inftblinformal">
+<table class="cellalignment17" summary="The following table lists and describes the fields on the E2B Codes Translation screen." dir="ltr">
+<thead>
+<tr class="cellalignment11">
+<th class="cellalignment18" id="r1c1-t12">Item</th>
+<th class="cellalignment18" id="r1c2-t12">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r2c1-t12" headers="r1c1-t12">Agency Name</td>
+<td class="cellalignment19" headers="r2c1-t12 r1c2-t12">Enables the user to select an agency name from the drop-down list box. This drop-down lists the agencies configured with the (R3) profile (that supports the import of ICSRs) under the EDI tab (applicable for PMDA (R3) and EMA (R3) along with the (R2) agencies.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r3c1-t12" headers="r1c1-t12">#</td>
+<td class="cellalignment19" headers="r3c1-t12 r1c2-t12">Displays the serial number.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r4c1-t12" headers="r1c1-t12">ICSR Type</td>
+<td class="cellalignment19" headers="r4c1-t12 r1c2-t12">Enables the user to configure the translation code at the ICSR message type level. It lists two values (R2) (default) and (R3), and is enabled by default when the user creates any new entry to translation configuration.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r5c1-t12" headers="r1c1-t12">Element Name</td>
+<td class="cellalignment19" headers="r5c1-t12 r1c2-t12">Displays the element name.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r6c1-t12" headers="r1c1-t12">Input Value</td>
+<td class="cellalignment19" headers="r6c1-t12 r1c2-t12">Displays the type of input value.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r7c1-t12" headers="r1c1-t12">Output Value</td>
+<td class="cellalignment19" headers="r7c1-t12 r1c2-t12">Displays the type of output value.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" --></div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CBDDGJJB"></a>
+<div id="AEOBA142" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Viewing the Audit Log</h3>
+<p>The Audit Log stores changes made to the system from the application. You can also view and filter individual changes.</p>
+<p>Use the following procedure to view the Audit Log:</p>
+<ol>
+<li>
+<p>On the Argus Interchange Mapping menu, click View Audit Log.</p>
+</li>
+<li>
+<p>When the system opens the Audit Log dialog box, enter the appropriate data in each field and click Search.</p>
+<img width="885" height="59" src="img/auditselect.gif" alt="Surrounding text describes auditselect.gif." /><br />
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+For more information on Audit Log Dialog box fields, see <a href="#CBDEGBCE">Audit Log Dialog Box Fields</a>.</div>
+</li>
+<li>
+<p>When the system displays the search results, double-click a row to view detailed information about the changes made in the Audit Log Detail dialog box.</p>
+<img width="994" height="201" src="img/logdetails.gif" alt="Surrounding text describes logdetails.gif." /><br /></li>
+<li>
+<p>Select an item in the list at the bottom of the Audit Log Details dialog to view details of the old and new values of the selected item.</p>
+<img width="1013" height="640" src="img/auditlogdetails.gif" alt="Surrounding text describes auditlogdetails.gif." /><br /></li>
+</ol>
+<a id="CBDEGBCE"></a>
+<div id="AEOBA143" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Audit Log Dialog Box Fields</h4>
+<p>The following table lists and describes the fields on the Audit Log dialog box.</p>
+<div class="inftblinformal">
+<table class="cellalignment17" summary="The following table lists and describes the fields in the Audit Log dialog box." dir="ltr">
+<thead>
+<tr class="cellalignment11">
+<th class="cellalignment18" id="r1c1-t14">Item</th>
+<th class="cellalignment18" id="r1c2-t14">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r2c1-t14" headers="r1c1-t14">From</td>
+<td class="cellalignment19" headers="r2c1-t14 r1c2-t14">Enter the search start date.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r3c1-t14" headers="r1c1-t14">To</td>
+<td class="cellalignment19" headers="r3c1-t14 r1c2-t14">Enter the search end date.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r4c1-t14" headers="r1c1-t14">Range</td>
+<td class="cellalignment19" headers="r4c1-t14 r1c2-t14">Select a pre-configured date range on for the search.
+<p>Note: When the Argus Interchange Audit log is invoked, it shows the default range of the last 7 days.</p>
+</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r5c1-t14" headers="r1c1-t14">User Name</td>
+<td class="cellalignment19" headers="r5c1-t14 r1c2-t14">Select a user from the list of users.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r6c1-t14" headers="r1c1-t14">Print</td>
+<td class="cellalignment19" headers="r6c1-t14 r1c2-t14">Prints the current view.</td>
+</tr>
+<tr class="cellalignment11">
+<td class="cellalignment19" id="r7c1-t14" headers="r1c1-t14">Search</td>
+<td class="cellalignment19" headers="r7c1-t14 r1c2-t14">Performs the search.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" --></div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CHDHDDAA"></a>
+<div id="AEOBA144" class="sect2">
+<h3 class="sect2">ICSR Extensions</h3>
+<p>For details on ICSR extensions, refer to the ICSR Extensibility guide available through the <span class="italic">Technical Reference Manuals</span> link on the Argus Safety OHC page.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment10">
+<tr>
+<td class="cellalignment19">
+<table class="cellalignment15">
+<tr>
+<td class="cellalignment14"><a href="config.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment14"><a href="e2bcheck.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment22">
+<table class="cellalignment13">
+<tr>
+<td class="cellalignment14"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment14"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment14"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment14"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

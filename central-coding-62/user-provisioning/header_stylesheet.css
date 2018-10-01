@@ -1,0 +1,84 @@
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//
+//																xHtml Template 2016 StyleSheet
+//																			header
+//
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+#oracleImage {
+	width: 108px;
+	height: 50px;
+	margin: 0 25px 0 50px;
+	border: 0;
+	padding: 0;
+	display: inline-block;
+}
+
+.titles {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.titles p.firstTitle {
+	margin: 0;
+	color: white;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.titles p.secondTitle {
+	margin: 0;
+	color: white;
+}
+
+
+/* Search Bar */
+
+#SearchText {
+	margin: 0;
+	border: 0;
+	padding: 0 0 0 4%;
+	width: 98%;
+	height: 29px;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	background-color: #FAFAFA;
+}
+
+input:placeholder-shown {
+	font-style: italic;
+}
+
+input:-webkit-autofill {
+	-webkit-box-shadow: inset 0 0 0px 9999px white;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+#SearchButton {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	height: 100%;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	background-image: url(magnifyingGlass.png);
+	background-repeat: no-repeat;
+	background-position: left;
+	background-size: 100% 100%;
+	background-color: #ffffff;
+}
+
+#SearchText:focus,
+#SearchButton:focus {
+	outline: none;
+}
+
+#SearchButton:hover {
+	background-image: url(magnifyingGlassHover.png);
+}

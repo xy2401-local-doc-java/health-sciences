@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Setting Up the Classification System</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2018-05-25T8:2:33Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Life Sciences Data Hub System Administrator's Guide" />
+<meta name="dcterms.identifier" content="E95829-01" />
+<meta name="dcterms.isVersionOf" content="LSHAG" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2006, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="printers.htm" title="Previous" type="text/html" />
+<link rel="Next" href="secsetup.htm" title="Next" type="text/html" />
+<link rel="alternate" href="LSHAG.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="LSHAG.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="LSHAG.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">11/24</span> <!-- End Header -->
+<div id="LSHAG319" class="chapter"><a id="CHDIIFDB"></a>
+<h1 class="chapter"><span class="secnum">8</span> Setting Up the Classification System</h1>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#CHDJIEJA">About Classification</a></p>
+</li>
+<li>
+<p><a href="#BABGHJAB">Creating and Maintaining Hierarchies</a></p>
+</li>
+<li>
+<p><a href="#BABFJHGC">Assigning Levels to Object Subtypes</a></p>
+</li>
+</ul>
+<p>See also:</p>
+<ul>
+<li>
+<p><a class="olink LSHIM291" href="../LSHIM/class.htm#LSHIM291">"Designing a Classification System for Searching and Browsing"</a> in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Implementation Guide</span></span></p>
+</li>
+<li>
+<p><a href="secsetup.htm#CEGIFJIH">Creating and Maintaining Object Subtypes</a></p>
+</li>
+</ul>
+<a id="CHDJIEJA"></a>
+<div id="LSHAG320" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">About Classification</h2>
+<p>The Oracle Life Sciences Data Hub (Oracle LSH) classification system allows you to define a set of labels and use them to label, or classify, every defined object, output, and visualization in Oracle LSH. Users can search and browse for an object or output by its classifications.</p>
+<p>The classification system consists of a set of hierarchies. A hierarchy can contain multiple logically related levels (such as Project/Study/Site) where the values, or terms, defined for each level are logically related to a single term in the next higher level (for example, the site Mercy Hospital is related to its study, Study01, which is related to its project, Project Wonderdrug.) an Oracle LSH "hierarchy" can also consist of a single level, in which case its terms function as a list of values.</p>
+<p>Classification brings order to the potentially huge number of defined objects and outputs contained in the Life Sciences Data Hub. The Outputs and Visualizations subtabs under the Reports tab display reports, submission forms, and visualizations according to the classification hierarchies you define and the classification terms that Definers assign to outputs, similar to the file system on a PC.</p>
+<p>For example, in the Reports tab a user can click on the Project/Study/Site hierarchy. Oracle LSH then displays all the project names defined as terms in the Project hierarchy level. If the user clicks on Project Wonderdrug, for example, Oracle LSH displays folders for all the studies that are part of the Wonderdrug project (including Study01) and also all the reports that are classified to Project Wonderdrug as a whole. If the user clicks on Study01, Oracle LSH displays folders for all the sites that are part of Study01 (including Mercy Hospital) as well as all reports that are classified to Study01 as a whole. If the user clicks on Mercy Hospital, Oracle LSH displays all reports classified to Mercy Hospital.</p>
+<p>Further information is available in the chapter <a class="olink LSHIM291" href="../LSHIM/class.htm#LSHIM291">"Designing a Classification System"</a> in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Implementation Guide</span></span>.</p>
+<p>You must create the following:</p>
+<ul>
+<li>
+<p><span class="bold">Hierarchies</span>. A hierarchy consists of one or more named levels in a strict linear hierarchical order. Each level can have only one child level. You can define any number of levels.</p>
+</li>
+<li>
+<p><span class="bold">Hierarchy Levels</span>. Each hierarchy must include at least one level. If a hierarchy has multiple levels, they must be logically related. For each object subtype, you must specify at least one hierarchy level to which objects of that subtype can be classified.</p>
+</li>
+<li>
+<p><span class="bold">Terms</span>. A term is a specific value belonging to a hierarchy level. In each hierarchy level you must add meaningful terms to assign to objects. In a multilevel hierarchy, each term must be logically and definitionally related to a term in the level above. When a Definer assigns a term to an object, the object is classified to that term and users can search for the object by its classification.</p>
+</li>
+</ul>
+<p>You can add classification hierarchies and values at any time. <a href="#CEGCEFJH">Figure 8-1</a> is a flowchart of the setting up process of the Classification System.</p>
+<p><a id="LSHAG321"></a><span class="subhead3">Required Role&nbsp;</span>You must have the Classification Administrator application role to access any of the screens under the Classification tab in the user interface and to perform any of the tasks covered in this section. See <a href="secsetup.htm#BABHJHDE">"Setting Up Specialized Administrators"</a> for information on assigning that role.</p>
+<div id="LSHAG322" class="figure">
+<p class="titleinfigure"><a id="CEGCEFJH"></a>Figure 8-1 Flowchart for Setting Up Classification System</p>
+<img width="811" height="402" src="img/class_setup.gif" alt="Description of Figure 8-1 follows" /><br />
+<a id="sthref22" href="img_text/class_setup.htm">Description of ''Figure 8-1 Flowchart for Setting Up Classification System''</a><br />
+<br /></div>
+<!-- class="figure" --></div>
+<!-- class="sect1" -->
+<a id="BABGHJAB"></a>
+<div id="LSHAG324" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Creating and Maintaining Hierarchies</h2>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#CEGJIAEB">Creating Hierarchies</a></p>
+</li>
+<li>
+<p><a href="#BABJAEJD">Adding Levels to Hierarchies</a></p>
+</li>
+<li>
+<p><a href="#BABFAAJH">Activating the Hierarchy and Making it Usable or Unusable</a></p>
+</li>
+<li>
+<p><a href="#BABEEAGJ">Adding Terms to Levels</a></p>
+</li>
+<li>
+<p><a href="#BABHCFBH">Modifying Hierarchies and Terms</a></p>
+</li>
+</ul>
+<a id="CEGJIAEB"></a>
+<div id="LSHAG325" class="sect2">
+<h3 class="sect2">Creating Hierarchies</h3>
+<p>To create a classification hierarchy, go to the Hierarchy subtab of the Classifications tab and do the following. For information about designing a system of classification hierarchies, see <a class="olink LSHIM297" href="../LSHIM/class.htm#LSHIM297">"Defining Classification Hierarchies"</a> in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Implementation Guide</span></span>.</p>
+<ol>
+<li>
+<p>Click <span class="bold">Add Hierarchy</span>. The Create Hierarchy screen appears.</p>
+</li>
+<li>
+<p>Enter values in the following fields:</p>
+<ul>
+<li>
+<p><span class="bold">Name</span></p>
+</li>
+<li>
+<p><span class="bold">Description</span></p>
+</li>
+<li>
+<p><span class="bold">Keyword Hierarchy</span>. Set a value for the Keyword Hierarchy.</p>
+<p>Select <span class="bold">Yes</span> to make the hierarchy a keyword hierarchy. Keyword hierarchies can have only one level and are not used to display outputs in the Reports screen. Keyword hierarchies can be used in advanced searches.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Save and Continue</span>. The Maintain Hierarchy screen appears with blank rows for defining levels. See <a href="#BABJAEJD">"Adding Levels to Hierarchies"</a>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BABJAEJD"></a>
+<div id="LSHAG327" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Adding Levels to Hierarchies</h3>
+<p>You must define at least one level for every hierarchy. You must define the topmost level first, then the next lower level, and so on.</p>
+<p>To add a level, do the following:</p>
+<ol>
+<li>
+<p>Enter values in the following fields:</p>
+<ul>
+<li>
+<p><span class="bold">Name</span></p>
+</li>
+<li>
+<p><span class="bold">Description</span></p>
+</li>
+<li>
+<p><span class="bold">Entry Length</span>. The number of characters allowed for a term in this classification level. The maximum is 300.</p>
+</li>
+<li>
+<p><span class="bold">Term Uniqueness</span>. Select one of the following values to determine the way Oracle LSH enforces the uniqueness requirement for terms in the level:</p>
+<ul>
+<li>
+<p><span class="bold">Unique Within Level</span>. Each term contained in this level must be unique relative to other terms in the same level.</p>
+</li>
+<li>
+<p><span class="bold">Unique Within Parent</span>. Each term contained in this level must be unique relative to the other terms in the level that are related to the same parent term.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="bold">Allow Classification</span></p>
+<ul>
+<li>
+<p>If selected, and if the hierarchy as a whole is set to Active, you can assign this level to object subtypes. Definers can then classify objects of those subtypes to values you define for the level.</p>
+</li>
+<li>
+<p>If cleared, you cannot assign the level to object subtypes and definers cannot classify objects to the level. Oracle LSH uses terms in this level solely as folders in the Reports screen to organize folders in the next lower level.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Repeat this procedure to add another level. Click <span class="bold">Add Hierarchy Level</span> to add additional rows.</p>
+</li>
+<li>
+<p>Click <span class="bold">Apply</span>. The system saves the changes and the Maintain Hierarchy screen appears.</p>
+</li>
+</ol>
+<p>To add a level after you have clicked <span class="bold">Apply</span>, click <span class="bold">Update</span>.</p>
+<p>After creating a hierarchy, you must activate it before you can use it. See <a href="#BABFAAJH">"Activating the Hierarchy and Making it Usable or Unusable"</a>. You can remove and reorder a hierarchy level only if its owning hierarchy is not set to Active.</p>
+<div id="LSHAG328" class="sect3"><a id="sthref23"></a>
+<h4 class="sect3">Reorder Hierarchy Levels</h4>
+<p>To change the order of the levels in a hierarchy, do the following:</p>
+<ol>
+<li>
+<p>Click <span class="bold">Reorder</span>. The Reorder shuttle appears.</p>
+</li>
+<li>
+<p>Select the level you want to move and click the <span class="bold">Up</span> and <span class="bold">Down</span> arrows to move it in relation to the other levels.</p>
+</li>
+<li>
+<p>Click <span class="bold">Apply</span>. The system returns to the Maintain Hierarchy screen with the levels in the new order.</p>
+<p>Or click <span class="bold">Cancel</span> to discard your changes and return to the Maintain Hierarchy screen.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<div id="LSHAG329" class="sect3"><a id="sthref24"></a>
+<h4 class="sect3">Remove Hierarchy Levels</h4>
+<p>To remove a level, select it and click <span class="bold">Remove</span>. If you remove a level, the system adjusts the order number of any remaining levels so that the order numbers start at one (1) and are consecutive.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BABFAAJH"></a>
+<div id="LSHAG331" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Activating the Hierarchy and Making it Usable or Unusable</h3>
+<p>When you have finished defining the hierarchy and its levels, make a hierarchy active and usable.</p>
+<p>When a hierarchy's Active flag is set to Yes:</p>
+<ul>
+<li>
+<p>You can add terms to the levels in the hierarchy.</p>
+</li>
+<li>
+<p>However, you cannot add levels to an active hierarchy.</p>
+</li>
+<li>
+<p>You can never change the setting back to No.</p>
+</li>
+</ul>
+<p>When a hierarchy's Usable flag is set to Yes:</p>
+<ul>
+<li>
+<p>You can assign the hierarchy to object subtypes.</p>
+</li>
+<li>
+<p>You can set it back to No as long as it is not assigned to any subtypes.</p>
+</li>
+</ul>
+<p><a id="LSHAG332"></a><span class="subhead3">Activate and Make Usable&nbsp;</span>To activate a hierarchy, do the following:</p>
+<ol>
+<li>
+<p>In the hierarchy's main screen, click <span class="bold">Update</span>. The fields become enterable.</p>
+</li>
+<li>
+<p>Set <span class="bold">Active</span> to <span class="bold">Yes</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Apply</span>. The system also sets <span class="bold">Usable</span> to <span class="bold">Yes</span>.</p>
+</li>
+</ol>
+<p><a id="LSHAG333"></a><span class="subhead3">Make Unusable&nbsp;</span>If you prefer not to make the hierarchy usable at this time, do the following:</p>
+<ol>
+<li>
+<p>Click <span class="bold">Update</span>. The fields become enterable.</p>
+</li>
+<li>
+<p>Set <span class="bold">Usable</span> to No.</p>
+</li>
+<li>
+<p>Click <span class="bold">Apply</span>.</p>
+</li>
+</ol>
+<p>You can change the Usable setting to Yes at any time.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABEEAGJ"></a>
+<div id="LSHAG335" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Adding Terms to Levels</h3>
+<p>All terms in levels below the top level must be related to a term in the next higher level. You must begin by defining at least one term in the highest level. You can then add terms related to that term (child terms) in the second level, and then define child terms for those terms in the third level, and so on.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+You can add terms only to active hierarchies. See <a href="#BABFAAJH">"Activating the Hierarchy and Making it Usable or Unusable"</a>.</div>
+<p>To add terms to classification hierarchy levels, go to the Terms subtab of the Classifications tab and do the following:</p>
+<ol>
+<li>
+<p>Navigate to the hierarchy for which you want to define values.</p>
+<ul>
+<li>
+<p>If the hierarchy already has terms, you can expand its node (+) to see them. Add a term by clicking the pencil icon in the Maintain Terms column for the parent term (the term in the next higher level that is related to the term you are adding).</p>
+<p>If you are adding a term in the highest level, click the Maintain Terms icon for the hierarchy itself.</p>
+</li>
+<li>
+<p>If the hierarchy does not contain any terms, you must begin by creating a term in the highest level by clicking the pencil icon in the Maintain Terms column for the hierarchy.</p>
+</li>
+</ul>
+<p>The Maintain Hierarchy Terms screen opens.</p>
+</li>
+<li>
+<p>If there are no blank rows, click <span class="bold">Add 5 Hierarchy Terms</span>. Five empty rows appear.</p>
+</li>
+<li>
+<p>Enter values in the following fields for each new term:</p>
+<ul>
+<li>
+<p><span class="bold">Name</span>. Enter the term itself as you want it to appear in the user interface for classifying objects. The name must conform to the length and uniqueness rules defined for its hierarchy level.</p>
+</li>
+<li>
+<p><span class="bold">Approved</span>. Select <span class="bold">Approved</span> to activate the Term. Only approved terms can be used as default classifications for object subtypes and for object classifications.</p>
+<p>You can select the Approved flag at any time. You can clear (disapprove) a term only if the term has not been used and does not have any approved child terms.</p>
+<p>For example, if Project Wonderdrug is related to Study01, and Study01's Approval flag is selected, you cannot clear the Approval flag for Project Wonderdrug.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Apply</span> to save your work. The Hierarchy Terms screen appears.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BABHCFBH"></a>
+<div id="LSHAG337" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Modifying Hierarchies and Terms</h3>
+<p>To modify a Classification Hierarchy, click <span class="bold">Update</span> in the Maintain Hierarchy Screen. Click <span class="bold">Apply</span> after making changes.</p>
+<p>You can modify attributes as follows:</p>
+<ul>
+<li>
+<p><span class="bold">Name</span>. You can modify the name of the hierarchy. The system automatically updates the hierarchy name everywhere it appears in the user interface, including the classification screen for all objects classified to the hierarchy</p>
+</li>
+<li>
+<p><span class="bold">Description</span>. You can modify the description.</p>
+</li>
+<li>
+<p><span class="bold">Keyword Hierarchy</span>. You cannot modify the Keyword Hierarchy attribute.</p>
+</li>
+<li>
+<p><span class="bold">Active</span>. You can change a hierarchy's Active setting from <span class="bold">No</span> to <span class="bold">Yes</span> at any time. However, once set to <span class="bold">Yes</span>, you can never set it back to <span class="bold">No</span>.</p>
+</li>
+<li>
+<p><span class="bold">Usable</span>. When you set <span class="bold">Active</span> to <span class="bold">Yes</span>, the system automatically changes the hierarchy's Usable setting to <span class="bold">Yes</span>. You can change it back to <span class="bold">No</span> only if the hierarchy has not been assigned to any object subtype. A hierarchy is available for use only when its Usable autoboot is set to <span class="bold">Yes</span>.</p>
+</li>
+</ul>
+<p><a id="LSHAG338"></a><span class="subhead3">Modifying Hierarchy Levels&nbsp;</span>You can modify level attributes as follows:</p>
+<ul>
+<li>
+<p><span class="bold">Name</span>. You can modify the level name. The system automatically updates the level name everywhere it appears in the user interface, including the classification screen for all objects classified to the level or a level below it in the same hierarchy.</p>
+</li>
+<li>
+<p><span class="bold">Description</span>. You can modify the description.</p>
+</li>
+<li>
+<p><span class="bold">Entry Length</span>. You can modify the Entry length.</p>
+</li>
+<li>
+<p><span class="bold">Term Uniqueness</span>. You cannot modify the Term Uniqueness attribute.</p>
+</li>
+<li>
+<p><span class="bold">Allow Classification</span>. You cannot modify the Allow Classification attribute.</p>
+</li>
+</ul>
+<p><a id="LSHAG339"></a><span class="subhead3">Modifying Terms&nbsp;</span>To modify a term:</p>
+<ol>
+<li>
+<p>Go to the <span class="bold">Terms</span> subtab in the <span class="bold">Classifications</span> tab.</p>
+</li>
+<li>
+<p>Navigate to the hierarchy that contains the term you want to modify.</p>
+</li>
+<li>
+<p>Click the pencil icon in the Maintain Terms column of the <span class="italic">parent</span> of the term you want to update.</p>
+</li>
+<li>
+<p>You can modify term attributes as follows:</p>
+<ul>
+<li>
+<p><span class="bold">Name</span>. You can modify the name, which is the term itself. If you change the name, the system automatically updates the classification of any objects that are classified to the term.</p>
+</li>
+<li>
+<p><span class="bold">Approved</span></p>
+<ul>
+<li>
+<p>You can change a term's Approved setting from <span class="bold">No</span> to <span class="bold">Yes</span> at any time.</p>
+</li>
+<li>
+<p>You can change the Approved setting from <span class="bold">Yes</span> to <span class="bold">No</span> only if the term has not been used either as a default classification for an object subtype or to classify an object and no approved child terms are associated with the approved term.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>You can remove a term only if it has not been used in any way and does not have any child values.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BABFJHGC"></a>
+<div id="LSHAG341" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Assigning Levels to Object Subtypes</h2>
+<p>You must assign a classification hierarchy level to an object subtype in order to make it possible for a Definer to classify an object of that subtype at that hierarchy level. You can choose to make object classifications mandatory to a particular level or not, and you can set a default classification or not.</p>
+<p>You can create subtypes for any object type in the Subtypes subtab of the Security tab if you have the required privileges.</p>
+<p>To add classification levels to subtypes, go to the Subtype subtab of the Classification tab and do the following:</p>
+<ol>
+<li>
+<p>From the <span class="bold">Object</span> drop-down list, select an object type and click <span class="bold">Go</span>. The system displays the object type in the lower portion of the screen.</p>
+</li>
+<li>
+<p>Expand the object's node by clicking the plus (+) sign. The system displays all the subtypes currently defined for the object type.</p>
+</li>
+<li>
+<p>Click the plus (+) sign in the <span class="bold">Add Level</span> column on the Subtype's row. The Subtype Hierarchy Level Assignment screen appears. The system displays the Classification: Subtype Hierarchy Level Assignment screen for the object subtype.</p>
+</li>
+<li>
+<p>Select values from the following fields:</p>
+<ul>
+<li>
+<p><span class="bold">Hierarchy</span>. From the drop-down list, select the classification hierarchy you want to assign to the Subtype. The system populates the Hierarchy Level drop-down list with the levels defined for the hierarchy you select.</p>
+</li>
+</ul>
+<ul>
+<li>
+<p><span class="bold">Hierarchy Level</span>. From the drop-down list, select the level of the hierarchy.</p>
+<p>You can repeat this process to choose more than one level.</p>
+</li>
+<li>
+<p><span class="bold">Reference Allowed</span>. Select <span class="bold">Yes</span> or <span class="bold">No</span>.</p>
+<ul>
+<li>
+<p><span class="bold">Yes</span>. If set to <span class="bold">Yes</span>, Definers can choose to set the classification for objects of this Subtype to Reference. With a classification of Reference, an object takes its classification value from its immediate container: either a Work Area, in the case of object instances, or an Application Area or Domain Library in the case of object definitions. If you select <span class="bold">Yes</span>, you can set the Default Type to either <span class="bold">Explicit</span> or <span class="bold">Inherited</span>.</p>
+</li>
+<li>
+<p><span class="bold">No</span>. If set to <span class="bold">No</span>, Definers cannot choose a classification of Reference. They must specify a particular term. If you select <span class="bold">No</span>, the system sets the Default Type to <span class="bold">Explicit</span> and you cannot change that setting.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="bold">Default Type</span>. Select <span class="bold">Explicit</span> or <span class="bold">Inherited</span>.</p>
+<ul>
+<li>
+<p><span class="bold">Explicit</span>. If set to Explicit, to classify an object of this subtype at this hierarchy level, the Definer must manually specify a value.</p>
+</li>
+<li>
+<p><span class="bold">Inherited</span>. If set to Inherited, objects of this subtype inherit their classifications for this level from their parent object. Definers can override the inheritance by explicitly specifying a classification.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="bold">Mandatory</span>. Select <span class="bold">Yes</span> or <span class="bold">No</span>.</p>
+<ul>
+<li>
+<p><span class="bold">Yes</span>. Definers are required to set a value for this classification level.</p>
+</li>
+<li>
+<p><span class="bold">No</span>. Definers are not required to set a value for the classification level.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Apply</span>. The Classification screen appears.</p>
+</li>
+<li>
+<p>You can select a particular term in this hierarchy level as the default classification for all objects created as this object subtype. Definers can override the default value. Click the plus icon (+) in the Add Default Value, and then query for the term you want to define as the default classification. Click <span class="bold">Apply</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment1">
+<tr>
+<td class="cellalignment8">
+<table class="cellalignment6">
+<tr>
+<td class="cellalignment5"><a href="printers.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment5"><a href="secsetup.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2006, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment10">
+<table class="cellalignment4">
+<tr>
+<td class="cellalignment5"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment5"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment5"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment5"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Stopping and Starting Services and Queues</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2018-05-25T8:2:33Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Life Sciences Data Hub System Administrator's Guide" />
+<meta name="dcterms.identifier" content="E95829-01" />
+<meta name="dcterms.isVersionOf" content="LSHAG" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2006, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="export.htm" title="Previous" type="text/html" />
+<link rel="Next" href="trouble.htm" title="Next" type="text/html" />
+<link rel="alternate" href="LSHAG.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="LSHAG.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="LSHAG.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">21/24</span> <!-- End Header -->
+<div id="LSHAG443" class="chapter"><a id="sthref37"></a>
+<h1 class="chapter"><span class="secnum">18</span> Stopping and Starting Services and Queues</h1>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#CACHAHIB">Starting, Stopping, and Checking the Distributed Processing Service</a></p>
+</li>
+<li>
+<p><a href="#CJADECDI">Stopping and Starting the Oracle Warehouse Builder Service</a></p>
+</li>
+<li>
+<p><a href="#CJAGBJHD">Stopping, Starting, and Enabling the Job Queue</a></p>
+</li>
+<li>
+<p><a href="#CACBGGII">Starting and Stopping Message-Triggered Submission Queues</a></p>
+</li>
+</ul>
+<p>For information about the initial installation of Oracle Warehouse Builder or the Distributed Processing Server, see "Installing the Oracle Life Sciences Data Hub" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Installation Guide</span></span>. See <a href="dps.htm#CIHIIGFD">Chapter 1, "Setting Up Services"</a> for information about the Distributed Processing (DP) Server.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+During its development, the Oracle Life Sciences Data Hub (Oracle LSH) was known internally as CDR. Therefore many Oracle LSH-related directories, files, scripts, parameters, and so on are named CDR or contain the string <code dir="ltr">cdr</code>. Please think of CDR as a synonym for Oracle LSH.</div>
+<a id="CACHAHIB"></a>
+<div id="LSHAG444" class="sect1">
+<h2 class="sect1">Starting, Stopping, and Checking the Distributed Processing Service</h2>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#CJAGFEJC">Starting the Distributed Processing Server Service</a></p>
+</li>
+<li>
+<p><a href="#CJAGABHB">Checking the Distributed Processing Server Service</a></p>
+</li>
+<li>
+<p><a href="#CACIHIBA">Stopping the Distributed Processing Server Service</a></p>
+</li>
+</ul>
+<p>The Oracle LSH Distributed Processing (DP) Server passes jobs&mdash;executions of user-defined Programs and Data Marts and internal Oracle LSH jobs requiring XML Publisher&mdash;to the external engines that process them. You must install and start the DP Server on every computer where you have a processing engine installed. See <a href="dps.htm#CIHIIGFD">Chapter 1, "Setting Up Services"</a> for further information.</p>
+<p>You must then start the service on the computer where it is required. The scripts required for starting, checking, and stopping the DP Server are provided with Oracle LSH. See <a href="dps.htm#CIHFBIGH">"Setting Up the Distributed Processing Server"</a> and the <span class="italic">Oracle Life Sciences Data Hub Installation Guide</span> for instructions for copying them to the DP Server home directory in each location.</p>
+<p><a id="LSHAG445"></a><span class="subhead3">Login Name&nbsp;</span>You must log in as cdr_dpserver. This user is created by the post-installation job. Your company should have changed the default password. See "Run the Post-Installation Programs" in the chapter on installing Oracle LSH in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Installation Guide</span></span> for further information.</p>
+<a id="CJAGFEJC"></a>
+<div id="LSHAG446" class="sect2">
+<h3 class="sect2">Starting the Distributed Processing Server Service</h3>
+<p>To start the service, do the following:</p>
+<ol>
+<li>
+<p>If you have not already edited the script <span class="bold">cdr_apps_dpserver.sh</span> (or <span class="bold">cdr_apps_dpserver.cmd</span>), do so. See "Edit the DP Server Start Script" in the chapter on installing Oracle LSH in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Installation Guide</span></span>.</p>
+</li>
+<li>
+<p>Log on as cdr_dpserver.</p>
+<p>This user is created when you run the post-installation job (see the "Run the Post-Installation Programs" in the chapter on installing Oracle LSH in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Installation Guide</span></span>).</p>
+</li>
+<li>
+<p>Run the script <span class="bold">cdr_apps_dpserver.sh</span> (or <span class="bold">cdr_apps_dpserver.bat</span>) by entering the following command:</p>
+<p><code dir="ltr">./cdr_apps_dpserver.sh</code> <code dir="ltr"><span class="codeinlineitalic">ORACLE_SID DB_HOST DB_PORT RAC_TNS RAC_FLAG</span></code></p>
+<p>where:</p>
+<ul>
+<li>
+<p><code dir="ltr"><span class="codeinlineitalic">ORACLE_SID</span></code> is the Oracle SID of the database</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The Oracle SID is case-sensitive.</div>
+</li>
+<li>
+<p><code dir="ltr"><span class="codeinlineitalic">DB_HOST</span></code> is the name of the computer where the Oracle_SID resides</p>
+</li>
+<li>
+<p><code dir="ltr"><span class="codeinlineitalic">DB_PORT</span></code> is the SQL*Net Listener port for the Oracle_SID</p>
+</li>
+<li>
+<p><code dir="ltr"><span class="codeinlineitalic">RAC_TNS</span></code> is the JDBC connection string of the database server</p>
+</li>
+<li>
+<p><code dir="ltr"><span class="codeinlineitalic">RAC_FLAG</span></code> indicates whether you are using an Oracle RAC (Real Application Cluster) database installation. Set to <code dir="ltr">RAC</code> if you have a RAC installation. Set to <code dir="ltr">NO-RAC</code> if you do not.</p>
+<p>The RAC_FLAG setting determines which input parameter values the script uses when starting the DP Server.</p>
+<ul>
+<li>
+<p>If RAC_FLAG is set to RAC, the script uses only the value for RAC_TNS.</p>
+</li>
+<li>
+<p>If RAC_FLAG is set to NO-RAC, the script uses the values for ORACLE_SID, DB_HOST, and DB_PORT.</p>
+</li>
+</ul>
+<p>In either case, it does not matter what value you enter for the unused parameters. See examples below.</p>
+</li>
+<li>
+<p><code dir="ltr"><span class="codeinlineitalic">FW_ENABLED</span></code> Set to <span class="bold">Yes</span> to start the File Watcher Service or <span class="bold">No</span> if you are not using Oracle DMW.</p>
+</li>
+<li>
+<p><code dir="ltr"><span class="codeinlineitalic">FW_FREQ</span></code> (Applies only to Oracle DMW customers.) Refresh frequency in seconds. This value specifies the minimum interval between requests to the database to check if there is a new set of Watcher Configurations. This value cannot be set lower than 60 seconds. A high setting will result in a delay between the user's addition or adjustment of a Watcher Configuration in Oracle DMW and the changes' taking effect in file detection behavior.</p>
+</li>
+<li>
+<p><code dir="ltr"><span class="codeinlineitalic">FW_POLL</span></code> (Applies only to Oracle DMW customers.) Polling frequency in seconds. The polling frequency represents the minimum interval at which a File Watcher Service may run to detect if there are any files in the watched location that should be loaded into Oracle DMW. The minimum value permitted is 60 seconds.</p>
+</li>
+</ul>
+<p><span class="bold">NO-RAC Example</span> when RAC_FLAG is set to NO-RAC:</p>
+<p><code dir="ltr">./cdr_apps_dpserver.sh abc123 ab123cd.example.com 1234 NA NO-RAC</code></p>
+<p>where:</p>
+<ul>
+<li>
+<p><code dir="ltr">abc123</code> is the Oracle SID</p>
+</li>
+<li>
+<p><code dir="ltr">ab123cd.example.com</code> is the host</p>
+</li>
+<li>
+<p>1234 is the port</p>
+</li>
+<li>
+<p>You may enter NA (Not Applicable) or any other value for RAC_TNS.</p>
+</li>
+<li>
+<p>NO-RAC is the setting for RAC_FLAG</p>
+</li>
+</ul>
+<p><span class="bold">RAC Example</span> when RAC_FLAG is set to RAC:</p>
+<p><code dir="ltr">./cdr_apps_dpserver.sh NA NA NA 'jdbc:oracle:thin:@(DESCRIPTION=(LOAD_BALANCE=YES)(FAILOVER=YES)(ADDRESS_LIST=(ADDRESS=(PROTOCOL=tcp)(HOST=ab123cd.example.com)(PORT=1234))(ADDRESS=(PROTOCOL=tcp)(HOST=ef456ghRAC.example.com)(PORT=5678)))(CONNECT_DATA=(SERVICE_NAME=CDRXXX)))' RAC</code></p>
+<p>where:</p>
+<ul>
+<li>
+<p>You may enter NA (Not Applicable) or any other value for ORACLE_SID.</p>
+</li>
+<li>
+<p>You may enter NA (Not Applicable) or any other value for DB_PORT.</p>
+</li>
+<li>
+<p>You may enter NA (Not Applicable) or any other value for DB_HOST.</p>
+</li>
+<li>
+<p><code dir="ltr">jdbc:oracle:thin:@(DESCRIPTION=(LOAD_BALANCE=YES)(FAILOVER=YES)(ADDRESS_LIST=(ADDRESS=(PROTOCOL=tcp)(HOST=ab123cd.example.com)(PORT=1234))(ADDRESS=(PROTOCOL=tcp)(HOST=ef456ghRAC.example.com)(PORT=5678)))(CONNECT_DATA=(SERVICE_NAME=CDRXXX)))</code>is the JDBC connection string of the database server</p>
+</li>
+<li>
+<p>RAC is the setting for RAC_FLAG</p>
+</li>
+</ul>
+</li>
+<li>
+<p>The script prompts you for a password. Enter the password for the cdr_dpserver user.</p>
+</li>
+</ol>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Do not change the value of DB_USER.</div>
+</div>
+<!-- class="sect2" -->
+<a id="CJAGABHB"></a>
+<div id="LSHAG447" class="sect2">
+<h3 class="sect2">Checking the Distributed Processing Server Service</h3>
+<p>After you have installed and started the service, use the script checkJSapps to check that it is running. Enter the ORACLE_SID as a parameter value.</p>
+<ol>
+<li>
+<p>Log on as cdr_dpserver.</p>
+</li>
+<li>
+<p>Run the script <span class="bold">checkJSapps.sh</span> (or <span class="bold">cdr_apps_dpserver.bat</span>) by entering the following command:</p>
+<p><code dir="ltr">checkJSapps</code> <code dir="ltr"><span class="codeinlineitalic">Oracle_SID</span></code></p>
+<p>For example:</p>
+<p><code dir="ltr">./checkJSapps</code> <code dir="ltr">abc123</code></p>
+<p>where abc123 is the SID.</p>
+</li>
+</ol>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The Oracle SID is case-sensitive.</div>
+</div>
+<!-- class="sect2" -->
+<a id="CACIHIBA"></a>
+<div id="LSHAG448" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Stopping the Distributed Processing Server Service</h3>
+<p>To stop the service, do the following:</p>
+<ol>
+<li>
+<p>Log on as cdr_dpserver.</p>
+</li>
+<li>
+<p>Run the script <span class="bold">stopJSapps.sh</span> by entering the following command:</p>
+<p><code dir="ltr">stopJSapps.sh</code> <code dir="ltr"><span class="codeinlineitalic">Oracle_SID DPService_Name</span></code></p>
+<p>where:</p>
+<ul>
+<li>
+<p><code dir="ltr"><span class="codeinlineitalic">Oracle_SID</span></code> is the Oracle SID of the database</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The Oracle SID is case-sensitive.</div>
+</li>
+<li>
+<p><code dir="ltr"><span class="codeinlineitalic">DPService_Name</span></code> is the Service Location name for the computer where the DP Server is running.</p>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CJADECDI"></a>
+<div id="LSHAG449" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Stopping and Starting the Oracle Warehouse Builder Service</h2>
+<p>The Oracle Warehouse Builder (OWB) service is required to run any Oracle LSH job and to install Work Areas. The OWB service is started automatically by the Oracle LSH database startup kit during installation.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The OWB server's log files are located in the directory $OWB_HOME/owb/log. If you have problems with a Work Area installation, the log file may help you diagnose the problem.</div>
+<a id="CJAGEHBI"></a>
+<div id="LSHAG450" class="sect2">
+<h3 class="sect2">Stopping the OWB Service</h3>
+<p>To stop the OWB service do the following:</p>
+<ol>
+<li>
+<p>Change directory to $OWB_HOME/owb/rtp/sql</p>
+</li>
+<li>
+<p>Log into SQL using the CDR_RTREPOS username and the password you set up when you installed OWB (see "Installing Oracle Warehouse Builder" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Installation Guide</span></span>).</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If you have upgraded to OWB 11.2.0.1 you must log in as OWBSYS instead of CDR_RTREPOS.</div>
+</li>
+<li>
+<p>At the SQL prompt, enter:</p>
+<p><code dir="ltr">@stop_service.sql</code></p>
+</li>
+</ol>
+<p>When the system displays the words "Not Available" the service is stopped.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CJAEABCH"></a>
+<div id="LSHAG451" class="sect2">
+<h3 class="sect2">Starting the OWB Service</h3>
+<p>To start the OWB service do the following:</p>
+<ol>
+<li>
+<p>Change directory to $OWB_HOME/owb/rtp/sql</p>
+</li>
+<li>
+<p>Log into SQL using the CDR_RTREPOS username and the password you set up when you installed OWB (see "Installing Oracle Warehouse Builder" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Installation Guide</span></span>).</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If you have upgraded to OWB 11.2.0.1 you must log in as OWBSYS instead of CDR_RTREPOS.</div>
+</li>
+<li>
+<p>At the SQL prompt, enter:</p>
+<p><code dir="ltr">@start_service.sql</code></p>
+</li>
+</ol>
+<p>When the system displays the word "Available" the service has been restarted.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CJAGBJHD"></a>
+<div id="LSHAG452" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Stopping, Starting, and Enabling the Job Queue</h2>
+<p>A job queue is required on the database to pass jobs from Oracle LSH to OWB. The job queue is enabled by the Oracle LSH post-installation concurrent processing job. You must explicitly start it using the instructions below.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The scripts are located in $cdr/patch/115/sql/.</div>
+<p>This section includes the following topics:</p>
+<ul>
+<li>
+<p><a href="#CJABGAAJ">Starting the Job Queue</a></p>
+</li>
+<li>
+<p><a href="#CJAGDJEJ">Stopping the Job Queue</a></p>
+</li>
+<li>
+<p><a href="#CJAJHAAD">Enabling the Job Queue</a></p>
+</li>
+</ul>
+<a id="CJABGAAJ"></a>
+<div id="LSHAG454" class="sect2">
+<h3 class="sect2">Starting the Job Queue</h3>
+<p>To start the job queue, connect as <code dir="ltr">apps</code> and run this script:</p>
+<pre dir="ltr">
+ begin
+ cdr_exe_job_queues.start_jobq_process_disabled;
+ end;
+/
+commit;
+</pre></div>
+<!-- class="sect2" -->
+<a id="CJAGDJEJ"></a>
+<div id="LSHAG453" class="sect2">
+<h3 class="sect2">Stopping the Job Queue</h3>
+<p>You can stop and disable the job queue by connecting as <code dir="ltr">apps</code> and running this script:</p>
+<pre dir="ltr">
+begin
+cdr_exe_job_queues.stop_processing_queues;
+end;
+/
+commit;
+</pre></div>
+<!-- class="sect2" -->
+<a id="CJAJHAAD"></a>
+<div id="LSHAG455" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Enabling the Job Queue</h3>
+<p>After you have started the job queue (or it has been started during installation) you must enable the job queue by connecting as <code dir="ltr">apps</code> and running a script as follows:</p>
+<pre dir="ltr">
+begin
+cdr_exe_job_queues.start_jobq_process_enabled;
+end;
+/
+commit;
+</pre></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CACBGGII"></a>
+<div id="LSHAG456" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Starting and Stopping Message-Triggered Submission Queues</h2>
+<p>This section contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#CACEFIJG">Starting a Message-Triggered Submission Queue</a></p>
+</li>
+<li>
+<p><a href="#CACHDBBJ">Stopping a Message-Triggered Submission Queue</a></p>
+</li>
+</ul>
+<p>If you plan to use message-triggered job submission, you must start a job queue on the database to pass jobs to Oracle LSH from XML messages from external systems. See "Using Message-Triggered Submission from External Systems" in the <span class="italic"><span class="italic">Oracle Life Sciences Data Hub Application Developer's Guide</span></span>.</p>
+<a id="CACEFIJG"></a>
+<div id="LSHAG457" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Starting a Message-Triggered Submission Queue</h3>
+<p>Log on as the APPS user and enter the following to start the queue:</p>
+<pre dir="ltr">
+begin
+cdr_exe_msg_queues_admin.start_processing_queues;
+cdr_exe_msg_queues_admin.enable_job_processing_queue;
+end; 
+</pre></div>
+<!-- class="sect2" -->
+<a id="CACHDBBJ"></a>
+<div id="LSHAG458" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Stopping a Message-Triggered Submission Queue</h3>
+<p>Log on as the APPS user and enter the following to stop the queue:</p>
+<pre dir="ltr">
+begin
+cdr_exe_msg_queues_admin.stop_processing_queues;
+end; 
+</pre></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment1">
+<tr>
+<td class="cellalignment8">
+<table class="cellalignment6">
+<tr>
+<td class="cellalignment5"><a href="export.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment5"><a href="trouble.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2006, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment10">
+<table class="cellalignment4">
+<tr>
+<td class="cellalignment5"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment5"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment5"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment5"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>BI Publisher and the Argus Safety Application</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2017-09-29T13:48:44Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Argus Safety BIP Aggregate Reporting User's Guide" />
+<meta name="dcterms.identifier" content="E87488-01" />
+<meta name="dcterms.isVersionOf" content="AEOAN" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2016, 2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="intro.htm" title="Previous" type="text/html" />
+<link rel="Next" href="aggregate.htm" title="Next" type="text/html" />
+<link rel="alternate" href="AEOAN.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="AEOAN.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="AEOAN.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+                    <script>var w=window;if(w.performance||w.mozPerformance||w.msPerformance||w.webkitPerformance){var d=document;AKSB=w.AKSB||{},AKSB.q=AKSB.q||[],AKSB.mark=AKSB.mark||function(e,_){AKSB.q.push(["mark",e,_||(new Date).getTime()])},AKSB.measure=AKSB.measure||function(e,_,t){AKSB.q.push(["measure",e,_,t||(new Date).getTime()])},AKSB.done=AKSB.done||function(e){AKSB.q.push(["done",e])},AKSB.mark("firstbyte",(new Date).getTime()),AKSB.prof={custid:"322179",ustr:"",originlat:"0",clientrtt:"1",ghostip:"23.212.3.15",ipv6:false,pct:"10",clientip:"45.78.37.67",requestid:"2273b7e",region:"32996",protocol:"",blver:14,akM:"dsca",akN:"ae",akTT:"O",akTX:"1",akTI:"2273b7e",ai:"206465",ra:"false",pmgn:"",pmgi:"",pmp:"",qc:""},function(e){var _=d.createElement("script");_.async="async",_.src=e;var t=d.getElementsByTagName("script"),t=t[t.length-1];t.parentNode.insertBefore(_,t)}(("https:"===d.location.protocol?"https:":"http:")+"//ds-aksb-a.akamaihd.net/aksb.min.js")}</script>
+                    <script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">7/15</span> <!-- End Header -->
+<div id="AEOAN119" class="chapter"><a id="BABBEBCE"></a>
+<h1 class="chapter"><span class="secnum">2</span> BI Publisher and the Argus Safety Application</h1>
+<p>This chapter contains the following topics:</p>
+<ul>
+<li>
+<p><a href="#BABHEJJF">Section 2.1, "Enabling BI Publisher Aggregate Reporting"</a></p>
+</li>
+<li>
+<p><a href="#BABCIJCF">Section 2.2, "Configuring the Argus BIP Integration"</a></p>
+</li>
+<li>
+<p><a href="#BABDECBA">Section 2.3, "Report Execution Flow from BI Publisher and Argus Safety"</a></p>
+</li>
+<li>
+<p><a href="#BABHCEJD">Section 2.4, "Periodic Configuration Identification of BIP Parameters"</a></p>
+</li>
+<li>
+<p><a href="#BABIDGGH">Section 2.5, "Generating and Modifying a Case Series"</a></p>
+</li>
+<li>
+<p><a href="#BABFICJG">Section 2.6, "Running BIP Reports through Argus Safety"</a></p>
+</li>
+<li>
+<p><a href="#BABECEIE">Section 2.7, "Running Reports through BIP Console"</a></p>
+</li>
+<li>
+<p><a href="#BABFEDAA">Section 2.8, "Running Reports through the BIP Scheduler"</a></p>
+</li>
+<li>
+<p><a href="#BABFIGCF">Section 2.9, "Data Security"</a></p>
+</li>
+<li>
+<p><a href="#BABIAEHA">Section 2.10, "Report Output Management"</a></p>
+</li>
+<li>
+<p><a href="#BABGFJDA">Section 2.11, "Viewing Aggregate Reports from Argus Safety"</a></p>
+</li>
+<li>
+<p><a href="#BABGIEAB">Section 2.12, "Background Periodic Report Status"</a></p>
+</li>
+</ul>
+<a id="BABHEJJF"></a>
+<div id="AEOAN120" class="sect1"><a id="Toc380486071"></a>
+<h2 class="sect1"><span class="secnum">2.1</span> Enabling BI Publisher Aggregate Reporting</h2>
+<p>Perform the following steps to enable BI Publisher aggregate reporting:</p>
+<ol>
+<li>
+<p>When you log into Argus Safety, click the <span class="bold">Argus Console</span> tab.</p>
+</li>
+<li>
+<p>Click <span class="bold">System Configuration</span> on the screen that appears.</p>
+</li>
+<li>
+<p>Click <span class="bold">Enabled Modules</span>. The Enabled Modules screen appears.</p>
+</li>
+<li>
+<p>Select the checkbox corresponding to BIP Aggregate Reporting to enable Publisher aggregate reporting.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+This checkbox is not selected by default. You must enable it.</div>
+<div id="AEOAN121" class="figure">
+<p class="titleinfigure"><a id="sthref9"></a>Figure 2-1 Enabled Modules Screen</p>
+<img width="453" height="310" src="img/enabledmodules.gif" alt="Description of Figure 2-1 follows" /><br />
+<a id="sthref10" href="img_text/enabledmodules.htm">Description of ''Figure 2-1 Enabled Modules Screen''</a><br />
+<br /></div>
+<!-- class="figure" --></li>
+<li>
+<p>Click <span class="bold">Save</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="BABCIJCF"></a>
+<div id="AEOAN122" class="sect1">
+<h2 class="sect1"><span class="secnum">2.2</span> Configuring the Argus BIP Integration</h2>
+<p>Perform the following steps to store your BIP common user and BIP common user password:</p>
+<ol>
+<li>
+<p>Under the <span class="bold">System Configuration</span> tab, click <span class="bold">System Management (Common Profile Switches)</span>.</p>
+</li>
+<li>
+<p>Under the <span class="bold">Reporting</span> tree entry, click <span class="bold">BIP Reporting</span>.</p>
+<div id="AEOAN123" class="figure">
+<p class="titleinfigure"><a id="sthref11"></a>Figure 2-2 BIP Reporting Screen</p>
+<img width="836" height="453" src="img/commonprofile.gif" alt="Description of Figure 2-2 follows" /><br />
+<a id="sthref12" href="img_text/commonprofile.htm">Description of ''Figure 2-2 BIP Reporting Screen''</a><br />
+<br /></div>
+<!-- class="figure" --></li>
+<li>
+<p>Enter the respective values in the following fields:</p>
+<ol>
+<li>
+<p>BIP Common User</p>
+</li>
+<li>
+<p>BIP Common User Password</p>
+</li>
+</ol>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+These configuration entries are available at enterprise level in a multi-tenant environment.
+<p>You can view the BI Aggregate Reporting tree entry only when you enable the BIP Aggregate Reporting module.</p>
+</div>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="BABDECBA"></a>
+<div id="AEOAN124" class="sect1"><a id="Toc380486073"></a>
+<h2 class="sect1"><span class="secnum">2.3</span> Report Execution Flow from BI Publisher and Argus Safety</h2>
+<p>You can execute reports from either Argus Safety or BI Publisher. This section describes the report execution flow from each.</p>
+<div id="AEOAN125" class="sect2"><a id="sthref13"></a>
+<h3 class="sect2"><span class="secnum">2.3.1</span> Report Execution Flow from Argus Safety</h3>
+<p>To execute a report using the Argus Safety user interface:</p>
+<ol>
+<li>
+<p>Select a report configuration from Argus Safety Aggregate Reports library.</p>
+</li>
+<li>
+<p>Click <span class="bold">Print</span> and select the required parameter from the batch print screen.</p>
+</li>
+</ol>
+<p>The report executes as follows. The system:</p>
+<ul>
+<li>
+<p>Adds an entry into Argus database for status tracking.</p>
+</li>
+<li>
+<p>Generates and stores the various case series.</p>
+</li>
+<li>
+<p>Sends the request to the BI Publisher server.</p>
+</li>
+<li>
+<p>Populates the temp tables based on selected report parameters.</p>
+</li>
+<li>
+<p>Before temp tables are populated, verifies the user exits, and updates the temp table data.</p>
+</li>
+<li>
+<p>Generates the report output.</p>
+</li>
+<li>
+<p>Stores the report output in the Argus Safety database.</p>
+</li>
+<li>
+<p>Adds an entry into common regulatory reports table along with a link of the report output.</p>
+</li>
+<li>
+<p>Updates the status in Argus database and mark the report as generated.</p>
+</li>
+</ul>
+<p>You can view the report output from Argus Safety.</p>
+</div>
+<!-- class="sect2" -->
+<div id="AEOAN126" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref14"></a>
+<h3 class="sect2"><span class="secnum">2.3.2</span> Report Execution Flow from BI Publisher</h3>
+<p>To execute a report using the BI Publisher:</p>
+<ol>
+<li>
+<p>Select a report template.</p>
+</li>
+<li>
+<p>Select different parameters available in the report or select a report configuration.</p>
+</li>
+</ol>
+<p>If report is scheduled using <span class="bold">BIP</span>, the system:</p>
+<ul>
+<li>
+<p>Adds an entry into Argus database for status tracking (executing).</p>
+</li>
+<li>
+<p>Assesses report parameters to make any changes in report execution.</p>
+</li>
+<li>
+<p>Populates the temp tables based on selected report parameters and case series.</p>
+</li>
+<li>
+<p>Before completion of temp tables population, verifies the user exits, and updates the temp table data.</p>
+</li>
+<li>
+<p>Generates the report output.</p>
+</li>
+<li>
+<p>Stores the report output in Argus database.</p>
+</li>
+<li>
+<p>Adds an entry into the common regulatory reports table.</p>
+</li>
+<li>
+<p>Updates the status tracking in Argus database to mark the report as generated.</p>
+</li>
+</ul>
+<p>You can view the report outputs from Argus Safety. Final report outputs are available on the Worklist -&gt; Reports screen for submission.</p>
+<p>If report is executed using the <span class="bold">BIP Console</span>, the system:</p>
+<ul>
+<li>
+<p>Assesses the report parameters to make any changes in report execution.</p>
+</li>
+<li>
+<p>Populates temp tables based on selected report parameters.</p>
+</li>
+<li>
+<p>Before completion of temp tables population, verifies the user exits, and updates the temp table data.</p>
+</li>
+<li>
+<p>Generates the report output.</p>
+</li>
+</ul>
+<p>You can view the report output on the user's browser.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BABHCEJD"></a>
+<div id="AEOAN127" class="sect1">
+<h2 class="sect1"><span class="secnum">2.4</span> Periodic Configuration Identification of BIP Parameters</h2>
+<p>If the report is executed using the Argus Safety user interface:</p>
+<p>The ICH PSUR Configuration screen lets you distinguish the configuration options used as parameters in the BIP report only if you have enabled the BI Aggregate Reporting module.</p>
+<p>The system marks all configuration parameters passed to BIP reports for data filtering and report formatting with a BIP logo.</p>
+<p>The system uses all inclusion criteria available on the ICH configuration screen for query and case series generation in BIP reports.</p>
+<div id="AEOAN128" class="figure">
+<p class="titleinfigure"><a id="sthref15"></a>Figure 2-3 ICH PSUR Configuration Screen</p>
+<img width="1490" height="802" src="img/ichpsurconfigscreen.gif" alt="Description of Figure 2-3 follows" /><br />
+<a id="sthref16" href="img_text/ichpsurconfigscreen.htm">Description of ''Figure 2-3 ICH PSUR Configuration Screen''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p>The following configurations are used as report parameters in BIP reports from the ICH PSUR Configuration tab:</p>
+<div id="AEOAN129" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref17"></a>
+<h3 class="sect2"><span class="secnum">2.4.1</span> Subject of Report Tab</h3>
+<p>The system uses the following parameters from the <span class="bold">Subject of Report</span> tab:</p>
+<ul>
+<li>
+<p><span class="bold">Report Name/Configuration Name</span> populates other report parameters from the saved configuration.</p>
+</li>
+<li>
+<p><span class="bold">Report#</span>, <span class="bold">Report Title</span>, and <span class="bold">Report Footer</span></p>
+</li>
+<li>
+<p><span class="bold">Selected Reporting Destination</span> and <span class="bold">Primary Agency</span>.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<div id="AEOAN130" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref18"></a>
+<h3 class="sect2"><span class="secnum">2.4.2</span> Product Selection Tab</h3>
+<p>The system uses all configurations on this tab as query criteria for BI Publisher reports. The BIP logo on the Product Selection tab indicates this.</p>
+<div id="AEOAN131" class="figure">
+<p class="titleinfigure"><a id="sthref19"></a>Figure 2-4 BIP Logo</p>
+<img width="681" height="323" src="img/biplogo.gif" alt="Description of Figure 2-4 follows" /><br />
+<a id="sthref20" href="img_text/biplogo.htm">Description of ''Figure 2-4 BIP Logo''</a><br />
+<br /></div>
+<!-- class="figure" --></div>
+<!-- class="sect2" -->
+<div id="AEOAN132" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref21"></a>
+<h3 class="sect2"><span class="secnum">2.4.3</span> Inclusion Criteria and Special Interest AE Tabs</h3>
+<p>The system uses all configurations on these tabs as query criteria for the Post Marketed Aggregate Report. The BIP logo on these tabs indicates this.</p>
+</div>
+<!-- class="sect2" -->
+<div id="AEOAN133" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref22"></a>
+<h3 class="sect2"><span class="secnum">2.4.4</span> Line Listing Tab</h3>
+<p>The system uses the following Line Listing tab parameters:</p>
+<ul>
+<li>
+<p><span class="bold">Print Only the Term</span>: Prints event verbatim along with PT or LLT if you uncheck this configuration.</p>
+</li>
+<li>
+<p><span class="bold">Print Dose Text in place of regimen dose</span></p>
+</li>
+<li>
+<p><span class="bold">Indicate if case was expedited previously</span></p>
+</li>
+<li>
+<p><span class="bold">Case Grouping</span></p>
+</li>
+<li>
+<p><span class="bold">Print Product Indication for the Product selected in the Report</span>.</p>
+</li>
+</ul>
+<div id="AEOAN134" class="figure">
+<p class="titleinfigure"><a id="sthref23"></a>Figure 2-5 Line Listing Tab</p>
+<img width="1145" height="610" src="img/linelistingtab.gif" alt="Description of Figure 2-5 follows" /><br />
+<a id="sthref24" href="img_text/linelistingtab.htm">Description of ''Figure 2-5 Line Listing Tab''</a><br />
+<br /></div>
+<!-- class="figure" --></div>
+<!-- class="sect2" -->
+<div id="AEOAN135" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref25"></a>
+<h3 class="sect2"><span class="secnum">2.4.5</span> Summary Tabulations Tab</h3>
+<p>The system uses the following parameters from the <span class="bold">Summary Tabulations</span> tab:</p>
+<ul>
+<li>
+<p><span class="bold">Include Summary of Cases Missing Assessments</span></p>
+</li>
+<li>
+<p><span class="bold">Include Summary of Unlocked Cases</span></p>
+</li>
+<li>
+<p><span class="bold">Include Section 6.2</span>: Includes Section 6.2 in the report. Excludes other query criteria under Section 6.2.</p>
+</li>
+<li>
+<p><span class="bold">Include Section 6.3</span>: Includes Section 6.3 in the report. From the other query criteria available under Section 6.3, the system uses only <span class="bold">Case Classification</span> and <span class="bold">Observe Study Type</span> for identifying the non-interventional studies.</p>
+</li>
+<li>
+<p>The <span class="bold">Cumulative Start Date</span>.</p>
+</li>
+</ul>
+<p>When you select report types in the Main Inclusion Criteria tab, the system automatically selects the same clinical trial report types in the Identify Study Cases using Report Type configuration of PBRER Section 6.2.</p>
+<p>This auto selection ensures you can save the configuration without manually selecting any values in Section 6.2. Argus Native report users can deselect any report type if you do not want to use all the selected report types for Section 6.2 case series.</p>
+<p>When you select the report types in main inclusion criteria tab, the system automatically selects the same spontaneous report types in Identify Spontaneous Cases using a Report Type configuration of PBRER Section 6.3.</p>
+<p>This auto section ensures you can save the configuration without manually selecting any values in Section 6.3. An Argus Native reports user can deselect any report type if you do not want to use all the selected report types for Section 6.3 case series.</p>
+<div id="AEOAN136" class="figure">
+<p class="titleinfigure"><a id="sthref26"></a>Figure 2-6 Summary Tabulations Tab</p>
+<img width="1196" height="758" src="img/summarytabulation.gif" alt="Description of Figure 2-6 follows" /><br />
+<a id="sthref27" href="img_text/summarytabulation.htm">Description of ''Figure 2-6 Summary Tabulations Tab''</a><br />
+<br /></div>
+<!-- class="figure" --></div>
+<!-- class="sect2" -->
+<div id="AEOAN137" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref28"></a>
+<h3 class="sect2"><span class="secnum">2.4.6</span> UD Summaries Tab</h3>
+<p>The system only uses <span class="bold">Include these summary tabulations/listings based on the set of cases presented in the line listing</span> from this tab.</p>
+<p>This configuration is modified, and you have an option to attach selected line listings (memorized line listings) with different ad hoc line listing sections present in the BIP report. A button is provided with each memorized line listing to support this.</p>
+<p>The system does not generate memorized reports for selected configurations along with the aggregate report. It only uses the advanced condition query criteria for generating the case series for these ad hoc line listing sections. Figure 2-7 displays an example of case data line listing query criteria used for ad hoc line listings.</p>
+<div id="AEOAN138" class="figure">
+<p class="titleinfigure"><a id="sthref29"></a>Figure 2-7 Data Line Listing Criteria for Ad hoc Line Listings</p>
+<img width="1216" height="663" src="img/image35.jpg" alt="Description of Figure 2-7 follows" /><br />
+<a id="sthref30" href="img_text/image35.htm">Description of ''Figure 2-7 Data Line Listing Criteria for Ad hoc Line Listings''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p>When you select the corresponding checkbox, the available ad hoc line listing sections appear in the Aggregate Line Listings dialog box. These are configurable through the Argus Console code list or flex bucketing.</p>
+<div id="AEOAN139" class="figure">
+<p class="titleinfigure"><a id="sthref31"></a>Figure 2-8 Ad hoc Line Listings Screen</p>
+<img width="346" height="234" src="img/image22.jpg" alt="Description of Figure 2-8 follows" /><br />
+<a id="sthref32" href="img_text/image22.htm">Description of ''Figure 2-8 Ad hoc Line Listings Screen''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p>You can associate multiple ad hoc line listing sections with one memorized line listing configuration.</p>
+<p>Argus Safety marks the memorized line listing configurations with associated ad hoc line listings with an asterisk. When you hover over the selected memorized line listing configuration, all associated ad hoc line listings appear as a tool tip.</p>
+<p>You can attach each ad hoc line listing section to only one memorized line listing configuration. You cannot select ad hoc line listing sections already attached to another memorized line listing configuration.</p>
+<p>Figure 2-9 displays an example of query criteria used from the configuration of memorized line listings.</p>
+<div id="AEOAN140" class="figure">
+<p class="titleinfigure"><a id="sthref33"></a>Figure 2-9 Query Criteria from Memorized Configuration</p>
+<img width="966" height="678" src="img/image36.jpg" alt="Description of Figure 2-9 follows" /><br />
+<a id="sthref34" href="img_text/image36.htm">Description of ''Figure 2-9 Query Criteria from Memorized Configuration''</a><br />
+<br /></div>
+<!-- class="figure" --></div>
+<!-- class="sect2" -->
+<div id="AEOAN141" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref35"></a>
+<h3 class="sect2"><span class="secnum">2.4.7</span> Security Tab</h3>
+<p>The Security tab shares report configurations with other groups. All case series generated using an aggregate report configuration have the same access privileges as the aggregate report configuration.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The <span class="bold">Scheduling</span> and <span class="bold">Templates</span> configurations tabs are not used in BIP reports.</div>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BABIDGGH"></a>
+<div id="AEOAN142" class="sect1"><a id="Toc380486075"></a>
+<h2 class="sect1"><span class="secnum">2.5</span> Generating and Modifying a Case Series</h2>
+<p>This section documents the process after a periodic report is executed. It also describes the process of creating a case series for analysis and modifying it before use.</p>
+<p>The BIP based aggregate report generation process has two parts:</p>
+<ol>
+<li>
+<p>Creating the configuration.</p>
+</li>
+<li>
+<p>Running the report within the BIP with that configuration.</p>
+</li>
+</ol>
+<p>All case series can be saved separately (as Argus <span class="italic">hitlists</span>) for further analysis, addition, or removal of cases. You can also execute the whole process of query criteria execution and report output generation in one step. The native aggregate report generation process is broken into two parts with a provision to review and update all case series.</p>
+<div id="AEOAN143" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref36"></a>
+<h3 class="sect2"><span class="secnum">2.5.1</span> Generating a Case Series</h3>
+<p>The <span class="bold">Create Case Series</span> button on the ICH PSUR and CTPR reports library page is enabled when you select any saved report configuration only if you have enabled the BIP Aggregate Reporting module.</p>
+<p>When you click this button, the system generates the following case series by using query criteria available in the selected report configuration:</p>
+<ul>
+<li>
+<p><span class="bold">Main Case Series</span>: This case series is available in the advanced conditions library with the default name Periodic Report Name/Configuration Name and is linked to the respective report configuration.</p>
+</li>
+<li>
+<p><span class="bold">Cumulative Case Series</span> (for use in tabulations): Based on international birth date of the drug, this case series is available in the advanced condition library with the default name <span class="italic">Periodic Report Name/Configuration Name (cumulative case series)</span> and is linked to the respective report configuration.</p>
+</li>
+<li>
+<p><span class="bold">Ad hoc Case Series:</span> You must ensure that the ad hoc line listings are linked to their respective report configuration. Ad hoc Case Series 1 is used in ad hoc Line Listing 1, ad hoc Case Series 2 in ad hoc Line Listing 2, and so on. You can edit these case series in the advanced condition library.</p>
+</li>
+<li>
+<p><span class="bold">Section 6.2 PBRER Case Series</span>: When you select Section 6.2 on the ICH PSUR Configuration screen, the system generates an additional case series for Section 6.2 clinical trial cases. This contains all clinical trial cases for the configured product, leaving out any non-interventional study cases (based on report type selection and Section 6.3 case classifications and observer study type configuration).</p>
+<p>This case series is available in the Advanced Conditions Library as a case series with the default name Periodic Report Name/Configuration Name (PBRER Section 6.2) and is linked to the respective report configuration. It is further classified into different categories in the temp tables. There is no additional case series required for Section 6.3. The Main and Cumulative case series generated based on report configuration are classified into different categories in the temp tables.</p>
+</li>
+</ul>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Case series are associated with a report configuration. At any time, there cannot be more than one case series of each type associated with a report configuration.
+<p>The owner of all aggregate case series is the user creating that case series.</p>
+<p>If a case series already exists for a report configuration, the system overwrites the existing case series.</p>
+<p>A case series is saved in the system even if there are no cases present in it.</p>
+</div>
+<p>The following message appears after the request for case series generation is pushed to the Argus Safety application when you click <span class="bold">Create Case Series</span>.</p>
+<div id="AEOAN144" class="figure">
+<p class="titleinfigure"><a id="sthref37"></a>Figure 2-10 Message Displayed</p>
+<img width="408" height="227" src="img/image37.png" alt="Description of Figure 2-10 follows" /><br />
+<a id="sthref38" href="img_text/image37.htm">Description of ''Figure 2-10 Message Displayed''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p>All case series associated with a report configuration are deleted if the associated report configuration is deleted from the system.</p>
+</div>
+<!-- class="sect2" -->
+<div id="AEOAN145" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref39"></a>
+<h3 class="sect2"><span class="secnum">2.5.2</span> Modifying a Case Series</h3>
+<p>All case series generated using periodic reports configuration are available in the Advanced Condition Library. You can modify these case series by providing a proper justification before the case series are used for report generation.</p>
+<p>You can modify a case in the Advanced Condition Library.</p>
+</div>
+<!-- class="sect2" -->
+<div id="AEOAN146" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref40"></a>
+<h3 class="sect2"><span class="secnum">2.5.3</span> Advanced Condition Library</h3>
+<p>You can view all case series that have been generated in the Advanced Condition Library.</p>
+<p>The Advanced Conditions and Case Series Search title bar displays the search options added on this screen.</p>
+<div id="AEOAN147" class="tblformal">
+<p class="titleintable"><a id="sthref41"></a><a id="sthref42"></a>Table 2-1 Fields and Descriptions</p>
+<table class="cellalignment69" title="Fields and Descriptions" summary="Fields and Descriptions" dir="ltr">
+<thead>
+<tr class="cellalignment63">
+<th class="cellalignment70" id="r1c1-t6">Field</th>
+<th class="cellalignment70" id="r1c2-t6">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment63">
+<td class="cellalignment71" id="r2c1-t6" headers="r1c1-t6">
+<p>Date Range</p>
+</td>
+<td class="cellalignment71" headers="r2c1-t6 r1c2-t6">
+<p>An option for searching saved advanced conditions and case series. This date range filters cases based on the last modified date of the Advanced Conditions and Aggregate case series. The system uses the last one year date range by default when the advance condition page is loaded for the first time. The Date Range drop-down list contains the standard date ranges used in other parts of the Argus Safety application.</p>
+</td>
+</tr>
+<tr class="cellalignment63">
+<td class="cellalignment71" id="r3c1-t6" headers="r1c1-t6">
+<p>Advanced Condition Radio button</p>
+</td>
+<td class="cellalignment71" headers="r3c1-t6 r1c2-t6">
+<p>Clicking this button displays only advanced conditions.</p>
+</td>
+</tr>
+<tr class="cellalignment63">
+<td class="cellalignment71" id="r4c1-t6" headers="r1c1-t6">
+<p>Aggregate Case Series Radio button</p>
+</td>
+<td class="cellalignment71" headers="r4c1-t6 r1c2-t6">
+<p>Clicking this button displays only aggregate case series.</p>
+</td>
+</tr>
+<tr class="cellalignment63">
+<td class="cellalignment71" id="r5c1-t6" headers="r1c1-t6">
+<p>All Radio button</p>
+</td>
+<td class="cellalignment71" headers="r5c1-t6 r1c2-t6">
+<p>Clicking this button displays all advanced conditions and aggregate case series.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" -->
+<p>The Advanced Condition option is selected by default during initial page load.</p>
+<div id="AEOAN148" class="figure">
+<p class="titleinfigure"><a id="sthref43"></a>Figure 2-11 Advanced Condition Library Screen</p>
+<img width="946" height="360" src="img/image38.jpg" alt="Description of Figure 2-11 follows" /><br />
+<a id="sthref44" href="img_text/image38.htm">Description of ''Figure 2-11 Advanced Condition Library Screen''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p>When you click <span class="bold">Search</span>, the system filters out the list of Advanced Conditions or Aggregate case series based on the date range selected.</p>
+<p>When you click <span class="bold">Case Series</span>, the Advanced condition dialog box with available cases is displayed.</p>
+<p>The <span class="bold">Delete</span> button on the Advanced Condition Library page is disabled when you select any Aggregate case series.</p>
+</div>
+<!-- class="sect2" -->
+<div id="AEOAN149" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref45"></a>
+<h3 class="sect2"><span class="secnum">2.5.4</span> Deleting a Case Series</h3>
+<p>You can delete multiple cases to update the case series. A checkbox corresponding to each case facilitates the deletion of multiple cases.</p>
+<div id="AEOAN150" class="figure">
+<p class="titleinfigure"><a id="sthref46"></a>Figure 2-12 Advanced Condition Set Screen</p>
+<img width="820" height="628" src="img/aclib.gif" alt="Description of Figure 2-12 follows" /><br />
+<a id="sthref47" href="img_text/aclib.htm">Description of ''Figure 2-12 Advanced Condition Set Screen''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p>While you delete or add cases to the case series (single or multiple), the system displays a standard justification dialog requesting the reason for case series modification.</p>
+<div id="AEOAN151" class="figure">
+<p class="titleinfigure"><a id="sthref48"></a>Figure 2-13 Justification Dialog Box</p>
+<img width="636" height="388" src="img/acjustification.gif" alt="Description of Figure 2-13 follows" /><br />
+<a id="sthref49" href="img_text/acjustification.htm">Description of ''Figure 2-13 Justification Dialog Box''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p>The justification text for case series modification follows the list of case numbers displayed after the report cover page. The system displays all actions performed on a case series separately in the order they were performed. For example, actions performed on a case series are displayed in the following order:</p>
+<p>Action Performed: Case Addition</p>
+<p>Action Performed By: &lt;User Name&gt;</p>
+<p>Justification Text: &lt;These cases were not part of last report submission&gt;</p>
+<p>Case Numbers: US2010ABC, US2010XYZ</p>
+<p>Date Modified: 12-Oct-2013 12:40:33</p>
+<p>Action Performed: Case Deletion</p>
+<p>Action Performed By: &lt;User Name&gt; Justification Text: &lt;These cases are already reported to regulatory authorities&gt;</p>
+<p>Case Numbers: US2009ABC, US2009XYZ</p>
+<p>The Effective Start Date column displays effective start dates corresponding to all cases available in the case series. Values in this column are available only when periodic reports configuration is set to run on the DLP schema instead of current data. The column populates aggregate temporary tables corresponding to a case series during BI Publisher report execution.</p>
+<p>Date Modified: 13-Oct-2013 16:22:00</p>
+<p>This screen displays only the current data for all available columns, irrespective of whether the case series is being generated on DLP. The system displays an asterisk against the Effective Start Date column and also displays a note as a legend.</p>
+<p><span class="italic">This screen displays only the current data for all the case attributes irrespective of the effective start date of the case.</span></p>
+<p>When a case series is being used, you cannot modify it as the system locks the case series. The system disables the <span class="bold">Delete</span> and <span class="bold">Add</span> buttons on the advanced conditions case series dialog during the time it is used. It also disbales the <span class="bold">Create Case Series</span> button on the Periodic Reports page if the case series corresponding to that report configuration is being used.</p>
+<p>When a report is being executed, the system disables the Create Case Series for the corresponding report configuration.</p>
+<p>When you click the <span class="bold">View</span> link for an existing case series for selected report configuration, a warning message appears indicating that the case series cannot be modified as it is currently under modification or is being used for a report.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BABFICJG"></a>
+<div id="AEOAN152" class="sect1"><a id="Toc380486077"></a>
+<h2 class="sect1"><span class="secnum">2.6</span> Running BIP Reports through Argus Safety</h2>
+<p>You can execute BIP periodic reports as a one-step or two-step process. The Report Batch Print screen provides this option.</p>
+<p>The screen provides the following options if you have enabled the BIP Aggregate Reporting module:</p>
+<ul>
+<li>
+<p><span class="bold">Run Using</span>: This drop-down list lets you choose between the BI Publisher and Argus Native options.</p>
+</li>
+<li>
+<p>When you select <span class="bold">BI Publisher</span>, the system provides the following additional options for running the report:</p>
+<div id="AEOAN153" class="tblformal">
+<p class="titleintable"><a id="sthref50"></a><a id="sthref51"></a>Table 2-2 Options for Running the Report using BI Publisher</p>
+<table class="cellalignment69" title="Options for Running the Report using BI Publisher" summary="Running the BIP Report options" dir="ltr">
+<tbody>
+<tr class="cellalignment63">
+<td class="cellalignment71" id="r1c1-t7">
+<p>Report Template</p>
+</td>
+<td class="cellalignment71">
+<p>This drop-down list is populated with all available BIP report templates that can reuse the configuration for the PSUR or other periodic reports.</p>
+</td>
+</tr>
+<tr class="cellalignment63">
+<td class="cellalignment71" id="r2c1-t7">
+<p>Use Generated Case Series</p>
+</td>
+<td class="cellalignment71" headers="r2c1-t7">
+<p>This checkbox is enabled only if a case series has been generated using the selected report configuration.</p>
+<p>It is selected by default if a case series already exists for the selected report configuration.</p>
+<p>If the Use Generated Case Series checkbox is checked, the system generates the report on already existing case series.</p>
+<p>The Use Generated Case Series checkbox is checked when a final report that was generated for the selected report configuration is pending submission.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" -->
+<p>The Print operation works in same way for BIP reports as it works for Argus Native reports.</p>
+<p>After a case series is generated for an associated report configuration, any existing case series associated with that report configuration is replaced with that case series. The system keeps only one case series for a report configuration at a time.</p>
+<div id="AEOAN154" class="figure">
+<p class="titleinfigure"><a id="sthref52"></a>Figure 2-14 Report Batch Printing</p>
+<img width="414" height="373" src="img/image41.jpg" alt="Description of Figure 2-14 follows" /><br />
+<a id="sthref53" href="img_text/image41.htm">Description of ''Figure 2-14 Report Batch Printing''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p>All reports executed through Argus Safety UI are tracked using the Argus Safety application. The status for all BIP reports is available in the Background Periodic Status screen of Argus Safety.</p>
+</li>
+</ul>
+<p>When you select <span class="bold">Argus Native</span> from the <span class="bold">Run Using</span> drop-down list, the system hides the <span class="bold">Report Template</span> option. Any case series generated as part of Argus Native report execution is not saved in the system by default.</p>
+<p>If you select <span class="bold">Run Now</span>, the system immediately generates a report for the selected configuration. If you specify a date and time in the <span class="bold">Run At</span> field, Argus Safety schedules it for the provided date and time.</p>
+<p>For every BIP report generated from Argus Safety or the BIP scheduler interface, the system adds an entry into the Argus database.</p>
+</div>
+<!-- class="sect1" -->
+<a id="BABECEIE"></a>
+<div id="AEOAN155" class="sect1"><a id="Toc380486078"></a>
+<h2 class="sect1"><span class="secnum">2.7</span> Running Reports through BIP Console</h2>
+<p>You can execute all BI publisher reports through the BI Publisher console.</p>
+<ol>
+<li>
+<p>When you log into the BI Publisher, click <span class="bold">Catalog</span>.</p>
+</li>
+<li>
+<p>Select the tree entry for a report, and select <span class="bold">Reports</span>.</p>
+<div id="AEOAN156" class="figure">
+<p class="titleinfigure"><a id="sthref54"></a>Figure 2-15 Reports Tree Entry Screen</p>
+<img width="592" height="450" src="img/thrubip.gif" alt="Description of Figure 2-15 follows" /><br />
+<a id="sthref55" href="img_text/thrubip.htm">Description of ''Figure 2-15 Reports Tree Entry Screen''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p>The system displays the available reports on the screen.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Open</span> link for the report you selected.</p>
+</li>
+<li>
+<p>Select the values for <span class="bold">Enterprise ID</span> and <span class="bold">Configuration Name</span> from the drop-down lists.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The Configuration Name drop-down list displays values based on the aggregate reports configuration in Argus Safety to which you have access.
+<p>All report configurations that are associated with a report template are available for selection. The system populates any parameters which are NOT associated with Argus report configuration with default values (defined with report parameters).</p>
+</div>
+</li>
+<li>
+<p>Select the values for all parameters. You can override the default or configured values of all parameters before running a report.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+When you select a report configuration, the system uses the parameter values from the selected report configuration if there are no values provided for the corresponding report parameters.</div>
+</li>
+<li>
+<p>You can modify the default case series names associated with a report configuration.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If a report configuration has been executed at least once, all the associated case series values are used by default if there are no overriding values for case series.</div>
+</li>
+<li>
+<p>For overriding case series parameters, you must select all the case series based on their generation source, which is either current data or DLP.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+When you select a Main Case Series generated on Current Argus data, the system filters other case series prompts to show only those case series that are generated on current data.
+<p>When you select a Main Case Series generated on DLP data, the system filters other case series prompts to show only those case series that are generated on DLP data.</p>
+</div>
+<p>If a report configuration has not been executed even once and you have not selected any overriding case series while running the report, the system executes the report and displays the following information in the <span class="italic">Warning/Error Messages</span> trailer section of the report.</p>
+<p><span class="italic">There is no case series associated with the selected report configuration. Please select a case series or generate a case series and execute the report again.</span></p>
+</li>
+<li>
+<p>To execute the report, select a report format.</p>
+<div id="AEOAN157" class="figure">
+<p class="titleinfigure"><a id="sthref56"></a>Figure 2-16 Selecting the Report Format</p>
+<img width="225" height="201" src="img/format.gif" alt="Description of Figure 2-16 follows" /><br />
+<a id="sthref57" href="img_text/format.htm">Description of ''Figure 2-16 Selecting the Report Format ''</a><br />
+<br /></div>
+<!-- class="figure" --></li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="BABFEDAA"></a>
+<div id="AEOAN158" class="sect1"><a id="Toc380486079"></a>
+<h2 class="sect1"><span class="secnum">2.8</span> Running Reports through the BIP Scheduler</h2>
+<p>You can schedule all BI publisher reports to be run immediately or at a future date using the BI Publisher scheduler.</p>
+<ol>
+<li>
+<p>When you log into the BI Publisher, click <span class="bold">Catalog</span>.</p>
+</li>
+<li>
+<p>Select the tree entry for a report, and select <span class="bold">Reports</span>.</p>
+<div id="AEOAN159" class="figure">
+<p class="titleinfigure"><a id="sthref58"></a>Figure 2-17 Reports Tree Entry Screen</p>
+<img width="592" height="450" src="img/thrubip.gif" alt="Description of Figure 2-17 follows" /><br />
+<a id="sthref59" href="img_text/thrubip.htm">Description of ''Figure 2-17 Reports Tree Entry Screen''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p>The system displays the available reports on the screen.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Schedule</span> link for the report you selected.</p>
+<p>The Schedule Report Job screen appears.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Schedule</span> tab.</p>
+</li>
+<li>
+<p>Select a value from the <span class="bold">Frequency</span> drop-down list.</p>
+</li>
+<li>
+<p>Select <span class="bold">Run Now</span> or enter the date and time details when you select <span class="bold">Start</span>. Click <span class="bold">Submit</span>. The Submit screen appears.</p>
+</li>
+<li>
+<p>Enter the details for <span class="bold">Report Job Name</span> and click <span class="bold">OK</span>.</p>
+</li>
+</ol>
+<p>You can track reports scheduled through BI Publisher console using Argus Safety.</p>
+<p>You can view all report outputs can be viewed from Argus Safety library screens as explained in <a href="#BABGFJDA">Section 2.11, "Viewing Aggregate Reports from Argus Safety"</a>. The status of all such reports is available in the background periodic status screen of Argus Safety.</p>
+<p>For draft reports, you can view only the last version of the generated report output corresponding to a report template from Argus Safety. For Final reports, you can view only the last version of the generated report output corresponding to a report template from the Argus Safety Aggregate Reports library.</p>
+</div>
+<!-- class="sect1" -->
+<a id="BABFIGCF"></a>
+<div id="AEOAN160" class="sect1"><a id="Toc380486080"></a>
+<h2 class="sect1"><span class="secnum">2.9</span> Data Security</h2>
+<p>The following securities are applied in out-of-the-box BIP reports:</p>
+<ul>
+<li>
+<p>Product, Study, or Site security</p>
+</li>
+<li>
+<p>Blinded Security</p>
+</li>
+<li>
+<p>Enterprise security</p>
+</li>
+</ul>
+</div>
+<!-- class="sect1" -->
+<a id="BABIAEHA"></a>
+<div id="AEOAN161" class="sect1"><a id="Toc380486083"></a>
+<h2 class="sect1"><span class="secnum">2.10</span> Report Output Management</h2>
+<p>The system saves all reports generated using BI Publisher technology (Argus or BIP Scheduler) in the Argus Safety database. It saves all BIP reports generated through Argus Safety or the BIP scheduler interface in the Argus database and attaches them to the associated report configuration. For every report configuration and report template combination, you can only view the latest draft and final reports from Argus Safety.</p>
+<p>User access rights for accessing a report for a given report configuration are driven using the permissions defined in the security tab in the periodic reports configuration. Any generated report is available to other users if the user's group has been assigned permission to view the report configuration though the Periodic Configuration screen.</p>
+</div>
+<!-- class="sect1" -->
+<a id="BABGFJDA"></a>
+<div id="AEOAN162" class="sect1"><a id="Toc380486084"></a>
+<h2 class="sect1"><span class="secnum">2.11</span> Viewing Aggregate Reports from Argus Safety</h2>
+<p>After Draft or Final periodic reports are generated, you can view the generated reports through the Periodic Reports Library screen.</p>
+<p>This UI screen shows all reports generated on a report configuration, irrespective of whether the report was generated using Argus Safety UI or BI Publisher scheduler. All reports generated through the BI Publisher console are not available for viewing from Argus Safety.</p>
+<p>When you click the <span class="bold">Draft</span> or <span class="bold">Final</span> link, a context menu appears with all available report templates that have been generated for a report configuration. When you click a report template, the system opens the selected report in the format that was used to generate the report.</p>
+<p>For every report template corresponding to a report configuration, only the last generated draft or final report is available to you.</p>
+<div id="AEOAN163" class="figure">
+<p class="titleinfigure"><a id="sthref60"></a>Figure 2-18 ICH PSUR Line Listing Reports</p>
+<img width="1435" height="679" src="img/image43.jpg" alt="Description of Figure 2-18 follows" /><br />
+<a id="sthref61" href="img_text/image43.htm">Description of ''Figure 2-18 ICH PSUR Line Listing Reports''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p>You can view all BIP aggregate reports generated in final mode on the Worklist -&gt; Reports screen.</p>
+</div>
+<!-- class="sect1" -->
+<a id="BABGIEAB"></a>
+<div id="AEOAN164" class="sect1"><a id="Toc380486086"></a>
+<h2 class="sect1"><span class="secnum">2.12</span> Background Periodic Report Status</h2>
+<p>You can view the status for all the BIP periodic reports run through Argus Safety or from BIP Scheduler in the Background Periodic Report Status screen.</p>
+<p>The following are the possible status options for reports scheduled using BIP scheduler:</p>
+<div id="AEOAN165" class="tblformal">
+<p class="titleintable"><a id="sthref62"></a><a id="sthref63"></a>Table 2-3 Status Options for Reports Scheduled through BIP Scheduler</p>
+<table class="cellalignment69" title="Status Options for Reports Scheduled through BIP Scheduler" summary="Status Options for Reports Scheduled through BIP Scheduler" dir="ltr">
+<thead>
+<tr class="cellalignment63">
+<th class="cellalignment70" id="r1c1-t12">Status</th>
+<th class="cellalignment70" id="r1c2-t12">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment63">
+<td class="cellalignment71" id="r2c1-t12" headers="r1c1-t12">
+<p><span class="bold">Executing</span></p>
+</td>
+<td class="cellalignment71" headers="r2c1-t12 r1c2-t12">
+<p>When execution for a scheduled BIP report starts, its status is tracked as Executing.</p>
+</td>
+</tr>
+<tr class="cellalignment63">
+<td class="cellalignment71" id="r3c1-t12" headers="r1c1-t12">
+<p><span class="bold">Generated</span></p>
+</td>
+<td class="cellalignment71" headers="r3c1-t12 r1c2-t12">
+<p>After a report is generated, the output is stored in the Argus Safety database, and a corresponding entry is made available in Argus database with a report link, the status of the report is marked as Generated.</p>
+</td>
+</tr>
+<tr class="cellalignment63">
+<td class="cellalignment71" id="r4c1-t12" headers="r1c1-t12">
+<p><span class="bold">Error</span></p>
+</td>
+<td class="cellalignment71" headers="r4c1-t12 r1c2-t12">
+<p>If an error occurs during the scheduled report execution, the system marks the status of the report as Error.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" -->
+<p>The system displays the status in the following format when you click the <span class="bold">Generated</span> link.</p>
+<div id="AEOAN166" class="figure">
+<p class="titleinfigure"><a id="sthref64"></a>Figure 2-19 Background Case Series Execution Status</p>
+<img width="760" height="564" src="img/caseseriesdetails.gif" alt="Description of Figure 2-19 follows" /><br />
+<a id="sthref65" href="img_text/caseseriesdetails.htm">Description of ''Figure 2-19 Background Case Series Execution Status''</a><br />
+<br /></div>
+<!-- class="figure" -->
+<p>The following are the possible status options for reports executed using the Argus Safety user interface:</p>
+<div id="AEOAN167" class="tblformal">
+<p class="titleintable"><a id="sthref66"></a><a id="sthref67"></a>Table 2-4 Status Options for Reports Executed through Argus Safety UI</p>
+<table class="cellalignment69" title="Status Options for Reports Executed through Argus Safety UI " summary="Status options for reports executed through UI" dir="ltr">
+<thead>
+<tr class="cellalignment63">
+<th class="cellalignment70" id="r1c1-t13">Status</th>
+<th class="cellalignment70" id="r1c2-t13">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment63">
+<td class="cellalignment71" id="r2c1-t13" headers="r1c1-t13">
+<p><span class="bold">Pending</span></p>
+</td>
+<td class="cellalignment71" headers="r2c1-t13 r1c2-t13">
+<p>When a BIP report is executed from Argus Safety, a corresponding entry is made in the background periodic screen showing the report status as Pending. The report remains in this status until it is picked by AGService or BIP for execution.</p>
+</td>
+</tr>
+<tr class="cellalignment63">
+<td class="cellalignment71" id="r3c1-t13" headers="r1c1-t13">
+<p><span class="bold">Executing</span></p>
+</td>
+<td class="cellalignment71" headers="r3c1-t13 r1c2-t13">
+<p>When execution for a BIP report starts, its status is tracked as Executing.</p>
+</td>
+</tr>
+<tr class="cellalignment63">
+<td class="cellalignment71" id="r4c1-t13" headers="r1c1-t13">
+<p><span class="bold">Generated</span></p>
+</td>
+<td class="cellalignment71" headers="r4c1-t13 r1c2-t13">
+<p>After a report is generated, the output is stored in the Argus Safety database, and a corresponding entry is made available in Argus database with report link, the status of the report is marked as Generated.</p>
+</td>
+</tr>
+<tr class="cellalignment63">
+<td class="cellalignment71" id="r5c1-t13" headers="r1c1-t13">
+<p><span class="bold">Error</span></p>
+</td>
+<td class="cellalignment71" headers="r5c1-t13 r1c2-t13">
+<p>If an error occurs during report execution, the system marks the status of the report as Error.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" -->
+<p>The following are possible status options for a report executed when a user when a user generates a case series by clicking Create Case Series:</p>
+<div id="AEOAN168" class="tblformal">
+<p class="titleintable"><a id="sthref68"></a><a id="sthref69"></a>Table 2-5 Status Options when User clicks Create Case Series</p>
+<table class="cellalignment69" title="Status Options when User clicks Create Case Series" summary="Status Options when User clicks Create Case Series" dir="ltr">
+<thead>
+<tr class="cellalignment63">
+<th class="cellalignment70" id="r1c1-t14">Status</th>
+<th class="cellalignment70" id="r1c2-t14">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="cellalignment63">
+<td class="cellalignment71" id="r2c1-t14" headers="r1c1-t14">
+<p><span class="bold">Pending</span></p>
+</td>
+<td class="cellalignment71" headers="r2c1-t14 r1c2-t14">
+<p>When a Case Series is generated from Argus Safety, a corresponding entry is available in the background periodic screen showing the case series status as pending. The case Series remains in this status until it is picked by AGService for execution.</p>
+</td>
+</tr>
+<tr class="cellalignment63">
+<td class="cellalignment71" id="r3c1-t14" headers="r1c1-t14">
+<p><span class="bold">Executing</span></p>
+</td>
+<td class="cellalignment71" headers="r3c1-t14 r1c2-t14">
+<p>When execution for a periodic configuration is started for case series creation, its status is tracked as Executing.</p>
+</td>
+</tr>
+<tr class="cellalignment63">
+<td class="cellalignment71" id="r4c1-t14" headers="r1c1-t14">
+<p><span class="bold">Generated</span></p>
+</td>
+<td class="cellalignment71" headers="r4c1-t14 r1c2-t14">
+<p>After a case series is generated, the status of background request is marked as Generated.</p>
+</td>
+</tr>
+<tr class="cellalignment63">
+<td class="cellalignment71" id="r5c1-t14" headers="r1c1-t14">
+<p><span class="bold">Error</span></p>
+</td>
+<td class="cellalignment71" headers="r5c1-t14 r1c2-t14">
+<p>If an error occurs during case series generation, the system marks the status of the background request as Error.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" -->
+<p>The system displays the status in the following format when you click on <span class="bold">Generated</span> link for case series.</p>
+<div id="AEOAN169" class="figure">
+<p class="titleinfigure"><a id="sthref70"></a>Figure 2-20 Report Generation Complete Screen</p>
+<img width="506" height="375" src="img/image46.png" alt="Description of Figure 2-20 follows" /><br />
+<a id="sthref71" href="img_text/image46.htm">Description of ''Figure 2-20 Report Generation Complete Screen''</a><br />
+<br /></div>
+<!-- class="figure" --></div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment62">
+<tr>
+<td class="cellalignment71">
+<table class="cellalignment67">
+<tr>
+<td class="cellalignment66"><a href="intro.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment66"><a href="aggregate.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2016, 2017,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment73">
+<table class="cellalignment65">
+<tr>
+<td class="cellalignment66"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment66"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment66"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment66"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

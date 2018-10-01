@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Upgrading to a New Dictionary Version</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2018-02-27T10:10:49Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Thesaurus Management System User's Guide" />
+<meta name="dcterms.identifier" content="E61918-02" />
+<meta name="dcterms.isVersionOf" content="TMSUG" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;1999, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Index" href="index.htm" title="Index" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="defmisc.htm" title="Previous" type="text/html" />
+<link rel="Next" href="task.htm" title="Next" type="text/html" />
+<link rel="alternate" href="TMSUG.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="TMSUG.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="TMSUG.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">12/25</span> <!-- End Header -->
+<div id="TMSUG11624" class="chapter"><a id="BABGFFBD"></a>
+<h1 class="chapter"><span class="secnum">8</span> Upgrading to a New Dictionary Version</h1>
+<p>This section includes:</p>
+<ul>
+<li>
+<p><a href="#BEJJHDFA">Upgrading TMS Dictionaries</a></p>
+</li>
+<li>
+<p><a href="#BGBECAHJ">Running the Autoprocess VTAs/VTIs Job</a></p>
+</li>
+<li>
+<p><a href="#BGBDBHDA">Running Dictionary Upgrade Reports</a></p>
+</li>
+<li>
+<p><a href="#BGBFEEGD">Maintaining Predictionary Terms and Relationships</a></p>
+</li>
+</ul>
+<p>To upgrade to a new version of a vendor-supplied dictionary that you have already defined and loaded, you need to load the new version into the Oracle Thesaurus Management System (TMS) database.</p>
+<p>You can use TMS reports to analyze the impact that the new version will have on your VTAs and omissions. You can then make changes&mdash;primarily reclassifications&mdash;while the new dictionary version is still in the predictionary tables, avoiding problems during and after Activation. A TMS job, Autoprocess VTAs, can correct many problems automatically. You can also correct problems manually.</p>
+<p>To run impact reports and make changes in the predict tables, you must have the role TMS_DICTUPG_PRIV. When you have this role, you see a new menu item called Dictionary Upgrade.</p>
+<a id="BEJJHDFA"></a>
+<div id="TMSUG11625" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Upgrading TMS Dictionaries</h2>
+<p>The general steps involved in upgrading a dictionary in TMS include:</p>
+<ol>
+<li>
+<p>Load the new dictionary version into temporary tables and then into the predictionary tables. Use the instructions in <a href="defdict.htm#BABEIAHC">Chapter 6, "Defining and Loading Dictionaries."</a></p>
+</li>
+<li>
+<p>Run the <span class="bold">Dictionary Impacts Report</span> showing current VTAs and omissions that will be impacted by updated, added, or deleted dictionary terms in the new dictionary version. See <a href="reports_jobs.htm#CHDEJFED">Chapter 2, "Reports and Batch Jobs"</a> for more information.</p>
+</li>
+<li>
+<p>Run the <span class="bold">Autoprocess VTAs</span> job to automatically load the affected verbatim terms into the predict tables if they are not already there and perform the required classifications, reclassifications, and declassifications.</p>
+</li>
+<li>
+<p>Manipulate the data manually if necessary; see <a href="#BGBFEEGD">"Maintaining Predictionary Terms and Relationships"</a>.</p>
+</li>
+<li>
+<p>Run the specialized dictionary upgrade reports. Return to the <span class="bold">Maintain Predictionary VTAs/VTIs</span> window to fix problems, rerun the reports, and fix additional problems as necessary.</p>
+<p>The dictionary upgrade reports include:</p>
+<ul>
+<li>
+<p><span class="bold">Predict VTAs/VTIs Report</span>. This report displays VTAs in the Activation Group you specify in the following groups: classifications, reclassifications, and declassifications. The same data is displayed in the first three tabs of the Maintain Predictionary VTAs/VTIs window. If the Activation Group includes terms and relations in more than one dictionary, you can choose to see them all or specify a single base dictionary.</p>
+</li>
+<li>
+<p><span class="bold">Site Impacts Report</span>. This report lists the external system databases from which affected verbatim term occurrences came, with their associated X Area. For Oracle Clinical, this is the study in which the verbatim term occurrence was collected.</p>
+</li>
+<li>
+<p><span class="bold">Omission Impacts Report</span>. This report lists omissions that will be resolved (by the addition of a dictionary term that is a direct match) as well as new omissions that will be created (by the deletion of a dictionary term to which verbatim terms are classified) by Activation and Synchronization. This report also shows the actions applied to the current omissions, if any.</p>
+</li>
+<li>
+<p><span class="bold">Cross-Dictionary Impacts Report</span>. This report lists terms in other dictionaries that have links defined to affected terms in the new dictionary version.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Activate the Activation Group in Check or Transfer mode. See <a href="defdict.htm#CHDCGAED">"Activating Loaded Terms."</a></p>
+</li>
+<li>
+<p>Run the <span class="bold">Preliminary Repository Report</span> to show errors resulting from the Activation. See <a href="defdict.htm#CHDFIDHC">"Preliminary Repository Report"</a> for more information.</p>
+</li>
+<li>
+<p>If necessary, make changes manually using the instructions in <a href="#BGBFEEGD">"Maintaining Predictionary Terms and Relationships"</a> and rerun Activation. Repeat this process as necessary.</p>
+</li>
+<li>
+<p>Run a new <span class="bold">Site Impacts Report</span> to determine which X Areas on which external system sites are impacted. See <a href="#BEJIDFAI">"Site Impacts Report"</a> for more information.</p>
+</li>
+<li>
+<p>Run the data exchange job between TMS and the external system for the affected X Areas. If the external system is Oracle Clinical, run Batch Validation for the affected studies on the affected sites.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="BGBECAHJ"></a>
+<div id="TMSUG11626" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Running the Autoprocess VTAs/VTIs Job<a id="sthref423"></a><a id="sthref424"></a> <a id="sthref425"></a></h2>
+<p>The Autoprocess VTAs/VTIs job automatically handles many of the changes required by the new dictionary version's impact on your VTAs and VTIs. The job inserts affected VTAs and VTIs into the predictionary tables if they are not already there, so that it can operate on them and you can too, in the Maintain Predictionary VTAs/VTIs window. (The VTAs and VTIs remain in production as well.) The job makes the following changes:</p>
+<ul>
+<li>
+<p>The job reclassifies VTAs and VTIs whose dictionary term has been moved from one coding level to another.</p>
+</li>
+<li>
+<p>The job declassifies VTAs and VTIs whose dictionary term has been deleted</p>
+</li>
+<li>
+<p>If you set the <span class="bold">Reclassify Direct Matches?</span> parameter to Yes, the job reclassifies verbatim terms to new dictionary terms that are a direct match.</p>
+</li>
+</ul>
+<p>To run the Autoprocess VTAs/VTIs job, do the following:</p>
+<ol>
+<li>
+<p>In the Navigator window, select <span class="bold">Dictionary Upgrade</span>, then <span class="bold">Autoprocess VTAs/VTIs</span>.</p>
+</li>
+<li>
+<p>Enter values for the following Job Specific parameters:</p>
+<ul>
+<li>
+<p><span class="bold">Activation Group</span>. From the drop-down list, select the name of the Activation Group that contains the new dictionary version.</p>
+</li>
+<li>
+<p><span class="bold">Reclassify Direct Matches?</span>. If set to Yes, the job reclassifies VTAs currently to dictionary terms that are not a direct match for which there is a new dictionary term that is a direct match.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Submit the job. See <a href="reports_jobs.htm#CHDHEIGD">"Running a Job"</a>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="BGBDBHDA"></a>
+<div id="TMSUG11627" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Running Dictionary Upgrade Reports</h2>
+<p>TMS includes the following dictionary upgrade reports:</p>
+<ul>
+<li>
+<p><a href="#BABFAJFE">Dictionary Impacts Report</a></p>
+</li>
+<li>
+<p><a href="#BABIDDEG">Predict VTA/VTI Report</a></p>
+</li>
+<li>
+<p><a href="#BEJIDFAI">Site Impacts Report</a></p>
+</li>
+<li>
+<p><a href="#BABJFAFI">Omission Impacts Report</a></p>
+</li>
+<li>
+<p><a href="#BEJJBBAC">Cross Dictionary Impacts Report</a></p>
+</li>
+</ul>
+<a id="BABFAJFE"></a>
+<div id="TMSUG11628" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Dictionary Impacts Report<a id="sthref426"></a><a id="sthref427"></a></h3>
+<p>The Dictionary Impacts Report displays all the global VTAs, VTIs, and current omissions that will be affected by a base dictionary upgrade. You can run the Dictionary Impacts Report before or after the Autoprocess VTAs/VTIs job. You can run this report only on a base dictionary and in the global domain.</p>
+<p>The report includes the following sections:</p>
+<ul>
+<li>
+<p><span class="bold">The Assigned Dictionary Term Will Be Deleted for the Following VTAs/VTIs</span> If the new dictionary version deletes dictionary terms to which VTAs or VTIs are currently classified, you must reclassify the affected terms.</p>
+<p>Each row of the report displays one verbatim term that will be declassified, with the following information:</p>
+<ul>
+<li>
+<p>The affected dictionary</p>
+</li>
+<li>
+<p>The affected domain</p>
+</li>
+<li>
+<p>The verbatim term</p>
+</li>
+<li>
+<p>The classification type: VTA or VTI</p>
+</li>
+<li>
+<p>The VTA or VTI ID</p>
+</li>
+<li>
+<p>The dictionary term and its ID</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="bold">The Assigned Dictionary Term Will Be Updated for the Following VTAs/VTIs</span> If the new dictionary version modifies some dictionary terms to which VTAs or VTIs are currently classified, you may want to reclassify the affected terms.</p>
+<p>Each row of the report displays one affected verbatim term, with the following information:</p>
+<ul>
+<li>
+<p>The affected dictionary</p>
+</li>
+<li>
+<p>The affected domain</p>
+</li>
+<li>
+<p>The verbatim term</p>
+</li>
+<li>
+<p>The classification type: VTA or VTI</p>
+</li>
+<li>
+<p>The VTA or VTI ID</p>
+</li>
+<li>
+<p>The approval status of the existing VTA or VTI</p>
+</li>
+<li>
+<p>The dictionary term and its ID</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="bold">There Will Be a Direct Match for the Following VTAs</span> If the new dictionary version includes new terms that are a direct match to VTAs that are currently to nonmatching dictionary terms, you may want to reclassify the verbatim terms to the new, matching dictionary terms. (You can do this automatically by running the Autoprocess VTAs/VTIs job with Reclassify Direct Matches set to Yes.)</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If any dictionary/domain combination allows classification to nonapproved dictionary terms, this report includes verbatim terms in that dictionary domain that are a direct match to both approved and nonapproved dictionary terms. This could be the case in MedDRA-J, for example. See <a href="defdict.htm#CHDCFCCI">"Assigning a Dictionary to a Domain"</a> for more information.</div>
+<p>Each row of the report displays one affected verbatim term, with the following information:</p>
+<ul>
+<li>
+<p>The affected dictionary</p>
+</li>
+<li>
+<p>The affected domain</p>
+</li>
+<li>
+<p>The verbatim term</p>
+</li>
+<li>
+<p>The approval status of the existing VTA</p>
+</li>
+<li>
+<p>The new dictionary term that is a direct match</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="bold">There Will Be a Direct Match for the Following <a id="sthref428"></a><a id="sthref429"></a>VTIs</span> If the new dictionary version includes new terms that are a direct match to VTIs that are currently to nonmatching dictionary terms, you may want to reclassify the verbatim terms to the new, matching dictionary terms. (You can do this automatically by running the Autoprocess VTAs/VTIs job with Reclassify Direct Matches set to Yes.)</p>
+<p>If the new, matching dictionary term is unique, it may be a candidate for a VTA. If it is not unique, any auxiliary information is not processed. You must manually classify the VTI if you are using auxiliary information.</p>
+<p>Each row of the report displays one affected verbatim term, with the following information:</p>
+<ul>
+<li>
+<p>The affected dictionary</p>
+</li>
+<li>
+<p>The affected domain</p>
+</li>
+<li>
+<p>The verbatim term</p>
+</li>
+<li>
+<p>The approval status of the existing VTI</p>
+</li>
+<li>
+<p>The new dictionary term that is a direct match, and its ID</p>
+</li>
+<li>
+<p>Whether or not the dictionary term is unique in its level</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>To generate a <span class="bold">Dictionary Impacts Report</span>:</p>
+<ol>
+<li>
+<p>Select <span class="bold">Dictionary Upgrade</span> in the navigator window.</p>
+</li>
+<li>
+<p>Select <span class="bold">Dictionary Impacts Report</span>.</p>
+</li>
+<li>
+<p>Fill in the general report specifications. See <a href="reports_jobs.htm#CHDGFADG">"Setting Parameters"</a></p>
+</li>
+<li>
+<p>Enter a value for each <span class="bold">Job Specific</span> parameter:</p>
+<ul>
+<li>
+<p><span class="bold">Activation Group</span>: Select the Activation Group that contains the new version of the dictionary.</p>
+</li>
+<li>
+<p><span class="bold">Base Dictionary</span>: Select the base dictionary being upgraded. If unselected, all base dictionaries in the Activation Group are processed.</p>
+</li>
+<li>
+<p><span class="bold">Template</span>: Select the report template. If your company has created a custom template, it appears in the list of values. The Oracle Template is the default template.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Submit the job. See <a href="reports_jobs.htm#CHDHEIGD">"Running a Job"</a></p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BABIDDEG"></a>
+<div id="TMSUG11629" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Predict VTA/VTI Report<a id="sthref430"></a> <a id="sthref431"></a></h3>
+<p>The <span class="bold">Predict VTA/VTI Report</span> shows the current state of VTAs and VTIs in the predictionary tables for a particular Activation Group and dictionary specified at runtime and indicated in the report header.</p>
+<p>Accordingly, the report groups the VTAs and VTIs into the following sections:</p>
+<ul>
+<li>
+<p><span class="bold">Classifications</span>: Displays verbatim terms in the predictionary classification table.</p>
+</li>
+<li>
+<p><span class="bold">Reclassifications</span>: Displays the terms in the predictionary reclassifications table. These reclassifications may have been done by the Autoprocess VTAs/VTIs job or manually.</p>
+</li>
+<li>
+<p><span class="bold">Declassifications</span>: Displays terms in the predictionary declassifications table. These declassifications may have been done manually or by the Autoprocess VTAs/VTIs job.</p>
+</li>
+</ul>
+<p>The following columns are displayed in the above report sections:</p>
+<ul>
+<li>
+<p>Dictionary</p>
+</li>
+<li>
+<p>Domain</p>
+</li>
+<li>
+<p>Verbatim Term</p>
+</li>
+<li>
+<p>Type: VTA or VTI</p>
+</li>
+<li>
+<p>VTA or VTI ID</p>
+</li>
+<li>
+<p>Dictionary Term and its ID (This is blank for declassifications)</p>
+</li>
+<li>
+<p>Old Dictionary Term and its ID (only for Reclassifications)</p>
+</li>
+</ul>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Only Superusers can run this report</div>
+<p>To generate a Predict VTA/VTI Report:</p>
+<ol>
+<li>
+<p>Select the <span class="bold">Predict VTA/VTI Report</span> from the <span class="bold">Dictionary Upgrade</span> menu.</p>
+</li>
+<li>
+<p>Fill in the general report specifications. See <a href="reports_jobs.htm#CHDGFADG">"Setting Parameters"</a></p>
+</li>
+<li>
+<p>Enter a value for <span class="bold">Job Specific</span> parameters:</p>
+<ul>
+<li>
+<p><span class="bold">Activation Group:</span> Select the Activation Group that contains the new version of the dictionary.</p>
+</li>
+<li>
+<p><span class="bold">Base Dictionary:</span> Select the appropriate base dictionary to define the scope of the report. If not selected, all base dictionaries within the selected Activation Group are processed by default.</p>
+</li>
+<li>
+<p><span class="bold">Template:</span> Select the template for the report. If your company has created a custom template, it appears in the list of values. The Oracle Template is the default.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Submit the job. See <a href="reports_jobs.htm#CHDHEIGD">"Running a Job"</a></p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BEJIDFAI"></a>
+<div id="TMSUG11630" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Site Impacts Report<a id="sthref432"></a><a id="sthref433"></a></h3>
+<p>The Site Impacts Report displays the X Areas affected by a dictionary upgrade on a particular site.</p>
+<p>In Oracle Clinical, an X Area is a study. If you select Oracle Clinical as the external system, the report displays actual study names. If you are using a different external systems, the report displays either the X Area ID or a recognizable name you specify using a function. See <a href="integ.htm#CHDFBBED">"Defining External System Information in TMS"</a>.</p>
+<p>Run the Site Impacts Report after the Autoprocess VTA job.</p>
+<p>The Site Impacts Report displays the following:</p>
+<ul>
+<li>
+<p>The external system in use</p>
+</li>
+<li>
+<p>The list of X Areas affected by the upgrade</p>
+</li>
+<li>
+<p>The corresponding X Area names</p>
+</li>
+<li>
+<p>The external system instance</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+This report includes sites affected by an upgrade because at least one dictionary/domain combination allows classification to nonapproved dictionary terms, and the upgrade includes nonapproved dictionary terms that are a direct match to verbatim terms currently to a different dictionary term. This could be the case in MedDRA-J, for example. See <a href="defdict.htm#CHDCFCCI">"Assigning a Dictionary to a Domain"</a> for more information.</div>
+</li>
+</ul>
+<p>To generate a <span class="bold">Site Impacts Report</span>:</p>
+<ol>
+<li>
+<p>Select <span class="bold">Dictionary Upgrade</span> in the navigator window.</p>
+</li>
+<li>
+<p>Select <span class="bold">Site Impacts Report</span>.</p>
+</li>
+<li>
+<p>Fill in the general report specifications. See <a href="reports_jobs.htm#CHDGFADG">"Setting Parameters"</a></p>
+</li>
+<li>
+<p>Enter a value for <span class="bold">Job Specific</span> parameters:</p>
+<ul>
+<li>
+<p><span class="bold">Activation Group</span>: Select the Activation Group that contains the new version of the dictionary.</p>
+</li>
+<li>
+<p><span class="bold">External system</span>: Select an external system.</p>
+</li>
+<li>
+<p><span class="bold">Remote Instance:</span> Select a site. The default instance is the current site.</p>
+</li>
+<li>
+<p><span class="bold">Template</span>: Select the report template. If your company has created a custom template, it appears in the list of values. The Oracle Template is the default template.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Submit the job. See <a href="reports_jobs.htm#CHDHEIGD">"Running a Job"</a></p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BABJFAFI"></a>
+<div id="TMSUG11631" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Omission Impacts Report<a id="sthref434"></a><a id="sthref435"></a></h3>
+<p>A dictionary upgrade resolves omissions if a new dictionary term is added that is a direct match, and creates new omissions if the dictionary term to which a VTA or VTI is mapped is deleted.</p>
+<p>For both omissions that will be resolved and omissions that will be created, the Omission Impacts Report displays the following:</p>
+<ul>
+<li>
+<p>Domain</p>
+</li>
+<li>
+<p>Dictionary</p>
+</li>
+<li>
+<p>External system instance</p>
+</li>
+<li>
+<p>External system name</p>
+</li>
+<li>
+<p>X Area</p>
+</li>
+<li>
+<p>X Area name (if available)</p>
+</li>
+<li>
+<p>Term</p>
+</li>
+<li>
+<p>Number of records affected</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+For omissions that will be resolved, this report includes omissions that are a direct match to a nonapproved dictionary term, if their dictionary domain allows classification to nonapproved dictionary terms. This could be the case in MedDRA-J, for example. See <a href="defdict.htm#CHDCFCCI">"Assigning a Dictionary to a Domain"</a> for more information.</div>
+</li>
+</ul>
+<p>To generate an Omission Impacts Report, do the following:</p>
+<ol>
+<li>
+<p>Select the <span class="bold">Omissions Impacts Report</span> from the <span class="bold">Dictionary Upgrade</span> menu.</p>
+</li>
+<li>
+<p>Fill in the general report specifications. See <a href="reports_jobs.htm#CHDGFADG">"Setting Parameters"</a></p>
+</li>
+<li>
+<p>Enter a value for each job-specific parameter:</p>
+<ul>
+<li>
+<p><span class="bold">Activation Group</span>: Select the Activation Group that contains the new version of the dictionary.</p>
+</li>
+<li>
+<p><span class="bold">External System</span>: Omissions may be created from any of the external systems linked with TMS. Select the required system from the list provided here.</p>
+</li>
+<li>
+<p><span class="bold">Remote Instance</span>: You can select a remote database if there is one, from the drop-down list. The report runs on the current instance by default.</p>
+</li>
+<li>
+<p><span class="bold">Base Dictionary</span>: Select the appropriate base dictionary to define the scope of the report. All base dictionaries within the selected Activation Group are processed by default.</p>
+</li>
+<li>
+<p><span class="bold">Template</span>: Select the template for the report. If your company has created a custom template, it appears in the list of values. The Oracle Template is the default.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Submit the job. See <a href="reports_jobs.htm#CHDHEIGD">"Running a Job"</a></p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BEJJBBAC"></a>
+<div id="TMSUG11632" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Cross Dictionary Impacts Report<a id="sthref436"></a><a id="sthref437"></a></h3>
+<p>If you have mapped terms across dictionaries using named relationships (NRLs), these mappings will be affected if either of the related terms is deleted. The Cross Dictionary Impacts Report lists all affected relations.</p>
+<p>Run the Cross Dictionary Impacts Report before or after the autoprocess VTA job.</p>
+<p>For each affected named relation, the Cross Dictionary Impacts Report displays the following:</p>
+<ul>
+<li>
+<p>Domain</p>
+</li>
+<li>
+<p>The dictionary and dictionary level on the From side of the relation</p>
+</li>
+<li>
+<p>The dictionary and dictionary level on the To side of the relation</p>
+</li>
+<li>
+<p>The term on the From side of the relation</p>
+</li>
+<li>
+<p>The named relationship definition used</p>
+</li>
+<li>
+<p>The term on the To side of the relation</p>
+</li>
+<li>
+<p>The DML</p>
+</li>
+<li>
+<p>The error message (gives the ID of the missing term)</p>
+</li>
+</ul>
+<p>To generate a <span class="bold">Cross Dictionary Impacts Report</span>:</p>
+<ol>
+<li>
+<p>Select <span class="bold">Dictionary Upgrade</span> in the navigator window.</p>
+</li>
+<li>
+<p>Select <span class="bold">Cross Dictionary Impacts</span>.</p>
+</li>
+<li>
+<p>Fill in the general report specifications. See <a href="reports_jobs.htm#CHDGFADG">"Setting Parameters"</a></p>
+</li>
+<li>
+<p>Enter a value for <span class="bold">Job Specific</span> parameters:</p>
+<ul>
+<li>
+<p><span class="bold">Activation Group</span>: Select the Activation Group that contains the new version of the dictionary.</p>
+</li>
+<li>
+<p><span class="bold">Template</span>: Select the report template. If your company has created a custom template, it appears in the list of values. The Oracle Template is the default template.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Submit the job. See <a href="reports_jobs.htm#CHDHEIGD">"Running a Job"</a></p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BGBFEEGD"></a>
+<div id="TMSUG11633" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Maintaining Predictionary Terms and Relationships</h2>
+<p>This section includes:</p>
+<ul>
+<li>
+<p><a href="#BEJJDIGA">About the Maintain Predictionary VTAs/VTIs Tabs</a></p>
+</li>
+<li>
+<p><a href="#BEJIHFFE">Common Procedure for Using All Tabs</a></p>
+</li>
+<li>
+<p><a href="#BEJFHCCA">Common Fields in the Maintain Predictionary VTAs/VTIs Window</a></p>
+</li>
+</ul>
+<p>The Maintain Predictionary VTAs/VTIs window shows verbatim terms and their relations in a particular Activation Group, domain, and dictionary that have been modified but not yet activated. They may have been modified manually in this window or by the Autoprocess VTAs/VTIs job or, in some cases, in the Maintain Repository window or using Maintain Repository APIs.</p>
+<p>You do not see data loaded into the predictionary tables (as for a dictionary upgrade) but not modified after being loaded, and you do not see dictionary terms in levels higher than the coding level.</p>
+<p>In this window you can work on virtual dictionaries as well as base dictionaries.</p>
+<p>All the work you do in this window is in the predictionary tables. You must run Activation to move the terms and relations into production. You can run Activation by running the Activate Preliminary Data job from the Repository Maintenance window or the Repository Authoring window.</p>
+<a id="BEJJDIGA"></a>
+<div id="TMSUG11634" class="sect2">
+<h3 class="sect2">About the Maintain Predictionary VTAs/VTIs Tabs</h3>
+<p>In the Maintain Predictionary VTAs/VTIs window, terms and relations are grouped into tabs according to the type of modification they have undergone in the predictionary tables:</p>
+<ul>
+<li id="BABBGFBJ">
+<p><span class="bold">Classification</span>. In the Classifications tab you see verbatim terms that have been in the predictionary tables. You can manually create verbatim terms and classify them to dictionary terms in the new dictionary version. You cannot query for unclassified verbatim terms in this tab; they are in the Invalid tab.</p>
+</li>
+<li id="BABBBEGB">
+<p><span class="bold">Reclassification</span>. In the Reclassifications tab you can see terms that have already been reclassified in the predictionary tables in the Activation Group, domain, and dictionary you specify. These reclassifications may have been done by the Autoprocess VTAs/VTIs job, manually in this tab, manually in the Maintain Repository window, or using Maintain Repository APIs.</p>
+</li>
+<li id="BABJGJIJ">
+<p><span class="bold">Declassification</span>. In the Declassifications tab you can see terms that have already been declassified in the predictionary tables in the Activation Group, domain, and dictionary you specify. These declassifications may have been done manually by a user in this tab, manually in the Maintain Repository window, or by the Autoprocess VTAs/VTIs job; for example, if a new dictionary version does not include a dictionary term that had been used for classification.</p>
+</li>
+<li>
+<p><span class="bold">VTA Update</span>. In the VTA Update tab you can see VTs, VTRs, and their dictionary terms (DTs) that have been manually updated in the Maintain Repository window or using Maintain Repository APIs in the Activation Group, domain, and dictionary you specify. A VTA update is a change to the VTA such as a change in the setting for VTA Global? or VTA Approved? or Subtype.</p>
+</li>
+<li>
+<p><span class="bold">Invalid</span>. The Invalid tab displays verbatim term and relations (VTRs) that are currently invalid and cannot be activated.</p>
+<p>The following verbatim terms and relations are invalid:</p>
+<ul>
+<li>
+<p>Relations to dictionary terms that no longer exist</p>
+</li>
+<li>
+<p>Relations to unapproved dictionary terms</p>
+</li>
+<li>
+<p>Multiple relations inserted for the same verbatim term</p>
+</li>
+<li>
+<p>Relations whose VT has a different subtype</p>
+</li>
+<li>
+<p>VT with no parent (either the VTR was deleted without deleting the verbatim term, or a verbatim term was added without creating a VTR)</p>
+</li>
+</ul>
+<p>Use this tab to reclassify or declassify terms whose relations are currently invalid.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="BEJIHFFE"></a>
+<div id="TMSUG11635" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Common Procedure for Using All Tabs</h3>
+<p>You can use the same general procedures in all tabs of the Maintain Predictionary VTAs/VTIs window. In all tabs, you set the filter and query for one or more terms and relations. You can then, depending on the tab, do one or more of the following:</p>
+<ul>
+<li>
+<p><a href="#BEJDDDFB">Setting the Filter and Querying</a></p>
+</li>
+<li>
+<p><a href="#BEJJAIIG">Declassifying Terms</a></p>
+</li>
+<li>
+<p><a href="#BEJDDIJI">Reclassifying Terms</a></p>
+</li>
+<li>
+<p><a href="#BEJJGHHD">Classifying Terms</a></p>
+</li>
+<li>
+<p><a href="#BEJEFDHJ">Deleting Terms and Relations</a></p>
+</li>
+</ul>
+<a id="BEJDDDFB"></a>
+<div id="TMSUG11636" class="sect3">
+<h4 class="sect3">Setting the Filter and Querying</h4>
+<p>When you begin to work in the Maintain Predictionary VTAs/VTIs window, specify the data you want to view in the fields across the top of the window, as follows. These filter settings apply to all tabs in the window. You can change them at any time.</p>
+<ol>
+<li>
+<p>From the <span class="bold">Dictionary Upgrade</span> menu, select <span class="bold">Maintain Predictionary VTAs/VTIs</span>, then select the tab you want.</p>
+</li>
+<li>
+<p><span class="bold">Group</span>. From the drop-down list, select the name of the Activation Group that includes the new dictionary version.</p>
+</li>
+<li>
+<p><span class="bold">Domain</span>. The drop-down list displays the domains associated with the Activation Group you selected. Select the domain you want to work on.</p>
+</li>
+<li>
+<p><span class="bold">Dictionary</span>. The drop-down list displays the dictionaries associated with the Activation Group you selected. Select the dictionary you want to work on.</p>
+</li>
+<li>
+<p>Click on the tab you want and enter a query in the upper portion of the window. See <a href="overview.htm#CHDDBFHF">"Querying in Windows"</a>.</p>
+<p>TMS returns all the terms and relations that satisfy your query criteria, with information appropriate for each tab; see <a href="#BEJFHCCA">"Common Fields in the Maintain Predictionary VTAs/VTIs Window"</a>.</p>
+</li>
+<li>
+<p>To make a change, select the term or relation you want to work on by clicking it or tabbing to it.</p>
+<p>To declassify the selected term, see <a href="#BEJJAIIG">"Declassifying Terms"</a>. To delete the selected term or relation, see <a href="#BEJEFDHJ">"Deleting Terms and Relations"</a>.</p>
+<p>To reclassify or classify the selected term, proceed to the next step.</p>
+</li>
+<li>
+<p>In the <span class="bold">Repository Terms</span> section at the bottom of the window, query for dictionary terms and VTAs or VTIs to which you may want to reclassify or classify the verbatim term. Use any of the fields as query criteria. For a description of these fields, see<a href="#BEJFHCCA">"Common Fields in the Maintain Predictionary VTAs/VTIs Window"</a>.</p>
+<p>In addition, for each term type&mdash;dictionary terms (DTs), VTAs, and VTIs&mdash;select one of the following to limit the query:</p>
+<ul>
+<li>
+<p><span class="bold">No</span>. If selected for DT, TMS will not search for dictionary terms. If selected for VTA or VTI, TMS will not search for VTAs or VTIs.</p>
+</li>
+<li>
+<p><span class="bold">All</span>. If selected for DT, TMS will search for all dictionary terms that match the other query criteria. If selected for VTA or VTI, TMS will search for all VTAs or VTIs that match the other query criteria.</p>
+</li>
+<li>
+<p><span class="bold">Approved</span>. If selected for DT, TMS will search for only approved dictionary terms that match the other query criteria. If selected for VTA or VTI, TMS will search for only approved VTAs or VTIs that match the other query criteria.</p>
+</li>
+<li>
+<p><span class="bold">Not Approved</span>. If selected for DT, TMS will search for only unapproved dictionary terms that match the other query criteria. If selected for VTA or VTI, TMS will search for only unapproved VTAs or VTIs that match the other query criteria.</p>
+<p>Depending on the Non Appr DT setting for the current dictionary/domain combination, you may or may not be able to classify a verbatim term to a nonapproved dictionary term. See <a href="defdict.htm#CHDCFCCI">"Assigning a Dictionary to a Domain"</a> for more information. You can never create a Global VTA with a nonapproved dictionary term.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>To reclassify the term, see <a href="#BEJDDIJI">"Reclassifying Terms"</a>.</p>
+<p>To classify the term, see <a href="#BEJJGHHD">"Classifying Terms"</a>.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+It is not necessary to Save except for deletions. For classifying, reclassifying, and declassifying, TMS saves your work when you click the <span class="bold">Classify</span>, <span class="bold">Reclassify</span>, or <span class="bold">Declassify</span> button.</div>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<a id="BEJJAIIG"></a>
+<div id="TMSUG11637" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Declassifying Terms</h4>
+<p>When you declassify in this window, TMS deletes the verbatim term (VT) and the verbatim term relation (VTR) from the predictionary tables. You can declassify terms in the Reclassification, VTA Update, and Invalid tabs.</p>
+<p>To declassify a term, select it and click</p>
+<ol>
+<li>
+<p>Select the term in the upper tab.</p>
+</li>
+<li>
+<p>Click <span class="bold">Declassify</span>. TMS deletes the values from the New Dictionary Term and New DT ID fields, as well as all the New DT fields in the lower portion of the Reclassification tab.</p>
+</li>
+</ol>
+<p>After you declassify a term and leave the tab, you can find the same term only in the Declassification tab.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BEJDDIJI"></a>
+<div id="TMSUG11638" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Reclassifying Terms</h4>
+<p>When you reclassify, TMS deletes the current verbatim term relation (VTR) in the predictionary tables and creates the new one in the predictionary tables. You can reclassify terms in any tab except Classifications.</p>
+<p>To reclassify a term, do the following:</p>
+<ol>
+<li>
+<p>Select the term in the upper tab.</p>
+</li>
+<li>
+<p>In the Repository Terms tab, query for the repository term to which you want to reclassify the verbatim term.</p>
+</li>
+<li>
+<p>Select the term to which you want to reclassify.</p>
+</li>
+<li>
+<p>You can set values for enterable fields. See <a href="#BEJFHCCA">"Common Fields in the Maintain Predictionary VTAs/VTIs Window"</a>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Reclassify</span>. TMS populates the New Dictionary Term fields in the upper tab with values that pertain to the new classification.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<a id="BEJJGHHD"></a>
+<div id="TMSUG11639" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Classifying Terms</h4>
+<p>You can classify terms only in the Classification tab, and you can classify only verbatim terms that you enter manually. You cannot query for unclassified verbatim terms.</p>
+<p>To classify a term:</p>
+<ol>
+<li>
+<p>Enter a verbatim term in the upper tab.</p>
+</li>
+<li>
+<p>In the Repository Terms tab, query for the repository term to which you want to reclassify the verbatim term.</p>
+</li>
+<li>
+<p>Select the term to which you want to reclassify.</p>
+</li>
+<li>
+<p>You can set values for enterable fields. See <a href="#BEJFHCCA">"Common Fields in the Maintain Predictionary VTAs/VTIs Window"</a>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Classify</span>. TMS populates the fields in the upper tab with values that pertain to the new classification.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<a id="BEJEFDHJ"></a>
+<div id="TMSUG11640" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Deleting Terms and Relations</h4>
+<p>In every tab, you can delete VTs and VTRs from the predictionary tables. The VT and VTR are completely removed from the predictionary tables and therefore are never activated and have no impact on production data.</p>
+<p>To delete a term or relation:</p>
+<ol>
+<li>
+<p>In the upper tab, select the term or relation you want to delete.</p>
+</li>
+<li>
+<p>From the Record menu at the top of the screen, select Delete.</p>
+</li>
+<li>
+<p>TMS deletes the row.</p>
+</li>
+<li>
+<p>Save.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BEJFHCCA"></a>
+<div id="TMSUG11641" class="sect2">
+<h3 class="sect2">Common Fields in the Maintain Predictionary VTAs/VTIs Window</h3>
+<p>This section includes descriptions of common fields in multiple tabs of the Maintain Predictionary VTAs/VTIs window:</p>
+<ul>
+<li>
+<p><a href="#BEJHFAGA">Common Fields in the Upper Tabs</a></p>
+</li>
+<li>
+<p><a href="#BEJGDJCD">Common Fields in the Repository Tab</a></p>
+</li>
+</ul>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+When a value is displayed in blue, you can click it to see additional information.</div>
+<a id="BEJHFAGA"></a>
+<div id="TMSUG11642" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Common Fields in the Upper Tabs</h4>
+<p>The following fields appear in one or more of the upper tabs: Classification, Reclassification, Declassification, VTA Update, and Invalid.</p>
+<p><a id="TMSUG11643"></a><span class="subhead3">Old Dictionary Term&nbsp;</span>This field displays the dictionary term to which the verbatim term is currently in the production tables.</p>
+<p><a id="TMSUG11644"></a><span class="subhead3">New Dictionary Term&nbsp;</span>This field displays the dictionary term to which the verbatim term is currently in the predictionary tables.</p>
+<p><a id="TMSUG11645"></a><span class="subhead3">Type&nbsp;</span>In the Classification tab, select the type of classification to be created. <span class="bold">VTIs</span> are valid only in dictionaries with nonunique terms allowed in the classification level. See <a href="defdict.htm#CHDCHECF">"Nonunique Coding Level Dictionaries."</a> VTIs cannot be global or nonapproved.</p>
+<p><a id="TMSUG11646"></a><span class="subhead3">VTA Global?&nbsp;</span>In the Classification tab, select <span class="bold">Yes</span> to create the VTA as Global when it is activated or <span class="bold">No</span> to create the VTA as a Domain VTA in the current domain when it is activated. In the Reclassification and Declassification tabs, this is a read-only field that indicates the nature of the selected VTA.</p>
+<p><a id="TMSUG11647"></a><span class="subhead3">VTA/VTI Subtype&nbsp;</span>This is a read-only field that indicates the subtype of the selected VTA: either Accepted or Misspelled.</p>
+<p><a id="TMSUG11648"></a><span class="subhead3">VTA Approved?&nbsp;</span>In the Classification tab, select <span class="bold">Yes</span> to create the VTA as Approved when it is activated or <span class="bold">No</span> to create the VTA as Unapproved when it is activated. In the Reclassification and Declassification tabs, this is a read-only field that indicates the status of the selected VTA.</p>
+<p><a id="TMSUG11649"></a><span class="subhead3">VTA/VTI ID&nbsp;</span>This field displays the unique system-generated ID of the selected verbatim term.</p>
+<p><a id="TMSUG11650"></a><span class="subhead3">DT ID&nbsp;</span>This field displays the ID of the dictionary term to which the verbatim term is currently in the production tables.</p>
+<p><a id="TMSUG11651"></a><span class="subhead3">New DT ID&nbsp;</span>This field displays the ID of the dictionary term to which the verbatim term is currently in the predictionary tables.</p>
+<p><a id="TMSUG11652"></a><span class="subhead3">VT Created By&nbsp;</span>This field displays the user name of the individual who first added the verbatim term.</p>
+<p><a id="TMSUG11653"></a><span class="subhead3">VTR Created By&nbsp;</span>This field displays the user name of the individual who first defined the VTR.</p>
+<p><a id="TMSUG11654"></a><span class="subhead3">DML&nbsp;</span>This field displays the DML statuses of the repository term. Values&mdash;Insert, Update, or Delete&mdash;denote the action TMS will take on the term during Activation. If the DML field does not contain a value, the term is currently in the production tables.</p>
+<p><a id="TMSUG11655"></a><span class="subhead3">Error&nbsp;</span>If the verbatim term's activation generates an error, it is displayed in the Error field.</p>
+<p><a id="TMSUG11656"></a><span class="subhead3">DT Content Code&nbsp;</span>This field displays the unique system-generated ID of the verbatim term.</p>
+<p><a id="TMSUG11657"></a><span class="subhead3">Old DT Code&nbsp;</span>This field displays the unique system-generated ID of the term to which the verbatim term is currently in the production tables.</p>
+<p><a id="TMSUG11658"></a><span class="subhead3">New DT Code&nbsp;</span>This field displays the unique system-generated ID of the term to which the verbatim term is currently in the predictionary tables.</p>
+<p><a id="TMSUG11659"></a><span class="subhead3">Predict?&nbsp;</span>If set to <span class="bold">Yes</span>, the currently dictionary term is in the predictionary tables. If set to <span class="bold">No</span> in is in the production tables.</p>
+<p class="subhead2"><a id="TMSUG11660"></a>Created By</p>
+<p>These fields display the user names of the individuals who first added the old and new dictionary terms.</p>
+<p><a id="TMSUG11661"></a><span class="subhead3">Level&nbsp;</span>This field displays the dictionary level of the verbatim or dictionary term.</p>
+<p><a id="TMSUG11662"></a><span class="subhead3">Subtype&nbsp;</span>These fields display the subtypes of the old and new dictionary terms.</p>
+<p><a id="TMSUG11663"></a><span class="subhead3">Approved?&nbsp;</span>These fields indicate whether the old and new dictionary terms have a status of Approved.</p>
+<p><a id="TMSUG11664"></a><span class="subhead3">Global?&nbsp;</span>This field indicates whether the new dictionary term is Global.</p>
+</div>
+<!-- class="sect3" -->
+<a id="BEJGDJCD"></a>
+<div id="TMSUG11665" class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Common Fields in the Repository Tab</h4>
+<p>The Repository tab contains the same fields for Classification, Reclassification, Declassification, VTA Update, and Invalid. These fields include:</p>
+<p><a id="TMSUG11666"></a><span class="subhead3">Data Source&nbsp;</span>Select a data source from which to select repository terms. If you select <span class="bold">Dictionary</span>, TMS displays only data from the production tables. If you select <span class="bold">Predictionary</span>, TMS displays only data from the predictionary tables. If you select <span class="bold">All Data</span>, TMS displays both production and predictionary data.</p>
+<p><a id="TMSUG11667"></a><span class="subhead3">Comment&nbsp;</span>You may enter comments about your action in this field.</p>
+<p><a id="TMSUG11668"></a><span class="subhead3">Dictionary Term&nbsp;</span>This field displays the related dictionary term for the term selected in the lower block. It is determined by the user-defined function for the dictionary, if present, or the immediately related dictionary term if the selected term is a verbatim term, or is null otherwise.</p>
+<p><a id="TMSUG11669"></a><span class="subhead3">Term&nbsp;</span>Depending on the options you select in the <span class="bold">Dictionary</span> and <span class="bold">Data Source</span> lists, repository terms are displayed in these fields.</p>
+<p><a id="TMSUG11670"></a><span class="subhead3">DML&nbsp;</span>This field displays the DML statuses of the repository term. Values&mdash;Insert, Update, or Delete&mdash;denote the action TMS will take on the term during Activation. If the DML field does not contain a value, the term is currently in the production tables.</p>
+<p><a id="TMSUG11671"></a><span class="subhead3">Level&nbsp;</span>This field displays the dictionary level of the repository term in the <span class="bold">Term</span> field in the same row.</p>
+<p><a id="TMSUG11672"></a><span class="subhead3">Code&nbsp;</span>This field is designed to contain the repository term's ID in this dictionary, but its use depends on your company's policy. This field contains a value only if the term is already in the production tables or if a value was entered in the Maintain Repository Data window.</p>
+<p><a id="TMSUG11673"></a><span class="subhead3">Alt Code&nbsp;</span>This field is designed to contain a unique ID for the repository term across TMS, but its use depends on your companys policies. This field contains a value only if the term is already in the production tables or if a value was entered in the Maintain Repository Data window.</p>
+<p><a id="TMSUG11674"></a><span class="subhead3">Type&nbsp;</span>This field displays the repository term's Type. This value is either <span class="bold">Dictionary Term</span> or <span class="bold">Verbatim Term</span>.</p>
+<p><a id="TMSUG11675"></a><span class="subhead3">SubType&nbsp;</span>This field displays the subtype for the repository term. This is either <span class="bold">Company</span>, <span class="bold">Domain</span>, or <span class="bold">External</span> for dictionary terms and <span class="bold">Accepted</span> or <span class="bold">Misspelled</span> for verbatim terms.</p>
+<p class="subhead2"><a id="TMSUG11676"></a>Glb?</p>
+<p>This box indicates whether or not the repository term is global.</p>
+<p><a id="TMSUG11677"></a><span class="subhead3">Appr?&nbsp;</span>This box indicates whether or not the repository term is approved.</p>
+<p><a id="TMSUG11678"></a><span class="subhead3">Status&nbsp;</span>This field indicates the status of the repository term.</p>
+<p><a id="TMSUG11679"></a><span class="subhead3">Category&nbsp;</span>This field indicates the category of the repository term.</p>
+<p><a id="TMSUG11680"></a><span class="subhead3">Id&nbsp;</span>This field indicates the unique identifier of the repository term.</p>
+<p><a id="TMSUG11681"></a><span class="subhead3">Comment Text&nbsp;</span>This field contains comment text for the repository term.</p>
+<p class="subhead2"><a id="TMSUG11682"></a>Error Msg</p>
+<p>This field displays an error message for activation of the repository term if the term is not activated; otherwise it is null.</p>
+<p><a id="TMSUG11683"></a><span class="subhead3">Created By&nbsp;</span>This field displays the user name of the individual who created the repository term.</p>
+<p><a id="TMSUG11684"></a><span class="subhead3">Valid From&nbsp;</span>This field displays the timestamp of the creation of the repository term.</p>
+<p><a id="TMSUG11685"></a><span class="subhead3">Valid To&nbsp;</span>This field displays the timestamp of the deletion of the repository term.</p>
+<p><a id="TMSUG11686"></a><span class="subhead3">Trans.id&nbsp;</span>This field displays the transaction identifier for the repository term.</p>
+<p><a id="TMSUG11687"></a><span class="subhead3">Value 1&nbsp;</span>This field displays a detail value defined by your company for the first detail for the repository term, if present.</p>
+<p><a id="TMSUG11688"></a><span class="subhead3">Value 2&nbsp;</span>This field displays a detail value defined by your company for the second detail for the repository term, if present.</p>
+<p><a id="TMSUG11689"></a><span class="subhead3">Value 3&nbsp;</span>This field displays a detail value defined by your company for the third detail for the repository term, if present.</p>
+<p><a id="TMSUG11690"></a><span class="subhead3">Value 4&nbsp;</span>This field displays a detail value defined by your company for the fourth detail for the repository term, if present.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment25">
+<tr>
+<td class="cellalignment34">
+<table class="cellalignment30">
+<tr>
+<td class="cellalignment29"><a href="defmisc.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment29"><a href="task.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;1999, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment36">
+<table class="cellalignment28">
+<tr>
+<td class="cellalignment29"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment29"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment29"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment29"><a href="index.htm"><img width="24" height="24" src="../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td class="cellalignment29"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

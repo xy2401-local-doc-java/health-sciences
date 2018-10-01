@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta charset="utf-8">
+<title>Create validation checks</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1093" />
+<meta name="dcterms.created" content="2018-05-25T8:12:55Z" />
+<meta name="robots" content="all" />
+<meta name="dcterms.title" content="Health Sciences Data Management Workbench Study Setup Guide" />
+<meta name="dcterms.identifier" content="E96067-01" />
+<meta name="dcterms.isVersionOf" content="DMWSC" />
+<meta name="dcterms.rights" content="Copyright&nbsp;&copy;&nbsp;2017, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved." />
+<link rel="Start" href="../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+
+<script type="application/javascript"  src="../dcommon/js/headfoot.js"></script>
+<script type="application/javascript"  src="../nav/js/doccd.js"></script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="transform.htm" title="Previous" type="text/html" />
+<link rel="Next" href="dmw_programs.htm" title="Next" type="text/html" />
+<link rel="alternate" href="DMWSC.pdf" title="PDF version" type="application/pdf" />
+<link rel="alternate" href="DMWSC.epub" title="ePub version" type="application/epub+zip" />
+<link rel="alternate" href="DMWSC.mobi" title="Mobipocket version" type="application/x-mobipocket-ebook" />
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<link rel="stylesheet" href="../dcommon/css/fusiondoc.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/header.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/footer.css">
+<link rel="stylesheet" type="text/css"  href="../dcommon/css/fonts.css">
+<link rel="stylesheet" href="../dcommon/css/foundation.css">
+<link rel="stylesheet" href="../dcommon/css/codemirror.css">
+<link rel="stylesheet" type="text/css" title="Default" href="../nav/css/html5.css">
+<link rel="stylesheet" href="../dcommon/css/respond-480-tablet.css">
+<link rel="stylesheet" href="../dcommon/css/respond-768-laptop.css">
+<link rel="stylesheet" href="../dcommon/css/respond-1140-deskop.css">
+<script type="application/javascript" src="../dcommon/js/modernizr.js"></script>
+<script type="application/javascript" src="../dcommon/js/codemirror.js"></script>
+<script type="application/javascript" src="../dcommon/js/jquery.js"></script>
+<script type="application/javascript" src="../dcommon/js/foundation.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552992c80ef99c8d" async="async"></script>
+<script type="application/javascript" src="../dcommon/js/jqfns.js"></script>
+<script type="application/javascript" src="../dcommon/js/ohc-inline-videos.js"></script>
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="../dcommon/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet"  href="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7"  type="text/css" media="screen" />
+<script type="text/javascript" src="../dcommon/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+<body>
+<a href="#BEGIN" class="accessibility-top skipto" tabindex="0">Go to main content</a><header><!--
+<div class="zz-skip-header"><a id="top" href="#BEGIN">Go to main content</a>--></header>
+<div class="row" id="CONTENT">
+<div class="IND large-9 medium-8 columns" dir="ltr">
+<a id="BEGIN" name="BEGIN"></a>
+<span id="PAGE" style="display:none;">8/12</span> <!-- End Header -->
+<div id="DMWSC291" class="chapter"><a id="CACDFABJ"></a>
+<h1 class="chapter"><span class="secnum">5</span> Create validation checks</h1>
+<p class="subhead1"><a id="DMWSC99972"></a>What do you want to do?</p>
+<ol>
+<li>
+<p><a href="#CHDHHJAF">Create a validation check batch</a></p>
+<p>or <a href="#CHDHIAHI">Copy a validation check batch</a></p>
+</li>
+<li>
+<p>Create a validation check</p>
+<ul>
+<li>
+<p><a href="#CHDBACDI">Create a validation check</a></p>
+</li>
+<li>
+<p><a href="#CHDHEBED">Complete a validation check <span class="italic">without</span> a custom program</a></p>
+</li>
+<li>
+<p><a href="#CHDBCFGI">Complete a validation check using a custom program</a></p>
+</li>
+<li>
+<p><a href="#CHDHFDGG">Copy a validation check</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#BABEJAFI">Install a validation check batch</a></p>
+</li>
+<li>
+<p><a href="#CACGFFGI">Run validation check batch and view run history</a></p>
+</li>
+<li>
+<p><a href="#CHDJEFHA">View discrepancies created by a validation check</a></p>
+</li>
+</ol>
+<p>Or:</p>
+<ul>
+<li>
+<p><a href="#CHDHDIFD">Disable or enable a validation check</a></p>
+</li>
+<li>
+<p><a href="#CHDECCBB">Reorder validation checks within an ordered batch</a></p>
+</li>
+<li>
+<p><a href="#CACIFJBJ">Upgrade validation checks to synchronize with models</a></p>
+</li>
+</ul>
+<p class="subhead1"><a id="DMWSC99973"></a>What do you want to know?</p>
+<ul>
+<li>
+<p><a href="#CACIFJBJ">Upgrade validation checks to synchronize with models</a></p>
+</li>
+<li>
+<p><a href="sc_adv_topics.htm#A3218509">Automatic triggering of transformations and validation checks</a></p>
+</li>
+<li>
+<p><a href="sc_adv_topics.htm#BABCICDE">Validation status and lifecycle stages</a></p>
+</li>
+</ul>
+<p><a href="#CACDJABE">FAQs</a></p>
+<p>Validation checks, also called <span class="italic">edit checks</span>, are programs designed to identify flawed data, or <span class="italic">discrepancies</span> (also called <span class="italic">queries</span>). Each one must check for a single problem and apply the same text, state, and action to each discrepancy created. Validation checks can test any combination of data that is contained in a single clinical data model. To run a validation check comparing data that originated in both InForm and a lab, create a transformation to put InForm and lab data in one clinical data model.</p>
+<p>You specify whether or not a validation check automatically closes discrepancies it created when their underlying data item is updated to be valid.</p>
+<a id="CHDHHJAF"></a>
+<div id="DMWSC810" class="sect1">
+<h2 class="sect1">Create a validation check batch</h2>
+<p><img width="54" height="22" src="img/icon_video.gif" alt="Text Show me How! is a video link." /> <code dir="ltr"><a href="https://apexapps.oracle.com/pls/apex/f?p=44785:265:0::::P265_CONTENT_ID:21835">Show me how!</a><a href=""></a></code></p>
+<p>Validation checks are executed in batches. Before you create a validation check you must create a batch for it. Use batches to group validation checks in logical ways:</p>
+<ul>
+<li>
+<p>Checks that have dependencies on each other so they must be executed in a particular order.</p>
+</li>
+<li>
+<p>Standard checks kept together for reuse in many studies.</p>
+</li>
+<li>
+<p>Checks on the same clinical data model that should all be triggered by the same event or scheduled for the same frequency.</p>
+</li>
+</ul>
+<ol>
+<li>
+<p>Click the Study Configuration icon <img width="29" height="25" src="img/study_config_icon.gif" alt="Icon shows a crossed wrench and screwdriver." /> at the top of any page and then click the <span class="bold">Validation Checks</span> tab.</p>
+</li>
+<li>
+<p>Select the clinical data model containing the data you want to check.</p>
+<div class="infobox-note">
+<p class="notep1">Notes:</p>
+<ul>
+<li>
+<p>Models are displayed only if they are installed.</p>
+</li>
+<li>
+<p>The validation checks in the batch reference the latest installed version of the model. If the model is updated after the batch is created, the Upgradeable status changes to Required and you must upgrade the check to reference the latest version of the model. See <a href="#CHDFBIFD">"Why does it say Upgrade Required?"</a>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Click the <img width="16" height="17" src="img/icon_add.gif" alt="Icon is a plus sign." /><span class="bold">Add</span> icon.</p>
+</li>
+<li>
+<p>Enter a name for the batch. See <a href="sc_adv_topics.htm#BABIBJAB">"Naming restrictions"</a>.</p>
+</li>
+<li>
+<p>Enter a description (optional). The description is displayed where you run the batch.</p>
+</li>
+<li>
+<p>Select <span class="bold">Ordered Execution?</span> if the validation checks in the batch should be run in a particular order. Validation checks in unordered batches run in parallel.</p>
+</li>
+<li>
+<p>Select <span class="bold">Can be Triggered</span> to allow the successful completion of a transformation or data load writing to the clinical data model to trigger the execution of the batch.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+</ol>
+<p><a id="DMWSC112"></a><a id="sthref31"></a><span class="subhead3">Next:&nbsp;</span><a href="#CHDBACDI">Create a validation check</a></p>
+</div>
+<!-- class="sect1" -->
+<img width="21" height="20" src="img/icon_delete.gif" alt="Icon is an X." /><a id="CHDBACDI"></a>
+<div id="DMWSC1006" class="sect1">
+<h2 class="sect1">Create a validation check</h2>
+<p>Before you create a validation check, you must create a batch in which to execute it; see <a href="#CHDHHJAF">"Create a validation check batch"</a>.</p>
+<p><img width="54" height="22" src="img/icon_video.gif" alt="Text Show me How! is a video link." /> <code dir="ltr"><a href="https://apexapps.oracle.com/pls/apex/f?p=44785:265:0::::P265_CONTENT_ID:21835">Show me how!</a><a href=""></a></code></p>
+<ol>
+<li>
+<p>Click the Study Configuration icon <img width="29" height="25" src="img/study_config_icon.gif" alt="Icon shows a crossed wrench and screwdriver." /> at the top of any page, then click the <span class="bold">Validation Checks</span> tab.</p>
+</li>
+<li>
+<p>Select the validation check batch you want the new validation check to be executed with. If necessary, <a href="#CHDHHJAF">Create a validation check batch</a>.</p>
+</li>
+<li>
+<p>Click the <img width="16" height="17" src="img/icon_add.gif" alt="Icon is a plus sign." /><span class="bold">Add</span> icon in the lower pane.</p>
+</li>
+<li>
+<p>Enter a name and description for the validation check. See <a href="sc_adv_topics.htm#BABIBJAB">"Naming restrictions"</a>. The name is displayed on the Validation Checks Listings page; the description is not.</p>
+<p>The remaining details affect the discrepancies created by the validation check:</p>
+</li>
+<li>
+<p>Select <span class="bold">Authorize access to this listing for users without Blind Break rights</span> if you know that only nonblinded columns will be displayed in the listing. This option is available only if at least one source table contains blinded data and if you have special privileges.</p>
+<p>If you do not select this option and one of the source tables is blinded, the system completely blinds the listing. To see any data, a user with Blind Break privileges must break the blind.</p>
+</li>
+<li>
+<p><span class="bold">Discrepancy Text</span>: Describe the problem with the data and/or the action required. Maximum 255 characters.</p>
+</li>
+<li>
+<p><span class="bold">Discrepancy Initial State</span>: Select a state to be applied to discrepancies created by this validation check: <span class="bold">Open</span> or <span class="bold">Candidate</span>. Use Candidate to require manual review for setting the discrepancies to Open.</p>
+</li>
+<li>
+<p>(Optional) Select a <span class="bold">Category</span>. The validation check applies this category to each discrepancy it creates. Users can filter discrepancies by category.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If you change the category, all new discrepancies created by the check have the new category, but the category of existing discrepancies remains the same.</div>
+</li>
+<li>
+<p>(Optional) Select the <span class="bold">Initial Discrepancy Action</span> you want the validation check to immediately perform on new discrepancies, if any.</p>
+<ul>
+<li>
+<p><span class="bold">Needs DM Review</span> adds this tag to discrepancies with either initial state. Discrepancies must be reviewed in DMW before being sent to InForm or a lab.</p>
+</li>
+<li>
+<p><span class="bold">Open InForm</span> immediately sends the discrepancy to InForm as an open query. Available only for data in an InForm clinical data model and only if you selected Open as the initial state.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Come back and select the <span class="bold">Discrepant Table</span> and <span class="bold">Discrepant Column</span> after selecting the tables and columns to be displayed. See <a href="#CHDHCBIE">"Select columns to display in the validation checks listings page"</a>.</div>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="bold">Execution Order</span>: (Available only in ordered validation check batches.) Enter a number to indicate the order in which this validation check should be run, in relation to other validation checks in the same batch. The system runs the lowest numbered check first, then the next lowest, and so on. The numbers do not need to be consecutive, and you may want to use numbers divisible by 10, for example, so that you can add a new validation check at any point.</p>
+</li>
+<li>
+<p><span class="bold">Continue on Error</span>: (Available only in ordered validation check batches.)</p>
+<ul>
+<li>
+<p>If set to <span class="bold">Yes</span>, the batch continues to execute subsequent validation checks even after one fails.</p>
+</li>
+<li>
+<p>If set to <span class="bold">No</span>, execution stops if one of the checks fails.</p>
+</li>
+</ul>
+<p>Unordered batches always run all validation checks.</p>
+</li>
+<li>
+<p><span class="bold">Allow Auto Close</span>: If selected, rerunning the validation check closes any discrepancy it created if the underlying data item is modified so that it no longer meets the criteria of the validation check.</p>
+<p>If not selected, rerunning the validation check changes the state of such discrepancies to Answered so that they can be manually closed after review.</p>
+</li>
+</ol>
+<p><span class="bold">Next:</span> Complete the validation check:</p>
+<ul>
+<li>
+<p><a href="#CHDHEBED">Complete a validation check <span class="italic">without</span> a custom program</a></p>
+</li>
+<li>
+<p><a href="#CHDBCFGI">Complete a validation check using a custom program</a></p>
+</li>
+</ul>
+</div>
+<!-- class="sect1" -->
+<a id="CHDHEBED"></a>
+<div id="DMWSC10069" class="sect1">
+<h2 class="sect1">Complete a validation check <span class="italic">without</span> a custom program</h2>
+<p><a id="DMWSC113"></a><span class="subhead3">Prerequisites&nbsp;</span><a href="#CHDHHJAF">Create a validation check batch</a> and <a href="#CHDBACDI">Create a validation check</a>.</p>
+<a id="CHDHCBIE"></a>
+<div id="DMWSC1007" class="sect2">
+<h3 class="sect2">Select columns to display in the validation checks listings page</h3>
+<p>Identify the columns you want to display in the Validation Check Listings page. Include any columns the validation check will operate on. The system creates a SELECT clause for the query based on these selections.</p>
+<ol>
+<li>
+<p>Continuing in the Add Validation Check window, in the Source pane, expand the node for the table or tables with data you want to display in the Validation Checks Listings page.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+Tables and columns marked Not Used in the transformation are not displayed here, nor are uninstalled tables.</div>
+</li>
+<li>
+<p>Select columns by moving them into the Selected Columns tab. You can work several ways:</p>
+<ul>
+<li>
+<p>Drag and drop selected columns or tables.</p>
+</li>
+<li>
+<p>Select columns or tables and click the <img width="16" height="17" src="img/icon_add.gif" alt="Icon is a plus sign." /><span class="bold">Add to Select statement</span> icon.</p>
+</li>
+<li>
+<p>To write an expression that operates on multiple columns, add all columns in the expression to the same row:</p>
+<ol>
+<li>
+<p>Move one column into Selected Columns and highlight it there.</p>
+</li>
+<li>
+<p>Select the additional columns and click the <img width="23" height="23" src="img/icon_use_in_exp_arrow.gif" alt="Icon is an arrow." /> <span class="bold">Use in Expression</span> arrow icon.</p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p>Select a <span class="bold">Table Alias</span> for each column used in an expression. If there is only one defined for the table, the system adds it automatically.</p>
+<p>To add an alias, go to the Table Alias tab. See <a href="#CHDCBGFD">"Add table aliases"</a>.</p>
+</li>
+<li>
+<p>Enter the <span class="bold">Column Header for Display</span>. This header is displayed in the Validation Checks Listings page.</p>
+</li>
+<li>
+<p><span class="bold">Expression</span>: Add an expression, if needed, to change data display, for example, to mask blinded data, or to append a string to all values in the column, or to concatenate two column values in a single column. Either:</p>
+<ul>
+<li>
+<p>Enter free text.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Important:</p>
+<ul>
+<li>
+<p>If you reference a static package or function in free text, you must select it in the <span class="bold">Selected Packages tab</span>.</p>
+</li>
+<li>
+<p>In free text, <span class="bold">use just the column name</span>, not the table.column format, <span class="bold">unless</span> you need to use an alias, as in a self-join. In that case the alias.column format is required.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Click the <img width="15" height="17" src="img/icon_modify.gif" alt="Icon shows a pencil." /><span class="bold">Modify Expression</span> icon; see <a href="dmw_programs.htm#BABFACFB">"Use the Expression Builder"</a>. You can edit code generated by the Expression Builder in this field afterward.</p>
+<p>If you use the Expression Builder, you do not need to use the Select Packages tab.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If you select a column that contains masked data, write an expression for the column to display masking values.
+<p>Validation checks can evaluate real data that is masked and create a discrepancy on it.</p>
+</div>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="bold">Discrepant Table and Column</span>: In the upper portion of the window, designate one data item as the one against which discrepancies are created. If the validation check logic processes two or more data items, select one of them. See <a href="glossary.htm#CBAIGEHA">preferred path</a>.</p>
+<ol>
+<li>
+<p>In the <span class="bold">Discrepant Table</span> field, select the table that contains the discrepant data.</p>
+</li>
+<li>
+<p>In the <span class="bold">Discrepant Column</span> field, select the column that contains the discrepant data.</p>
+</li>
+</ol>
+</li>
+</ol>
+<p><span class="bold">Next:</span> <a href="#CHDDDFBB">Specify validation check criteria</a>.</p>
+</div>
+<!-- class="sect2" -->
+<div id="DMWSC114" class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref32"></a>
+<h3 class="sect2">Select packages</h3>
+<p>If you use free text to write an expression and the expression references a static package or function, you must select the package or function in the Select Packages tab.</p>
+<ol>
+<li>
+<p>Use the Query By Example fields above the columns to search for the package.</p>
+</li>
+<li>
+<p>Select the package(s) you are using in the validation check.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+</ol>
+<p><span class="bold">Next:</span> <a href="#CHDCBGFD">Add table aliases</a>.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CHDCBGFD"></a>
+<div id="DMWSC300" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Add table aliases</h3>
+<p>Columns used in an expression must have a 3-character table alias.</p>
+<ol>
+<li>
+<p>In the <span class="bold">Define Table Alias</span> tab, select the table from the drop-down list.</p>
+</li>
+<li>
+<p>Enter the alias. <span class="bold">The alias cannot be longer than three characters.</span></p>
+</li>
+<li>
+<p>If you need an additional alias, click the <img width="16" height="17" src="img/icon_add.gif" alt="Icon is a plus sign." /><span class="bold">Add Table Alias</span> icon.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+If you modify an alias later, any expressions or criteria that refer to the old alias are updated during the Save operation. If an expression or criteria already saved refers to a deleted alias, update it manually. To work with the expression or criteria before saving, update it manually.</div>
+</li>
+</ol>
+<p><span class="bold">Next:</span> <a href="#CHDDDFBB">Specify validation check criteria</a>.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CHDDDFBB"></a>
+<div id="DMWSC1009" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Specify validation check criteria</h3>
+<p>In the Criteria tab, specify the data condition the validation check is looking for. This becomes the WHERE clause.</p>
+<p>Either:</p>
+<ul>
+<li>
+<p>Enter the code directly in the Criteria pane.</p>
+</li>
+<li>
+<p>Click the <img width="19" height="20" src="img/icon_modify_criteria.gif" alt="Icon shows letters and a pencil." /><span class="bold">Add or Modify Criteria</span> icon to open the Expression Builder. See <a href="dmw_programs.htm#BABFACFB">"Use the Expression Builder"</a>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Important:</p>
+<ul>
+<li>
+<p>If you reference a static package or function in free text, you must select it in the <span class="bold">Selected Packages tab</span>.</p>
+</li>
+<li>
+<p>In free text, <span class="bold">use just the column name</span>, not the table.column format, <span class="bold">unless</span> you need to use an alias, as in a self-join. In that case the alias.column format is required.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+<p><span class="bold">Next:</span> <a href="#CHDFGAJG">Generate, test, view, and save source code</a>.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CHDFGAJG"></a>
+<div id="DMWSC10270" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Generate, test, view, and save source code</h3>
+<ol>
+<li>
+<p>Click <span class="bold">Test</span>. The system generates the code, runs the validation check and displays the records retrieved.</p>
+</li>
+<li>
+<p><span class="bold">To view the generated PL/SQL source code</span>, click <span class="bold">View Source</span>. The button is inactive if the validation check uses a custom program.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+</ol>
+<p><span class="bold">Next:</span> <a href="#BABEJAFI">Install a validation check batch</a>.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CHDBCFGI"></a>
+<div id="DMWSC99787" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Complete a validation check using a custom program</h2>
+<p><a id="DMWSC158"></a><span class="subhead3">Prerequisites&nbsp;</span><a href="#CHDHHJAF">Create a validation check batch</a> and <a href="#CHDBACDI">Create a validation check</a>.</p>
+<ol>
+<li>
+<p>Continuing in the Add Validation Check window, select <span class="bold">Create VC using a Custom Program</span>.</p>
+</li>
+<li>
+<p>Click the <img width="15" height="17" src="img/icon_modify.gif" alt="Icon shows a pencil." /> <span class="bold">Select a Program</span> icon.</p>
+<ol>
+<li>
+<p>Use the Query By Example fields above the columns to search for the package.</p>
+</li>
+<li>
+<p>Select the package.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>In the Select Source Tables tab, move the tables that contain data you want to display, or that your program operates on, to the Select edTables box.</p>
+</li>
+<li>
+<p><span class="bold">Discrepant Table and Column</span>: In the upper portion of the window, designate one data item as the one against which discrepancies are created. If the validation check logic processes two or more data items, select one of them. See <a href="glossary.htm#CBAIGEHA">preferred path</a>.</p>
+<ol>
+<li>
+<p>In the <span class="bold">Discrepant Table</span> field, select the table that contains the discrepant data.</p>
+</li>
+<li>
+<p>In the <span class="bold">Discrepant Column</span> field, select the column that contains the discrepant data.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+</ol>
+<p><span class="bold">Next:</span> <a href="#BABEJAFI">Install a validation check batch</a>.</p>
+</div>
+<!-- class="sect1" -->
+<a id="CHDHIAHI"></a>
+<div id="DMWSC10055" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Copy a validation check batch</h2>
+<p>You can copy a validation check batch from another study or from a different clinical data model in the same study. Disabled validation checks, if any, are included in the copy. No source tables are copied.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+Copy validation check batches <span class="bold">after</span> completing the transformation that writes to the model, so that the system can handle them appropriately.</div>
+<ol>
+<li>
+<p>In the Study Configuration page, navigate to Validation Checks, and select the clinical data model.</p>
+</li>
+<li>
+<p>Click <span class="bold">Copy Batches</span> in the Actions drop-down list.</p>
+</li>
+<li>
+<p>Select the project (or other study category), then the study, then the model.</p>
+</li>
+<li>
+<p>Select one or more batches.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+<p>The system searches the current model for the tables and columns that the validation checks read from, first by Oracle name and then by alias.</p>
+<ul>
+<li>
+<p>If any of the tables or columns do not exist, the Copy operation fails.</p>
+</li>
+<li>
+<p>If any of the tables are marked Not Used in the transformation that writes to the model, the system copies the validation checks as disabled. If the tables or columns are later marked Used, you can manually enable the validation checks.</p>
+</li>
+<li>
+<p>If the tables and columns exist and are used, the system copies the validation checks and links them to the appropriate tables and columns.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p><span class="bold">Next:</span> <a href="#BABEJAFI">Install a validation check batch</a>.</p>
+</div>
+<!-- class="sect1" -->
+<a id="CHDHFDGG"></a>
+<div id="DMWSC99883" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Copy a validation check</h2>
+<ol>
+<li>
+<p>Click the Study Configuration icon <img width="29" height="25" src="img/study_config_icon.gif" alt="Icon shows a crossed wrench and screwdriver." /> at the top of any page and then click the <span class="bold">Validation Checks</span> tab.</p>
+</li>
+<li>
+<p>Select the batch into which you want to copy a validation check.</p>
+</li>
+<li>
+<p>Select <span class="bold">Copy Checks</span> from the <span class="bold">Checks</span> drop-down.</p>
+</li>
+<li>
+<p>Select the project (or other study category), then the study, then the model.</p>
+</li>
+<li>
+<p>Select the batch and validation check.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+</ol>
+<p><span class="bold">Next:</span> <a href="#BABEJAFI">Install a validation check batch</a>.</p>
+</div>
+<!-- class="sect1" -->
+<a id="CHDHDIFD"></a>
+<div id="DMWSC879" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Disable or enable a validation check</h2>
+<ol>
+<li>
+<p>Click the Study Configuration icon <img width="29" height="25" src="img/study_config_icon.gif" alt="Icon shows a crossed wrench and screwdriver." /> at the top of any page and then click the <span class="bold">Validation Checks</span> tab.</p>
+</li>
+<li>
+<p>Select the batch that contains the check.</p>
+<ul>
+<li>
+<p>To prevent a validation check from being executed when the batch is executed, select it and then select <span class="bold">Disable Check</span> from the <span class="bold">Checks</span> drop-down list.</p>
+</li>
+<li>
+<p>To re-activate it, select it and then select <span class="bold">Enable Check</span> from the <span class="bold">Checks</span> drop-down list.</p>
+<p>The system prevents you from enabling a check whose source tables or columns are marked Not Used.</p>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="CHDECCBB"></a>
+<div id="DMWSC821" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Reorder validation checks within an ordered batch</h2>
+<ol>
+<li>
+<p>Click the Study Configuration icon <img width="29" height="25" src="img/study_config_icon.gif" alt="Icon shows a crossed wrench and screwdriver." /> at the top of any page and then click the <span class="bold">Validation Checks</span> tab.</p>
+</li>
+<li>
+<p>Select the batch.</p>
+</li>
+<li>
+<p>Select a check.</p>
+</li>
+<li>
+<p>Select <span class="bold">Reorder Checks</span> from the <span class="bold">Checks</span> drop-down list.</p>
+<p>The system displays all validation checks in the batch with their Execution Order number. Edit the numbers as required. They do not need to be consecutive. The system runs the validation check with the lowest number first, then the next higher number, and so on. For example, it would run checks with these numbers in the following order: 20, 30, 35, 36, 40, 100, 200.</p>
+</li>
+</ol>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+If a validation check has Enabled set to No, the system ignores its execution order number and does not run it.</div>
+</div>
+<!-- class="sect1" -->
+<a id="BABEJAFI"></a>
+<div id="DMWSC10271" class="sect1">
+<h2 class="sect1">Install a validation check batch</h2>
+<p>After creating or modifying a validation check batch, you must <span class="italic">install</span> it to make it usable. See <a href="sc_adv_topics.htm#BABHJHEF">"What happens during installation?"</a>.</p>
+<p>Validation check batch installation fails if there are destructive changes in the model such as the removal of a column or table that the validation check reads. See <a href="#CHDFBIFD">"Why does it say Upgrade Required?"</a>.</p>
+<ol>
+<li>
+<p>Click the Study Configuration icon <img width="29" height="25" src="img/study_config_icon.gif" alt="Icon shows a crossed wrench and screwdriver." /> at the top of any page and then click the <span class="bold">Validation Checks</span> tab.</p>
+</li>
+<li>
+<p>Select one or more validation check batches, then select one of the following from the Install drop-down list:</p>
+<ul>
+<li>
+<p><span class="bold">Install Batch</span> upgrades all tables and programs and does not delete any data.</p>
+</li>
+<li>
+<p><span class="bold">Full Install</span> drops and replaces all tables and programs, <span class="bold">deleting all data</span>. Full installation is not available in the Production lifecycle.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+The installation options are available only if all selected batches are installable:
+<ul>
+<li>
+<p>The Version and the Installable Version must be the same.</p>
+</li>
+<li>
+<p>See <a href="sc_adv_topics.htm#BABBJEHD">"Validation check batch installation requirements"</a>.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li>
+<p>To see the updated job status in the <span class="bold">Install Status</span> field, click the <img width="19" height="17" src="img/icon_refresh.gif" alt="Icon is a near circular arrow." /> <span class="bold">Refresh</span> icon.</p>
+</li>
+<li>
+<p>To see the log file:</p>
+<ol>
+<li>
+<p>Go to the Home page, Validation Checks tab.</p>
+</li>
+<li>
+<p>From the <span class="bold">Model</span> drop-down list, select the source clinical data model.</p>
+</li>
+<li>
+<p>In the <span class="bold">VC Batch Name</span> column, select the batch.</p>
+</li>
+<li>
+<p>Click the icon in the <span class="bold">Install Job Log</span> column in the same row.</p>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="CACGFFGI"></a>
+<div id="DMWSC115" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Run validation check batch and view run history</h2>
+<ul>
+<li>
+<p><a href="#CACBCHAC">Run a validation check batch</a></p>
+</li>
+<li>
+<p><a href="#CACBDFIG">View run history</a></p>
+</li>
+</ul>
+<a id="CACBCHAC"></a>
+<div id="DMWSC116" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Run a validation check batch</h3>
+<p>You must run validation checks as a batch.</p>
+<ol>
+<li>
+<p>Go to the <img width="26" height="25" src="img/home_icon.gif" alt="Icon is a house." /> <span class="bold">Home</span> page, <span class="bold">Validation Checks</span> tab.</p>
+</li>
+<li>
+<p>Select a validation check batch and click the <img width="19" height="19" src="img/icon_submit_job.gif" alt="Icon is a check mark in a circle." /> <span class="bold">Submit Job</span> icon.</p>
+<div class="infoboxnotealso">
+<p class="notep1">Tip:</p>
+The <span class="bold">Submit Job</span> icon does not appear if the validation check batch is not installed. Check the Installed Status.
+<p>If the installation status of a validation check batch is Warning, you may still be able to run the batch. Check the installation log file. If the status is Warning because one of the source tables is not used in the current study, the batch runs without input from that table.</p>
+</div>
+</li>
+<li>
+<p>Enter values:</p>
+<ul>
+<li>
+<p><span class="bold">Submission Mode</span>: Select one:</p>
+<ul>
+<li>
+<p><span class="bold">Full</span> mode processes all records.</p>
+</li>
+<li>
+<p><span class="bold">Incremental</span> mode processes only new and changed records.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="bold">Force Execution</span>: Select to run the job even though the source data currency, parameter values, and the version number of the program(s) have not changed since the last run. The system uses <span class="bold">Full mode</span> regardless of the Submission Mode setting. Full mode includes data deletion.</p>
+<p>If not selected and all the conditions are the same as the last run, the system does not execute the job and returns a status of Success.</p>
+</li>
+<li>
+<p><span class="bold">Submission Type</span>: Select:</p>
+<ul>
+<li>
+<p><span class="bold">Immediate</span> to run the job once, as soon as possible.</p>
+</li>
+<li>
+<p><span class="bold">Scheduled</span> to set up a regular schedule.</p>
+</li>
+<li>
+<p><span class="bold">Deferred</span> to run the job once, at a future time.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="bold">Trigger Downstream Transformations and Validation Checks</span>: Select this checkbox if you want the system to detect all transformations and validation checks set up for this data model and all others that come after it, and submit them sequentially.</p>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+This option appears only if the validation check batch is set up to allow it.</div>
+</li>
+<li>
+<p>Click the <img width="19" height="17" src="img/icon_refresh.gif" alt="Icon is a near circular arrow." /> <span class="bold">Refresh</span> icon at any time for an update.</p>
+</li>
+<li>
+<p>To check the log file, click the icon in the <span class="bold">Log</span> column.</p>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CACBDFIG"></a>
+<div id="DMWSC117" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">View run history</h3>
+<ol>
+<li>
+<p>Go to the <img width="26" height="25" src="img/home_icon.gif" alt="Icon is a house." /> <span class="bold">Home</span> page, <span class="bold">Validation Checks</span> tab.</p>
+</li>
+<li>
+<p>From the <span class="bold">Model</span> drop-down list, select the clinical data model.</p>
+</li>
+<li>
+<p>Select a validation check batch in the upper pane.</p>
+<p>The system displays information about its validation checks in the middle pane and information about its run history in the lower pane.</p>
+</li>
+<li>
+<p>To view all jobs, click the <img width="21" height="20" src="img/icon_view_full_job_hist.gif" alt="Icon shows a clock and a report." /> <span class="bold">View Full Job History</span> icon.</p>
+<p>To view only recent jobs again, click the <img width="19" height="20" src="img/icon_recent_jobs_only.gif" alt="Icon shows a funnel and a report." /> <span class="bold">View Recent Jobs Only</span> icon.</p>
+<p><span class="bold">To view log files</span>, click the icon in the column for the type of job:</p>
+<ul>
+<li>
+<p><span class="bold">Log</span> (Run History pane) The most recent manually submitted job.</p>
+</li>
+<li>
+<p><span class="bold">Triggered Job Log</span> (Run History pane) The most recent triggered job.</p>
+</li>
+<li>
+<p><span class="bold">Install Job Log</span> (Validation Check Batch pane) The most recent installation of the validation check batch.</p>
+</li>
+</ul>
+<div class="infobox-note">
+<p class="notep1">Note:</p>
+A validation check can be <span class="italic">disabled</span> so that it is not included in the batch execution. To find out if a check was included in the run, check the log file.</div>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CHDJEFHA"></a>
+<div id="DMWSC99903" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">View discrepancies created by a validation check</h2>
+<ol>
+<li>
+<p>Click the Data Management icon <img width="23" height="27" src="img/data_mgmt_icon.gif" alt="Icon shows sheets of paper with text or data." /> at the top of any page to reach the <span class="bold">Listings</span> page.</p>
+</li>
+<li>
+<p>Select the source clinical data model.</p>
+</li>
+<li>
+<p>Select <span class="bold">Validation Checks</span> from the bottom of the left pane.</p>
+</li>
+<li>
+<p>Expand the node for the batch containing the validation check.</p>
+</li>
+<li>
+<p>Select the validation check.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="CACIFJBJ"></a>
+<div id="DMWSC99974" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Upgrade validation checks to synchronize with models</h2>
+<p>If there have been metadata changes in a clinical data model&mdash;for example, an increase of column length&mdash;that affect a transformation or validation check, the system sets the transformation or validation check to <span class="bold">Upgrade Required</span>. You must run the upgrade job to synchronize the transformation or validation check with the model.</p>
+<ul>
+<li>
+<p>Select one or more batches and click the <span class="bold">Upgrade Batch</span> icon or reinstall the batch(es).</p>
+</li>
+<li>
+<p>If columns or tables have been removed, mappings may be broken. You must fix these manually.</p>
+</li>
+<li>
+<p>When you next install the batch(es), installation ends with a warning if a validation check refers to a table or column that no longer exists in the source model. You must do the synchronization manually.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect1" -->
+<a id="CACDJABE"></a>
+<div id="DMWSC99975" class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">FAQs</h2>
+<ul>
+<li>
+<p><a href="#CHDBIHCC">Why can't I install my validation check batch?</a></p>
+</li>
+<li>
+<p><a href="#CHDDBAHG">Why are some validation checks disabled?</a></p>
+</li>
+<li>
+<p><a href="#CHDDDGID">Do I have to check out the batch to disable a validation check?</a></p>
+</li>
+<li>
+<p><a href="#CHDFBIFD">Why does it say Upgrade Required?</a></p>
+</li>
+<li>
+<p><a href="#CHDBIDBB">Why isn't the transformation triggering my validation check batch job?</a></p>
+</li>
+<li>
+<p><a href="#CHDBAFGI">Where are custom programs stored?</a></p>
+</li>
+</ul>
+<a id="CHDBIHCC"></a>
+<div id="DMWSC99976" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Why can't I install my validation check batch?</h3>
+<p>It may be because the clinical data model is not installed. Install the model and try again.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CHDDBAHG"></a>
+<div id="DMWSC99977" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Why are some validation checks disabled?</h3>
+<p>Validation checks that read from a table or column marked Not Used are automatically disabled. If the table or column is later marked as Used, you must manually reenable the validation checks to run them.</p>
+<p>A person may have manually disabled a validation check to prevent it from running.</p>
+<p>To find out why a particular validation check is disabled, hover over the value in the <span class="bold">Disabled Reason</span> column.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CHDDDGID"></a>
+<div id="DMWSC99978" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Do I have to check out the batch to disable a validation check?</h3>
+<p>No. You can disable or enable checks whether the validation check batch is checked in or out.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CHDFBIFD"></a>
+<div id="DMWSC880" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Why does it say Upgrade Required?</h3>
+<p>If there have been metadata changes in the source clinical data model&mdash;for example, change of column length&mdash;that affect any validation check in a batch, the system sets the value of the Upgradable column to <span class="bold">Required</span>. Select the batch, then select <span class="bold">Upgrade Batch</span> from the Actions drop-down, then install the batch.</p>
+<p>See <a href="#CACIFJBJ">"Upgrade validation checks to synchronize with models"</a>.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CHDBIDBB"></a>
+<div id="DMWSC99979" class="sect2">
+<h3 class="sect2">Why isn't the transformation triggering my validation check batch job?</h3>
+<p>Set this up in two places:</p>
+<ol>
+<li>
+<p>In the transformation that writes to the clinical data model that the validation check reads from, set <span class="bold">Can Trigger</span> to <span class="bold">Yes</span> in <span class="bold">Add or Remove Source Model</span>s.</p>
+</li>
+<li>
+<p>In the validation check batch, select <span class="bold">Can Be Triggered</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CHDBAFGI"></a>
+<div id="DMWSC99980" class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Where are custom programs stored?</h3>
+<p>All custom programs for both validation checks and transformations are stored in the DMW_UTILS domain/namespace. Any other locations listed are subdomains inside that domain.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+</div>
+<!-- add extra wrapper close div-->
+<footer><!--
+<hr />
+<table class="cellalignment39">
+<tr>
+<td class="cellalignment46">
+<table class="cellalignment49">
+<tr>
+<td class="cellalignment43"><a href="transform.htm"><img width="24" height="24" src="../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td class="cellalignment43"><a href="dmw_programs.htm"><img width="24" height="24" src="../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="cellalignment-copyrightlogo"><img width="144" height="18" src="../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;2017, 2018,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td class="cellalignment48">
+<table class="cellalignment42">
+<tr>
+<td class="cellalignment43"><a href="../index.htm"><img width="24" height="24" src="../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td class="cellalignment43"><a href="../nav/portal_booklist.htm"><img width="24" height="24" src="../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td class="cellalignment43"><a href="toc.htm"><img width="24" height="24" src="../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td class="cellalignment43"><a href="../dcommon/html/feedback.htm"><img width="24" height="24" src="../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+--></footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

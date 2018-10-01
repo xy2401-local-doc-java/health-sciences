@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-US" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Defining breakdown details</title>
+<link rel="StyleSheet" href="Empirica.css" type="text/css" />
+<script type="text/javascript" language="JavaScript1.2" src="./ehlpdhtm.js"></script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+<script>window.ohcglobal || document.write('<script src="/en/dcommon/js/global.js">\x3C/script>')</script></head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Working with reports\nCreating report definitions\nSpecifying variable breakdowns\nDefining breakdown details");
+addAvenueInfo("Working with Reports","ctSaveOutput.htm","Defining_Breakdown_by_Individual_Values.htm");
+addButton("show",BTN_TEXT,"Show Table of Contents","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("About_WebVDME.htm", "", "&gt;", "Overview", "About_WebVDME_1.htm");
+document.write("<a href=\"About_Reports.htm\">Working with reports<\/a> &gt; <a href=\"ctSelectSubjectList.htm\">Creating report definitions<\/a> &gt; <a href=\"ctSelectExpansionValues.htm\">Specifying variable breakdowns<\/a> &gt; Defining breakdown details<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('About_WebVDME.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+
+
+
+<h1><a name="MiniTOCBookMark1"></a>Defining breakdown details</h1>
+<p align="left" style="font-family:Verdana;font-size:11pt;font-weight: normal;font-style: italic;text-decoration: none;" >In&#160;this&#160;section&#160;<a class="dropspot" href="javascript:TextPopup(this)" id="MTHotSpot23352" ><span class="MTText" style="display: none;" >Show</span><span class="MTText" >Hide</span></a></p>
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+TextPopupInit('MTHotSpot23352', 'MTPOPUP23352');
+//]]></script>
+<div align="left" class="droptext" id="MTPOPUP23352" >
+ <ul style="text-align:left; list-style-type: disc;font-family:Verdana;font-size:10pt;font-weight: normal;font-style: normal;text-decoration: underline;"  >
+  <li style="margin-top: 1px;"><a href="#MiniTOCBookMark2" style="font-family:Verdana;font-size:10pt;font-weight: normal;font-style: normal;text-decoration: underline;">Report performance with breakdown details</a>
+</li>
+  <li style="margin-top: 1px;"><a href="#MiniTOCBookMark3" style="font-family:Verdana;font-size:10pt;font-weight: normal;font-style: normal;text-decoration: underline;">All column</a>
+</li>
+  <li style="margin-top: 1px;"><a href="#MiniTOCBookMark4" style="font-family:Verdana;font-size:10pt;font-weight: normal;font-style: normal;text-decoration: underline;">Example</a>
+</li>
+ </ul>
+</div>
+<p>Breakdown details are the specification of values for a <a href="Report_Structure.htm">breakdown 
+ variable</a>. If a breakdown variable is a text or date variable, you 
+ can define breakdown details using individual selected values, distinct 
+ values, or grouped values. If a breakdown variable is a numeric variable, 
+ you define breakdown details using cutpoints. For an <a href="About_Interactive_Reports.htm">interactive 
+ report</a>, you can define a query whose user-supplied values are used 
+ as breakdown details when the report is run.</p>
+<p class="Note"><span class="Button">Note:</span> If there are 10 or fewer 
+ values for a column breakdown value, the application uses them by default 
+ as distinct values for the breakdown variable. For a row variable, the 
+ application uses all values by default as distinct values for the breakdown 
+ variable. You can modify these default breakdowns as needed.</p>
+<p class="ListNumber1"><span class="rls-1-Empirica">1.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Click the 
+ <span class="Button">Reports</span> tab.</p>
+<p class="ListContinue1">The Report Definitions page appears.</p>
+<p class="ListNote1"><span class="Button">Note:</span> You must select 
+ a case series before you can run, edit, copy, or delete a report definition. 
+ For more information, see <a href="ctSelectSubjectList.htm">Selecting 
+ a case series</a>.</p>
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">2.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Click <span class="Button">Create Definition</span>.</p>
+<p class="ListContinue1">The Create Definition page appears.</p>
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">3.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>In the <span class="Button">Name for Report</span> 
+ field, type a report name. The name does not need to be unique, although 
+ Oracle recommends that you provide a unique and meaningful name.</p>
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">4.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>In the <span class="Button">Description of Report</span> 
+ field, type a report description that differentiates the report definition 
+ from others on the Report Definitions page.</p>
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">5.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Assign the report definition to a <a href="Using_Projects.htm" 
+	 id="a1">project</a>.</p>
+<ul>
+	<li class="NumBullet1">To assign the report definition to an existing 
+	 project, click <span class="Button">Add to existing project</span> 
+	 and select from a list of projects associated with objects that you 
+	 created or that are published to you.</li>
+	<li class="NumBullet1">To create a new project and assign the report 
+	 definition to it, click <span style="font-weight: bold;">Add to a 
+	 new project named</span> and enter a project name.</li>
+</ul>
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">6.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Click <span style="font-weight: bold;">Save</span>.</p>
+<p class="ListContinue1">The <a href="ctEdit.htm">Edit Report Columns page</a> 
+ appears.</p>
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">7.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Next to <span class="Button">Breakdown Details</span>, 
+ click <span class="Button">Select</span>.</p>
+<p class="ListContinue1">The Breakdown Details dialog box appears.</p>
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">8.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Select the breakdown type by selecting the Every 
+ Distinct Value, Individual Values, Grouped Values, or Query Values radio 
+ button.</p>
+<ul>
+	<li class="NumBullet1">To define breakdown details by distinct value, 
+	 see <a href="Defining_Breakdown_by_Distinct_Values.htm">Defining breakdown 
+	 by distinct values</a>. The report includes a column or row for every 
+	 distinct (unique) value of the variable. This option uses the values 
+	 available at the time you run the report, not at the time you define 
+	 it.</li>
+	<li class="NumBullet1">To define breakdown details by individual values, 
+	 see <a href="Defining_Breakdown_by_Individual_Values.htm">Defining 
+	 breakdown by individual values</a>. The report includes a column or 
+	 row for every value that you select. This option results in a static 
+	 list of breakdown values that does not automatically adjust to changing 
+	 source data.</li>
+	<li class="NumBullet1">To define breakdown details by grouped values, 
+	 see <a href="Defining_Breakdown_by_Grouped_Valueshtm.htm">Defining 
+	 breakdown by grouped values</a>. The report includes a column or row 
+	 for every group that you define.</li>
+	<li class="NumBullet1">To define breakdown details by query values, 
+	 see <a href="Defining_Breakdown_by_Query_Values.htm">Defining breakdown 
+	 by query values</a>. This choice allows you to <a href="Defining_Breakdown_by_Query_Values.htm">substitute 
+	 values from the query</a> that is run as part of an <a href="About_Interactive_Reports.htm">interactive 
+	 report</a>.</li>
+	<li class="NumBullet1">To define breakdown details for a numeric variable, 
+	 see <a href="ctCutpoints.htm">Defining breakdown by cutpoints</a>.</li>
+</ul>
+<p class="ListNumber1" style=" margin-left: 30px; text-indent: -30px;"><span class="rls-1-Empirica">9.</span><span style='word-spacing:normal; font:6.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Click <span class="Button">OK</span>.</p>
+<h2><a name="MiniTOCBookMark2"></a>Report performance with breakdown details</h2>
+<p>The performance of a report with breakdown details can depend on whether 
+ the analysis variable that you use comes from the same source table as 
+ the row variables. If the analysis variable is from the same table as 
+ the row variables, the performance of a report definition with breakdown 
+ details is much faster. This may be important when you are working with 
+ a sizeable case series (containing 5,000 or more cases). The speed difference 
+ is several orders of magnitude. When possible, select the analysis variable 
+ from the same table as the row variables.</p>
+<h2><a name="MiniTOCBookMark3"></a>All column</h2>
+<p>For a breakdown variable, you can include a category for All values. 
+ The All column is not based on values for other columns in the report. 
+ For example, if the report shows counts, the All column is not a total 
+ of counts for the other columns.</p>
+<p>In the following example, the same case may have PTs in both the Card 
+ SOC and Other SOCs:</p>
+<p>&#160;</p>
+<table class="Empirica" style="vertical-align: top;" cellspacing="0px" width="66.627%">
+	<col style="width: 13.508%;" />
+	<col style="width: 20.931%;" />
+	<col style="width: 20.589%;" />
+	<col style="width: 23.568%;" />
+	<col style="width: 21.404%;" />
+	<tr class="t1st" style="vertical-align: top; height: 20px;">
+		<td style="border: Solid 1px Untitled5; width: 13.508%; padding-right: 10px; 
+			 padding-left: 10px;"><p class="TableHeader">&#160;</p></td>
+		<td colspan="4" style="border-top: Solid 1px Untitled5; border-right: Solid 1px Untitled5; 
+			 border-bottom: Solid 1px Untitled5; width: 86.492%; padding-right: 10px; 
+			 padding-left: 10px;"><p class="TableHeader">SOC</p></td>
+		
+	</tr>
+	<tr class="t2Row" style="vertical-align: top; height: 20px;">
+		<td style="border-left: Solid 1px Untitled5; border-right: Solid 1px Untitled5; 
+			 border-bottom: Solid 1px Untitled5; width: 13.508%; padding-right: 10px; 
+			 padding-left: 10px;"><p class="TableHeader">&#160;</p></td>
+		<td style="border-right: Solid 1px Untitled5; border-bottom: Solid 1px Untitled5; 
+			 width: 20.931%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="TableHeader">Card</p></td>
+		<td style="border-right: Solid 1px Untitled5; border-bottom: Solid 1px Untitled5; 
+			 width: 20.589%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="TableHeader">Other</p></td>
+		<td style="border-right: Solid 1px Untitled5; border-bottom: Solid 1px Untitled5; 
+			 width: 23.568%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="TableHeader">Null</p></td>
+		<td style="border-right: Solid 1px Untitled5; border-bottom: Solid 1px Untitled5; 
+			 width: 21.404%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="TableHeader">All</p></td>
+	</tr>
+	<tr class="t1Row" style="vertical-align: top; height: 21px;">
+		<td style="border-left: Solid 1px Untitled5; border-right: Solid 1px Untitled5; 
+			 border-bottom: Solid 1px Untitled5; width: 13.508%; padding-right: 10px; 
+			 padding-left: 10px;"><p class="TableBody">Sex</p></td>
+		<td style="border-right: Solid 1px Untitled5; border-bottom: Solid 1px Untitled5; 
+			 width: 20.931%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="TableBody">Cases</p></td>
+		<td style="border-right: Solid 1px Untitled5; border-bottom: Solid 1px Untitled5; 
+			 width: 20.589%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="TableBody">Cases</p></td>
+		<td style="border-right: Solid 1px Untitled5; border-bottom: Solid 1px Untitled5; 
+			 width: 23.568%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="TableBody">Cases</p></td>
+		<td style="border-right: Solid 1px Untitled5; border-bottom: Solid 1px Untitled5; 
+			 width: 21.404%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="TableBody">Cases</p></td>
+	</tr>
+	<tr class="t2Row" style="vertical-align: top; height: 19px;">
+		<td style="border-left: Solid 1px Untitled5; border-right: Solid 1px Untitled5; 
+			 border-bottom: Solid 1px Untitled5; width: 13.508%; padding-right: 10px; 
+			 padding-left: 10px;"><p class="TableBody">&#160;</p></td>
+		<td style="border-right: Solid 1px Untitled5; border-bottom: Solid 1px Untitled5; 
+			 width: 20.931%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="TableBody">N (U)</p></td>
+		<td style="border-right: Solid 1px Untitled5; border-bottom: Solid 1px Untitled5; 
+			 width: 20.589%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="TableBody">N (U)</p></td>
+		<td style="border-right: Solid 1px Untitled5; border-bottom: Solid 1px Untitled5; 
+			 width: 23.568%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="TableBody">N (U)</p></td>
+		<td style="border-right: Solid 1px Untitled5; border-bottom: Solid 1px Untitled5; 
+			 width: 21.404%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="TableBody">N (U)</p></td>
+	</tr>
+	<tr class="t1Row" style="vertical-align: top; height: 21px;">
+		<td style="border-left: Solid 1px Untitled5; border-right: Solid 1px Untitled5; 
+			 border-bottom: Solid 1px Untitled5; width: 13.508%; padding-right: 10px; 
+			 padding-left: 10px;"><p class="TableBody">F</p></td>
+		<td style="border-right: Solid 1px Untitled5; border-bottom: Solid 1px Untitled5; 
+			 width: 20.931%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="TableBody">5000</p></td>
+		<td style="border-right: Solid 1px Untitled5; border-bottom: Solid 1px Untitled5; 
+			 width: 20.589%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="TableBody">11000</p></td>
+		<td style="border-right: Solid 1px Untitled5; border-bottom: Solid 1px Untitled5; 
+			 width: 23.568%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="TableBody">0</p></td>
+		<td style="border-right: Solid 1px Untitled5; border-bottom: Solid 1px Untitled5; 
+			 width: 21.404%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="TableBody">12000</p></td>
+	</tr>
+	<tr class="t2Row" style="vertical-align: top; height: 19px;">
+		<td style="border-left: Solid 1px Untitled5; border-right: Solid 1px Untitled5; 
+			 border-bottom: Solid 1px Untitled5; width: 13.508%; padding-right: 10px; 
+			 padding-left: 10px;"><p class="TableBody">M</p></td>
+		<td style="border-right: Solid 1px Untitled5; border-bottom: Solid 1px Untitled5; 
+			 width: 20.931%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="TableBody">6000</p></td>
+		<td style="border-right: Solid 1px Untitled5; border-bottom: Solid 1px Untitled5; 
+			 width: 20.589%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="TableBody">13000</p></td>
+		<td style="border-right: Solid 1px Untitled5; border-bottom: Solid 1px Untitled5; 
+			 width: 23.568%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="TableBody">0</p></td>
+		<td style="border-right: Solid 1px Untitled5; border-bottom: Solid 1px Untitled5; 
+			 width: 21.404%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="TableBody">16500</p></td>
+	</tr>
+</table>
+<p>The N (U) value for the All column and F row is not 5000 + 11000. The 
+ value in the All column is:</p>
+<ul>
+	<li class="Bullet1">&#160;&#160;&#160;&#160;4000 who have a PT in the 
+	 Card SOC and a PT in other SOCs.</li>
+	<li class="Bullet1">+ &#160;1000 who have a PT in the Card SOC only.</li>
+	<li class="Bullet1">+ &#160;7000 (computed as 11000 - 4000) who have 
+	 a PT in any SOCs except Card.</li>
+	<li class="Bullet1">= 12000.</li>
+</ul>
+<h2><a name="MiniTOCBookMark4"></a>Example</h2>
+<p>For example,you want a summary of the number of cases for each report 
+ type (direct, expedited, and periodic). For your report definition, you 
+ set up the FDA Year as the row variable and you specify Report Type as 
+ the column variable. You then need to specify the value you want to show 
+ for each report type; that is, the <a href="Report_Structure.htm">analysis 
+ variable</a>. You specify CASE_ID as the 
+ analysis variable, label it as Cases, and select the <span class="Button">Count</span> 
+ <a href="ctEditAggregation.htm">aggregation method</a>.</p>
+<p><img src="rpt_breakdown_ex.gif" alt="Example of specifying the value you want to show for each report type (analysis variable)" 
+		 style="border-left-width: 1px; border-left-style: Solid; border-top-width: 1px; 
+		 border-top-style: Solid; border-right-width: 1px; border-right-style: Solid; 
+		 border-bottom-width: 1px; border-bottom-style: Solid;" border="1" /></p>
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="margin-bottom: 0pt;">Copyright © 2002, 2018, Oracle and/or 
+	 its affiliates. All rights reserved. </p>
+	<p style="text-align: right; margin-top: 0pt; margin-bottom: 0pt;">Help 
+	 Build 8.1.1</p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

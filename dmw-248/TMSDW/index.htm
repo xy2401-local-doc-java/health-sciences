@@ -1,0 +1,665 @@
+<html class="gr__docs_oracle_com">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Cross Product User Assistance</title>
+    <link rel="icon" type="image/png" href="http://slc14rkk:9001/resource/favicon.ico">
+    <meta name="description" content="Cross Product User Assistance">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* line 1, ../scss/main.scss */
+
+        body {
+            margin: 0px;
+            font-family: "Helvetica Neue", sans-serif;
+            min-width: 1280px;
+            min-height: 960px;
+            /* Header */
+        }
+
+        /* line 45, ../scss/main.scss */
+
+        body .header {
+	padding: 10px 16px;
+	color: #fff;
+	margin-bottom: 10px;
+	background-color: #8FD1C2;
+        }
+
+        /* line 48, ../scss/main.scss */
+
+        body .header.phase-header-1 {
+	background-color: #EA9DEA;
+        }
+body .header.phase-header-2 {
+	background-color: #71ACF4;
+}
+
+        /* line 54, ../scss/main.scss */
+
+        body .header.phase-header {
+            height: 100px;
+        }
+
+        /* line 61, ../scss/main.scss */
+
+        body .page-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: calc(100vh - 150px);
+            min-height: 600px;
+            /* margin-bottom: 20px; */
+        }
+
+        /* line 72, ../scss/main.scss */
+
+        body .page-container.studyChange .section-container {
+            border-width: 0px !important;
+            height: calc(100vh - 150px);
+        }
+
+        /* line 75, ../scss/main.scss */
+
+        body .page-container.studyChange .section-container .section-cards-container {
+            width: 100%;
+            min-width: 1260px;
+            max-width: 1260px;
+            flex-wrap: wrap;
+            display: flex;
+        }
+
+        /* line 81, ../scss/main.scss */
+
+        body .page-container.studyChange .section-container .section-cards-container component-expandable-card {
+            margin-left: 10px;
+            margin-right: 10px;
+            min-width: 390px;
+        }
+
+        /* line 85, ../scss/main.scss */
+
+        body .page-container.studyChange .section-container .section-cards-container component-expandable-card .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 350px;
+            margin: 20px auto;
+            padding: 10px 20px;
+            width: 100%;
+        }
+
+        /* line 21, ../scss/main.scss */
+
+        body .page-container.studyChange .section-container .section-cards-container component-expandable-card .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+            transition: all 0.2s ease-in;
+        }
+
+        /* line 25, ../scss/main.scss */
+
+        body .page-container.studyChange .section-container .section-cards-container component-expandable-card .card .expandIconContainer {
+            cursor: pointer;
+        }
+
+        /* line 28, ../scss/main.scss */
+
+        body .page-container.studyChange .section-container .section-cards-container component-expandable-card .card .expandIconContainer .expandIcon.collapse {
+            height: 20px;
+            width: 20px;
+            background-image: url("../images/collapse.svg");
+        }
+
+        /* line 32, ../scss/main.scss */
+
+        body .page-container.studyChange .section-container .section-cards-container component-expandable-card .card .expandIconContainer .expandIcon.expand {
+            height: 20px;
+            width: 20px;
+            background-image: url("../images/expand.svg");
+        }
+
+        /* line 88, ../scss/main.scss */
+
+        body .page-container.studyChange .section-container .section-cards-container component-expandable-card .card .expandIconContainer {
+            justify-content: center;
+            display: flex;
+        }
+
+        /* line 93, ../scss/main.scss */
+
+        body .page-container.studyChange .section-container .section-cards-container component-expandable-card .procedures-container {
+            width: 1215px;
+        }
+
+        /* line 95, ../scss/main.scss */
+
+        body .page-container.studyChange .section-container .section-cards-container component-expandable-card .procedures-container .procedures-phase-container.card {
+            display: flex;
+            width: 1100px;
+            min-width: 1100px;
+            max-width: calc(80vw - 40px);
+            min-height: 100px;
+            padding: 0;
+        }
+
+        /* line 102, ../scss/main.scss */
+
+        body .page-container.studyChange .section-container .section-cards-container component-expandable-card .procedures-container .procedures-phase-container.card .procedure {
+            min-height: 250px;
+            max-height: 400px;
+            width: 33%;
+            border: 1px solid #afacac;
+        }
+
+        /* line 107, ../scss/main.scss */
+
+        body .page-container.studyChange .section-container .section-cards-container component-expandable-card .procedures-container .procedures-phase-container.card .procedure:not(:last-of-type) {
+            width: 34%;
+            border-right-width: 0px;
+        }
+
+        /* line 110, ../scss/main.scss */
+
+        body .page-container.studyChange .section-container .section-cards-container component-expandable-card .procedures-container .procedures-phase-container.card .procedure:not(:last-of-type) .border-icon-container {
+            width: 0;
+            height: 100%;
+            left: -15px;
+            position: relative;
+        }
+
+        /* line 116, ../scss/main.scss */
+
+        body .page-container.studyChange .section-container .section-cards-container component-expandable-card .procedures-container .procedures-phase-container.card .procedure:not(:last-of-type) .border-icon-container .border-icon {
+            margin: 10px 0 0 0;
+            height: 30px;
+            width: 30px;
+            background-image: url("../images/Step.svg");
+        }
+
+        /* line 122, ../scss/main.scss */
+
+        body .page-container.studyChange .section-container .section-cards-container component-expandable-card .procedures-container .procedures-phase-container.card .procedure .procedure-title {
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* line 127, ../scss/main.scss */
+
+        body .page-container.studyChange .section-container .section-cards-container component-expandable-card .procedures-container .procedures-phase-container.card .procedure .procedure-title .upArrow {
+            height: 0;
+            width: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 20px solid black;
+            position: relative;
+            top: -20px;
+        }
+
+        /* line 130, ../scss/main.scss */
+
+        body .page-container.studyChange .section-container .section-cards-container component-expandable-card .procedures-container .procedures-phase-container.card .procedure .procedure-title .title-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+        }
+
+        /* line 136, ../scss/main.scss */
+
+        body .page-container.studyChange .section-container .section-cards-container component-expandable-card .procedures-container .procedures-phase-container.card .procedure .procedure-title .title-container .title {
+            margin: 0;
+        }
+
+        /* line 143, ../scss/main.scss */
+
+        body .page-container.studyChange .section-container .section-cards-container component-expandable-card .procedures-container .procedures-phase-container.card .procedure .procedure-cards component-procedure-card .card {
+            max-width: 300px;
+        }
+
+        /* line 155, ../scss/main.scss */
+
+        body .page-container .page-header {
+            width: 1280px;
+            padding-left: 40px;
+            max-height: 100px;
+        }
+
+        /* line 160, ../scss/main.scss */
+
+        body .page-container .sections-container {
+            display: flex;
+            justify-content: center;
+            height: calc(100vh - 250px);
+        }
+
+        /* line 164, ../scss/main.scss */
+
+        body .page-container .sections-container .section-container {
+            padding: 0 10px;
+            min-width: 380px;
+            border: 1px solid #afacac;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* line 170, ../scss/main.scss */
+
+        body .page-container .sections-container .section-container:not(:last-of-type) {
+            border-right-width: 0px;
+        }
+
+        /* line 172, ../scss/main.scss */
+
+        body .page-container .sections-container .section-container:not(:last-of-type) .border-icon-container {
+            width: 0;
+            height: 100%;
+            left: -10px;
+            position: relative;
+        }
+
+        /* line 178, ../scss/main.scss */
+
+        body .page-container .sections-container .section-container:not(:last-of-type) .border-icon-container .border-icon {
+            /* right: -10px; */
+            margin: 30px 0;
+            height: 40px;
+            width: 40px;
+            /* background-image: url("../images/Parallel.svg"); */
+        }
+
+        /* line 188, ../scss/main.scss */
+
+        body .page-container .sections-container .section-container .section-header-container {
+            height: 100px;
+            min-height: 100px;
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        /* line 195, ../scss/main.scss */
+
+        body .page-container .sections-container .section-container .section-header-container .section-header-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
+        /* line 201, ../scss/main.scss */
+
+        body .page-container .sections-container .section-container .section-header-container .section-header-text h4 {
+            margin-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        /* line 205, ../scss/main.scss */
+
+        body .page-container .sections-container .section-container .section-header-container .section-header-text a {
+            height: 25px;
+            width: 100px;
+        }
+
+        /* line 208, ../scss/main.scss */
+
+        body .page-container .sections-container .section-container .section-header-container .section-header-text a button {
+            background-color: #8fd1c2;
+            color: white;
+            border-radius: 10px;
+            border-width: 1px;
+            width: 100%;
+            height: 100%;
+            font-weight: bold;
+        }
+
+        /* line 231, ../scss/main.scss */
+
+        body .page-container .sections-container .section-container .section-cards-container {
+            overflow: auto;
+        }
+
+        /* line 234, ../scss/main.scss */
+
+        body .page-container .sections-container .section-container .section-cards-container .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 350px;
+            margin: 20px auto;
+            padding: 10px 20px;
+            max-width: 320px;
+        }
+
+        /* line 21, ../scss/main.scss */
+
+        body .page-container .sections-container .section-container .section-cards-container .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+            transition: all 0.2s ease-in;
+        }
+
+        /* line 25, ../scss/main.scss */
+
+        body .page-container .sections-container .section-container .section-cards-container .card .expandIconContainer {
+            cursor: pointer;
+        }
+
+        /* line 28, ../scss/main.scss */
+
+        body .page-container .sections-container .section-container .section-cards-container .card .expandIconContainer .expandIcon.collapse {
+            height: 20px;
+            width: 20px;
+            background-image: url("../images/collapse.svg");
+        }
+
+        /* line 32, ../scss/main.scss */
+
+        body .page-container .sections-container .section-container .section-cards-container .card .expandIconContainer .expandIcon.expand {
+            height: 20px;
+            width: 20px;
+            background-image: url("../images/expand.svg");
+        }
+
+        /* line 238, ../scss/main.scss */
+
+        body .page-container .sections-container .section-container .section-cards-container component-procedure-card {
+            min-width: 400px;
+        }
+
+        /* line 247, ../scss/main.scss */
+
+        h4 {
+            color: #3F3F3F;
+        }
+
+        /* line 251, ../scss/main.scss */
+
+        .description {
+            color: #707070;
+            font-weight: 300;
+            font-style: italic;
+            line-height: 1.25em;
+        }
+
+        /* line 258, ../scss/main.scss */
+
+        a {
+            text-decoration: none;
+            color: #0063C9;
+        }
+
+        /* line 261, ../scss/main.scss */
+
+        a:hover {
+            color: #64B9C9;
+        }
+
+        /* line 266, ../scss/main.scss */
+
+        hr {
+            display: block;
+            height: 1px;
+            border: 0;
+            border-top: 1px solid #ccc;
+            margin: 1em 0;
+            padding: 0;
+        }
+
+        /*# sourceMappingURL=main.css.map */
+    </style>
+
+    <body>
+        <!-- <div class="header phase-header" data-bind="css: `phase-header-${phaseHeaders.phaseId()}`" id="general-header">
+        <h2 data-bind="text: phaseHeaders.title"></h2>
+        <p data-bind="text: phaseHeaders.secondTitle"></p>
+    </div> -->
+        <!-- ko foreach: generalStructure -->
+        <!-- ko if: $index() === 0 -->
+        <!-- ko foreach: pages -->
+
+        <div class="header phase-header phase-header-1" data-bind="css: `phase-header-${$parents[1].phaseHeaders.phaseId()}`">
+          <h2 data-bind="text: $parents[1].phaseHeaders.title">Let's set up coding in TMS</h2>
+            <p data-bind="text: $parents[1].phaseHeaders.secondTitle">Here&rsquo;s what you must do first in TMS,  then in DMW.</p>
+        </div>
+        <div class="page-container studyCreate">
+            <div class="page-header">
+                <h3>
+                <!-- <a id="htmlLinkOne" href="https://www.w3schools.com" style="pointer: cursor;">This is a false link.</a> --></h3>
+</div>
+            <div class="sections-container">
+
+                <!-- ko foreach: sections -->
+                <div class="section-container" style="">
+                    <div class="section-header-container">
+                        <div class="section-header-text">
+                            <h4 data-bind="text: title">TMS</h4>
+                            <!-- ]                            <a data-bind="
+                     attr:{
+                     href: url,
+                     target: '_blank'
+                     }" href="http://www.oracle.com" target="_blank">
+                                <button>Best Practice</button>
+                            </a> -->
+                        </div>
+                        <div class="border-icon-container">
+                            <div class="border-icon">
+                                <svg viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+                                    <g id="Step" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <path d="M16,8 C16,12.4182741 12.4182741,16 8,16 C3.58172594,16 0,12.4182741 0,8 C0,3.58172594 3.58172594,0 8,0 C12.4182741,0 16,3.58172594 16,8 Z"
+                                            id="Combined-Shape" fill="#8FD1C2" fill-rule="nonzero"></path>
+                                        <path d="M8.30564661,4.77880746 L8.29594597,4.78828136 C7.91393306,5.16136513 7.90669456,5.77349193 8.27977833,6.15550484 C8.28518304,6.1610389 8.29065396,6.16650789 8.29618992,6.17191064 C8.58594194,6.45469046 8.87569395,6.73747027 9.16544597,7.02025008 L3.97967701,7.01799255 C3.43909802,7.01775722 3.00068139,7.4557923 3.00044606,7.99637129 C3.000446,7.99651333 3.00044597,7.99665536 3.00044597,7.9967974 L3.00044597,7.9967974 C3.00044597,8.53768076 3.4387937,8.97621936 3.97967701,8.97645483 L9.16544597,8.97871236 L8.29550695,9.82771835 C7.91329271,10.2007355 7.905837,10.8129715 8.27885415,11.1951857 C8.28431744,11.2007837 8.28984845,11.2063152 8.29544597,11.211779 L8.30565103,11.2217403 C8.69424226,11.6010478 9.3145249,11.6009201 9.70295983,11.2214524 L13.000446,8.00009118 L9.70314467,4.77891051 C9.31463621,4.39937105 8.69421104,4.3993253 8.30564661,4.77880746 Z"
+                                            id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-cards-container">
+                        <!-- ko foreach: cards -->
+                        <component-procedure-card class="card-container" params="data: $data">
+                            <div class="card">
+                                <h4>
+                                    <!-- ko foreach: titles -->
+                                    <!-- ko if: $data.url === undefined --><!-- /ko --><!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                    <!-- /ko -->
+                                    <!-- /ko -->Define
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url === undefined -->
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                    <a data-bind="attr:{
+             href: url,
+             target: '_blank'
+         },
+         text: name" href="https://docs.oracle.com/health-sciences/tms-521/user-guide/defdict.htm#i1001502" target="_blank">dictionaries</a></h4>
+                                <hr>
+                              <p data-bind="html: description">To use a dictionary in TMS, you must define the basic dictionary settings, dictionary levels, relations between levels (for strong dictionaries only), and level details.</p>
+</div>
+                            <div class="card">
+                              <h4>
+                                <!-- ko foreach: titles -->
+                                <!-- ko if: $data.url === undefined -->
+                                <!-- /ko -->
+                                <!-- /ko -->
+                                <!-- ko if: $data.url !== undefined -->
+                                <!-- /ko -->
+                                <!-- /ko -->Load
+                                <!-- /ko -->
+                                <!-- ko if: $data.url !== undefined -->
+                                <!-- /ko -->
+                                <!-- ko if: $data.url === undefined -->
+                                <!-- /ko -->
+                                <!-- ko if: $data.url !== undefined -->
+                                <a data-bind="attr:{
+             href: url,
+             target: '_blank'
+         },
+         text: name" href="https://docs.oracle.com/health-sciences/tms-521/user-guide/defdict.htm#TMSUG11517" target="_blank">dictionaries</a><!-- /ko -->
+                                <!-- ko if: $data.url !== undefined -->
+                                <!-- /ko -->
+                                <!-- /ko -->
+                              </h4>
+                              <hr>
+                              <p data-bind="html: description">Upload the files for the dictionaries you want to use in TMS.</p>
+                            </div>
+                            <div class="card">
+                              <h4>
+                                <!-- ko foreach: titles -->
+                                <!-- ko if: $data.url === undefined -->
+                                <!-- /ko -->
+                                <!-- /ko -->
+                                <!-- ko if: $data.url !== undefined -->
+                                <!-- /ko -->
+                                <!-- /ko -->Define
+                                <!-- /ko -->
+                                <!-- ko if: $data.url !== undefined -->
+                                <!-- /ko -->
+                                <!-- ko if: $data.url === undefined -->
+                                <!-- /ko -->
+                                <!-- ko if: $data.url !== undefined -->
+                                <a data-bind="attr:{
+             href: url,
+             target: '_blank'
+         },
+         text: name" href="https://docs.oracle.com/health-sciences/tms-521/user-guide/defdict.htm#TMSUG11551" target="_blank">dictionary domains</a><!-- /ko -->
+                                <!-- ko if: $data.url !== undefined -->
+                                <!-- /ko -->
+                                <!-- /ko -->
+                              </h4>
+                              <hr>
+                              <p data-bind="html: description">TMS dictionary domains allow you to code terms differently in different studies. Domains also determing TMS system behavior, including whether explicit approval is required for manual classifications. </p>
+                            </div>
+                        </component-procedure-card>
+
+                        <component-procedure-card class="card-container" params="data: $data"></component-procedure-card>
+                        <!-- /ko -->
+                    </div>
+                </div>
+                <div class="section-container" style="">
+                    <div class="section-header-container">
+                        <div class="section-header-text">
+                            <h4 data-bind="text: title">DMW</h4>
+                            <!-- <a data-bind="
+                     attr:{
+                     href: url,
+                     target: '_blank'
+                     }" href="http://www.oracle.com" target="_blank">
+                                <button>Best Practice</button>
+                            </a> -->
+                        </div>
+                        <div class="border-icon-container">
+                            <div class="border-icon">
+                                
+                            </div>
+                        </div>
+                  </div>
+                    <div class="section-cards-container">
+                        <!-- ko foreach: cards -->
+                        <component-procedure-card class="card-container" params="data: $data">
+                            <div class="card">
+                                <h4>
+                                    <!-- ko foreach: titles -->
+                                    <!-- ko if: $data.url === undefined -->
+                                    <span data-bind="text: name">Specify </span>
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                    <!-- /ko -->
+
+                                    <!-- ko if: $data.url === undefined -->
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                    <a data-bind="attr:{
+             href: url,
+             target: '_blank'
+         },
+         text: name" href="https://docs.oracle.com/health-sciences/dmw-248/DMWAG/x_stdy.htm#BGBJCHDE" target="_blank">dictionary data</a>
+                                    <!-- /ko -->
+                                    <!-- /ko -->
+                                to derive from TMS</h4>
+                                <hr>
+                                <p data-bind="html: description">The administrator must  specify which dictionary data to derive by creating one or more TMS Sets for  each dictionary with a &quot;column&quot; for each piece of information to be  derived. TMS Sets are available for use in all studies. It is not necessary to use all columns in a given study.</p>
+                            </div>
+                            <div class="card">
+                                <h4>
+                                    <!-- ko foreach: titles -->
+                                    <!-- ko if: $data.url === undefined -->
+                                    <span data-bind="text: name">Assign</span>
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                    <!-- /ko -->
+
+                                    <!-- ko if: $data.url === undefined -->
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                    <a data-bind="attr:{
+             href: url,
+             target: '_blank'
+         },
+         text: name" href="https://docs.oracle.com/health-sciences/dmw-248/DMWAG/sc_basics.htm#BABCEECG" target="_blank">dictionary domains  </a>
+                                    <!-- /ko -->
+                                    <!-- /ko -->
+                                 to the study</h4>
+                                <hr>
+                                <p data-bind="html: description">The study builder  associates one or more dictionaries to the study, specifying a dictionary  domain for each dictionary.</p>
+                            </div>
+                        </component-procedure-card>
+
+                        <component-procedure-card class="card-container" params="data: $data">
+                            <div class="card">
+                                <h4>
+                                    <!-- ko foreach: titles -->
+                                    <!-- ko if: $data.url === undefined -->
+                                    <span data-bind="text: name">Map dictionary data to  </span>
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                    <!-- /ko -->
+
+                                    <!-- ko if: $data.url === undefined -->
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.url !== undefined -->
+                                    <a data-bind="attr:{
+             href: url,
+             target: '_blank'
+         },
+         text: name" href="https://docs.oracle.com/health-sciences/dmw-248/DMWSC/datamodel.htm#CDCHGDCD" target="_blank">table columns</a>
+                                    <!-- /ko -->
+                                    <!-- /ko -->
+                                </h4>
+                                <hr>
+                                <p data-bind="html: description">The study builder maps TMS  Set columns, which specify the data to derive, to target data model table  columns, which the system populates with the derived data. The study builder  does not have to use all TMS Set columns.</p>
+                            </div>
+                        </component-procedure-card>
+
+                        <component-procedure-card class="card-container" params="data: $data"></component-procedure-card>
+                        <!-- /ko -->
+                    </div>
+              </div>
+                <!-- /ko -->
+            </div>
+        </div>
+    <!-- /ko -->
+        <!-- /ko -->
+        <!-- ko if: $index() === 1 -->
+        <!-- /ko -->
+        <!-- /ko -->
+
+
+    <noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+
+</html><footer>
+</footer>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+<script>$(document).foundation();</script>
+</body>
+</html>
